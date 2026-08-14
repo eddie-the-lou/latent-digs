@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Daily review · Latent</title>
+<style>
+:root{--bg:#0b0d10;--panel:#14181f;--panel2:#1a2029;--border:#2a3340;--text:#e8edf4;--muted:#8b97a8;--accent:#7c9cff;--green:#3ecf8e;--amber:#f0b429;--red:#f07178;--purple:#c792ea}
+*{box-sizing:border-box}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(1200px 600px at 10% -10%,#1a2440 0%,transparent 50%),var(--bg);color:var(--text);line-height:1.5}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
+@media(max-width:860px){.app{grid-template-columns:1fr}}
+.sidebar{background:rgba(20,24,31,.95);border-right:1px solid var(--border);padding:20px 12px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{font-weight:750;margin:0 0 2px;letter-spacing:-.02em}
+.brand-sub{color:var(--muted);font-size:.8rem;margin-bottom:16px}
+.nav-label{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;margin:14px 6px 8px}
+.date-btn{display:block;width:100%;text-align:left;background:transparent;border:1px solid transparent;color:var(--text);padding:10px 12px;border-radius:10px;cursor:pointer;margin-bottom:4px}
+.date-btn:hover{background:rgba(255,255,255,.03);border-color:var(--border)}
+.date-btn.active{background:rgba(124,156,255,.12);border-color:rgba(124,156,255,.35)}
+.date-btn .d{font-weight:650}
+.date-btn .m{color:var(--muted);font-size:.75rem;margin-top:2px}
+main{padding:28px 24px 72px;max-width:920px}
+h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--muted);margin:0 0 16px}
+.tldr{background:rgba(124,156,255,.08);border:1px solid rgba(124,156,255,.25);border-radius:14px;padding:14px 16px;margin-bottom:20px}
+.tldr ul{margin:8px 0 0;padding-left:18px}
+.tldr li{margin-bottom:6px}
+.tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.tab{background:var(--panel);border:1px solid var(--border);color:var(--muted);padding:8px 14px;border-radius:999px;cursor:pointer;font-size:.9rem}
+.tab.active{color:var(--text);border-color:rgba(124,156,255,.45);background:rgba(124,156,255,.12)}
+.section{margin-bottom:26px}
+.section h2{font-size:1.05rem;margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.dot{width:8px;height:8px;border-radius:50%}
+.count{color:var(--muted);font-weight:500;font-size:.85rem}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px 16px;margin-bottom:10px;cursor:pointer}
+.card:hover{border-color:rgba(124,156,255,.35);background:rgba(255,255,255,.02)}
+.card .title{font-weight:650;margin:0 0 6px;font-size:1.02rem}
+.card .summary{color:var(--muted);margin:0;font-size:.92rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.72rem;font-weight:700;text-transform:none;letter-spacing:0}
+.b-approve{background:rgba(62,207,142,.18);color:var(--green)}
+.b-fixing{background:rgba(124,156,255,.18);color:var(--accent)}
+.b-watch{background:rgba(240,180,41,.18);color:var(--amber)}
+.b-need{background:rgba(240,113,120,.18);color:var(--red)}
+.b-backlog{background:rgba(139,151,168,.18);color:var(--muted)}
+.people{color:var(--accent);font-weight:650;font-size:.85rem}
+.btn{display:inline-block;margin-top:12px;background:#1d4aff;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:600;font-size:.9rem}
+.btn:hover{filter:brightness(1.08)}
+.back{background:transparent;border:1px solid var(--border);color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer;margin-bottom:14px}
+.block{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:12px}
+.block h3{margin:0 0 8px;font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+details.tech{margin-top:12px;color:var(--muted);font-size:.88rem}
+details.tech summary{cursor:pointer;color:var(--muted)}
+.source-group{margin-bottom:18px}
+.source-group h3{margin:0 0 8px;font-size:.95rem}
+.empty{color:var(--muted);padding:12px;border:1px dashed var(--border);border-radius:12px}
+footer{margin-top:28px;color:var(--muted);font-size:.8rem}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">Unpaid Intern</div>
+    <div class="brand-sub">Daily Latent review</div>
+    <div class="nav-label">Past reviews</div>
+    <div id="archive"></div>
+  </aside>
+  <main id="main"></main>
+</div>
+<script src="./data.js"></script>
+<script>
+const DIGESTS = window.DIGESTS || {};
+const INDEX = window.DIGEST_INDEX || DIGESTS.index || [];
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function dig(date){return DIGESTS[date]||null}
+function parseHash(){
+  const h=(location.hash||'').replace(/^#\/?/,'');
+  if(!h){const d=(INDEX[0]&&(INDEX[0].date||INDEX[0]))||Object.keys(DIGESTS).filter(k=>k.length===10).sort().reverse()[0];return{date:d}}
+  const p=h.split('/');
+  return{date:p[0],kind:p[1],id:p[2]}
+}
+function go(date,kind,id){
+  let hash='#/'+date; if(kind&&id) hash+='/'+kind+'/'+id;
+  if(location.hash!==hash) location.hash=hash; else render();
+}
+function badge(status){
+  const s=(status||'').toLowerCase();
+  let cls='b-backlog', label=status||'';
+  if(s.includes('approve')||s.includes('review')||s.includes('ready')) cls='b-approve';
+  else if(s.includes('fixing')||s.includes('opened')||s.includes('pr')) cls='b-fixing';
+  else if(s.includes('watch')||s.includes('ongoing')||s.includes('worked')) cls='b-watch';
+  else if(s.includes('need')||s.includes('repro')||s.includes('broken')||s.includes('open')) cls='b-need';
+  return `<span class="badge ${cls}">${esc(label)}</span>`;
+}
+function peopleLabel(item){
+  if(item.peopleCountLabel) return item.peopleCountLabel;
+  const s=String(item.support||'').replace('~','').replace('+','').trim();
+  if(!s||s==='—') return 'A few people';
+  if(/^\d/.test(s)) return 'About '+s+' people';
+  return s;
+}
+function plainTitle(item){return item.plainTitle||item.title||'Untitled'}
+function plainSummary(item){return item.plainSummary||item.summary||item.notes||''}
+function allItems(d){
+  const map={};
+  (d.actions||[]).forEach(a=>map[a.id]=Object.assign({_kind:'action'},a));
+  (d.bugs||[]).forEach(b=>map[b.id]=Object.assign({_kind:'bug'},b));
+  (d.features||[]).forEach(f=>map[f.id]=Object.assign({_kind:'feature'},f));
+  return map;
+}
+function renderArchive(active){
+  const dates=INDEX.length?INDEX.map(x=>x.date||x):Object.keys(DIGESTS).filter(k=>k.length===10).sort().reverse();
+  document.getElementById('archive').innerHTML=dates.map(date=>{
+    const d=dig(date)||{};
+    const nAct=(d.actions||[]).length;
+    const nBug=(d.bugs||[]).length;
+    return `<button class="date-btn ${date===active?'active':''}" onclick="go('${date}')"><div class="d">${esc(date)}</div><div class="m">${nAct? nAct+' ready to approve · ':''}${nBug} issues</div></button>`;
+  }).join('');
+}
+function card(item, date, kind){
+  const st=item.actionStatus||item.status||'';
+  const people=kind==='feature'?`<span class="people">${esc(peopleLabel(item))}</span>`:'';
+  return `<div class="card" onclick="go('${date}','${kind}','${esc(item.id)}')">
+    <div class="title">${esc(plainTitle(item))}</div>
+    <p class="summary">${esc(plainSummary(item))}</p>
+    <div class="meta">${badge(st)} ${people}</div>
+  </div>`;
+}
+function actionCard(a,date){
+  return `<div class="card" onclick="go('${date}','action','${esc(a.id)}')">
+    <div class="title">${esc(a.title||a.plainTitle)}</div>
+    <p class="summary">${esc(a.plainSummary||'')}</p>
+    <div class="meta">${badge(a.status||'Waiting for your review')}</div>
+    ${a.prUrl?`<a class="btn" href="${esc(a.prUrl)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Open pull request${a.prNumber?' #'+a.prNumber:''}</a>`:''}
+  </div>`;
+}
+function renderByTopic(d,date){
+  const actions=d.actions||[];
+  const bugs=d.bugs||[];
+  const feats=d.features||[];
+  return `
+    <div class="section"><h2><span class="dot" style="background:var(--green)"></span>Ready for you to approve <span class="count">${actions.length}</span></h2>
+      ${actions.length?actions.map(a=>actionCard(a,date)).join(''):'<div class="empty">Nothing waiting on you today.</div>'}
+    </div>
+    <div class="section"><h2><span class="dot" style="background:var(--red)"></span>Broken or confusing <span class="count">${bugs.length}</span></h2>
+      ${bugs.map(b=>card(b,date,'bug')).join('')||'<div class="empty">No open issues.</div>'}
+    </div>
+    <div class="section"><h2><span class="dot" style="background:var(--accent)"></span>Things people want <span class="count">${feats.length}</span></h2>
+      ${feats.map(f=>card(f,date,'feature')).join('')||'<div class="empty">No feature asks.</div>'}
+    </div>`;
+}
+function renderBySource(d,date){
+  const map=allItems(d);
+  const groups=[
+    ['discord','Discord'],
+    ['email','Email'],
+    ['inApp','In-app feedback'],
+    ['crashReports','Crash reports'],
+    ['analytics','Product analytics']
+  ];
+  const by=d.bySource||{};
+  return groups.map(([key,label])=>{
+    const ids=by[key]||[];
+    const items=ids.map(id=>map[id]).filter(Boolean);
+    // also heuristic fill if bySource empty
+    let list=items;
+    if(!list.length){
+      list=Object.values(map).filter(it=>{
+        const src=(it.sources||[]).join(' ').toLowerCase();
+        if(key==='discord') return src.includes('discord');
+        if(key==='email') return src.includes('gmail')||src.includes('mail')||src.includes('lapple');
+        if(key==='inApp') return src.includes('supabase')||src.includes('in-app')||src.includes('feedback');
+        if(key==='crashReports') return src.includes('sentry')||(it.id||'').includes('apple');
+        if(key==='analytics') return src.includes('posthog')||src.includes('analytics');
+        return false;
+      });
+    }
+    return `<div class="source-group"><h3>${esc(label)} <span class="count">${list.length}</span></h3>
+      ${list.length?list.map(it=>it._kind==='action'?actionCard(it,date):card(it,date,it._kind)).join(''):'<div class="empty">Nothing from this source today.</div>'}
+    </div>`;
+  }).join('');
+}
+function renderHome(date){
+  const d=dig(date);
+  if(!d){document.getElementById('main').innerHTML=`<h1>No review for ${esc(date)}</h1>`;return}
+  const rawTldr=d.plainTldr||d.tldr||[];
+  const tldr=Array.isArray(rawTldr)?rawTldr:(rawTldr?String(rawTldr).split(/(?<=\.)\s+/).filter(Boolean):[]);
+  const view=(location.hash.includes('?source')||window.__view==='source')?'source':'topic';
+  document.getElementById('main').innerHTML=`
+    <h1>Daily review</h1>
+    <p class="sub">${esc(date)} · collected for you by Unpaid Intern</p>
+    <div class="tldr"><strong>In plain English</strong><ul>${tldr.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+    <div class="tabs">
+      <button class="tab ${view==='topic'?'active':''}" onclick="window.__view='topic';render()">By topic</button>
+      <button class="tab ${view==='source'?'active':''}" onclick="window.__view='source';render()">By source</button>
+    </div>
+    ${view==='source'?renderBySource(d,date):renderByTopic(d,date)}
+    <footer>Click any card for the specific issue, where it came from, and what I did. Technical jargon stays tucked under Technical notes.</footer>`;
+}
+function renderDetail(date,kind,id){
+  const d=dig(date); if(!d) return;
+  let item=null;
+  if(kind==='action') item=(d.actions||[]).find(x=>x.id===id);
+  if(kind==='bug') item=(d.bugs||[]).find(x=>x.id===id);
+  if(kind==='feature') item=(d.features||[]).find(x=>x.id===id);
+  if(!item){document.getElementById('main').innerHTML=`<button class="back" onclick="go('${date}')">← Back</button><h1>Not found</h1>`;return}
+  const sources=(item.sources||item.sourceLinks||[]).map(s=>{
+    if(typeof s==='string') return `<li>${esc(s)}</li>`;
+    if(s.url) return `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label||s.url)}</a></li>`;
+    return `<li>${esc(s.label||JSON.stringify(s))}</li>`;
+  }).join('');
+  const tech=item.technicalNotes||item.detail||item.ownership||'';
+  document.getElementById('main').innerHTML=`
+    <button class="back" onclick="go('${date}')">← Back to ${esc(date)}</button>
+    <div class="meta" style="margin-bottom:10px">${badge(item.actionStatus||item.status||'')}${kind==='feature'?` <span class="people">${esc(peopleLabel(item))}</span>`:''}</div>
+    <h1>${esc(plainTitle(item))}</h1>
+    <p class="sub">${esc(plainSummary(item))}</p>
+    <div class="block"><h3>The specific issue</h3><p style="margin:0;white-space:pre-wrap">${esc(item.detail||plainSummary(item))}</p></div>
+    <div class="block"><h3>Where this came from</h3>${sources?`<ul style="margin:0;padding-left:18px">${sources}</ul>`:'<p class="summary" style="margin:0">See summary above.</p>'}</div>
+    <div class="block"><h3>What Unpaid Intern did</h3><p style="margin:0">${esc(item.actionNote||item.actionStatus||item.status||'Logged for review.')}</p>
+      ${item.prUrl?`<a class="btn" href="${esc(item.prUrl)}" target="_blank" rel="noopener">Open pull request${item.prNumber?' #'+item.prNumber:''}</a>`:''}
+    </div>
+    ${tech?`<details class="tech"><summary>Technical notes</summary><p style="white-space:pre-wrap">${esc(tech)}</p></details>`:''}
+  `;
+}
+function render(){
+  const {date,kind,id}=parseHash();
+  renderArchive(date);
+  if(kind&&id) renderDetail(date,kind,id);
+  else renderHome(date);
+}
+window.go=go; window.render=render; window.__view='topic';
+window.addEventListener('hashchange',render);
+render();
+</script>
+</body>
+</html>

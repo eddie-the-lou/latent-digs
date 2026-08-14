@@ -1,0 +1,308 @@
+{
+  "date": "2026-08-07",
+  "title": "Latent feedback dig",
+  "generatedAt": "2026-08-07T22:45:00Z",
+  "tldr": [
+    "12 open feature themes after dropping shipped items; 3 bugs still open / in flight.",
+    "Blank / missing friend clips ~43% missing Aug 7 (Lane 1 P0).",
+    "Discoverable-profile avatar asymmetry open; PR blocked on GitHub reconnect.",
+    "Battery regression owned by Lane 3.",
+    "6 items filtered as already shipped / mitigated."
+  ],
+  "stats": {
+    "openFeatures": 12,
+    "openBugs": 3,
+    "filtered": 6
+  },
+  "prStatus": "blocked (GitHub reconnect)",
+  "sources": [
+    {
+      "name": "Discord",
+      "meta": "#feature-requests, #questions, #general-chat, #announcements"
+    },
+    {
+      "name": "Gmail",
+      "meta": "Latent inbound feedback"
+    },
+    {
+      "name": "Supabase",
+      "meta": "public.feedback"
+    },
+    {
+      "name": "Sentry",
+      "meta": "weaive / apple-ios \u00b7 14d"
+    },
+    {
+      "name": "PostHog",
+      "meta": "error tracking empty"
+    }
+  ],
+  "features": [
+    {
+      "id": "friend-challenges",
+      "title": "Friend challenges",
+      "support": "~22",
+      "status": "open",
+      "summary": "Strong Discord vote cluster.",
+      "detail": "Largest recurring feature cluster in #feature-requests. Head-to-head / group challenges tied to study sessions and streaks.",
+      "sources": [
+        "Discord #feature-requests"
+      ],
+      "notes": "Top support"
+    },
+    {
+      "id": "daily-goals-streaks",
+      "title": "Daily goals / richer streaks",
+      "support": "~16",
+      "status": "open",
+      "summary": "Beyond basic streak counter.",
+      "detail": "Configurable daily goals and richer streak UX beyond the fire counter.",
+      "sources": [
+        "Discord #feature-requests"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "contacts-import",
+      "title": "Contacts import",
+      "support": "~16",
+      "status": "open",
+      "summary": "Find friends faster.",
+      "detail": "Import contacts to find friends already on Latent.",
+      "sources": [
+        "Discord #feature-requests"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "groups-forums",
+      "title": "Groups / forums",
+      "support": "\u2014",
+      "status": "open",
+      "summary": "Social layer beyond 1:1 friends.",
+      "detail": "Forum / group social layer. (Aug 8 dig expands this with group-study sessions.)",
+      "sources": [
+        "Discord"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "android-play-store",
+      "title": "Android / Play Store",
+      "support": "\u2014",
+      "status": "open",
+      "summary": "Platform expand.",
+      "detail": "Loud recurring platform ask for Android / Play Store.",
+      "sources": [
+        "Discord"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "havent-studied-reminder",
+      "title": "Daily \u201chaven\u2019t studied\u201d reminder",
+      "support": "\u2014",
+      "status": "open",
+      "summary": "Promised; not scheduled yet.",
+      "detail": "Daily nudge when user hasn\u2019t studied. Promised; not scheduled.",
+      "sources": [
+        "Discord (marianne)"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "screen-time-app-lock",
+      "title": "Real Screen Time / app lock",
+      "support": "\u2014",
+      "status": "open",
+      "summary": "Hard iOS constraints.",
+      "detail": "Device-level lock during sessions. Hard iOS Screen Time / FamilyControls constraints.",
+      "sources": [
+        "Supabase",
+        "Discord"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "default-tab-today",
+      "title": "Default tab \u2192 Today",
+      "support": "\u2014",
+      "status": "open",
+      "summary": "Still opens on Record; users want Today.",
+      "detail": "App still opens on Record after onboarding; users want Today as default.",
+      "sources": [
+        "Discord",
+        "codebase"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "profile-as-friends-see",
+      "title": "Profile as friends see it",
+      "support": "\u2014",
+      "status": "open",
+      "summary": "Preview / parity ask.",
+      "detail": "Preview how profile looks to friends.",
+      "sources": [
+        "Discord"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "in-app-dms",
+      "title": "In-app DMs",
+      "support": "\u2014",
+      "status": "open",
+      "summary": "Messaging between friends.",
+      "detail": "In-app direct messages between friends.",
+      "sources": [
+        "Discord"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "gesture-pause",
+      "title": "Gesture pause",
+      "support": "\u2014",
+      "status": "open",
+      "summary": "Pause exists; gesture trigger does not.",
+      "detail": "Pause is implemented; gesture to trigger pause is not.",
+      "sources": [
+        "Discord"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tag-reorder-sync",
+      "title": "Tag reorder + cross-device sync",
+      "support": "\u2014",
+      "status": "open",
+      "summary": "Lane 6 territory; basic tags already ship.",
+      "detail": "Reorder + sync still open under Lane 6; basic custom tags ship.",
+      "sources": [
+        "Discord",
+        "Lane 6"
+      ],
+      "notes": "Lane 6"
+    }
+  ],
+  "bugs": [
+    {
+      "id": "blank-missing-clips",
+      "title": "Blank / missing friend clips",
+      "status": "in-flight",
+      "summary": "~43% missing Aug 7 (Lane 1 \u00b7 P0).",
+      "detail": "## Status (Aug 7 dig)\nLane 1 P0. Roughly **43%** of friend clips missing on Aug 7 under the stricter \u201ctimelapse clip present\u201d definition used that day.\n\n## Ownership\nLane 1 \u2014 highest priority upload / media path work.\n\n(Aug 8 dig: PR #29 merged; rate improved under media-join metric \u2014 see that day\u2019s detail.)",
+      "sources": [
+        "PostHog",
+        "Supabase media",
+        "Lane 1"
+      ],
+      "ownership": "Lane 1 \u00b7 P0",
+      "evidence": [
+        "~43% missing Aug 7 (strict timelapse definition)"
+      ]
+    },
+    {
+      "id": "battery-regression",
+      "title": "Battery regression during sessions",
+      "status": "in-flight",
+      "summary": "Lane 3.",
+      "detail": "Battery drain during long recording sessions. Owned by Lane 3.",
+      "sources": [
+        "Internal / Gmail"
+      ],
+      "ownership": "Lane 3",
+      "evidence": [
+        "Lane 3 ownership assigned"
+      ]
+    },
+    {
+      "id": "discoverable-profile-avatar",
+      "title": "Search shows avatar, but non-friend profile detail doesn\u2019t",
+      "status": "open",
+      "summary": "PR blocked \u2014 reconnect GitHub.",
+      "detail": "## Symptom\nSearch shows avatar; non-friend profile detail shows initials only.\n\n## Cause (later confirmed Aug 8)\n`DiscoverableProfileView` drops `avatarURL` when constructing `Friend`.\n\n## Blocker\nPR blocked on GitHub reconnect.",
+      "sources": [
+        "Codebase",
+        "prior reports"
+      ],
+      "ownership": "PR blocked \u2014 reconnect GitHub",
+      "evidence": [
+        "Avatar present in search, missing on discoverable profile detail"
+      ]
+    }
+  ],
+  "sentry": [
+    {
+      "id": "APPLE-IOS-F",
+      "title": "HTTP 522",
+      "volume": "79 events / 9 users",
+      "notes": "Likely upstream / Cloudflare edge"
+    },
+    {
+      "id": "main-thread-hangs",
+      "title": "Main-thread hangs",
+      "volume": "\u2014",
+      "notes": "Watch for regressions with camera/UI"
+    },
+    {
+      "id": "watchdog-ram",
+      "title": "Watchdog / RAM kills",
+      "volume": "\u2014",
+      "notes": "Memory pressure during capture"
+    },
+    {
+      "id": "camera-preview-hangs",
+      "title": "Camera preview hangs",
+      "volume": "\u2014",
+      "notes": "Tied to session UX"
+    },
+    {
+      "id": "posthog-error-tracking",
+      "title": "PostHog error tracking",
+      "volume": "Empty",
+      "notes": "No useful error signal today"
+    }
+  ],
+  "filtered": [
+    {
+      "id": "camera-off-stopwatch",
+      "title": "Camera-off stopwatch",
+      "status": "shipped",
+      "why": "photoTimer / no-timelapse path exists"
+    },
+    {
+      "id": "draft-durability",
+      "title": "Draft durability / phone-dies save",
+      "status": "shipped",
+      "why": "DraftStore + segment rollover"
+    },
+    {
+      "id": "basic-custom-tags",
+      "title": "Basic custom tags / TagBoard edit",
+      "status": "shipped",
+      "why": "On You; reorder/sync still open"
+    },
+    {
+      "id": "historical-session-wipe",
+      "title": "Historical session wipe",
+      "status": "mitigated",
+      "why": "Unless new reports land"
+    },
+    {
+      "id": "tag-delete-crash",
+      "title": "Tag-delete crash",
+      "status": "fixed",
+      "why": "On main; don\u2019t reopen without repro"
+    },
+    {
+      "id": "thumbnail-accuracy",
+      "title": "Thumbnail accuracy / rounding",
+      "status": "fixed",
+      "why": "On main; don\u2019t reopen without repro"
+    }
+  ],
+  "clipMissing": [],
+  "newSincePrev": []
+}
