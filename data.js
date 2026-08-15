@@ -6014,7 +6014,7 @@ window.DIGESTS = {
     "tldr": [
       "PR #47 OPEN waiting review \u2014 Fix camera freeze when opening the recorder (CameraPreviewView attach off main). Do not merge until Eddie approves.",
       "No new in-app bugs or personal bug emails. Discord scrape still blocked (login wall). Last successful scrape Aug 12 9:15am PT.",
-      "Aug 14 missing-clip % finalized 5.4% (93 sess / 88 with media) \u2014 yesterday\u2019s 11.1% n=18 settled. Aug 13 2.0% (99/97). Aug 15 partial 5.6% (18/17).",
+      "Aug 14 missing-clip (session_save_attempted, attachment_count=0) finalized 18.8% (112/91) \u2014 yesterday\u2019s 11.1% n=18 did not land on a clean hour cutoff. All 21 misses are Photo+timer (4 people); Timelapse 100% has_media. Aug 15 partial 0.0% (27/27). Supabase storage_key view was 5.4% (93/88) \u2014 different definition, do not mix.",
       "clip_upload_failed Aug 14 5/3 users (3 connection-lost + 1 timeout + 1 create_media auth retry). Aug 15 none yet. No PUT 403 since Aug 12. session_save_failed 0 Aug 13\u201315.",
       "PostHog MB/s canary still Not firing (~1.56). Rageclicks Aug 14 65/30 (down vs Aug 13 140/29).",
       "Sentry: APPLE-IOS-V new overnight event parsunic (not KrabbyKai) 10:26pm PT Aug 14, build 12. Lifetime 5/4. Also APPLE-IOS-7 teardown hang (klvn) and APPLE-IOS-A watchdog on build 13. APPLE-IOS-F +2 Cloudflare 522s. Zero new issue IDs.",
@@ -6050,7 +6050,7 @@ window.DIGESTS = {
       {
         "name": "PostHog",
         "friendlyName": "Product analytics",
-        "meta": "clip_upload_failed Aug 14 5/3 (timeouts + 1 create_media auth); Aug 15 0; session_save_failed 0; rageclicks Aug 14 65/30; MB/s canary quiet ~1.56"
+        "meta": "clip_upload_failed Aug 14 5/3 (timeouts + 1 create_media auth); Aug 15 0; session_save_failed 0; missing-clip Aug 14 18.8% all Photo+timer; rageclicks Aug 14 65/30; MB/s canary quiet ~1.56"
       }
     ],
     "features": [
@@ -6436,8 +6436,8 @@ window.DIGESTS = {
         "title": "Blank / missing friend clips",
         "status": "merged-watch",
         "novelty": "update",
-        "summary": "No new user reports. Aug 14 missing finalized 5.4% (93/88). Aug 15 partial 5.6% (18/17). clip_upload_failed Aug 14 5/3 (timeouts + 1 create_media auth); Aug 15 0. No PUT 403 since Aug 12.",
-        "detail": "## Status\nLane 1 PR **#29 merged**. Keep watching \u2014 do not reopen as brand-new.\n\n## User reports\nNo new Supabase / Gmail blank-clip rows since Aug 12 dig. Last report remains same user `d4875320-\u2026` jumpropes + public/private dead (Aug 11 18:30 UTC).\n\n## Metrics (prod, sessions >3h old, media with storage_key)\n| Day (PT) | Sessions | With media | Missing % |\n|---|---:|---:|---:|\n| Aug 15 (partial) | 18 | 17 | 5.6% |\n| Aug 14 | 93 | 88 | 5.4% |\n| Aug 13 | 99 | 97 | 2.0% |\n| Aug 12 | 94 | 88 | 6.4% |\n| Aug 11 | 95 | 83 | 12.6% |\n| Aug 10 | 105 | 93 | 11.4% |\n| Aug 9 | 69 | 62 | 10.1% |\n| Aug 8 | 86 | 80 | 7.0% |\n\n## PostHog clip_upload_failed (PT)\n- Aug 12: 7 / 5 users \u2014 5 timeouts + 1 connection-lost + **1 PUT 403** (retry)\n- Aug 13: 1 / 1 user \u2014 connection-lost (retry)\n- Aug 14: **5 / 3 users** \u2014 3 connection-lost + 1 timeout + **1 create_media P0001 \u201crequires an authenticated caller\u201d**\n- Aug 15 (partial ~9am PT): **0**\n\nPUT 403 did not return. Auth error is a watch flag, not a speculative PR. session_save_failed: none Aug 13\u201315.\n\n## Gmail / alerts\nNo new clip-bloat email overnight (last Aug 12 6:25pm PT). **MB/s canary Not firing** (median **~1.56 < 4**; insight W8STBZIt Aug 14 1.564 / Aug 15 partial 1.566). Median stored clip ~15.7 MB.\n\n## Call\nAug 14 finalized ~5.4% (yesterday\u2019s 11.1% n=18 settled). Aug 13 still the best recent day (~2%). One auth retry folded into this watch \u2014 not a new PR.\n",
+        "summary": "No new user reports. Aug 14 missing 18.8% (112/91) is all Photo+timer (4 people); Timelapse 100% has_media. Aug 15 partial 0.0% (27/27). clip_upload_failed Aug 14 5/3; Aug 15 0.",
+        "detail": "## Status\nLane 1 PR **#29 merged**. Keep watching \u2014 do not reopen as brand-new.\n\n## User reports\nNo new Supabase / Gmail blank-clip rows since Aug 12 dig. Last report remains same user `d4875320-\u2026` jumpropes + public/private dead (Aug 11 18:30 UTC).\n\n## Metrics \u2014 PostHog session_save_attempted, attachment_count=0 (same def as Aug 13 100/98)\n| Day (PT) | Sessions | With media | Missing % |\n|---|---:|---:|---:|\n| Aug 15 (partial ~9:19am) | 27 | 27 | 0.0% |\n| Aug 14 | 112 | 91 | **18.8%** |\n| Aug 13 | 100 | 98 | 2.0% |\n\nAug 14 jump is **not a Timelapse regression**. Mode breakdown (all save attempts): every `has_media=false` event is **Photo + timer**. Timelapse is 100% `has_media=true` on Aug 13\u201315. Aug 14 Photo+timer: 33 saves, 21 without media, **4 people**. Lines up with `session_save_blocked` reason=media Aug 14 = 21/4.\n\nYesterday\u2019s 11.1% (n=18) did not land on a clean hour cutoff; full-day 18.8% is the finalize number.\n\nSupabase storage_key view (different definition, do not mix): Aug 14 93 sess / 88 with media = 5.4%; Aug 15 partial 18/17 = 5.6%.\n\n## PostHog clip_upload_failed (PT)\n- Aug 12: 7 / 5 users \u2014 5 timeouts + 1 connection-lost + **1 PUT 403** (retry)\n- Aug 13: 1 / 1 user \u2014 connection-lost (retry)\n- Aug 14: **5 / 3 users** \u2014 3 connection-lost + 1 timeout + **1 create_media P0001 \u201crequires an authenticated caller\u201d**\n- Aug 15 (partial ~9:19am PT): **0**\n\nPUT 403 did not return. session_save_failed: none Aug 13\u201315.\n\n## Gmail / alerts\nNo new clip-bloat email. **MB/s canary Not firing** (median **~1.56 < 4**; W8STBZIt Aug 14 1.565 / Aug 15 1.566). Interim MB/clip alert still gone from `system.alerts`.\n\n## Call\nDo not treat 18.8% as a friend-feed / Timelapse blank-clip spike. Camera-off Photo+timer already shipped; those 21 events/4 people are that path. Timelapse clips were complete. Not a new PR.\n",
         "sources": [
           "Supabase public.feedback (Aug 11 blank clip x2)",
           "PostHog clip_upload_failed",
@@ -6452,10 +6452,10 @@ window.DIGESTS = {
           "No PUT 403 since Aug 12; MB/s ~1.56; MB/clip interim alert gone from list"
         ],
         "plainTitle": "Friends' study clips sometimes show up blank",
-        "plainSummary": "No new blank-clip reports overnight. Aug 14 finished around 5% missing media (yesterday\u2019s morning ~11% sample settled). This morning is a small sample (~6%). Uploads yesterday were dropped connections / a timeout, plus one \u201cneeds to be signed in\u201d retry. Nothing so far today.",
+        "plainSummary": "No new blank-clip reports overnight. The comparable missing-clip rate for Aug 14 finished around 19%, but every miss was camera-off Photo+timer (4 people) \u2014 study videos all had media. This morning: none missing so far. Uploads yesterday were dropped connections / a timeout, plus one \u201cneeds to be signed in\u201d retry. Nothing so far today.",
         "actionStatus": "Watching",
-        "actionNote": "A fix already shipped. Aug 14\u2019s one sign-in retry stays on this watch \u2014 not opening another pull request.",
-        "technicalNotes": "## Status\nLane 1 PR **#29 merged**. Keep watching \u2014 do not reopen as brand-new.\n\n## User reports\nNo new Supabase / Gmail blank-clip rows since Aug 12 dig. Last report remains same user `d4875320-\u2026` jumpropes + public/private dead (Aug 11 18:30 UTC).\n\n## Metrics (prod, sessions >3h old, media with storage_key)\n| Day (PT) | Sessions | With media | Missing % |\n|---|---:|---:|---:|\n| Aug 15 (partial) | 18 | 17 | 5.6% |\n| Aug 14 | 93 | 88 | 5.4% |\n| Aug 13 | 99 | 97 | 2.0% |\n| Aug 12 | 94 | 88 | 6.4% |\n| Aug 11 | 95 | 83 | 12.6% |\n| Aug 10 | 105 | 93 | 11.4% |\n| Aug 9 | 69 | 62 | 10.1% |\n| Aug 8 | 86 | 80 | 7.0% |\n\n## PostHog clip_upload_failed (PT)\n- Aug 12: 7 / 5 users \u2014 5 timeouts + 1 connection-lost + **1 PUT 403** (retry)\n- Aug 13: 1 / 1 user \u2014 connection-lost (retry)\n- Aug 14: **5 / 3 users** \u2014 3 connection-lost + 1 timeout + **1 create_media P0001 \u201crequires an authenticated caller\u201d**\n- Aug 15 (partial ~9am PT): **0**\n\nPUT 403 did not return. Auth error is a watch flag, not a speculative PR. session_save_failed: none Aug 13\u201315.\n\n## Gmail / alerts\nNo new clip-bloat email overnight (last Aug 12 6:25pm PT). **MB/s canary Not firing** (median **~1.56 < 4**; insight W8STBZIt Aug 14 1.564 / Aug 15 partial 1.566). Median stored clip ~15.7 MB.\n\n## Call\nAug 14 finalized ~5.4% (yesterday\u2019s 11.1% n=18 settled). Aug 13 still the best recent day (~2%). One auth retry folded into this watch \u2014 not a new PR.\n",
+        "actionNote": "A fix already shipped. Aug 14\u2019s Photo+timer cluster is the camera-off path, not a new Timelapse PR.",
+        "technicalNotes": "## Status\nLane 1 PR **#29 merged**. Keep watching \u2014 do not reopen as brand-new.\n\n## User reports\nNo new Supabase / Gmail blank-clip rows since Aug 12 dig. Last report remains same user `d4875320-\u2026` jumpropes + public/private dead (Aug 11 18:30 UTC).\n\n## Metrics \u2014 PostHog session_save_attempted, attachment_count=0 (same def as Aug 13 100/98)\n| Day (PT) | Sessions | With media | Missing % |\n|---|---:|---:|---:|\n| Aug 15 (partial ~9:19am) | 27 | 27 | 0.0% |\n| Aug 14 | 112 | 91 | **18.8%** |\n| Aug 13 | 100 | 98 | 2.0% |\n\nAug 14 jump is **not a Timelapse regression**. Mode breakdown (all save attempts): every `has_media=false` event is **Photo + timer**. Timelapse is 100% `has_media=true` on Aug 13\u201315. Aug 14 Photo+timer: 33 saves, 21 without media, **4 people**. Lines up with `session_save_blocked` reason=media Aug 14 = 21/4.\n\nYesterday\u2019s 11.1% (n=18) did not land on a clean hour cutoff; full-day 18.8% is the finalize number.\n\nSupabase storage_key view (different definition, do not mix): Aug 14 93 sess / 88 with media = 5.4%; Aug 15 partial 18/17 = 5.6%.\n\n## PostHog clip_upload_failed (PT)\n- Aug 12: 7 / 5 users \u2014 5 timeouts + 1 connection-lost + **1 PUT 403** (retry)\n- Aug 13: 1 / 1 user \u2014 connection-lost (retry)\n- Aug 14: **5 / 3 users** \u2014 3 connection-lost + 1 timeout + **1 create_media P0001 \u201crequires an authenticated caller\u201d**\n- Aug 15 (partial ~9:19am PT): **0**\n\nPUT 403 did not return. session_save_failed: none Aug 13\u201315.\n\n## Gmail / alerts\nNo new clip-bloat email. **MB/s canary Not firing** (median **~1.56 < 4**; W8STBZIt Aug 14 1.565 / Aug 15 1.566). Interim MB/clip alert still gone from `system.alerts`.\n\n## Call\nDo not treat 18.8% as a friend-feed / Timelapse blank-clip spike. Camera-off Photo+timer already shipped; those 21 events/4 people are that path. Timelapse clips were complete. Not a new PR.\n",
         "sourceLinks": [
           {
             "label": "In-app feedback \u00b7 Aug 11 afternoon \u00b7 jumpropes blank + public/private dead \u00b7 build 1.0.1 (12)"
@@ -6470,7 +6470,7 @@ window.DIGESTS = {
             "label": "Pull request #29 (already merged)"
           }
         ],
-        "notes": "Aug 14 missing 5.4%; Aug 14 clip_upload_failed 5/3; Aug 15 none yet"
+        "notes": "Aug 14 18.8% all Photo+timer 4 people; Timelapse clean; clip_upload_failed 5/3"
       },
       {
         "id": "hotspot-throttle",
@@ -6531,7 +6531,7 @@ window.DIGESTS = {
         "title": "Log session seems to not work",
         "status": "open",
         "novelty": "update",
-        "summary": "No new Log-session rows. session_save_failed 0 Aug 13\u201315. Still needs repro.",
+        "summary": "No new Log-session rows. session_save_failed 0 Aug 13\u201315. session_save_blocked reason=media Aug 14 = 21/4 (same Photo+timer cluster); Aug 15 = 0.",
         "detail": "Original Aug 8 report unchanged. session_save_failed: 0 since Aug 12 (that one was NSURL -1009 offline). session_save_blocked mostly reason=media (Aug 13: 2/1; Aug 14: 6/3 users). Needs repro before Lane PR.",
         "sources": [
           "Supabase public.feedback",
@@ -6553,7 +6553,7 @@ window.DIGESTS = {
             "label": "In-app feedback \u00b7 Aug 8 \u00b7 build 1.0.1 (12)"
           }
         ],
-        "notes": "Unchanged; session_save_failed 0 Aug 13\u201315; still needs repro"
+        "notes": "session_save_failed 0; Aug 14 media-blocked 21/4 is Photo+timer, not a new log-session PR"
       },
       {
         "id": "apple-ios-y-camera",
@@ -6678,7 +6678,7 @@ window.DIGESTS = {
         "id": "posthog-clip-bloat",
         "title": "PostHog clip bloat MB/s canary",
         "volume": "not firing",
-        "notes": "median ~1.56; W8STBZIt Aug 14 1.564 / Aug 15 1.566; no Gmail fire"
+        "notes": "median ~1.56; W8STBZIt Not firing; F7adIdBk insight still saved, no system.alerts row"
       }
     ],
     "filtered": [
@@ -6746,20 +6746,20 @@ window.DIGESTS = {
     "clipMissing": [
       {
         "day": "Aug 15 (partial)",
-        "sessions": 18,
-        "withMedia": 17,
-        "missingPct": 5.6
+        "sessions": 27,
+        "withMedia": 27,
+        "missingPct": 0.0
       },
       {
         "day": "Aug 14",
-        "sessions": 93,
-        "withMedia": 88,
-        "missingPct": 5.4
+        "sessions": 112,
+        "withMedia": 91,
+        "missingPct": 18.8
       },
       {
         "day": "Aug 13",
-        "sessions": 99,
-        "withMedia": 97,
+        "sessions": 100,
+        "withMedia": 98,
         "missingPct": 2.0
       },
       {
@@ -6821,7 +6821,7 @@ window.DIGESTS = {
       "PR #47 open waiting review \u2014 camera preview hang (opened after Aug 14 dig)",
       "No new in-app feedback; no new personal bug emails; lapplegat08 unchanged",
       "Discord LOGIN WALL day 3 \u2014 last scrape Aug 12 9:15am PT",
-      "Aug 14 missing-clip % finalized 5.4% (93/88); Aug 13 2.0% (99/97); Aug 15 partial 5.6% (18/17)",
+      "Aug 14 missing-clip finalized 18.8% (112/91) \u2014 all Photo+timer 4 people; Timelapse 100% has_media; Aug 15 partial 0.0% (27/27). Yesterday 11.1% n=18 did not match a clean hour cutoff.",
       "clip_upload_failed Aug 14 5/3 (3 connection-lost + 1 timeout + 1 create_media auth); Aug 15 0",
       "Sentry APPLE-IOS-V overnight parsunic (not KrabbyKai) build 12 10:26pm PT; lifetime 5/4",
       "Sentry APPLE-IOS-7 klvn teardown hang; APPLE-IOS-A watchdog build 13 Santa Rosa; APPLE-IOS-F +2 522s",
@@ -6835,7 +6835,7 @@ window.DIGESTS = {
     "plainTldr": [
       "One fix is waiting for your approval: the camera freeze when opening the recorder (pull request #47).",
       "No new in-app bug reports or personal bug emails overnight. Discord still couldn\u2019t be scraped (login wall, day 3).",
-      "Friend clips were missing on about 5% of Aug 14 sessions (yesterday\u2019s morning sample of ~11% settled down). This morning is a small sample (~6%). Uploads yesterday were dropped connections / a timeout, plus one \u201cneeds to be signed in\u201d retry. Nothing so far today. Encoding check still fine (~1.56 MB/s).",
+      "The comparable missing-clip rate for Aug 14 finished around 19% \u2014 but every miss was camera-off Photo+timer (4 people), not a timelapse clip. Actual study videos all had media. This morning: 0 missing so far. Uploads yesterday were dropped connections / a timeout, plus one \u201cneeds to be signed in\u201d retry. Encoding check still fine (~1.56 MB/s).",
       "The camera preview froze again last night \u2014 a different person this time (parsunic, Baltimore), same hang as KrabbyKai. That phone is still on the old build, so it wouldn\u2019t have pull request #47 yet.",
       "Profile-photo cropper Cancel/Done buttons are already on main (Aug 9). Taking that off the open-bugs list."
     ],
