@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Aug 14</h1>
+  <p style="color:#666;margin:0 0 18px">From Unpaid Intern · plain English</p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px">Nothing waiting for your approval. Yesterday’s “photo missing when you open someone from search” fix is already on main — pull request #30 was closed after it landed another way.</li>
+    <li style="margin:0 0 6px">No new in-app bug reports or personal bug emails overnight. Friend clips were missing on only ~2% of Aug 13 sessions (best in a week). This morning’s sample is small (~11%).</li>
+    <li style="margin:0 0 6px">Uploads yesterday were one dropped connection. This morning: two dropped connections plus one “needs to be signed in” retry. The permission-denied (PUT 403) from Aug 12 did not come back. The real encoding check is still fine (~1.56 MB/s).</li>
+    <li style="margin:0 0 6px">The camera froze again last night for KrabbyKai while opening the preview (phone was low on memory). Stays with the recording project — not opening a separate fix. Discord still couldn’t be scraped (login wall).</li>
+    <li style="margin:0 0 6px">Nothing clear and unowned enough for a brand-new pull request today.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <div style="border:1px solid #ddd;border-radius:12px;padding:14px 16px;margin:0 0 12px;background:#f8fff9">
+      <div style="font-weight:700;margin-bottom:6px">Nothing waiting</div>
+      <div style="color:#555;margin-bottom:8px">The search-profile photo fix is already on main. Pull request #30 was closed last night (not merged) after the same one-line change landed another way. No other open pull requests.</div>
+      <div style="color:#0a7;font-weight:600;font-size:13px">Shipped on main</div>
+    </div>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken or confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 10px"><strong>Renamed tags don't stick when sharing (and double-click closes the editor)</strong><br><span style="color:#555">lapplegat08/Landon emailed that after renaming a tag like "Other", the new name doesn't show when sharing until they rename again. Also, double-clicking to select the label closes the menu. Eddie already promised a next-build fix.</span><br><span style="color:#888;font-size:12px">Waiting on a bigger project — Eddie already promised a fix in the next build. Still part of Tags work — no separate pull request.</span></li>
+    <li style="margin:0 0 10px"><strong>Friends' study clips sometimes show up blank</strong><br><span style="color:#555">No new reports overnight. Aug 13 finished around 2% missing media (best in a week; Aug 12 was ~6%). This morning is a small sample (~11%). Uploads were dropped connections, plus one “needs to be signed in” retry. The permission-denied retry from Aug 12 did not come back.</span><br><span style="color:#888;font-size:12px">Watching — A fix already shipped. One sign-in retry this morning folded into this watch — not opening another pull request yet.</span></li>
+    <li style="margin:0 0 10px"><strong>Personal Hotspot becomes unusable while Latent is open</strong><br><span style="color:#555">Someone reported that when Latent is running, their iPhone hotspot slows to the point of being unusable. Still need a clearer repro before coding a fix.</span><br><span style="color:#888;font-size:12px">Needs a clearer repro — Need a hotspot repro and network timing before Unpaid Intern opens a fix.</span></li>
+    <li style="margin:0 0 10px"><strong>Battery drains too fast during study sessions</strong><br><span style="color:#555">Long recording sessions still use more battery than they should. This is already owned by an ongoing recording/battery project.</span><br><span style="color:#888;font-size:12px">Waiting on a bigger project — Part of the ongoing recording &amp; battery project.</span></li>
+    <li style="margin:0 0 10px"><strong>Can't finish cropping a profile photo (buttons under the clock/battery)</strong><br><span style="color:#555">Cancel and Done on the profile-photo cropper sit under the iOS clock and battery, so they can’t tap them. Still owned by the profile photo project.</span><br><span style="color:#888;font-size:12px">Waiting on a bigger project — Part of the ongoing profile photo project — fold into that work, don’t open a separate fix.</span></li>
+    <li style="margin:0 0 10px"><strong>"Log session" doesn't seem to work after recording</strong><br><span style="color:#555">Someone finished recording and said the Log session step failed. No hard save-failures overnight. A few “blocked because media isn’t ready” retries this morning across three people. Still no clear reproduction.</span><br><span style="color:#888;font-size:12px">Needs a clearer repro — Need you (or the reporter) to reproduce the steps before Unpaid Intern opens a fix.</span></li>
+    <li style="margin:0 0 10px"><strong>App can freeze or crash when starting the camera or showing a draft thumbnail</strong><br><span style="color:#555">The camera froze again last night for KrabbyKai while opening the preview (phone was low on memory and in Low Power Mode). Same recording area as earlier camera freezes. Already owned — not opening a separate fix.</span><br><span style="color:#888;font-size:12px">Waiting on a bigger project — Part of the ongoing camera / recording project — don't open a duplicate fix.</span></li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want (top)</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Friend challenges</strong> · About 22 people<br><span style="color:#555">People want head-to-head or group study challenges tied to sessions and streaks — not just a friend list.</span></li>
+    <li style="margin:0 0 8px"><strong>Daily goals and richer streaks</strong> · About 16 people<br><span style="color:#555">Beyond a simple fire counter — configurable daily minute goals and clearer progress.</span></li>
+    <li style="margin:0 0 8px"><strong>Import contacts to find friends</strong> · About 16 people<br><span style="color:#555">Let people find friends already on Latent from their phone contacts instead of hunting usernames.</span></li>
+    <li style="margin:0 0 8px"><strong>Group study sessions (and groups/forums)</strong> · About 11 people<br><span style="color:#555">A leader starts a shared study session; phones stay locked/recording until a break is approved. Strong reply: "wait this feature is so good."</span></li>
+    <li style="margin:0 0 8px"><strong>Android / Google Play version</strong> · About 8 people<br><span style="color:#555">Android users keep asking when Latent will be on Play Store. Latest named thread is still VerizonX ("When's android version coming?").</span></li>
+    <li style="margin:0 0 8px"><strong>QR code to add friends in person</strong> · 1 person<br><span style="color:#555">ivythecat asked for a personal QR code you can scan to add someone faster than typing a username. They said it's nice-to-have, not urgent.</span></li>
+  </ul>
+
+  <p style="color:#888;font-size:12px;margin-top:24px">Full archive also lives on your Mac at ~/eddie's latent/feedback-digests/site/index.html when synced. Reply in Grok Bot if you want a public bookmark link too.</p>
+</body></html>

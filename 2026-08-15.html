@@ -1,0 +1,48 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Aug 15</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-08-15" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-08-15</a>
+  </p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px">One fix is waiting for your approval: the camera freeze when opening the recorder (pull request #47).</li>
+    <li style="margin:0 0 6px">No new in-app bug reports or personal bug emails overnight. Discord still couldn’t be scraped (login wall, day 3).</li>
+    <li style="margin:0 0 6px">Friend clips were missing on about 5% of Aug 14 sessions (yesterday’s morning sample of ~11% settled down). This morning is a small sample (~6%). Uploads yesterday were dropped connections / a timeout, plus one “needs to be signed in” retry. Nothing so far today. Encoding check still fine (~1.56 MB/s).</li>
+    <li style="margin:0 0 6px">The camera preview froze again last night — a different person this time (parsunic, Baltimore), same hang as KrabbyKai. That phone is still on the old build, so it wouldn’t have pull request #47 yet.</li>
+    <li style="margin:0 0 6px">Profile-photo cropper Cancel/Done buttons are already on main (Aug 9). Taking that off the open-bugs list.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <div style="border:1px solid #cde8d0;border-radius:12px;padding:14px 16px;margin:0 0 12px;background:#f8fff9">
+      <div style="font-weight:700;margin-bottom:6px">Fix camera freeze when opening the recorder</div>
+      <div style="color:#555;margin-bottom:8px">Opening the camera to start a session can freeze the preview for a few seconds. Pull request #47 moves attaching the preview off the main thread. Overnight freeze was still on build 12, so it wouldn’t have this fix yet.</div>
+      <div><a href="https://github.com/eddie-the-lou/latent/pull/47" style="color:#0a7;font-weight:700">Open pull request #47</a></div>
+    </div>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken or confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 10px"><strong>App can freeze or crash when starting the camera or showing a draft thumbnail</strong><br><span style="color:#555">The camera preview froze again last night for parsunic (Baltimore) — same hang as KrabbyKai, different person. Phone was on 20% battery, Low Power Mode, almost no free RAM, still on build 12. A fix is already waiting: pull request #47.</span><br><span style="color:#888;font-size:12px">Ready for you to approve — Pull request #47 is waiting. Overnight freeze was still on build 12, so it wouldn’t have this fix yet.</span></li>
+    <li style="margin:0 0 10px"><strong>Renamed tags don't stick when sharing (and double-click closes the editor)</strong><br><span style="color:#555">lapplegat08/Landon emailed that after renaming a tag like "Other", the new name doesn't show when sharing until they rename again. Also, double-clicking to select the label closes the menu. You already promised a next-build fix. No new mail overnight.</span><br><span style="color:#888;font-size:12px">Waiting on a bigger project — You already promised a fix in the next build. Still part of Tags work — no separate pull request.</span></li>
+    <li style="margin:0 0 10px"><strong>Friends' study clips sometimes show up blank</strong><br><span style="color:#555">No new reports overnight. Aug 14 finished around 5% missing media (yesterday’s morning ~11% sample settled). This morning is a small sample (~6%). Uploads yesterday were dropped connections / a timeout, plus one “needs to be signed in” retry. Nothing so far today.</span><br><span style="color:#888;font-size:12px">Watching — A fix already shipped. Not opening another pull request.</span></li>
+    <li style="margin:0 0 10px"><strong>Personal Hotspot becomes unusable while Latent is open</strong><br><span style="color:#555">Someone reported that when Latent is running, their iPhone hotspot slows to the point of being unusable. Still need a clearer repro before coding a fix. No new reports overnight.</span><br><span style="color:#888;font-size:12px">Needs a clearer repro</span></li>
+    <li style="margin:0 0 10px"><strong>Battery drains too fast during study sessions</strong><br><span style="color:#555">Long recording sessions still use more battery than they should. Overnight, iOS also killed the app once while someone was flipping the camera (build 13). Already owned by the recording/battery work.</span><br><span style="color:#888;font-size:12px">Waiting on a bigger project</span></li>
+    <li style="margin:0 0 10px"><strong>"Log session" doesn't seem to work after recording</strong><br><span style="color:#555">Someone finished recording and said the Log session step failed. No hard save-failures overnight. Still no clear reproduction.</span><br><span style="color:#888;font-size:12px">Needs a clearer repro</span></li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want (top)</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Friend challenges</strong> · About 22 people<br><span style="color:#555">People want head-to-head or group study challenges tied to sessions and streaks — not just a friend list.</span></li>
+    <li style="margin:0 0 8px"><strong>Daily goals and richer streaks</strong> · About 16 people<br><span style="color:#555">Beyond a simple fire counter — configurable daily minute goals and clearer progress.</span></li>
+    <li style="margin:0 0 8px"><strong>Import contacts to find friends</strong> · About 16 people<br><span style="color:#555">Let people find friends already on Latent from their phone contacts instead of hunting usernames.</span></li>
+    <li style="margin:0 0 8px"><strong>Group study sessions (and groups/forums)</strong> · About 11 people<br><span style="color:#555">A leader starts a shared study session; phones stay locked/recording until a break is approved.</span></li>
+    <li style="margin:0 0 8px"><strong>Android / Google Play version</strong> · About 8 people<br><span style="color:#555">Android users keep asking when Latent will be on Play Store.</span></li>
+    <li style="margin:0 0 8px"><strong>QR code to add friends in person</strong> · 1 person<br><span style="color:#555">ivythecat asked for a personal QR code you can scan to add someone faster than typing a username.</span></li>
+  </ul>
+
+  <p style="color:#888;font-size:12px;margin-top:24px">
+    Technical notes (not the main story): Discord login-walled since Aug 13 (last good scrape Aug 12). Crash report overnight also included a ~10s freeze while closing the camera after a long session, and Cloudflare timeouts on friends/collections from Islamabad. Cropper Cancel/Done already shipped Aug 9. GitHub connector still disconnected — used the personal token for pull request #47.
+  </p>
+</body></html>
