@@ -6531,7 +6531,7 @@ window.DIGESTS = {
         "title": "Log session seems to not work",
         "status": "open",
         "novelty": "update",
-        "summary": "No new Log-session rows. session_save_failed quiet since Aug 12. session_save_blocked Aug 13 2/1 media, Aug 14 6/3 media. Still needs repro.",
+        "summary": "No new Log-session rows. session_save_failed 0 Aug 13\u201315. Still needs repro.",
         "detail": "Original Aug 8 report unchanged. session_save_failed: 0 since Aug 12 (that one was NSURL -1009 offline). session_save_blocked mostly reason=media (Aug 13: 2/1; Aug 14: 6/3 users). Needs repro before Lane PR.",
         "sources": [
           "Supabase public.feedback",
@@ -6544,7 +6544,7 @@ window.DIGESTS = {
           "session_save_blocked Aug 13 2/1 media; Aug 14 6/3 media"
         ],
         "plainTitle": "\"Log session\" doesn't seem to work after recording",
-        "plainSummary": "Someone finished recording and said the Log session step failed. No hard save-failures overnight. A few \u201cblocked because media isn\u2019t ready\u201d retries this morning across three people. Still no clear reproduction.",
+        "plainSummary": "Someone finished recording and said the Log session step failed. No hard save-failures overnight. Still no clear reproduction.",
         "actionStatus": "Needs a clearer repro",
         "actionNote": "Need you (or the reporter) to reproduce the steps before Unpaid Intern opens a fix.",
         "technicalNotes": "Original Aug 8 report unchanged. session_save_failed: 0 since Aug 12 (that one was NSURL -1009 offline). session_save_blocked mostly reason=media (Aug 13: 2/1; Aug 14: 6/3 users). Needs repro before Lane PR.",
