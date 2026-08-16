@@ -1,0 +1,48 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Aug 16</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-08-16" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-08-16</a>
+  </p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px">One fix is still waiting for your approval: the camera freeze when opening the recorder (pull request #47). No new camera freezes overnight.</li>
+    <li style="margin:0 0 6px">No new in-app bug reports or personal bug emails. Discord still couldn’t be scraped (login wall, day 4).</li>
+    <li style="margin:0 0 6px">Friend study videos looked healthy: Aug 15 finished with 0% missing media, and this morning is still 0%. One dropped-connection upload and one dropped-connection save overnight — not a new spike.</li>
+    <li style="margin:0 0 6px">Two people hit server blips (not crashes): trudy couldn’t send a friend request yesterday morning; charanistired’s clip didn’t load this morning (Cloudflare 502, build 14).</li>
+    <li style="margin:0 0 6px">Nothing clear and unowned enough for a brand-new pull request today.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <div style="border:1px solid #cde8d0;border-radius:12px;padding:14px 16px;margin:0 0 12px;background:#f8fff9">
+      <div style="font-weight:700;margin-bottom:6px">Fix camera freeze when opening the recorder</div>
+      <div style="color:#555;margin-bottom:8px">Opening the camera to start a session can freeze the preview for a few seconds. Pull request #47 moves attaching the preview off the main thread. No new freezes overnight. Last hit was parsunic on Aug 14 (old build).</div>
+      <div><a href="https://github.com/eddie-the-lou/latent/pull/47" style="color:#0a7;font-weight:700">Open pull request #47</a></div>
+    </div>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken or confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 10px"><strong>App can freeze or crash when starting the camera or showing a draft thumbnail</strong><br><span style="color:#555">No new camera freezes overnight. Pull request #47 is still waiting. Last freeze was parsunic on Aug 14 (old build).</span><br><span style="color:#888;font-size:12px">Ready for you to approve — Pull request #47 is waiting.</span></li>
+    <li style="margin:0 0 10px"><strong>Renamed tags don't stick when sharing (and double-click closes the editor)</strong><br><span style="color:#555">lapplegat08/Landon emailed that after renaming a tag, the new name doesn't show when sharing until they rename again. You already promised a next-build fix. No new mail overnight.</span><br><span style="color:#888;font-size:12px">Waiting on a bigger project — still part of Tags work.</span></li>
+    <li style="margin:0 0 10px"><strong>Friends' study clips sometimes show up blank</strong><br><span style="color:#555">No new reports. Aug 15 finished with every study video having media, and this morning is still clean. One dropped-connection upload and one dropped-connection save overnight — not a spike.</span><br><span style="color:#888;font-size:12px">Watching — A fix already shipped.</span></li>
+    <li style="margin:0 0 10px"><strong>Personal Hotspot becomes unusable while Latent is open</strong><br><span style="color:#555">Still need a clearer repro. No new reports overnight.</span><br><span style="color:#888;font-size:12px">Needs a clearer repro</span></li>
+    <li style="margin:0 0 10px"><strong>Battery drains too fast during study sessions</strong><br><span style="color:#555">Already owned by the recording/battery work. No new overnight kills.</span><br><span style="color:#888;font-size:12px">Waiting on a bigger project</span></li>
+    <li style="margin:0 0 10px"><strong>"Log session" doesn't seem to work after recording</strong><br><span style="color:#555">One dropped-connection save overnight (network), which is different from a stuck Log session button. Still no clear reproduction of the original report.</span><br><span style="color:#888;font-size:12px">Needs a clearer repro</span></li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want (top)</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Friend challenges</strong> · About 22 people<br><span style="color:#555">Head-to-head or group study challenges tied to sessions and streaks.</span></li>
+    <li style="margin:0 0 8px"><strong>Daily goals and richer streaks</strong> · About 16 people<br><span style="color:#555">Configurable daily minute goals and clearer progress.</span></li>
+    <li style="margin:0 0 8px"><strong>Import contacts to find friends</strong> · About 16 people<br><span style="color:#555">Find friends already on Latent from phone contacts.</span></li>
+    <li style="margin:0 0 8px"><strong>Group study sessions (and groups/forums)</strong> · About 11 people<br><span style="color:#555">A leader starts a shared study session.</span></li>
+    <li style="margin:0 0 8px"><strong>Android / Google Play version</strong> · About 8 people<br><span style="color:#555">Android users keep asking when Latent will be on Play Store.</span></li>
+    <li style="margin:0 0 8px"><strong>QR code to add friends in person</strong> · 1 person<br><span style="color:#555">ivythecat asked for a personal QR code.</span></li>
+  </ul>
+
+  <p style="color:#888;font-size:12px;margin-top:24px">
+    Technical notes (not the main story): Discord login-walled since Aug 13 (last good scrape Aug 12) — needs a sign-in on my computer to resume. Overnight HTTP only: trudy 500s on send_friend_request; charanistired 502 on media-playback-url (build 14). No camera hangs. Encoding canary still ~1.57 MB/s, not firing.
+  </p>
+</body></html>
