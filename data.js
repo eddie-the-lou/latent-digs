@@ -1,5 +1,16 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-08-17",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 14,
+      "openBugs": 7,
+      "filtered": 9
+    },
+    "path": "data/2026-08-17.json",
+    "htmlArchive": "../2026-08-17.html"
+  },
+  {
     "date": "2026-08-16",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -112,6 +123,17 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-08-17",
+      "title": "Latent feedback dig",
+      "summaryStats": {
+        "openFeatures": 14,
+        "openBugs": 7,
+        "filtered": 9
+      },
+      "path": "data/2026-08-17.json",
+      "htmlArchive": "../2026-08-17.html"
+    },
     {
       "date": "2026-08-16",
       "title": "Latent feedback dig",
@@ -7775,6 +7797,904 @@ window.DIGESTS = {
       "crashReports": [
         "log-session",
         "apple-ios-y-camera"
+      ],
+      "analytics": [
+        "blank-missing-clips"
+      ]
+    }
+  },
+  "2026-08-17": {
+    "date": "2026-08-17",
+    "title": "Latent feedback dig",
+    "generatedAt": "2026-08-17T13:20:00Z",
+    "tldr": [
+      "PR #47 CLOSED unmerged by eddie-the-lou 2026-08-17T03:19:56Z (Aug 16 8:20pm PT). Camera freeze fix is not on main (no attachQueue). 0 open PRs. Do not reopen.",
+      "1 new in-app bug: wherearetheavocados/comet cropper Cancel/Done overlap, 1.0.1 (12), Aug 17 6:03am PT. Fix 4cba232 already on main / TestFlight 13\u201315. Ask comet to update. No new PR.",
+      "Missing-clip: Aug 16 final 1.9% (103/101) all Photo+timer; Aug 17 partial 20.8% (24/19) 1 person Photo+timer. Timelapse 100% has_media Aug 13\u201317.",
+      "clip_upload_failed Aug 16 1 connection-lost, Aug 17 0. session_save_failed Aug 16 1 NSURL -1005, Aug 17 0. session_save_blocked Aug 16 2/2 media, Aug 17 5/1 \u2014 1:1 with missing-clip.",
+      "Sentry 3 events / 2 issues / 2 users since Aug 16 9:00 PT \u00b7 0 new issue IDs \u00b7 APPLE-IOS-V quiet \u00b7 APPLE-IOS-A eddie \u00d72 watchdog build 14 \u00b7 APPLE-IOS-Y dhruvmitrap camera NSException build 12.",
+      "Discord LOGIN WALL day 5. Gmail: no new inbound user bugs. Overnight main: PRs #48 #49 #50, camera flip cover, generic push, onboarding copy, build 15. No new PR."
+    ],
+    "stats": {
+      "openFeatures": 14,
+      "openBugs": 7,
+      "filtered": 9
+    },
+    "prStatus": "No open PRs \u2014 you closed #47 unmerged last night \u00b7 cropper reporter on build 12, fix is in 15 \u00b7 no new PR today",
+    "sources": [
+      {
+        "name": "Discord",
+        "friendlyName": "Discord",
+        "meta": "LOGIN WALL day 5 \u2014 last successful scrape Aug 12 9:15am PT"
+      },
+      {
+        "name": "Gmail",
+        "friendlyName": "Email",
+        "meta": "No new inbound user bugs; lapplegat08 unchanged; no PostHog firing alerts. Yesterday\u2019s review 1a00b574eaf182a1 did not bounce, no reply."
+      },
+      {
+        "name": "Supabase",
+        "friendlyName": "In-app",
+        "meta": "public.feedback \u00b7 1 new row (table 25); wherearetheavocados/comet pfp crop Cancel/Done overlap, 1.0.1 (12), Aug 17 6:03am PT"
+      },
+      {
+        "name": "Sentry",
+        "friendlyName": "Crash reports",
+        "meta": "weaive / apple-ios \u00b7 3 events / 2 issues / 2 users since Aug 16 9:00 PT \u00b7 0 new issue IDs \u00b7 APPLE-IOS-V quiet \u00b7 APPLE-IOS-A eddie \u00d72 watchdog build 14 \u00b7 APPLE-IOS-Y dhruvmitrap camera NSException build 12"
+      },
+      {
+        "name": "PostHog",
+        "friendlyName": "Product analytics",
+        "meta": "missing-clip Aug 16 final 1.9% (103/101) all Photo+timer; Aug 17 partial 20.8% (24/19) 1 person Photo+timer; clip_upload_failed Aug 16 1 connection-lost, Aug 17 0; MB/s canary quiet ~1.57"
+      }
+    ],
+    "features": [
+      {
+        "id": "friend-challenges",
+        "title": "Friend challenges",
+        "support": "~22",
+        "status": "open",
+        "summary": "Strong Discord vote cluster (unchanged).",
+        "detail": "Largest recurring feature cluster in #feature-requests. Users want head-to-head / group challenges tied to study sessions and streaks \u2014 not just passive friend lists.\n\nNo new Aug 12 messages that change the ranking; still the top support signal (~22).",
+        "sources": [
+          "Discord #feature-requests"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Friend challenges",
+        "plainSummary": "People want head-to-head or group study challenges tied to sessions and streaks \u2014 not just a friend list.",
+        "peopleCountLabel": "About 22 people",
+        "actionStatus": "Idea backlog",
+        "technicalNotes": "Largest recurring feature cluster in #feature-requests. Users want head-to-head / group challenges tied to study sessions and streaks \u2014 not just passive friend lists.\n\nNo new Aug 12 messages that change the ranking; still the top support signal (~22).",
+        "peopleCount": 22,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 feature requests"
+          }
+        ]
+      },
+      {
+        "id": "daily-goals-streaks",
+        "title": "Daily goals / richer streaks",
+        "support": "~16",
+        "status": "open",
+        "summary": "Beyond basic streak counter.",
+        "detail": "Users want configurable daily minute goals, richer streak celebrations, and clearer progress \u2014 not only a fire counter.\n\nSupport remains ~16; no new Aug 12 cluster.",
+        "sources": [
+          "Discord #feature-requests"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Daily goals and richer streaks",
+        "plainSummary": "Beyond a simple fire counter \u2014 configurable daily minute goals and clearer progress.",
+        "peopleCountLabel": "About 16 people",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 16,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 feature requests"
+          }
+        ],
+        "technicalNotes": "Users want configurable daily minute goals, richer streak celebrations, and clearer progress \u2014 not only a fire counter.\n\nSupport remains ~16; no new Aug 12 cluster."
+      },
+      {
+        "id": "contacts-import",
+        "title": "Contacts import",
+        "support": "~16",
+        "status": "open",
+        "summary": "Find friends faster.",
+        "detail": "Contact-book / phone-number import so people can find friends already on Latent without hunting usernames.",
+        "sources": [
+          "Discord #feature-requests"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Import contacts to find friends",
+        "plainSummary": "Let people find friends already on Latent from their phone contacts instead of hunting usernames.",
+        "peopleCountLabel": "About 16 people",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 16,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 feature requests"
+          }
+        ],
+        "technicalNotes": "Contact-book / phone-number import so people can find friends already on Latent without hunting usernames."
+      },
+      {
+        "id": "group-study-sessions",
+        "title": "Groups / forums + group study sessions",
+        "support": "~11+",
+        "status": "open",
+        "summary": "No new replies since Aug 8 (serenity + KrabbyKai). Still open cluster.",
+        "detail": "serenity group-study / collab sessions ask still open. No new Aug 12 replies that change ranking.",
+        "sources": [
+          "Discord #feature-requests (serenity)",
+          "Discord (KrabbyKai reply)",
+          "prior: simon forums cluster"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Group study sessions (and groups/forums)",
+        "plainSummary": "A leader starts a shared study session; phones stay locked/recording until a break is approved. Strong reply: \"wait this feature is so good.\"",
+        "peopleCountLabel": "About 11 people",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 11,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 serenity (group study ask)"
+          },
+          {
+            "label": "Discord \u00b7 KrabbyKai reply"
+          }
+        ],
+        "technicalNotes": "serenity group-study / collab sessions ask still open. No new Aug 12 replies that change ranking."
+      },
+      {
+        "id": "android-play-store",
+        "title": "Android / Play Store",
+        "support": "8+",
+        "status": "open",
+        "novelty": "unchanged",
+        "summary": "VerizonX Android thread still the latest named ask. No new Discord since Aug 12 scrape.",
+        "detail": "## What's new (Aug 11 afternoon PT / after Aug 11 dig)\nDiscord **#feature-requests**: **VerizonX** started a thread (**2026-08-11 23:40 UTC** / Tue Aug 11 ~4:40pm PT): **\"When's android version coming?\"**\n\n## Prior overnight (already in Aug 11 dig)\nTejass #questions thread + infinitechances #general-chat.\n\n## Call\nNamed askers now include VerizonX on top of Tejass, infinitechances, Shantanu, dull_B2, Wakanda Panda, Astriddd, \u03b9\u03b7\u03b1\u03b7\u03b7\u03b1. Keep as top platform theme \u2014 idea backlog only.",
+        "sources": [
+          "Discord #feature-requests (VerizonX Aug 11)",
+          "Discord #questions (Tejass)",
+          "Discord #general-chat (infinitechances)",
+          "prior askers"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "evidence": [
+          "VerizonX Aug 11 23:40 UTC #feature-requests: When's android version coming?",
+          "Tejass + infinitechances from Aug 10\u201311 overnight"
+        ],
+        "plainTitle": "Android / Google Play version",
+        "plainSummary": "Android users keep asking when Latent will be on Play Store. Latest named thread is still VerizonX (\"When's android version coming?\").",
+        "peopleCountLabel": "About 8 people",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 8,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 feature requests \u00b7 VerizonX Android thread (Aug 11 afternoon PT)"
+          },
+          {
+            "label": "Discord \u00b7 questions \u00b7 Tejass"
+          },
+          {
+            "label": "Discord \u00b7 general chat \u00b7 infinitechances"
+          }
+        ],
+        "technicalNotes": "## What's new (Aug 11 afternoon PT / after Aug 11 dig)\nDiscord **#feature-requests**: **VerizonX** started a thread (**2026-08-11 23:40 UTC** / Tue Aug 11 ~4:40pm PT): **\"When's android version coming?\"**\n\n## Prior overnight (already in Aug 11 dig)\nTejass #questions thread + infinitechances #general-chat.\n\n## Call\nNamed askers now include VerizonX on top of Tejass, infinitechances, Shantanu, dull_B2, Wakanda Panda, Astriddd, \u03b9\u03b7\u03b1\u03b7\u03b7\u03b1. Keep as top platform theme \u2014 idea backlog only."
+      },
+      {
+        "id": "qr-add-friends",
+        "title": "QR code to add friends",
+        "support": "1",
+        "status": "open",
+        "novelty": "unchanged",
+        "summary": "ivythecat QR-add-friends still open; no new Discord since Aug 12 scrape.",
+        "detail": "Discord **#feature-requests** thread from **ivythecat** (Aug 11): personal QR to add friends. Asker said not high-priority.\n\nAug 14: Discord login wall again \u2014 no new messages confirmed. Keep as idea backlog.",
+        "sources": [
+          "Discord #feature-requests (ivythecat Aug 11)"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "evidence": [
+          "ivythecat Aug 11 16:39 UTC thread: Include QR code method\u2026",
+          "Asker: not a high-priority function"
+        ],
+        "plainTitle": "QR code to add friends in person",
+        "plainSummary": "ivythecat asked for a personal QR code you can scan to add someone faster than typing a username. They said it's nice-to-have, not urgent.",
+        "peopleCountLabel": "1 person",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 1,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 feature requests \u00b7 ivythecat QR friends (Aug 11)"
+          }
+        ],
+        "technicalNotes": "Discord **#feature-requests** thread from **ivythecat** (Aug 11): personal QR to add friends. Asker said not high-priority.\n\nAug 14: Discord login wall again \u2014 no new messages confirmed. Keep as idea backlog."
+      },
+      {
+        "id": "havent-studied-reminder",
+        "title": "Daily \u201chaven\u2019t studied\u201d reminder",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "marianne thread still open.",
+        "detail": "Promised-style nudge when the user hasn\u2019t logged a session that day. marianne thread still open; not scheduled yet.",
+        "sources": [
+          "Discord (marianne)"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Reminder when you haven't studied today",
+        "plainSummary": "A gentle nudge if someone hasn't logged a session that day.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 marianne"
+          }
+        ],
+        "technicalNotes": "Promised-style nudge when the user hasn\u2019t logged a session that day. marianne thread still open; not scheduled yet."
+      },
+      {
+        "id": "screen-time-app-lock",
+        "title": "Real Screen Time / app lock",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Supabase feature Aug 7 + group-study lock motif; hard iOS constraints.",
+        "detail": "Users want genuine device-level lock / Screen Time integration during sessions. Hard iOS FamilyControls / Screen Time API constraints. Overlaps with group-study lock ask.",
+        "sources": [
+          "Supabase public.feedback (Aug 7)",
+          "Discord group-study motif"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Real phone lock during sessions",
+        "plainSummary": "People want true Screen Time\u2013style locking while studying. Hard on iOS; overlaps with group-study lock.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 7"
+          }
+        ],
+        "technicalNotes": "Users want genuine device-level lock / Screen Time integration during sessions. Hard iOS FamilyControls / Screen Time API constraints. Overlaps with group-study lock ask."
+      },
+      {
+        "id": "default-tab-today",
+        "title": "Default tab \u2192 Today",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Code still lands on Record after onboarding (selectedTab = .record).",
+        "detail": "After onboarding, app still sets `selectedTab = .record`. Users want to land on **Today**.",
+        "sources": [
+          "Codebase (App tab selection)",
+          "prior Discord asks"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Open on Today after onboarding",
+        "plainSummary": "After signup the app still lands on Record; people want Today.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Prior Discord asks + code check"
+          }
+        ],
+        "technicalNotes": "After onboarding, app still sets `selectedTab = .record`. Users want to land on **Today**."
+      },
+      {
+        "id": "profile-as-friends-see",
+        "title": "Profile as friends see it",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Preview / parity ask.",
+        "detail": "Users want a preview of how their profile looks to friends (parity / preview mode).",
+        "sources": [
+          "Discord"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Preview your profile as friends see it",
+        "plainSummary": "A preview mode so you can check how your profile looks to friends.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Discord"
+          }
+        ],
+        "technicalNotes": "Users want a preview of how their profile looks to friends (parity / preview mode)."
+      },
+      {
+        "id": "in-app-dms",
+        "title": "In-app DMs",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Zachary; halo \u201cyet \ud83d\udc40\u201d.",
+        "detail": "Messaging between friends inside Latent. Zachary ask; halo \u201cyet \ud83d\udc40\u201d.",
+        "sources": [
+          "Discord"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Messages inside Latent",
+        "plainSummary": "Chat with friends without leaving the app.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 Zachary"
+          }
+        ],
+        "technicalNotes": "Messaging between friends inside Latent. Zachary ask; halo \u201cyet \ud83d\udc40\u201d."
+      },
+      {
+        "id": "gesture-pause",
+        "title": "Gesture pause",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Pause exists; gesture trigger does not.",
+        "detail": "Session pause is implemented; a gesture trigger to pause is not.",
+        "sources": [
+          "Discord",
+          "codebase"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Pause a session with a gesture",
+        "plainSummary": "Pause already exists; people want a quick gesture to trigger it.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Discord"
+          }
+        ],
+        "technicalNotes": "Session pause is implemented; a gesture trigger to pause is not."
+      },
+      {
+        "id": "tag-reorder-sync",
+        "title": "Tag reorder + cross-device sync",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Lane 6 feat/tag-sync-and-order \u2014 commits in worktree, not on main.",
+        "detail": "Basic tags already ship. Reorder + cross-device sync is Lane 6 territory (`feat/tag-sync-and-order`). Commits landed in worktree, not merged to main.",
+        "sources": [
+          "Lane 6 worktree",
+          "Discord"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Reorder tags and sync across devices",
+        "plainSummary": "Basic tags already ship. Reordering and keeping them in sync across phones is still in progress.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Part of ongoing Tags work"
+          }
+        ],
+        "technicalNotes": "Basic tags already ship. Reorder + cross-device sync is Lane 6 territory (`feat/tag-sync-and-order`). Commits landed in worktree, not merged to main."
+      },
+      {
+        "id": "offline-mode",
+        "title": "Offline mode",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Supabase feature ask Aug 5; durability paths exist but full offline not shipped.",
+        "detail": "Full offline mode not shipped. Draft durability / segment rollover paths exist on main, but users still ask for true offline recording + sync.",
+        "sources": [
+          "Supabase public.feedback (Aug 5)"
+        ],
+        "notes": "Unchanged vs Aug 15; Discord still login-walled (day 5), no new scrape",
+        "plainTitle": "Full offline mode",
+        "plainSummary": "Record and keep working without internet, then sync later. Partial durability exists; full offline isn't shipped.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 5"
+          }
+        ],
+        "technicalNotes": "Full offline mode not shipped. Draft durability / segment rollover paths exist on main, but users still ask for true offline recording + sync."
+      }
+    ],
+    "bugs": [
+      {
+        "id": "profile-pic-cropper",
+        "title": "Profile photo cropper Cancel/Done under status bar",
+        "status": "shipped-old-build",
+        "novelty": "new-repro-old-build",
+        "summary": "New in-app from comet (wherearetheavocados) on build 12. Aug 9 fix 4cba232 is on main and in TestFlight 13-15. Ask them to update. No new PR.",
+        "detail": "comet (wherearetheavocados) reported Aug 17 6:03am PT they cannot tap Cancel/Done on the profile-photo cropper (buttons under the iOS clock/battery). Same issue Ree (cloudberree) reported Aug 10. Reporter is on 1.0.1 (12). The Aug 9 fix is already on main and in TestFlight builds 13, 14, and 15. Ask them to update. Do not open a PR.",
+        "sources": [
+          "Supabase public.feedback (Aug 17 comet / wherearetheavocados)",
+          "Supabase public.feedback (Aug 10 cloudberree / Ree)"
+        ],
+        "ownership": "Already shipped on main \u00b7 TestFlight 13+ \u00b7 reporter on 12",
+        "evidence": [
+          "Supabase id 63dea2e0-7b5e-4f46-8d54-d79683e7977e",
+          "Fix commit 4cba23273d4f0289be6f4182c7f425921a34ec40 (Aug 9 4:41pm PT) on main",
+          "Build 12 bump 515202c15d was Aug 7, 27 commits before the fix",
+          "Reporter 1.0.1 (12); current main 1.0.1 (15)"
+        ],
+        "plainTitle": "Profile-photo cropper Cancel/Done buttons are hard to tap",
+        "plainSummary": "comet (wherearetheavocados) reported this morning they can\u2019t change their profile photo because Cancel and Done sit under the iOS clock/battery. Same issue Ree reported Aug 10. They\u2019re on build 12. The Aug 9 fix is already on main and in TestFlight builds 13, 14, and 15. Ask them to update \u2014 no new pull request.",
+        "actionStatus": "Already shipped",
+        "actionNote": "Fix is in TestFlight 13+. Reporter is on 12. Ask comet to update.",
+        "technicalNotes": "Supabase id 63dea2e0-7b5e-4f46-8d54-d79683e7977e. Fix commit 4cba23273d4f0289be6f4182c7f425921a34ec40 (Aug 9 4:41pm PT) is on main. Build 12 bump 515202c15d was Aug 7, 27 commits before the fix. AvatarCropView on main still has insetShortfall padding. Do not reopen a PR.",
+        "peopleCount": 2,
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 17 6:03am PT \u00b7 wherearetheavocados / comet \u00b7 1.0.1 (12)"
+          },
+          {
+            "label": "In-app feedback \u00b7 Aug 10 \u00b7 cloudberree / Ree"
+          }
+        ],
+        "notes": "New in-app from comet on build 12; fix already in TestFlight 13+"
+      },
+      {
+        "id": "tag-rename-share-and-doubleclick",
+        "title": "Tag rename doesn\u2019t stick on share + double-click closes editor (lapplegat08 / Landon)",
+        "status": "Open",
+        "novelty": "unchanged",
+        "summary": "Eddie promised fix by next build (Aug 9). Still Lane 6 \u2014 do not open duplicate PR. No new email since.",
+        "detail": "From lapplegat08@gmail.com (Landon). Rename doesn\u2019t apply on share until renamed again; double-click closes editor. Eddie reply Aug 9 3:38pm PT promising next-build fix. Ownership remains Lane 6. Do NOT open a parallel PR.",
+        "sources": [
+          "Gmail lapplegat08@gmail.com",
+          "Video.mov attachment"
+        ],
+        "ownership": "Lane 6 \u00b7 tags",
+        "evidence": [
+          "Thread id 19fe3b79b3816d1a",
+          "Eddie reply 2026-08-09T22:38:20Z promising next-build fix",
+          "No new replies as of Aug 14 dig"
+        ],
+        "plainTitle": "Renamed tags don't stick when sharing (and double-click closes the editor)",
+        "plainSummary": "lapplegat08/Landon emailed that after renaming a tag like \"Other\", the new name doesn't show when sharing until they rename again. Also, double-clicking to select the label closes the menu. Eddie already promised a next-build fix.",
+        "actionStatus": "Waiting on a bigger project",
+        "actionNote": "Eddie already promised a fix in the next build. Still part of Tags work \u2014 no separate pull request.",
+        "technicalNotes": "From lapplegat08@gmail.com (Landon). Rename doesn\u2019t apply on share until renamed again; double-click closes editor. Eddie reply Aug 9 3:38pm PT promising next-build fix. Ownership remains Lane 6. Do NOT open a parallel PR.",
+        "peopleCount": 1,
+        "sourceLinks": [
+          {
+            "label": "Email from lapplegat08@gmail.com \u00b7 \"A few bugs with the tags feature\" \u00b7 Aug 8, 2026"
+          },
+          {
+            "label": "Eddie's reply \u00b7 Aug 9, 2026 \u00b7 promised fix by next build"
+          }
+        ],
+        "notes": "Unchanged; still no Landon reply; Discord day 5"
+      },
+      {
+        "id": "blank-missing-clips",
+        "title": "Blank / missing friend clips",
+        "status": "merged-watch",
+        "novelty": "update",
+        "summary": "No new user reports (last still pepsi/Julian jumpropes Aug 11). Aug 16 final 1.9% (103/101) all Photo+timer; Aug 17 partial 20.8% (24/19) 1 person Photo+timer. Timelapse 100% has_media.",
+        "detail": "## Status\nLane 1 PR **#29 merged**. Keep watching \u2014 do not reopen as brand-new.\n\n## User reports\nNo new blank-clip reports (last is still pepsi/Julian jumpropes Aug 11).\n\n## Metrics \u2014 PostHog session_save_attempted, attachment_count=0\n| Day (PT) | Sessions | With media | Missing % |\n|---|---:|---:|---:|\n| Aug 17 (partial ~6:06am) | 24 | 19 | **20.8%** \u2014 all Photo+timer, 1 person 51509273, five events 1:06am |\n| Aug 16 final | 103 | 101 | **1.9%** \u2014 all Photo+timer, 2 people (5:51pm + 7:12pm) |\n| Aug 15 | 97 | 97 | **0.0%** |\n| Aug 14 recomputed | 113 | 92 | 18.6% (was 112/91=18.8%; one extra with-media event) |\n| Aug 13 | 100 | 98 | 2.0% |\n\nTimelapse is 100% has_media Aug 13\u201317.\n\n## PostHog clip_upload_failed (PT)\n- Aug 15: **0**\n- Aug 16: **1 / 1** connection-lost (person 122ebb8d, 6:01am, build 10)\n- Aug 17: **0**\nPUT 403 last seen Aug 12.\n\n## session_save_failed\n- Aug 16: 1 Timelapse NSURL -1005 connection-lost, 2:04am (f0da7e13)\n- Aug 17: **0**\n\n## session_save_blocked\n- Aug 16: 2 media / 2 people\n- Aug 17: 5 media / 1 person \u2014 1:1 with missing-clip rows\n\n## Call\nAug 16 finished 1.9% missing, all camera-off Photo+timer (2 people, evening). This morning\u2019s 21% is one person tapping Photo+timer five times in four seconds. Study (timelapse) videos still all have media. Photo+timer misses are a known camera-off pattern \u2014 not opening another pull request.\n",
+        "sources": [
+          "Supabase public.feedback (Aug 11 blank clip x2)",
+          "PostHog clip_upload_failed",
+          "Supabase media join",
+          "Lane 1 PR #29"
+        ],
+        "ownership": "Lane 1 \u00b7 PR #29 merged \u00b7 keep watching",
+        "evidence": [
+          "No new Supabase feedback since Aug 11 18:30 UTC jumpropes report",
+          "Missing % Aug 13 finalized 2.0%; Aug 12 6.4%; Aug 11 revised 12.6%; Aug 14 partial 11.1%",
+          "clip_upload_failed Aug 13 1/1 connection-lost; Aug 14 3/2 (2 connection-lost + 1 create_media P0001 auth)",
+          "No PUT 403 since Aug 12; MB/s ~1.56; MB/clip interim alert gone from list"
+        ],
+        "plainTitle": "Friends' study clips sometimes show up blank",
+        "plainSummary": "No new blank-clip reports (last is still pepsi/Julian jumpropes Aug 11). Aug 16 finished 1.9% missing, all camera-off Photo+timer (2 people, evening). This morning\u2019s 21% is one person tapping Photo+timer five times in four seconds. Study (timelapse) videos still all have media.",
+        "actionStatus": "Watching",
+        "actionNote": "A fix already shipped. The Photo+timer misses are a known camera-off pattern \u2014 not opening another pull request.",
+        "technicalNotes": "## Status\nLane 1 PR **#29 merged**. Keep watching \u2014 do not reopen as brand-new.\n\n## User reports\nNo new blank-clip reports (last is still pepsi/Julian jumpropes Aug 11).\n\n## Metrics \u2014 PostHog session_save_attempted, attachment_count=0\n| Day (PT) | Sessions | With media | Missing % |\n|---|---:|---:|---:|\n| Aug 17 (partial ~6:06am) | 24 | 19 | **20.8%** \u2014 all Photo+timer, 1 person 51509273, five events 1:06am |\n| Aug 16 final | 103 | 101 | **1.9%** \u2014 all Photo+timer, 2 people (5:51pm + 7:12pm) |\n| Aug 15 | 97 | 97 | **0.0%** |\n| Aug 14 recomputed | 113 | 92 | 18.6% (was 112/91=18.8%; one extra with-media event) |\n| Aug 13 | 100 | 98 | 2.0% |\n\nTimelapse is 100% has_media Aug 13\u201317.\n\n## PostHog clip_upload_failed (PT)\n- Aug 15: **0**\n- Aug 16: **1 / 1** connection-lost (person 122ebb8d, 6:01am, build 10)\n- Aug 17: **0**\nPUT 403 last seen Aug 12.\n\n## session_save_failed\n- Aug 16: 1 Timelapse NSURL -1005 connection-lost, 2:04am (f0da7e13)\n- Aug 17: **0**\n\n## session_save_blocked\n- Aug 16: 2 media / 2 people\n- Aug 17: 5 media / 1 person \u2014 1:1 with missing-clip rows\n\n## Call\nAug 16 finished 1.9% missing, all camera-off Photo+timer (2 people, evening). This morning\u2019s 21% is one person tapping Photo+timer five times in four seconds. Study (timelapse) videos still all have media. Photo+timer misses are a known camera-off pattern \u2014 not opening another pull request.\n",
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 11 afternoon \u00b7 jumpropes blank + public/private dead \u00b7 build 1.0.1 (12)"
+          },
+          {
+            "label": "In-app feedback \u00b7 Aug 11 morning \u00b7 blank 40s clip"
+          },
+          {
+            "label": "Product analytics \u00b7 Aug 14 uploads: dropped connections + one create_media auth retry"
+          },
+          {
+            "label": "Pull request #29 (already merged)"
+          }
+        ],
+        "notes": "Aug 16 final 1.9% Photo+timer; Aug 17 partial 20.8% 1 person Photo+timer; Timelapse 100% has_media"
+      },
+      {
+        "id": "hotspot-throttle",
+        "title": "Hotspot speeds throttle / unusable while Latent is in use",
+        "status": "open",
+        "novelty": "unchanged",
+        "summary": "Still needs investigation \u2014 not PR-ready. No second report as of Aug 14 dig.",
+        "detail": "Supabase Aug 10 22:38 UTC: hotspot speeds throttle when Latent is in use. Still no clear one-file footgun. Do **not** open a speculative fix from this dig.",
+        "sources": [
+          "Supabase public.feedback (Aug 10 22:38 UTC)"
+        ],
+        "ownership": "Needs investigation \u00b7 no PR yet",
+        "evidence": [
+          "Supabase feedback id 076226e4-\u2026 Aug 10 22:38 UTC build 1.0.1 (12)",
+          "No second report as of Aug 14 dig"
+        ],
+        "plainTitle": "Personal Hotspot becomes unusable while Latent is open",
+        "plainSummary": "Someone reported that when Latent is running, their iPhone hotspot slows to the point of being unusable. Still need a clearer repro before coding a fix.",
+        "actionStatus": "Needs a clearer repro",
+        "actionNote": "Need a hotspot repro and network timing before Unpaid Intern opens a fix.",
+        "technicalNotes": "Supabase Aug 10 22:38 UTC: hotspot speeds throttle when Latent is in use. Still no clear one-file footgun. Do **not** open a speculative fix from this dig.",
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 10 \u00b7 hotspot throttle \u00b7 build 1.0.1 (12)"
+          }
+        ],
+        "notes": "Unchanged; still needs repro; no new reports Aug 17"
+      },
+      {
+        "id": "battery-regression",
+        "title": "Battery regression during sessions",
+        "status": "in-flight",
+        "summary": "eddie \u00d72 APPLE-IOS-A watchdog Aug 16 1:38pm and 7:27pm PT, build 14, Burlington, iPhone17,1, foreground, no stacktrace. Lifetime 92/12. Still Lane 3. No new PR.",
+        "detail": "Battery drain during long recording sessions. Owned by Lane 3 on branch fix/record-ui-and-battery. eddie \u00d72 APPLE-IOS-A watchdog Aug 16 1:38pm and 7:27pm PT, build 14, Burlington, iPhone17,1, foreground, no stacktrace. Lifetime 92/12. Still Lane 3. No new PR.",
+        "sources": [
+          "Gmail (Eddie\u2192Sydney)",
+          "Lane 3 branch",
+          "Sentry APPLE-IOS-A"
+        ],
+        "ownership": "Lane 3 \u00b7 fix/record-ui-and-battery",
+        "evidence": [
+          "Branch exists",
+          "Eddie\u2192Sydney battery follow-up email"
+        ],
+        "notes": "eddie \u00d72 APPLE-IOS-A watchdog Aug 16 1:38pm + 7:27pm PT build 14; lifetime 92/12; still Lane 3",
+        "plainTitle": "Battery drains too fast during study sessions",
+        "plainSummary": "Long sessions still use more battery than they should. Your own phone was force-quit twice yesterday while the app was open (build 14). Already owned by the recording/battery project.",
+        "actionStatus": "Waiting on a bigger project",
+        "actionNote": "Part of the ongoing recording & battery project.",
+        "technicalNotes": "Battery drain during long recording sessions. Owned by Lane 3 on branch fix/record-ui-and-battery. eddie \u00d72 APPLE-IOS-A watchdog Aug 16 1:38pm and 7:27pm PT, build 14, Burlington, iPhone17,1, foreground, no stacktrace. Lifetime 92/12. Still Lane 3. No new PR.",
+        "sourceLinks": [
+          {
+            "label": "Email thread (Eddie \u2192 Sydney) about battery"
+          },
+          {
+            "label": "Crash reports \u00b7 APPLE-IOS-A eddie \u00d72 watchdog Aug 16 1:38pm + 7:27pm PT build 14"
+          }
+        ],
+        "novelty": "update"
+      },
+      {
+        "id": "log-session",
+        "title": "Log session seems to not work",
+        "status": "open",
+        "novelty": "update",
+        "summary": "No new Log-session rows. session_save_failed Aug 17 0; Aug 16 still the one connection-lost. Still needs repro.",
+        "detail": "Original Aug 8 report unchanged. No new Log-session rows. session_save_failed Aug 17 0; Aug 16 still the one connection-lost (NSURL -1005 Timelapse). Needs repro before Lane PR.",
+        "sources": [
+          "Supabase public.feedback",
+          "PostHog session_save_failed / session_save_blocked",
+          "Sentry APPLE-IOS-12"
+        ],
+        "ownership": "Needs repro \u00b7 no PR yet",
+        "evidence": [
+          "session_save_failed Aug 12 1 offline; Aug 13\u201314 0",
+          "session_save_blocked Aug 13 2/1 media; Aug 14 6/3 media"
+        ],
+        "plainTitle": "\"Log session\" doesn't seem to work after recording",
+        "plainSummary": "Someone finished recording and said the Log session step failed. No new reports overnight. Still no clear reproduction of the original stuck-button case (yesterday's one failed save was a dropped network connection).",
+        "actionStatus": "Needs a clearer repro",
+        "actionNote": "Need you (or the reporter) to reproduce the stuck Log session step before Unpaid Intern opens a fix. Overnight save fail was a dropped network connection.",
+        "technicalNotes": "Original Aug 8 report unchanged. No new Log-session rows. session_save_failed Aug 17 0; Aug 16 still the one connection-lost (NSURL -1005 Timelapse). Needs repro before Lane PR.",
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 8 \u00b7 build 1.0.1 (12)"
+          }
+        ],
+        "notes": "session_save_failed Aug 17 0; Aug 16 still the one connection-lost; no new Log-session rows"
+      },
+      {
+        "id": "apple-ios-y-camera",
+        "title": "APPLE-IOS-Y \u2014 AVCaptureSession config crash + related camera/draft hangs",
+        "status": "closed-unmerged",
+        "novelty": "update",
+        "summary": "PR #47 closed unmerged last night. No new preview freezes (last parsunic Aug 14 build 12). APPLE-IOS-Y \u00d71 dhruvmitrap Aug 17 2:10am PT build 12. Not opening another camera PR.",
+        "detail": "PR #47 closed 2026-08-17T03:19:56Z by eddie-the-lou; mergedAt null. CameraPreviewView on main still attaches previewLayer.session in makeUIView (main thread); no attachQueue. APPLE-IOS-V quiet, last parsunic Aug 14 10:26pm PT build 12, lifetime 5/4. APPLE-IOS-Y \u00d71 dhruvmitrap Aug 17 2:10am PT build 12, lifetime 2/2 (first was zaahirat Aug 7). On main, run() startRunning is after configureSession returns. Overnight you also merged a still-frame camera flip cover (not the hang fix) and bumped to build 15.",
+        "sources": [
+          "Sentry APPLE-IOS-14",
+          "Sentry APPLE-IOS-Y",
+          "Sentry APPLE-IOS-3 / 11 / V"
+        ],
+        "ownership": "PR #47 closed unmerged \u00b7 do not reopen",
+        "evidence": [
+          "APPLE-IOS-V lastSeen 2026-08-14T02:08:58Z CameraPreviewView.makeUIView krabbykai 4/3",
+          "APPLE-IOS-17 still 1/1 from Aug 13 DraftThumb/coverClipFilename",
+          "APPLE-IOS-16 still 1/1 PostHog feature flags",
+          "APPLE-IOS-15 simulator \u2014 filtered",
+          "APPLE-IOS-14 still 1/1 from Aug 12"
+        ],
+        "notes": "PR #47 closed unmerged; APPLE-IOS-V quiet; APPLE-IOS-Y dhruvmitrap build 12",
+        "plainTitle": "App can freeze or crash when starting the camera",
+        "plainSummary": "You closed pull request #47 last night without merging, so the camera-freeze fix is not on the latest build. No new preview freezes overnight (last was parsunic Aug 14, build 12). Overnight, dhruvmitrap\u2019s app crashed while the camera was starting (also build 12). Not opening another camera pull request.",
+        "actionStatus": "You closed this",
+        "actionNote": "Pull request #47 was closed unmerged. Not reopening unless you want it back.",
+        "technicalNotes": "PR #47 closed 2026-08-17T03:19:56Z by eddie-the-lou; mergedAt null. CameraPreviewView on main still attaches previewLayer.session in makeUIView (main thread); no attachQueue. APPLE-IOS-V quiet, last parsunic Aug 14 10:26pm PT build 12, lifetime 5/4. APPLE-IOS-Y \u00d71 dhruvmitrap Aug 17 2:10am PT build 12, lifetime 2/2 (first was zaahirat Aug 7). On main, run() startRunning is after configureSession returns. Overnight you also merged a still-frame camera flip cover (not the hang fix) and bumped to build 15.",
+        "sourceLinks": [
+          {
+            "label": "GitHub PR #47 (closed, not merged)",
+            "url": "https://github.com/eddie-the-lou/latent/pull/47"
+          },
+          {
+            "label": "Sentry APPLE-IOS-V"
+          },
+          {
+            "label": "Sentry APPLE-IOS-Y dhruvmitrap"
+          }
+        ]
+      }
+    ],
+    "sentry": [
+      {
+        "id": "APPLE-IOS-V",
+        "title": "Fatal hang Non Fully Blocked (CameraPreviewView.makeUIView)",
+        "volume": "5 / 4 users",
+        "notes": "quiet last parsunic Aug 14 10:26pm PT build 12 \u00b7 #47 closed unmerged"
+      },
+      {
+        "id": "APPLE-IOS-F",
+        "title": "HTTPClientError (500 send_friend_request + 502 media-playback-url)",
+        "volume": "92 / 13 users",
+        "notes": "quiet in window (last charanistired 502 Aug 16 7:51am PT pre-cutoff)"
+      },
+      {
+        "id": "APPLE-IOS-7",
+        "title": "App hang Fully Blocked (camera preview teardown)",
+        "volume": "40 / 21 users",
+        "notes": "quiet"
+      },
+      {
+        "id": "APPLE-IOS-A",
+        "title": "Watchdog / RAM kills",
+        "volume": "92 / 12 users",
+        "notes": "eddie \u00d72 watchdog Aug 16 1:38pm + 7:27pm PT build 14"
+      },
+      {
+        "id": "APPLE-IOS-17",
+        "title": "App hang Non Fully Blocked (DraftThumb)",
+        "volume": "1 / 1 user",
+        "notes": "quiet"
+      },
+      {
+        "id": "APPLE-IOS-16",
+        "title": "App hang Fully Blocked (PostHog flags)",
+        "volume": "1 / 1 user",
+        "notes": "quiet"
+      },
+      {
+        "id": "APPLE-IOS-14",
+        "title": "App hang Fully Blocked (CameraController.init)",
+        "volume": "1 / 1 user",
+        "notes": "quiet"
+      },
+      {
+        "id": "APPLE-IOS-K",
+        "title": "App hang Fully Blocked (PostHog layoutSublayers swizzle)",
+        "volume": "7 / 4 users",
+        "notes": "quiet"
+      },
+      {
+        "id": "APPLE-IOS-13",
+        "title": "Fatal hang Fully Blocked (MetadataCacheKey)",
+        "volume": "1 / 1 user",
+        "notes": "quiet"
+      },
+      {
+        "id": "APPLE-IOS-Y",
+        "title": "AVCaptureSession config crash",
+        "volume": "2 / 2 users",
+        "notes": "dhruvmitrap Aug 17 2:10am PT build 12"
+      },
+      {
+        "id": "posthog-clip-upload",
+        "title": "PostHog clip_upload_failed",
+        "volume": "0 Aug 15; 1/1 Aug 16 connection-lost; 0 Aug 17",
+        "notes": "PUT 403 last Aug 12"
+      },
+      {
+        "id": "posthog-rageclicks",
+        "title": "PostHog $rageclick",
+        "volume": "62/26 Aug 15; 91/31 Aug 16; 8/6 Aug 17 partial",
+        "notes": "not a spike"
+      },
+      {
+        "id": "posthog-clip-bloat",
+        "title": "PostHog clip bloat MB/s canary",
+        "volume": "not firing",
+        "notes": "last_value 1.570; median Aug 16 1.569 / Aug 17 1.565; F7adIdBk still no alerts row; mean MB/clip Aug 16 30.54 / Aug 17 26.07"
+      }
+    ],
+    "filtered": [
+      {
+        "id": "camera-off-stopwatch",
+        "title": "Camera-off stopwatch",
+        "status": "shipped",
+        "why": "photoTimer / no-timelapse path exists"
+      },
+      {
+        "id": "draft-durability",
+        "title": "Draft durability / phone-dies save",
+        "status": "shipped",
+        "why": "DraftStore + segment rollover on main"
+      },
+      {
+        "id": "basic-custom-tags",
+        "title": "Basic custom tags / TagBoard edit",
+        "status": "shipped",
+        "why": "On You; reorder/sync still Lane 6"
+      },
+      {
+        "id": "historical-session-wipe",
+        "title": "Historical session wipe",
+        "status": "mitigated",
+        "why": "No new reports since Jul 30 charan thread"
+      },
+      {
+        "id": "tag-delete-crash",
+        "title": "Tag-delete crash",
+        "status": "fixed",
+        "why": "On main; don\u2019t reopen without repro"
+      },
+      {
+        "id": "thumbnail-accuracy",
+        "title": "Thumbnail accuracy / rounding",
+        "status": "fixed",
+        "why": "On main; don\u2019t reopen without repro"
+      },
+      {
+        "id": "discord-download-clarity",
+        "title": "Clearer Discord how-to-download",
+        "status": "done-ops",
+        "why": "KrabbyKai asked Aug 11; Eddie replied Aug 12 ~5:14pm PT Aug 11 / 00:14 UTC Aug 12 \"ill do that\"; channel renamed announcements \u2192 how-to-download"
+      },
+      {
+        "id": "apple-ios-15-simulator",
+        "title": "APPLE-IOS-15 fatal hang",
+        "status": "ignored-dev",
+        "why": "simulator com.eddielou.latentt / build_type simulator \u2014 not a user device"
+      },
+      {
+        "id": "discoverable-avatar",
+        "title": "Search shows avatar, but non-friend profile detail doesn\u2019t",
+        "status": "shipped",
+        "why": "On main in DiscoverableProfileView (avatarURL: person.avatarURL). PR #30 closed unmerged Aug 13 11:04pm PT after the change landed another way \u2014 do not reopen."
+      }
+    ],
+    "clipMissing": [
+      {
+        "day": "Aug 17 (partial)",
+        "sessions": 24,
+        "withMedia": 19,
+        "missingPct": 20.8
+      },
+      {
+        "day": "Aug 16",
+        "sessions": 103,
+        "withMedia": 101,
+        "missingPct": 1.9
+      },
+      {
+        "day": "Aug 15",
+        "sessions": 97,
+        "withMedia": 97,
+        "missingPct": 0.0
+      },
+      {
+        "day": "Aug 14",
+        "sessions": 113,
+        "withMedia": 92,
+        "missingPct": 18.6
+      },
+      {
+        "day": "Aug 13",
+        "sessions": 100,
+        "withMedia": 98,
+        "missingPct": 2.0
+      },
+      {
+        "day": "Aug 12",
+        "sessions": 94,
+        "withMedia": 88,
+        "missingPct": 6.4
+      },
+      {
+        "day": "Aug 11",
+        "sessions": 95,
+        "withMedia": 83,
+        "missingPct": 12.6
+      },
+      {
+        "day": "Aug 10",
+        "sessions": 105,
+        "withMedia": 93,
+        "missingPct": 11.4
+      },
+      {
+        "day": "Aug 9",
+        "sessions": 69,
+        "withMedia": 62,
+        "missingPct": 10.1
+      },
+      {
+        "day": "Aug 8",
+        "sessions": 86,
+        "withMedia": 80,
+        "missingPct": 7.0
+      },
+      {
+        "day": "Aug 7",
+        "sessions": 88,
+        "withMedia": 84,
+        "missingPct": 4.5
+      },
+      {
+        "day": "Aug 6",
+        "sessions": 87,
+        "withMedia": 84,
+        "missingPct": 3.4
+      },
+      {
+        "day": "Aug 5",
+        "sessions": 102,
+        "withMedia": 98,
+        "missingPct": 3.9
+      }
+    ],
+    "newSincePrev": [
+      "PR #47 CLOSED unmerged by eddie-the-lou Aug 16 8:20pm PT",
+      "1 new in-app bug: wherearetheavocados/comet cropper overlap, build 12",
+      "Discord LOGIN WALL day 5",
+      "Aug 16 missing-clip finalized 1.9% (103/101) Photo+timer; Aug 17 partial 20.8% (24/19) 1 person Photo+timer",
+      "Sentry: V quiet; A eddie \u00d72; Y dhruvmitrap; F none in window",
+      "Overnight main: PRs #48 #49 #50, camera flip cover, generic push, onboarding copy, build 15",
+      "0 open PRs; no new unowned PR"
+    ],
+    "authFailures": [
+      "GitHub MCP still needsAuth \u2014 used PAT",
+      "Discord box Chrome login wall day 5"
+    ],
+    "plainTldr": [
+      "Nothing waiting for your approval. You closed the camera-freeze pull request (#47) last night without merging, so that fix is not on the latest build.",
+      "New in-app report: comet (wherearetheavocados) can\u2019t tap Cancel/Done on the profile-photo cropper. They\u2019re on build 12, which never got the Aug 9 fix. Current TestFlight is build 15, which has it \u2014 ask them to update. No new pull request.",
+      "Study videos: Aug 16 finished with 2 of 103 saves missing media (1.9%), both camera-off Photo+timer in the evening \u2014 yesterday morning looked 0% because those two hadn\u2019t happened yet. This morning looks 21% (5 of 24) but that\u2019s one person tapping Photo+timer five times in four seconds at 1:06am. Timelapse clips still all have media.",
+      "Overnight crashes: dhruvmitrap\u2019s app died while the camera was starting (old build 12). Your own phone (eddie, build 14) was force-quit twice by iOS yesterday afternoon/evening. No new camera-preview freezes.",
+      "No new personal bug emails. Discord still couldn\u2019t be scraped (login wall, day 5)."
+    ],
+    "actions": [],
+    "bySource": {
+      "discord": [
+        "friend-challenges",
+        "daily-goals-streaks",
+        "contacts-import",
+        "group-study-sessions",
+        "android-play-store",
+        "qr-add-friends",
+        "havent-studied-reminder",
+        "screen-time-app-lock",
+        "default-tab-today",
+        "profile-as-friends-see",
+        "in-app-dms",
+        "gesture-pause",
+        "tag-reorder-sync"
+      ],
+      "email": [
+        "tag-rename-share-and-doubleclick",
+        "battery-regression"
+      ],
+      "inApp": [
+        "profile-pic-cropper",
+        "blank-missing-clips",
+        "log-session",
+        "hotspot-throttle"
+      ],
+      "crashReports": [
+        "apple-ios-y-camera",
+        "battery-regression"
       ],
       "analytics": [
         "blank-missing-clips"

@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Aug 17</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-08-17" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-08-17</a>
+  </p>
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px">Nothing waiting for your approval. You closed the camera-freeze pull request (#47) last night without merging, so that fix is not on the latest build.</li>
+    <li style="margin:0 0 6px">New in-app report: comet (wherearetheavocados) can’t tap Cancel/Done on the profile-photo cropper. They’re on build 12, which never got the Aug 9 fix. Current TestFlight is build 15, which has it — ask them to update. No new pull request.</li>
+    <li style="margin:0 0 6px">Study videos: Aug 16 finished with 2 of 103 saves missing media (1.9%), both camera-off Photo+timer in the evening — yesterday morning looked 0% because those two hadn’t happened yet. This morning looks 21% (5 of 24) but that’s one person tapping Photo+timer five times in four seconds at 1:06am. Timelapse clips still all have media.</li>
+    <li style="margin:0 0 6px">Overnight crashes: dhruvmitrap’s app died while the camera was starting (old build 12). Your own phone (eddie, build 14) was force-quit twice by iOS yesterday afternoon/evening. No new camera-preview freezes.</li>
+    <li style="margin:0 0 6px">No new personal bug emails. Discord still couldn’t be scraped (login wall, day 5).</li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <div style="border:1px solid #ddd;border-radius:12px;padding:14px 16px;margin:0 0 12px;background:#f6f6f6">
+      <div style="font-weight:700;margin-bottom:6px">Nothing waiting.</div>
+      <div style="color:#555;margin-bottom:8px">You closed pull request #47 last night without merging.</div>
+      <div><a href="https://github.com/eddie-the-lou/latent/pull/47" style="color:#666;font-weight:700">Closed pull request #47</a></div>
+    </div>
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken or confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 10px"><strong>Profile-photo cropper Cancel/Done buttons are hard to tap</strong><br><span style="color:#555">comet (wherearetheavocados) reported this morning they can’t change their profile photo because Cancel and Done sit under the iOS clock/battery. They’re on build 12. The Aug 9 fix is already in TestFlight builds 13, 14, and 15. Ask them to update — no new pull request.</span><br><span style="color:#888;font-size:12px">Already shipped — Fix is in TestFlight 13+. Reporter is on 12. Ask comet to update.</span></li>
+    <li style="margin:0 0 10px"><strong>App can freeze or crash when starting the camera</strong><br><span style="color:#555">You closed pull request #47 last night without merging, so the camera-freeze fix is not on the latest build. No new preview freezes overnight (last was parsunic Aug 14, build 12). Overnight, dhruvmitrap’s app crashed while the camera was starting (also build 12). Not opening another camera pull request.</span><br><span style="color:#888;font-size:12px">You closed this — Pull request #47 was closed unmerged. Not reopening unless you want it back.</span></li>
+    <li style="margin:0 0 10px"><strong>Renamed tags don't stick when sharing (and double-click closes the editor)</strong><br><span style="color:#555">lapplegat08/Landon emailed that after renaming a tag, the new name doesn't show when sharing until they rename again. You already promised a next-build fix. No new mail overnight.</span><br><span style="color:#888;font-size:12px">Waiting on a bigger project — still part of Tags work.</span></li>
+    <li style="margin:0 0 10px"><strong>Friends' study clips sometimes show up blank</strong><br><span style="color:#555">No new blank-clip reports (last is still pepsi/Julian jumpropes Aug 11). Aug 16 finished 1.9% missing, all camera-off Photo+timer (2 people, evening). This morning’s 21% is one person tapping Photo+timer five times in four seconds. Study (timelapse) videos still all have media.</span><br><span style="color:#888;font-size:12px">Watching — A fix already shipped. The Photo+timer misses are a known camera-off pattern — not opening another pull request.</span></li>
+    <li style="margin:0 0 10px"><strong>Personal Hotspot becomes unusable while Latent is open</strong><br><span style="color:#555">Still need a clearer repro. No new reports Aug 17.</span><br><span style="color:#888;font-size:12px">Needs a clearer repro</span></li>
+    <li style="margin:0 0 10px"><strong>Battery drains too fast during study sessions</strong><br><span style="color:#555">Long sessions still use more battery than they should. Your own phone was force-quit twice yesterday while the app was open (build 14). Already owned by the recording/battery project.</span><br><span style="color:#888;font-size:12px">Waiting on a bigger project</span></li>
+    <li style="margin:0 0 10px"><strong>"Log session" doesn't seem to work after recording</strong><br><span style="color:#555">No new reports overnight. Still no clear reproduction of the original stuck-button case (yesterday's one failed save was a dropped network connection).</span><br><span style="color:#888;font-size:12px">Needs a clearer repro</span></li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want (top)</h2>
+  <p style="color:#888;font-size:13px;margin:0 0 10px">Discord still login-walled (day 5), so ranking unchanged since Aug 12.</p>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Friend challenges</strong> · About 22 people<br><span style="color:#555">Head-to-head or group study challenges tied to sessions and streaks.</span></li>
+    <li style="margin:0 0 8px"><strong>Daily goals and richer streaks</strong> · About 16 people<br><span style="color:#555">Configurable daily minute goals and clearer progress.</span></li>
+    <li style="margin:0 0 8px"><strong>Import contacts to find friends</strong> · About 16 people<br><span style="color:#555">Find friends already on Latent from phone contacts.</span></li>
+    <li style="margin:0 0 8px"><strong>Group study sessions (and groups/forums)</strong> · About 11 people<br><span style="color:#555">A leader starts a shared study session.</span></li>
+    <li style="margin:0 0 8px"><strong>Android / Google Play version</strong> · About 8 people<br><span style="color:#555">Android users keep asking when Latent will be on Play Store.</span></li>
+    <li style="margin:0 0 8px"><strong>QR code to add friends in person</strong> · 1 person<br><span style="color:#555">ivythecat asked for a personal QR code.</span></li>
+  </ul>
+  <p style="color:#888;font-size:12px;margin-top:24px">
+    Technical notes (not the main story): Discord login-walled since Aug 13 (day 5). APPLE-IOS-V quiet. APPLE-IOS-Y dhruvmitrap startRunning NSException build 12. APPLE-IOS-A eddie ×2 watchdog build 14. Missing-clip Aug 16 1.9% / Aug 17 partial 20.8% all Photo+timer; Timelapse 100% has_media. Overnight you shipped #48 #49 #50, camera flip cover, generic push, build 15. GitHub connector still disconnected — used PAT.
+  </p>
+</body></html>
