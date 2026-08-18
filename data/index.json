@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-08-18",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 15,
+      "openBugs": 7,
+      "filtered": 9
+    },
+    "path": "data/2026-08-18.json",
+    "htmlArchive": "../2026-08-18.html"
+  },
+  {
     "date": "2026-08-17",
     "title": "Latent feedback dig",
     "summaryStats": {
