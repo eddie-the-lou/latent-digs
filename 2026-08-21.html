@@ -1,0 +1,48 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Aug 21</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English · covers Aug 19 afternoon through this morning (no Aug 20 run)</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-08-21" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-08-21</a>
+  </p>
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px">One fix waiting: the camera freeze is now on TestFlight 15. Julian (pepsi) froze opening Record. Sophia froze leaving Record. <a href="https://github.com/eddie-the-lou/latent/pull/51">Pull request #51</a> — try it on a phone before merge.</li>
+    <li style="margin:0 0 6px">Kayla on 15: Save after a sitting didn’t go to tagging. She had to close the app. A related iOS 26 sheet-gap fix is already on main, not in testers’ 15. Next TestFlight.</li>
+    <li style="margin:0 0 6px">Maxwell wrote back. Opening Latent on his iPhone 17 wrecks the hotspot; the built-in Camera timelapse does not. You told him you’ll fix it. No pull request yet (Cursor GitHub is disconnected for cloud agents; don’t forward his speed-test screenshots — they have his IP).</li>
+    <li style="margin:0 0 6px">Main has extra work testers don’t have (tag rename, sheet gap, comment keyboard, story-circle tap, battery-notice swipe). Still labeled build 15. Needs a new TestFlight.</li>
+    <li style="margin:0 0 6px">Photo+timer sittings with no clip jumped from 1 person (Aug 18) to 11 people on Aug 19 and again 11 on Aug 20. Timelapses still have media. Discord still signed out (day 9).</li>
+    <li style="margin:0 0 6px">Nine of the fourteen follow-ups went out. Five (RJ, Trudy, charan, Rosie, Sydney) are in neither Sent nor Drafts. Janehai was still on 12, found TestFlight, said she’d try 15. Mischa 💖-reacted to the wipe-fix mail.</li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <div style="border:1px solid #ddd;border-radius:12px;padding:14px 16px;margin:0 0 12px;background:#fff8e6">
+      <div style="font-weight:700;margin-bottom:6px"><a href="https://github.com/eddie-the-lou/latent/pull/51">Pull request #51</a> — camera freeze on open and on leave</div>
+      <div style="color:#555">Julian (pepsi) on TestFlight 15 froze opening Record (~8 seconds). Sophia on 15 froze leaving Record (~9 seconds). This moves those camera-session binds off the main thread. Try on a phone: open Record after other apps, flip camera, leave Record. Don’t merge until you’ve tried it.</div>
+    </div>
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken or confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 10px"><strong>App can freeze when opening or leaving the camera</strong><br><span style="color:#555">Now on TestFlight 15 (Julian + Sophia). Pull request #51 is waiting. You closed the earlier #47.</span><br><span style="color:#888;font-size:12px">Ready for you — <a href="https://github.com/eddie-the-lou/latent/pull/51" style="color:#888">pull request #51</a></span></li>
+    <li style="margin:0 0 10px"><strong>Save / Log session doesn’t go to tagging</strong><br><span style="color:#555">Kayla on 15: Save didn’t go to the tag page; she closed the app. 07nkwon reported something similar on 12. An iOS 26 sheet-gap fix is already on main — not in testers’ 15.</span><br><span style="color:#888;font-size:12px">On main, not in testers’ 15 — next TestFlight. No duplicate pull request.</span></li>
+    <li style="margin:0 0 10px"><strong>Personal Hotspot becomes unusable while Latent is open</strong><br><span style="color:#555">Maxwell’s write-up: Latent open tanks the hotspot (Google &gt;30s vs under a second). Stock Camera timelapse does not. You promised a fix. No pull request yet. Don’t forward his screenshots (IP in them).</span><br><span style="color:#888;font-size:12px">Reproduced — no pull request yet</span></li>
+    <li style="margin:0 0 10px"><strong>Renamed tags don’t stick when sharing</strong><br><span style="color:#555">Landon. Fix is still only on main. Testers on 15 don’t have it. He hasn’t written back.</span><br><span style="color:#888;font-size:12px">Partly shipped — next TestFlight</span></li>
+    <li style="margin:0 0 10px"><strong>Friends’ study clips sometimes show up blank</strong><br><span style="color:#555">Photo+timer sittings with no clip: 1 person Aug 18, 11 people Aug 19, 11 people Aug 20. Timelapses still have media. Watching.</span><br><span style="color:#888;font-size:12px">Watching — a fix already shipped. The people-count jump is loud.</span></li>
+    <li style="margin:0 0 10px"><strong>Battery drains too fast during study sessions</strong><br><span style="color:#555">No new battery emails. Aug 20 on main: the low-battery notice can be swiped anywhere — not in testers’ 15.</span><br><span style="color:#888;font-size:12px">Waiting on a bigger project</span></li>
+    <li style="margin:0 0 10px"><strong>Profile-photo cropper Cancel/Done buttons are hard to tap</strong><br><span style="color:#555">You emailed comet that it’s fixed in 15. They also hit a clip-playback 502 on 15, so they did update. No new cropper report.</span><br><span style="color:#888;font-size:12px">Already shipped — in TestFlight 13+</span></li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want (top)</h2>
+  <p style="color:#888;font-size:13px;margin:0 0 10px">Discord still signed out (day 9), so ranking unchanged since Aug 12. No new in-app wants since Wednesday.</p>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Keep recording onto an already-saved draft</strong> · 1 person<br><span style="color:#555">zerabrukmikre5 on build 15.</span></li>
+    <li style="margin:0 0 8px"><strong>Timelapse speed setting</strong> · 2 people<br><span style="color:#555">Constant-speed playback is already in 15; a slider is still an idea.</span></li>
+    <li style="margin:0 0 8px"><strong>Timer visible when the screen is off</strong> · 1 person<br><span style="color:#555">faithlliang. You emailed her about Clock / screen dim. No reply.</span></li>
+    <li style="margin:0 0 8px"><strong>In-app Apple Music</strong> · 1 person<br><span style="color:#555">Therese. You already told her no.</span></li>
+    <li style="margin:0 0 8px"><strong>Friend challenges</strong> · About 22 people</li>
+    <li style="margin:0 0 8px"><strong>Daily goals and richer streaks</strong> · About 16 people</li>
+    <li style="margin:0 0 8px"><strong>Import contacts to find friends</strong> · About 16 people</li>
+    <li style="margin:0 0 8px"><strong>Group study sessions</strong> · About 11 people</li>
+    <li style="margin:0 0 8px"><strong>Android / Google Play version</strong> · About 8 people</li>
+  </ul>
+  <p style="color:#888;font-size:12px;margin-top:24px">
+    Technical notes (not the main story): Discord login-walled since Aug 13 (day 9). CloudAgent: “Please reconnect GitHub in Cursor” — PR #51 opened with PAT. APPLE-IOS-V pepsi dist=15 event 3cb3023c2f51. APPLE-IOS-19 sophia dist=15 event 14886a6a142c. APPLE-IOS-F 502s on 15: nicholejin28, charlize_sow, shrexmarksthespot, charanistired, comet, andreichetty3. Main HEAD abf520dc80 still CURRENT_PROJECT_VERSION 15. Follow-ups missing from Sent+Drafts: RJ, Trudy, charan, Rosie, Sydney. tejuap23 and ebadullahkhalil4 blast delays. Do not republish Maxwell’s speed-test PNGs.
+  </p>
+</body></html>
