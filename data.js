@@ -4,7 +4,8 @@ window.DIGEST_INDEX = [
     "title": "Latent feedback dig",
     "summaryStats": {
       "openFeatures": 18,
-      "openBugs": 9,
+      "openBugs": 3,
+      "resolvedBugs": 6,
       "filtered": 9
     },
     "path": "data/2026-08-23.json",
@@ -183,7 +184,8 @@ window.DIGESTS = {
       "title": "Latent feedback dig",
       "summaryStats": {
         "openFeatures": 18,
-        "openBugs": 9,
+        "openBugs": 3,
+        "resolvedBugs": 6,
         "filtered": 9
       },
       "path": "data/2026-08-23.json",
@@ -12568,19 +12570,20 @@ window.DIGESTS = {
   "2026-08-23": {
     "date": "2026-08-23",
     "title": "Latent feedback dig",
-    "generatedAt": "2026-08-23T13:20:00Z",
+    "generatedAt": "2026-08-23T20:16:06Z",
     "tldr": [
-      "1 PR still waiting: #51 camera attach+teardown. 0 comments, not merged. New 15 repro: aryangoyal1811 APPLE-IOS-19 leave-Record hang Saturday 1:48pm ET (fourth named 15 after pepsi, sophia, ivythecat). Testers still on 15 without the PR.",
-      "pepsi/Julian also hit APPLE-IOS-1D Saturday 4:57pm ET: 5.4\u20136.2s hang creating a text box (UITextView) on 15 iOS 26.6 low power. Related to the comment-keyboard probe already on main, not in testers\u2019 15. No duplicate PR.",
-      "No new tester email. No new in-app (table still 31, Puneet newest). Main unchanged 7cbc4a9f4d, still version 15.",
-      "Photo+timer att=0 Saturday 3 people (2 on 15, 1 on 10). Sunday morning 0. clip_upload_failed 1 timeout on old build 10. Discord LOGIN WALL day 11."
+      "This afternoon main merged build 16 (04b4729bcf, ~3:16pm ET): twelve issues from the Aug 20 handoff. Testers are still on TestFlight 15 until you ship 16.",
+      "Closed on main: camera freeze (Julian/Sophia/ivythecat/Aryan) via capture-session ownership. Do not merge PR #51; it is the old attach-queue shape and is superseded. Maxwell hotspot (unbounded clip downloads). Sydney battery (dim now freezes a hidden preview and drops capture rate; first device read 5.2 pts/hr vs ~10 on 15).",
+      "Already on main, now labeled 16 so they ride the next TestFlight: Landon tag rename, Kayla Save sheet-gap, cropper (already in 13+).",
+      "Still open: Puneet/Julian keyboard hangs (comment-keyboard probe rides 16, pasteboard/1C is not claimed fixed). Photo+timer sittings with no clip. 502/prefetch/outbox are fixed. Discord LOGIN WALL day 11."
     ],
     "stats": {
       "openFeatures": 18,
-      "openBugs": 9,
+      "openBugs": 3,
+      "resolvedBugs": 6,
       "filtered": 9
     },
-    "prStatus": "1 open PR \u2014 #51 still waiting (0 comments, not merged). Aryan APPLE-IOS-19 on 15 is more evidence. Still build 15 on main.",
+    "prStatus": "PR #51 still OPEN but superseded by 4298fa766a on main (build 16). Do not merge. Close without merging. No other waiting PRs.",
     "sources": [
       {
         "name": "Discord",
@@ -13060,52 +13063,116 @@ window.DIGESTS = {
     ],
     "bugs": [
       {
-        "id": "profile-pic-cropper",
-        "title": "Profile photo cropper Cancel/Done under status bar",
-        "status": "shipped-old-build",
-        "novelty": "unchanged",
-        "summary": "comet still on build 12. Aug 9 fix 4cba232 is on main and in TestFlight 13-15. Ask them to update. No new report.",
-        "detail": "comet (wherearetheavocados) reported Aug 17 6:03am PT they cannot tap Cancel/Done on the profile-photo cropper (buttons under the iOS clock/battery). Same issue Ree (cloudberree) reported Aug 10. Reporter is on 1.0.1 (12). The Aug 9 fix is already on main and in TestFlight builds 13, 14, and 15. Ask them to update. Do not open a PR.",
+        "id": "keyboard-search-hang-puneet",
+        "title": "Focusing a text box hangs Latent, then typing breaks other apps",
+        "status": "open",
+        "novelty": "new",
+        "summary": "Puneet APPLE-IOS-1C x5 fatal keyboard/pasteboard hangs on 15. Comment-keyboard probe is on main and will ride TestFlight 16. The probe is a different surface (composer) than pasteboard-on-focus. Not claimed fixed. No duplicate PR.",
+        "detail": "In-app bug 2026-08-21 18:47 UTC (2:47pm ET) Puneet / puneet, Hide My Email bbfhzjdmfp@privaterelay.appleid.com, 1.0.1 (15), iOS 26.6, Waterloo: had to reset iOS because Latent crashed, then other apps crashed whenever they tried to type. Search to find an app crashed the phone.\n\nSentry APPLE-IOS-1C five fatal hangs same user same afternoon 18:03\u201318:20 UTC, dist=15, iPhone15,2 (14 Pro). Stack: tap \u2192 UITextView becomeFirstResponder \u2192 UIKeyboardSceneDelegate reload input views \u2192 _UIKeyboardStateManager sync pasteboard (_getTemporaryLocalGeneralPasteboard / canInsertAdaptiveImageGlyph) wait on XPC. Culprit UIApplication.sendEventOverride. Free RAM ~44MB on last event.\n\nAug 20 on main: f05a01e89d comment-keyboard probe \u2014 not in testers\u2019 15. Different surface (composer covered) vs this pasteboard-sync on focus. Do not open a speculative pasteboard PR from this dig. Next TestFlight first; if it still happens, then a keyboard-focus PR.",
         "sources": [
-          "Supabase public.feedback (Aug 17 comet / wherearetheavocados)",
-          "Supabase public.feedback (Aug 10 cloudberree / Ree)"
+          "Supabase public.feedback (Aug 21 Puneet)",
+          "Sentry APPLE-IOS-1C"
         ],
-        "ownership": "Already shipped on main \u00b7 TestFlight 13+ \u00b7 reporter on 12",
-        "evidence": [
-          "Supabase id 63dea2e0-7b5e-4f46-8d54-d79683e7977e",
-          "Fix commit 4cba23273d4f0289be6f4182c7f425921a34ec40 (Aug 9 4:41pm PT) on main",
-          "Build 12 bump 515202c15d was Aug 7, 27 commits before the fix",
-          "Reporter 1.0.1 (12); current main 1.0.1 (15)"
-        ],
-        "plainTitle": "Profile-photo cropper Cancel/Done buttons are hard to tap",
-        "plainSummary": "comet\u2019s cropper report was on build 12. Eddie emailed them Aug 19 that it\u2019s fixed in 15. No reply. comet also hit a 502 on 15 Aug 19 (so they did update).",
-        "actionStatus": "Already shipped",
-        "actionNote": "Fix is in TestFlight 13+. Reporter is on 12. Ask comet to update.",
-        "technicalNotes": "Supabase id 63dea2e0-7b5e-4f46-8d54-d79683e7977e. Fix commit 4cba23273d4f0289be6f4182c7f425921a34ec40 (Aug 9 4:41pm PT) is on main. Build 12 bump 515202c15d was Aug 7, 27 commits before the fix. AvatarCropView on main still has insetShortfall padding. Do not reopen a PR.",
-        "peopleCount": 2,
+        "ownership": "New \u00b7 related iOS 26 keyboard work already on main, not in 15",
+        "plainTitle": "Typing after a freeze crashed other apps (Puneet had to reset the phone)",
+        "plainSummary": "Puneet on TestFlight 15: Latent froze, then the keyboard in other apps crashed until they reset the iPhone. A related keyboard probe is on main and will be in 16. That probe does not claim to fix the pasteboard hang. Watch 16 before opening another pull request.",
+        "actionStatus": "On main, not claimed fixed",
+        "actionNote": "Comment-keyboard probe already on main (f05a01e89d). Build is now 16. Do not treat 1C as closed until a 16 repro is absent.",
+        "technicalNotes": "feedback 9083f2f6-f3f9-4a56-9f9f-0da9ab8b8da4. APPLE-IOS-1C https://weaive.sentry.io/issues/APPLE-IOS-1C events 18:03\u201318:20 UTC. Last event 880c3010b91b43cfabd7bc950e56f876. iPhone15,2 iOS 26.6 dist=15. UITextView becomeFirstResponder \u2192 pasteboard XPC.",
+        "peopleCount": 1,
         "sourceLinks": [
           {
-            "label": "In-app feedback \u00b7 Aug 17 6:03am PT \u00b7 wherearetheavocados / comet \u00b7 1.0.1 (12)"
+            "label": "In-app feedback \u00b7 Aug 21 2:47pm ET \u00b7 puneet / Puneet \u00b7 1.0.1 (15) \u00b7 Hide My Email"
           },
           {
-            "label": "In-app feedback \u00b7 Aug 10 \u00b7 cloudberree / Ree"
+            "label": "Crash reports \u00b7 APPLE-IOS-1C \u00d75 fatal keyboard hangs (build 15)",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-1C"
           }
         ],
-        "notes": "Eddie emailed comet; comet 502 on 15 so they updated"
+        "notes": "Not claimed fixed by the twelve-issue merge.",
+        "resolved": false
+      },
+      {
+        "id": "apple-ios-1d-textview",
+        "title": "Opening a text box hangs Latent for ~6 seconds",
+        "status": "open",
+        "novelty": "new",
+        "summary": "Julian APPLE-IOS-1D UITextView create hang on 15 Saturday. Comment-keyboard probe will ride 16. Not claimed fixed. No duplicate PR.",
+        "detail": "APPLE-IOS-1D event 62f0b470bc664958a7a942eb6c32cb5b 2026-08-22T20:57:55Z, dist=15, iPhone14,5, iOS 26.6, low power 15% battery, username pepsi, arteagajulian323@gmail.com. Stack: UIKitTextViewAdaptor.makeUIView \u2192 UITextView init \u2192 protocol_conformsToProtocol_nolock. Related to but not the same as Friday\u2019s 1C pasteboard-on-focus (Puneet). Aug 20 on main: f05a01e89d comment-keyboard probe \u2014 not in testers\u2019 15. Do not open a speculative text-box PR from this dig.",
+        "sources": [
+          "Sentry APPLE-IOS-1D"
+        ],
+        "ownership": "New \u00b7 related iOS 26 keyboard work already on main, not in 15",
+        "plainTitle": "App froze while a text box was opening (Julian)",
+        "plainSummary": "Julian on TestFlight 15 Saturday: the app hung about six seconds while a text box was being created. Related keyboard work will be in 16. Not claimed fixed by this afternoon merge.",
+        "actionStatus": "On main, not claimed fixed",
+        "actionNote": "Comment-keyboard probe already on main. Build is now 16. Watch 16.",
+        "technicalNotes": "APPLE-IOS-1D https://weaive.sentry.io/issues/APPLE-IOS-1D event 62f0b470bc664958a7a942eb6c32cb5b. pepsi dist=15 iOS 26.6 iPhone14,5 LPM.",
+        "peopleCount": 1,
+        "sourceLinks": [
+          {
+            "label": "Crash reports \u00b7 APPLE-IOS-1D pepsi/Julian UITextView hang (build 15)",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-1D"
+          }
+        ],
+        "notes": "Not claimed fixed by the twelve-issue merge.",
+        "resolved": false
+      },
+      {
+        "id": "blank-missing-clips",
+        "title": "Blank / missing friend clips",
+        "status": "merged-watch",
+        "novelty": "update",
+        "summary": "502 / greedy-download / outbox stall closed on main this afternoon (edge-function 502 fix is already live for every build). Photo+timer sittings with no clip are still the open pattern (Sat 3 people, Sun morning 0). Watching, no new PR.",
+        "detail": "## Status\nLane 1 PR **#29 merged**. Keep watching. Photo+timer camera-off pattern. No new PR.\n\n## Metrics \u2014 session_save_attempted attachment_count=0\n| Day (PT) | Sessions | With media | Missing % |\n|---|---:|---:|---:|\n| Aug 19 (partial ~6:09am) | 36 | 34 | **5.6%** (all Photo+timer, 1 person 8445343b, two events 1:11am) |\n| Aug 18 final | 127 | 126 | **0.8%** (all Photo+timer, 1 person 7c79ae29, 5:01pm, build 15) |\n| Aug 17 final | 131 | 126 | **3.8%** (all Photo+timer, 1 person 51509273, five events 1:06am) |\n| Aug 16 | 103 | 101 | 1.9% |\n| Aug 15 | 97 | 97 | 0.0% |\n| Aug 14 | 113 | 92 | 18.6% |\n| Aug 13 | 100 | 98 | 2.0% |\n\nTimelapse 100% has_media Aug 13\u201319 (Aug 19 34/34).\n\nclip_upload_failed Aug 17\u201318: 0. Aug 19 = 2 (cancelled NSURL -999 2:39am person f17c1fe9 build 15; connection-lost NSURL -1005 6:08am person 4255eb7d build 10). Neither matches the Aug 19 missing-clip person.\n\nsession_save_failed Aug 17: 0; Aug 18 final: 2 (duplicate key 7:34am; NSURL -1009 offline 9:10pm); Aug 19: 0.\nsession_save_blocked Aug 18: 1 media + 4 activity; Aug 19: 2 media (same person as missing-clip).",
+        "sources": [
+          "Supabase public.feedback (Aug 11 blank clip x2)",
+          "PostHog clip_upload_failed",
+          "Supabase media join",
+          "Lane 1 PR #29"
+        ],
+        "ownership": "Lane 1 \u00b7 PR #29 merged \u00b7 keep watching",
+        "evidence": [
+          "No new Supabase feedback since Aug 11 18:30 UTC jumpropes report",
+          "Missing % Aug 13 finalized 2.0%; Aug 12 6.4%; Aug 11 revised 12.6%; Aug 14 partial 11.1%",
+          "clip_upload_failed Aug 13 1/1 connection-lost; Aug 14 3/2 (2 connection-lost + 1 create_media P0001 auth)",
+          "No PUT 403 since Aug 12; MB/s ~1.56; MB/clip interim alert gone from list"
+        ],
+        "plainTitle": "Friends' study clips sometimes show up blank",
+        "plainSummary": "The 502 blank-friend-clip path is fixed: edge functions are off the third-party CDN (live now, even on 15), and build 16 retries transients and says Video missing instead of a blank post. Photo+timer sittings that save with no clip are a different, still-open pattern \u2014 3 people Saturday, none this morning. Not opening another pull request for that.",
+        "actionStatus": "Watching",
+        "actionNote": "45ee75f484 (CDN, deployed), c30a12693f (prefetch/retry/missing pill), bea0ccc086 (outbox unstick on tag case-mismatch). Photo+timer att=0 remains a camera-off pattern. Keep watching after 16.",
+        "technicalNotes": "Lane E 45ee75f484 Take the edge functions off a third-party CDN. c30a12693f playback 3 retries + Video missing pill + prefetch cap 8. bea0ccc086 ensureWorkType lower(btrim). Photo+timer att=0: Aug 22 3 people, Aug 23 morning 0.",
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 11 afternoon \u00b7 jumpropes blank + public/private dead \u00b7 build 1.0.1 (12)"
+          },
+          {
+            "label": "In-app feedback \u00b7 Aug 11 morning \u00b7 blank 40s clip"
+          },
+          {
+            "label": "Product analytics \u00b7 Aug 14 uploads: dropped connections + one create_media auth retry"
+          },
+          {
+            "label": "Pull request #29 (already merged)"
+          }
+        ],
+        "notes": "502/outbox/prefetch resolved afternoon Aug 23; photo-timer zeros still watching.",
+        "resolved": false
       },
       {
         "id": "apple-ios-y-camera",
         "title": "APPLE-IOS-Y \u2014 AVCaptureSession config crash + related camera/draft hangs",
-        "status": "pr-open",
-        "novelty": "new-on-15",
-        "summary": "Still waiting on #51. Fourth 15 repro: aryangoyal1811 Saturday 1:48pm ET, 9.3\u201310.1s CameraPreviewView teardown hang, iPhone18,1, iOS 27.0. Julian/Sophia/ivythecat earlier. Not merged. Do not open a duplicate.",
+        "status": "resolved",
+        "novelty": "resolved-on-main",
+        "summary": "Fixed on main this afternoon: 4298fa766a gives the capture session one owner and one queue. Closes APPLE-IOS-V/-3/-11/-Q (open hang) and APPLE-IOS-Y (startRunning). Testers still on 15. Do not merge PR #51.",
         "detail": "NOW ON BUILD 15.\n\nAPPLE-IOS-V event 3cb3023c2f514f658c81cd97cb7ce520 2026-08-21T02:42:26Z pepsi / Julian arteagajulian323@gmail.com, dist=15, iPhone14,5, iOS 26.6, low power. CameraPreviewView.makeUIView \u2192 setSession: \u2192 commitConfiguration wait 7.3\u20138.1s.\n\nAPPLE-IOS-19 event 14886a6a142c4fc3b6dad0531155a13d 2026-08-20T02:13:35Z sophia sophiarweber@icloud.com, dist=15, iPhone15,4, iOS 26.5.2. dismantleViewProvider \u2192 setSession: wait 8.5\u20139.3s fully blocked.\n\nPR #47 still CLOSED unmerged. CloudAgent could not launch (reconnect GitHub in Cursor). Opened https://github.com/eddie-the-lou/latent/pull/51 via PAT: attachQueue for bind + teardown, isDismantled guard. Commit a7253cb469 on branch fix/camera-preview-hang-15.\n\nAPPLE-IOS-F 502s continue on 15 (nicholejin28 Aug 21, charlize_sow, shrexmarksthespot, charanistired, comet/ooannlin, andreichetty3). Infra, not this PR.\n\nAPPLE-IOS-7 missha build 15 Aug 20 ~5s hang \u2014 not camera-preview.",
         "sources": [
           "Sentry APPLE-IOS-14",
           "Sentry APPLE-IOS-Y",
           "Sentry APPLE-IOS-3 / 11 / V"
         ],
-        "ownership": "PR #51 open \u00b7 try on a phone before merge",
+        "ownership": "On main in build 16. PR #51 superseded, do not merge",
         "evidence": [
           "APPLE-IOS-V lastSeen 2026-08-14T02:08:58Z CameraPreviewView.makeUIView krabbykai 4/3",
           "APPLE-IOS-17 still 1/1 from Aug 13 DraftThumb/coverClipFilename",
@@ -13113,12 +13180,12 @@ window.DIGESTS = {
           "APPLE-IOS-15 simulator \u2014 filtered",
           "APPLE-IOS-14 still 1/1 from Aug 12"
         ],
-        "notes": "Aryan fourth 15 repro; #51 still waiting",
+        "notes": "Resolved on main afternoon Aug 23. Four named 15 repros: Julian, Sophia, ivythecat, Aryan.",
         "plainTitle": "App can freeze when opening or leaving the camera",
-        "plainSummary": "Aryan hit the same camera freeze leaving Record on TestFlight 15 Saturday afternoon \u2014 fourth person on 15 (after Julian, Sophia, ivythecat). Pull request #51 is still waiting. Testers don\u2019t have it until you merge and ship a new TestFlight.",
-        "actionStatus": "Ready for you to approve",
-        "actionNote": "Pull request #51. Try on a phone. Aryan is more evidence, not a new bug.",
-        "technicalNotes": "19 event 271984d3b31e4763a618634253383b15 aryangoyal1811 2026-08-22T17:48:39Z dist=15 iPhone18,1 iOS 27.0. PR #51 a7253cb469 not merged. 0 comments.",
+        "plainSummary": "Fixed on main this afternoon (build 16). The camera no longer mutates the capture session from the UI thread. Testers still have 15 until you ship 16. Pull request #51 is the old approach. Close it without merging. Needs a 17-family phone to verify (a 16 Pro hides this class of bug).",
+        "actionStatus": "Fixed on main \u00b7 next TestFlight",
+        "actionNote": "Commit 4298fa766a on main, 2026-08-23. PR #51 still open and superseded. Merge notes: cannot verify on a 16 Pro; needs a 17-family device plus camera_orientation telemetry before going wide. Accepted cost: viewfinder black for ~100ms instead of frozen 3-11s.",
+        "technicalNotes": "4298fa766a Give the capture session one owner and one queue. CameraPreviewView holds the controller; every bind/point/unbind on sessionQueue. Deliberately not PR #47/#51 private attach queue. APPLE-IOS-V Julian; APPLE-IOS-19 Sophia + Aryan. PR #51 a7253cb469 still OPEN. Close without merging.",
         "sourceLinks": [
           {
             "label": "GitHub \u00b7 pull request #51 \u00b7 still waiting",
@@ -13137,74 +13204,85 @@ window.DIGESTS = {
             "url": "https://weaive.sentry.io/issues/APPLE-IOS-V"
           }
         ],
-        "peopleCount": 4
+        "peopleCount": 4,
+        "resolved": true
       },
       {
-        "id": "keyboard-search-hang-puneet",
-        "title": "Focusing a text box hangs Latent, then typing breaks other apps",
-        "status": "open",
-        "novelty": "new",
-        "summary": "Puneet on 15 iOS 26.6: Latent crashed, then typing in other apps crashed until an iOS reset. APPLE-IOS-1C \u00d75 fatal hangs 2:03\u20132:20pm ET focusing UITextView \u2192 keyboard/pasteboard wait. Comment-keyboard probe already on main (not in testers\u2019 15). No duplicate PR.",
-        "detail": "In-app bug 2026-08-21 18:47 UTC (2:47pm ET) Puneet / puneet, Hide My Email bbfhzjdmfp@privaterelay.appleid.com, 1.0.1 (15), iOS 26.6, Waterloo: had to reset iOS because Latent crashed, then other apps crashed whenever they tried to type. Search to find an app crashed the phone.\n\nSentry APPLE-IOS-1C five fatal hangs same user same afternoon 18:03\u201318:20 UTC, dist=15, iPhone15,2 (14 Pro). Stack: tap \u2192 UITextView becomeFirstResponder \u2192 UIKeyboardSceneDelegate reload input views \u2192 _UIKeyboardStateManager sync pasteboard (_getTemporaryLocalGeneralPasteboard / canInsertAdaptiveImageGlyph) wait on XPC. Culprit UIApplication.sendEventOverride. Free RAM ~44MB on last event.\n\nAug 20 on main: f05a01e89d comment-keyboard probe \u2014 not in testers\u2019 15. Different surface (composer covered) vs this pasteboard-sync on focus. Do not open a speculative pasteboard PR from this dig. Next TestFlight first; if it still happens, then a keyboard-focus PR.",
+        "id": "hotspot-throttle",
+        "title": "Hotspot speeds throttle / unusable while Latent is in use",
+        "status": "resolved",
+        "novelty": "resolved-on-main",
+        "summary": "Fixed on main this afternoon: c30a12693f. The hotspot kill was unbounded clip downloads on URLSession.shared, not upload or thermal. Testers still on 15.",
+        "detail": "Maxwell Hellwig maxwell18597@gmail.com thread 1a0179711e92179f, now 8 messages.\n\nWithout Latent: laptop on phone hotspot is normal. The second Latent is used on the phone, hotspot drops orders of magnitude; Google search >30s vs <1s. July 29 did not throttle (thinks pre v11/12). Devices: iPhone 17 256GB T-Mobile; Lenovo ThinkPad E14 Gen 5.\n\nEddie asked him to try a stock iOS Camera timelapse. Maxwell: speeds stayed the same as Latent-not-open. Four PNG speed tests. Maxwell asked IP/location in the screenshots not be forwarded \u2014 do not attach or publish them.\n\nEddie 5:42pm ET: will get this fixed; will not send screenshots elsewhere.\n\nNo PR today: CloudAgent GitHub reconnect failed, and the cause is radio/path work Latent does that stock Camera does not \u2014 not a one-file footgun.",
         "sources": [
-          "Supabase public.feedback (Aug 21 Puneet)",
-          "Sentry APPLE-IOS-1C"
+          "Supabase public.feedback (Aug 10 22:38 UTC)"
         ],
-        "ownership": "New \u00b7 related iOS 26 keyboard work already on main, not in 15",
-        "plainTitle": "Typing after a freeze crashed other apps (Puneet had to reset the phone)",
-        "plainSummary": "Puneet on TestFlight 15: Latent froze, then the keyboard in other apps crashed until they reset the iPhone. Crash reports show five fatal hangs the moment a text box got focus (iOS 26 keyboard talking to pasteboard). A related keyboard fix is already on main \u2014 not in testers\u2019 15.",
-        "actionStatus": "On main, not in testers\u2019 15",
-        "actionNote": "Comment-keyboard probe already on main. Still labeled build 15. Next TestFlight. No duplicate pull request today.",
-        "technicalNotes": "feedback 9083f2f6-f3f9-4a56-9f9f-0da9ab8b8da4. APPLE-IOS-1C https://weaive.sentry.io/issues/APPLE-IOS-1C events 18:03\u201318:20 UTC. Last event 880c3010b91b43cfabd7bc950e56f876. iPhone15,2 iOS 26.6 dist=15. UITextView becomeFirstResponder \u2192 pasteboard XPC.",
-        "peopleCount": 1,
+        "ownership": "On main in build 16",
+        "evidence": [
+          "Supabase feedback id 076226e4-c0cd-4811-a578-0808efa785f7 Aug 10 22:38 UTC build 1.0.1 (12)",
+          "Eddie follow-up thread 1a0179711e92179f Aug 18 6:16pm PT; no reply"
+        ],
+        "plainTitle": "Personal Hotspot becomes unusable while Latent is open",
+        "plainSummary": "Fixed on main this afternoon (build 16). Opening Latent was greedily downloading every missing timelapse (~26 MB each) on the same radio as the hotspot. Downloads are now throttled, prefetch is the newest eight, and a 502 retries instead of looking like a blank clip. Testers still have 15 until you ship 16. Do not forward Maxwell speed-test screenshots \u2014 they have his IP.",
+        "actionStatus": "Fixed on main \u00b7 next TestFlight",
+        "actionNote": "Commit c30a12693f. You promised Maxwell a fix. Next TestFlight is how he gets it. Do not republish his speed-test PNGs.",
+        "technicalNotes": "c30a12693f Stop the app saturating the network. Two tuned URLSessions; prefetch newest 8; playback 3 retries on transient 502; Video missing pill. Handoff: hotspot was unbounded downloads, not upload/thermal. Thread 1a0179711e92179f. Do not republish PNGs.",
         "sourceLinks": [
           {
-            "label": "In-app feedback \u00b7 Aug 21 2:47pm ET \u00b7 puneet / Puneet \u00b7 1.0.1 (15) \u00b7 Hide My Email"
+            "label": "Email from maxwell18597@gmail.com \u00b7 Re: Latent! \u00b7 Aug 19 5:17pm ET \u00b7 thread 1a0179711e92179f"
           },
           {
-            "label": "Crash reports \u00b7 APPLE-IOS-1C \u00d75 fatal keyboard hangs (build 15)",
-            "url": "https://weaive.sentry.io/issues/APPLE-IOS-1C"
+            "label": "Eddie\u2019s reply \u00b7 Aug 19 5:42pm ET \u00b7 will get this fixed"
           }
         ],
-        "notes": "New; keyboard/pasteboard; next TF; no duplicate PR"
+        "notes": "Resolved on main afternoon Aug 23. Maxwell still the named reporter.",
+        "resolved": true
       },
       {
-        "id": "apple-ios-1d-textview",
-        "title": "Opening a text box hangs Latent for ~6 seconds",
-        "status": "open",
-        "novelty": "new",
-        "summary": "pepsi/Julian on 15 iOS 26.6 Saturday 4:57pm ET: 5.4\u20136.2s hang creating UITextView during SwiftUI layout (TextEditor). APPLE-IOS-1D. Comment-keyboard probe already on main, not in testers\u2019 15. No duplicate PR.",
-        "detail": "APPLE-IOS-1D event 62f0b470bc664958a7a942eb6c32cb5b 2026-08-22T20:57:55Z, dist=15, iPhone14,5, iOS 26.6, low power 15% battery, username pepsi, arteagajulian323@gmail.com. Stack: UIKitTextViewAdaptor.makeUIView \u2192 UITextView init \u2192 protocol_conformsToProtocol_nolock. Related to but not the same as Friday\u2019s 1C pasteboard-on-focus (Puneet). Aug 20 on main: f05a01e89d comment-keyboard probe \u2014 not in testers\u2019 15. Do not open a speculative text-box PR from this dig.",
+        "id": "battery-regression",
+        "title": "Battery regression during sessions",
+        "status": "resolved",
+        "summary": "Fixed on main this afternoon: 52856f8f8f. Dim now freezes an invisible preview and drops capture to the sampler interval. First on-device measurement 5.2 points/hour vs ~10/hour on build 15. Testers still on 15.",
+        "detail": "Battery drain during long recording sessions. Owned by Lane 3 on branch fix/record-ui-and-battery. No new user reports overnight.\n\nAPPLE-IOS-A +1 anonymous Wolfsburg watchdog/RAM kill Aug 18 2:43pm PT, build 12, iPhone14,5, foreground, no stacktrace. Lifetime 93/13. Still Lane 3. No new PR.",
         "sources": [
-          "Sentry APPLE-IOS-1D"
+          "Gmail (Eddie\u2192Sydney)",
+          "Lane 3 branch",
+          "Sentry APPLE-IOS-A"
         ],
-        "ownership": "New \u00b7 related iOS 26 keyboard work already on main, not in 15",
-        "plainTitle": "App froze while a text box was opening (Julian)",
-        "plainSummary": "Julian on TestFlight 15 Saturday afternoon: the app hung about six seconds while a text box was being created. Related keyboard work is already on main \u2014 not in testers\u2019 15.",
-        "actionStatus": "On main, not in testers\u2019 15",
-        "actionNote": "Comment-keyboard probe already on main. Still labeled build 15. Next TestFlight. No duplicate pull request today.",
-        "technicalNotes": "APPLE-IOS-1D https://weaive.sentry.io/issues/APPLE-IOS-1D event 62f0b470bc664958a7a942eb6c32cb5b. pepsi dist=15 iOS 26.6 iPhone14,5 LPM.",
-        "peopleCount": 1,
+        "ownership": "On main in build 16",
+        "evidence": [
+          "Branch exists",
+          "Eddie\u2192Sydney battery follow-up email"
+        ],
+        "notes": "Resolved on main afternoon Aug 23. Needs TF 16 field data.",
+        "plainTitle": "Battery drains too fast during study sessions",
+        "plainSummary": "Fixed on main this afternoon (build 16). A 3.5-hour sitting was costing ~80% because the camera kept running 1080p/60 while dim only dimmed the backlight. Dim now freezes the preview once the picture is actually invisible, and capture follows the timelapse sampler. First phone measurement: 5.2 points/hour vs about 10 on 15. Testers still have 15 until you ship 16. Field data on 16 is how we will know it stuck.",
+        "actionStatus": "Fixed on main \u00b7 next TestFlight",
+        "actionNote": "Commit 52856f8f8f. Sydney 80% in 3.5h is the named report. Measurement refuses a reading if the phone charged, level is unknown, or the sitting is too short.",
+        "technicalNotes": "52856f8f8f Stop paying for a picture nobody can see. Throttle follows sampler interval, re-decides on coarsen. Freeze waits for 2.5s backlight ramp. First measurement 5.2 pts/hr both levers vs ~10/hour on 15.",
         "sourceLinks": [
           {
-            "label": "Crash reports \u00b7 APPLE-IOS-1D pepsi/Julian UITextView hang (build 15)",
-            "url": "https://weaive.sentry.io/issues/APPLE-IOS-1D"
+            "label": "Email thread (Eddie \u2192 Sydney) about battery"
+          },
+          {
+            "label": "Crash reports \u00b7 APPLE-IOS-A anonymous Wolfsburg watchdog Aug 18 2:43pm PT build 12"
           }
         ],
-        "notes": "New; text-box create hang; next TF; no duplicate PR"
+        "novelty": "resolved-on-main",
+        "resolved": true
       },
       {
         "id": "tag-rename-share-and-doubleclick",
         "title": "Tag rename doesn\u2019t stick on share + double-click closes editor (lapplegat08 / Landon)",
-        "status": "partial-shipped",
-        "novelty": "update",
-        "summary": "Still on main, still not in testers\u2019 15. Landon thread still 2 msgs. Next TestFlight (merge text on Aug 20 work also says needs build 16).",
+        "status": "resolved",
+        "novelty": "resolved-on-main",
+        "summary": "Fix has been on main since Aug 18 (share sticker + rename durability). This afternoon main is labeled build 16, so the next TestFlight carries it. Landon still has not written back.",
         "detail": "From lapplegat08@gmail.com (Landon). Rename doesn\u2019t apply on share until renamed again; double-click closes editor. Eddie reply Aug 9 3:38pm PT promising next-build fix. Thread still 2 messages; Landon did not write back.\n\nFix ON MAIN last night, not in archived TF 15. Four commits after archive HEAD 3c71dbc83a, merge 19f01609a31a ~9:08pm ET Aug 18: share-sticker tag names (b0f82b5945d6), rename durability b718c4e71210 \u201cCarry a tag rename that the network swallowed\u201d, drifted catch-all (f1dc00d1e2da). CURRENT_PROJECT_VERSION still 15. Testers on TestFlight 15 will not see it until the next archive. Keep as bug with partial-shipped status. Do not open a duplicate PR.",
         "sources": [
           "Gmail lapplegat08@gmail.com",
           "Video.mov attachment"
         ],
-        "ownership": "On main after TF 15 archive \u00b7 next TestFlight",
+        "ownership": "On main since Aug 18 \u00b7 labeled build 16 this afternoon",
         "evidence": [
           "Thread id 19fe3b79b3816d1a still 2 messages; last Eddie reply 2026-08-09T22:38:20Z",
           "Merge 19f01609a31a 2026-08-19T01:08:50Z \u2014 not a GitHub PR",
@@ -13212,9 +13290,9 @@ window.DIGESTS = {
           "Archive HEAD 3c71dbc83a; these 4 commits are after it"
         ],
         "plainTitle": "Renamed tags don't stick when sharing (and double-click closes the editor)",
-        "plainSummary": "Landon\u2019s renamed-tags-don\u2019t-stick fix is still only on main. Testers on TestFlight 15 don\u2019t have it. Landon hasn\u2019t written back.",
-        "actionStatus": "Partly shipped",
-        "actionNote": "Fix is on main (share sticker + rename durability). Not in archived TestFlight 15 \u2014 testers need the next archive.",
+        "plainSummary": "Fixed on main since Aug 18. Build is now 16, so Landon renamed-tags-do-not-stick fix will reach testers in the next TestFlight. He has not written back.",
+        "actionStatus": "Fixed on main \u00b7 next TestFlight",
+        "actionNote": "Already on main (b0f82b5945d6, b718c4e71210, f1dc00d1e2da). Version bump 95ff992eff this afternoon. No duplicate PR.",
         "technicalNotes": "Thread id 19fe3b79b3816d1a still 2 msgs. Merge 19f01609a31a 2026-08-19T01:08:50Z (~9:08pm ET Aug 18). Payload: b0f82b5945d6 Print the tag's current name on the share sticker; b718c4e71210 Carry a tag rename that the network swallowed; f1dc00d1e2da Repair a catch-all whose name drifted from its label. Compare 3c71dbc83a...main ahead_by 4. Not a GitHub PR. Do not open a duplicate PR.",
         "peopleCount": 1,
         "sourceLinks": [
@@ -13225,140 +13303,74 @@ window.DIGESTS = {
             "label": "Eddie's reply \u00b7 Aug 9, 2026 \u00b7 promised fix by next build"
           }
         ],
-        "notes": "Still waiting on next TF"
-      },
-      {
-        "id": "blank-missing-clips",
-        "title": "Blank / missing friend clips",
-        "status": "merged-watch",
-        "novelty": "update",
-        "summary": "Photo+timer att=0 Saturday 3 people (2 on 15, 1 on 10); Sunday morning 0. clip_upload_failed 1 timeout on old build 10. Watching.",
-        "detail": "## Status\nLane 1 PR **#29 merged**. Keep watching. Photo+timer camera-off pattern. No new PR.\n\n## Metrics \u2014 session_save_attempted attachment_count=0\n| Day (PT) | Sessions | With media | Missing % |\n|---|---:|---:|---:|\n| Aug 19 (partial ~6:09am) | 36 | 34 | **5.6%** (all Photo+timer, 1 person 8445343b, two events 1:11am) |\n| Aug 18 final | 127 | 126 | **0.8%** (all Photo+timer, 1 person 7c79ae29, 5:01pm, build 15) |\n| Aug 17 final | 131 | 126 | **3.8%** (all Photo+timer, 1 person 51509273, five events 1:06am) |\n| Aug 16 | 103 | 101 | 1.9% |\n| Aug 15 | 97 | 97 | 0.0% |\n| Aug 14 | 113 | 92 | 18.6% |\n| Aug 13 | 100 | 98 | 2.0% |\n\nTimelapse 100% has_media Aug 13\u201319 (Aug 19 34/34).\n\nclip_upload_failed Aug 17\u201318: 0. Aug 19 = 2 (cancelled NSURL -999 2:39am person f17c1fe9 build 15; connection-lost NSURL -1005 6:08am person 4255eb7d build 10). Neither matches the Aug 19 missing-clip person.\n\nsession_save_failed Aug 17: 0; Aug 18 final: 2 (duplicate key 7:34am; NSURL -1009 offline 9:10pm); Aug 19: 0.\nsession_save_blocked Aug 18: 1 media + 4 activity; Aug 19: 2 media (same person as missing-clip).",
-        "sources": [
-          "Supabase public.feedback (Aug 11 blank clip x2)",
-          "PostHog clip_upload_failed",
-          "Supabase media join",
-          "Lane 1 PR #29"
-        ],
-        "ownership": "Lane 1 \u00b7 PR #29 merged \u00b7 keep watching",
-        "evidence": [
-          "No new Supabase feedback since Aug 11 18:30 UTC jumpropes report",
-          "Missing % Aug 13 finalized 2.0%; Aug 12 6.4%; Aug 11 revised 12.6%; Aug 14 partial 11.1%",
-          "clip_upload_failed Aug 13 1/1 connection-lost; Aug 14 3/2 (2 connection-lost + 1 create_media P0001 auth)",
-          "No PUT 403 since Aug 12; MB/s ~1.56; MB/clip interim alert gone from list"
-        ],
-        "plainTitle": "Friends' study clips sometimes show up blank",
-        "plainSummary": "Photo+timer sittings with no clip: 3 people Saturday, none this morning. One failed upload Sunday on an old build (10), timed out. Timelapses still have media.",
-        "actionStatus": "Watching",
-        "actionNote": "A fix already shipped. The Photo+timer misses are a known camera-off pattern \u2014 not opening another pull request. The jump in people is loud; worth a look after the next TestFlight.",
-        "technicalNotes": "session_save_attempted Photo+timer att=0: Aug 18 1, Aug 19 11, Aug 20 11, Aug 21 2 (+1 att=0 has_media True). Timelapse att=0 has_media True is the normal path. clip_upload_abandoned no_filename 15: 117/3 Aug 19, 41/3 Aug 20, 15/2 Aug 21. clip_upload_failed Aug 19=5, Aug 20\u201321=0.",
-        "sourceLinks": [
-          {
-            "label": "In-app feedback \u00b7 Aug 11 afternoon \u00b7 jumpropes blank + public/private dead \u00b7 build 1.0.1 (12)"
-          },
-          {
-            "label": "In-app feedback \u00b7 Aug 11 morning \u00b7 blank 40s clip"
-          },
-          {
-            "label": "Product analytics \u00b7 Aug 14 uploads: dropped connections + one create_media auth retry"
-          },
-          {
-            "label": "Pull request #29 (already merged)"
-          }
-        ],
-        "notes": "Photo+timer att=0 people jumped 1\u219211\u219211"
-      },
-      {
-        "id": "hotspot-throttle",
-        "title": "Hotspot speeds throttle / unusable while Latent is in use",
-        "status": "open-reproduced",
-        "novelty": "reproduced",
-        "summary": "Maxwell replied Aug 19 5:17\u20136:24pm ET. Latent open on iPhone 17 T-Mobile tanks hotspot (Google >30s vs <1s). Stock Camera timelapse does not. Eddie promised a fix. No PR \u2014 CloudAgent blocked; not a one-file patch.",
-        "detail": "Maxwell Hellwig maxwell18597@gmail.com thread 1a0179711e92179f, now 8 messages.\n\nWithout Latent: laptop on phone hotspot is normal. The second Latent is used on the phone, hotspot drops orders of magnitude; Google search >30s vs <1s. July 29 did not throttle (thinks pre v11/12). Devices: iPhone 17 256GB T-Mobile; Lenovo ThinkPad E14 Gen 5.\n\nEddie asked him to try a stock iOS Camera timelapse. Maxwell: speeds stayed the same as Latent-not-open. Four PNG speed tests. Maxwell asked IP/location in the screenshots not be forwarded \u2014 do not attach or publish them.\n\nEddie 5:42pm ET: will get this fixed; will not send screenshots elsewhere.\n\nNo PR today: CloudAgent GitHub reconnect failed, and the cause is radio/path work Latent does that stock Camera does not \u2014 not a one-file footgun.",
-        "sources": [
-          "Supabase public.feedback (Aug 10 22:38 UTC)"
-        ],
-        "ownership": "Reproduced \u00b7 Eddie promised a fix \u00b7 no PR yet",
-        "evidence": [
-          "Supabase feedback id 076226e4-c0cd-4811-a578-0808efa785f7 Aug 10 22:38 UTC build 1.0.1 (12)",
-          "Eddie follow-up thread 1a0179711e92179f Aug 18 6:16pm PT; no reply"
-        ],
-        "plainTitle": "Personal Hotspot becomes unusable while Latent is open",
-        "plainSummary": "Maxwell wrote back. Opening Latent on his iPhone 17 wrecks the hotspot for his laptop (Google search >30s vs under a second). The built-in Camera timelapse does not. You told him you\u2019ll fix it. No pull request yet \u2014 needs a look at what Latent is doing to the radio.",
-        "actionStatus": "Reproduced \u2014 no pull request yet",
-        "actionNote": "You promised Maxwell a fix. CloudAgent could not launch (reconnect GitHub in Cursor). Don\u2019t forward his speed-test screenshots \u2014 they have his IP.",
-        "technicalNotes": "Thread 1a0179711e92179f. Inbound 1a01be2dcc4a79f6 + 1a01bed7129679d8. Eddie 1a01bf9bb74b0eff. Four PNGs. Do not republish.",
-        "sourceLinks": [
-          {
-            "label": "Email from maxwell18597@gmail.com \u00b7 Re: Latent! \u00b7 Aug 19 5:17pm ET \u00b7 thread 1a0179711e92179f"
-          },
-          {
-            "label": "Eddie\u2019s reply \u00b7 Aug 19 5:42pm ET \u00b7 will get this fixed"
-          }
-        ],
-        "notes": "Maxwell still the latest; no new mail"
-      },
-      {
-        "id": "battery-regression",
-        "title": "Battery regression during sessions",
-        "status": "in-flight",
-        "summary": "No new user reports. One anonymous APPLE-IOS-A watchdog Aug 18 2:43pm PT, Wolfsburg, build 12. Lifetime 93/13. Still Lane 3. No new PR.",
-        "detail": "Battery drain during long recording sessions. Owned by Lane 3 on branch fix/record-ui-and-battery. No new user reports overnight.\n\nAPPLE-IOS-A +1 anonymous Wolfsburg watchdog/RAM kill Aug 18 2:43pm PT, build 12, iPhone14,5, foreground, no stacktrace. Lifetime 93/13. Still Lane 3. No new PR.",
-        "sources": [
-          "Gmail (Eddie\u2192Sydney)",
-          "Lane 3 branch",
-          "Sentry APPLE-IOS-A"
-        ],
-        "ownership": "Lane 3 \u00b7 fix/record-ui-and-battery",
-        "evidence": [
-          "Branch exists",
-          "Eddie\u2192Sydney battery follow-up email"
-        ],
-        "notes": "Aug 20 swipe-anywhere battery notice on main",
-        "plainTitle": "Battery drains too fast during study sessions",
-        "plainSummary": "No new battery emails. Sydney\u2019s 80% in 3.5h still the last named report. Aug 20 on main: battery notice can be swiped anywhere \u2014 not in testers\u2019 15.",
-        "actionStatus": "Waiting on a bigger project",
-        "actionNote": "Part of the ongoing recording & battery project.",
-        "technicalNotes": "APPLE-IOS-A event e458b8c1158e43259f575020fb09ecdb Aug 18 2:43pm PT build 12 Wolfsburg. Lifetime 93/13 (was 92/12). Still Lane 3 fix/record-ui-and-battery. No new PR.",
-        "sourceLinks": [
-          {
-            "label": "Email thread (Eddie \u2192 Sydney) about battery"
-          },
-          {
-            "label": "Crash reports \u00b7 APPLE-IOS-A anonymous Wolfsburg watchdog Aug 18 2:43pm PT build 12"
-          }
-        ],
-        "novelty": "update"
+        "notes": "Was waiting on a version bump. Now 16.",
+        "resolved": true
       },
       {
         "id": "log-session",
         "title": "Log session seems to not work",
-        "status": "open",
-        "novelty": "new-on-15",
-        "summary": "Kayla / kaila_vee on 1.0.1 (15) iOS 26.6: Save did not go to the tag/label page; force-quit recovered. First time. Cousin of 07nkwon. Aug 20 main has iOS 26 floating-sheet gap cover (b56062b408) \u2014 not in testers\u2019 15. No duplicate PR.",
+        "status": "resolved",
+        "novelty": "resolved-on-main",
+        "summary": "iOS 26 floating-sheet gap cover has been on main since Aug 20. This afternoon main is labeled build 16. If Kayla still cannot reach tagging after 16, then a Save-specific look.",
         "detail": "NEW in-app bug. Kayla / kaila_vee kayvil89@gmail.com public.feedback id c7655fe1-b1a8-44a8-9274-8227388d1f19 2026-08-19 23:48:52 UTC (4:48pm PT), app 1.0.1 (15), iOS 26.6: \u201cwhen i was trying to save my recording, the button to save did not let me go to the next page where you can tag and label your session. i had to close and reopen the app for it to work. this is the first time it happened.\u201d\n\nRelated: 07nkwon Aug 8 build 12 Log session didn\u2019t work.\n\nAug 20 on main (NOT in testers\u2019 15): b56062b408 Cover the strip iOS 26 leaves under a floating sheet; also comment-keyboard probe. Merge abf520dc80 says needs build 16. Do not open a duplicate PR \u2014 next TestFlight first. If Kayla still repros after 16, then a Save-specific PR.",
         "sources": [
           "Supabase public.feedback",
           "PostHog session_save_failed / session_save_blocked",
           "Sentry APPLE-IOS-12"
         ],
-        "ownership": "Possible same iOS 26 sheet gap already on main \u00b7 next TestFlight",
+        "ownership": "On main since Aug 20 \u00b7 labeled build 16 this afternoon",
         "evidence": [
           "session_save_failed Aug 12 1 offline; Aug 13\u201314 0",
           "session_save_blocked Aug 13 2/1 media; Aug 14 6/3 media"
         ],
         "plainTitle": "Save / Log session doesn\u2019t go to tagging",
-        "plainSummary": "Kayla on TestFlight 15: Save after a sitting didn\u2019t go to the tag page. She had to close the app. 07nkwon reported something similar on 12. A related iOS 26 sheet-gap fix is already on main but not in testers\u2019 15 \u2014 next TestFlight.",
-        "actionStatus": "On main, not in testers\u2019 15",
-        "actionNote": "Aug 20 floating-sheet gap cover is on main. Still labeled build 15. Next TestFlight. No duplicate pull request today.",
-        "technicalNotes": "feedback id c7655fe1-b1a8-44a8-9274-8227388d1f19. Commit b56062b4083d. Merge abf520dc8024 \u201cNeeds build 16 to reach the affected users.\u201d CURRENT_PROJECT_VERSION still 15.",
+        "plainSummary": "The iOS 26 sheet-gap cover for Kayla Save-does-not-go-to-tagging has been on main since Aug 20. Build is now 16, so it ships in the next TestFlight. If she still hits it on 16, that is a new look.",
+        "actionStatus": "Fixed on main \u00b7 next TestFlight",
+        "actionNote": "Commit b56062b408. Version bump 95ff992eff. SaveSessionView also changed today for the two-sittings P0 (092a63d394).",
+        "technicalNotes": "feedback c7655fe1-b1a8-44a8-9274-8227388d1f19. Sheet gap b56062b408. Merge abf520dc80 said needs build 16. CURRENT_PROJECT_VERSION is now 16 (95ff992eff).",
         "sourceLinks": [
           {
             "label": "In-app feedback \u00b7 Aug 19 4:48pm PT \u00b7 kaila_vee / Kayla \u00b7 1.0.1 (15) \u00b7 kayvil89@gmail.com"
           }
         ],
-        "notes": "Kayla still the latest save-button report; no new overnight",
-        "peopleCount": 2
+        "notes": "Was waiting on a version bump. Now 16.",
+        "peopleCount": 2,
+        "resolved": true
+      },
+      {
+        "id": "profile-pic-cropper",
+        "title": "Profile photo cropper Cancel/Done under status bar",
+        "status": "resolved",
+        "novelty": "unchanged",
+        "summary": "comet still on build 12. Aug 9 fix 4cba232 is on main and in TestFlight 13-15. Ask them to update. No new report.",
+        "detail": "comet (wherearetheavocados) reported Aug 17 6:03am PT they cannot tap Cancel/Done on the profile-photo cropper (buttons under the iOS clock/battery). Same issue Ree (cloudberree) reported Aug 10. Reporter is on 1.0.1 (12). The Aug 9 fix is already on main and in TestFlight builds 13, 14, and 15. Ask them to update. Do not open a PR.",
+        "sources": [
+          "Supabase public.feedback (Aug 17 comet / wherearetheavocados)",
+          "Supabase public.feedback (Aug 10 cloudberree / Ree)"
+        ],
+        "ownership": "Already shipped on main \u00b7 TestFlight 13+ \u00b7 reporter on 12",
+        "evidence": [
+          "Supabase id 63dea2e0-7b5e-4f46-8d54-d79683e7977e",
+          "Fix commit 4cba23273d4f0289be6f4182c7f425921a34ec40 (Aug 9 4:41pm PT) on main",
+          "Build 12 bump 515202c15d was Aug 7, 27 commits before the fix",
+          "Reporter 1.0.1 (12); current main 1.0.1 (15)"
+        ],
+        "plainTitle": "Profile-photo cropper Cancel/Done buttons are hard to tap",
+        "plainSummary": "Fixed in TestFlight 13+. comet reported it on 12 and later updated (they hit a 502 on 15). No new report.",
+        "actionStatus": "Already in TestFlight",
+        "actionNote": "Already in testers hands since 13. Not reopened.",
+        "technicalNotes": "Supabase id 63dea2e0-7b5e-4f46-8d54-d79683e7977e. Fix commit 4cba23273d4f0289be6f4182c7f425921a34ec40 (Aug 9 4:41pm PT) is on main. Build 12 bump 515202c15d was Aug 7, 27 commits before the fix. AvatarCropView on main still has insetShortfall padding. Do not reopen a PR.",
+        "peopleCount": 2,
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 17 6:03am PT \u00b7 wherearetheavocados / comet \u00b7 1.0.1 (12)"
+          },
+          {
+            "label": "In-app feedback \u00b7 Aug 10 \u00b7 cloudberree / Ree"
+          }
+        ],
+        "notes": "Resolved in field (TF 13+). Confirmed still true after build 16 merge.",
+        "resolved": true
       }
     ],
     "sentry": [
@@ -13458,30 +13470,35 @@ window.DIGESTS = {
       }
     ],
     "newSincePrev": [
-      "APPLE-IOS-19 aryangoyal1811 leave-Record hang on 15 (fourth named 15 camera freeze)",
-      "APPLE-IOS-1D pepsi/Julian UITextView create hang on 15 Saturday 4:57pm ET",
-      "Discord LOGIN WALL day 11",
-      "clip_upload_failed 1 timeout on old build 10 Sunday morning",
-      "main unchanged, still version 15"
+      "main merged build 16 at 2026-08-23T19:16:26Z (04b4729bcf)",
+      "Camera freeze closed on main by 4298fa766a; PR #51 superseded",
+      "Hotspot closed on main by c30a12693f (unbounded clip downloads)",
+      "Battery closed on main by 52856f8f8f (5.2 vs ~10 pts/hr)",
+      "CURRENT_PROJECT_VERSION is 16"
     ],
     "authFailures": [
       "Discord box Chrome login wall day 11 (since Aug 13)",
       "CloudAgent / GitHub MCP: reconnect GitHub in Cursor still needed (used PAT)"
     ],
     "plainTldr": [
-      "Same camera-freeze pull request as Friday, still waiting. A fourth person on TestFlight 15 hit it Saturday (Aryan, leaving Record). Try #51 on a phone before merge.",
-      "Julian also froze Saturday while a text box was opening. Related keyboard work is already on main \u2014 not in testers\u2019 15. No new pull request.",
-      "No new emails or in-app reports. Discord still signed out (day 11).",
-      "Main still labeled build 15. Testers don\u2019t have the camera PR, tag-rename, or the sheet-gap fix."
+      "Build 16 landed on main this afternoon. Camera freeze, hotspot, and battery drain are fixed in the code. Testers still have 15 until you ship 16.",
+      "Do not merge pull request #51. The camera fix on main is a different (better) approach. Close #51 without merging.",
+      "Still broken: keyboard hangs (Puneet, Julian) and Photo+timer sittings that save with no clip. 502 blank-friend-clips got a live edge-function fix plus retries in 16.",
+      "Landon tags, Kayla Save, and the cropper were already on main and ship with 16 (cropper is already in TestFlight 13+)."
     ],
     "actions": [
       {
         "id": "pr-51-camera-hang",
         "title": "PR #51 \u2014 camera preview attach + teardown off main",
-        "status": "waiting",
+        "status": "superseded",
+        "resolved": true,
         "url": "https://github.com/eddie-the-lou/latent/pull/51",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/51",
+        "prNumber": 51,
         "plainTitle": "Camera freeze on open and on leave Record",
-        "plainSummary": "Still waiting. Aryan (aryangoyal1811) hit the leave-Record freeze on TestFlight 15 Saturday 1:48pm ET \u2014 fourth person on 15 (after Julian, Sophia, ivythecat). No comments on the pull request. Try on a phone before merge.",
+        "plainSummary": "Fixed on main this afternoon (build 16, one owner and one queue). Pull request #51 is the old attach-queue shape. Close it without merging.",
+        "actionStatus": "Superseded \u2014 close without merging",
+        "actionNote": "Main commit 4298fa766a is the fix. PR #51 is a different approach that the merge notes deliberately did not take. Close without merging.",
         "people": [
           "pepsi / Julian",
           "sophia",
@@ -13495,7 +13512,8 @@ window.DIGESTS = {
       "Gmail": "No new tester inbound. Saturday review did not bounce. Rho/collab/ops only.",
       "Supabase": "0 new rows. Table still 31. Puneet still newest.",
       "Sentry": "19 Aryan leave-Record 15. 1D Julian text-box 15. Two events only.",
-      "PostHog": "Photo+timer att=0 Sat 3 people, Sun 0. One timed-out upload on old build 10."
+      "PostHog": "Photo+timer att=0 Sat 3 people, Sun 0. One timed-out upload on old build 10.",
+      "GitHub": "main HEAD 04b4729bcf Merge build 16 ~3:16pm ET. PR #51 still open, superseded."
     }
   }
 };

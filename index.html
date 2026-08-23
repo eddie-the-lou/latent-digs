@@ -39,6 +39,7 @@ h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em}
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.72rem;font-weight:700;text-transform:none;letter-spacing:0}
 .b-approve{background:rgba(62,207,142,.18);color:var(--green)}
+.b-resolved{background:rgba(62,207,142,.18);color:var(--green)}
 .b-fixing{background:rgba(124,156,255,.18);color:var(--accent)}
 .b-watch{background:rgba(240,180,41,.18);color:var(--amber)}
 .b-need{background:rgba(240,113,120,.18);color:var(--red)}
@@ -86,11 +87,15 @@ function go(date,kind,id){
 function badge(status){
   const s=(status||'').toLowerCase();
   let cls='b-backlog', label=status||'';
-  if(s.includes('approve')||s.includes('review')||s.includes('ready')) cls='b-approve';
+  if(s.includes('fixed on main')||s.includes('already in testflight')||s.includes('already shipped')||s.includes('resolved')||s.includes('superseded')) cls='b-resolved';
+  else if(s.includes('approve')||s.includes('review')||s.includes('ready')) cls='b-approve';
   else if(s.includes('fixing')||s.includes('opened')||s.includes('pr')) cls='b-fixing';
   else if(s.includes('watch')||s.includes('ongoing')||s.includes('worked')) cls='b-watch';
   else if(s.includes('need')||s.includes('repro')||s.includes('broken')||s.includes('open')) cls='b-need';
   return `<span class="badge ${cls}">${esc(label)}</span>`;
+}
+function isResolved(item){
+  return item && item.resolved===true;
 }
 function peopleLabel(item){
   if(item.peopleCountLabel) return item.peopleCountLabel;
@@ -112,9 +117,14 @@ function renderArchive(active){
   const dates=INDEX.length?INDEX.map(x=>x.date||x):Object.keys(DIGESTS).filter(k=>k.length===10).sort().reverse();
   document.getElementById('archive').innerHTML=dates.map(date=>{
     const d=dig(date)||{};
-    const nAct=(d.actions||[]).length;
-    const nBug=(d.bugs||[]).length;
-    return `<button class="date-btn ${date===active?'active':''}" onclick="go('${date}')"><div class="d">${esc(date)}</div><div class="m">${nAct? nAct+' ready to approve · ':''}${nBug} issues</div></button>`;
+    const nAct=(d.actions||[]).filter(a=>!isResolved(a) && a.status!=='superseded').length;
+    const nBug=(d.bugs||[]).filter(b=>!isResolved(b)).length;
+    const nRes=(d.bugs||[]).filter(isResolved).length;
+    const bits=[];
+    if(nAct) bits.push(nAct+' ready to approve');
+    if(nBug) bits.push(nBug+' open');
+    if(nRes) bits.push(nRes+' resolved');
+    return `<button class="date-btn ${date===active?'active':''}" onclick="go('${date}')"><div class="d">${esc(date)}</div><div class="m">${esc(bits.join(' · ')||'no items')}</div></button>`;
   }).join('');
 }
 function card(item, date, kind){
@@ -135,18 +145,23 @@ function actionCard(a,date){
   </div>`;
 }
 function renderByTopic(d,date){
-  const actions=d.actions||[];
+  const actions=(d.actions||[]).filter(a=>!isResolved(a) && a.status!=='superseded');
   const bugs=d.bugs||[];
+  const openBugs=bugs.filter(b=>!isResolved(b));
+  const resolvedBugs=bugs.filter(isResolved);
   const feats=d.features||[];
   return `
     <div class="section"><h2><span class="dot" style="background:var(--green)"></span>Ready for you to approve <span class="count">${actions.length}</span></h2>
       ${actions.length?actions.map(a=>actionCard(a,date)).join(''):'<div class="empty">Nothing waiting on you today.</div>'}
     </div>
-    <div class="section"><h2><span class="dot" style="background:var(--red)"></span>Broken or confusing <span class="count">${bugs.length}</span></h2>
-      ${bugs.map(b=>card(b,date,'bug')).join('')||'<div class="empty">No open issues.</div>'}
+    <div class="section"><h2><span class="dot" style="background:var(--red)"></span>Broken or confusing <span class="count">${openBugs.length}</span></h2>
+      ${openBugs.map(b=>card(b,date,'bug')).join('')||'<div class="empty">No open issues.</div>'}
     </div>
     <div class="section"><h2><span class="dot" style="background:var(--accent)"></span>Things people want <span class="count">${feats.length}</span></h2>
       ${feats.map(f=>card(f,date,'feature')).join('')||'<div class="empty">No feature asks.</div>'}
+    </div>
+    <div class="section"><h2><span class="dot" style="background:var(--green)"></span>Resolved <span class="count">${resolvedBugs.length}</span></h2>
+      ${resolvedBugs.map(b=>card(b,date,'bug')).join('')||'<div class="empty">Nothing marked resolved on this day.</div>'}
     </div>`;
 }
 function renderBySource(d,date){

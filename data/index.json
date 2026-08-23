@@ -4,7 +4,8 @@
     "title": "Latent feedback dig",
     "summaryStats": {
       "openFeatures": 18,
-      "openBugs": 9,
+      "openBugs": 3,
+      "resolvedBugs": 6,
       "filtered": 9
     },
     "path": "data/2026-08-23.json",
