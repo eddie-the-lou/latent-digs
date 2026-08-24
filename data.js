@@ -1,5 +1,17 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-08-24",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 21,
+      "openBugs": 3,
+      "resolvedBugs": 6,
+      "filtered": 9
+    },
+    "path": "data/2026-08-24.json",
+    "htmlArchive": "../2026-08-24.html"
+  },
+  {
     "date": "2026-08-23",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -179,6 +191,18 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-08-24",
+      "title": "Latent feedback dig",
+      "summaryStats": {
+        "openFeatures": 21,
+        "openBugs": 3,
+        "resolvedBugs": 6,
+        "filtered": 9
+      },
+      "path": "data/2026-08-24.json",
+      "htmlArchive": "../2026-08-24.html"
+    },
     {
       "date": "2026-08-23",
       "title": "Latent feedback dig",
@@ -13514,6 +13538,1163 @@ window.DIGESTS = {
       "Sentry": "19 Aryan leave-Record 15. 1D Julian text-box 15. Two events only.",
       "PostHog": "Photo+timer att=0 Sat 3 people, Sun 0. One timed-out upload on old build 10.",
       "GitHub": "main HEAD 04b4729bcf Merge build 16 ~3:16pm ET. PR #51 still open, superseded."
+    }
+  },
+  "2026-08-24": {
+    "date": "2026-08-24",
+    "title": "Latent feedback dig",
+    "generatedAt": "2026-08-24T14:19:13Z",
+    "tldr": [
+      "You merged #52 and #53 Sunday evening and closed #51 without merging. Nothing waiting.",
+      "Discord catch-up (login restored Sunday afternoon, signed out again this morning): first scrape since Aug 12. Android still loudest (~35). New asks: custom thumbnail (9 upvotes), communities (8), subtags (4), TestFlight redeem stuck (Cherbear1421).",
+      "Survey +1: Qiqi (ev.angel.ineliew@gmail.com) Very disappointed, \u201cmake it interesting\u201d. Sean Ellis 25 / 19 / 2 of 46. Forced-choice still empty.",
+      "Photo+timer sittings with no photo: 10 on Sunday (8 of them one person on build 16 at 5:34pm ET, before #53 merged 6:54pm). Monday morning 3 on 15. Keyboard warmup is on main, not in testers\u2019 15. Do not claim 1C fixed."
+    ],
+    "stats": {
+      "openFeatures": 21,
+      "openBugs": 3,
+      "resolvedBugs": 6,
+      "filtered": 9
+    },
+    "prStatus": "No open PRs. #52 merged Sunday 5:57pm ET (text warmup). #53 merged Sunday 6:54pm ET (Photo+timer Add-a-photo copy). #51 closed unmerged Sunday 7:05pm ET (superseded by 4298fa766a in build 16). main HEAD 1e946efb72 \u201cMerge the draft save screen\u201d Sunday 6:53pm ET. CURRENT_PROJECT_VERSION still 16. Testers still on TestFlight 15 unless they installed 16.",
+    "sources": [
+      {
+        "name": "Discord",
+        "friendlyName": "Discord",
+        "meta": "Sunday 3:00\u20133:30pm ET scrape (Eddie L) covered Aug 12\u201323. This morning login wall again; overnight since 3:30pm ET not scraped."
+      },
+      {
+        "name": "Gmail",
+        "friendlyName": "Email",
+        "meta": "0 new tester inbound. Sunday review 1a02ebfe53f17121 SENT, did not bounce. Ops/collab only."
+      },
+      {
+        "name": "Supabase",
+        "friendlyName": "In-app",
+        "meta": "public.feedback still 31 rows. Newest still Puneet Aug 21. 0 new."
+      },
+      {
+        "name": "Sentry",
+        "friendlyName": "Crash reports",
+        "meta": "6 events / 4 users. New APPLE-IOS-1E chloeho Record tap hang on build 10. chimmyaa 502 + camera attach + CA hitch on 15. eddie watchdog on 16. 19/1D/1C = 0 this window."
+      },
+      {
+        "name": "PostHog",
+        "friendlyName": "Product analytics",
+        "meta": "Photo+timer att=0 Sat 3/3, Sun 10/2 (8 on build 16, one person), Mon 3/2 on 15. clip_upload_failed Sun 5/3. Abandoned 55/2 Sun. Rageclick 88/25 Sun."
+      },
+      {
+        "name": "Survey",
+        "friendlyName": "PMF survey",
+        "meta": "Active 46 (+1 Qiqi). Sean Ellis 25 very / 19 somewhat / 2 not. Forced-choice still empty. Churned 6, never-recorded 7 unchanged."
+      },
+      {
+        "name": "GitHub",
+        "friendlyName": "GitHub",
+        "meta": "0 open PRs. HEAD 1e946efb72. #52+#53 merged, #51 closed unmerged. Still build 16."
+      }
+    ],
+    "features": [
+      {
+        "id": "custom-video-thumbnail",
+        "title": "Custom thumbnail on profile-grid videos",
+        "support": "9 Discord upvotes",
+        "status": "open",
+        "novelty": "new",
+        "summary": "! \ud835\udd87\u2019\ud835\udd98 Discord Aug 20. Custom photo on the profile grid instead of the first second of the timelapse. 9 up / 1 down.",
+        "detail": "Feature-request bot ID h6dzk-ggv5y. Loudest new video-control ask since Aug 12.",
+        "sources": [
+          "Discord #feature-requests"
+        ],
+        "plainTitle": "Pick a custom thumbnail for your videos",
+        "plainSummary": "! \ud835\udd87\u2019\ud835\udd98 wants a photo on the profile grid that isn\u2019t the first frame of the timelapse. 9 people upvoted it.",
+        "peopleCountLabel": "9 upvotes",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 9,
+        "sourceLinks": [
+          {
+            "label": "Discord #feature-requests \u00b7 ! \ud835\udd87\u2019\ud835\udd98 \u00b7 Aug 20 6:10pm ET \u00b7 ID h6dzk-ggv5y \u00b7 \u27059 / \u274c1"
+          }
+        ],
+        "technicalNotes": "ID h6dzk-ggv5y. Thread bot-only.",
+        "notes": "New from Sunday Discord scrape."
+      },
+      {
+        "id": "subtags",
+        "title": "Subtags that roll up (Studying \u2192 Math)",
+        "support": "4 Discord upvotes + overlapping-tags family",
+        "status": "open",
+        "novelty": "new",
+        "summary": "toasted Discord Aug 22. Studying with subject subtags; time rolls up. Related to Flaaash overlapping tags, which you said shipped either-way in build 15.",
+        "detail": "ID 0110p-zvojd. Votes \u27054 / \u274c0. Flaaash Giaaant overlapping-tags ID 0abo4-3315a was \u27051 / \u274c5; Eddie Aug 18 4:04pm ET: shipped in 15 either way.",
+        "sources": [
+          "Discord #feature-requests"
+        ],
+        "plainTitle": "Subtags under a main tag (Studying \u2192 Math)",
+        "plainSummary": "toasted wants subjects under Studying, with time rolling up. 4 upvotes. Overlapping tags already have an either-way choice in 15.",
+        "peopleCountLabel": "4 upvotes",
+        "actionStatus": "Idea backlog",
+        "actionNote": "Overlapping tags (Flaaash / aryangoyal1811) shipped in 15. Subtags are a further ask.",
+        "peopleCount": 4,
+        "sourceLinks": [
+          {
+            "label": "Discord #feature-requests \u00b7 toasted \u00b7 Aug 22 9:48pm ET \u00b7 ID 0110p-zvojd \u00b7 \u27054 / \u274c0"
+          },
+          {
+            "label": "Discord #feature-requests \u00b7 Flaaash Giaaant \u00b7 Aug 17 \u00b7 ID 0abo4-3315a \u00b7 Eddie: shipped in 15"
+          }
+        ],
+        "notes": "New from Sunday Discord scrape."
+      },
+      {
+        "id": "getting-in-testflight",
+        "title": "Getting in (TestFlight / download friction)",
+        "support": "Cherbear + nerd is alive + among / Ferdelprado / \ud835\udcdb\ud835\udcea\ud835\udcff\ud835\udd02\ud835\udcea / Dudu410",
+        "status": "open",
+        "novelty": "new",
+        "summary": "People cannot get past TestFlight redeem, download a changelog .txt, or find the app in the App Store. You paused new access Aug 22 7:12pm ET.",
+        "detail": "Cherbear1421 Aug 19 stuck on ready-to-test redeem. nerd is alive Aug 12 thought changelog was the app. among/Ferdelprado/\ud835\udcdb\ud835\udcea\ud835\udcff\ud835\udd02\ud835\udcea/Dudu410: how do I download / not in App Store. Android Advocate: say iOS-only before signup.",
+        "sources": [
+          "Discord #general-chat",
+          "Discord #questions",
+          "Discord #how-to-download"
+        ],
+        "plainTitle": "People get stuck downloading (TestFlight code / App Store)",
+        "plainSummary": "Cherbear1421 sat on the redeem-code screen. Others downloaded the changelog as a text file or looked in the App Store. You paused new TestFlight access Saturday evening.",
+        "peopleCountLabel": "6 named people",
+        "actionStatus": "Ops / onboarding copy",
+        "actionNote": "Not an in-app PR. Eddie paused new access Aug 22 7:12pm ET.",
+        "peopleCount": 6,
+        "sourceLinks": [
+          {
+            "label": "Discord #general-chat \u00b7 Cherbear1421 \u00b7 Aug 19 7:24\u20137:41am ET \u00b7 redeem stuck"
+          },
+          {
+            "label": "Discord #questions \u00b7 nerd is alive \u00b7 Aug 12 11:36pm ET \u00b7 .txt changelog"
+          },
+          {
+            "label": "Discord #how-to-download \u00b7 Eddie \u00b7 Aug 22 7:12pm ET \u00b7 new access paused"
+          }
+        ],
+        "notes": "New theme from Sunday Discord scrape."
+      },
+      {
+        "id": "short-session-permission",
+        "title": "Permission to film short sessions",
+        "support": "1 (graeae); testers said short is already fine",
+        "status": "open",
+        "novelty": "new",
+        "summary": "graeae Discord Aug 16 feels they can only film long sessions. KrabbyKai/TST/chlo said 9s and 15s already happen.",
+        "detail": "52-msg thread Suggestion. Positioning / empty-state, not a recorder change.",
+        "sources": [
+          "Discord #feature-requests"
+        ],
+        "plainTitle": "Make short sessions feel allowed",
+        "plainSummary": "graeae feels the app is only for long sittings. Other testers already post 9-second clips. This is copy/positioning, not a new recorder.",
+        "peopleCountLabel": "1 person",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 1,
+        "sourceLinks": [
+          {
+            "label": "Discord #feature-requests thread Suggestion \u00b7 graeae \u00b7 Aug 16 3:18pm ET"
+          }
+        ],
+        "notes": "New from Sunday Discord scrape."
+      },
+      {
+        "id": "append-drafts",
+        "title": "Append to already-saved drafts",
+        "support": "2",
+        "status": "open",
+        "novelty": "update",
+        "summary": "zerabrukmikre5 in-app Aug 18. Keep recording onto an already-saved draft.",
+        "detail": "In-app feature Aug 18 7:05pm PT from zerabrukmikre5 (build 15): \u201cLet me add onto already saved drafts bru\u201d.\n\nNew idea. Not shipped. Not a bug.",
+        "sources": [
+          "Supabase public.feedback (Aug 18)"
+        ],
+        "plainTitle": "Keep recording onto an already-saved draft",
+        "plainSummary": "zerabrukmikre5 in-app Aug 18, plus zmantheboii on Discord Aug 12 (\u201cresume my drafts\u201d). Same idea.",
+        "peopleCountLabel": "2 people",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 2,
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 18 7:05pm PT \u00b7 zerabrukmikre5 \u00b7 1.0.1 (15)"
+          },
+          {
+            "label": "Discord #questions \u00b7 zmantheboii \u00b7 Aug 12 6:01pm ET \u00b7 no replies"
+          }
+        ],
+        "technicalNotes": "id 52147f53-ffd4-4d8e-aa6a-765ccbaede28. Type feature. App 1.0.1 (15) \u00b7 iOS 26.5.2. Table public.feedback now 29 rows (was 26).",
+        "notes": "Sunday draft-save-screen merge 1e946efb72 is a way out of a draft, not append-while-recording."
+      },
+      {
+        "id": "timelapse-constant-speed",
+        "title": "Constant timelapse speed (and optional speed setting)",
+        "support": "5",
+        "status": "partial-shipped",
+        "novelty": "update",
+        "summary": "andreichetty3 Aug 17 + zerabrukmikre5 Aug 18. Constant-speed playback is in TestFlight 15. Speed setting / don\u2019t-force-10s still open.",
+        "detail": "andreichetty3 in-app Aug 17 6:24am PT (build 12): timelapse starts sped-up then gets much faster; don\u2019t force each video to 10 seconds; add a setting.\n\nzerabrukmikre5 in-app Aug 18 7:05pm PT (build 15): \u201cLet me control the speed of the timelaps bru\u201d. On 15, still wants a speed setting.\n\nConstant-speed playback commit 4b260ae is in the archived TestFlight 15 binary (archive HEAD 3c71dbc83a, archived 2026-08-18 12:30am ET, uploaded 12:31am ET). Speed setting / don\u2019t-force-10s still open.",
+        "sources": [
+          "Supabase public.feedback (Aug 17)",
+          "Supabase public.feedback (Aug 18)"
+        ],
+        "plainTitle": "Constant timelapse speed (and optional speed setting)",
+        "plainSummary": "andreichetty3 + zerabrukmikre5 in-app. Discord Aug 16: TST, chlo, KrabbyKai still hate that playback speeds up at the end. Constant-speed is in TestFlight 15 \u2014 they may have been on an older build, or 15 still ramps.",
+        "peopleCountLabel": "5 people",
+        "actionStatus": "Partly shipped",
+        "actionNote": "Constant speed in TF 15 (4b260ae). Discord Aug 16 complaints after 15 shipped \u2014 worth a check.",
+        "peopleCount": 5,
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 18 7:05pm PT \u00b7 zerabrukmikre5 \u00b7 1.0.1 (15)"
+          },
+          {
+            "label": "In-app feedback \u00b7 Aug 17 6:24am PT \u00b7 andreichetty3 \u00b7 1.0.1 (12)"
+          },
+          {
+            "label": "Discord #feature-requests thread Suggestion \u00b7 TST / chlo / KrabbyKai \u00b7 Aug 16 4:00pm ET"
+          }
+        ],
+        "technicalNotes": "ids 9ae5a7ae-7dc3-4132-8b74-bd4cdbf1256b (zerabrukmikre5, 15) and 7ac3dcc5-d67e-45dd-b3b2-243a8dfded0a (andreichetty3, 12). Commit 4b260ae39e is in TF 15 archive HEAD 3c71dbc83a.",
+        "notes": "Support 2; constant-speed now in TF 15; setting still backlog"
+      },
+      {
+        "id": "lock-screen-timer",
+        "title": "Timer visible when the screen is off",
+        "support": "1",
+        "status": "open",
+        "novelty": "new",
+        "summary": "faithlliang in-app Aug 19. Likes that the screen goes off to save battery; wants the timer still visible so they don\u2019t have to keep pressing. Not the shipped camera-off stopwatch.",
+        "detail": "In-app feature Aug 19 1:42am PT from faithlliang (build 15): likes that the screen goes off to save battery; wants timer still visible on screen so they don\u2019t have to keep pressing.\n\nThis is NOT the shipped camera-off stopwatch mode (photoTimer / no-timelapse). They want a visible timer while the display is off (lock screen / always-on).",
+        "sources": [
+          "Supabase public.feedback (Aug 19)"
+        ],
+        "plainTitle": "Timer visible when the screen is off",
+        "plainSummary": "faithlliang likes that the screen turns off to save battery, but wants the timer still visible so they don\u2019t have to keep waking the phone. Not the camera-off stopwatch that already shipped.",
+        "peopleCountLabel": "1 person",
+        "actionStatus": "Idea backlog",
+        "actionNote": "Not the shipped camera-off stopwatch. They want a visible timer on lock screen / always-on while the display is off.",
+        "peopleCount": 1,
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 19 1:42am PT \u00b7 faithlliang \u00b7 1.0.1 (15)"
+          }
+        ],
+        "technicalNotes": "id 33b50417-1da7-4ca3-969b-95048f2b7ef2. Type feature. App 1.0.1 (15) \u00b7 iOS 26.1. Do not mark as the shipped camera-off stopwatch (filtered camera-off-stopwatch).",
+        "notes": "New Aug 19; idea backlog; not the shipped camera-off stopwatch"
+      },
+      {
+        "id": "in-app-apple-music",
+        "title": "In-app Apple Music",
+        "support": "1",
+        "status": "open",
+        "novelty": "new",
+        "summary": "Therese Fullenkamp emailed Aug 18. Wants in-app Apple Music (Focus Traveler style) because leaving Latent to start music 5-min-timeouts the session. Eddie already replied they will not implement it.",
+        "detail": "Gmail thread 1a017a456600abf9. Therese Fullenkamp (thereseapf27@yahoo.com) Aug 18 6:45pm PT: wants in-app Apple Music library/playlists like Focus Traveler. Leaving Latent to start music sidetracks her and the 5 minutes times out. Uses Siri as a workaround.\n\nEddie already replied Aug 18 8:30pm PT they will NOT implement it (play music before starting / stay vigilant on pause).",
+        "sources": [
+          "Gmail thereseapf27@yahoo.com"
+        ],
+        "plainTitle": "In-app Apple Music so leaving the app doesn\u2019t time out a sitting",
+        "plainSummary": "Therese emailed asking for in-app Apple Music (Focus Traveler style) so leaving Latent to start music doesn\u2019t 5-minute-timeout a sitting. You already told her no \u2014 play music before starting.",
+        "peopleCountLabel": "1 person",
+        "actionStatus": "Idea backlog",
+        "actionNote": "You already told Therese no (play music before starting).",
+        "peopleCount": 1,
+        "sourceLinks": [
+          {
+            "label": "Email from thereseapf27@yahoo.com \u00b7 Aug 18 6:45pm PT \u00b7 thread 1a017a456600abf9"
+          },
+          {
+            "label": "Eddie's reply \u00b7 Aug 18 8:30pm PT \u00b7 will not implement"
+          }
+        ],
+        "technicalNotes": "Thread 1a017a456600abf9. Inbound 1a017b2053cdd445 2026-08-19T01:45:30Z. Eddie decline 1a01811b56d76ee1 2026-08-19T03:30:08Z. No attachments.",
+        "notes": "New Aug 19; Eddie already declined; keep in Things people want"
+      },
+      {
+        "id": "friend-challenges",
+        "title": "Friend challenges",
+        "support": "~22",
+        "status": "open",
+        "summary": "Strong Discord vote cluster (unchanged).",
+        "detail": "Largest recurring feature cluster in #feature-requests. Users want head-to-head / group challenges tied to study sessions and streaks \u2014 not just passive friend lists.\n\nNo new Aug 12 messages that change the ranking; still the top support signal (~22).",
+        "sources": [
+          "Discord #feature-requests"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Friend challenges",
+        "plainSummary": "People want head-to-head or group study challenges tied to sessions and streaks \u2014 not just a friend list.",
+        "peopleCountLabel": "About 22 people",
+        "actionStatus": "Idea backlog",
+        "technicalNotes": "Largest recurring feature cluster in #feature-requests. Users want head-to-head / group challenges tied to study sessions and streaks \u2014 not just passive friend lists.\n\nNo new Aug 12 messages that change the ranking; still the top support signal (~22).",
+        "peopleCount": 22,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 feature requests"
+          }
+        ]
+      },
+      {
+        "id": "daily-goals-streaks",
+        "title": "Daily goals / richer streaks",
+        "support": "~16",
+        "status": "open",
+        "summary": "Beyond basic streak counter.",
+        "detail": "Users want configurable daily minute goals, richer streak celebrations, and clearer progress \u2014 not only a fire counter.\n\nSupport remains ~16; no new Aug 12 cluster.",
+        "sources": [
+          "Discord #feature-requests"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Daily goals and richer streaks",
+        "plainSummary": "Beyond a simple fire counter \u2014 configurable daily minute goals and clearer progress.",
+        "peopleCountLabel": "About 16 people",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 16,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 feature requests"
+          }
+        ],
+        "technicalNotes": "Users want configurable daily minute goals, richer streak celebrations, and clearer progress \u2014 not only a fire counter.\n\nSupport remains ~16; no new Aug 12 cluster."
+      },
+      {
+        "id": "contacts-import",
+        "title": "Contacts import",
+        "support": "~16",
+        "status": "open",
+        "summary": "Find friends faster.",
+        "detail": "Contact-book / phone-number import so people can find friends already on Latent without hunting usernames.",
+        "sources": [
+          "Discord #feature-requests"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Import contacts to find friends",
+        "plainSummary": "Let people find friends already on Latent from their phone contacts instead of hunting usernames.",
+        "peopleCountLabel": "About 16 people",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 16,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 feature requests"
+          }
+        ],
+        "technicalNotes": "Contact-book / phone-number import so people can find friends already on Latent without hunting usernames."
+      },
+      {
+        "id": "group-study-sessions",
+        "title": "Groups / forums + group study sessions",
+        "support": "~11+ survey, +HelpMe communities",
+        "status": "open",
+        "summary": "No new replies since Aug 8 (serenity + KrabbyKai). Still open cluster.",
+        "detail": "serenity group-study / collab sessions ask still open. No new Aug 12 replies that change ranking.",
+        "sources": [
+          "Discord #feature-requests (serenity)",
+          "Discord (KrabbyKai reply)",
+          "prior: simon forums cluster"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Group study sessions (and groups/forums)",
+        "plainSummary": "Survey/in-app groups still ~11. HelpMe Discord Aug 21: create and join communities with similar interests (feature-request fryws-3wjx8, 8 upvotes, also #partners).",
+        "peopleCountLabel": "About 11 people",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 12,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 serenity (group study ask)"
+          },
+          {
+            "label": "Discord \u00b7 KrabbyKai reply"
+          },
+          {
+            "label": "Discord #feature-requests \u00b7 HelpMe \u00b7 Aug 21 11:41am ET \u00b7 ID fryws-3wjx8 \u00b7 \u27058 / \u274c0"
+          }
+        ],
+        "technicalNotes": "serenity group-study / collab sessions ask still open. No new Aug 12 replies that change ranking.",
+        "novelty": "update"
+      },
+      {
+        "id": "android-play-store",
+        "title": "Android / Play Store",
+        "support": "~35 Discord + 8 survey",
+        "status": "open",
+        "novelty": "update",
+        "summary": "VerizonX Android thread still the latest named ask. No new Discord since Aug 12 scrape.",
+        "detail": "## What's new (Aug 11 afternoon PT / after Aug 11 dig)\nDiscord **#feature-requests**: **VerizonX** started a thread (**2026-08-11 23:40 UTC** / Tue Aug 11 ~4:40pm PT): **\"When's android version coming?\"**\n\n## Prior overnight (already in Aug 11 dig)\nTejass #questions thread + infinitechances #general-chat.\n\n## Call\nNamed askers now include VerizonX on top of Tejass, infinitechances, Shantanu, dull_B2, Wakanda Panda, Astriddd, \u03b9\u03b7\u03b1\u03b7\u03b7\u03b1. Keep as top platform theme \u2014 idea backlog only.",
+        "sources": [
+          "Discord #feature-requests (VerizonX Aug 11)",
+          "Discord #questions (Tejass)",
+          "Discord #general-chat (infinitechances)",
+          "prior askers"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "evidence": [
+          "VerizonX Aug 11 23:40 UTC #feature-requests: When's android version coming?",
+          "Tejass + infinitechances from Aug 10\u201311 overnight"
+        ],
+        "plainTitle": "Android / Google Play version",
+        "plainSummary": "Still the loudest Discord topic Aug 12\u201323 (~35 named asks). Survey still has 8. Android Advocate asked to say iOS-only before signup. Park as an iOS-app bet. Ignore joke delay-until-2040 / fakevotingwebsite.org.",
+        "peopleCountLabel": "About 35 people on Discord",
+        "actionStatus": "Parked \u2014 iOS wedge",
+        "peopleCount": 35,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 feature requests \u00b7 VerizonX Android thread (Aug 11 afternoon PT)"
+          },
+          {
+            "label": "Discord \u00b7 questions \u00b7 Tejass"
+          },
+          {
+            "label": "Discord \u00b7 general chat \u00b7 infinitechances"
+          },
+          {
+            "label": "Discord #general-chat + #questions \u00b7 Aug 12\u201323 \u00b7 ~35 named people"
+          },
+          {
+            "label": "Discord #feature-requests thread Android Notification \u00b7 Android Advocate \u00b7 Aug 12 6:13pm ET \u00b7 say iOS-only before signup"
+          }
+        ],
+        "technicalNotes": "## What's new (Aug 11 afternoon PT / after Aug 11 dig)\nDiscord **#feature-requests**: **VerizonX** started a thread (**2026-08-11 23:40 UTC** / Tue Aug 11 ~4:40pm PT): **\"When's android version coming?\"**\n\n## Prior overnight (already in Aug 11 dig)\nTejass #questions thread + infinitechances #general-chat.\n\n## Call\nNamed askers now include VerizonX on top of Tejass, infinitechances, Shantanu, dull_B2, Wakanda Panda, Astriddd, \u03b9\u03b7\u03b1\u03b7\u03b7\u03b1. Keep as top platform theme \u2014 idea backlog only."
+      },
+      {
+        "id": "qr-add-friends",
+        "title": "QR code to add friends",
+        "support": "1",
+        "status": "open",
+        "novelty": "unchanged",
+        "summary": "ivythecat QR-add-friends still open; no new Discord since Aug 12 scrape.",
+        "detail": "Discord **#feature-requests** thread from **ivythecat** (Aug 11): personal QR to add friends. Asker said not high-priority.\n\nAug 14: Discord login wall again \u2014 no new messages confirmed. Keep as idea backlog.",
+        "sources": [
+          "Discord #feature-requests (ivythecat Aug 11)"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "evidence": [
+          "ivythecat Aug 11 16:39 UTC thread: Include QR code method\u2026",
+          "Asker: not a high-priority function"
+        ],
+        "plainTitle": "QR code to add friends in person",
+        "plainSummary": "ivythecat still the named QR ask (also asked timezone of posted timelapse Aug 16).",
+        "peopleCountLabel": "1 person",
+        "actionStatus": "Idea backlog",
+        "peopleCount": 1,
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 feature requests \u00b7 ivythecat QR friends (Aug 11)"
+          }
+        ],
+        "technicalNotes": "Discord **#feature-requests** thread from **ivythecat** (Aug 11): personal QR to add friends. Asker said not high-priority.\n\nAug 14: Discord login wall again \u2014 no new messages confirmed. Keep as idea backlog."
+      },
+      {
+        "id": "havent-studied-reminder",
+        "title": "Daily \u201chaven\u2019t studied\u201d reminder",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "marianne thread still open.",
+        "detail": "Promised-style nudge when the user hasn\u2019t logged a session that day. marianne thread still open; not scheduled yet.",
+        "sources": [
+          "Discord (marianne)"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Reminder when you haven't studied today",
+        "plainSummary": "A gentle nudge if someone hasn't logged a session that day.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 marianne"
+          }
+        ],
+        "technicalNotes": "Promised-style nudge when the user hasn\u2019t logged a session that day. marianne thread still open; not scheduled yet."
+      },
+      {
+        "id": "screen-time-app-lock",
+        "title": "Real Screen Time / app lock",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Supabase feature Aug 7 + group-study lock motif; hard iOS constraints.",
+        "detail": "Users want genuine device-level lock / Screen Time integration during sessions. Hard iOS FamilyControls / Screen Time API constraints. Overlaps with group-study lock ask.",
+        "sources": [
+          "Supabase public.feedback (Aug 7)",
+          "Discord group-study motif"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Real phone lock during sessions",
+        "plainSummary": "People want true Screen Time\u2013style locking while studying. Hard on iOS; overlaps with group-study lock.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 7"
+          }
+        ],
+        "technicalNotes": "Users want genuine device-level lock / Screen Time integration during sessions. Hard iOS FamilyControls / Screen Time API constraints. Overlaps with group-study lock ask."
+      },
+      {
+        "id": "default-tab-today",
+        "title": "Default tab \u2192 Today",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Code still lands on Record after onboarding (selectedTab = .record).",
+        "detail": "After onboarding, app still sets `selectedTab = .record`. Users want to land on **Today**.",
+        "sources": [
+          "Codebase (App tab selection)",
+          "prior Discord asks"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Open on Today after onboarding",
+        "plainSummary": "After signup the app still lands on Record; people want Today.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Prior Discord asks + code check"
+          }
+        ],
+        "technicalNotes": "After onboarding, app still sets `selectedTab = .record`. Users want to land on **Today**."
+      },
+      {
+        "id": "profile-as-friends-see",
+        "title": "Profile as friends see it",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Preview / parity ask.",
+        "detail": "Users want a preview of how their profile looks to friends (parity / preview mode).",
+        "sources": [
+          "Discord"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Preview your profile as friends see it",
+        "plainSummary": "A preview mode so you can check how your profile looks to friends.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Discord"
+          }
+        ],
+        "technicalNotes": "Users want a preview of how their profile looks to friends (parity / preview mode)."
+      },
+      {
+        "id": "in-app-dms",
+        "title": "In-app DMs",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Zachary; halo \u201cyet \ud83d\udc40\u201d.",
+        "detail": "Messaging between friends inside Latent. Zachary ask; halo \u201cyet \ud83d\udc40\u201d.",
+        "sources": [
+          "Discord"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Messages inside Latent",
+        "plainSummary": "Chat with friends without leaving the app.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Discord \u00b7 Zachary"
+          }
+        ],
+        "technicalNotes": "Messaging between friends inside Latent. Zachary ask; halo \u201cyet \ud83d\udc40\u201d."
+      },
+      {
+        "id": "gesture-pause",
+        "title": "Gesture pause",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Pause exists; gesture trigger does not.",
+        "detail": "Session pause is implemented; a gesture trigger to pause is not.",
+        "sources": [
+          "Discord",
+          "codebase"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Pause a session with a gesture",
+        "plainSummary": "Pause already exists; people want a quick gesture to trigger it.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Discord"
+          }
+        ],
+        "technicalNotes": "Session pause is implemented; a gesture trigger to pause is not."
+      },
+      {
+        "id": "tag-reorder-sync",
+        "title": "Tag reorder + cross-device sync",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Lane 6 feat/tag-sync-and-order \u2014 commits in worktree, not on main.",
+        "detail": "Basic tags already ship. Reorder + cross-device sync is Lane 6 territory (`feat/tag-sync-and-order`). Commits landed in worktree, not merged to main.",
+        "sources": [
+          "Lane 6 worktree",
+          "Discord"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Reorder tags and sync across devices",
+        "plainSummary": "Basic tags already ship. Reordering and keeping them in sync across phones is still in progress.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "Part of ongoing Tags work"
+          }
+        ],
+        "technicalNotes": "Basic tags already ship. Reorder + cross-device sync is Lane 6 territory (`feat/tag-sync-and-order`). Commits landed in worktree, not merged to main."
+      },
+      {
+        "id": "offline-mode",
+        "title": "Offline mode",
+        "support": "\u2014",
+        "status": "open",
+        "summary": "Supabase feature ask Aug 5; durability paths exist but full offline not shipped.",
+        "detail": "Full offline mode not shipped. Draft durability / segment rollover paths exist on main, but users still ask for true offline recording + sync.",
+        "sources": [
+          "Supabase public.feedback (Aug 5)"
+        ],
+        "notes": "Unchanged vs Aug 18; Discord still login-walled (day 11), no new scrape",
+        "plainTitle": "Full offline mode",
+        "plainSummary": "Record and keep working without internet, then sync later. Partial durability exists; full offline isn't shipped.",
+        "peopleCountLabel": "A few people",
+        "actionStatus": "Idea backlog",
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 5"
+          }
+        ],
+        "technicalNotes": "Full offline mode not shipped. Draft durability / segment rollover paths exist on main, but users still ask for true offline recording + sync."
+      }
+    ],
+    "bugs": [
+      {
+        "id": "keyboard-search-hang-puneet",
+        "title": "Focusing a text box hangs Latent, then typing breaks other apps",
+        "status": "open",
+        "novelty": "update",
+        "summary": "PR #52 merged Sunday 5:57pm ET (TextInputWarmup). Not in testers\u2019 15. HelpMe on Discord Aug 21 described the same \u201ctyping crashed every app, iPhone 14 Pro\u201d shape as Puneet. 0 Sentry 1C events this window. Do not claim 1C is fixed.",
+        "detail": "In-app bug 2026-08-21 18:47 UTC (2:47pm ET) Puneet / puneet, Hide My Email bbfhzjdmfp@privaterelay.appleid.com, 1.0.1 (15), iOS 26.6, Waterloo: had to reset iOS because Latent crashed, then other apps crashed whenever they tried to type. Search to find an app crashed the phone.\n\nSentry APPLE-IOS-1C five fatal hangs same user same afternoon 18:03\u201318:20 UTC, dist=15, iPhone15,2 (14 Pro). Stack: tap \u2192 UITextView becomeFirstResponder \u2192 UIKeyboardSceneDelegate reload input views \u2192 _UIKeyboardStateManager sync pasteboard (_getTemporaryLocalGeneralPasteboard / canInsertAdaptiveImageGlyph) wait on XPC. Culprit UIApplication.sendEventOverride. Free RAM ~44MB on last event.\n\nAug 20 on main: f05a01e89d comment-keyboard probe \u2014 not in testers\u2019 15. Different surface (composer covered) vs this pasteboard-sync on focus. Do not open a speculative pasteboard PR from this dig. Next TestFlight first; if it still happens, then a keyboard-focus PR.",
+        "sources": [
+          "Supabase public.feedback (Aug 21 Puneet)",
+          "Sentry APPLE-IOS-1C"
+        ],
+        "ownership": "New \u00b7 related iOS 26 keyboard work already on main, not in 15",
+        "plainTitle": "Typing after a freeze crashed other apps (Puneet had to reset the phone)",
+        "plainSummary": "You merged the warmup Sunday evening. Testers on 15 don\u2019t have it. HelpMe on Discord (iPhone 14 Pro, Aug 21) reported the same \u201cafter it froze, typing killed every app\u201d as Puneet. No new 1C crash overnight. Do not call this fixed until it is in testers\u2019 hands and 1C stays quiet.",
+        "actionStatus": "On main \u00b7 next TestFlight",
+        "actionNote": "PR #52 merged 897a86374e. HelpMe Discord thread unresolved (chlo asked for a screenshot). 1C lifetime still 5/1.",
+        "technicalNotes": "PR #52 merge 897a86374e 2026-08-23T21:57:05Z. APPLE-IOS-1C last event still 880c3010b91b43cf 2026-08-21T18:20:29Z. Window 0. HelpMe Discord not confirmed as the same person as Puneet.",
+        "peopleCount": 3,
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 21 2:47pm ET \u00b7 puneet / Puneet \u00b7 1.0.1 (15) \u00b7 Hide My Email"
+          },
+          {
+            "label": "Crash reports \u00b7 APPLE-IOS-1C \u00d75 fatal keyboard hangs (build 15)",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-1C"
+          },
+          {
+            "label": "Discord #questions \u00b7 HelpMe \u00b7 Aug 21 11:35am ET \u00b7 iPhone 14 Pro"
+          }
+        ],
+        "notes": "Not claimed fixed by the twelve-issue merge.",
+        "resolved": false
+      },
+      {
+        "id": "apple-ios-1d-textview",
+        "title": "Opening a text box hangs Latent for ~6 seconds",
+        "status": "open",
+        "novelty": "update",
+        "summary": "Same #52 warmup. 0 APPLE-IOS-1D events this window. Last still pepsi Saturday 4:57pm ET on 15.",
+        "detail": "APPLE-IOS-1D event 62f0b470bc664958a7a942eb6c32cb5b 2026-08-22T20:57:55Z, dist=15, iPhone14,5, iOS 26.6, low power 15% battery, username pepsi, arteagajulian323@gmail.com. Stack: UIKitTextViewAdaptor.makeUIView \u2192 UITextView init \u2192 protocol_conformsToProtocol_nolock. Related to but not the same as Friday\u2019s 1C pasteboard-on-focus (Puneet). Aug 20 on main: f05a01e89d comment-keyboard probe \u2014 not in testers\u2019 15. Do not open a speculative text-box PR from this dig.",
+        "sources": [
+          "Sentry APPLE-IOS-1D"
+        ],
+        "ownership": "New \u00b7 related iOS 26 keyboard work already on main, not in 15",
+        "plainTitle": "App froze while a text box was opening (Julian)",
+        "plainSummary": "Julian\u2019s text-box freeze still has no new events. The warmup that should cover it is on main, not in testers\u2019 15.",
+        "actionStatus": "On main \u00b7 next TestFlight",
+        "actionNote": "APPLE-IOS-1D lifetime 1/1. Window 0.",
+        "technicalNotes": "APPLE-IOS-1D https://weaive.sentry.io/issues/APPLE-IOS-1D event 62f0b470bc664958a7a942eb6c32cb5b. pepsi dist=15 iOS 26.6 iPhone14,5 LPM.",
+        "peopleCount": 1,
+        "sourceLinks": [
+          {
+            "label": "Crash reports \u00b7 APPLE-IOS-1D pepsi/Julian UITextView hang (build 15)",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-1D"
+          }
+        ],
+        "notes": "Not claimed fixed by the twelve-issue merge.",
+        "resolved": false
+      },
+      {
+        "id": "blank-missing-clips",
+        "title": "Blank / missing friend clips",
+        "status": "merged-watch",
+        "novelty": "update",
+        "summary": "Photo+timer att=0: Sat 3/3, Sun 10/2, Mon partial 3/2. 8 of Sunday\u2019s 10 are one person on build 16 at 5:34pm ET \u2014 before #53 merged 6:54pm ET. session_save_blocked reason=media matches exactly. clip_upload_failed Sunday 5 events / 3 people (mostly build 10 timeouts/connection lost). Monday 0.",
+        "detail": "## Status\nLane 1 PR **#29 merged**. Keep watching. Photo+timer camera-off pattern. No new PR.\n\n## Metrics \u2014 session_save_attempted attachment_count=0\n| Day (PT) | Sessions | With media | Missing % |\n|---|---:|---:|---:|\n| Aug 19 (partial ~6:09am) | 36 | 34 | **5.6%** (all Photo+timer, 1 person 8445343b, two events 1:11am) |\n| Aug 18 final | 127 | 126 | **0.8%** (all Photo+timer, 1 person 7c79ae29, 5:01pm, build 15) |\n| Aug 17 final | 131 | 126 | **3.8%** (all Photo+timer, 1 person 51509273, five events 1:06am) |\n| Aug 16 | 103 | 101 | 1.9% |\n| Aug 15 | 97 | 97 | 0.0% |\n| Aug 14 | 113 | 92 | 18.6% |\n| Aug 13 | 100 | 98 | 2.0% |\n\nTimelapse 100% has_media Aug 13\u201319 (Aug 19 34/34).\n\nclip_upload_failed Aug 17\u201318: 0. Aug 19 = 2 (cancelled NSURL -999 2:39am person f17c1fe9 build 15; connection-lost NSURL -1005 6:08am person 4255eb7d build 10). Neither matches the Aug 19 missing-clip person.\n\nsession_save_failed Aug 17: 0; Aug 18 final: 2 (duplicate key 7:34am; NSURL -1009 offline 9:10pm); Aug 19: 0.\nsession_save_blocked Aug 18: 1 media + 4 activity; Aug 19: 2 media (same person as missing-clip).",
+        "sources": [
+          "Supabase public.feedback (Aug 11 blank clip x2)",
+          "PostHog clip_upload_failed",
+          "Supabase media join",
+          "Lane 1 PR #29"
+        ],
+        "ownership": "Lane 1 \u00b7 PR #29 merged \u00b7 keep watching",
+        "evidence": [
+          "No new Supabase feedback since Aug 11 18:30 UTC jumpropes report",
+          "Missing % Aug 13 finalized 2.0%; Aug 12 6.4%; Aug 11 revised 12.6%; Aug 14 partial 11.1%",
+          "clip_upload_failed Aug 13 1/1 connection-lost; Aug 14 3/2 (2 connection-lost + 1 create_media P0001 auth)",
+          "No PUT 403 since Aug 12; MB/s ~1.56; MB/clip interim alert gone from list"
+        ],
+        "plainTitle": "Friends' study clips sometimes show up blank",
+        "plainSummary": "Sunday looked loud (10 Photo+timer saves with no photo) but 8 were one person on 16 tapping in a 4-second burst at 5:34pm, before the \u201cAdd a photo\u201d button landed at 6:54pm. Monday morning: 3 more on TestFlight 15. Five failed uploads Sunday, mostly old build 10.",
+        "actionStatus": "Watching \u00b7 copy fix on main, not in 15",
+        "actionNote": "PR #53 merged 6baf60743c. chimmyaa R2 PUT 502 Sunday 11:03am ET on 15 (APPLE-IOS-F).",
+        "technicalNotes": "Lane E 45ee75f484 Take the edge functions off a third-party CDN. c30a12693f playback 3 retries + Video missing pill + prefetch cap 8. bea0ccc086 ensureWorkType lower(btrim). Photo+timer att=0: Aug 22 3 people, Aug 23 morning 0.",
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 11 afternoon \u00b7 jumpropes blank + public/private dead \u00b7 build 1.0.1 (12)"
+          },
+          {
+            "label": "In-app feedback \u00b7 Aug 11 morning \u00b7 blank 40s clip"
+          },
+          {
+            "label": "Product analytics \u00b7 Aug 14 uploads: dropped connections + one create_media auth retry"
+          },
+          {
+            "label": "Pull request #29 (already merged)"
+          }
+        ],
+        "notes": "502/outbox/prefetch resolved afternoon Aug 23; photo-timer zeros still watching.",
+        "resolved": false,
+        "peopleCount": 5
+      },
+      {
+        "id": "apple-ios-y-camera",
+        "title": "APPLE-IOS-Y \u2014 AVCaptureSession config crash + related camera/draft hangs",
+        "status": "resolved",
+        "novelty": "resolved-on-main",
+        "summary": "Fix on main in build 16 (4298fa766a). You closed PR #51 Sunday 7:05pm ET. chimmyaa still hit the attach hang on TestFlight 15 Sunday 10:48pm ET (APPLE-IOS-V). They need 16. chloeho Record-tap hang Sunday 9:07pm is APPLE-IOS-1E on build 10 (old binary, hot phone, 10% battery) \u2014 not the 15/16 camera bug.",
+        "detail": "NOW ON BUILD 15.\n\nAPPLE-IOS-V event 3cb3023c2f514f658c81cd97cb7ce520 2026-08-21T02:42:26Z pepsi / Julian arteagajulian323@gmail.com, dist=15, iPhone14,5, iOS 26.6, low power. CameraPreviewView.makeUIView \u2192 setSession: \u2192 commitConfiguration wait 7.3\u20138.1s.\n\nAPPLE-IOS-19 event 14886a6a142c4fc3b6dad0531155a13d 2026-08-20T02:13:35Z sophia sophiarweber@icloud.com, dist=15, iPhone15,4, iOS 26.5.2. dismantleViewProvider \u2192 setSession: wait 8.5\u20139.3s fully blocked.\n\nPR #47 still CLOSED unmerged. CloudAgent could not launch (reconnect GitHub in Cursor). Opened https://github.com/eddie-the-lou/latent/pull/51 via PAT: attachQueue for bind + teardown, isDismantled guard. Commit a7253cb469 on branch fix/camera-preview-hang-15.\n\nAPPLE-IOS-F 502s continue on 15 (nicholejin28 Aug 21, charlize_sow, shrexmarksthespot, charanistired, comet/ooannlin, andreichetty3). Infra, not this PR.\n\nAPPLE-IOS-7 missha build 15 Aug 20 ~5s hang \u2014 not camera-preview.",
+        "sources": [
+          "Sentry APPLE-IOS-14",
+          "Sentry APPLE-IOS-Y",
+          "Sentry APPLE-IOS-3 / 11 / V"
+        ],
+        "ownership": "On main in build 16. PR #51 superseded, do not merge",
+        "evidence": [
+          "APPLE-IOS-V lastSeen 2026-08-14T02:08:58Z CameraPreviewView.makeUIView krabbykai 4/3",
+          "APPLE-IOS-17 still 1/1 from Aug 13 DraftThumb/coverClipFilename",
+          "APPLE-IOS-16 still 1/1 PostHog feature flags",
+          "APPLE-IOS-15 simulator \u2014 filtered",
+          "APPLE-IOS-14 still 1/1 from Aug 12"
+        ],
+        "notes": "Resolved on main afternoon Aug 23. Four named 15 repros: Julian, Sophia, ivythecat, Aryan.",
+        "plainTitle": "App can freeze when opening or leaving the camera",
+        "plainSummary": "Fixed in build 16. chimmyaa hit the old freeze Sunday night still on TestFlight 15. chloeho\u2019s ~18s Record freeze is on build 10 \u2014 ask them to update; do not open a new camera PR.",
+        "actionStatus": "Fixed on main \u00b7 next TestFlight",
+        "actionNote": "APPLE-IOS-V window 1 (chimmyaa 15). APPLE-IOS-19 window 0. APPLE-IOS-1E is dist 10, skip.",
+        "technicalNotes": "4298fa766a Give the capture session one owner and one queue. CameraPreviewView holds the controller; every bind/point/unbind on sessionQueue. Deliberately not PR #47/#51 private attach queue. APPLE-IOS-V Julian; APPLE-IOS-19 Sophia + Aryan. PR #51 a7253cb469 still OPEN. Close without merging.",
+        "sourceLinks": [
+          {
+            "label": "GitHub \u00b7 pull request #51 \u00b7 still waiting",
+            "url": "https://github.com/eddie-the-lou/latent/pull/51"
+          },
+          {
+            "label": "Crash reports \u00b7 APPLE-IOS-19 aryangoyal1811 teardown (build 15) Saturday 1:48pm ET",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-19"
+          },
+          {
+            "label": "Crash reports \u00b7 APPLE-IOS-V ivythecat camera hang (build 15)",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-V"
+          },
+          {
+            "label": "Crash reports \u00b7 APPLE-IOS-V pepsi / Julian (build 15)",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-V"
+          }
+        ],
+        "peopleCount": 4,
+        "resolved": true
+      },
+      {
+        "id": "hotspot-throttle",
+        "title": "Hotspot speeds throttle / unusable while Latent is in use",
+        "status": "resolved",
+        "novelty": "resolved-on-main",
+        "summary": "Fixed on main this afternoon: c30a12693f. The hotspot kill was unbounded clip downloads on URLSession.shared, not upload or thermal. Testers still on 15.",
+        "detail": "Maxwell Hellwig maxwell18597@gmail.com thread 1a0179711e92179f, now 8 messages.\n\nWithout Latent: laptop on phone hotspot is normal. The second Latent is used on the phone, hotspot drops orders of magnitude; Google search >30s vs <1s. July 29 did not throttle (thinks pre v11/12). Devices: iPhone 17 256GB T-Mobile; Lenovo ThinkPad E14 Gen 5.\n\nEddie asked him to try a stock iOS Camera timelapse. Maxwell: speeds stayed the same as Latent-not-open. Four PNG speed tests. Maxwell asked IP/location in the screenshots not be forwarded \u2014 do not attach or publish them.\n\nEddie 5:42pm ET: will get this fixed; will not send screenshots elsewhere.\n\nNo PR today: CloudAgent GitHub reconnect failed, and the cause is radio/path work Latent does that stock Camera does not \u2014 not a one-file footgun.",
+        "sources": [
+          "Supabase public.feedback (Aug 10 22:38 UTC)"
+        ],
+        "ownership": "On main in build 16",
+        "evidence": [
+          "Supabase feedback id 076226e4-c0cd-4811-a578-0808efa785f7 Aug 10 22:38 UTC build 1.0.1 (12)",
+          "Eddie follow-up thread 1a0179711e92179f Aug 18 6:16pm PT; no reply"
+        ],
+        "plainTitle": "Personal Hotspot becomes unusable while Latent is open",
+        "plainSummary": "Fixed on main this afternoon (build 16). Opening Latent was greedily downloading every missing timelapse (~26 MB each) on the same radio as the hotspot. Downloads are now throttled, prefetch is the newest eight, and a 502 retries instead of looking like a blank clip. Testers still have 15 until you ship 16. Do not forward Maxwell speed-test screenshots \u2014 they have his IP.",
+        "actionStatus": "Fixed on main \u00b7 next TestFlight",
+        "actionNote": "Commit c30a12693f. You promised Maxwell a fix. Next TestFlight is how he gets it. Do not republish his speed-test PNGs.",
+        "technicalNotes": "c30a12693f Stop the app saturating the network. Two tuned URLSessions; prefetch newest 8; playback 3 retries on transient 502; Video missing pill. Handoff: hotspot was unbounded downloads, not upload/thermal. Thread 1a0179711e92179f. Do not republish PNGs.",
+        "sourceLinks": [
+          {
+            "label": "Email from maxwell18597@gmail.com \u00b7 Re: Latent! \u00b7 Aug 19 5:17pm ET \u00b7 thread 1a0179711e92179f"
+          },
+          {
+            "label": "Eddie\u2019s reply \u00b7 Aug 19 5:42pm ET \u00b7 will get this fixed"
+          }
+        ],
+        "notes": "Resolved on main afternoon Aug 23. Maxwell still the named reporter.",
+        "resolved": true
+      },
+      {
+        "id": "battery-regression",
+        "title": "Battery regression during sessions",
+        "status": "resolved",
+        "summary": "Fixed on main this afternoon: 52856f8f8f. Dim now freezes an invisible preview and drops capture to the sampler interval. First on-device measurement 5.2 points/hour vs ~10/hour on build 15. Testers still on 15.",
+        "detail": "Battery drain during long recording sessions. Owned by Lane 3 on branch fix/record-ui-and-battery. No new user reports overnight.\n\nAPPLE-IOS-A +1 anonymous Wolfsburg watchdog/RAM kill Aug 18 2:43pm PT, build 12, iPhone14,5, foreground, no stacktrace. Lifetime 93/13. Still Lane 3. No new PR.",
+        "sources": [
+          "Gmail (Eddie\u2192Sydney)",
+          "Lane 3 branch",
+          "Sentry APPLE-IOS-A"
+        ],
+        "ownership": "On main in build 16",
+        "evidence": [
+          "Branch exists",
+          "Eddie\u2192Sydney battery follow-up email"
+        ],
+        "notes": "Resolved on main afternoon Aug 23. Needs TF 16 field data.",
+        "plainTitle": "Battery drains too fast during study sessions",
+        "plainSummary": "Fixed on main this afternoon (build 16). A 3.5-hour sitting was costing ~80% because the camera kept running 1080p/60 while dim only dimmed the backlight. Dim now freezes the preview once the picture is actually invisible, and capture follows the timelapse sampler. First phone measurement: 5.2 points/hour vs about 10 on 15. Testers still have 15 until you ship 16. Field data on 16 is how we will know it stuck.",
+        "actionStatus": "Fixed on main \u00b7 next TestFlight",
+        "actionNote": "Commit 52856f8f8f. Sydney 80% in 3.5h is the named report. Measurement refuses a reading if the phone charged, level is unknown, or the sitting is too short.",
+        "technicalNotes": "52856f8f8f Stop paying for a picture nobody can see. Throttle follows sampler interval, re-decides on coarsen. Freeze waits for 2.5s backlight ramp. First measurement 5.2 pts/hr both levers vs ~10/hour on 15.",
+        "sourceLinks": [
+          {
+            "label": "Email thread (Eddie \u2192 Sydney) about battery"
+          },
+          {
+            "label": "Crash reports \u00b7 APPLE-IOS-A anonymous Wolfsburg watchdog Aug 18 2:43pm PT build 12"
+          }
+        ],
+        "novelty": "resolved-on-main",
+        "resolved": true
+      },
+      {
+        "id": "tag-rename-share-and-doubleclick",
+        "title": "Tag rename doesn\u2019t stick on share + double-click closes editor (lapplegat08 / Landon)",
+        "status": "resolved",
+        "novelty": "resolved-on-main",
+        "summary": "Fix has been on main since Aug 18 (share sticker + rename durability). This afternoon main is labeled build 16, so the next TestFlight carries it. Landon still has not written back.",
+        "detail": "From lapplegat08@gmail.com (Landon). Rename doesn\u2019t apply on share until renamed again; double-click closes editor. Eddie reply Aug 9 3:38pm PT promising next-build fix. Thread still 2 messages; Landon did not write back.\n\nFix ON MAIN last night, not in archived TF 15. Four commits after archive HEAD 3c71dbc83a, merge 19f01609a31a ~9:08pm ET Aug 18: share-sticker tag names (b0f82b5945d6), rename durability b718c4e71210 \u201cCarry a tag rename that the network swallowed\u201d, drifted catch-all (f1dc00d1e2da). CURRENT_PROJECT_VERSION still 15. Testers on TestFlight 15 will not see it until the next archive. Keep as bug with partial-shipped status. Do not open a duplicate PR.",
+        "sources": [
+          "Gmail lapplegat08@gmail.com",
+          "Video.mov attachment"
+        ],
+        "ownership": "On main since Aug 18 \u00b7 labeled build 16 this afternoon",
+        "evidence": [
+          "Thread id 19fe3b79b3816d1a still 2 messages; last Eddie reply 2026-08-09T22:38:20Z",
+          "Merge 19f01609a31a 2026-08-19T01:08:50Z \u2014 not a GitHub PR",
+          "b718c4e71210 Carry a tag rename that the network swallowed",
+          "Archive HEAD 3c71dbc83a; these 4 commits are after it"
+        ],
+        "plainTitle": "Renamed tags don't stick when sharing (and double-click closes the editor)",
+        "plainSummary": "Fixed on main since Aug 18. Build is now 16, so Landon renamed-tags-do-not-stick fix will reach testers in the next TestFlight. He has not written back.",
+        "actionStatus": "Fixed on main \u00b7 next TestFlight",
+        "actionNote": "Already on main (b0f82b5945d6, b718c4e71210, f1dc00d1e2da). Version bump 95ff992eff this afternoon. No duplicate PR.",
+        "technicalNotes": "Thread id 19fe3b79b3816d1a still 2 msgs. Merge 19f01609a31a 2026-08-19T01:08:50Z (~9:08pm ET Aug 18). Payload: b0f82b5945d6 Print the tag's current name on the share sticker; b718c4e71210 Carry a tag rename that the network swallowed; f1dc00d1e2da Repair a catch-all whose name drifted from its label. Compare 3c71dbc83a...main ahead_by 4. Not a GitHub PR. Do not open a duplicate PR.",
+        "peopleCount": 1,
+        "sourceLinks": [
+          {
+            "label": "Email from lapplegat08@gmail.com \u00b7 \"A few bugs with the tags feature\" \u00b7 Aug 8, 2026"
+          },
+          {
+            "label": "Eddie's reply \u00b7 Aug 9, 2026 \u00b7 promised fix by next build"
+          }
+        ],
+        "notes": "Was waiting on a version bump. Now 16.",
+        "resolved": true
+      },
+      {
+        "id": "log-session",
+        "title": "Log session seems to not work",
+        "status": "resolved",
+        "novelty": "resolved-on-main",
+        "summary": "iOS 26 floating-sheet gap cover has been on main since Aug 20. This afternoon main is labeled build 16. If Kayla still cannot reach tagging after 16, then a Save-specific look.",
+        "detail": "NEW in-app bug. Kayla / kaila_vee kayvil89@gmail.com public.feedback id c7655fe1-b1a8-44a8-9274-8227388d1f19 2026-08-19 23:48:52 UTC (4:48pm PT), app 1.0.1 (15), iOS 26.6: \u201cwhen i was trying to save my recording, the button to save did not let me go to the next page where you can tag and label your session. i had to close and reopen the app for it to work. this is the first time it happened.\u201d\n\nRelated: 07nkwon Aug 8 build 12 Log session didn\u2019t work.\n\nAug 20 on main (NOT in testers\u2019 15): b56062b408 Cover the strip iOS 26 leaves under a floating sheet; also comment-keyboard probe. Merge abf520dc80 says needs build 16. Do not open a duplicate PR \u2014 next TestFlight first. If Kayla still repros after 16, then a Save-specific PR.",
+        "sources": [
+          "Supabase public.feedback",
+          "PostHog session_save_failed / session_save_blocked",
+          "Sentry APPLE-IOS-12"
+        ],
+        "ownership": "On main since Aug 20 \u00b7 labeled build 16 this afternoon",
+        "evidence": [
+          "session_save_failed Aug 12 1 offline; Aug 13\u201314 0",
+          "session_save_blocked Aug 13 2/1 media; Aug 14 6/3 media"
+        ],
+        "plainTitle": "Save / Log session doesn\u2019t go to tagging",
+        "plainSummary": "The iOS 26 sheet-gap cover for Kayla Save-does-not-go-to-tagging has been on main since Aug 20. Build is now 16, so it ships in the next TestFlight. If she still hits it on 16, that is a new look.",
+        "actionStatus": "Fixed on main \u00b7 next TestFlight",
+        "actionNote": "Commit b56062b408. Version bump 95ff992eff. SaveSessionView also changed today for the two-sittings P0 (092a63d394).",
+        "technicalNotes": "feedback c7655fe1-b1a8-44a8-9274-8227388d1f19. Sheet gap b56062b408. Merge abf520dc80 said needs build 16. CURRENT_PROJECT_VERSION is now 16 (95ff992eff).",
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 19 4:48pm PT \u00b7 kaila_vee / Kayla \u00b7 1.0.1 (15) \u00b7 kayvil89@gmail.com"
+          }
+        ],
+        "notes": "Was waiting on a version bump. Now 16.",
+        "peopleCount": 2,
+        "resolved": true
+      },
+      {
+        "id": "profile-pic-cropper",
+        "title": "Profile photo cropper Cancel/Done under status bar",
+        "status": "resolved",
+        "novelty": "unchanged",
+        "summary": "comet still on build 12. Aug 9 fix 4cba232 is on main and in TestFlight 13-15. Ask them to update. No new report.",
+        "detail": "comet (wherearetheavocados) reported Aug 17 6:03am PT they cannot tap Cancel/Done on the profile-photo cropper (buttons under the iOS clock/battery). Same issue Ree (cloudberree) reported Aug 10. Reporter is on 1.0.1 (12). The Aug 9 fix is already on main and in TestFlight builds 13, 14, and 15. Ask them to update. Do not open a PR.",
+        "sources": [
+          "Supabase public.feedback (Aug 17 comet / wherearetheavocados)",
+          "Supabase public.feedback (Aug 10 cloudberree / Ree)"
+        ],
+        "ownership": "Already shipped on main \u00b7 TestFlight 13+ \u00b7 reporter on 12",
+        "evidence": [
+          "Supabase id 63dea2e0-7b5e-4f46-8d54-d79683e7977e",
+          "Fix commit 4cba23273d4f0289be6f4182c7f425921a34ec40 (Aug 9 4:41pm PT) on main",
+          "Build 12 bump 515202c15d was Aug 7, 27 commits before the fix",
+          "Reporter 1.0.1 (12); current main 1.0.1 (15)"
+        ],
+        "plainTitle": "Profile-photo cropper Cancel/Done buttons are hard to tap",
+        "plainSummary": "Fixed in TestFlight 13+. comet reported it on 12 and later updated (they hit a 502 on 15). No new report.",
+        "actionStatus": "Already in TestFlight",
+        "actionNote": "Already in testers hands since 13. Not reopened.",
+        "technicalNotes": "Supabase id 63dea2e0-7b5e-4f46-8d54-d79683e7977e. Fix commit 4cba23273d4f0289be6f4182c7f425921a34ec40 (Aug 9 4:41pm PT) is on main. Build 12 bump 515202c15d was Aug 7, 27 commits before the fix. AvatarCropView on main still has insetShortfall padding. Do not reopen a PR.",
+        "peopleCount": 2,
+        "sourceLinks": [
+          {
+            "label": "In-app feedback \u00b7 Aug 17 6:03am PT \u00b7 wherearetheavocados / comet \u00b7 1.0.1 (12)"
+          },
+          {
+            "label": "In-app feedback \u00b7 Aug 10 \u00b7 cloudberree / Ree"
+          }
+        ],
+        "notes": "Resolved in field (TF 13+). Confirmed still true after build 16 merge.",
+        "resolved": true
+      }
+    ],
+    "sentry": [
+      {
+        "id": "APPLE-IOS-1E",
+        "plain": "Record tap freeze (~18s) on an old build",
+        "who": "chloeho on 10 Sunday 9:07pm ET; phone hot, 10% battery",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-1E"
+      },
+      {
+        "id": "APPLE-IOS-V",
+        "plain": "Camera freeze on open",
+        "who": "chimmyaa on 15 Sunday 10:48pm ET (plus earlier ivythecat / pepsi)",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-V"
+      },
+      {
+        "id": "APPLE-IOS-F",
+        "plain": "Clip upload got a 502",
+        "who": "chimmyaa on 15 Sunday 11:03am ET",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-F"
+      },
+      {
+        "id": "APPLE-IOS-7",
+        "plain": "App hitch / idle hang (mixed)",
+        "who": "chimmyaa CA/Metal ~4s; faroos274 idle ~15s; both 15",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-7"
+      },
+      {
+        "id": "APPLE-IOS-A",
+        "plain": "iOS killed the app (watchdog / RAM)",
+        "who": "eddie on 16 Sunday 5:42pm ET",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-A"
+      },
+      {
+        "id": "APPLE-IOS-19",
+        "plain": "Camera freeze on leave Record",
+        "who": "aryangoyal1811 on 15 Saturday; 0 this window",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-19"
+      },
+      {
+        "id": "APPLE-IOS-1D",
+        "plain": "Hang creating a text box",
+        "who": "pepsi/Julian on 15 Saturday; 0 this window",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-1D"
+      },
+      {
+        "id": "APPLE-IOS-1C",
+        "plain": "Fatal hang focusing a text box",
+        "who": "Puneet \u00d75 Friday; HelpMe Discord same shape Aug 21. 0 this window. Do not claim fixed.",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-1C"
+      }
+    ],
+    "filtered": [
+      {
+        "id": "camera-off-stopwatch",
+        "title": "Camera-off stopwatch",
+        "status": "shipped",
+        "why": "photoTimer / no-timelapse path exists"
+      },
+      {
+        "id": "draft-durability",
+        "title": "Draft durability / phone-dies save",
+        "status": "shipped",
+        "why": "DraftStore + segment rollover on main"
+      },
+      {
+        "id": "basic-custom-tags",
+        "title": "Basic custom tags / TagBoard edit",
+        "status": "shipped",
+        "why": "On You; reorder/sync still Lane 6"
+      },
+      {
+        "id": "historical-session-wipe",
+        "title": "Historical session wipe",
+        "status": "mitigated",
+        "why": "No new reports since Jul 30 charan thread"
+      },
+      {
+        "id": "tag-delete-crash",
+        "title": "Tag-delete crash",
+        "status": "fixed",
+        "why": "On main; don\u2019t reopen without repro"
+      },
+      {
+        "id": "thumbnail-accuracy",
+        "title": "Thumbnail accuracy / rounding",
+        "status": "fixed",
+        "why": "On main; don\u2019t reopen without repro"
+      },
+      {
+        "id": "discord-download-clarity",
+        "title": "Clearer Discord how-to-download",
+        "status": "done-ops",
+        "why": "KrabbyKai asked Aug 11; Eddie replied Aug 12 ~5:14pm PT Aug 11 / 00:14 UTC Aug 12 \"ill do that\"; channel renamed announcements \u2192 how-to-download"
+      },
+      {
+        "id": "apple-ios-15-simulator",
+        "title": "APPLE-IOS-15 fatal hang",
+        "status": "ignored-dev",
+        "why": "simulator com.eddielou.latentt / build_type simulator \u2014 not a user device"
+      },
+      {
+        "id": "discoverable-avatar",
+        "title": "Search shows avatar, but non-friend profile detail doesn\u2019t",
+        "status": "shipped",
+        "why": "On main in DiscoverableProfileView (avatarURL: person.avatarURL). PR #30 closed unmerged Aug 13 11:04pm PT after the change landed another way \u2014 do not reopen."
+      }
+    ],
+    "clipMissing": [
+      {
+        "day": "2026-08-22",
+        "photoTimerAtt0People": 3,
+        "photoTimerAtt0Events": 3,
+        "clipUploadFailed": 0
+      },
+      {
+        "day": "2026-08-23",
+        "photoTimerAtt0People": 2,
+        "photoTimerAtt0Events": 10,
+        "clipUploadFailed": 5,
+        "note": "8 of 10 Photo+timer att=0 are one person on build 16 at 5:34pm ET, before #53 merged 6:54pm ET. clip_upload_failed 5 events / 3 people (timeout + connection lost; 4 on build 10, 1 on 15)."
+      },
+      {
+        "day": "2026-08-24",
+        "photoTimerAtt0People": 2,
+        "photoTimerAtt0Events": 3,
+        "clipUploadFailed": 0,
+        "note": "partial through 10:10am ET; all three on build 15"
+      }
+    ],
+    "newSincePrev": [
+      "PR #52 merged 2026-08-23T21:57:05Z (TextInputWarmup)",
+      "PR #53 merged 2026-08-23T22:54:56Z (Add a photo before tap)",
+      "PR #51 closed unmerged 2026-08-23T23:05:16Z",
+      "main HEAD 1e946efb72 draft save screen + 14 commits since build-16 merge",
+      "Discord scrape Aug 12\u201323 (login restored Sunday afternoon)",
+      "Survey +1 Qiqi Very disappointed",
+      "APPLE-IOS-1E chloeho dist 10",
+      "Photo+timer att=0 Sunday 10/2 including 8 on dist 16 before #53 merge"
+    ],
+    "authFailures": [
+      "Discord box Chrome login wall this morning (session from Sunday afternoon did not persist). Overnight Discord since 3:30pm ET Sunday not scraped.",
+      "GitHub MCP user-Github still needsAuth; used PAT via gh."
+    ],
+    "plainTldr": [
+      "Nothing waiting on you. You merged the keyboard warmup and the Photo+timer \u201cAdd a photo\u201d button last night, and closed the old camera pull request.",
+      "Discord is back in this review (11 days of messages from Aug 12\u201323). Overnight it signed out again, so Monday morning Discord is missing. Loudest Discord ask is still Android. New: custom video thumbnail, communities, subtags, and people stuck on the TestFlight redeem screen.",
+      "One new survey: Qiqi, very disappointed, \u201cmake it interesting.\u201d 25 of 46 actives would be very disappointed if Latent went away.",
+      "Testers are still on TestFlight 15. Build on main is still 16. Last night\u2019s keyboard and photo-button fixes are not in 15."
+    ],
+    "actions": [
+      {
+        "id": "pr-52-text-warmup",
+        "title": "PR #52 \u2014 pay text stack first-use cost while idle",
+        "status": "merged",
+        "resolved": true,
+        "url": "https://github.com/eddie-the-lou/latent/pull/52",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/52",
+        "prNumber": 52,
+        "plainTitle": "Keyboard / typing freeze (warmup on main)",
+        "plainSummary": "You merged this Sunday 5:57pm ET. Testers on TestFlight 15 do not have it. Do not claim Puneet\u2019s 1C hang is fixed.",
+        "actionStatus": "Merged \u2014 next TestFlight",
+        "actionNote": "Merge 897a86374e. TextInputWarmup.swift. CURRENT_PROJECT_VERSION still 16.",
+        "people": [
+          "puneet",
+          "pepsi / Julian",
+          "HelpMe (Discord, iPhone 14 Pro)"
+        ]
+      },
+      {
+        "id": "pr-53-photo-timer-copy",
+        "title": "PR #53 \u2014 say a photo is required before the tap",
+        "status": "merged",
+        "resolved": true,
+        "url": "https://github.com/eddie-the-lou/latent/pull/53",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/53",
+        "prNumber": 53,
+        "plainTitle": "Photo+timer button said Log session with no photo",
+        "plainSummary": "You merged this Sunday 6:54pm ET. Sunday\u2019s 8 taps on build 16 were 5:34pm, before the merge. Testers on 15 still have the old button.",
+        "actionStatus": "Merged \u2014 next TestFlight",
+        "actionNote": "Merge 6baf60743c. Button now \u201cAdd a photo\u201d. Draft save screen also landed 1e946efb72.",
+        "people": [
+          "toasted (Discord how-to)",
+          "PostHog Photo+timer att=0"
+        ]
+      },
+      {
+        "id": "pr-51-camera-hang",
+        "title": "PR #51 \u2014 camera preview attach + teardown off main",
+        "status": "superseded",
+        "resolved": true,
+        "url": "https://github.com/eddie-the-lou/latent/pull/51",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/51",
+        "prNumber": 51,
+        "plainTitle": "Camera freeze on open and on leave Record",
+        "plainSummary": "You closed this without merging Sunday 7:05pm ET. The fix on main is 4298fa766a (one owner, one queue) inside build 16.",
+        "actionStatus": "Closed without merging",
+        "actionNote": "chimmyaa still hit attach hang on TestFlight 15 Sunday 10:48pm ET. They need 16.",
+        "people": [
+          "pepsi / Julian",
+          "sophia",
+          "ivythecat",
+          "aryangoyal1811",
+          "chimmyaa (15, Sunday night)"
+        ]
+      }
+    ],
+    "bySource": {
+      "Discord": "Sunday afternoon scrape (Eddie L) covered Aug 12\u201323 after 11-day login wall. This morning signed out again; nothing after ~3:30pm ET Sunday. Android ~35. Custom thumbnail 9\u2705. Communities 8\u2705. Subtags 4\u2705. Cherbear TestFlight redeem stuck. HelpMe 14 Pro typing crash. KrabbyKai/TST/chlo comment-bar under keyboard.",
+      "Gmail": "0 new tester inbound. Sunday self-send did not bounce. Maxwell/Jane/Landon/Therese unchanged. No videos.",
+      "Supabase": "0 new rows. Table still 31. Puneet Aug 21 still newest.",
+      "Sentry": "6 events / 4 users. New 1E chloeho build 10 Record hang. chimmyaa F+7+V on 15. eddie A on 16. 19/1D/1C quiet.",
+      "PostHog": "Photo+timer att=0 Sun 10/2 (8 one person on 16 at 5:34pm ET, before #53). Mon 3/2 on 15. clip_upload_failed Sun 5/3. Abandoned 55/2. Rageclick 88/25.",
+      "Survey": "Qiqi added 11:48pm ET Sunday. Very disappointed. Improve: make it interesting. 25/19/2 of 46. Forced-choice empty.",
+      "GitHub": "0 open. #52 merged 5:57pm ET, #53 6:54pm ET, #51 closed 7:05pm ET. HEAD 1e946efb72 draft save screen. Still 1.0.1 (16)."
     }
   }
 };
