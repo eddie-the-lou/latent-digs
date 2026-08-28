@@ -1,0 +1,35 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Aug 28</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English · covers Thursday morning through this morning</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-08-28" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-08-28</a>
+  </p>
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px">Survey +2 rows from <strong>Just foxy</strong> (two different emails: itsursmartgirlvero@… and itsurfavgirlvero@…). Both would be very disappointed if Latent went away. Sean Ellis is now <strong>33 very / 22 somewhat / 2 not</strong>, of 57 actives. Forced-choice “build one next” is still empty.</li>
+    <li style="margin:0 0 6px"><strong>leraborysova</strong> (in-app, build 16, 7:39am ET): “did a 53 minute session, it saved into 35.” Camera-off timer mode. Their latest save is exactly 35 minutes in the database. I tried to start a fix. Cloud Agents on-demand is still off, so no pull request.</li>
+    <li style="margin:0 0 6px"><strong>pepsi</strong> on build 16 overnight (~2:24–2:28am ET): typing Done hung ~4s, plus avatar decode and share-player init hangs in the same sitting. Warmup is already on main. Do not call the keyboard hang fixed. Resume after leaving the app is still broken (zozo).</li>
+    <li style="margin:0 0 6px">Discord still signed out, fifth morning. No new tester email. Nothing waiting to approve.</li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <p style="color:#555;margin:0 0 18px">Nothing. Zero open pull requests. Two clear bugs want fixes (resume + photo-timer duration) but Cloud Agents on-demand is still off, so I could not open either.</p>
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken or confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 10px"><strong>Long sitting saved shorter than it felt (camera-off timer)</strong><br><span style="color:#555">leraborysova, build 16, this morning 7:39am ET. Quote: “did a 53 minute session, it saved into 35.” Latest photoTimer row is duration 2101s (~35m) vs ~37m wall clock; older photoTimer rows also under-count. Wanted a pull request.</span><br><span style="color:#888;font-size:12px">New · Blocked · no PR (Cloud Agents off)</span></li>
+    <li style="margin:0 0 10px"><strong>Resume does nothing after you pause and leave the app</strong><br><span style="color:#555">zozo, build 15, Sunday. Still no pull request. Cloud Agents still off. PostHog also saw zozo hit a low-battery pause overnight.</span><br><span style="color:#888;font-size:12px">Blocked · no PR · <a href="https://cursor.com/agents/bc-3df94c6f-e3f8-4ef5-a30a-fbd5d0f390d0" style="color:#888">dead agent</a></span></li>
+    <li style="margin:0 0 10px"><strong>Keyboard Done hang on build 16</strong><br><span style="color:#555">pepsi / Julian, ~2:28am ET, build 16. After #52 warmup already on main. Same sitting also hit avatar + share-player hangs. Do not call typing freezes fixed.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-1V" style="color:#888">APPLE-IOS-1V</a> · also <a href="https://weaive.sentry.io/issues/APPLE-IOS-1T" style="color:#888">1T</a> / <a href="https://weaive.sentry.io/issues/APPLE-IOS-1W" style="color:#888">1W</a></span></li>
+    <li style="margin:0 0 10px"><strong>Record froze ~8s while checking battery (hot phone)</strong><br><span style="color:#555">akuruvilla5456, last night, build 16. Phone hot + Low Power Mode. One report. Watching.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-1S" style="color:#888">APPLE-IOS-1S</a></span></li>
+    <li style="margin:0 0 10px"><strong>Clip uploads still failing for a couple people</strong><br><span style="color:#555">chloeho (repeat) and ankithrao30 overnight. Two failures / two people Thursday. Not a new PR this morning.</span><br><span style="color:#888;font-size:12px">PostHog clip_upload_failed</span></li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want</h2>
+  <p style="color:#888;font-size:13px;margin:0 0 10px">No new Discord (signed out). Two new survey actives. Forced-choice still empty. Older asks unchanged (sound on timelapse, nudge reply, subtags, friend hours race, widget…).</p>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Just foxy</strong> · Very disappointed · itsursmartgirlvero@gmail.com · Thu 9:42pm ET<br><span style="color:#555">Benefit: “Top grades.” Improve: “Ur already doing great.”</span></li>
+    <li style="margin:0 0 8px"><strong>Just foxy</strong> · Very disappointed · itsurfavgirlvero@gmail.com · Thu 9:43pm ET<br><span style="color:#555">Second row, same display name, different email. Benefit: “Top grade.” Improve: “Nothing u are already great.”</span></li>
+    <li style="margin:0 0 8px"><strong>fcummings384</strong> · still newest in-app feature ask<br><span style="color:#555">Pick up sound while recording for verbal recall / sped-up squeaks. Build 15.</span></li>
+  </ul>
+  <p style="color:#888;font-size:12px;margin-top:24px">
+    Technical notes (not the main story): Discord login wall day 5. Cloud Agents on-demand blocked. main HEAD dcc2d24a2e38 still CURRENT_PROJECT_VERSION 16. public.feedback 34 (+1). photoTimer session be2dfa52 duration_secs=2101 wall≈2239. Sentry new 1V/1T/1W pepsi, 1S akuruvilla, 1R parsunic. clip_upload_failed Thu 2/2. Abandoned Thu 6/1. Rageclick 48/19. Clip-bloat alert not firing (1.57 MB/s). Do not claim 1C fixed. Do not merge #51. Turn on Cloud Agents on-demand to unblock resume + duration PRs. Re-login Discord on my computer when you can.
+  </p>
+</body></html>
