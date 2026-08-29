@@ -70,8 +70,8 @@ footer{margin-top:28px;color:var(--muted);font-size:.8rem}
 </div>
 <script src="./data.js"></script>
 <script>
-const DIGESTS = window.DIGESTS || {};
-const INDEX = window.DIGEST_INDEX || DIGESTS.index || [];
+let DIGESTS = window.DIGESTS || {};
+let INDEX = window.DIGEST_INDEX || DIGESTS.index || [];
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function dig(date){return DIGESTS[date]||null}
 function parseHash(){
@@ -166,18 +166,11 @@ function renderByTopic(d,date){
 }
 function renderBySource(d,date){
   const map=allItems(d);
-  const groups=[
-    ['discord','Discord'],
-    ['email','Email'],
-    ['inApp','In-app feedback'],
-    ['crashReports','Crash reports'],
-    ['analytics','Product analytics']
-  ];
+  const groups=[['discord','Discord'],['email','Email'],['inApp','In-app feedback'],['crashReports','Crash reports'],['analytics','Product analytics']];
   const by=d.bySource||{};
   return groups.map(([key,label])=>{
     const ids=by[key]||[];
     const items=ids.map(id=>map[id]).filter(Boolean);
-    // also heuristic fill if bySource empty
     let list=items;
     if(!list.length){
       list=Object.values(map).filter(it=>{
@@ -246,7 +239,27 @@ function render(){
 }
 window.go=go; window.render=render; window.__view='topic';
 window.addEventListener('hashchange',render);
-render();
+async function boot(){
+  try {
+    const idxRes = await fetch('./data/index.json', {cache:'no-store'});
+    if(idxRes.ok){
+      const live = await idxRes.json();
+      if(Array.isArray(live) && live.length) INDEX = live;
+    }
+  } catch (e) {}
+  const dates = (INDEX.length?INDEX.map(x=>x.date||x):[]).filter(Boolean);
+  await Promise.all(dates.map(async date=>{
+    if(DIGESTS[date]) return;
+    try {
+      const r = await fetch('./data/'+date+'.json', {cache:'no-store'});
+      if(r.ok) DIGESTS[date] = await r.json();
+    } catch (e) {}
+  }));
+  window.DIGESTS = DIGESTS;
+  window.DIGEST_INDEX = INDEX;
+  render();
+}
+boot();
 </script>
 </body>
 </html>
