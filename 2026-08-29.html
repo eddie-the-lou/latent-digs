@@ -14,5 +14,23 @@
   </ul>
   <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
   <p style="color:#555;margin:0 0 18px">Nothing. Zero open pull requests. Three clear bugs want fixes (pause-didn’t-save, camera-off duration, resume) but Cloud Agents on-demand is still off, so I could not open any of them.</p>
-  <p style="color:#888;font-size:12px;margin-top:24px">Full cards live on the archive. Discord login wall day 6. Cloud Agents on-demand blocked. Do not republish Maxwell PNGs.</p>
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken or confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 10px"><strong>She paused, and the sitting vanished</strong><br><span style="color:#555">leraborysova, build 16, Friday 11:54am ET. Quote: “i paused a session and simply didn’t save at all.” There’s a hole in her history between 10:23am and 12:03pm ET. Later sittings did save.</span><br><span style="color:#888;font-size:12px">New · Blocked · no PR (Cloud Agents off)</span></li>
+    <li style="margin:0 0 10px"><strong>Long sitting saved shorter than it felt (camera-off timer)</strong><br><span style="color:#555">Still happening for leraborysova after the 53→35 report. Later camera-off rows still a few minutes short of the wall clock (one was 19 minutes felt vs 25 on the clock).</span><br><span style="color:#888;font-size:12px">Blocked · no PR (Cloud Agents off)</span></li>
+    <li style="margin:0 0 10px"><strong>Resume does nothing after you pause and leave the app</strong><br><span style="color:#555">zozo, build 15, Sunday. Still no pull request. Cloud Agents still off. leraborysova’s vanish may be the same family.</span><br><span style="color:#888;font-size:12px">Blocked · no PR · <a href="https://cursor.com/agents/bc-3df94c6f-e3f8-4ef5-a30a-fbd5d0f390d0" style="color:#888">dead agent</a></span></li>
+    <li style="margin:0 0 10px"><strong>Friends list froze about 5 seconds</strong><br><span style="color:#555">nemoz, Friday 3:08pm ET, build 16, phone hot. One new crash report. Watching.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-1G" style="color:#888">APPLE-IOS-1G</a></span></li>
+    <li style="margin:0 0 10px"><strong>Clips failed to load (server 502)</strong><br><span style="color:#555">charanistired, Friday 1:20pm ET, build 16, 26 times. Same 122-byte error page as before, not a new app crash.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-F" style="color:#888">APPLE-IOS-F</a></span></li>
+    <li style="margin:0 0 10px"><strong>Camera-off sitting saved with no photo</strong><br><span style="color:#555">IzyanInamdar, Friday 9:10pm ET, twice, plus save blocked for “media.” Saturday morning camera-off saves all had a photo (9/9).</span><br><span style="color:#888;font-size:12px">PostHog Photo+timer att=0</span></li>
+    <li style="margin:0 0 10px"><strong>Clip upload timed out</strong><br><span style="color:#555">chloeho again Friday 9:52am ET (request timed out). ankithrao30’s Friday 7:09am timeout was already in yesterday’s review.</span><br><span style="color:#888;font-size:12px">PostHog clip_upload_failed · NSURL -1001</span></li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want</h2>
+  <p style="color:#888;font-size:13px;margin:0 0 10px">No new Discord (signed out). No new survey rows. Forced-choice still empty. Older asks unchanged (sound on timelapse, nudge reply, subtags, friend hours race, widget…).</p>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Maxwell</strong> · hotspot confirmed fixed · still wishes battery lasted longer with hotspot on<br><span style="color:#555">That’s expected radio cost, not a reopen of the battery fix. He has a pack.</span></li>
+    <li style="margin:0 0 8px"><strong>fcummings384</strong> · still newest in-app feature ask<br><span style="color:#555">Pick up sound while recording for verbal recall / sped-up squeaks. Build 15.</span></li>
+  </ul>
+  <p style="color:#888;font-size:12px;margin-top:24px">
+    Technical notes (not the main story): Discord login wall day 6. Cloud Agents on-demand blocked. main HEAD dcc2d24a2e38 still CURRENT_PROJECT_VERSION 16. public.feedback 35 (+1) e7266f57…. Sentry lastSeen 24h: 1G nemoz, F charanistired 502×26, K anonymoussushi1071. Photo+timer att=0 Fri 2/1 izyaninamdar2006. clip_upload_failed Fri extra chloeho -1001. Rageclick Fri 82/29. Clip-bloat alert not firing (1.57 MB/s). Do not claim 1C fixed. Do not merge #51. Turn on Cloud Agents on-demand to unblock pause-save + duration + resume PRs. Re-login Discord on my computer when you can. Do not republish Maxwell PNGs.
+  </p>
 </body></html>

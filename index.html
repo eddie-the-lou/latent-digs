@@ -166,11 +166,18 @@ function renderByTopic(d,date){
 }
 function renderBySource(d,date){
   const map=allItems(d);
-  const groups=[['discord','Discord'],['email','Email'],['inApp','In-app feedback'],['crashReports','Crash reports'],['analytics','Product analytics']];
+  const groups=[
+    ['discord','Discord'],
+    ['email','Email'],
+    ['inApp','In-app feedback'],
+    ['crashReports','Crash reports'],
+    ['analytics','Product analytics']
+  ];
   const by=d.bySource||{};
   return groups.map(([key,label])=>{
     const ids=by[key]||[];
     const items=ids.map(id=>map[id]).filter(Boolean);
+    // also heuristic fill if bySource empty
     let list=items;
     if(!list.length){
       list=Object.values(map).filter(it=>{
