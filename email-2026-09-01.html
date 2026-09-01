@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Sep 1</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English · covers Monday morning through this morning (Tuesday)</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-01" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-09-01</a>
+  </p>
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><strong>zozo</strong> filed a new in-app note Tuesday 8:53am ET on build 16: a 1:02 sitting starts like a normal video, then speeds up. Constant timelapse speed is still broken on the current build.</li>
+    <li style="margin:0 0 6px"><strong>charanistired</strong>’s clips failed to play fourteen times Monday afternoon (server 502 on playback). Nour’s cold-start 503 and Lera’s likes failures from Monday morning did not come back.</li>
+    <li style="margin:0 0 6px">Two freezes on old build 10 (<strong>coffeeaddict</strong> Monday, <strong>somerandomotaku728</strong> Tuesday). <strong>nour</strong>’s app was force-quit for RAM Monday morning. <strong>rosie</strong> hitch ~3 seconds on the You tab Monday night at 1% battery. Clip uploads dropped for four people (phone lost the network) — coffeeaddict most of all.</li>
+    <li style="margin:0 0 6px">No new survey responses, no new tester email. Discord still signed out (day 9). Cloud Agents still off, so pause-save / duration / resume still have no pull request. Nothing waiting to approve.</li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <p style="color:#555;margin:0 0 18px">Nothing. Zero open pull requests. I tried again this morning to start the pause-didn’t-save fix (Opus 5). Cloud Agents on-demand is still off, so still no pull request for that, the camera-off duration under-count, or resume-after-leave.</p>
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken or confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 10px"><strong>Timelapse still starts slow then speeds up</strong><br><span style="color:#555">zozo, build 16, Tuesday 8:53am ET. 1:02 video. Same constant-speed ask — still not fixed on the current build.</span><br><span style="color:#888;font-size:12px">In-app · partial-shipped feature still broken</span></li>
+    <li style="margin:0 0 10px"><strong>She paused, and the sitting vanished</strong><br><span style="color:#555">leraborysova, build 16, Friday 11:54am ET. Still open. No pull request.</span><br><span style="color:#888;font-size:12px">Blocked · no PR (Cloud Agents off — Opus 5 launch refused this morning)</span></li>
+    <li style="margin:0 0 10px"><strong>Long sitting saved shorter than it felt (camera-off timer)</strong><br><span style="color:#555">leraborysova 53→35, still the open duration bug. No new report overnight.</span><br><span style="color:#888;font-size:12px">Blocked · no PR (Cloud Agents off)</span></li>
+    <li style="margin:0 0 10px"><strong>Resume does nothing after you pause and leave the app</strong><br><span style="color:#555">zozo, build 15, Sunday. Still no pull request.</span><br><span style="color:#888;font-size:12px">Blocked · no PR · <a href="https://cursor.com/agents/bc-3df94c6f-e3f8-4ef5-a30a-fbd5d0f390d0" style="color:#888">dead agent</a></span></li>
+    <li style="margin:0 0 10px"><strong>Charan’s clips failed to play (server 502)</strong><br><span style="color:#555">Fourteen playback failures Monday 11:12am and 1:42pm ET, all charanistired, build 16. Nour 503 and Lera REST did not recur.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-F" style="color:#888">APPLE-IOS-F</a></span></li>
+    <li style="margin:0 0 10px"><strong>Clip uploads dropped for four people</strong><br><span style="color:#555">coffeeaddict (most), plus leila010407, maahidul, and chloeayx. Phone lost the network mid-upload. Eleven events overnight into this morning.</span><br><span style="color:#888;font-size:12px">PostHog clip_upload_failed · NSURL -1005</span></li>
+    <li style="margin:0 0 10px"><strong>Two freezes, both on old build 10</strong><br><span style="color:#555">coffeeaddict ~6s Monday 10:30am ET (phone overheating). somerandomotaku728 ~11s opening the app Tuesday 8:42am ET. KrabbyKai quiet.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-7" style="color:#888">APPLE-IOS-7</a></span></li>
+    <li style="margin:0 0 10px"><strong>iOS force-quit Latent for RAM (nour)</strong><br><span style="color:#555">Build 16, Monday 10:27am ET after a burst of clip-server calls. KrabbyKai’s Sunday RAM kill did not come back.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-A" style="color:#888">APPLE-IOS-A</a></span></li>
+    <li style="margin:0 0 10px"><strong>You tab hitch ~3 seconds (rosie)</strong><br><span style="color:#555">Build 16, Monday 9:25pm ET, 1% battery. One report — watching.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-1X" style="color:#888">APPLE-IOS-1X</a> · new</span></li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want</h2>
+  <p style="color:#888;font-size:13px;margin:0 0 10px">No new Discord (signed out day 9). Survey unchanged. Forced-choice still empty. Older asks unchanged (sound on timelapse, nudge reply, subtags, friend hours race, widget…).</p>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>zozo</strong> · constant timelapse speed (still broken on 16)<br><span style="color:#555">Tuesday 8:53am ET. 1:02 starts slow then speeds up. Loudest new product signal today.</span></li>
+    <li style="margin:0 0 8px"><strong>fcummings384</strong> · still newest older in-app feature ask<br><span style="color:#555">Pick up sound while recording for verbal recall / sped-up squeaks. Build 15.</span></li>
+    <li style="margin:0 0 8px"><strong>Maxwell</strong> · hotspot confirm still unread<br><span style="color:#555">Thursday 6:34pm ET. He hasn’t gotten a reply. Don’t forward the screenshots.</span></li>
+    <li style="margin:0 0 8px"><strong>Alfwalk</strong> · survey Saturday · still the newest row<br><span style="color:#555">Very disappointed / “I’ll have to try it out.” Don’t move the PMF needle. No new responses overnight.</span></li>
+  </ul>
+  <p style="color:#888;font-size:12px;margin-top:24px">
+    Technical notes (not the main story): Discord login wall day 9 — fully logged out at discord.com/login, needs password+2FA or QR on my computer. Cloud Agents on-demand blocked (Enable on-demand usage) — pause-save Opus 5 launch refused. main HEAD dcc2d24a2e38 still CURRENT_PROJECT_VERSION 16. public.feedback 36 (+1 zozo). Survey 58 / 34-22-2, forced-choice empty. Sentry 24h: F 14/1 Charan playback 502, 7 coffeeaddict+somerandomotaku728 dist 10, A nour, NEW 1X rosie, K quiet. 1C quiet — do not claim fixed. session_save_blocked 0 in dig window. clip_upload_failed 11 all -1005 (4 people). Rageclick Mon 44/18 Tue 57/29. Clip-bloat not firing (1.57 MB/s). GitHub PAT named grok bot expires ~6 days (Sep 7 ~2:43pm ET). Do not merge #51. Turn on Cloud Agents on-demand to unblock pause-save + duration + resume PRs. Re-login Discord on my computer when you can (QR from the Discord mobile app is enough).
+  </p>
+</body></html>
