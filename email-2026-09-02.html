@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Sep 2</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English · covers Tuesday morning through this morning (Wednesday)</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-02" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-09-02</a>
+  </p>
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><strong>Nico</strong> (<strong>necomeow001</strong>) filed a new in-app bug Tuesday night on build 16: after you finish recording, if you scrub the timelapse first, Save and Resume stop working until you restart the app (it still autosaves).</li>
+    <li style="margin:0 0 6px">Discord is readable again. <strong>toasted</strong>’s subtags ask jumped to 11 upvotes. Two download/Android threads are busy (<strong>kartik_exe</strong>, <strong>I❤skz</strong>). <strong>chlo</strong> said she wasn’t recording because her phone was going to explode.</li>
+    <li style="margin:0 0 6px"><strong>missha</strong> froze twice this morning on build 16 with a hot phone (keyboard + sharing). <strong>coffeeaddict</strong> (still on old build 10) hitch again. One ~9-second hang while loading signed-in state. Clip uploads dropped for coffeeaddict and <strong>chloeho</strong>.</li>
+    <li style="margin:0 0 6px">Two new survey rows, both thin. You replied to <strong>Maxwell</strong> Tuesday evening (hotspot closed). Still zero pull requests to approve — Cloud Agents on-demand is still off.</li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <p style="color:#555;margin:0 0 18px">Nothing. Zero open pull requests. I tried again this morning to start fixes on Opus 5 (pause-didn’t-save, and Nico’s new scrub bug). Cloud Agents on-demand is still off, so still no PR for pause-save, camera-off duration under-count, resume-after-leave, or Nico’s Save/Resume lock.</p>
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken or confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 10px"><strong>Scrub the finished clip, and Save/Resume stop working</strong><br><span style="color:#555">Nico, build 16, Tuesday 9:39pm PT. Drag the timelapse scrubber after finish → buttons dead until restart. Autosave still works. Clear bug — no pull request.</span><br><span style="color:#888;font-size:12px">In-app · Blocked · no PR (Cloud Agents off)</span></li>
+    <li style="margin:0 0 10px"><strong>She paused, and the sitting vanished</strong><br><span style="color:#555">leraborysova, build 16, Friday. Still open. No pull request.</span><br><span style="color:#888;font-size:12px">Blocked · no PR (Cloud Agents off — Opus 5 refused this morning)</span></li>
+    <li style="margin:0 0 10px"><strong>Long sitting saved shorter than it felt (camera-off timer)</strong><br><span style="color:#555">leraborysova 53→35. Still open. No new report overnight.</span><br><span style="color:#888;font-size:12px">Blocked · no PR (Cloud Agents off)</span></li>
+    <li style="margin:0 0 10px"><strong>Resume does nothing after you pause and leave the app</strong><br><span style="color:#555">zozo. Still no pull request.</span><br><span style="color:#888;font-size:12px">Blocked · no PR</span></li>
+    <li style="margin:0 0 10px"><strong>Timelapse still starts slow then speeds up</strong><br><span style="color:#555">zozo, build 16, Tuesday 8:53am ET. Still broken on the current build.</span><br><span style="color:#888;font-size:12px">In-app · partial-shipped feature still broken</span></li>
+    <li style="margin:0 0 10px"><strong>missha froze twice on a hot phone (build 16)</strong><br><span style="color:#555">Keyboard hitch ~3s and share-export freeze ~4s Wednesday morning. Thermally serious/critical.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-7" style="color:#888">APPLE-IOS-7</a> · <a href="https://weaive.sentry.io/issues/APPLE-IOS-1K" style="color:#888">APPLE-IOS-1K</a></span></li>
+    <li style="margin:0 0 10px"><strong>App froze ~9 seconds while loading account</strong><br><span style="color:#555">Build 16, Taipei, 10% battery. One event — watching.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-1Z" style="color:#888">APPLE-IOS-1Z</a> · new</span></li>
+    <li style="margin:0 0 10px"><strong>Clip uploads dropped for coffeeaddict and chloeho</strong><br><span style="color:#555">Four events since Tuesday’s dig cutoff. Mostly phone lost the network; one timeout. chloeho is not yesterday’s chloeayx.</span><br><span style="color:#888;font-size:12px">PostHog clip_upload_failed</span></li>
+    <li style="margin:0 0 10px"><strong>One clip upload failed with a server 503</strong><br><span style="color:#555">dingus, build 16. Supabase edge “service degraded.” Charan’s Monday playback 502s did not come back.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-F" style="color:#888">APPLE-IOS-F</a></span></li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want</h2>
+  <p style="color:#888;font-size:13px;margin:0 0 10px">Discord is back. Forced-choice survey column still empty. Survey +2 but thin.</p>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>toasted</strong> · subtags (Studying → Math) now <strong>11 upvotes</strong><br><span style="color:#555">Was 4 on Aug 23. Loudest Discord vote growth since last scrape.</span></li>
+    <li style="margin:0 0 8px"><strong>kartik_exe</strong> + <strong>I❤skz</strong> · how do I download / Play Store?<br><span style="color:#555">31-message download thread + Android/release-date questions. TestFlight friction is still loud.</span></li>
+    <li style="margin:0 0 8px"><strong>! 𝖇’𝖘</strong> · custom thumbnail <strong>11 upvotes</strong> (was 9)<br><span style="color:#555">Photo on the profile grid that isn’t the first frame.</span></li>
+    <li style="margin:0 0 8px"><strong>HelpMe</strong> · communities <strong>12 upvotes</strong><br><span style="color:#555">Similar-interest groups keep climbing.</span></li>
+    <li style="margin:0 0 8px"><strong>zozo</strong> · constant timelapse speed<br><span style="color:#555">Still broken on build 16 (starts slow then speeds up).</span></li>
+    <li style="margin:0 0 8px"><strong>Yeon Si-Eun</strong> · survey Tuesday · thin Very<br><span style="color:#555">“idk, i didnt try it yet duh.” Don’t move the PMF needle. krepmen47 answered with dots.</span></li>
+  </ul>
+  <p style="color:#888;font-size:12px;margin-top:24px">
+    Technical notes (not the main story): Discord scraped on chrome-profile this morning after days 1–9 wall elsewhere; follow-up browserUse hit login again (session flaky) — GC Jump-to-Present and #announcements still open. Cloud Agents on-demand blocked — pause-save / duration / resume / Nico scrub Opus 5 refused. main HEAD dcc2d24a2e38 still CURRENT_PROJECT_VERSION 16. public.feedback 37 (+1 Nico). Survey 60 / 35-23-2, forced-choice empty. Sentry 24h: NEW 20 coffeeaddict dist 10, NEW 1Z SeenPostStore hang dist 16, NEW 1Y Sentry-dl noise; 7+1K missha dist 16; K returned; F upload 503×1; A/1X/1C quiet — do not claim 1C fixed. session_save_blocked 0. clip_upload_failed 4 (−1005×3 −1001×1). Rageclick Tue 81/34 Wed so far 54/23. Clip-bloat not firing (1.57 MB/s). GitHub PAT “grok bot” expires ~5 days (Sep 7 ~2:43pm ET) — expiry email still UNREAD. Do not merge #51. Turn on Cloud Agents on-demand to unblock fix PRs. Re-QR Discord on my computer if channels go dark again.
+  </p>
+</body></html>
