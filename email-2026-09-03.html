@@ -1,0 +1,48 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Sep 3</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English · covers Wednesday morning through this morning (Thursday)</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-03" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-09-03</a>
+  </p>
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><strong>chloe</strong> (<strong>chloeho</strong>) asked in-app Wednesday night (still on old build 10) for a way to free the space Latent’s videos take on her phone. Same person got blocked twice trying to save a timelapse without picking an activity — the gate worked.</li>
+    <li style="margin:0 0 6px">One new survey row: <strong>Shaquille_oatmeal</strong> (Somewhat disappointed) wants a better download structure. Sean Ellis is now 35 / 24 / 2. Discord scrape failed this morning, so vote counts are yesterday’s.</li>
+    <li style="margin:0 0 6px">No brand-new crash IDs. Overnight: <strong>klvn</strong> froze ~3–4s on build 16, <strong>study</strong> hit a layout hang, and <strong>_b</strong> had one clip upload fail with a Cloudflare 500. Clip drops quieted to one <strong>coffeeaddict</strong> network loss.</li>
+    <li style="margin:0 0 6px">Still <strong>zero pull requests</strong> to approve. Cloud Agents can’t launch (Privacy Mode Legacy) — so Nico’s scrub→Save/Resume bug, pause-save, camera-off duration, and resume-after-leave still have no PR. Classic grok-bot PAT was regenerated yesterday; fine-grained PAT expiry email is still unread.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#fff8e6;border-radius:10px;border:1px solid #f0d78c">
+    <strong>0 fixes waiting.</strong> Cloud Agents launch refused: Privacy Mode (Legacy) — switch Privacy Mode in Cursor to unlock auto-fix PRs. Clear bugs still blocked: Nico scrub→dead Save/Resume, paused sitting never saved, camera-off duration under-count, resume after leaving the app.
+  </p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken / confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Nico scrub → Save/Resume dead</strong> (build 16) — still open, still no PR.<br><span style="color:#666">In-app · necomeow001 · Tue 9:39pm PT</span></li>
+    <li style="margin:0 0 8px"><strong>Save blocked until activity picked</strong> — chloeho ×2 Wed ~4:57pm PT (gate held, not a blank save).<br><span style="color:#666">PostHog session_save_blocked · activity / Timelapse</span></li>
+    <li style="margin:0 0 8px"><strong>Overnight freezes</strong> — klvn ~3–4s (<a href="https://weaive.sentry.io/issues/APPLE-IOS-7">APPLE-IOS-7</a>), study layout (<a href="https://weaive.sentry.io/issues/APPLE-IOS-K">APPLE-IOS-K</a>).<br><span style="color:#666">Sentry · build 16</span></li>
+    <li style="margin:0 0 8px"><strong>One clip upload 500</strong> — _b R2 PUT failed (<a href="https://weaive.sentry.io/issues/APPLE-IOS-F">APPLE-IOS-F</a>). Server, not a client PR.<br><span style="color:#666">Sentry · Cloudflare YUL</span></li>
+    <li style="margin:0 0 8px"><strong>Paused sitting / duration under-count / resume-after-leave</strong> — still blocked (no Cloud Agents).<br><span style="color:#666">lera / zozo · build 16</span></li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Free up video storage on phone</strong> — NEW from chloe / chloeho (build 10).<br><span style="color:#666">In-app · Wed 9:25pm PT</span></li>
+    <li style="margin:0 0 8px"><strong>Better download structure</strong> — Shaquille_oatmeal survey (Somewhat).<br><span style="color:#666">PMF survey · Wed 6:19pm PT</span></li>
+    <li style="margin:0 0 8px"><strong>Subtags / custom thumbnail / communities</strong> — last known Discord votes from Sep 2 (✅11 / ✅11 / ✅12); scrape failed today.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Sources checked</h2>
+  <ul style="padding-left:18px;margin:0 0 18px;color:#444;font-size:14px">
+    <li>Discord — scrape failed (resource_exhausted); votes carried from Sep 2</li>
+    <li>Email — 0 new tester mail; classic PAT regenerated; fine-grained expiry still unread</li>
+    <li>In-app — 38 rows (+1 chloeho storage)</li>
+    <li>Crash reports — 7 / K / F overnight; no new IDs</li>
+    <li>Product analytics — session_save_blocked 2; clip_upload_failed 1; clip-bloat quiet</li>
+    <li>PMF survey — Active 61 (+1); 35/24/2; forced-choice empty</li>
+    <li>GitHub — 0 open PRs; main still dcc2d24 · build 16</li>
+  </ul>
+  <p style="color:#888;font-size:12px;margin-top:24px">Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-03">https://eddie-the-lou.github.io/latent-digs/#/2026-09-03</a></p>
+</body></html>
