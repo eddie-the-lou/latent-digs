@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Aug 27</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English · covers Wednesday morning through this morning</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-08-27" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-08-27</a>
+  </p>
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px">Survey +1: sophia. She’d be very disappointed if Latent went away. Sean Ellis is now 31 very / 22 somewhat / 2 not, of 55 actives.</li>
+    <li style="margin:0 0 6px">Nothing waiting to approve. Resume after pause + leaving the app is still broken (zozo). Cloud Agents on-demand is still off, so the fix did not restart.</li>
+    <li style="margin:0 0 6px">sophia’s clips failed to load at 3:30am ET (server 503, three times, on 16). missha froze sharing an image with 5% battery. study hit two short freezes late last night on 16. None of those are a pull request this morning.</li>
+    <li style="margin:0 0 6px">Discord still signed out, fourth morning. No new tester email. No new in-app report. Main unchanged since Monday night.</li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <p style="color:#555;margin:0 0 18px">Nothing. Zero open pull requests.</p>
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken or confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 10px"><strong>Resume does nothing after you pause and leave the app</strong><br><span style="color:#555">zozo, build 15, Sunday 4:02pm ET. Still no pull request. Can’t retry until Cloud Agents on-demand is on.</span><br><span style="color:#888;font-size:12px">Blocked · no PR</span></li>
+    <li style="margin:0 0 10px"><strong>Friends’ clips failed to load (server 503)</strong><br><span style="color:#555">sophia on build 16, Thursday 3:30am ET, three times in one second. Edge function said the runtime was degraded. Photo+timer blanks were quiet this morning (0 people).</span><br><span style="color:#888;font-size:12px">Watching — <a href="https://weaive.sentry.io/issues/APPLE-IOS-F" style="color:#888">crash report APPLE-IOS-F</a></span></li>
+    <li style="margin:0 0 10px"><strong>Sharing a sitting froze the app about 4 seconds</strong><br><span style="color:#555">missha yesterday 9:59am ET on 16. Phone was hot and at 5%. One report. Not a pull request.</span><br><span style="color:#888;font-size:12px">Watching — <a href="https://weaive.sentry.io/issues/APPLE-IOS-1K" style="color:#888">crash report APPLE-IOS-1K</a></span></li>
+    <li style="margin:0 0 10px"><strong>Two short freezes while a list was laying out</strong><br><span style="color:#555">study (kennychen610) last night 10:59pm ET on 16, low-power mode. About 9 seconds then 3 seconds. Watching.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-1N" style="color:#888">1N</a> · <a href="https://weaive.sentry.io/issues/APPLE-IOS-1P" style="color:#888">1P</a></span></li>
+    <li style="margin:0 0 10px"><strong>App hung about 7 seconds opening on iPad</strong><br><span style="color:#555">Someone on TestFlight 15, Wednesday 5:17pm ET. One report. Wait until it shows up on 16.</span><br><span style="color:#888;font-size:12px">Watching — <a href="https://weaive.sentry.io/issues/APPLE-IOS-1M" style="color:#888">crash report APPLE-IOS-1M</a></span></li>
+    <li style="margin:0 0 10px"><strong>Typing after a freeze crashed other apps (Puneet)</strong><br><span style="color:#555">Still quiet. Last event Friday. Do not claim this is fixed.</span><br><span style="color:#888;font-size:12px">Watching — 0 events overnight</span></li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want (new today)</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Friends tab vs a public homepage of strangers</strong> · sophia<br><span style="color:#555">“maybe more of a social aspect… a just friends vs global public tab… a homepage of other people.” Friends-only is in-scope. A public homepage of other people is a kill (camera is the witness, not the feed).</span></li>
+    <li style="margin:0 0 8px"><strong>Still on the table from Wednesday</strong> · sound while recording (fcummings384), reply to a nudge (amy), subtags (missha).</li>
+  </ul>
+  <h2 style="font-size:16px;margin:20px 0 8px">Survey, overnight</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>sophia</strong> · sophiarweber@gmail.com · Very disappointed · benefit: “this makes it feel like a game i can actually track my hours on” · improve: friends vs global public tab</li>
+  </ul>
+  <p style="color:#888;font-size:12px;margin-top:24px">
+    Technical notes (not the main story): Discord login-walled since Sunday scrape (~3:30pm ET), day 4. GitHub MCP still needsAuth; published via PAT. main HEAD dcc2d24a2e38 unchanged, CURRENT_PROJECT_VERSION 16. 0 commits. feat/app-blocking-lane off main, no PR. Sentry window 9 events / 5 users / 7 IDs: F sophia dist 16 ×3, 1K missha dist 16, 1M iPad dist 15, 1N+1P study dist 16, K parsunic dist 16, 7 missha dist 16. 1C still 0 — do not claim fixed. PostHog PT: Photo+timer att=0 Wed final 2/1, Thu partial 0/0; clip_upload_failed Wed 3/2 all build 10; abandoned Wed 106/4 on 16; rageclick Wed 100/36; low-batt continues on 16. Supabase still 33, newest fcummings384. CloudAgent bc-3df94c6f died Tuesday; on-demand blocked. Do not merge #51.
+  </p>
+</body></html>

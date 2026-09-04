@@ -56,6 +56,13 @@ details.tech summary{cursor:pointer;color:var(--muted)}
 .source-group h3{margin:0 0 8px;font-size:.95rem}
 .empty{color:var(--muted);padding:12px;border:1px dashed var(--border);border-radius:12px}
 footer{margin-top:28px;color:var(--muted);font-size:.8rem}
+.quotes{background:rgba(240,180,41,.06);border:1px solid rgba(240,180,41,.28);border-radius:14px;padding:14px 16px;margin:0 0 20px}
+.quotes h2{margin:0 0 10px;font-size:1.05rem}
+.quote{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin:0 0 10px}
+.quote .who{font-weight:650;margin:0 0 4px}
+.quote .meta{color:var(--muted);font-size:.8rem;margin:0 0 8px}
+.quote blockquote{margin:0;white-space:pre-wrap;font-size:.95rem;border-left:3px solid rgba(240,180,41,.55);padding-left:12px;color:var(--text)}
+.quote .empty-note{color:var(--muted);margin:0}
 </style>
 </head>
 <body>
@@ -195,6 +202,19 @@ function renderBySource(d,date){
     </div>`;
   }).join('');
 }
+
+function renderQuotes(d){
+  const qs=d.rawQuotes||[];
+  if(!qs.length){
+    return `<div class="quotes"><h2>What they actually wrote</h2><p class="empty-note">No new verbatim quotes since the last dig.</p></div>`;
+  }
+  return `<div class="quotes"><h2>What they actually wrote</h2>`+qs.map(q=>{
+    const who=[q.who||q.username,q.email].filter(Boolean).join(' · ');
+    const meta=[q.source,q.when,q.build?('build '+q.build):null,q.kind].filter(Boolean).join(' · ');
+    return `<div class="quote"><p class="who">${esc(who)}</p><p class="meta">${esc(meta)}</p><blockquote>${esc(q.text||'')}</blockquote></div>`;
+  }).join('')+`</div>`;
+}
+
 function renderHome(date){
   const d=dig(date);
   if(!d){document.getElementById('main').innerHTML=`<h1>No review for ${esc(date)}</h1>`;return}
