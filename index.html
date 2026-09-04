@@ -225,6 +225,7 @@ function renderHome(date){
     <h1>Daily review</h1>
     <p class="sub">${esc(date)} · collected for you by Unpaid Intern</p>
     <div class="tldr"><strong>In plain English</strong><ul>${tldr.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+    ${renderQuotes(d)}
     <div class="tabs">
       <button class="tab ${view==='topic'?'active':''}" onclick="window.__view='topic';render()">By topic</button>
       <button class="tab ${view==='source'?'active':''}" onclick="window.__view='source';render()">By source</button>
