@@ -1,7 +1,5 @@
 window.DIGEST_INDEX = [
   {
-<<<<<<< Updated upstream
-=======
     "date": "2026-09-07",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -14,7 +12,6 @@ window.DIGEST_INDEX = [
     "htmlArchive": "../2026-09-07.html"
   },
   {
->>>>>>> Stashed changes
     "date": "2026-09-06",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -363,8 +360,6 @@ window.DIGEST_INDEX = [
 window.DIGESTS = {
   "index": [
     {
-<<<<<<< Updated upstream
-=======
       "date": "2026-09-07",
       "title": "Latent feedback dig",
       "summaryStats": {
@@ -377,7 +372,6 @@ window.DIGESTS = {
       "htmlArchive": "../2026-09-07.html"
     },
     {
->>>>>>> Stashed changes
       "date": "2026-09-06",
       "title": "Latent feedback dig",
       "summaryStats": {
@@ -37839,8 +37833,6 @@ window.DIGESTS = {
         "text": "How can we improve Latent for you?: idk "
       }
     ]
-<<<<<<< Updated upstream
-=======
   },
   "2026-09-07": {
     "date": "2026-09-07",
@@ -40480,6 +40472,5 @@ window.DIGESTS = {
       }
     },
     "rawQuotes": []
->>>>>>> Stashed changes
   }
 };
