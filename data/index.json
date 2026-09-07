@@ -1,5 +1,20 @@
 [
   {
+<<<<<<< Updated upstream
+=======
+    "date": "2026-09-07",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 25,
+      "openBugs": 22,
+      "resolvedBugs": 6,
+      "filtered": 10
+    },
+    "path": "data/2026-09-07.json",
+    "htmlArchive": "../2026-09-07.html"
+  },
+  {
+>>>>>>> Stashed changes
     "date": "2026-09-06",
     "title": "Latent feedback dig",
     "summaryStats": {

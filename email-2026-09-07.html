@@ -1,0 +1,70 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Sep 7</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English · covers Sunday morning through this morning (Monday)</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-07" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-09-07</a>
+  </p>
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><strong>Ved opened the blocked-bug fix PRs</strong> overnight: Nico scrub (<a href="https://github.com/eddie-the-lou/latent/pull/62">#62</a>), lera pause/duration (<a href="https://github.com/eddie-the-lou/latent/pull/65">#65</a>), zozo Resume (<a href="https://github.com/eddie-the-lou/latent/pull/66">#66</a>), zozo ramping speed (<a href="https://github.com/eddie-the-lou/latent/pull/67">#67</a>), RAM (<a href="https://github.com/eddie-the-lou/latent/pull/63">#63</a>), keyboard hang follow-up (<a href="https://github.com/eddie-the-lou/latent/pull/64">#64</a>), Charan 502 guard (<a href="https://github.com/eddie-the-lou/latent/pull/68">#68</a>), plus storage cleanup (<a href="https://github.com/eddie-the-lou/latent/pull/59">#59</a>) undrafted. All mergeable on GitHub — but every one fails LatentServiceTests, same as main.</li>
+    <li style="margin:0 0 6px">You merged <a href="https://github.com/eddie-the-lou/latent/pull/77">#77 One 9:16 session card</a> + record-polish overnight (HEAD <code>899375165eb9</code>). Still build <strong>16</strong> — ship a new TestFlight when you’re ready.</li>
+    <li style="margin:0 0 6px"><strong>All open PRs and main Tests are red</strong> on LatentServiceTests. Review for product/logic; don’t merge until CI is green.</li>
+    <li style="margin:0 0 6px">No new user quotes (survey / in-app / Discord / email quiet). Fine-grained GitHub PAT <strong>“grok bot” has expired</strong> — renew so digs/publish keep working.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">What they actually wrote</h2>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#fafafa;border-left:4px solid #999;border-radius:8px;color:#666">
+    None new today. No new survey rows since INOSUKE (already in yesterday’s dig). No new in-app feedback (38 rows unchanged since Sep 3). No new tester bug emails. Discord scrape still pending (if login wall, carry Sep 2 votes).
+  </p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <p style="margin:0 0 10px;padding:12px 14px;background:#fff8e6;border-radius:10px;border:1px solid #f0d78c">
+    <strong>8 bug-fix PRs ready to review</strong> (all MERGEABLE; all LatentServiceTests FAILING — same broken CI as main). Do <em>not</em> launch Cloud Agents — these cover the previously blocked Nico / lera / zozo / RAM / keyboard items.<br><br>
+    <a href="https://github.com/eddie-the-lou/latent/pull/62">#62 Keep timelapse controls tappable after scrubbing</a> — Nico scrub→dead Save/Resume<br>
+    <a href="https://github.com/eddie-the-lou/latent/pull/65">#65 Preserve open-pause timing when saving</a> — lera pause/duration (53→35)<br>
+    <a href="https://github.com/eddie-the-lou/latent/pull/66">#66 Restart camera after background interruption</a> — zozo Resume after tab-out<br>
+    <a href="https://github.com/eddie-the-lou/latent/pull/67">#67 Keep timelapse recovery at constant speed</a> — zozo ramping speed<br>
+    <a href="https://github.com/eddie-the-lou/latent/pull/63">#63 Reduce peak memory during long recordings</a> — Krabby/nour RAM watchdog<br>
+    <a href="https://github.com/eddie-the-lou/latent/pull/64">#64 Gate comment focus on completed text warmup</a> — keyboard hang follow-up<br>
+    <a href="https://github.com/eddie-the-lou/latent/pull/68">#68 Guard playback edge functions against cold-start</a> — Charan 502 regression guard (prod fix already on main)<br>
+    <a href="https://github.com/eddie-the-lou/latent/pull/59">#59 Add safe local video storage cleanup</a> — chloeho (no longer draft; still CI fail)<br><br>
+    Also open (product / other, also CI red): <a href="https://github.com/eddie-the-lou/latent/pull/70">#70</a>–<a href="https://github.com/eddie-the-lou/latent/pull/76">#76</a> (incl. drafts #74, #76). Overnight you landed <a href="https://github.com/eddie-the-lou/latent/pull/77">#77</a> + record-polish; still need a new TestFlight for testers.
+  </p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken / confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Nico scrub → Save/Resume dead</strong> — now <a href="https://github.com/eddie-the-lou/latent/pull/62">#62</a>.<br><span style="color:#666">In-app · build 16 · PR ready · CI red</span></li>
+    <li style="margin:0 0 8px"><strong>lera pause didn’t save</strong> + <strong>53→35 photoTimer</strong> — now <a href="https://github.com/eddie-the-lou/latent/pull/65">#65</a>.<br><span style="color:#666">In-app · build 16 · PR ready · CI red</span></li>
+    <li style="margin:0 0 8px"><strong>zozo Resume after tab-out</strong> — now <a href="https://github.com/eddie-the-lou/latent/pull/66">#66</a> (beyond #54 glass).<br><span style="color:#666">In-app · PR ready · CI red</span></li>
+    <li style="margin:0 0 8px"><strong>zozo ramping timelapse</strong> — now <a href="https://github.com/eddie-the-lou/latent/pull/67">#67</a>.<br><span style="color:#666">In-app · build 16 · PR ready · CI red</span></li>
+    <li style="margin:0 0 8px"><strong>chimmyaa clip upload cancelled</strong> — PostHog clip_upload_failed ×1, NSURLError cancelled (-999), ~4:25am PT Mon, build 16. Watching (cancel often = left mid-upload).<br><span style="color:#666">PostHog · Sep 6 was 0</span></li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Free up video storage on phone</strong> — chloe / chloeho; <a href="https://github.com/eddie-the-lou/latent/pull/59">#59</a> undrafted (still CI fail).<br><span style="color:#666">In-app · PR ready</span></li>
+    <li style="margin:0 0 8px"><strong>Time tables for last few days’ duration</strong> — Emiliano Cota (Spanish survey, Somewhat disappointed).<br><span style="color:#666">PMF survey · Wed 6:27pm PT</span></li>
+    <li style="margin:0 0 8px"><strong>Better download structure</strong> — Shaquille_oatmeal.<br><span style="color:#666">PMF survey</span></li>
+    <li style="margin:0 0 8px"><strong>Subtags / custom thumbnail / communities</strong> — last known Discord votes from Sep 2 (✅11 / ✅11 / ✅12); Discord scrape still pending today.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Ops heads-up</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Fine-grained GitHub PAT “grok bot” EXPIRED</strong> — escalate from yesterday’s “expires in 1 day.” Email Sat evening to eddie@weaive.app. Renew so digs / publish keep working.</li>
+    <li style="margin:0 0 8px"><strong>Main Tests CI still failing</strong> LatentServiceTests on every recent merge (including #77). Same red on all open Ved PRs.</li>
+    <li style="margin:0 0 8px"><strong>Still build 16</strong> — MARKETING_VERSION 1.0.1 / CURRENT_PROJECT_VERSION 16. Need a new TestFlight for #77 + record-polish + whatever you merge next.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Sources checked</h2>
+  <ul style="padding-left:18px;margin:0 0 18px;color:#444;font-size:14px">
+    <li>Discord — LOGIN WALL; votes carried from Sep 2; if LOGIN WALL, carry Sep 2 votes</li>
+    <li>Email — 0 new tester bug mail; PAT expired; CI / spam noise</li>
+    <li>In-app — 38 rows; no NEW since Sep 3</li>
+    <li>Crash reports — Sentry MCP needsAuth; not scraped this morning</li>
+    <li>Product analytics — session_save_blocked 0; clip_upload_failed Sep 7 partial chimmyaa ×1 cancel; rageclick Fri 91 / Sat 79 / Sun partial 41</li>
+    <li>PMF survey — Active 63; Sean Ellis 36 / 25 / 2; no NEW since INOSUKE; forced-choice empty</li>
+    <li>GitHub — merged #77 + record-polish + #69; HEAD 899375165eb9 · still build 16; 8 bug-fix PRs ready (#59,#62–#68) all CI red; no Cloud Agents launched</li>
+  </ul>
+  <p style="color:#888;font-size:12px;margin-top:24px">Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-07">https://eddie-the-lou.github.io/latent-digs/#/2026-09-07</a></p>
+</body></html>
