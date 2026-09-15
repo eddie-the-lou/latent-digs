@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-09-15",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 32,
+      "openBugs": 27,
+      "resolvedBugs": 8,
+      "filtered": 10
+    },
+    "path": "data/2026-09-15.json",
+    "htmlArchive": "../2026-09-15.html"
+  },
+  {
+    "date": "2026-09-13",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 30,
+      "openBugs": 26,
+      "resolvedBugs": 6,
+      "filtered": 10
+    },
+    "path": "data/2026-09-13.json",
+    "htmlArchive": "../2026-09-13.html"
+  },
+  {
     "date": "2026-09-12",
     "title": "Latent feedback dig",
     "summaryStats": {
