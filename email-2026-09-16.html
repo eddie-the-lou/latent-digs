@@ -1,0 +1,67 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Sep 16</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English · manual rerun (9am PT miss)</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-16" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-09-16</a>
+  </p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px"><li style="margin:0 0 6px">4 NEW in-app notes on build 24: Slade’s camera-off session timer pauses when the phone locks (clear bug — needs a Cloud Agent). Slade also asked to prevent Auto-Lock during sessions. shlokp wants in-app white noise + a “work until 4pm” countdown mode.</li><li style="margin:0 0 6px">Yesterday’s two Cloud Agents finished as draft PRs ready for you: #148 hide own sessions from the friends feed (shlokp), #149 RecordFlow hang APPLE-IOS-2M. Still do not merge while LatentServiceTests is red.</li><li style="margin:0 0 6px">Sentry: NEW single hangs — 2W RecordFlow again (anonymoussushi1071, build 21 → same lane as #149), 2X HomeFeed/dayLens (rebecca, build 23), 2Y vague main-queue (rebecca), 2Z SwiftUI malloc (cheese, build 21). Fatal APPLE-IOS-W hit winnergamerar on build 24 (~1:11pm PT). Watching singles; 2M/2W owned by #149.</li><li style="margin:0 0 6px">Discord not re-scraped this run (browser tool unavailable to the dig runner). Gmail: 0 new tester bug emails; Jayden confirmed iPad stuck on 16.7.x / waiting on Android. Survey unchanged (65 · Sean Ellis 38/25/2). PostHog: clip_upload_failed Tue 2 / Wed partial 2; session_save_failed Tue 1 / Wed 0; rageclicks still warm (~129–136). Clip-bloat alert not firing.</li><li style="margin:0 0 6px">Open review queue unchanged aside from new drafts: Ved #59/#62/#64–#68/#70–#76, Malcolm #87/#123, plus #148/#149. CI LatentServiceTests still failing on main (and on the new agent branches). Box dig GitHub token still 401 — archive publish may need your Mac login.</li></ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <p style="margin:0 0 8px;color:#444">New drafts from yesterday’s agents (do not merge while LatentServiceTests is red):</p>
+  <ul style="padding-left:18px;margin:0 0 12px">
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/148">#148</a> — Hide own sessions from the friends feed (shlokp)</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/149">#149</a> — RecordFlow hang APPLE-IOS-2M (also covers NEW 2W)</li>
+  </ul>
+  <p style="margin:0 0 8px;color:#444">Still waiting from earlier:</p>
+  <ul style="padding-left:18px;margin:0 0 12px">
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/59">#59</a> — Local video storage cleanup (Ved)</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/62">#62</a> — Scrub then dead Save/Resume</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/64">#64</a> — Comment keyboard hang warmup</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/65">#65</a> — Pause didn’t save / duration under-count</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/66">#66</a> — Resume after leaving the app</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/67">#67</a> — Timelapse speed ramp</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/68">#68</a> — Playback-url 502 cold start guard</li>
+  </ul>
+  <p style="margin:0 0 18px;color:#444">Also open: Ved <a href="https://github.com/eddie-the-lou/latent/pulls?q=is%3Aopen+author%3AVedSoni-dev">#70–#76</a>, Malcolm <a href="https://github.com/eddie-the-lou/latent/pull/87">#87</a> / <a href="https://github.com/eddie-the-lou/latent/pull/123">#123</a>.</p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken / confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><strong>Timer stops when the phone locks</strong> — slade_s, camera-off session, build 24. Needs a Cloud Agent (not launched this dig — please kick one with Grok 4.6).</li>
+    <li style="margin:0 0 6px"><strong>Own videos on the feed</strong> — shlokp. Draft <a href="https://github.com/eddie-the-lou/latent/pull/148">#148</a>.</li>
+    <li style="margin:0 0 6px"><strong>Record screen freeze</strong> — riya + anonymoussushi1071 (APPLE-IOS-2M/2W). Draft <a href="https://github.com/eddie-the-lou/latent/pull/149">#149</a>.</li>
+    <li style="margin:0 0 6px"><strong>New single hangs</strong> — rebecca HomeFeed (2X/2Y build 23), cheese malloc (2Z build 21); fatal APPLE-IOS-W on winnergamerar build 24. Watching.</li>
+    <li style="margin:0 0 6px">CI <code>LatentServiceTests</code> still failing on main.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><strong>Prevent Auto-Lock during sessions</strong> — slade_s (also the fix for their timer bug).</li>
+    <li style="margin:0 0 6px"><strong>In-app white noise</strong> — shlokp.</li>
+    <li style="margin:0 0 6px"><strong>Work-until clock time (e.g. 4pm)</strong> — shlokp.</li>
+    <li style="margin:0 0 6px"><strong>Web/Windows someday</strong> — Jayden (email; iPad stuck on 16.7.x).</li>
+    <li style="margin:0 0 6px">Earlier: mia year Wrapped; passioncuber Android; lera wide availability.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">What they actually wrote</h2>
+  <blockquote style="margin:0 0 14px;padding:10px 12px;border-left:3px solid #444;background:#f7f7f7">
+    <div style="font-size:12px;color:#666;margin:0 0 6px">shlokp · Wed Sep 16 · 12:01am PT · build 1.0.1 (24) · In-app feedback</div>
+    <div style="white-space:pre-wrap">In app white noise 🙏🙏🙏</div>
+  </blockquote>  <blockquote style="margin:0 0 14px;padding:10px 12px;border-left:3px solid #444;background:#f7f7f7">
+    <div style="font-size:12px;color:#666;margin:0 0 6px">slade_s · Tue Sep 15 · 11:08pm PT · build 1.0.1 (24) · In-app feedback</div>
+    <div style="white-space:pre-wrap">Would it be possible to have Latent prevent Auto-Lock while a time-lapse/study session is active? I have issues where my phone turns off when I’m in a study session (not a time-lapse) and it stops the timer, so I think this setting option could be very beneficial, especially paired with the screen dim setting that already exists.</div>
+  </blockquote>  <blockquote style="margin:0 0 14px;padding:10px 12px;border-left:3px solid #444;background:#f7f7f7">
+    <div style="font-size:12px;color:#666;margin:0 0 6px">slade_s · Tue Sep 15 · 11:02pm PT · build 1.0.1 (24) · In-app feedback</div>
+    <div style="white-space:pre-wrap">When I am doing a session without a video, my phone locks after a while and the timer pauses, so when I come back the timer is incorrect and stopped itself because I didn’t go back once it was paused.</div>
+  </blockquote>  <blockquote style="margin:0 0 14px;padding:10px 12px;border-left:3px solid #444;background:#f7f7f7">
+    <div style="font-size:12px;color:#666;margin:0 0 6px">shlokp · Tue Sep 15 · 9:40pm PT · build 1.0.1 (24) · In-app feedback</div>
+    <div style="white-space:pre-wrap">Make a mode where you can try and set a time to work towards re. 4pm</div>
+  </blockquote>  <blockquote style="margin:0 0 14px;padding:10px 12px;border-left:3px solid #444;background:#f7f7f7">
+    <div style="font-size:12px;color:#666;margin:0 0 6px">Jayden · Tue Sep 15 · 7:22pm PT · build — · Gmail</div>
+    <div style="white-space:pre-wrap">Likewise! I was able to download testflight, but like we discovered yesterday, my ipad updates stop at 16.7.16 sadly. I&#x27;m looking forward to Latent&#x27;s progeess regardless! Perhaps a web/windows version will also be available someday 👀.</div>
+  </blockquote>
+
+  <p style="color:#888;font-size:12px;margin:24px 0 0">Unpaid Intern · Latent daily dig · 2026-09-16</p>
+</body></html>
