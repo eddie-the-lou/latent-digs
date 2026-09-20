@@ -1,0 +1,55 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Sep 17</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English · 9:00 AM PT dig</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-17" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-09-17</a>
+  </p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px"><li style="margin:0 0 6px">1 NEW in-app note: willow (build 24) wants an optional face blur for days they didn’t dress up but still want the timelapse.</li><li style="margin:0 0 6px">Good news: yesterday’s Slade Auto-Lock / camera-off timer Cloud Agent finished as PR #160 — ready for your look (with #148 own-feed and #149 RecordFlow).</li><li style="margin:0 0 6px">Sentry overnight/morning: 5 NEW single-user hangs on build 24 — APPLE-IOS-30 DraftStore/timer (drizzy), 31 PrivacyFilter fatal, 32 camera rotation (drizzy), 33 button-style fatal (drizzy), 34 SaveSessionView hitch (study/kenny). Watching singles; no new Cloud Agents.</li><li style="margin:0 0 6px">Discord scrape attempted but did not return a usable dump (likely login wall). Gmail: 0 new tester bug emails. Survey unchanged (65 · Sean Ellis 38/25/2). PostHog: clip_upload_failed Wed 0 / Thu partial 1 (timeouts/offline); session_save_failed 0/0; rageclicks Wed 193 / Thu partial 37. Clip-bloat alert Not firing (~1.56 MB/s).</li><li style="margin:0 0 6px">Review queue: NEW #160 plus drafts #148/#149; still Ved #59/#62/#64–#68/#70–#76 and Malcolm #87/#123. CI LatentServiceTests still failing (incl. on camera-off-lock branches). Box dig GitHub token still 401; Mac offline this morning — archive publish may lag until Mac is back.</li></ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <p style="margin:0 0 8px;color:#444">New overnight:</p>
+  <ul style="padding-left:18px;margin:0 0 12px">
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/160">#160</a> — Camera-off timer keeps running when the phone locks (slade_s) + prevent Auto-Lock</li>
+  </ul>
+  <p style="margin:0 0 8px;color:#444">Still waiting:</p>
+  <ul style="padding-left:18px;margin:0 0 12px">
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/148">#148</a> — Hide own sessions from the friends feed (shlokp)</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/149">#149</a> — RecordFlow hang APPLE-IOS-2M/2W</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/59">#59</a> — Local video storage cleanup (Ved)</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/62">#62</a> — Scrub then dead Save/Resume</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/64">#64</a> — Comment keyboard hang warmup</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/65">#65</a> — Pause didn’t save / duration under-count</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/66">#66</a> — Resume after leaving the app</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/67">#67</a> — Timelapse speed ramp</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/68">#68</a> — Playback-url 502 cold start guard</li>
+  </ul>
+  <p style="margin:0 0 18px;color:#444">Also open: Ved <a href="https://github.com/eddie-the-lou/latent/pulls?q=is%3Aopen+author%3AVedSoni-dev">#70–#76</a>, Malcolm <a href="https://github.com/eddie-the-lou/latent/pull/87">#87</a> / <a href="https://github.com/eddie-the-lou/latent/pull/123">#123</a>. Do not merge while <code>LatentServiceTests</code> is red.</p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken / confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><strong>Timer stopped when the phone locked</strong> — slade_s. Fix is ready as <a href="https://github.com/eddie-the-lou/latent/pull/160">#160</a>.</li>
+    <li style="margin:0 0 6px"><strong>Own videos on the feed</strong> — shlokp. Draft <a href="https://github.com/eddie-the-lou/latent/pull/148">#148</a>.</li>
+    <li style="margin:0 0 6px"><strong>Record screen freeze</strong> — Draft <a href="https://github.com/eddie-the-lou/latent/pull/149">#149</a>.</li>
+    <li style="margin:0 0 6px"><strong>New single hangs (build 24)</strong> — drizzy cluster APPLE-IOS-30–33 (~4am PT) and study SaveSession hitch APPLE-IOS-34 (~7:46am PT). Watching; no new agents yet.</li>
+    <li style="margin:0 0 6px">CI <code>LatentServiceTests</code> still failing on main.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><strong>Optional face blur</strong> — willow (NEW today).</li>
+    <li style="margin:0 0 6px"><strong>Prevent Auto-Lock during sessions</strong> — slade_s (bundled with #160).</li>
+    <li style="margin:0 0 6px"><strong>In-app white noise</strong> — shlokp.</li>
+    <li style="margin:0 0 6px"><strong>Work-until clock time (e.g. 4pm)</strong> — shlokp.</li>
+    <li style="margin:0 0 6px">Earlier: mia year Wrapped; passioncuber Android; Jayden web/Windows; lera wide availability.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">What they actually wrote</h2>
+  <blockquote style="margin:0 0 14px;padding:10px 12px;border-left:3px solid #444;background:#f7f7f7">
+    <div style="font-size:12px;color:#666;margin:0 0 6px">willow · Thu Sep 17 · 7:07am PT · build 1.0.1 (24) · In-app feedback</div>
+    <div style="white-space:pre-wrap">Maybe a feature to blur your face could be nice!! For days i didnt dress up but the video will still have my face in it</div>
+  </blockquote>
+  <p style="color:#888;font-size:12px;margin:24px 0 0">Unpaid Intern · Latent daily dig · 2026-09-17</p>
+</body></html>

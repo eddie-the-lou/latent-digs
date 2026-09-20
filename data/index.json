@@ -1,15 +1,64 @@
 [
   {
-    "date": "2026-09-16",
+    "date": "2026-09-20",
     "title": "Latent feedback dig",
     "summaryStats": {
-      "openFeatures": 32,
-      "openBugs": 27,
+      "openFeatures": 6,
+      "openBugs": 5,
+      "resolvedBugs": 0,
+      "filtered": 0,
+      "rawQuotes": 1
+    },
+    "path": "data/2026-09-20.json",
+    "htmlArchive": "../2026-09-20.html"
+  },
+  {
+    "date": "2026-09-19",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 39,
+      "openBugs": 48,
       "resolvedBugs": 8,
       "filtered": 10
     },
-    "path": "data/2026-09-15.json",
-    "htmlArchive": "../2026-09-15.html"
+    "path": "data/2026-09-19.json",
+    "htmlArchive": "../2026-09-19.html"
+  },
+  {
+    "date": "2026-09-18",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 39,
+      "openBugs": 46,
+      "resolvedBugs": 8,
+      "filtered": 10
+    },
+    "path": "data/2026-09-18.json",
+    "htmlArchive": "../2026-09-18.html"
+  },
+  {
+    "date": "2026-09-17",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 36,
+      "openBugs": 38,
+      "resolvedBugs": 8,
+      "filtered": 10
+    },
+    "path": "data/2026-09-17.json",
+    "htmlArchive": "../2026-09-17.html"
+  },
+  {
+    "date": "2026-09-16",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 35,
+      "openBugs": 33,
+      "resolvedBugs": 8,
+      "filtered": 10
+    },
+    "path": "data/2026-09-16.json",
+    "htmlArchive": "../2026-09-16.html"
   },
   {
     "date": "2026-09-15",

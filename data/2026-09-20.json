@@ -1,0 +1,1068 @@
+{
+  "date": "2026-09-20",
+  "title": "Latent daily review \u00b7 Sep 20",
+  "generatedAt": "2026-09-20T16:09:20.897555+00:00",
+  "tldr": [
+    "One new in-app note from suki (sukirthan): add a Message button on profiles, and open Latent on the home feed instead of the camera so startup feels snappier. Profile\u2192DM is already on Linear TRY-54 (In Progress with Malcolm).",
+    "You closed a bunch of Linear work overnight as Done with PRs: #201 camera-off (TRY-92), #202 tag split typing (TRY-94), #203 dim notice copy (TRY-97), #204 app-blocking clarity (TRY-96), #205 feed taps / retry (TRY-98 + TRY-99). GitHub API auth is still dead on the box, so merge state isn\u2019t re-checked here \u2014 Linear says Done.",
+    "Still waiting on earlier Cloud Agent PRs if not merged: #188 delete-account icon, #189 ghost timer, #160 Auto-Lock (likely overlapped by #201), #148 own-feed, #149 RecordFlow. CI has been failing on main/PR Tests overnight.",
+    "Sentry NEW: APPLE-IOS-3D faroos274 ~7min CaptureView.dimPowerInputs hang on build 24 \u2014 started Cloud Agent (Grok 4.6). Watching singles 3E (rami stack overflow, iOS 27) and 3F (win SwiftUI scroll hang, build 25). Continuing: A (watchdog, saw build 26 on your phone), 7 (haptic engine noise), 3B/3C from yesterday.",
+    "Survey unchanged (65 \u00b7 Sean Ellis 38/25/2). PostHog: clip_upload_failed Sep18=1 / Sep19=3 / Sep20=1 so far; rageclicks Sep18=128 / Sep19=167 / Sep20 partial 94. Clip-bloat alert Not firing (~1.56 MB/s).",
+    "Discord: Trudy asked about a Linux version in #questions (toasted replied: macOS/iOS only). #general-chat had friend-add chatter (Kot770 / toasted / fusion) after the cutoff \u2014 not product bugs. #feature-requests not re-confirmed in this pass."
+  ],
+  "plainTldr": [
+    "One new in-app note from suki (sukirthan): add a Message button on profiles, and open Latent on the home feed instead of the camera so startup feels snappier. Profile\u2192DM is already on Linear TRY-54 (In Progress with Malcolm).",
+    "You closed a bunch of Linear work overnight as Done with PRs: #201 camera-off (TRY-92), #202 tag split typing (TRY-94), #203 dim notice copy (TRY-97), #204 app-blocking clarity (TRY-96), #205 feed taps / retry (TRY-98 + TRY-99). GitHub API auth is still dead on the box, so merge state isn\u2019t re-checked here \u2014 Linear says Done.",
+    "Still waiting on earlier Cloud Agent PRs if not merged: #188 delete-account icon, #189 ghost timer, #160 Auto-Lock (likely overlapped by #201), #148 own-feed, #149 RecordFlow. CI has been failing on main/PR Tests overnight.",
+    "Sentry NEW: APPLE-IOS-3D faroos274 ~7min CaptureView.dimPowerInputs hang on build 24 \u2014 started Cloud Agent (Grok 4.6). Watching singles 3E (rami stack overflow, iOS 27) and 3F (win SwiftUI scroll hang, build 25). Continuing: A (watchdog, saw build 26 on your phone), 7 (haptic engine noise), 3B/3C from yesterday.",
+    "Survey unchanged (65 \u00b7 Sean Ellis 38/25/2). PostHog: clip_upload_failed Sep18=1 / Sep19=3 / Sep20=1 so far; rageclicks Sep18=128 / Sep19=167 / Sep20 partial 94. Clip-bloat alert Not firing (~1.56 MB/s).",
+    "Discord: Trudy asked about a Linux version in #questions (toasted replied: macOS/iOS only). #general-chat had friend-add chatter (Kot770 / toasted / fusion) after the cutoff \u2014 not product bugs. #feature-requests not re-confirmed in this pass."
+  ],
+  "stats": {
+    "newInApp": 1,
+    "newDiscord": 2,
+    "newSurveyRows": 0,
+    "seanEllis": {
+      "very": 38,
+      "somewhat": 25,
+      "not": 2,
+      "n": 65
+    },
+    "sentryNew": [
+      "APPLE-IOS-3D",
+      "APPLE-IOS-3E",
+      "APPLE-IOS-3F"
+    ],
+    "posthog": {
+      "uploadFailed": {
+        "2026-09-18": 1,
+        "2026-09-19": 3,
+        "2026-09-20": 1
+      },
+      "rageclicks": {
+        "2026-09-18": 128,
+        "2026-09-19": 167,
+        "2026-09-20": 94
+      },
+      "clipBloatAlert": "Not firing",
+      "clipBloatLastValue": 1.564
+    }
+  },
+  "prStatus": {
+    "waiting": [
+      {
+        "pr": 188,
+        "title": "delete-account warning icon",
+        "url": "https://github.com/eddie-the-lou/latent/pull/188"
+      },
+      {
+        "pr": 189,
+        "title": "ghost home-screen timer",
+        "url": "https://github.com/eddie-the-lou/latent/pull/189"
+      },
+      {
+        "pr": 160,
+        "title": "camera-off Auto-Lock (maybe superseded by #201)",
+        "url": "https://github.com/eddie-the-lou/latent/pull/160"
+      },
+      {
+        "pr": 148,
+        "title": "own sessions out of friends feed",
+        "url": "https://github.com/eddie-the-lou/latent/pull/148"
+      },
+      {
+        "pr": 149,
+        "title": "RecordFlow hang",
+        "url": "https://github.com/eddie-the-lou/latent/pull/149"
+      }
+    ],
+    "eddieOvernightDone": [
+      {
+        "pr": 201,
+        "title": "camera-off lock/dim",
+        "url": "https://github.com/eddie-the-lou/latent/pull/201",
+        "linear": "TRY-92"
+      },
+      {
+        "pr": 202,
+        "title": "tag split typing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/202",
+        "linear": "TRY-94"
+      },
+      {
+        "pr": 203,
+        "title": "dim notice copy",
+        "url": "https://github.com/eddie-the-lou/latent/pull/203",
+        "linear": "TRY-97"
+      },
+      {
+        "pr": 204,
+        "title": "app-blocking clarity",
+        "url": "https://github.com/eddie-the-lou/latent/pull/204",
+        "linear": "TRY-96"
+      },
+      {
+        "pr": 205,
+        "title": "feed taps / clip reorder",
+        "url": "https://github.com/eddie-the-lou/latent/pull/205",
+        "linear": "TRY-98/99"
+      }
+    ],
+    "agentsSpinning": [
+      {
+        "id": "bc-b74a0dc3-c63c-5039-ab90-1b299ac4cbb6",
+        "title": "APPLE-IOS-3D dimPowerInputs",
+        "url": "https://cursor.com/agents/bc-b74a0dc3-c63c-5039-ab90-1b299ac4cbb6"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source": "In-app feedback",
+      "items": [
+        {
+          "who": "suki",
+          "summary": "NEW: profile\u2192DM button + launch on home feed (build 24)",
+          "novelty": "new",
+          "when": "Fri Sep 19 \u00b7 9:27am PT",
+          "build": "1.0.1 (24)",
+          "kind": "feature",
+          "text": "Have a feature or a button to open that person\u2019s direct messages directly from the person\u2019s profile. It would be great because after checking one\u2019s profile if we have to message them, we have again go back and then get into the direct messages page. so having a button to quickly go to that person\u2018s direct messages while being on his or her profile would be great. \n\nAnother one. When the app is being started rather than being on the camera page, being on the home feed would be better because opening the camera while the app is starting, would make the app a little bit laggier. So it would be the best if the app is on the homepage when it is opened."
+        }
+      ]
+    },
+    {
+      "source": "Email",
+      "items": [
+        {
+          "who": "alxthealien",
+          "summary": "No NEW product ask (thank-you already in Sep 19 dig). No other user bug emails with attachments since cutoff.",
+          "novelty": "none",
+          "when": "cutoff after Sep 19 dig"
+        }
+      ]
+    },
+    {
+      "source": "Discord",
+      "items": [
+        {
+          "who": "Trudy",
+          "summary": "NEW #questions: is there a Linux version?",
+          "novelty": "new",
+          "when": "Fri Sep 19 \u00b7 ~4:32pm PT",
+          "text": "can you tell me if there is a linux version for this app? or it's just macos..."
+        },
+        {
+          "who": "toasted",
+          "summary": "Replied: no Linux, macOS + iOS only",
+          "novelty": "new",
+          "when": "Fri Sep 19 \u00b7 ~4:40pm PT",
+          "text": "unfortunately there is no a linux version for the app at this moment in time. only for macos and ios."
+        },
+        {
+          "who": "Kot770 / toasted / fusion",
+          "summary": "NEW #general-chat friend-add chatter (not a product ask)",
+          "novelty": "new",
+          "when": "Fri Sep 19 afternoon"
+        }
+      ]
+    },
+    {
+      "source": "Sentry",
+      "items": [
+        {
+          "who": "faroos274",
+          "summary": "NEW APPLE-IOS-3D dimPowerInputs hang \u2192 Cloud Agent",
+          "novelty": "new",
+          "when": "Sat Sep 19 ~7:40pm PT"
+        },
+        {
+          "who": "rami",
+          "summary": "NEW APPLE-IOS-3E stack overflow \u2014 watching",
+          "novelty": "new",
+          "when": "Sun Sep 20 ~5:44am PT"
+        },
+        {
+          "who": "win",
+          "summary": "NEW APPLE-IOS-3F scroll hang \u2014 watching",
+          "novelty": "new",
+          "when": "Sun Sep 20 ~8:35am PT"
+        },
+        {
+          "who": "eddie + others",
+          "summary": "APPLE-IOS-A watchdog still active (build 26 seen)",
+          "novelty": "continuing",
+          "when": "last ~10h"
+        },
+        {
+          "who": "drizzy + others",
+          "summary": "APPLE-IOS-7 haptic ~7\u20138s hang ongoing (noise)",
+          "novelty": "continuing",
+          "when": "last ~2h"
+        }
+      ]
+    },
+    {
+      "source": "PostHog",
+      "items": [
+        {
+          "who": "\u2014",
+          "summary": "clip_upload_failed: Sep18=1, Sep19=3, Sep20=1 (partial)",
+          "novelty": "continuing"
+        },
+        {
+          "who": "\u2014",
+          "summary": "rageclicks: Sep18=128, Sep19=167, Sep20=94 (partial)",
+          "novelty": "continuing"
+        },
+        {
+          "who": "\u2014",
+          "summary": "Clip bloat alert Not firing \u00b7 last_value ~1.56 MB/s",
+          "novelty": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "PMF survey",
+      "items": [
+        {
+          "who": "\u2014",
+          "summary": "Unchanged: Active 65 (Sean Ellis 38/25/2), Tried but Churned 6, Downloaded no record 8. 0 new rows. Build-one column still empty.",
+          "novelty": "none"
+        }
+      ]
+    },
+    {
+      "source": "Linear / GitHub",
+      "items": [
+        {
+          "who": "Eddie",
+          "summary": "TRY-92/94/96/97/98/99 \u2192 Done with PRs #201\u2013#205 overnight",
+          "novelty": "new"
+        },
+        {
+          "who": "\u2014",
+          "summary": "Earlier dig PRs #188/#189/#160/#148/#149 still listed until merge confirmed",
+          "novelty": "continuing"
+        },
+        {
+          "who": "\u2014",
+          "summary": "Box GH_TOKEN dead; Mac offline \u2014 can\u2019t list open PRs or publish archive",
+          "novelty": "continuing"
+        }
+      ]
+    }
+  ],
+  "bySource": [
+    {
+      "source": "In-app feedback",
+      "items": [
+        {
+          "who": "suki",
+          "summary": "NEW: profile\u2192DM button + launch on home feed (build 24)",
+          "novelty": "new",
+          "when": "Fri Sep 19 \u00b7 9:27am PT",
+          "build": "1.0.1 (24)",
+          "kind": "feature",
+          "text": "Have a feature or a button to open that person\u2019s direct messages directly from the person\u2019s profile. It would be great because after checking one\u2019s profile if we have to message them, we have again go back and then get into the direct messages page. so having a button to quickly go to that person\u2018s direct messages while being on his or her profile would be great. \n\nAnother one. When the app is being started rather than being on the camera page, being on the home feed would be better because opening the camera while the app is starting, would make the app a little bit laggier. So it would be the best if the app is on the homepage when it is opened."
+        }
+      ]
+    },
+    {
+      "source": "Email",
+      "items": [
+        {
+          "who": "alxthealien",
+          "summary": "No NEW product ask (thank-you already in Sep 19 dig). No other user bug emails with attachments since cutoff.",
+          "novelty": "none",
+          "when": "cutoff after Sep 19 dig"
+        }
+      ]
+    },
+    {
+      "source": "Discord",
+      "items": [
+        {
+          "who": "Trudy",
+          "summary": "NEW #questions: is there a Linux version?",
+          "novelty": "new",
+          "when": "Fri Sep 19 \u00b7 ~4:32pm PT",
+          "text": "can you tell me if there is a linux version for this app? or it's just macos..."
+        },
+        {
+          "who": "toasted",
+          "summary": "Replied: no Linux, macOS + iOS only",
+          "novelty": "new",
+          "when": "Fri Sep 19 \u00b7 ~4:40pm PT",
+          "text": "unfortunately there is no a linux version for the app at this moment in time. only for macos and ios."
+        },
+        {
+          "who": "Kot770 / toasted / fusion",
+          "summary": "NEW #general-chat friend-add chatter (not a product ask)",
+          "novelty": "new",
+          "when": "Fri Sep 19 afternoon"
+        }
+      ]
+    },
+    {
+      "source": "Sentry",
+      "items": [
+        {
+          "who": "faroos274",
+          "summary": "NEW APPLE-IOS-3D dimPowerInputs hang \u2192 Cloud Agent",
+          "novelty": "new",
+          "when": "Sat Sep 19 ~7:40pm PT"
+        },
+        {
+          "who": "rami",
+          "summary": "NEW APPLE-IOS-3E stack overflow \u2014 watching",
+          "novelty": "new",
+          "when": "Sun Sep 20 ~5:44am PT"
+        },
+        {
+          "who": "win",
+          "summary": "NEW APPLE-IOS-3F scroll hang \u2014 watching",
+          "novelty": "new",
+          "when": "Sun Sep 20 ~8:35am PT"
+        },
+        {
+          "who": "eddie + others",
+          "summary": "APPLE-IOS-A watchdog still active (build 26 seen)",
+          "novelty": "continuing",
+          "when": "last ~10h"
+        },
+        {
+          "who": "drizzy + others",
+          "summary": "APPLE-IOS-7 haptic ~7\u20138s hang ongoing (noise)",
+          "novelty": "continuing",
+          "when": "last ~2h"
+        }
+      ]
+    },
+    {
+      "source": "PostHog",
+      "items": [
+        {
+          "who": "\u2014",
+          "summary": "clip_upload_failed: Sep18=1, Sep19=3, Sep20=1 (partial)",
+          "novelty": "continuing"
+        },
+        {
+          "who": "\u2014",
+          "summary": "rageclicks: Sep18=128, Sep19=167, Sep20=94 (partial)",
+          "novelty": "continuing"
+        },
+        {
+          "who": "\u2014",
+          "summary": "Clip bloat alert Not firing \u00b7 last_value ~1.56 MB/s",
+          "novelty": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "PMF survey",
+      "items": [
+        {
+          "who": "\u2014",
+          "summary": "Unchanged: Active 65 (Sean Ellis 38/25/2), Tried but Churned 6, Downloaded no record 8. 0 new rows. Build-one column still empty.",
+          "novelty": "none"
+        }
+      ]
+    },
+    {
+      "source": "Linear / GitHub",
+      "items": [
+        {
+          "who": "Eddie",
+          "summary": "TRY-92/94/96/97/98/99 \u2192 Done with PRs #201\u2013#205 overnight",
+          "novelty": "new"
+        },
+        {
+          "who": "\u2014",
+          "summary": "Earlier dig PRs #188/#189/#160/#148/#149 still listed until merge confirmed",
+          "novelty": "continuing"
+        },
+        {
+          "who": "\u2014",
+          "summary": "Box GH_TOKEN dead; Mac offline \u2014 can\u2019t list open PRs or publish archive",
+          "novelty": "continuing"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "id": "linux-version-trudy",
+      "title": "Linux version (Trudy)",
+      "plainTitle": "Is there a Linux version?",
+      "plainSummary": "Trudy asked in Discord #questions whether Latent runs on Linux or only macOS. toasted replied macOS + iOS only. Same platform-reach lane as Android/web.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Logged \u00b7 park with Android/web until denser graph",
+      "people": [
+        "Trudy",
+        "toasted"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Discord #questions \u00b7 Trudy \u00b7 Sep 19"
+        }
+      ],
+      "detail": "can you tell me if there is a linux version for this app? or it's just macos...",
+      "actionNote": "Platform reach \u2014 not auto-fixing.",
+      "novelty": "new",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "Discord #questions \u00b7 Fri Sep 19 \u00b7 ~4:32pm PT"
+        }
+      ]
+    },
+    {
+      "id": "profile-dm-button-suki",
+      "title": "Message button on profile",
+      "plainTitle": "Open someone\u2019s DMs straight from their profile",
+      "plainSummary": "suki (build 24) wants a button on a person\u2019s profile to jump into that DM instead of backing out to Messages. Already called out on Linear TRY-54 (In Progress).",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Owned by TRY-54 \u00b7 no new PR",
+      "people": [
+        "suki",
+        "sukirthan"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "In-app feedback \u00b7 suki \u00b7 Sep 19 \u00b7 build 24"
+        }
+      ],
+      "detail": "Have a feature or a button to open that person\u2019s direct messages directly from the person\u2019s profile\u2026",
+      "actionNote": "Feature ask \u2014 covered by TRY-54 Messaging/Comment improvements.",
+      "novelty": "new",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "In-app \u00b7 suki \u00b7 Fri Sep 19 \u00b7 9:27am PT \u00b7 build 24"
+        },
+        {
+          "label": "Linear TRY-54",
+          "url": "https://linear.app/trylatent/issue/TRY-54/messagingcomment-feature-improvements"
+        }
+      ]
+    },
+    {
+      "id": "launch-on-home-feed-suki",
+      "title": "Start on home feed instead of camera",
+      "plainTitle": "Open the app on the home feed, not the camera",
+      "plainSummary": "suki says launching into the camera makes startup feel laggy; prefers landing on the home feed.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Idea backlog \u00b7 no PR",
+      "people": [
+        "suki"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "In-app feedback \u00b7 suki \u00b7 Sep 19 \u00b7 build 24"
+        }
+      ],
+      "detail": "When the app is being started rather than being on the camera page, being on the home feed would be better\u2026",
+      "actionNote": "Feature ask \u2014 cold-start UX; not auto-fixing.",
+      "novelty": "new",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "In-app \u00b7 suki \u00b7 Fri Sep 19 \u00b7 9:27am PT \u00b7 build 24"
+        }
+      ]
+    },
+    {
+      "id": "focus-time-by-tags-s4yy",
+      "title": "All-time / monthly focus time split by tags",
+      "plainTitle": "See how long you focused on each tag (subject)",
+      "plainSummary": "s4yy (build 25) wants all-time and monthly focus totals broken down by tags \u2014 e.g. how long on each subject.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Idea backlog \u00b7 no PR",
+      "people": [
+        "s4yy"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "In-app feedback \u00b7 s4yy \u00b7 Sep 17 \u00b7 build 25"
+        }
+      ],
+      "detail": "In all-time or monthly view of how long you focused, would be great to see it divided by tags (eg for my own use to study diff subjects I would wanna see how long I spent on each subject)",
+      "actionNote": "Feature ask \u2014 Insights/stats by tag. Related to existing tag/stats surface; not a bug.",
+      "novelty": "continuing",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "In-app \u00b7 s4yy \u00b7 Thu Sep 17 \u00b7 4:38pm PT \u00b7 build 25"
+        }
+      ]
+    },
+    {
+      "id": "web-version-sarashamail",
+      "title": "Web version (timelapse without phone / Android reach)",
+      "plainTitle": "A web version so you can record without a phone",
+      "plainSummary": "sarashamail (build 24) wants a web app to document/record timelapses without a phone \u2014 also for Android users. Continues Jayden web/iPad + Android demand lane.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Logged \u00b7 park web/Android until denser graph",
+      "people": [
+        "sarashamail"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "In-app feedback \u00b7 sarashamail \u00b7 Sep 17 \u00b7 build 24"
+        }
+      ],
+      "detail": "Web version of the app so we can document/record our time lapses whn we don\u2019t have a phone; also so more ppl can use, i.e. android users",
+      "actionNote": "Feature ask \u2014 web + Android reach. Same lane as passioncuber/alxthealien Android and Jayden web/iPad. Park until denser graph.",
+      "novelty": "continuing",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "In-app \u00b7 sarashamail \u00b7 Thu Sep 17 \u00b7 10:13am PT \u00b7 build 24"
+        }
+      ]
+    },
+    {
+      "id": "face-blur-willow",
+      "title": "Optional face blur on timelapse",
+      "plainTitle": "Blur your face in the video when you want privacy",
+      "plainSummary": "willow (build 24) wants an optional face blur for days they didn\u2019t dress up but still want the session video.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Idea backlog \u00b7 no PR",
+      "people": [
+        "willow"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "In-app feedback \u00b7 willow \u00b7 Sep 17 \u00b7 build 24"
+        }
+      ],
+      "detail": "Maybe a feature to blur your face could be nice!! For days i didnt dress up but the video will still have my face in it",
+      "actionNote": "Feature ask \u2014 not auto-fixing. Related to privacy / PrivacyFilter Sentry path but this is an intentional product control.",
+      "novelty": "continuing",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "In-app \u00b7 willow \u00b7 Thu Sep 17 \u00b7 7:07am PT \u00b7 build 24"
+        }
+      ]
+    },
+    {
+      "id": "prevent-autolock-slade",
+      "title": "Prevent Auto-Lock during active sessions",
+      "plainTitle": "Keep the phone awake during a study session",
+      "plainSummary": "slade_s (build 24) wants Latent to prevent Auto-Lock while a time-lapse/study session is active \u2014 pairs with existing screen-dim. Directly related to their timer-pause bug. Overnight #201 (TRY-92) marked Done for camera-off lock/dim \u2014 may cover this ask.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Likely covered by #201 / TRY-92 Done \u00b7 confirm",
+      "people": [
+        "slade_s"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "In-app feedback \u00b7 slade_s \u00b7 Sep 15 \u00b7 build 24"
+        }
+      ],
+      "detail": "Would it be possible to have Latent prevent Auto-Lock while a time-lapse/study session is active? I have issues where my phone turns off when I\u2019m in a study session (not a time-lapse) and it stops the timer, so I think this setting option could be very beneficial, especially paired with the screen dim setting that already exists.",
+      "actionNote": "Prefer shipping via #160 Auto-Lock / idle-timer fix rather than a separate feature PR.",
+      "novelty": "continuing",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "In-app \u00b7 slade_s \u00b7 Tue Sep 15 \u00b7 11:08pm PT \u00b7 build 24"
+        }
+      ]
+    }
+  ],
+  "bugs": [
+    {
+      "id": "apple-ios-3d-dimpower-faroos",
+      "title": "APPLE-IOS-3D CaptureView.dimPowerInputs hang (faroos274)",
+      "plainTitle": "Record screen froze about seven minutes on dim/power (faroos274)",
+      "plainSummary": "faroos274 on build 24 hit a fully-blocked ~444s hang while CaptureView was reading dimPowerInputs (Published keypath). Separate from overnight dim-notice copy (#203). Cloud Agent started.",
+      "status": "in_progress",
+      "resolved": false,
+      "actionStatus": "Cloud Agent spinning",
+      "people": [
+        "faroos274"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Sentry APPLE-IOS-3D \u00b7 build 24 \u00b7 Sat Sep 19 ~7:40pm PT"
+        }
+      ],
+      "detail": "App Hang Fully Blocked 444\u2013445s \u00b7 CaptureView.dimPowerInputs.getter",
+      "actionNote": "Clear Latent stack; launched Grok 4.6 agent bc-b74a0dc3.",
+      "novelty": "new",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "Sentry APPLE-IOS-3D",
+          "url": "https://weaive.sentry.io/issues/APPLE-IOS-3D"
+        }
+      ],
+      "url": "https://weaive.sentry.io/issues/APPLE-IOS-3D"
+    },
+    {
+      "id": "apple-ios-3e-stackoverflow-rami",
+      "title": "APPLE-IOS-3E EXC_BAD_ACCESS stack overflow (rami)",
+      "plainTitle": "One hard crash that looks like an infinite stack overflow (rami)",
+      "plainSummary": "rami on build 24 / iOS 27.0 hit a fatal EXC_BAD_ACCESS with a couldNotInstantiate recursion loop \u2014 no clear Latent frame. Watching for a second repro before an agent.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Watching \u00b7 single event \u00b7 iOS 27",
+      "people": [
+        "rami"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Sentry APPLE-IOS-3E \u00b7 build 24 \u00b7 Sun Sep 20 ~5:44am PT"
+        }
+      ],
+      "detail": "Stack overflow \u00b7 _objc_rootAutorelease / couldNotInstantiate loop",
+      "actionNote": "Single event on iOS 27 beta-ish; do not auto-fix yet.",
+      "novelty": "new",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "Sentry APPLE-IOS-3E",
+          "url": "https://weaive.sentry.io/issues/APPLE-IOS-3E"
+        }
+      ],
+      "url": "https://weaive.sentry.io/issues/APPLE-IOS-3E"
+    },
+    {
+      "id": "apple-ios-3f-scroll-win",
+      "title": "APPLE-IOS-3F SwiftUI scroll inset hang (win)",
+      "plainTitle": "One fatal hang deep in SwiftUI scroll layout (win)",
+      "plainSummary": "win on build 25 hit a fatal main-thread hang in UIScrollView SwiftUI content-inset adjust (recursive AttributeGraph). Low free RAM (~95MB). Watching.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Watching \u00b7 single event",
+      "people": [
+        "win"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Sentry APPLE-IOS-3F \u00b7 build 25 \u00b7 Sun Sep 20 ~8:35am PT"
+        }
+      ],
+      "detail": "Fatal App Hang Fully Blocked \u00b7 UIScrollView _swiftui_adjustsContentInsetWhenScrollDisabled",
+      "actionNote": "Single event; SwiftUI-heavy stack with low memory.",
+      "novelty": "new",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "Sentry APPLE-IOS-3F",
+          "url": "https://weaive.sentry.io/issues/APPLE-IOS-3F"
+        }
+      ],
+      "url": "https://weaive.sentry.io/issues/APPLE-IOS-3F"
+    },
+    {
+      "id": "apple-ios-3c-textfield-krabby",
+      "title": "APPLE-IOS-3C text-field hang (krabbykai)",
+      "plainTitle": "App froze ~12s while editing text (krabbykai)",
+      "plainSummary": "krabbykai on build 25 hit a ~12s hang in a text field (selection/update path). Single event. Related neighborhood to old keyboard hangs (#52 landed earlier) \u2014 watching for a second repro before a new agent.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Watching \u00b7 single event",
+      "people": [
+        "krabbykai"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Sentry APPLE-IOS-3C \u00b7 build 25 \u00b7 Sat Sep 19 ~12:21am PT"
+        }
+      ],
+      "detail": "App Hang Non Fully Blocked 12.1\u201312.9s \u00b7 PlatformTextField / setSelection",
+      "actionNote": "Single event; do not duplicate keyboard hang work yet.",
+      "novelty": "continuing",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "Sentry APPLE-IOS-3C",
+          "url": "https://weaive.sentry.io/issues/APPLE-IOS-3C"
+        }
+      ],
+      "url": "https://weaive.sentry.io/issues/APPLE-IOS-3C"
+    },
+    {
+      "id": "apple-ios-3b-a11y-scenekit",
+      "title": "APPLE-IOS-3B accessibility/SceneKit hang",
+      "plainTitle": "One ~5s freeze that looks like an accessibility system load",
+      "plainSummary": "Single hang on build 25 whose stack is mostly iOS accessibility / SceneKit glue \u2014 not a clear Latent screen. Watching.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Watching \u00b7 single event \u00b7 likely system a11y",
+      "people": [],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Sentry APPLE-IOS-3B \u00b7 build 25 \u00b7 Fri Sep 18 ~8:25pm PT"
+        }
+      ],
+      "detail": "App Hang Fully Blocked 5.1\u20135.9s \u00b7 AXSceneKitGlue / accessibilityInitializeBundle",
+      "actionNote": "Not auto-fixing \u2014 stack is system accessibility, not app code.",
+      "novelty": "continuing",
+      "peopleCount": 1,
+      "sourceLinks": [
+        {
+          "label": "Sentry APPLE-IOS-3B",
+          "url": "https://weaive.sentry.io/issues/APPLE-IOS-3B"
+        }
+      ],
+      "url": "https://weaive.sentry.io/issues/APPLE-IOS-3B"
+    }
+  ],
+  "sentry": {
+    "new": [
+      "APPLE-IOS-3D",
+      "APPLE-IOS-3E",
+      "APPLE-IOS-3F"
+    ],
+    "watching": [
+      "APPLE-IOS-3B",
+      "APPLE-IOS-3C",
+      "APPLE-IOS-3E",
+      "APPLE-IOS-3F",
+      "APPLE-IOS-7",
+      "APPLE-IOS-A"
+    ],
+    "fixing": [
+      "APPLE-IOS-3D"
+    ]
+  },
+  "filtered": [],
+  "clipMissing": [],
+  "newSincePrev": {
+    "inApp": 1,
+    "sentry": 3,
+    "survey": 0
+  },
+  "authFailures": [
+    "GitHub box GH_TOKEN 401",
+    "Mac offline \u2014 can\u2019t publish latent-digs or sync"
+  ],
+  "actions": [
+    {
+      "id": "ca-apple-ios-3d-dimpower",
+      "title": "Cloud Agent \u2014 CaptureView dimPowerInputs hang (APPLE-IOS-3D / faroos274)",
+      "status": "in_progress",
+      "resolved": false,
+      "plainTitle": "Fix started: record screen froze ~7 minutes on dim/power",
+      "plainSummary": "faroos274 on build 24 hit a ~444s fully-blocked hang in CaptureView.dimPowerInputs. Cloud Agent launched on Grok 4.6 \u2014 PR coming; don\u2019t merge until CI green.",
+      "actionStatus": "Cloud Agent spinning \u00b7 Grok 4.6",
+      "people": [
+        "faroos274"
+      ],
+      "url": "https://cursor.com/agents/bc-b74a0dc3-c63c-5039-ab90-1b299ac4cbb6",
+      "links": [
+        {
+          "label": "Sentry APPLE-IOS-3D",
+          "url": "https://weaive.sentry.io/issues/APPLE-IOS-3D"
+        },
+        {
+          "label": "Cloud Agent",
+          "url": "https://cursor.com/agents/bc-b74a0dc3-c63c-5039-ab90-1b299ac4cbb6"
+        }
+      ],
+      "novelty": "new"
+    },
+    {
+      "id": "pr-201-linear-done",
+      "title": "PR #201 \u2014 camera-off lock + dim strand (TRY-92)",
+      "status": "logged",
+      "resolved": true,
+      "plainTitle": "You marked Done: camera-off sessions answer lock quickly and stop stranding dim",
+      "plainSummary": "Linear TRY-92 \u2192 Done overnight. Linked PR https://github.com/eddie-the-lou/latent/pull/201. Box can\u2019t re-check merge/CI (dead token).",
+      "actionStatus": "Linear Done \u00b7 verify merge when Mac/GitHub live",
+      "people": [
+        "Eddie"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/201",
+      "pr": "https://github.com/eddie-the-lou/latent/pull/201",
+      "novelty": "new"
+    },
+    {
+      "id": "pr-202-linear-done",
+      "title": "PR #202 \u2014 type tag split amounts (TRY-94)",
+      "status": "logged",
+      "resolved": true,
+      "plainTitle": "You marked Done: type a tag\u2019s split time; order protects them",
+      "plainSummary": "Linear TRY-94 \u2192 Done overnight. Linked PR https://github.com/eddie-the-lou/latent/pull/202. Box can\u2019t re-check merge/CI (dead token).",
+      "actionStatus": "Linear Done \u00b7 verify merge when Mac/GitHub live",
+      "people": [
+        "Eddie"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/202",
+      "pr": "https://github.com/eddie-the-lou/latent/pull/202",
+      "novelty": "new"
+    },
+    {
+      "id": "pr-203-linear-done",
+      "title": "PR #203 \u2014 dim notice copy/glyph (TRY-97)",
+      "status": "logged",
+      "resolved": true,
+      "plainTitle": "You marked Done: dim popup points at the control with the same glyph",
+      "plainSummary": "Linear TRY-97 \u2192 Done overnight. Linked PR https://github.com/eddie-the-lou/latent/pull/203. Box can\u2019t re-check merge/CI (dead token).",
+      "actionStatus": "Linear Done \u00b7 verify merge when Mac/GitHub live",
+      "people": [
+        "Eddie"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/203",
+      "pr": "https://github.com/eddie-the-lou/latent/pull/203",
+      "novelty": "new"
+    },
+    {
+      "id": "pr-204-linear-done",
+      "title": "PR #204 \u2014 app-blocking allowlist clarity (TRY-96)",
+      "status": "logged",
+      "resolved": true,
+      "plainTitle": "You marked Done: allowlist ticks read clearly; Messages gets its own door",
+      "plainSummary": "Linear TRY-96 \u2192 Done overnight. Linked PR https://github.com/eddie-the-lou/latent/pull/204. Box can\u2019t re-check merge/CI (dead token).",
+      "actionStatus": "Linear Done \u00b7 verify merge when Mac/GitHub live",
+      "people": [
+        "Eddie"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/204",
+      "pr": "https://github.com/eddie-the-lou/latent/pull/204",
+      "novelty": "new"
+    },
+    {
+      "id": "pr-205-linear-done",
+      "title": "PR #205 \u2014 feed taps + off-tab retry (TRY-98/99)",
+      "status": "logged",
+      "resolved": true,
+      "plainTitle": "You marked Done: dead taps answer; off-tab feed stops retrying; clip reorder/remove",
+      "plainSummary": "Linear TRY-98 \u2192 Done overnight. Linked PR https://github.com/eddie-the-lou/latent/pull/205. Box can\u2019t re-check merge/CI (dead token).",
+      "actionStatus": "Linear Done \u00b7 verify merge when Mac/GitHub live",
+      "people": [
+        "Eddie"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/205",
+      "pr": "https://github.com/eddie-the-lou/latent/pull/205",
+      "novelty": "new"
+    },
+    {
+      "id": "pr-188-delete-account-icon",
+      "title": "PR #188 \u2014 missing delete-account warning icon (sukirthan)",
+      "status": "ready_for_review",
+      "resolved": false,
+      "plainTitle": "Approve when ready: put the warning icon back on Delete account",
+      "plainSummary": "Yesterday\u2019s Cloud Agent finished. PR ready. CI historically red \u2014 don\u2019t merge yet.",
+      "actionStatus": "PR ready \u00b7 CI historically red",
+      "people": [
+        "sukirthan",
+        "suki"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/188",
+      "pr": "https://github.com/eddie-the-lou/latent/pull/188",
+      "novelty": "continuing"
+    },
+    {
+      "id": "pr-189-ghost-timer",
+      "title": "PR #189 \u2014 ghost main-screen timer after session (zozo)",
+      "status": "ready_for_review",
+      "resolved": false,
+      "plainTitle": "Approve when ready: stop the home-screen timer when you\u2019re done recording",
+      "plainSummary": "Yesterday\u2019s Cloud Agent finished. Separate from #160 Auto-Lock. CI historically red.",
+      "actionStatus": "PR ready \u00b7 CI historically red",
+      "people": [
+        "zozo"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/189",
+      "pr": "https://github.com/eddie-the-lou/latent/pull/189",
+      "novelty": "continuing"
+    },
+    {
+      "id": "ca-delete-account-icon-sukirthan",
+      "title": "Cloud Agent \u2014 missing delete-account warning icon (sukirthan)",
+      "status": "ready_for_review",
+      "resolved": false,
+      "plainTitle": "Ready: delete-account warning icon",
+      "plainSummary": "Finished as PR #188.",
+      "actionStatus": "PR #188 ready",
+      "people": [
+        "sukirthan"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/188",
+      "pr": "https://github.com/eddie-the-lou/latent/pull/188",
+      "novelty": "continuing"
+    },
+    {
+      "id": "ca-ghost-timer-zozo",
+      "title": "Cloud Agent \u2014 ghost main-screen timer after session (zozo)",
+      "status": "ready_for_review",
+      "resolved": false,
+      "plainTitle": "Ready: ghost home-screen timer",
+      "plainSummary": "Finished as PR #189.",
+      "actionStatus": "PR #189 ready",
+      "people": [
+        "zozo"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/189",
+      "pr": "https://github.com/eddie-the-lou/latent/pull/189",
+      "novelty": "continuing"
+    },
+    {
+      "id": "pr-160-autolock",
+      "title": "PR #160 \u2014 camera-off timer + Auto-Lock (slade_s)",
+      "status": "ready_for_review",
+      "resolved": false,
+      "plainTitle": "Approve when ready: keep the timer running when the phone locks",
+      "plainSummary": "Still listed from earlier dig \u2014 likely overlapped by your overnight #201 camera-off work (TRY-92 Done). Confirm whether to close #160.",
+      "actionStatus": "Possibly superseded by #201 \u00b7 confirm",
+      "people": [
+        "slade_s"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/160",
+      "novelty": "continuing"
+    },
+    {
+      "id": "own-feed-pr-148",
+      "title": "Draft PR #148 \u2014 keep own sessions out of friends feed",
+      "status": "ready_for_review",
+      "resolved": false,
+      "plainTitle": "Approve when ready: hide your own videos from the feed",
+      "plainSummary": "From Cloud Agent for shlokp. Still draft. CI still red.",
+      "actionStatus": "Draft PR ready \u00b7 CI red",
+      "people": [
+        "shlokp"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/148",
+      "novelty": "continuing"
+    },
+    {
+      "id": "recordflow-pr-149",
+      "title": "Draft PR #149 \u2014 RecordFlow hang APPLE-IOS-2M/2W",
+      "status": "ready_for_review",
+      "resolved": false,
+      "plainTitle": "Approve when ready: fix record-screen freezes",
+      "plainSummary": "Covers riya 2M and anonymoussushi1071 2W. Draft. CI still red.",
+      "actionStatus": "Draft PR ready \u00b7 CI red",
+      "people": [
+        "riya",
+        "anonymoussushi1071"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/149",
+      "novelty": "continuing"
+    },
+    {
+      "id": "recordflow-2m-pr-149",
+      "title": "Draft PR #149 \u2014 Fix RecordFlow orientation publish hang (APPLE-IOS-2M)",
+      "status": "ready_for_review",
+      "resolved": false,
+      "plainTitle": "Approve when ready: Record screen freeze",
+      "plainSummary": "From yesterday\u2019s Cloud Agent. Also covers NEW 2W repro. Draft. CI still red.",
+      "actionStatus": "Draft PR ready \u00b7 CI red",
+      "people": [
+        "riya",
+        "anonymoussushi1071"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/149",
+      "novelty": "continuing"
+    },
+    {
+      "id": "own-feed-agent",
+      "title": "Cloud Agent: hide own sessions from friends feed (shlokp)",
+      "status": "ready_for_review",
+      "resolved": false,
+      "plainTitle": "Ready to review: own videos on the feed",
+      "plainSummary": "shlokp build 20. Draft PR #148 \u2014 don\u2019t merge until CI green.",
+      "actionStatus": "Draft PR #148 \u00b7 ready for review",
+      "people": [
+        "shlokp"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/148",
+      "pr": "https://github.com/eddie-the-lou/latent/pull/148",
+      "novelty": "continuing"
+    },
+    {
+      "id": "apple-ios-2m-agent",
+      "title": "Cloud Agent: RecordFlow hang APPLE-IOS-2M",
+      "status": "ready_for_review",
+      "resolved": false,
+      "plainTitle": "Ready to review: Record screen freeze",
+      "plainSummary": "riya + anonymoussushi1071 on build 21 (APPLE-IOS-2M/2W). Draft PR #149.",
+      "actionStatus": "Draft PR #149 \u00b7 ready for review",
+      "people": [
+        "riya"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/149",
+      "pr": "https://github.com/eddie-the-lou/latent/pull/149",
+      "novelty": "continuing"
+    }
+  ],
+  "rawQuotes": [
+    {
+      "source": "In-app feedback",
+      "who": "suki",
+      "username": "suki",
+      "when": "Fri Sep 19 \u00b7 9:27am PT",
+      "build": "1.0.1 (24)",
+      "kind": "feature",
+      "text": "Have a feature or a button to open that person\u2019s direct messages directly from the person\u2019s profile. It would be great because after checking one\u2019s profile if we have to message them, we have again go back and then get into the direct messages page. so having a button to quickly go to that person\u2018s direct messages while being on his or her profile would be great. \n\nAnother one. When the app is being started rather than being on the camera page, being on the home feed would be better because opening the camera while the app is starting, would make the app a little bit laggier. So it would be the best if the app is on the homepage when it is opened.",
+      "extra": {
+        "ios_version": "27.0",
+        "id": "d55a1019-620d-416d-9528-93e6d0e6855b"
+      }
+    },
+    {
+      "source": "Discord \u00b7 #questions",
+      "who": "Trudy",
+      "username": "Trudy",
+      "when": "Fri Sep 19 \u00b7 4:32pm PT (approx from channel UI)",
+      "build": null,
+      "kind": "question",
+      "text": "can you tell me if there is a linux version for this app? or it's just macos..."
+    },
+    {
+      "source": "Discord \u00b7 #questions",
+      "who": "toasted",
+      "username": "toasted",
+      "when": "Fri Sep 19 \u00b7 4:40pm PT (approx from channel UI)",
+      "build": null,
+      "kind": "reply",
+      "text": "unfortunately there is no a linux version for the app at this moment in time. only for macos and ios."
+    },
+    {
+      "source": "Discord \u00b7 #general-chat",
+      "who": "toasted",
+      "username": "toasted",
+      "when": "Fri Sep 19 \u00b7 12:53pm PT",
+      "build": null,
+      "kind": "chat",
+      "text": "I gotchu",
+      "extra": {
+        "context": "replying to Kot770 asking to be added to @winnergamerar"
+      }
+    },
+    {
+      "source": "Discord \u00b7 #general-chat",
+      "who": "fusion",
+      "username": "fusion",
+      "when": "Fri Sep 19 \u00b7 3:00pm PT",
+      "build": null,
+      "kind": "chat",
+      "text": "i gotchu too"
+    }
+  ]
+}

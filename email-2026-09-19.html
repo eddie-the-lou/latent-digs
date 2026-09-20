@@ -1,0 +1,58 @@
+<!-- Subject: Latent daily review · 2026-09-19 — 5 fixes waiting (#188/#189 new) -->
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Sep 19</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English · 9:00 AM PT dig</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-19" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-09-19</a>
+  </p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px">No new in-app notes since yesterday. alxthealien emailed a thank-you after you said Android isn’t ready yet — nothing new to answer.</li>
+    <li style="margin:0 0 6px">Yesterday’s two fix agents finished. Ready for you: <a href="https://github.com/eddie-the-lou/latent/pull/188">#188</a> (sukirthan’s missing delete-account icon) and <a href="https://github.com/eddie-the-lou/latent/pull/189">#189</a> (zozo’s ghost home-screen timer). Still waiting: <a href="https://github.com/eddie-the-lou/latent/pull/160">#160</a> Auto-Lock, <a href="https://github.com/eddie-the-lou/latent/pull/148">#148</a> own-feed, <a href="https://github.com/eddie-the-lou/latent/pull/149">#149</a> RecordFlow.</li>
+    <li style="margin:0 0 6px">Sentry added two single freezes overnight (<a href="https://weaive.sentry.io/issues/APPLE-IOS-3B">3B</a> looks like system accessibility; <a href="https://weaive.sentry.io/issues/APPLE-IOS-3C">3C</a> is krabbykai stuck ~12s in a text field on build 25). Watching — no new agents. Watchdog kills and a clip-server 503 are still around.</li>
+    <li style="margin:0 0 6px">Survey unchanged (65 people · 38 very / 25 somewhat / 2 not disappointed). Uploads mostly quiet; rageclicks cooled a bit this morning versus yesterday’s spike.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong><a href="https://github.com/eddie-the-lou/latent/pull/188">#188</a> — Delete-account warning icon</strong><br><span style="color:#666">sukirthan / suki · build 24 · from yesterday’s agent · CI historically red</span></li>
+    <li style="margin:0 0 8px"><strong><a href="https://github.com/eddie-the-lou/latent/pull/189">#189</a> — Stop ghost home-screen timer</strong><br><span style="color:#666">zozo · build 24 · from yesterday’s agent · separate from #160 · CI historically red</span></li>
+    <li style="margin:0 0 8px"><strong><a href="https://github.com/eddie-the-lou/latent/pull/160">#160</a> — Camera-off timer + Auto-Lock</strong><br><span style="color:#666">slade_s · still waiting</span></li>
+    <li style="margin:0 0 8px"><strong><a href="https://github.com/eddie-the-lou/latent/pull/148">#148</a> — Hide your own videos from the friends feed</strong><br><span style="color:#666">shlokp · draft · still waiting</span></li>
+    <li style="margin:0 0 8px"><strong><a href="https://github.com/eddie-the-lou/latent/pull/149">#149</a> — Record screen freezes</strong><br><span style="color:#666">riya / anonymoussushi1071 · draft · still waiting</span></li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken / confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>krabbykai froze ~12s typing</strong> — single Sentry <a href="https://weaive.sentry.io/issues/APPLE-IOS-3C">APPLE-IOS-3C</a> on build 25. Watching (near old keyboard hang work).<br><span style="color:#666">Sentry · Sat ~12:21am PT</span></li>
+    <li style="margin:0 0 8px"><strong>One accessibility-looking freeze</strong> — <a href="https://weaive.sentry.io/issues/APPLE-IOS-3B">APPLE-IOS-3B</a>, stack is mostly iOS a11y/SceneKit, not a clear Latent screen.<br><span style="color:#666">Sentry · Fri ~8:25pm PT · build 25</span></li>
+    <li style="margin:0 0 8px"><strong>App killed for using too much RAM</strong> — <a href="https://weaive.sentry.io/issues/APPLE-IOS-A">APPLE-IOS-A</a> still ongoing; latest included build 26.<br><span style="color:#666">Sentry · continuing</span></li>
+    <li style="margin:0 0 8px"><strong>Clip playback server returned 503</strong> — <a href="https://weaive.sentry.io/issues/APPLE-IOS-F">APPLE-IOS-F</a> media-playback-url edge degraded (lugosebastian, build 24).<br><span style="color:#666">Sentry · Fri evening</span></li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>Default private/public when posting</strong> · s4yy (build 25) — still open, no PR</li>
+    <li style="margin:0 0 8px"><strong>Focus time split by tags</strong> · s4yy (build 25) — still open, no PR</li>
+    <li style="margin:0 0 8px"><strong>Web / Android reach</strong> · sarashamail + alxthealien — parked until denser demand</li>
+    <li style="margin:0 0 8px"><strong>Optional face blur</strong> · willow — still open, no PR</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">What they actually wrote</h2>
+  <p style="color:#666;margin:0 0 12px">No new verbatim product quotes since yesterday’s dig (no new in-app rows, no new survey free-text, no new bug emails). Yesterday’s quotes are still on the <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-18">Sep 18 archive</a>.</p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Sources checked</h2>
+  <ul style="padding-left:18px;margin:0 0 18px;color:#444;font-size:14px">
+    <li>In-app feedback (Supabase) — 0 NEW</li>
+    <li>Gmail — alxthealien thank-you only</li>
+    <li>Sentry weaive/apple-ios — NEW 3B/3C; continuing A/F/35…</li>
+    <li>PostHog — uploads quiet; clip-bloat Not firing</li>
+    <li>PMF survey — 65 · 38/25/2 · 0 new rows</li>
+    <li>Discord — scraped OK · 0 NEW product notes</li>
+    <li>GitHub — box PAT still 401; #188/#189 from Cloud Agents</li>
+  </ul>
+
+  <p style="color:#888;font-size:13px;margin:24px 0 0">CI on LatentServiceTests is still historically red — don’t merge while it’s red. Box dig GitHub token still needs renewing (401).</p>
+</body></html>
