@@ -1,0 +1,672 @@
+{
+  "date": "2026-09-21",
+  "title": "Latent daily review · Sep 21",
+  "generatedAt": "2026-09-21T16:35:36.672320+00:00",
+  "tldr": [
+    "One new in-app bug from rjt (build 25): some still-image posts trap you — swipe-down dismiss fails, and multi-slide posts have a next arrow but no previous. Cloud Agent started (Grok 4.6) for an X close + prev-slide control.",
+    "Yesterday’s APPLE-IOS-3D dim hang agent finished as draft PR #207. Still waiting on #188 delete-icon, #189 ghost timer, #160 Auto-Lock (likely overlapped by #201), #148 own-feed, #149 RecordFlow.",
+    "Linear overnight: Malcolm marked Done on messaging (TRY-54 — covers suki’s profile→DM ask), Groups (TRY-70), rate limits (TRY-110), nudge cap (TRY-109), reward pause/skip (TRY-85), ASC placements (TRY-90), editing after post (TRY-107), horizontal cover (TRY-84), screenshots (TRY-95), and more. New open: TRY-112 Ask for Review, TRY-111 sticker/timer clarity, TRY-108 clear Messages-block notice, TRY-104 Krabby crash.",
+    "Sentry NEW singles: APPLE-IOS-3G (grissy_ MediaCarousel hang, old build 10) and APPLE-IOS-3H (leila_ FeedPostRow ~7s hang, build 24) — watching. Continuing 3E/3F/A/7.",
+    "Survey unchanged (65 · Sean Ellis 38/25/2). PostHog: clip_upload_failed Sep19=3 / Sep20=2 / Sep21 partial=4; rageclicks Sep19=159 / Sep20=263 / Sep21 partial=123. Clip-bloat alert Not firing (~1.56 MB/s).",
+    "Discord: scrape running at dig time — will note if anything new after Sun Sep 20 9:00 AM PT. No user bug emails since cutoff (only collab spam + CI fail noise)."
+  ],
+  "plainTldr": [
+    "One new in-app bug from rjt (build 25): some still-image posts trap you — swipe-down dismiss fails, and multi-slide posts have a next arrow but no previous. Cloud Agent started (Grok 4.6) for an X close + prev-slide control.",
+    "Yesterday’s APPLE-IOS-3D dim hang agent finished as draft PR #207. Still waiting on #188 delete-icon, #189 ghost timer, #160 Auto-Lock (likely overlapped by #201), #148 own-feed, #149 RecordFlow.",
+    "Linear overnight: Malcolm marked Done on messaging (TRY-54 — covers suki’s profile→DM ask), Groups (TRY-70), rate limits (TRY-110), nudge cap (TRY-109), reward pause/skip (TRY-85), ASC placements (TRY-90), editing after post (TRY-107), horizontal cover (TRY-84), screenshots (TRY-95), and more. New open: TRY-112 Ask for Review, TRY-111 sticker/timer clarity, TRY-108 clear Messages-block notice, TRY-104 Krabby crash.",
+    "Sentry NEW singles: APPLE-IOS-3G (grissy_ MediaCarousel hang, old build 10) and APPLE-IOS-3H (leila_ FeedPostRow ~7s hang, build 24) — watching. Continuing 3E/3F/A/7.",
+    "Survey unchanged (65 · Sean Ellis 38/25/2). PostHog: clip_upload_failed Sep19=3 / Sep20=2 / Sep21 partial=4; rageclicks Sep19=159 / Sep20=263 / Sep21 partial=123. Clip-bloat alert Not firing (~1.56 MB/s).",
+    "Discord: scrape running at dig time — will note if anything new after Sun Sep 20 9:00 AM PT. No user bug emails since cutoff (only collab spam + CI fail noise)."
+  ],
+  "stats": {
+    "newInApp": 1,
+    "newDiscord": 0,
+    "newSurveyRows": 0,
+    "seanEllis": {
+      "very": 38,
+      "somewhat": 25,
+      "not": 2,
+      "n": 65
+    },
+    "sentryNew": [
+      "APPLE-IOS-3G",
+      "APPLE-IOS-3H"
+    ],
+    "posthog": {
+      "uploadFailed": {
+        "2026-09-19": 3,
+        "2026-09-20": 2,
+        "2026-09-21": 4
+      },
+      "rageclicks": {
+        "2026-09-19": 159,
+        "2026-09-20": 263,
+        "2026-09-21": 123
+      },
+      "clipBloatAlert": "Not firing",
+      "clipBloatLastValue": 1.564
+    }
+  },
+  "prStatus": {
+    "waiting": [
+      {
+        "pr": 207,
+        "title": "APPLE-IOS-3D dimPowerInputs hang (draft)",
+        "url": "https://github.com/eddie-the-lou/latent/pull/207"
+      },
+      {
+        "pr": 188,
+        "title": "delete-account warning icon",
+        "url": "https://github.com/eddie-the-lou/latent/pull/188"
+      },
+      {
+        "pr": 189,
+        "title": "ghost home-screen timer",
+        "url": "https://github.com/eddie-the-lou/latent/pull/189"
+      },
+      {
+        "pr": 160,
+        "title": "camera-off Auto-Lock (maybe superseded by #201)",
+        "url": "https://github.com/eddie-the-lou/latent/pull/160"
+      },
+      {
+        "pr": 148,
+        "title": "own sessions out of friends feed",
+        "url": "https://github.com/eddie-the-lou/latent/pull/148"
+      },
+      {
+        "pr": 149,
+        "title": "RecordFlow hang",
+        "url": "https://github.com/eddie-the-lou/latent/pull/149"
+      }
+    ],
+    "malcolmOpen": [
+      {
+        "pr": 215,
+        "title": "Groups door icon (four heads)",
+        "url": "https://github.com/eddie-the-lou/latent/pull/215"
+      }
+    ],
+    "agentsSpinning": [
+      {
+        "id": "bc-6cbbb79e-dff2-573a-a5fb-f7d5f4d955d7",
+        "title": "rjt stuck image-post dismiss + prev slide",
+        "url": "https://cursor.com/agents/bc-6cbbb79e-dff2-573a-a5fb-f7d5f4d955d7"
+      }
+    ],
+    "agentsFinished": [
+      {
+        "id": "bc-b74a0dc3-c63c-5039-ab90-1b299ac4cbb6",
+        "title": "APPLE-IOS-3D dimPowerInputs",
+        "url": "https://cursor.com/agents/bc-b74a0dc3-c63c-5039-ab90-1b299ac4cbb6",
+        "pr": 207
+      }
+    ]
+  },
+  "actions": [
+    {
+      "id": "ca-rjt-stuck-image-post",
+      "title": "Cloud Agent — stuck image-post dismiss + missing prev slide (rjt)",
+      "status": "in_progress",
+      "resolved": false,
+      "plainTitle": "Fix started: some image posts trap you (no exit, no prev slide)",
+      "plainSummary": "rjt on build 25 can’t swipe out of some still-image posts and multi-slide posts lack a previous arrow. Cloud Agent launched on Grok 4.6 for an Instagram-style X close + prev control. Don’t merge until you review.",
+      "actionStatus": "Cloud Agent spinning · Grok 4.6",
+      "people": [
+        "rjt"
+      ],
+      "url": "https://cursor.com/agents/bc-6cbbb79e-dff2-573a-a5fb-f7d5f4d955d7",
+      "links": [
+        {
+          "label": "Agent",
+          "url": "https://cursor.com/agents/bc-6cbbb79e-dff2-573a-a5fb-f7d5f4d955d7"
+        }
+      ]
+    },
+    {
+      "id": "pr-207-apple-ios-3d",
+      "title": "PR #207 — CaptureView dimPowerInputs hang (APPLE-IOS-3D)",
+      "status": "ready",
+      "resolved": false,
+      "plainTitle": "Ready to review: record-screen dim hang fix (#207)",
+      "plainSummary": "Yesterday’s agent finished. Draft PR #207 (+118/−8). Still CI-red on LatentServiceTests like main.",
+      "actionStatus": "Draft PR waiting · #207",
+      "people": [
+        "faroos274"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/207",
+      "links": [
+        {
+          "label": "PR #207",
+          "url": "https://github.com/eddie-the-lou/latent/pull/207"
+        },
+        {
+          "label": "Sentry APPLE-IOS-3D",
+          "url": "https://weaive.sentry.io/issues/APPLE-IOS-3D"
+        }
+      ]
+    },
+    {
+      "id": "pr-188-delete-icon",
+      "title": "PR #188 — delete-account warning icon",
+      "status": "ready",
+      "resolved": false,
+      "plainTitle": "Ready to approve: delete-account warning icon",
+      "plainSummary": "Still open draft from Sep 18.",
+      "actionStatus": "Waiting on you",
+      "people": [
+        "sukirthan"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/188"
+    },
+    {
+      "id": "pr-189-ghost-timer",
+      "title": "PR #189 — ghost home-screen timer",
+      "status": "ready",
+      "resolved": false,
+      "plainTitle": "Ready to approve: ghost home-screen timer",
+      "plainSummary": "Still open draft from Sep 18.",
+      "actionStatus": "Waiting on you",
+      "people": [
+        "zozo"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/189"
+    },
+    {
+      "id": "pr-160-autolock",
+      "title": "PR #160 — camera-off Auto-Lock",
+      "status": "ready",
+      "resolved": false,
+      "plainTitle": "Check vs your #201: Auto-Lock during camera-off",
+      "plainSummary": "Likely overlapped by merged camera-off work (#201 / TRY-92). Confirm before merging both.",
+      "actionStatus": "Maybe superseded",
+      "people": [
+        "slade_s"
+      ],
+      "url": "https://github.com/eddie-the-lou/latent/pull/160"
+    },
+    {
+      "id": "pr-148-own-feed",
+      "title": "PR #148 — own sessions out of friends feed",
+      "status": "ready",
+      "resolved": false,
+      "plainTitle": "Ready to approve: hide own sessions from friends feed",
+      "plainSummary": "Still open draft.",
+      "actionStatus": "Waiting on you",
+      "people": [],
+      "url": "https://github.com/eddie-the-lou/latent/pull/148"
+    },
+    {
+      "id": "pr-149-recordflow",
+      "title": "PR #149 — RecordFlow hang",
+      "status": "ready",
+      "resolved": false,
+      "plainTitle": "Ready to approve: Record screen publish hang",
+      "plainSummary": "Still open draft (APPLE-IOS-2M).",
+      "actionStatus": "Waiting on you",
+      "people": [],
+      "url": "https://github.com/eddie-the-lou/latent/pull/149"
+    }
+  ],
+  "bugs": [
+    {
+      "id": "rjt-stuck-image-post",
+      "title": "Stuck in still-image posts + missing prev slide (rjt)",
+      "plainTitle": "Some image posts trap you; no way back on multi-slide",
+      "plainSummary": "rjt (build 25) can’t swipe down out of certain still-image posts and wants an X close. Next-slide arrow has no matching previous. Cloud Agent started.",
+      "status": "in_progress",
+      "resolved": false,
+      "actionStatus": "Cloud Agent spinning",
+      "people": [
+        "rjt"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "In-app feedback · rjt · Sun Sep 20 · 9:30am PT · build 25 · bug"
+        }
+      ],
+      "detail": "Whenever you click into certain posts (usually still images), youre kind of unable to click out of them or do anything. For most things you can just swipe down and it’ll work but it doesn’t work for certain posts like some images for some reason. I’d suggest adding like an x button at the top left whenever you click into a post, similar to how insta has it. Also, when you click the arrow to go to the next slide in a post, there’s no arrow to go to the previous slide. (Also I genuinely love this app, keep up the good work ♥️)",
+      "novelty": "new"
+    },
+    {
+      "id": "apple-ios-3h-feedpostrow",
+      "title": "APPLE-IOS-3H FeedPostRow hang (leila_)",
+      "plainTitle": "Home feed froze ~7 seconds drawing a post (leila_)",
+      "plainSummary": "Single fully-blocked hang 6.6–7.4s in FeedPostRow layout on build 24. Watching — may relate to heavy post rows; not auto-fixing on one event.",
+      "status": "watching",
+      "resolved": false,
+      "actionStatus": "Watching",
+      "people": [
+        "leila_"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Sentry APPLE-IOS-3H · build 24 · Mon Sep 21 ~6:24am PT"
+        }
+      ],
+      "detail": "App Hang Fully Blocked 6.6–7.4s · FeedPostRow.body",
+      "novelty": "new",
+      "url": "https://weaive.sentry.io/issues/APPLE-IOS-3H"
+    },
+    {
+      "id": "apple-ios-3g-mediacarousel",
+      "title": "APPLE-IOS-3G MediaCarousel hang (grissy_)",
+      "plainTitle": "Carousel stutter ~3 seconds (grissy_, old build 10)",
+      "plainSummary": "Non-fully-blocked hang in MediaCarousel.currentPageURL on ancient build 10. Watching; low urgency vs current builds.",
+      "status": "watching",
+      "resolved": false,
+      "actionStatus": "Watching · old build",
+      "people": [
+        "grissy_"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Sentry APPLE-IOS-3G · build 10 · Sun Sep 20 ~11:11pm PT"
+        }
+      ],
+      "detail": "App Hang Non Fully Blocked 2.5–3.3s · MediaCarousel.currentPageURL",
+      "novelty": "new",
+      "url": "https://weaive.sentry.io/issues/APPLE-IOS-3G"
+    },
+    {
+      "id": "apple-ios-3d-dimpower",
+      "title": "APPLE-IOS-3D CaptureView.dimPowerInputs (faroos274)",
+      "plainTitle": "Record screen froze ~7 minutes on dim/power — PR ready",
+      "plainSummary": "Agent finished overnight. Draft #207 waiting on you.",
+      "status": "ready",
+      "resolved": false,
+      "actionStatus": "Draft PR #207",
+      "people": [
+        "faroos274"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Sentry APPLE-IOS-3D · PR #207"
+        }
+      ],
+      "novelty": "continuing",
+      "url": "https://github.com/eddie-the-lou/latent/pull/207"
+    },
+    {
+      "id": "apple-ios-3e-3f-watch",
+      "title": "APPLE-IOS-3E / 3F singles still watching",
+      "plainTitle": "Yesterday’s single crashes still watching (rami, win)",
+      "plainSummary": "3E stack overflow (rami) and 3F scroll hang (win) remain single-event. No new Cloud Agent.",
+      "status": "watching",
+      "resolved": false,
+      "actionStatus": "Watching",
+      "people": [
+        "rami",
+        "win"
+      ],
+      "supportCount": 2,
+      "sources": [
+        {
+          "label": "Sentry 3E / 3F"
+        }
+      ],
+      "novelty": "continuing"
+    }
+  ],
+  "features": [
+    {
+      "id": "suki-profile-dm-done",
+      "title": "Profile → Message (suki / TRY-54)",
+      "plainTitle": "suki’s Message-from-profile ask moved to Done on Linear",
+      "plainSummary": "TRY-54 Messaging/Comment Feature Improvements marked Done overnight (Malcolm). Launch-on-home-feed part of suki’s note still open as a separate idea.",
+      "status": "done",
+      "resolved": true,
+      "actionStatus": "Linear Done · TRY-54",
+      "people": [
+        "suki",
+        "Malcolm"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Linear TRY-54 · Done Sep 21"
+        }
+      ],
+      "novelty": "resolved",
+      "url": "https://linear.app/trylatent/issue/TRY-54/messagingcomment-feature-improvements"
+    },
+    {
+      "id": "launch-on-home-feed",
+      "title": "Launch on home feed instead of camera (suki)",
+      "plainTitle": "Open Latent on the home feed, not the camera",
+      "plainSummary": "Still open from suki’s Sep 19 note — not covered by TRY-54 Done. No auto-fix (product choice).",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Logged · product choice",
+      "people": [
+        "suki"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "In-app · suki · Sep 19"
+        }
+      ],
+      "novelty": "continuing"
+    },
+    {
+      "id": "try-111-sticker-timer",
+      "title": "Sticker and timer screens hard to understand (TRY-111)",
+      "plainTitle": "Sticker + timer screens are confusing",
+      "plainSummary": "New Linear Todo from overnight triage. Product clarity, not a crash.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Linear Todo",
+      "people": [],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Linear TRY-111"
+        }
+      ],
+      "novelty": "new",
+      "url": "https://linear.app/trylatent/issue/TRY-111/sticker-and-timer-screens-are-hard-to-understand"
+    },
+    {
+      "id": "linux-version-trudy",
+      "title": "Linux version (Trudy)",
+      "plainTitle": "Is there a Linux version?",
+      "plainSummary": "Parked with Android/web from Sep 20 dig. No new Discord ask confirmed yet this morning.",
+      "status": "open",
+      "resolved": false,
+      "actionStatus": "Parked",
+      "people": [
+        "Trudy"
+      ],
+      "supportCount": 1,
+      "sources": [
+        {
+          "label": "Discord #questions · Sep 19"
+        }
+      ],
+      "novelty": "continuing"
+    }
+  ],
+  "rawQuotes": [
+    {
+      "source": "In-app feedback",
+      "who": "rjt",
+      "username": "rjt",
+      "when": "Sun Sep 20 · 9:30am PT",
+      "build": "1.0.1 (25)",
+      "kind": "bug",
+      "ios": "26.7",
+      "text": "Whenever you click into certain posts (usually still images), youre kind of unable to click out of them or do anything. For most things you can just swipe down and it’ll work but it doesn’t work for certain posts like some images for some reason. I’d suggest adding like an x button at the top left whenever you click into a post, similar to how insta has it. Also, when you click the arrow to go to the next slide in a post, there’s no arrow to go to the previous slide. (Also I genuinely love this app, keep up the good work ♥️)"
+    }
+  ],
+  "bySource": [
+    {
+      "source": "In-app feedback",
+      "items": [
+        {
+          "who": "rjt",
+          "summary": "NEW: stuck in some image posts + missing prev-slide arrow (build 25)",
+          "novelty": "new",
+          "when": "Sun Sep 20 · 9:30am PT",
+          "build": "1.0.1 (25)",
+          "kind": "bug",
+          "text": "Whenever you click into certain posts (usually still images), youre kind of unable to click out of them or do anything. For most things you can just swipe down and it’ll work but it doesn’t work for certain posts like some images for some reason. I’d suggest adding like an x button at the top left whenever you click into a post, similar to how insta has it. Also, when you click the arrow to go to the next slide in a post, there’s no arrow to go to the previous slide. (Also I genuinely love this app, keep up the good work ♥️)"
+        }
+      ]
+    },
+    {
+      "source": "Email",
+      "items": [
+        {
+          "who": "—",
+          "summary": "No NEW user bug/feedback emails since cutoff. Inbox noise: collab pitches, Linear unread digests, GitHub CI LatentServiceTests fails on main + PRs.",
+          "novelty": "none",
+          "when": "cutoff after Sep 20 dig"
+        }
+      ]
+    },
+    {
+      "source": "Discord",
+      "items": [
+        {
+          "who": "—",
+          "summary": "Scrape in progress at dig write time (cutoff after Sun Sep 20 9:00 AM PT). Pending confirmation.",
+          "novelty": "pending",
+          "when": "Sep 21 dig"
+        }
+      ]
+    },
+    {
+      "source": "Sentry",
+      "items": [
+        {
+          "who": "leila_",
+          "summary": "NEW APPLE-IOS-3H FeedPostRow ~7s hang · watching",
+          "novelty": "new",
+          "when": "Mon Sep 21 ~6:24am PT"
+        },
+        {
+          "who": "grissy_",
+          "summary": "NEW APPLE-IOS-3G MediaCarousel hang · old build 10 · watching",
+          "novelty": "new",
+          "when": "Sun Sep 20 ~11:11pm PT"
+        },
+        {
+          "who": "faroos274",
+          "summary": "APPLE-IOS-3D → draft PR #207",
+          "novelty": "continuing"
+        },
+        {
+          "who": "rami / win",
+          "summary": "3E / 3F still watching",
+          "novelty": "continuing"
+        }
+      ]
+    },
+    {
+      "source": "PostHog",
+      "items": [
+        {
+          "who": "—",
+          "summary": "clip_upload_failed: Sep19=3, Sep20=2, Sep21=4 (partial)",
+          "novelty": "continuing"
+        },
+        {
+          "who": "—",
+          "summary": "rageclicks: Sep19=159, Sep20=263, Sep21=123 (partial)",
+          "novelty": "continuing"
+        },
+        {
+          "who": "—",
+          "summary": "Clip bloat alert Not firing · last_value ~1.56 MB/s",
+          "novelty": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "PMF survey",
+      "items": [
+        {
+          "who": "—",
+          "summary": "Unchanged: Active 65 (Sean Ellis 38/25/2), Tried but Churned 6, Downloaded no record 8. 0 new rows. Build-one column still empty.",
+          "novelty": "none"
+        }
+      ]
+    },
+    {
+      "source": "Linear / GitHub",
+      "items": [
+        {
+          "who": "Malcolm",
+          "summary": "Overnight Done: TRY-54 messaging, TRY-70 Groups, TRY-110 rate limits, TRY-109 nudge cap, TRY-85 reward pause, TRY-90 ASC, TRY-107 edit-after-post, TRY-84 cover, TRY-95 screenshots, TRY-105 load test, TRY-93 note UI, TRY-100/101 bio+nudge",
+          "novelty": "new"
+        },
+        {
+          "who": "—",
+          "summary": "New Linear: TRY-112 Ask for Review (Pre Launch), TRY-111 sticker/timer clarity (Todo), TRY-108 Messages-block notice (Todo), TRY-104 Krabby crash (Todo)",
+          "novelty": "new"
+        },
+        {
+          "who": "—",
+          "summary": "Open waiting dig PRs: #207 #188 #189 #160 #148 #149. Malcolm #215 Groups icon open.",
+          "novelty": "continuing"
+        },
+        {
+          "who": "—",
+          "summary": "CI: LatentServiceTests still failing on main + many PRs (overnight GitHub mails).",
+          "novelty": "continuing"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source": "In-app feedback",
+      "items": [
+        {
+          "who": "rjt",
+          "summary": "NEW: stuck in some image posts + missing prev-slide arrow (build 25)",
+          "novelty": "new",
+          "when": "Sun Sep 20 · 9:30am PT",
+          "build": "1.0.1 (25)",
+          "kind": "bug",
+          "text": "Whenever you click into certain posts (usually still images), youre kind of unable to click out of them or do anything. For most things you can just swipe down and it’ll work but it doesn’t work for certain posts like some images for some reason. I’d suggest adding like an x button at the top left whenever you click into a post, similar to how insta has it. Also, when you click the arrow to go to the next slide in a post, there’s no arrow to go to the previous slide. (Also I genuinely love this app, keep up the good work ♥️)"
+        }
+      ]
+    },
+    {
+      "source": "Email",
+      "items": [
+        {
+          "who": "—",
+          "summary": "No NEW user bug/feedback emails since cutoff. Inbox noise: collab pitches, Linear unread digests, GitHub CI LatentServiceTests fails on main + PRs.",
+          "novelty": "none",
+          "when": "cutoff after Sep 20 dig"
+        }
+      ]
+    },
+    {
+      "source": "Discord",
+      "items": [
+        {
+          "who": "—",
+          "summary": "Scrape in progress at dig write time (cutoff after Sun Sep 20 9:00 AM PT). Pending confirmation.",
+          "novelty": "pending",
+          "when": "Sep 21 dig"
+        }
+      ]
+    },
+    {
+      "source": "Sentry",
+      "items": [
+        {
+          "who": "leila_",
+          "summary": "NEW APPLE-IOS-3H FeedPostRow ~7s hang · watching",
+          "novelty": "new",
+          "when": "Mon Sep 21 ~6:24am PT"
+        },
+        {
+          "who": "grissy_",
+          "summary": "NEW APPLE-IOS-3G MediaCarousel hang · old build 10 · watching",
+          "novelty": "new",
+          "when": "Sun Sep 20 ~11:11pm PT"
+        },
+        {
+          "who": "faroos274",
+          "summary": "APPLE-IOS-3D → draft PR #207",
+          "novelty": "continuing"
+        },
+        {
+          "who": "rami / win",
+          "summary": "3E / 3F still watching",
+          "novelty": "continuing"
+        }
+      ]
+    },
+    {
+      "source": "PostHog",
+      "items": [
+        {
+          "who": "—",
+          "summary": "clip_upload_failed: Sep19=3, Sep20=2, Sep21=4 (partial)",
+          "novelty": "continuing"
+        },
+        {
+          "who": "—",
+          "summary": "rageclicks: Sep19=159, Sep20=263, Sep21=123 (partial)",
+          "novelty": "continuing"
+        },
+        {
+          "who": "—",
+          "summary": "Clip bloat alert Not firing · last_value ~1.56 MB/s",
+          "novelty": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "PMF survey",
+      "items": [
+        {
+          "who": "—",
+          "summary": "Unchanged: Active 65 (Sean Ellis 38/25/2), Tried but Churned 6, Downloaded no record 8. 0 new rows. Build-one column still empty.",
+          "novelty": "none"
+        }
+      ]
+    },
+    {
+      "source": "Linear / GitHub",
+      "items": [
+        {
+          "who": "Malcolm",
+          "summary": "Overnight Done: TRY-54 messaging, TRY-70 Groups, TRY-110 rate limits, TRY-109 nudge cap, TRY-85 reward pause, TRY-90 ASC, TRY-107 edit-after-post, TRY-84 cover, TRY-95 screenshots, TRY-105 load test, TRY-93 note UI, TRY-100/101 bio+nudge",
+          "novelty": "new"
+        },
+        {
+          "who": "—",
+          "summary": "New Linear: TRY-112 Ask for Review (Pre Launch), TRY-111 sticker/timer clarity (Todo), TRY-108 Messages-block notice (Todo), TRY-104 Krabby crash (Todo)",
+          "novelty": "new"
+        },
+        {
+          "who": "—",
+          "summary": "Open waiting dig PRs: #207 #188 #189 #160 #148 #149. Malcolm #215 Groups icon open.",
+          "novelty": "continuing"
+        },
+        {
+          "who": "—",
+          "summary": "CI: LatentServiceTests still failing on main + many PRs (overnight GitHub mails).",
+          "novelty": "continuing"
+        }
+      ]
+    }
+  ],
+  "sentry": {
+    "new": [
+      "APPLE-IOS-3G",
+      "APPLE-IOS-3H"
+    ],
+    "watching": [
+      "APPLE-IOS-3E",
+      "APPLE-IOS-3F",
+      "APPLE-IOS-A",
+      "APPLE-IOS-7",
+      "APPLE-IOS-3D"
+    ],
+    "fixedPr": {
+      "APPLE-IOS-3D": 207
+    }
+  },
+  "filtered": [],
+  "newSincePrev": [
+    "rjt stuck image posts",
+    "APPLE-IOS-3G",
+    "APPLE-IOS-3H",
+    "PR #207 ready",
+    "Linear Done batch TRY-54/70/…"
+  ],
+  "authFailures": [],
+  "clipMissing": []
+}

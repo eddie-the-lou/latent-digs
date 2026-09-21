@@ -1,0 +1,52 @@
+<!-- Subject: Latent daily review · 2026-09-21 — 6 fixes waiting + rjt agent -->
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Sep 21</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English · 9:00 AM PT dig</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-21" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-09-21</a>
+  </p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px">One new in-app bug from <b>rjt</b> (build 25): some still-image posts trap you (swipe-down fails), and multi-slide posts have next but no previous. <a href="https://cursor.com/agents/bc-6cbbb79e-dff2-573a-a5fb-f7d5f4d955d7">Cloud Agent started</a> (Grok 4.6) for an X close + prev arrow.</li>
+    <li style="margin:0 0 6px">Yesterday’s dim-hang agent finished as draft <a href="https://github.com/eddie-the-lou/latent/pull/207">#207</a>. Still waiting: <a href="https://github.com/eddie-the-lou/latent/pull/188">#188</a>, <a href="https://github.com/eddie-the-lou/latent/pull/189">#189</a>, <a href="https://github.com/eddie-the-lou/latent/pull/160">#160</a> (check vs #201), <a href="https://github.com/eddie-the-lou/latent/pull/148">#148</a>, <a href="https://github.com/eddie-the-lou/latent/pull/149">#149</a>.</li>
+    <li style="margin:0 0 6px">Linear overnight Done (Malcolm): messaging <a href="https://linear.app/trylatent/issue/TRY-54/messagingcomment-feature-improvements">TRY-54</a> (covers suki’s profile→DM), Groups, rate limits, nudge cap, reward pause/skip, ASC, edit-after-post, cover, screenshots, and more. New open: <a href="https://linear.app/trylatent/issue/TRY-112/ask-for-review">TRY-112</a> Ask for Review, <a href="https://linear.app/trylatent/issue/TRY-111/sticker-and-timer-screens-are-hard-to-understand">TRY-111</a> sticker/timer clarity, <a href="https://linear.app/trylatent/issue/TRY-108/app-blocking-remove-the-messages-notification-once-its-done">TRY-108</a>, <a href="https://linear.app/trylatent/issue/TRY-104/crash-report-from-krabby-kai-check-testflight-crash-reports">TRY-104</a> Krabby crash.</li>
+    <li style="margin:0 0 6px">Sentry NEW singles: <a href="https://weaive.sentry.io/issues/APPLE-IOS-3H">3H</a> leila_ feed hang ~7s (build 24), <a href="https://weaive.sentry.io/issues/APPLE-IOS-3G">3G</a> grissy_ carousel hang (old build 10) — watching. Survey unchanged 65 · 38/25/2.</li>
+    <li style="margin:0 0 6px">PostHog: uploads failed Sep20=2 / Sep21 partial=4; rageclicks Sep20=263 / Sep21 partial=123. Clip-bloat alert not firing (~1.56 MB/s). No user bug emails. Discord scrape pending confirmation below.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/207">#207</a> — CaptureView dim hang (APPLE-IOS-3D) · draft</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/188">#188</a> — delete-account warning icon</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/189">#189</a> — ghost home-screen timer</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/160">#160</a> — Auto-Lock timer (check vs your #201)</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/148">#148</a> — hide own videos from feed</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/149">#149</a> — Record screen freezes</li>
+    <li style="margin:0 0 6px"><a href="https://cursor.com/agents/bc-6cbbb79e-dff2-573a-a5fb-f7d5f4d955d7">Cloud Agent</a> — rjt stuck image posts (PR coming)</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken / confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><b>rjt</b> — stuck in some still-image posts; no prev-slide arrow · agent started</li>
+    <li style="margin:0 0 6px"><b>leila_</b> — one ~7s home-feed hang (<a href="https://weaive.sentry.io/issues/APPLE-IOS-3H">3H</a>) · watching</li>
+    <li style="margin:0 0 6px"><b>grissy_</b> — one carousel hang on old build 10 (<a href="https://weaive.sentry.io/issues/APPLE-IOS-3G">3G</a>) · watching</li>
+    <li style="margin:0 0 6px"><b>faroos274</b> — dim hang · draft <a href="https://github.com/eddie-the-lou/latent/pull/207">#207</a></li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><b>suki</b> — Message from profile → Linear <a href="https://linear.app/trylatent/issue/TRY-54/messagingcomment-feature-improvements">TRY-54 Done</a>; launch-on-home-feed still open</li>
+    <li style="margin:0 0 6px"><a href="https://linear.app/trylatent/issue/TRY-111/sticker-and-timer-screens-are-hard-to-understand">TRY-111</a> — sticker + timer screens hard to understand</li>
+    <li style="margin:0 0 6px"><b>Trudy</b> — Linux version (parked)</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">What they actually wrote</h2>
+  <blockquote style="margin:0 0 14px;padding:12px 14px;background:#f6f6f6;border-left:4px solid #111;white-space:pre-wrap">Whenever you click into certain posts (usually still images), youre kind of unable to click out of them or do anything. For most things you can just swipe down and it’ll work but it doesn’t work for certain posts like some images for some reason. I’d suggest adding like an x button at the top left whenever you click into a post, similar to how insta has it. Also, when you click the arrow to go to the next slide in a post, there’s no arrow to go to the previous slide. (Also I genuinely love this app, keep up the good work ♥️)
+    <div style="margin-top:8px;color:#666;font-size:13px">rjt · in-app · Sun Sep 20 · 9:30am PT · build 1.0.1 (25) · iOS 26.7 · kind bug</div>
+  </blockquote>
+  <p style="color:#666;font-size:13px">No new survey free-text. No new user bug emails. Discord quotes: pending scrape confirmation (cutoff after Sun Sep 20 9:00 AM PT).</p>
+
+  <p style="margin-top:28px;color:#888;font-size:12px">Unpaid Intern · Latent daily dig · https://eddie-the-lou.github.io/latent-digs/#/2026-09-21</p>
+</body></html>
