@@ -1,5 +1,18 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-09-22",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 4,
+      "openBugs": 3,
+      "resolvedBugs": 1,
+      "filtered": 0,
+      "rawQuotes": 9
+    },
+    "path": "data/2026-09-22.json",
+    "htmlArchive": "../2026-09-22.html"
+  },
+  {
     "date": "2026-09-21",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -481,6 +494,19 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-09-22",
+      "title": "Latent feedback dig",
+      "summaryStats": {
+        "openFeatures": 4,
+        "openBugs": 3,
+        "resolvedBugs": 1,
+        "filtered": 0,
+        "rawQuotes": 9
+      },
+      "path": "data/2026-09-22.json",
+      "htmlArchive": "../2026-09-22.html"
+    },
     {
       "date": "2026-09-21",
       "title": "Latent feedback dig",
@@ -68297,5 +68323,525 @@ window.DIGESTS = {
     ],
     "authFailures": [],
     "clipMissing": []
+  },
+  "2026-09-22": {
+    "date": "2026-09-22",
+    "title": "Latent daily review \u00b7 Sep 22",
+    "generatedAt": "2026-09-22T16:35:47.636968+00:00",
+    "tldr": [
+      "Only one PR still needs you: #230 \u2014 rjt\u2019s stuck still-image posts get an X close and carousels get a previous arrow (agent finished yesterday). Everything else from yesterday\u2019s waiting list is cleared (#207 and #149 merged; #188/#189/#160/#148 closed unmerged).",
+      "NEW in-app from _b (build 27): camera-off + lock before the screen dims saved only ~2 seconds while the lock-screen timer kept going. Same bug Malcolm fixed overnight in #250 (merged on main ~10:34pm PT). Wait for the next TestFlight \u2014 no duplicate agent.",
+      "NEW ask from zaahirat: trim the end of a sitting (fell asleep / left, then ended late). Also a noise \u201cTesting testing\u201d row. Survey +1 diwmx (Very disappointed) asking for better battery life \u2192 Sean Ellis 39/25/2 of 66.",
+      "Overnight Linear Done (Malcolm/you): nudge cap removed (TRY-121 / #249), midnight Progress (TRY-117), nudge opens post (TRY-120), Send clears composer (TRY-119), sticker/timer clarity (TRY-111), Ask for Review (TRY-112), Messages warning (TRY-108), TF queue (#250), and more. In progress: Groups chats/nudges (TRY-125), website (TRY-78).",
+      "Sentry NEW clusters 3J\u20133R look like simulator/dev hangs (build 28, local/sim) \u2014 watching, not auto-fixing opaque stacks. Continuing watch on 3H/3G. PostHog: clip_upload_failed Sep20=2 / Sep21=4 / Sep22 partial=3; rageclicks Sep20=264 / Sep21=200 / Sep22 partial=169. Clip-bloat alert Not firing (~1.56 MB/s).",
+      "Waitlist emails: two Android/Windows asks (Mahima, Javier). Discord: login OK as Eddie L \u2014 no NEW bugs after Mon Sep 21 9am PT. Zoe told fusion edit-speed already changes timelapse length (thread to be deleted). Malcolm: nudge limit \u201cwe're limiting it to 10\u201d (since superseded by TRY-121 on main)."
+    ],
+    "plainTldr": [
+      "Only one PR still needs you: #230 \u2014 rjt\u2019s stuck still-image posts get an X close and carousels get a previous arrow (agent finished yesterday). Everything else from yesterday\u2019s waiting list is cleared (#207 and #149 merged; #188/#189/#160/#148 closed unmerged).",
+      "NEW in-app from _b (build 27): camera-off + lock before the screen dims saved only ~2 seconds while the lock-screen timer kept going. Same bug Malcolm fixed overnight in #250 (merged on main ~10:34pm PT). Wait for the next TestFlight \u2014 no duplicate agent.",
+      "NEW ask from zaahirat: trim the end of a sitting (fell asleep / left, then ended late). Also a noise \u201cTesting testing\u201d row. Survey +1 diwmx (Very disappointed) asking for better battery life \u2192 Sean Ellis 39/25/2 of 66.",
+      "Overnight Linear Done (Malcolm/you): nudge cap removed (TRY-121 / #249), midnight Progress (TRY-117), nudge opens post (TRY-120), Send clears composer (TRY-119), sticker/timer clarity (TRY-111), Ask for Review (TRY-112), Messages warning (TRY-108), TF queue (#250), and more. In progress: Groups chats/nudges (TRY-125), website (TRY-78).",
+      "Sentry NEW clusters 3J\u20133R look like simulator/dev hangs (build 28, local/sim) \u2014 watching, not auto-fixing opaque stacks. Continuing watch on 3H/3G. PostHog: clip_upload_failed Sep20=2 / Sep21=4 / Sep22 partial=3; rageclicks Sep20=264 / Sep21=200 / Sep22 partial=169. Clip-bloat alert Not firing (~1.56 MB/s).",
+      "Waitlist emails: two Android/Windows asks (Mahima, Javier). Discord: login OK as Eddie L \u2014 no NEW bugs after Mon Sep 21 9am PT. Zoe told fusion edit-speed already changes timelapse length (thread to be deleted). Malcolm: nudge limit \u201cwe're limiting it to 10\u201d (since superseded by TRY-121 on main)."
+    ],
+    "stats": {
+      "newInApp": 3,
+      "newDiscord": 3,
+      "newSurveyRows": 1,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-3J",
+        "APPLE-IOS-3K",
+        "APPLE-IOS-3M",
+        "APPLE-IOS-3N",
+        "APPLE-IOS-3P",
+        "APPLE-IOS-3Q",
+        "APPLE-IOS-3R"
+      ],
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-20": 2,
+          "2026-09-21": 4,
+          "2026-09-22": 3
+        },
+        "rageclicks": {
+          "2026-09-20": 264,
+          "2026-09-21": 200,
+          "2026-09-22": 169
+        },
+        "clipBloatAlert": "Not firing",
+        "clipBloatLastValue": 1.563
+      },
+      "rawQuotes": 9
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 230,
+          "title": "Expanded posts get a close X, and carousels get a previous arrow (rjt)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/230"
+        }
+      ],
+      "malcolmOpen": [
+        {
+          "pr": 241,
+          "title": "Save the App Store screenshot drafts and render scripts",
+          "url": "https://github.com/eddie-the-lou/latent/pull/241"
+        },
+        {
+          "pr": 164,
+          "title": "Today mini cards fit their durations; camera toggle stays put",
+          "url": "https://github.com/eddie-the-lou/latent/pull/164"
+        },
+        {
+          "pr": 162,
+          "title": "One frame rule for the timelapse clip",
+          "url": "https://github.com/eddie-the-lou/latent/pull/162"
+        },
+        {
+          "pr": 123,
+          "title": "Sequential dual-camera proof stills (draft)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/123"
+        }
+      ],
+      "agentsSpinning": [],
+      "agentsFinished": [
+        {
+          "id": "bc-6cbbb79e-dff2-573a-a5fb-f7d5f4d955d7",
+          "title": "rjt stuck image-post dismiss + prev slide",
+          "url": "https://cursor.com/agents/bc-6cbbb79e-dff2-573a-a5fb-f7d5f4d955d7",
+          "pr": 230
+        }
+      ],
+      "clearedOvernight": [
+        {
+          "pr": 207,
+          "title": "APPLE-IOS-3D dim hang \u2014 MERGED",
+          "url": "https://github.com/eddie-the-lou/latent/pull/207"
+        },
+        {
+          "pr": 149,
+          "title": "RecordFlow hang \u2014 MERGED",
+          "url": "https://github.com/eddie-the-lou/latent/pull/149"
+        },
+        {
+          "pr": 188,
+          "title": "delete-icon \u2014 closed unmerged",
+          "url": "https://github.com/eddie-the-lou/latent/pull/188"
+        },
+        {
+          "pr": 189,
+          "title": "ghost timer \u2014 closed unmerged",
+          "url": "https://github.com/eddie-the-lou/latent/pull/189"
+        },
+        {
+          "pr": 160,
+          "title": "Auto-Lock \u2014 closed unmerged",
+          "url": "https://github.com/eddie-the-lou/latent/pull/160"
+        },
+        {
+          "pr": 148,
+          "title": "own-feed \u2014 closed unmerged",
+          "url": "https://github.com/eddie-the-lou/latent/pull/148"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "pr-230-rjt-post-chrome",
+        "title": "PR #230 \u2014 close X + prev carousel arrow (rjt)",
+        "status": "ready",
+        "resolved": false,
+        "plainTitle": "Ready for you to approve: exit stuck image posts (#230)",
+        "plainSummary": "Yesterday\u2019s Grok 4.6 agent finished. Open PR #230 (+169/\u221237). Same LatentServiceTests CI-red as main. Don\u2019t merge until you review.",
+        "actionStatus": "PR waiting \u00b7 #230",
+        "people": [
+          "rjt"
+        ],
+        "url": "https://github.com/eddie-the-lou/latent/pull/230",
+        "links": [
+          {
+            "label": "PR #230",
+            "url": "https://github.com/eddie-the-lou/latent/pull/230"
+          },
+          {
+            "label": "Agent",
+            "url": "https://cursor.com/agents/bc-6cbbb79e-dff2-573a-a5fb-f7d5f4d955d7"
+          }
+        ]
+      },
+      {
+        "id": "main-250-camera-off-lock",
+        "title": "#250 on main \u2014 camera-off lock recovery (_b)",
+        "status": "resolved",
+        "resolved": true,
+        "plainTitle": "Already on main: camera-off lock only saved 2 seconds",
+        "plainSummary": "_b hit this on build 27 last night. Malcolm\u2019s #250 (merged ~10:34pm PT) records the lock as a span and recovers it on next launch \u2014 exact match to _b\u2019s report. No new agent. Needs a new TestFlight build for testers.",
+        "actionStatus": "Fixed on main \u00b7 await TF",
+        "people": [
+          "_b",
+          "Malcolm"
+        ],
+        "url": "https://github.com/eddie-the-lou/latent/pull/250",
+        "links": [
+          {
+            "label": "PR #250",
+            "url": "https://github.com/eddie-the-lou/latent/pull/250"
+          }
+        ]
+      }
+    ],
+    "bugs": [
+      {
+        "id": "b-camera-off-lock-2s",
+        "title": "Camera-off lock before dim saves ~2s (_b)",
+        "plainTitle": "Camera-off + lock early: only 2 seconds saved",
+        "plainSummary": "_b (build 27): start camera-off, lock before screen dims \u2192 lock-screen timer keeps running, unlock shows ~2s. Fixed on main by #250 overnight. Waiting on next TestFlight.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "Fixed on main \u00b7 #250 \u00b7 await TF",
+        "people": [
+          "_b"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 _b \u00b7 Mon Sep 21 \u00b7 7:56pm PT \u00b7 build 27 \u00b7 bug"
+          }
+        ],
+        "detail": "Starting a recording with the camera off and locking the phone before the screen dims causes the recording to fail. The lock screen timer continues running, but upon unlocking, only two seconds of \u201cfootage\u201d is saved.",
+        "novelty": "new",
+        "url": "https://github.com/eddie-the-lou/latent/pull/250"
+      },
+      {
+        "id": "rjt-stuck-image-post",
+        "title": "Stuck in still-image posts + missing prev slide (rjt)",
+        "plainTitle": "Some image posts trap you; no prev on multi-slide",
+        "plainSummary": "Agent finished. PR #230 waiting on you.",
+        "status": "ready",
+        "resolved": false,
+        "actionStatus": "PR #230 waiting",
+        "people": [
+          "rjt"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 rjt \u00b7 build 25 \u00b7 PR #230"
+          }
+        ],
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/230"
+      },
+      {
+        "id": "apple-ios-3m-3n-sim",
+        "title": "Sentry 3M/3N simulator hangs (build 28)",
+        "plainTitle": "New hang clusters look like simulator noise",
+        "plainSummary": "3M fatal (4 users / 7 events) and escalating 3N (2 users / 22 events) both resolve to simulator/local build 28 with opaque stacks. Not launching a Cloud Agent. Watching for real-device repros.",
+        "status": "watching",
+        "resolved": false,
+        "actionStatus": "Watching \u00b7 sim",
+        "people": [],
+        "supportCount": 0,
+        "sources": [
+          {
+            "label": "Sentry APPLE-IOS-3M",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-3M"
+          },
+          {
+            "label": "Sentry APPLE-IOS-3N",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-3N"
+          }
+        ],
+        "novelty": "new",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-3M"
+      },
+      {
+        "id": "apple-ios-3h-3g-watch",
+        "title": "APPLE-IOS-3H / 3G singles still watching",
+        "plainTitle": "Yesterday\u2019s single hangs still watching",
+        "plainSummary": "3H leila_ FeedPostRow ~7s (build 24) and 3G grissy_ carousel (old build 10) remain single-event. No new agent.",
+        "status": "watching",
+        "resolved": false,
+        "actionStatus": "Watching",
+        "people": [
+          "leila_",
+          "grissy_"
+        ],
+        "supportCount": 2,
+        "sources": [
+          {
+            "label": "Sentry 3H / 3G"
+          }
+        ],
+        "novelty": "continuing"
+      }
+    ],
+    "features": [
+      {
+        "id": "zaahirat-trim-end",
+        "title": "Trim end of session (zaahirat)",
+        "plainTitle": "Cut dead time off the end of a sitting",
+        "plainSummary": "zaahirat (build 27): fell asleep / left, then ended late \u2014 wants to trim the end only, not edit the middle. Product ask; no auto-fix.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product",
+        "people": [
+          "zaahirat"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 zaahirat \u00b7 Mon Sep 21 \u00b7 4:43pm PT \u00b7 feature"
+          }
+        ],
+        "detail": "If we could trim our sessions that would be nice. One might fall asleep or leave and later end it. If we could cut the end out and make it shorter so the studying time doesn\u2019t go to waste. Not necessarily edit the middle because that would be a bit disruptive.",
+        "novelty": "new"
+      },
+      {
+        "id": "diwmx-battery",
+        "title": "Better battery life (diwmx survey)",
+        "plainTitle": "Survey: better battery life if possible",
+        "plainSummary": "diwmx new Active Users row \u2014 Very disappointed; free-text asks for better battery. Sean Ellis now 39/25/2 of 66.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 survey",
+        "people": [
+          "diwmx"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "PMF survey \u00b7 Active Users \u00b7 Mon Sep 21 \u00b7 4:19pm PT"
+          }
+        ],
+        "novelty": "new"
+      },
+      {
+        "id": "android-waitlist",
+        "title": "Android / Windows asks (waitlist email)",
+        "plainTitle": "Two waitlist replies asking for Android (and Windows)",
+        "plainSummary": "Mahima: \u201cwhen can we get android/windows version\u201d. Javier: no iPhone, is there Android? Off current iOS positioning \u2014 kill/park unless you reopen Android.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Kill list \u00b7 Android",
+        "people": [
+          "mahimakoul64",
+          "javier.delcuetofdez"
+        ],
+        "supportCount": 2,
+        "sources": [
+          {
+            "label": "Email \u00b7 Re: lock in twin"
+          }
+        ],
+        "novelty": "new"
+      },
+      {
+        "id": "launch-on-home-feed",
+        "title": "Launch on home feed instead of camera (suki)",
+        "plainTitle": "Open Latent on the home feed, not the camera",
+        "plainSummary": "Still open from suki\u2019s Sep 19 note.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product choice",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      }
+    ],
+    "bySource": {
+      "inApp": [
+        {
+          "who": "_b",
+          "when": "Mon Sep 21 \u00b7 7:56pm PT",
+          "kind": "bug",
+          "build": "27",
+          "summary": "Camera-off lock early \u2192 ~2s saved (fixed on main #250)"
+        },
+        {
+          "who": "zaahirat",
+          "when": "Mon Sep 21 \u00b7 4:43pm PT",
+          "kind": "feature",
+          "build": "27",
+          "summary": "Trim end of session"
+        },
+        {
+          "who": "zaahirat",
+          "when": "Mon Sep 21 \u00b7 4:42pm PT",
+          "kind": "bug",
+          "build": "27",
+          "summary": "Testing testing (noise)"
+        }
+      ],
+      "discord": [
+        {
+          "summary": "Login OK as Eddie L. No NEW bugs/feature requests after Mon Sep 21 9:00 AM PT. Zoe explained edit-speed already changes timelapse length; fusion will delete that thread. Malcolm replied \u201cwe're limiting it to 10\u201d on nudge-capacity (now superseded on main by TRY-121 uncapped send / ring +N). Banter only otherwise. #announcements not visible."
+        }
+      ],
+      "email": [
+        {
+          "who": "mahimakoul64@gmail.com",
+          "when": "Mon Sep 21 \u00b7 2:34am PT",
+          "summary": "Android/Windows ask"
+        },
+        {
+          "who": "javier.delcuetofdez@gmail.com",
+          "when": "Sun Sep 20 \u00b7 3:57pm PT",
+          "summary": "Android ask (no iPhone)"
+        }
+      ],
+      "survey": [
+        {
+          "who": "diwmx",
+          "when": "Mon Sep 21 \u00b7 4:19pm PT",
+          "summary": "Very disappointed \u00b7 better battery life \u00b7 Active Users n=66 Sean Ellis 39/25/2"
+        }
+      ],
+      "sentry": [
+        {
+          "id": "APPLE-IOS-3M",
+          "summary": "Fatal hang \u00b7 4 users / 7 events \u00b7 sim/local build 28 \u00b7 watching"
+        },
+        {
+          "id": "APPLE-IOS-3N",
+          "summary": "Hang 3\u20134s escalating \u00b7 2 users / 22 \u00b7 sim build 28 \u00b7 watching"
+        },
+        {
+          "id": "APPLE-IOS-3J\u20133R",
+          "summary": "Other NEW singles mostly opaque \u00b7 watching"
+        }
+      ],
+      "posthog": [
+        {
+          "summary": "clip_upload_failed Sep20=2 / Sep21=4 / Sep22 partial=3"
+        },
+        {
+          "summary": "rageclicks Sep20=264 / Sep21=200 / Sep22 partial=169"
+        },
+        {
+          "summary": "Clip bloat alert Not firing \u00b7 last ~1.56 MB/s"
+        }
+      ],
+      "linear": [
+        {
+          "summary": "Done: TRY-121 nudge cap, TRY-117 midnight, TRY-120 nudge\u2192post, TRY-119 Send clears, TRY-111 sticker/timer, TRY-112 Ask for Review, TRY-108 Messages warning, TRY-115 TF queue, TRY-89 staging"
+        },
+        {
+          "summary": "In progress: TRY-125 Group chats/nudges, TRY-124 TF feedback, TRY-78 website, TRY-106 bio"
+        }
+      ]
+    },
+    "rawQuotes": [
+      {
+        "source": "In-app feedback",
+        "who": "_b",
+        "username": "_b",
+        "when": "Mon Sep 21 \u00b7 7:56pm PT",
+        "build": "1.0.1 (27)",
+        "kind": "bug",
+        "ios": "26.6",
+        "text": "Starting a recording with the camera off and locking the phone before the screen dims causes the recording to fail. The lock screen timer continues running, but upon unlocking, only two seconds of \u201cfootage\u201d is saved."
+      },
+      {
+        "source": "In-app feedback",
+        "who": "zaahirat",
+        "username": "zaahirat",
+        "when": "Mon Sep 21 \u00b7 4:43pm PT",
+        "build": "1.0.1 (27)",
+        "kind": "feature",
+        "ios": "26.6.1",
+        "text": "If we could trim our sessions that would be nice. One might fall asleep or leave and later end it. If we could cut the end out and make it shorter so the studying time doesn\u2019t go to waste. Not necessarily edit the middle because that would be a bit disruptive."
+      },
+      {
+        "source": "In-app feedback",
+        "who": "zaahirat",
+        "username": "zaahirat",
+        "when": "Mon Sep 21 \u00b7 4:42pm PT",
+        "build": "1.0.1 (27)",
+        "kind": "bug",
+        "ios": "26.6.1",
+        "text": "Testing testing"
+      },
+      {
+        "source": "PMF survey \u00b7 Active Users",
+        "who": "diwmx",
+        "username": "diwmx",
+        "when": "Mon Sep 21 \u00b7 4:19pm PT",
+        "build": "",
+        "kind": "survey",
+        "ios": "",
+        "text": "How would you feel if you could no longer use Latent?: Very disappointed\nHow can we improve Latent for you?: better battery life if possible at all. "
+      },
+      {
+        "source": "Email \u00b7 waitlist reply",
+        "who": "mahimakoul64@gmail.com",
+        "username": "",
+        "when": "Mon Sep 21 \u00b7 2:34am PT",
+        "build": "",
+        "kind": "email",
+        "ios": "",
+        "text": "when can we get android/windows version \ud83d\ude22"
+      },
+      {
+        "source": "Email \u00b7 waitlist reply",
+        "who": "javier.delcuetofdez@gmail.com",
+        "username": "",
+        "when": "Sun Sep 20 \u00b7 3:57pm PT",
+        "build": "",
+        "kind": "email",
+        "ios": "",
+        "text": "Hi, Firstly thank you for sending the link, but I have a problem. I don't have an iPhone, is there an android version?? Thank you."
+      },
+      {
+        "source": "Discord \u00b7 #feature-requests",
+        "who": "Zoe",
+        "username": "Zoe",
+        "when": "Mon Sep 21 \u00b7 9:20am PT",
+        "build": "",
+        "kind": "discord",
+        "ios": "",
+        "text": "If you change the speed of the video on the app, it changes the amount of time. You can see it while you're in editing mode"
+      },
+      {
+        "source": "Discord \u00b7 #feature-requests",
+        "who": "fusion",
+        "username": "fusion",
+        "when": "Mon Sep 21 \u00b7 9:21am PT",
+        "build": "",
+        "kind": "discord",
+        "ios": "",
+        "text": "omg how did i not notice this, thanks so much @Zoe ! ill be deleting this thread then:)"
+      },
+      {
+        "source": "Discord \u00b7 #general-chat",
+        "who": "Malcolm McDonald",
+        "username": "Malcolm McDonald",
+        "when": "Mon Sep 21 \u00b7 1:03pm PT",
+        "build": "",
+        "kind": "discord",
+        "ios": "",
+        "text": "we're limiting it to 10"
+      }
+    ],
+    "technicalNotes": [
+      "Main tip 562abcc (TRY-121 #249) after #250 five TF fixes, #248 Progress clock, #247 seen-state, #246 nudge opens post, #207 dim hang, #149 RecordFlow.",
+      "Eddie open PR for approve: only #230. VedSoni-dev still has older open PRs (#59\u2013#76) not re-listed unless you ask.",
+      "Mac offline this run \u2014 archive publish via box gh token (repo push OK). Mac sync of site folder skipped.",
+      "Discord scrape file: /workspace/feedback-digests/discord-2026-09-22.md"
+    ],
+    "discordScrapeNote": "# Latent Early Access Discord scrape \u2014 2026-09-22\n\n- **Server:** Latent (Early Access) (`1519926693018734632`)\n- **Cutoff:** after Sun Sep 21, 2026 9:00 AM America/Los_Angeles (PT)\n- **Login:** **Succeeded.** Discord was already signed in as **Eddie L** (`eddie_lou`). Read-only; nothing was posted.\n\n## 1. #feature-requests\n\nNew messages after the cutoff (in the existing \u201cCustomizable timelapse times\u201d thread):\n\n- **Zoe \u2014 Sep 21, 9:20 AM PT:** \u201cIf you change the speed of the video on the app, it changes the amount of time. You can see it while you're in editing mode\u201d *(edited)*\n- **fusion \u2014 Sep 21, 9:21 AM PT:** \u201comg how did i not notice this, thanks so much @Zoe ! ill be deleting this thread then:)\u201d\n- **Zoe \u2014 Sep 21, 9:22 AM PT:** \u201cYou're welcome :)\u201d\n\nThe prior fusion timelapse-length request is still visible in the thread (posted Sep 21, 5:51 AM PT, before cutoff), as is the tester-role ask. Zoe\u2019s edit-speed response, fusion\u2019s deletion note, and Zoe\u2019s reply above remain visible.\n\n## 2. #questions\n\n- **No new messages** after the cutoff. The channel\u2019s latest visible messages are from Sep 15.\n\n## 3. #general-chat\n\n- **SourLemown\ud83c\udf4b \u2014 Sep 21, 12:48 PM PT:** \u201cello\u201d\n- **SourLemown\ud83c\udf4b \u2014 Sep 21, 12:49 PM PT:** \u201chow to reverse catfish someone\u201d\n- **Malcolm McDonald \u2014 Sep 21, 1:03 PM PT:** \u201cwe're limiting it to 10\u201d *(replying to TheCountessOfMonteCristo\u2019s nudge-capacity question)*\n- **Android Advocate \u2014 Sep 21, 3:38 PM PT:** \u201cwatching a video on double pendulums and it is just DEVOURING my bitrate rn\u201d\n- **Android Advocate \u2014 Sep 22, 4:32 AM PT:** \u201chttps://www.instagram.com/reel/DdFuxGFus-y/?stkn=YTR2cXBpNWx6eXFw\u201d\n\nThe known **j3 free-at-launch** item remains visible (j3\u2019s Sep 20, 10:33 PM message and replies, all before cutoff). The known **TheCountessOfMonteCristo nudge-capacity** question remains visible (Sep 21, 1:37 AM, before cutoff), with Malcolm\u2019s post-cutoff answer above.\n\n## 4. #announcements\n\n- **Not visible in the server\u2019s channel list** for Eddie L, so it could not be "
   }
 };

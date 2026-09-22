@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Latent daily review · 2026-09-22</title></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.5;color:#111;max-width:720px;margin:0 auto;padding:24px;">
+<p style="font-size:13px;color:#666;margin:0 0 8px;">From Unpaid Intern · plain English · 9:00 AM PT dig</p>
+<h1 style="font-size:22px;margin:0 0 16px;">Latent daily review · Sep 22</h1>
+
+<p style="background:#f4f7ff;border:1px solid #c9d7ff;border-radius:8px;padding:12px 14px;">
+<strong>Live archive (bookmark this):</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/">https://eddie-the-lou.github.io/latent-digs/</a><br>
+<strong>Today’s review:</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-22">https://eddie-the-lou.github.io/latent-digs/#/2026-09-22</a>
+</p>
+
+<h2 style="font-size:16px;margin-top:28px;">In plain English</h2>
+<ul>
+<li>Only one PR still needs you: #230 — rjt’s stuck still-image posts get an X close and carousels get a previous arrow (agent finished yesterday). Everything else from yesterday’s waiting list is cleared (#207 and #149 merged; #188/#189/#160/#148 closed unmerged).</li><li>NEW in-app from _b (build 27): camera-off + lock before the screen dims saved only ~2 seconds while the lock-screen timer kept going. Same bug Malcolm fixed overnight in #250 (merged on main ~10:34pm PT). Wait for the next TestFlight — no duplicate agent.</li><li>NEW ask from zaahirat: trim the end of a sitting (fell asleep / left, then ended late). Also a noise “Testing testing” row. Survey +1 diwmx (Very disappointed) asking for better battery life → Sean Ellis 39/25/2 of 66.</li><li>Overnight Linear Done (Malcolm/you): nudge cap removed (TRY-121 / #249), midnight Progress (TRY-117), nudge opens post (TRY-120), Send clears composer (TRY-119), sticker/timer clarity (TRY-111), Ask for Review (TRY-112), Messages warning (TRY-108), TF queue (#250), and more. In progress: Groups chats/nudges (TRY-125), website (TRY-78).</li><li>Sentry NEW clusters 3J–3R look like simulator/dev hangs (build 28, local/sim) — watching, not auto-fixing opaque stacks. Continuing watch on 3H/3G. PostHog: clip_upload_failed Sep20=2 / Sep21=4 / Sep22 partial=3; rageclicks Sep20=264 / Sep21=200 / Sep22 partial=169. Clip-bloat alert Not firing (~1.56 MB/s).</li><li>Waitlist emails: two Android/Windows asks (Mahima, Javier). Discord: login OK as Eddie L — no NEW bugs after Mon Sep 21 9am PT. Zoe told fusion edit-speed already changes timelapse length (thread to be deleted). Malcolm: nudge limit “we're limiting it to 10” (since superseded by TRY-121 on main).</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Ready for you to approve</h2>
+<ul>
+<li><a href="https://github.com/eddie-the-lou/latent/pull/230">#230</a> — Expanded posts get a close X, and carousels get a previous arrow (rjt). Agent finished. CI-red LatentServiceTests like main.</li>
+</ul>
+<p style="color:#555;font-size:14px;">Cleared overnight (no longer waiting): #207 and #149 <em>merged</em>; #188 / #189 / #160 / #148 <em>closed unmerged</em>.</p>
+
+<h2 style="font-size:16px;margin-top:28px;">Broken / confusing</h2>
+<ul>
+<li><strong>_b</strong> — camera-off + lock before dim saved ~2s while lock-screen timer kept going (build 27). <strong>Already fixed on main</strong> by <a href="https://github.com/eddie-the-lou/latent/pull/250">#250</a>. Await next TestFlight. No new agent.</li>
+<li><strong>rjt</strong> — stuck still-image posts / no prev arrow → <a href="https://github.com/eddie-the-lou/latent/pull/230">#230</a> waiting.</li>
+<li>Sentry 3M/3N hang clusters look like <strong>simulator/local build 28</strong> — watching, not auto-fixing.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Things people want</h2>
+<ul>
+<li><strong>zaahirat</strong> — trim the end of a sitting (fell asleep / left late).</li>
+<li><strong>diwmx</strong> (survey) — better battery life. Sean Ellis now 39/25/2 of 66.</li>
+<li>Waitlist: <strong>Mahima</strong> Android/Windows; <strong>Javier</strong> Android — kill/park vs iOS-only.</li>
+<li><strong>suki</strong> — still wants launch on home feed (continuing).</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">What they actually wrote</h2>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">In-app feedback · _b · Mon Sep 21 · 7:56pm PT · build 1.0.1 (27) · bug</div><div style="white-space:pre-wrap;">Starting a recording with the camera off and locking the phone before the screen dims causes the recording to fail. The lock screen timer continues running, but upon unlocking, only two seconds of “footage” is saved.</div></blockquote>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">In-app feedback · zaahirat · Mon Sep 21 · 4:43pm PT · build 1.0.1 (27) · feature</div><div style="white-space:pre-wrap;">If we could trim our sessions that would be nice. One might fall asleep or leave and later end it. If we could cut the end out and make it shorter so the studying time doesn’t go to waste. Not necessarily edit the middle because that would be a bit disruptive.</div></blockquote>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">In-app feedback · zaahirat · Mon Sep 21 · 4:42pm PT · build 1.0.1 (27) · bug</div><div style="white-space:pre-wrap;">Testing testing</div></blockquote>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">PMF survey · Active Users · diwmx · Mon Sep 21 · 4:19pm PT · survey</div><div style="white-space:pre-wrap;">How would you feel if you could no longer use Latent?: Very disappointed
+How can we improve Latent for you?: better battery life if possible at all. </div></blockquote>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Email · waitlist reply · mahimakoul64@gmail.com · Mon Sep 21 · 2:34am PT · email</div><div style="white-space:pre-wrap;">when can we get android/windows version 😢</div></blockquote>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Email · waitlist reply · javier.delcuetofdez@gmail.com · Sun Sep 20 · 3:57pm PT · email</div><div style="white-space:pre-wrap;">Hi, Firstly thank you for sending the link, but I have a problem. I don't have an iPhone, is there an android version?? Thank you.</div></blockquote>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #feature-requests · Zoe · Mon Sep 21 · 9:20am PT · discord</div><div style="white-space:pre-wrap;">If you change the speed of the video on the app, it changes the amount of time. You can see it while you're in editing mode</div></blockquote>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #feature-requests · fusion · Mon Sep 21 · 9:21am PT · discord</div><div style="white-space:pre-wrap;">omg how did i not notice this, thanks so much @Zoe ! ill be deleting this thread then:)</div></blockquote>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #general-chat · Malcolm McDonald · Mon Sep 21 · 1:03pm PT · discord</div><div style="white-space:pre-wrap;">we're limiting it to 10</div></blockquote>
+
+<p style="font-size:12px;color:#888;margin-top:32px;">Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-22">https://eddie-the-lou.github.io/latent-digs/#/2026-09-22</a></p>
+</body></html>
