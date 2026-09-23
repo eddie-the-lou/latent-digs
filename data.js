@@ -1,5 +1,18 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-09-23",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 4,
+      "openBugs": 2,
+      "resolvedBugs": 2,
+      "filtered": 0,
+      "rawQuotes": 3
+    },
+    "path": "data/2026-09-23.json",
+    "htmlArchive": "../2026-09-23.html"
+  },
+  {
     "date": "2026-09-22",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -494,6 +507,19 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-09-23",
+      "title": "Latent feedback dig",
+      "summaryStats": {
+        "openFeatures": 4,
+        "openBugs": 2,
+        "resolvedBugs": 2,
+        "filtered": 0,
+        "rawQuotes": 3
+      },
+      "path": "data/2026-09-23.json",
+      "htmlArchive": "../2026-09-23.html"
+    },
     {
       "date": "2026-09-22",
       "title": "Latent feedback dig",
@@ -68843,5 +68869,436 @@ window.DIGESTS = {
       "Discord scrape file: /workspace/feedback-digests/discord-2026-09-22.md"
     ],
     "discordScrapeNote": "# Latent Early Access Discord scrape \u2014 2026-09-22\n\n- **Server:** Latent (Early Access) (`1519926693018734632`)\n- **Cutoff:** after Sun Sep 21, 2026 9:00 AM America/Los_Angeles (PT)\n- **Login:** **Succeeded.** Discord was already signed in as **Eddie L** (`eddie_lou`). Read-only; nothing was posted.\n\n## 1. #feature-requests\n\nNew messages after the cutoff (in the existing \u201cCustomizable timelapse times\u201d thread):\n\n- **Zoe \u2014 Sep 21, 9:20 AM PT:** \u201cIf you change the speed of the video on the app, it changes the amount of time. You can see it while you're in editing mode\u201d *(edited)*\n- **fusion \u2014 Sep 21, 9:21 AM PT:** \u201comg how did i not notice this, thanks so much @Zoe ! ill be deleting this thread then:)\u201d\n- **Zoe \u2014 Sep 21, 9:22 AM PT:** \u201cYou're welcome :)\u201d\n\nThe prior fusion timelapse-length request is still visible in the thread (posted Sep 21, 5:51 AM PT, before cutoff), as is the tester-role ask. Zoe\u2019s edit-speed response, fusion\u2019s deletion note, and Zoe\u2019s reply above remain visible.\n\n## 2. #questions\n\n- **No new messages** after the cutoff. The channel\u2019s latest visible messages are from Sep 15.\n\n## 3. #general-chat\n\n- **SourLemown\ud83c\udf4b \u2014 Sep 21, 12:48 PM PT:** \u201cello\u201d\n- **SourLemown\ud83c\udf4b \u2014 Sep 21, 12:49 PM PT:** \u201chow to reverse catfish someone\u201d\n- **Malcolm McDonald \u2014 Sep 21, 1:03 PM PT:** \u201cwe're limiting it to 10\u201d *(replying to TheCountessOfMonteCristo\u2019s nudge-capacity question)*\n- **Android Advocate \u2014 Sep 21, 3:38 PM PT:** \u201cwatching a video on double pendulums and it is just DEVOURING my bitrate rn\u201d\n- **Android Advocate \u2014 Sep 22, 4:32 AM PT:** \u201chttps://www.instagram.com/reel/DdFuxGFus-y/?stkn=YTR2cXBpNWx6eXFw\u201d\n\nThe known **j3 free-at-launch** item remains visible (j3\u2019s Sep 20, 10:33 PM message and replies, all before cutoff). The known **TheCountessOfMonteCristo nudge-capacity** question remains visible (Sep 21, 1:37 AM, before cutoff), with Malcolm\u2019s post-cutoff answer above.\n\n## 4. #announcements\n\n- **Not visible in the server\u2019s channel list** for Eddie L, so it could not be "
+  },
+  "2026-09-23": {
+    "date": "2026-09-23",
+    "title": "Latent daily review \u00b7 Sep 23",
+    "generatedAt": "2026-09-23T16:59:11.305718+00:00",
+    "tldr": [
+      "Yesterday\u2019s only waiting PR #230 (rjt close-X + prev arrow) was merged on main ~3:33pm PT Sep 22 \u2014 nothing left that needs your approve right now.",
+      "NEW in-app bug from stef40 (build 27): recordings stay in draft and they can\u2019t figure out how to publish (only edits). Launched Cloud Agent bc-51f4d01d on Grok 4.6 \u2014 spinning, not merged.",
+      "NEW ask from alinx_cc: longer break button for pomodoro (10/20 min, not just 5). Product ask; no auto-fix.",
+      "Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. No new user-feedback emails (only CI / Cloudflare biz / calendar).",
+      "Overnight on main: #230, #251 remove phone (App Review), #252 sticker on one-media posts, #253 launch free / kill paywall, #254 group chats backend, #256 pause Live Activity on Lock Screen, plus Instagram-shaped profile/invite commit. Linear Done: TRY-128/130/125/135. In progress: TRY-106 invite redo, TRY-131/132 free-launch follow-ups, TRY-134 lighter feed, TRY-136 fonts, TRY-78 website, TRY-124 TF feedback.",
+      "Sentry NEW singles 3S/3T/3V/3W/3X \u2014 watching (3W is your own debug build 28; 3V TodayView Calendar.localDayKey; 3T YouView.miniStatRow; 3X keyboard on old build 25). Prior 3M/3N/3H lookups returned nothing this morning. PostHog: clip_upload_failed Sep20=2 / Sep21=4 / Sep22=3 / Sep23 partial=8; rageclicks 264/200/267/152; clip-bloat Not firing (~1.56 MB/s).",
+      "Discord login OK \u2014 no NEW Latent bugs after Mon Sep 22 9am PT. Banter only; Lakshya briefly couldn\u2019t find invite code then said nvm."
+    ],
+    "plainTldr": [
+      "Yesterday\u2019s only waiting PR #230 (rjt close-X + prev arrow) was merged on main ~3:33pm PT Sep 22 \u2014 nothing left that needs your approve right now.",
+      "NEW in-app bug from stef40 (build 27): recordings stay in draft and they can\u2019t figure out how to publish (only edits). Launched Cloud Agent bc-51f4d01d on Grok 4.6 \u2014 spinning, not merged.",
+      "NEW ask from alinx_cc: longer break button for pomodoro (10/20 min, not just 5). Product ask; no auto-fix.",
+      "Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. No new user-feedback emails (only CI / Cloudflare biz / calendar).",
+      "Overnight on main: #230, #251 remove phone (App Review), #252 sticker on one-media posts, #253 launch free / kill paywall, #254 group chats backend, #256 pause Live Activity on Lock Screen, plus Instagram-shaped profile/invite commit. Linear Done: TRY-128/130/125/135. In progress: TRY-106 invite redo, TRY-131/132 free-launch follow-ups, TRY-134 lighter feed, TRY-136 fonts, TRY-78 website, TRY-124 TF feedback.",
+      "Sentry NEW singles 3S/3T/3V/3W/3X \u2014 watching (3W is your own debug build 28; 3V TodayView Calendar.localDayKey; 3T YouView.miniStatRow; 3X keyboard on old build 25). Prior 3M/3N/3H lookups returned nothing this morning. PostHog: clip_upload_failed Sep20=2 / Sep21=4 / Sep22=3 / Sep23 partial=8; rageclicks 264/200/267/152; clip-bloat Not firing (~1.56 MB/s).",
+      "Discord login OK \u2014 no NEW Latent bugs after Mon Sep 22 9am PT. Banter only; Lakshya briefly couldn\u2019t find invite code then said nvm."
+    ],
+    "stats": {
+      "newInApp": 2,
+      "newDiscord": 1,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-3S",
+        "APPLE-IOS-3T",
+        "APPLE-IOS-3V",
+        "APPLE-IOS-3W",
+        "APPLE-IOS-3X"
+      ],
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-20": 2,
+          "2026-09-21": 4,
+          "2026-09-22": 3,
+          "2026-09-23": 8
+        },
+        "rageclicks": {
+          "2026-09-20": 264,
+          "2026-09-21": 200,
+          "2026-09-22": 267,
+          "2026-09-23": 152
+        },
+        "clipBloatAlert": "Not firing",
+        "clipBloatLastValue": 1.563
+      },
+      "rawQuotes": 3
+    },
+    "prStatus": {
+      "waiting": [],
+      "malcolmOpen": [
+        {
+          "pr": 241,
+          "title": "Save the App Store screenshot drafts and render scripts",
+          "url": "https://github.com/eddie-the-lou/latent/pull/241"
+        },
+        {
+          "pr": 164,
+          "title": "Today mini cards fit their durations; camera toggle stays put",
+          "url": "https://github.com/eddie-the-lou/latent/pull/164"
+        },
+        {
+          "pr": 162,
+          "title": "One frame rule for the timelapse clip",
+          "url": "https://github.com/eddie-the-lou/latent/pull/162"
+        },
+        {
+          "pr": 123,
+          "title": "Sequential dual-camera proof stills (draft)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/123"
+        }
+      ],
+      "agentsSpinning": [
+        {
+          "id": "bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512",
+          "title": "stef40 drafts stuck \u2014 can't publish",
+          "url": "https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512"
+        }
+      ],
+      "agentsFinished": [],
+      "clearedOvernight": [
+        {
+          "pr": 230,
+          "title": "rjt close-X + prev carousel \u2014 MERGED",
+          "url": "https://github.com/eddie-the-lou/latent/pull/230"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "agent-stef40-draft-publish",
+        "title": "Cloud Agent \u2014 stef40 drafts stuck / can't publish",
+        "status": "spinning",
+        "resolved": false,
+        "plainTitle": "Agent spinning: stef40 can\u2019t publish drafts",
+        "plainSummary": "Grok 4.6 agent bc-51f4d01d launched this morning. Investigation brief (H1 missing Post chrome \u2192 H5 UX). Do not merge until it opens a PR and you review. You usually can\u2019t repro tester bugs on your phone.",
+        "actionStatus": "Agent spinning \u00b7 bc-51f4d01d",
+        "people": [
+          "stef40"
+        ],
+        "url": "https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512",
+        "links": [
+          {
+            "label": "Agent",
+            "url": "https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512"
+          }
+        ]
+      },
+      {
+        "id": "main-230-rjt-merged",
+        "title": "#230 on main \u2014 close X + prev arrow (rjt)",
+        "status": "resolved",
+        "resolved": true,
+        "plainTitle": "Cleared: yesterday\u2019s waiting #230 is merged",
+        "plainSummary": "Merged ~3:33pm PT Sep 22 (807300e). Needs next TestFlight for testers. No longer waiting on you.",
+        "actionStatus": "Merged on main \u00b7 await TF",
+        "people": [
+          "rjt"
+        ],
+        "url": "https://github.com/eddie-the-lou/latent/pull/230",
+        "links": [
+          {
+            "label": "PR #230",
+            "url": "https://github.com/eddie-the-lou/latent/pull/230"
+          }
+        ]
+      }
+    ],
+    "bugs": [
+      {
+        "id": "stef40-drafts-stuck",
+        "title": "Recordings stay in draft / can't publish (stef40)",
+        "plainTitle": "Drafts stuck \u2014 not sure how to publish",
+        "plainSummary": "stef40 (build 27): sittings stay in draft; only edits work; unsure how to publish. Agent spinning on Grok 4.6.",
+        "status": "spinning",
+        "resolved": false,
+        "actionStatus": "Agent spinning \u00b7 bc-51f4d01d",
+        "people": [
+          "stef40"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 stef40 \u00b7 Tue Sep 22 \u00b7 10:12pm PT \u00b7 build 27 \u00b7 bug"
+          }
+        ],
+        "detail": "Hey, my recordings stay in draft. Not sure how to publish. Might be a bug because I can only make edits.",
+        "novelty": "new",
+        "url": "https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512"
+      },
+      {
+        "id": "rjt-stuck-image-post",
+        "title": "Stuck in still-image posts + missing prev slide (rjt)",
+        "plainTitle": "Stuck image posts \u2014 fixed on main",
+        "plainSummary": "#230 merged yesterday. Await TF.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "Merged \u00b7 #230 \u00b7 await TF",
+        "people": [
+          "rjt"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 rjt \u00b7 build 25 \u00b7 PR #230"
+          }
+        ],
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/230"
+      },
+      {
+        "id": "b-camera-off-lock-2s",
+        "title": "Camera-off lock before dim saves ~2s (_b)",
+        "plainTitle": "Camera-off + lock early: only 2 seconds saved",
+        "plainSummary": "Still awaiting next TestFlight after #250 on main.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "Fixed on main \u00b7 #250 \u00b7 await TF",
+        "people": [
+          "_b"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 _b \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/250"
+      },
+      {
+        "id": "apple-ios-3s-3x-watch",
+        "title": "Sentry NEW 3S/3T/3V/3W/3X singles",
+        "plainTitle": "Five new hang singles \u2014 watching",
+        "plainSummary": "3W is your debug build 28. 3V TodayView Calendar.localDayKey (anonymoussushi1071 build 27). 3T YouView.miniStatRow (faroos274). 3X keyboard hang on old build 25. 3S opaque. Not auto-fixing opaque/single stacks.",
+        "status": "watching",
+        "resolved": false,
+        "actionStatus": "Watching",
+        "people": [
+          "faroos274",
+          "anonymoussushi1071"
+        ],
+        "supportCount": 0,
+        "sources": [
+          {
+            "label": "Sentry APPLE-IOS-3S",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-3S"
+          },
+          {
+            "label": "Sentry APPLE-IOS-3T",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-3T"
+          },
+          {
+            "label": "Sentry APPLE-IOS-3V",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-3V"
+          },
+          {
+            "label": "Sentry APPLE-IOS-3W",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-3W"
+          },
+          {
+            "label": "Sentry APPLE-IOS-3X",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-3X"
+          }
+        ],
+        "novelty": "new"
+      }
+    ],
+    "features": [
+      {
+        "id": "alinx-break-button",
+        "title": "Longer break button / pomodoro (alinx_cc)",
+        "plainTitle": "Break button longer than 5 minutes",
+        "plainSummary": "alinx_cc (build 27): wants 10/20 minute breaks for pomodoro. Product ask; no auto-fix.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product",
+        "people": [
+          "alinx_cc"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 alinx_cc \u00b7 Tue Sep 22 \u00b7 3:14pm PT \u00b7 feature"
+          }
+        ],
+        "detail": "You could add a break button, since most people study with a pomodoro timer and the breaks usually last longer than 5 minutes. Maybe 10/20 minutes.",
+        "novelty": "new"
+      },
+      {
+        "id": "zaahirat-trim-end",
+        "title": "Trim end of session (zaahirat)",
+        "plainTitle": "Cut dead time off the end of a sitting",
+        "plainSummary": "Still open from yesterday.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product",
+        "people": [
+          "zaahirat"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 zaahirat \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "diwmx-battery",
+        "title": "Better battery life (diwmx survey)",
+        "plainTitle": "Survey: better battery life if possible",
+        "plainSummary": "Still open. Sean Ellis unchanged 39/25/2 of 66.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 survey",
+        "people": [
+          "diwmx"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "PMF survey \u00b7 Active Users \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "launch-on-home-feed",
+        "title": "Launch on home feed instead of camera (suki)",
+        "plainTitle": "Open Latent on the home feed, not the camera",
+        "plainSummary": "Still open from suki\u2019s Sep 19 note.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product choice",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      }
+    ],
+    "bySource": {
+      "inApp": [
+        {
+          "who": "stef40",
+          "when": "Tue Sep 22 \u00b7 10:12pm PT",
+          "kind": "bug",
+          "build": "27",
+          "summary": "Drafts stuck / can't publish \u2192 agent spinning"
+        },
+        {
+          "who": "alinx_cc",
+          "when": "Tue Sep 22 \u00b7 3:14pm PT",
+          "kind": "feature",
+          "build": "27",
+          "summary": "Longer break button (10/20 min)"
+        }
+      ],
+      "discord": [
+        {
+          "summary": "Login OK. No NEW Latent bugs/feature requests after Mon Sep 22 9:00 AM PT. Banter in #general-chat; Lakshya briefly asked for invite code then said nvm. #announcements not visible."
+        }
+      ],
+      "email": [
+        {
+          "summary": "No new tester/user feedback emails. Cloudflare Latent architecture thread + GitHub CI noise only."
+        }
+      ],
+      "survey": [
+        {
+          "summary": "Unchanged Active Users n=66 \u00b7 Sean Ellis 39/25/2 \u00b7 no new rows \u00b7 build-one-next column still empty"
+        }
+      ],
+      "sentry": [
+        {
+          "id": "APPLE-IOS-3V",
+          "summary": "Hang ~5s \u00b7 TodayView Calendar.localDayKey \u00b7 anonymoussushi1071 \u00b7 build 27 \u00b7 watching"
+        },
+        {
+          "id": "APPLE-IOS-3T",
+          "summary": "Hang ~7s \u00b7 YouView.miniStatRow \u00b7 faroos274 \u00b7 build 27 \u00b7 watching"
+        },
+        {
+          "id": "APPLE-IOS-3W",
+          "summary": "Fatal hang \u00b7 eddie debug build 28 \u00b7 watching (dev)"
+        },
+        {
+          "id": "APPLE-IOS-3S",
+          "summary": "Fatal hang \u00b7 opaque Set.insert \u00b7 faroos274 \u00b7 build 27 \u00b7 watching"
+        },
+        {
+          "id": "APPLE-IOS-3X",
+          "summary": "Hang ~4s \u00b7 keyboard selection \u00b7 real device build 25 \u00b7 watching"
+        }
+      ],
+      "posthog": [
+        {
+          "summary": "clip_upload_failed Sep20=2 / Sep21=4 / Sep22=3 / Sep23 partial=8"
+        },
+        {
+          "summary": "rageclicks Sep20=264 / Sep21=200 / Sep22=267 / Sep23 partial=152"
+        },
+        {
+          "summary": "Clip bloat alert Not firing \u00b7 last ~1.56 MB/s"
+        }
+      ],
+      "linear": [
+        {
+          "summary": "Done: TRY-135 pause Live Activity, TRY-125 Group chats/nudges, TRY-130 sticker overlay feed, TRY-128 remove phone number (ASC)"
+        },
+        {
+          "summary": "In progress: TRY-106 invite redo, TRY-131 remove paywall, TRY-132 suggest inviter friends, TRY-134 lighter feed scroll, TRY-136 fonts, TRY-78 website, TRY-124 TF feedback"
+        }
+      ]
+    },
+    "rawQuotes": [
+      {
+        "source": "In-app feedback",
+        "who": "stef40",
+        "username": "stef40",
+        "when": "Tue Sep 22 \u00b7 10:12pm PT",
+        "build": "1.0.1 (27)",
+        "kind": "bug",
+        "ios": "26.6.1",
+        "text": "Hey, my recordings stay in draft. Not sure how to publish. Might be a bug because I can only make edits."
+      },
+      {
+        "source": "In-app feedback",
+        "who": "alinx_cc",
+        "username": "alinx_cc",
+        "when": "Tue Sep 22 \u00b7 3:14pm PT",
+        "build": "1.0.1 (27)",
+        "kind": "feature",
+        "ios": "26.6.1",
+        "text": "You could add a break button, since most people study with a pomodoro timer and the breaks usually last longer than 5 minutes. Maybe 10/20 minutes."
+      },
+      {
+        "source": "Discord \u00b7 #general-chat",
+        "who": "Lakshya",
+        "username": "Lakshya",
+        "when": "Wed Sep 23 \u00b7 9:42am PT",
+        "build": "",
+        "kind": "discord",
+        "ios": "",
+        "text": "what is the\ncode man\ni just got access to it, and i cant figure out the invitation code\nnvm"
+      }
+    ],
+    "technicalNotes": [
+      "Main tip 6026fdf after #256 TRY-135, #254 TRY-125 backend, #253 launch free, #252 sticker, #251 phone remove, #230 rjt chrome.",
+      "Eddie waiting PRs: none. stef40 agent still spinning (no PR yet).",
+      "VedSoni-dev older open PRs (#59\u2013#76) not re-listed unless asked. Malcolm open: #241/#164/#162/#123.",
+      "Mac online this run \u2014 will sync site folder after publish.",
+      "Discord scrape file: /workspace/feedback-digests/discord-2026-09-23.md"
+    ],
+    "discordScrapeNote": "# Latent Early Access Discord scrape \u2014 2026-09-23\n\n- **Server:** Latent (Early Access) (`1519926693018734632`)\n- **Cutoff:** after Mon Sep 22, 2026 9:00 AM America/Los_Angeles (PT)\n- **Login:** **Succeeded** via box Chrome profile (Playwright persistent context). Title showed Discord | #joins | Latent (Early Access). Read-only; nothing posted.\n- **Method note:** Executor has no computerUse tool; used Playwright + `/tmp/chrome-discord-profile` copy of box Chrome profile.\n\n## 1. #feature-requests\n"
   }
 };
