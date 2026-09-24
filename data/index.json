@@ -3,11 +3,11 @@
     "date": "2026-09-24",
     "title": "Latent feedback dig",
     "summaryStats": {
-      "openFeatures": 5,
+      "openFeatures": 6,
       "openBugs": 2,
       "resolvedBugs": 2,
       "filtered": 0,
-      "rawQuotes": 1
+      "rawQuotes": 3
     },
     "path": "data/2026-09-24.json",
     "htmlArchive": "../2026-09-24.html"

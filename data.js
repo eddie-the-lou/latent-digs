@@ -3,11 +3,11 @@ window.DIGEST_INDEX = [
     "date": "2026-09-24",
     "title": "Latent feedback dig",
     "summaryStats": {
-      "openFeatures": 5,
+      "openFeatures": 6,
       "openBugs": 2,
       "resolvedBugs": 2,
       "filtered": 0,
-      "rawQuotes": 1
+      "rawQuotes": 3
     },
     "path": "data/2026-09-24.json",
     "htmlArchive": "../2026-09-24.html"
@@ -524,11 +524,11 @@ window.DIGESTS = {
       "date": "2026-09-24",
       "title": "Latent feedback dig",
       "summaryStats": {
-        "openFeatures": 5,
+        "openFeatures": 6,
         "openBugs": 2,
         "resolvedBugs": 2,
         "filtered": 0,
-        "rawQuotes": 1
+        "rawQuotes": 3
       },
       "path": "data/2026-09-24.json",
       "htmlArchive": "../2026-09-24.html"
@@ -69330,7 +69330,7 @@ window.DIGESTS = {
   "2026-09-24": {
     "date": "2026-09-24",
     "title": "Latent daily review \u00b7 Sep 24",
-    "generatedAt": "2026-09-24T16:23:56.137938+00:00",
+    "generatedAt": "2026-09-24T16:26:28.516171+00:00",
     "tldr": [
       "Ready for you: draft PR #257 for stef40\u2019s \u201cdrafts stuck / can\u2019t publish\u201d \u2014 Post was hidden until a tag was picked (not DraftStore). Do not merge until you review. You usually can\u2019t QA tester bugs on your phone.",
       "NEW in-app ask from suki (build 27): after you nudge someone, keep a \u201cnudged\u201d icon on Home instead of snapping back to \ud83d\udc4b on refresh. Product ask; no new Cloud Agent (Malcolm\u2019s open #267 is group-hand / chat nav, not this).",
@@ -69338,7 +69338,7 @@ window.DIGESTS = {
       "Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. \u201cBuild one next\u201d column still empty. No new tester/user feedback emails (Eddie emailed Stef for a draft screenshot; collab/Cloudflare/CI noise only).",
       "Overnight on main (after yesterday\u2019s dig): big pile \u2014 #259\u2013#279 including group chats/nudging, hide-own-posts, camera background release, Lock Screen unlock fix, invite links with code, orphan clip cleanup (TRY-123), friend closeness sort, fonts/type scale, Live Now push (#278), feed/tab perf (#279). Linear Done: TRY-126/106/136/142/123/141/124/133/129 + earlier. In progress: TRY-145 Live Now Notification, TRY-134 lighter feed, TRY-78 website.",
       "Sentry NEW hang singles 3Y / 3Z / 40 / 41 \u2014 watching. 41 is ZoomPillLayout.minWidth for drizzy (build 24, iPhone XR). Not auto-fixing opaque singles. PostHog: clip_upload_failed Sep20=2 / Sep21=4 / Sep22=3 / Sep23=8 / Sep24 partial=2; rageclicks 264/200/268/231/93; clip-bloat Not firing (~1.56 MB/s).",
-      "Discord: scrape still finishing as of dig write \u2014 see Discord section / notes file when ready."
+      "Discord login OK \u2014 2 NEW feature/access asks in #general-chat (no bugs): Android Advocate wants Android Latent; SourLemown asked about an iOS VM on Android. Banter otherwise; #announcements not visible."
     ],
     "plainTldr": [
       "Ready for you: draft PR #257 for stef40\u2019s \u201cdrafts stuck / can\u2019t publish\u201d \u2014 Post was hidden until a tag was picked (not DraftStore). Do not merge until you review. You usually can\u2019t QA tester bugs on your phone.",
@@ -69347,11 +69347,11 @@ window.DIGESTS = {
       "Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. \u201cBuild one next\u201d column still empty. No new tester/user feedback emails (Eddie emailed Stef for a draft screenshot; collab/Cloudflare/CI noise only).",
       "Overnight on main (after yesterday\u2019s dig): big pile \u2014 #259\u2013#279 including group chats/nudging, hide-own-posts, camera background release, Lock Screen unlock fix, invite links with code, orphan clip cleanup (TRY-123), friend closeness sort, fonts/type scale, Live Now push (#278), feed/tab perf (#279). Linear Done: TRY-126/106/136/142/123/141/124/133/129 + earlier. In progress: TRY-145 Live Now Notification, TRY-134 lighter feed, TRY-78 website.",
       "Sentry NEW hang singles 3Y / 3Z / 40 / 41 \u2014 watching. 41 is ZoomPillLayout.minWidth for drizzy (build 24, iPhone XR). Not auto-fixing opaque singles. PostHog: clip_upload_failed Sep20=2 / Sep21=4 / Sep22=3 / Sep23=8 / Sep24 partial=2; rageclicks 264/200/268/231/93; clip-bloat Not firing (~1.56 MB/s).",
-      "Discord: scrape still finishing as of dig write \u2014 see Discord section / notes file when ready."
+      "Discord login OK \u2014 2 NEW feature/access asks in #general-chat (no bugs): Android Advocate wants Android Latent; SourLemown asked about an iOS VM on Android. Banter otherwise; #announcements not visible."
     ],
     "stats": {
       "newInApp": 1,
-      "newDiscord": 0,
+      "newDiscord": 2,
       "newSurveyRows": 0,
       "seanEllis": {
         "very": 39,
@@ -69383,7 +69383,7 @@ window.DIGESTS = {
         "clipBloatAlert": "Not firing",
         "clipBloatLastValue": 1.5635743130434783
       },
-      "rawQuotes": 1
+      "rawQuotes": 3
     },
     "prStatus": {
       "waiting": [
@@ -69661,6 +69661,26 @@ window.DIGESTS = {
         "novelty": "new"
       },
       {
+        "id": "discord-android-ask",
+        "title": "Android version (Android Advocate)",
+        "plainTitle": "Please release Latent on Android",
+        "plainSummary": "Discord #general-chat. Off-platform / positioning ask \u2014 not auto-fixing. Logged so you see the demand.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 kill-list candidate",
+        "people": [
+          "Android Advocate"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #general-chat \u00b7 Thu Sep 24 \u00b7 ~3:47am PT"
+          }
+        ],
+        "detail": "I plead to thee, Eddie, please release the Android version of Latent",
+        "novelty": "new"
+      },
+      {
         "id": "alinx-break-button",
         "title": "Longer break button / pomodoro (alinx_cc)",
         "plainTitle": "Break button longer than 5 minutes",
@@ -69749,7 +69769,7 @@ window.DIGESTS = {
       ],
       "discord": [
         {
-          "summary": "Scrape in progress at dig write time \u2014 window after Tue Sep 23 9:00 AM PT. See discord-2026-09-24.md when ready."
+          "summary": "Login OK as Eddie L. Window after Tue Sep 23 9:00 AM PT. NEW: Android Advocate Android ask; SourLemown iOS-VM-on-Android. No NEW bugs. #announcements not visible. #tester-chat empty after cutoff."
         }
       ],
       "email": [
@@ -69786,6 +69806,22 @@ window.DIGESTS = {
         "build": "1.0.1 (27)",
         "kind": "feature",
         "text": "After we have nudged people for the day, make it show as we have nudged in the home page with an icon near their profiles. When we refresh, it just returns back to the normal \ud83d\udc4b symbol near their profiles."
+      },
+      {
+        "source": "Discord \u00b7 #general-chat",
+        "who": "Android Advocate",
+        "when": "Thu Sep 24 \u00b7 ~3:47am PT",
+        "build": "",
+        "kind": "feature",
+        "text": "I plead to thee, Eddie, please release the Android version of Latent"
+      },
+      {
+        "source": "Discord \u00b7 #general-chat",
+        "who": "SourLemown",
+        "when": "Thu Sep 24 \u00b7 ~12:12am PT",
+        "build": "",
+        "kind": "question",
+        "text": "can i run an ios VM on my android"
       }
     ]
   }
