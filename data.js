@@ -1,5 +1,18 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-09-25",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 7,
+      "openBugs": 3,
+      "resolvedBugs": 2,
+      "filtered": 0,
+      "rawQuotes": 4
+    },
+    "path": "data/2026-09-25.json",
+    "htmlArchive": "../2026-09-25.html"
+  },
+  {
     "date": "2026-09-24",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -520,6 +533,19 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-09-25",
+      "title": "Latent feedback dig",
+      "summaryStats": {
+        "openFeatures": 7,
+        "openBugs": 3,
+        "resolvedBugs": 2,
+        "filtered": 0,
+        "rawQuotes": 4
+      },
+      "path": "data/2026-09-25.json",
+      "htmlArchive": "../2026-09-25.html"
+    },
     {
       "date": "2026-09-24",
       "title": "Latent feedback dig",
@@ -69822,6 +69848,606 @@ window.DIGESTS = {
         "build": "",
         "kind": "question",
         "text": "can i run an ios VM on my android"
+      }
+    ]
+  },
+  "2026-09-25": {
+    "date": "2026-09-25",
+    "title": "Latent daily review \u00b7 Sep 25",
+    "generatedAt": "2026-09-25T16:27:42.756998+00:00",
+    "tldr": [
+      "Ready for you: draft PR #257 for stef40\u2019s \u201cdrafts stuck / can\u2019t publish\u201d \u2014 Post was hidden until a tag was picked. Do not merge until you review. You usually can\u2019t QA tester bugs on your phone.",
+      "NEW bug from suki (build 29): feed timelapses look smooth, but full-view open is laggy/slow, and Latent is burning a lot of mobile data. Cloud Agent bc-bce5a81a launched on Grok 4.6 (PR pending \u2014 do not merge when it lands).",
+      "NEW in-app ask from jia (build 27): delete function on messages. Overnight #287 already landed inbox delete (plus pin/mute/mark unread) on main \u2014 likely covers this; await TestFlight.",
+      "NEW Discord #feature-requests: Ichika_.2 wants light face-touch-up filters (camera-shy); sheppard.c wants Home Screen / Lock Screen widgets for streak / get-to-work reminders. Product asks; no auto-fix.",
+      "Cleared overnight (product): alinx_cc longer pomodoro breaks \u2014 Linear TRY-146 Done (raise breaktime to 10/15). Still open: suki nudge-icon + launch-on-home, zaahirat trim-end, diwmx battery, Android Advocate Android ask.",
+      "Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. \u201cBuild one next\u201d still empty. No new tester/user feedback emails (collab/CI/DMARC noise only).",
+      "Overnight on main (after yesterday\u2019s dig): #280 Groups drop Posts button; #281 post date under caption; #282 pause resume window 15m; #283 bump build 29; #285 Messages live status/group standing/nudge; #286 Pomodoro Finish now Back arrow (TRY-154); #287 inbox pin/mute/unread/delete. Linear Done: TRY-154/134/146/145 (+ earlier). In progress: TRY-148 messages appear as sent, TRY-151 kudos refresh, TRY-162 notifications page, TRY-147 multiple groups, TRY-127 mark read, TRY-78 website.",
+      "Sentry NEW hang singles 42\u201346 (plus still watching 3Y/3Z/40/41). Opaque singles \u2014 not auto-fixing. 46 HomeFeed.feedContent for anonymoussushi (build 29); 42 DayBar for jacob_diamond (build 27). PostHog: clip_upload_failed Sep20\u201325 = 4/3/8/3/2/0(partial); rageclicks 278/256/242/205/295/78; clip-bloat Not firing (~1.56 MB/s).",
+      "Discord login OK as Eddie L. Window after Thu Sep 24 9:00 AM PT: 2 NEW feature threads (Ichika filters, sheppard widgets). #general-chat banter only (food). #questions / #tester-chat / #announcements: no NEW bugs."
+    ],
+    "plainTldr": [
+      "Ready for you: draft PR #257 for stef40\u2019s \u201cdrafts stuck / can\u2019t publish\u201d \u2014 Post was hidden until a tag was picked. Do not merge until you review. You usually can\u2019t QA tester bugs on your phone.",
+      "NEW bug from suki (build 29): feed timelapses look smooth, but full-view open is laggy/slow, and Latent is burning a lot of mobile data. Cloud Agent bc-bce5a81a launched on Grok 4.6 (PR pending \u2014 do not merge when it lands).",
+      "NEW in-app ask from jia (build 27): delete function on messages. Overnight #287 already landed inbox delete (plus pin/mute/mark unread) on main \u2014 likely covers this; await TestFlight.",
+      "NEW Discord #feature-requests: Ichika_.2 wants light face-touch-up filters (camera-shy); sheppard.c wants Home Screen / Lock Screen widgets for streak / get-to-work reminders. Product asks; no auto-fix.",
+      "Cleared overnight (product): alinx_cc longer pomodoro breaks \u2014 Linear TRY-146 Done (raise breaktime to 10/15). Still open: suki nudge-icon + launch-on-home, zaahirat trim-end, diwmx battery, Android Advocate Android ask.",
+      "Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. \u201cBuild one next\u201d still empty. No new tester/user feedback emails (collab/CI/DMARC noise only).",
+      "Overnight on main (after yesterday\u2019s dig): #280 Groups drop Posts button; #281 post date under caption; #282 pause resume window 15m; #283 bump build 29; #285 Messages live status/group standing/nudge; #286 Pomodoro Finish now Back arrow (TRY-154); #287 inbox pin/mute/unread/delete. Linear Done: TRY-154/134/146/145 (+ earlier). In progress: TRY-148 messages appear as sent, TRY-151 kudos refresh, TRY-162 notifications page, TRY-147 multiple groups, TRY-127 mark read, TRY-78 website.",
+      "Sentry NEW hang singles 42\u201346 (plus still watching 3Y/3Z/40/41). Opaque singles \u2014 not auto-fixing. 46 HomeFeed.feedContent for anonymoussushi (build 29); 42 DayBar for jacob_diamond (build 27). PostHog: clip_upload_failed Sep20\u201325 = 4/3/8/3/2/0(partial); rageclicks 278/256/242/205/295/78; clip-bloat Not firing (~1.56 MB/s).",
+      "Discord login OK as Eddie L. Window after Thu Sep 24 9:00 AM PT: 2 NEW feature threads (Ichika filters, sheppard widgets). #general-chat banter only (food). #questions / #tester-chat / #announcements: no NEW bugs."
+    ],
+    "stats": {
+      "newInApp": 2,
+      "newDiscord": 2,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-42",
+        "APPLE-IOS-43",
+        "APPLE-IOS-44",
+        "APPLE-IOS-45",
+        "APPLE-IOS-46"
+      ],
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-20": 4,
+          "2026-09-21": 3,
+          "2026-09-22": 8,
+          "2026-09-23": 3,
+          "2026-09-24": 2,
+          "2026-09-25": 0
+        },
+        "rageclicks": {
+          "2026-09-20": 278,
+          "2026-09-21": 256,
+          "2026-09-22": 242,
+          "2026-09-23": 205,
+          "2026-09-24": 295,
+          "2026-09-25": 78
+        },
+        "clipBloatAlert": "Not firing",
+        "clipBloatLastValue": 1.5645478595317726
+      },
+      "rawQuotes": 4
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 257,
+          "title": "A draft can be posted without hunting for Log session (stef40)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/257",
+          "draft": true,
+          "agent": "bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512"
+        }
+      ],
+      "malcolmOpen": [
+        {
+          "pr": 284,
+          "title": "Stop retrying a rate-limited presign, and write down the edge-function loop rule",
+          "url": "https://github.com/eddie-the-lou/latent/pull/284"
+        },
+        {
+          "pr": 267,
+          "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+          "url": "https://github.com/eddie-the-lou/latent/pull/267"
+        },
+        {
+          "pr": 241,
+          "title": "Save the App Store screenshot drafts and render scripts",
+          "url": "https://github.com/eddie-the-lou/latent/pull/241"
+        },
+        {
+          "pr": 164,
+          "title": "Today mini cards fit their durations; camera toggle stays put",
+          "url": "https://github.com/eddie-the-lou/latent/pull/164"
+        },
+        {
+          "pr": 162,
+          "title": "One frame rule for the timelapse clip",
+          "url": "https://github.com/eddie-the-lou/latent/pull/162"
+        },
+        {
+          "pr": 123,
+          "title": "Sequential dual-camera proof stills (draft)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/123"
+        }
+      ],
+      "agentsSpinning": [
+        {
+          "id": "bc-bce5a81a-6dba-536c-91c7-3d7d945caa20",
+          "title": "suki full-view lag + mobile data",
+          "url": "https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20",
+          "pr": null
+        }
+      ],
+      "agentsFinished": [
+        {
+          "id": "bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512",
+          "title": "stef40 drafts stuck \u2014 can't publish",
+          "url": "https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512",
+          "pr": 257
+        }
+      ],
+      "clearedOvernight": [
+        {
+          "id": "alinx-break-button",
+          "title": "Longer break button / pomodoro (alinx_cc)",
+          "via": "TRY-146 Done"
+        }
+      ],
+      "mergedOvernight": [
+        {
+          "pr": 287,
+          "title": "Inbox thread actions: pin, mute, mark unread and delete, for me only"
+        },
+        {
+          "pr": 286,
+          "title": "Give a Pomodoro's \"Finish now\" a Back arrow, like a paused Finish"
+        },
+        {
+          "pr": 285,
+          "title": "Messages: live status, group standing and a nudge on every row"
+        },
+        {
+          "pr": 283,
+          "title": "Bump build to 29"
+        },
+        {
+          "pr": 282,
+          "title": "Give a paused session fifteen minutes to come back, not five"
+        },
+        {
+          "pr": 281,
+          "title": "Show a post's date beneath its caption instead of 1d/3w in the header"
+        },
+        {
+          "pr": 280,
+          "title": "Groups: drop the Posts button above the Today row"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "pr-257-stef40-draft-publish",
+        "title": "PR #257 \u2014 stef40 drafts stuck / can't publish",
+        "status": "waiting",
+        "resolved": false,
+        "plainTitle": "Ready to approve: stef40 can\u2019t find Post",
+        "plainSummary": "Still draft. Root cause: Log session / Post was folded away until a tag was picked. Do not merge until you review. You usually can\u2019t QA tester bugs on your phone.",
+        "actionStatus": "Waiting on you \u00b7 draft PR #257",
+        "people": [
+          "stef40"
+        ],
+        "url": "https://github.com/eddie-the-lou/latent/pull/257",
+        "links": [
+          {
+            "label": "PR #257",
+            "url": "https://github.com/eddie-the-lou/latent/pull/257"
+          },
+          {
+            "label": "Agent",
+            "url": "https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512"
+          }
+        ]
+      },
+      {
+        "id": "agent-suki-fullview-data",
+        "title": "Cloud Agent \u2014 suki full-view lag + mobile data",
+        "status": "spinning",
+        "resolved": false,
+        "plainTitle": "Fix spinning: full-view laggy + too much cellular data",
+        "plainSummary": "suki (build 29) reported smooth feed but laggy full-view open plus heavy mobile data. Grok 4.6 agent bc-bce5a81a spinning; will open a PR \u2014 do not merge until you review.",
+        "actionStatus": "Agent spinning \u00b7 bc-bce5a81a",
+        "people": [
+          "suki"
+        ],
+        "url": "https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20",
+        "links": [
+          {
+            "label": "Agent",
+            "url": "https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20"
+          }
+        ]
+      }
+    ],
+    "bugs": [
+      {
+        "id": "stef40-drafts-stuck",
+        "title": "Recordings stay in draft / can't publish (stef40)",
+        "plainTitle": "Drafts stuck \u2014 not sure how to publish",
+        "plainSummary": "Draft PR #257 still waiting on you.",
+        "status": "waiting",
+        "resolved": false,
+        "actionStatus": "Waiting \u00b7 draft PR #257",
+        "people": [
+          "stef40"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 stef40 \u00b7 Tue Sep 22 \u00b7 10:12pm PT \u00b7 build 27 \u00b7 bug"
+          },
+          {
+            "label": "PR #257",
+            "url": "https://github.com/eddie-the-lou/latent/pull/257"
+          }
+        ],
+        "detail": "Hey, my recordings stay in draft. Not sure how to publish. Might be a bug because I can only make edits.",
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/257"
+      },
+      {
+        "id": "suki-fullview-lag-data",
+        "title": "Full-view laggy + heavy mobile data (suki)",
+        "plainTitle": "Full-view playback laggy and burns mobile data",
+        "plainSummary": "Feed looks smooth; tapping into full view is laggy/slow, and Latent uses a lot of cellular data. Cloud Agent bc-bce5a81a spinning on Grok 4.6.",
+        "status": "spinning",
+        "resolved": false,
+        "actionStatus": "Agent spinning \u00b7 bc-bce5a81a",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 Thu Sep 24 \u00b7 4:37pm PT \u00b7 build 29 \u00b7 bug"
+          },
+          {
+            "label": "Agent",
+            "url": "https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20"
+          }
+        ],
+        "detail": "How come when I view the posts, the timelapses are smooth and when I open one video by clicking it, when the video opens in full view, it\u2019s laggy and takes time? Why does it take time? And Latent has been using a hell lot of mobile data. Please make it so that it uses less mobile data. I would really appreciate it if you could look into this.",
+        "novelty": "new",
+        "url": "https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20"
+      },
+      {
+        "id": "rjt-stuck-image-post",
+        "title": "Stuck in still-image posts + missing prev slide (rjt)",
+        "plainTitle": "Stuck image posts \u2014 fixed on main",
+        "plainSummary": "#230 merged earlier. Await TF.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "Merged \u00b7 #230 \u00b7 await TF",
+        "people": [
+          "rjt"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 rjt \u00b7 build 25 \u00b7 PR #230"
+          }
+        ],
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/230"
+      },
+      {
+        "id": "b-camera-off-lock-2s",
+        "title": "Camera-off lock before dim saves ~2s (_b)",
+        "plainTitle": "Camera-off + lock early: only 2 seconds saved",
+        "plainSummary": "Still awaiting next TestFlight after #250 on main.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "Fixed on main \u00b7 #250 \u00b7 await TF",
+        "people": [
+          "_b"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 _b \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/250"
+      },
+      {
+        "id": "apple-ios-42-46-watch",
+        "title": "Sentry NEW 42\u201346 hang singles (+ still 3Y/3Z/40/41)",
+        "plainTitle": "Five new hang singles \u2014 watching",
+        "plainSummary": "42 DayBar (jacob_diamond build 27); 43 AccessModel.claimCopiedInvite; 44 PushService.setBadge; 45 PostHogFileBackedQueue.add; 46 HomeFeed.feedContent (anonymoussushi build 29). Opaque singles \u2014 not auto-fixing.",
+        "status": "watching",
+        "resolved": false,
+        "actionStatus": "Watching",
+        "people": [
+          "jacob_diamond",
+          "anonymoussushi"
+        ],
+        "supportCount": 0,
+        "sources": [
+          {
+            "label": "Sentry APPLE-IOS-42",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-42"
+          },
+          {
+            "label": "Sentry APPLE-IOS-43",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-43"
+          },
+          {
+            "label": "Sentry APPLE-IOS-44",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-44"
+          },
+          {
+            "label": "Sentry APPLE-IOS-45",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-45"
+          },
+          {
+            "label": "Sentry APPLE-IOS-46",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-46"
+          }
+        ],
+        "novelty": "new"
+      }
+    ],
+    "features": [
+      {
+        "id": "jia-delete-messages",
+        "title": "Delete function on messages (jia)",
+        "plainTitle": "Please add delete on messages",
+        "plainSummary": "jia (build 27). Overnight #287 landed pin/mute/mark unread/delete for your own inbox view on main \u2014 likely covers this. Await TestFlight.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "Likely shipped \u00b7 #287 on main \u00b7 await TF",
+        "people": [
+          "jia"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 jia \u00b7 Thu Sep 24 \u00b7 9:57am PT \u00b7 build 27 \u00b7 feature"
+          },
+          {
+            "label": "PR #287",
+            "url": "https://github.com/eddie-the-lou/latent/pull/287"
+          }
+        ],
+        "detail": "Delete function on messages please! Thank you \ud83d\ude4f",
+        "novelty": "new",
+        "url": "https://github.com/eddie-the-lou/latent/pull/287"
+      },
+      {
+        "id": "discord-ichika-filters",
+        "title": "Light face filters / touch-up (Ichika_.2)",
+        "plainTitle": "Soft face filters for camera-shy people",
+        "plainSummary": "Discord #feature-requests. Wants light touch-up / shade change, not crazy filters. Product ask; no auto-fix.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "Ichika_.2"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 Thu Sep 24 \u00b7 9:47am PT"
+          }
+        ],
+        "detail": "personally, i am a bit camera shy and i am not talking about crazy filters, only little which can touch up the face and maybe a bit shade change. also if people wanna post it, it already has a bit of editing done",
+        "novelty": "new"
+      },
+      {
+        "id": "discord-sheppard-widgets",
+        "title": "Home / Lock Screen widgets for streak (sheppard.c)",
+        "plainTitle": "Widgets that remind you of your streak / to work",
+        "plainSummary": "Discord #feature-requests. Home Screen and unlocked-phone widgets. Product ask; no auto-fix.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "sheppard.c"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 Thu Sep 24 \u00b7 3:46pm PT"
+          }
+        ],
+        "detail": "Add a option for some trim widgets on your home screen also in your unlocked phone. I think once reminding you of your streak or just to work would be cool.",
+        "novelty": "new"
+      },
+      {
+        "id": "suki-nudge-sent-icon",
+        "title": "Keep nudged icon on Home after refresh (suki)",
+        "plainTitle": "After I nudge someone, don\u2019t snap back to \ud83d\udc4b",
+        "plainSummary": "Still open product ask from yesterday. Malcolm #267 is different.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 Thu Sep 24 \u00b7 1:31am PT \u00b7 build 27 \u00b7 feature"
+          }
+        ],
+        "detail": "After we have nudged people for the day, make it show as we have nudged in the home page with an icon near their profiles. When we refresh, it just returns back to the normal \ud83d\udc4b symbol near their profiles.",
+        "novelty": "continuing"
+      },
+      {
+        "id": "discord-android-ask",
+        "title": "Android version (Android Advocate)",
+        "plainTitle": "Please release Latent on Android",
+        "plainSummary": "Still open. Off-platform / positioning ask.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 kill-list candidate",
+        "people": [
+          "Android Advocate"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #general-chat \u00b7 Thu Sep 24 \u00b7 ~3:47am PT"
+          }
+        ],
+        "detail": "I plead to thee, Eddie, please release the Android version of Latent",
+        "novelty": "continuing"
+      },
+      {
+        "id": "alinx-break-button",
+        "title": "Longer break button / pomodoro (alinx_cc)",
+        "plainTitle": "Break button longer than 5 minutes",
+        "plainSummary": "Cleared \u2014 Linear TRY-146 Done (raise breaktime to 10 or 15). Also #286 Pomodoro Finish Back arrow on main.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "Done \u00b7 TRY-146",
+        "people": [
+          "alinx_cc"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 alinx_cc \u00b7 TRY-146"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "zaahirat-trim-end",
+        "title": "Trim end of session (zaahirat)",
+        "plainTitle": "Cut dead time off the end of a sitting",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product",
+        "people": [
+          "zaahirat"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 zaahirat \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "diwmx-battery",
+        "title": "Better battery life (diwmx survey)",
+        "plainTitle": "Survey: better battery life if possible",
+        "plainSummary": "Still open. Sean Ellis unchanged 39/25/2 of 66.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 survey",
+        "people": [
+          "diwmx"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "PMF survey \u00b7 Active Users \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "launch-on-home-feed",
+        "title": "Launch on home feed instead of camera (suki)",
+        "plainTitle": "Open Latent on the home feed, not the camera",
+        "plainSummary": "Still open from suki\u2019s earlier note.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product choice",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      }
+    ],
+    "bySource": {
+      "inApp": [
+        {
+          "who": "jia",
+          "when": "Thu Sep 24 \u00b7 9:57am PT",
+          "kind": "feature",
+          "build": "27",
+          "summary": "Delete function on messages"
+        },
+        {
+          "who": "suki",
+          "when": "Thu Sep 24 \u00b7 4:37pm PT",
+          "kind": "bug",
+          "build": "29",
+          "summary": "Full-view laggy + heavy mobile data"
+        }
+      ],
+      "discord": [
+        {
+          "summary": "Login OK as Eddie L. Window after Thu Sep 24 9:00 AM PT. NEW: Ichika_.2 light filters; sheppard.c Home/Lock widgets. #general-chat food banter only. #questions/#tester-chat no NEW. #announcements not visible."
+        }
+      ],
+      "email": [
+        {
+          "summary": "No new tester/user feedback. Collab pitches + GitHub CI LatentServiceTests failures + DMARC/Slack noise only."
+        }
+      ],
+      "survey": [
+        {
+          "summary": "Unchanged Active Users n=66 \u00b7 Sean Ellis 39/25/2 \u00b7 no new rows \u00b7 build-one-next column still empty"
+        }
+      ],
+      "sentry": [
+        {
+          "summary": "NEW 42\u201346 hang singles \u2014 watching (plus still 3Y/3Z/40/41). 46 HomeFeed for anonymoussushi build 29; 42 DayBar for jacob_diamond build 27."
+        }
+      ],
+      "posthog": [
+        {
+          "summary": "clip_upload_failed 4/3/8/3/2/0(partial) Sep20\u201325; rageclicks 278/256/242/205/295/78; clip-bloat Not firing ~1.56 MB/s"
+        }
+      ],
+      "linear": [
+        {
+          "summary": "Done overnight: TRY-154 pomodoro, TRY-134 lighter feed, TRY-146 breaktime 10/15, TRY-145 Live Now. In Progress: TRY-148/151/162/147/127/78."
+        }
+      ]
+    },
+    "rawQuotes": [
+      {
+        "source": "In-app feedback",
+        "who": "jia",
+        "when": "Thu Sep 24 \u00b7 9:57am PT",
+        "build": "1.0.1 (27)",
+        "kind": "feature",
+        "text": "Delete function on messages please! Thank you \ud83d\ude4f"
+      },
+      {
+        "source": "In-app feedback",
+        "who": "suki",
+        "when": "Thu Sep 24 \u00b7 4:37pm PT",
+        "build": "1.0.1 (29)",
+        "kind": "bug",
+        "text": "How come when I view the posts, the timelapses are smooth and when I open one video by clicking it, when the video opens in full view, it\u2019s laggy and takes time? Why does it take time? And Latent has been using a hell lot of mobile data. Please make it so that it uses less mobile data. I would really appreciate it if you could look into this."
+      },
+      {
+        "source": "Discord \u00b7 #feature-requests",
+        "who": "Ichika_.2",
+        "when": "Thu Sep 24 \u00b7 9:47am PT",
+        "build": "",
+        "kind": "feature",
+        "text": "personally, i am a bit camera shy and i am not talking about crazy filters, only little which can touch up the face and maybe a bit shade change. also if people wanna post it, it already has a bit of editing done"
+      },
+      {
+        "source": "Discord \u00b7 #feature-requests",
+        "who": "sheppard.c",
+        "when": "Thu Sep 24 \u00b7 3:46pm PT",
+        "build": "",
+        "kind": "feature",
+        "text": "Add a option for some trim widgets on your home screen also in your unlocked phone. I think once reminding you of your streak or just to work would be cool."
       }
     ]
   }

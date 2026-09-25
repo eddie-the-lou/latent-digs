@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Latent daily review · 2026-09-25</title></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.5;color:#111;max-width:720px;margin:0 auto;padding:24px;">
+<p style="font-size:13px;color:#666;margin:0 0 8px;">From Unpaid Intern · plain English · 9:00 AM PT dig</p>
+<h1 style="font-size:22px;margin:0 0 16px;">Latent daily review · Sep 25</h1>
+
+<p style="background:#f4f7ff;border:1px solid #c9d7ff;border-radius:8px;padding:12px 14px;">
+<strong>Live archive (bookmark this):</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/">https://eddie-the-lou.github.io/latent-digs/</a><br>
+<strong>Today’s review:</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-25">https://eddie-the-lou.github.io/latent-digs/#/2026-09-25</a>
+</p>
+
+<h2 style="font-size:16px;margin-top:28px;">In plain English</h2>
+<ul>
+<li>Ready for you: draft PR #257 for stef40’s “drafts stuck / can’t publish” — Post was hidden until a tag was picked. Do not merge until you review. You usually can’t QA tester bugs on your phone.</li><li>NEW bug from suki (build 29): feed timelapses look smooth, but full-view open is laggy/slow, and Latent is burning a lot of mobile data. Cloud Agent bc-bce5a81a launched on Grok 4.6 (PR pending — do not merge when it lands).</li><li>NEW in-app ask from jia (build 27): delete function on messages. Overnight #287 already landed inbox delete (plus pin/mute/mark unread) on main — likely covers this; await TestFlight.</li><li>NEW Discord #feature-requests: Ichika_.2 wants light face-touch-up filters (camera-shy); sheppard.c wants Home Screen / Lock Screen widgets for streak / get-to-work reminders. Product asks; no auto-fix.</li><li>Cleared overnight (product): alinx_cc longer pomodoro breaks — Linear TRY-146 Done (raise breaktime to 10/15). Still open: suki nudge-icon + launch-on-home, zaahirat trim-end, diwmx battery, Android Advocate Android ask.</li><li>Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. “Build one next” still empty. No new tester/user feedback emails (collab/CI/DMARC noise only).</li><li>Overnight on main (after yesterday’s dig): #280 Groups drop Posts button; #281 post date under caption; #282 pause resume window 15m; #283 bump build 29; #285 Messages live status/group standing/nudge; #286 Pomodoro Finish now Back arrow (TRY-154); #287 inbox pin/mute/unread/delete. Linear Done: TRY-154/134/146/145 (+ earlier). In progress: TRY-148 messages appear as sent, TRY-151 kudos refresh, TRY-162 notifications page, TRY-147 multiple groups, TRY-127 mark read, TRY-78 website.</li><li>Sentry NEW hang singles 42–46 (plus still watching 3Y/3Z/40/41). Opaque singles — not auto-fixing. 46 HomeFeed.feedContent for anonymoussushi (build 29); 42 DayBar for jacob_diamond (build 27). PostHog: clip_upload_failed Sep20–25 = 4/3/8/3/2/0(partial); rageclicks 278/256/242/205/295/78; clip-bloat Not firing (~1.56 MB/s).</li><li>Discord login OK as Eddie L. Window after Thu Sep 24 9:00 AM PT: 2 NEW feature threads (Ichika filters, sheppard widgets). #general-chat banter only (food). #questions / #tester-chat / #announcements: no NEW bugs.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Ready for you to approve</h2>
+<ul>
+<li><strong><a href="https://github.com/eddie-the-lou/latent/pull/257">#257</a></strong> (draft) — stef40 drafts stuck / can’t publish. Post was hidden until a tag was picked; label becomes “Post” on stored drafts. <a href="https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512">Agent bc-51f4d01d</a> finished. Do not merge until you review. You usually can’t QA tester bugs on your phone.</li>
+<li><strong>Agent spinning</strong> — <a href="https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20">bc-bce5a81a</a> (Grok 4.6) for suki’s full-view lag + mobile data. PR will land for review — do not merge yet.</li>
+</ul>
+<p style="color:#555;font-size:14px;">Malcolm open (not blocking you): <a href="https://github.com/eddie-the-lou/latent/pull/284">#284</a> presign retry, <a href="https://github.com/eddie-the-lou/latent/pull/267">#267</a> group hand/chat nav, plus #241/#164/#162/#123.</p>
+
+<h2 style="font-size:16px;margin-top:28px;">Broken / confusing</h2>
+<ul>
+<li><strong>suki</strong> (NEW, build 29) — feed smooth, full-view laggy/slow + heavy mobile data. Agent <a href="https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20">bc-bce5a81a</a> spinning.</li>
+<li><strong>stef40</strong> — drafts stuck / can’t publish (build 27). Fix in draft <a href="https://github.com/eddie-the-lou/latent/pull/257">#257</a>.</li>
+<li>Sentry NEW hang singles 42–46 (plus still 3Y/3Z/40/41) — watching. Not auto-fixing opaque singles.</li>
+<li><strong>_b</strong> camera-off lock + <strong>rjt</strong> stuck image posts — already on main (#250 / #230); await next TestFlight.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Things people want</h2>
+<ul>
+<li><strong>jia</strong> (NEW) — delete on messages. Likely covered by overnight <a href="https://github.com/eddie-the-lou/latent/pull/287">#287</a> on main — await TF.</li>
+<li><strong>Ichika_.2</strong> (NEW, Discord) — light face touch-up filters (camera-shy).</li>
+<li><strong>sheppard.c</strong> (NEW, Discord) — Home / Lock Screen widgets for streak / get-to-work.</li>
+<li><strong>suki</strong> — keep nudged icon on Home after refresh (continuing).</li>
+<li><strong>Android Advocate</strong> — Android Latent (continuing; kill-list candidate).</li>
+<li><strong>zaahirat</strong> — trim the end of a sitting.</li>
+<li><strong>diwmx</strong> — better battery (survey; Sean Ellis still 39/25/2 of 66).</li>
+<li><strong>suki</strong> — launch on home feed (continuing).</li>
+<li><strong>alinx_cc</strong> longer breaks — cleared (TRY-146 Done).</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">What they actually wrote</h2>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">In-app feedback · jia · Thu Sep 24 · 9:57am PT · build 1.0.1 (27) · feature</div><div style="white-space:pre-wrap;">Delete function on messages please! Thank you 🙏</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">In-app feedback · suki · Thu Sep 24 · 4:37pm PT · build 1.0.1 (29) · bug</div><div style="white-space:pre-wrap;">How come when I view the posts, the timelapses are smooth and when I open one video by clicking it, when the video opens in full view, it’s laggy and takes time? Why does it take time? And Latent has been using a hell lot of mobile data. Please make it so that it uses less mobile data. I would really appreciate it if you could look into this.</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #feature-requests · Ichika_.2 · Thu Sep 24 · 9:47am PT · feature</div><div style="white-space:pre-wrap;">personally, i am a bit camera shy and i am not talking about crazy filters, only little which can touch up the face and maybe a bit shade change. also if people wanna post it, it already has a bit of editing done</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #feature-requests · sheppard.c · Thu Sep 24 · 3:46pm PT · feature</div><div style="white-space:pre-wrap;">Add a option for some trim widgets on your home screen also in your unlocked phone. I think once reminding you of your streak or just to work would be cool.</div></blockquote>
+
+<p style="font-size:12px;color:#888;margin-top:32px;">Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-25">https://eddie-the-lou.github.io/latent-digs/#/2026-09-25</a></p>
+</body></html>
