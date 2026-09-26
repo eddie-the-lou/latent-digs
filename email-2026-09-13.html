@@ -1,0 +1,80 @@
+<!DOCTYPE html><html><body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45;color:#222;max-width:640px;margin:0 auto;padding:20px">
+  <h1 style="font-size:22px;margin:0 0 4px">Latent daily review · Sep 13</h1>
+  <p style="color:#666;margin:0 0 12px">From Unpaid Intern · plain English</p>
+  <p style="margin:0 0 18px;padding:12px 14px;background:#111;color:#eee;border-radius:10px">
+    Live archive (bookmark this): <a href="https://eddie-the-lou.github.io/latent-digs/" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/</a><br>
+    Today’s review: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-13" style="color:#8fd3ff">https://eddie-the-lou.github.io/latent-digs/#/2026-09-13</a><br>
+    <span style="color:#f5c16c">Pages publish may lag — dig GitHub PAT still 401 on my computer, and your Mac was unreachable this morning. Local dig is ready.</span>
+  </p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">In plain English</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 6px"><strong>Sentry is back.</strong> NEW on build 17: camera UI updated off the main thread (maahislam) — Cloud Agent started. Also NEW: Insights froze ~6s for nicholejin — separate agent started (not the same as #55 truncation).</li>
+    <li style="margin:0 0 6px"><strong>Discord login worked again.</strong> lera asked when Latent goes widely available; Android Advocate joked about Android. KrabbyKai’s “pictures/GIFs in comments” suggestion (Sep 10) is now in the dig.</li>
+    <li style="margin:0 0 6px">Quiet on new user text otherwise: 0 new in-app, 0 new survey (still 65 / 38–25–2), 0 tester bug emails. Clip uploads stayed cool.</li>
+    <li style="margin:0 0 6px"><strong>Same ~13 bug-fix PRs still waiting</strong> (#54–#59, #62–#68) — couldn’t re-check GitHub (PAT 401 + Mac unreachable). CI LatentServiceTests still red overnight. <strong>Paste the renewed dig PAT onto my computer</strong> so publish/PR checks work without your Mac.</li>
+    <li style="margin:0 0 6px">Marco (Spain) access email from Sep 9 still unreplied.</li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Ready for you to approve</h2>
+  <p style="margin:0 0 8px;color:#666">Status unverified today (PAT 401). Last known open set — don’t merge while LatentServiceTests is red:</p>
+  <ul style="padding-left:18px;margin:0 0 12px">
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/54">#54</a> — Glass Resume/Finish + wheel</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/55">#55</a> — Insights / 0.5× truncation</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/56">#56</a> — Nudge / completed friend lists</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/57">#57</a> — Tag-cache leftovers</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/58">#58</a> — Trudy clip-wait</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/59">#59</a> — Free local video storage (Ved)</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/62">#62</a> — Nico scrub → Save/Resume dead</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/63">#63</a> — RAM / low-memory recording</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/64">#64</a> — Keyboard hangs</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/65">#65</a> — lera pause / duration</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/66">#66</a> — zozo Resume</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/67">#67</a> — zozo speed</li>
+    <li style="margin:0 0 6px"><a href="https://github.com/eddie-the-lou/latent/pull/68">#68</a> — 502 / playback-url guard</li>
+  </ul>
+  <p style="margin:0 0 18px;color:#555">Plus 2 new Cloud Agents started this morning (PRs when they finish): <a href="https://cursor.com/agents/bc-84014018-14b7-48d1-9975-1a5d2b334d7b">camera flipCover off-main-thread</a> · <a href="https://cursor.com/agents/bc-3f493907-0f5d-4689-b836-5067f9ab520d">Insights dashMask hang</a></p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Broken or confusing</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 10px"><strong>Camera crash updating UI off the main thread</strong><br><span style="color:#555">maahislam on build 17 — Apple says this will become a hard crash later. Fix agent started.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-2N">APPLE-IOS-2N</a></span></li>
+    <li style="margin:0 0 10px"><strong>Insights froze ~6 seconds</strong><br><span style="color:#555">nicholejin on build 17 — bar graph dashMask. Separate from the truncation PR (#55). Fix agent started.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-2P">APPLE-IOS-2P</a></span></li>
+    <li style="margin:0 0 10px"><strong>RAM kill still happening</strong><br><span style="color:#555">Eddie ×3 on build 16 overnight; nehanaidu once on 17. Keep #63 in the pile.</span><br><span style="color:#888;font-size:12px"><a href="https://weaive.sentry.io/issues/APPLE-IOS-A">APPLE-IOS-A</a> · <a href="https://github.com/eddie-the-lou/latent/pull/63">#63</a></span></li>
+    <li style="margin:0 0 10px"><strong>Automated tests still red on main</strong><br><span style="color:#555">Overnight GitHub mail: LatentServiceTests failed on main and several feature branches. Review PRs, don’t merge until green.</span></li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">Things people want</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li style="margin:0 0 8px"><strong>When is Latent widely available?</strong> · lera (Discord, Sat)<br><span style="color:#555">Access / launch timing — Android Advocate replied with an Android joke.</span></li>
+    <li style="margin:0 0 8px"><strong>Pictures / GIFs in comments</strong> · @KrabbyKai (Discord, Sep 10)<br><span style="color:#555">Feature backlog — no auto-PR.</span></li>
+    <li style="margin:0 0 8px"><strong>Overlapping tags</strong> · lovelygebeyehu (in-app, Sep 9)<br><span style="color:#555">Still logged — physics + review the whole hour.</span></li>
+    <li style="margin:0 0 8px"><strong>Marco wants in</strong> · marcoabadmartin@gmail.com<br><span style="color:#555">Still unreplied since Sep 9 — TestFlight / early access.</span></li>
+  </ul>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">What they actually wrote</h2>
+  <div style="border:1px solid #ddd;border-radius:12px;padding:14px 16px;margin:0 0 12px;background:#fafafa">
+    <div style="font-size:12px;color:#888;margin-bottom:6px">Discord · #feature-requests · lera · Sat Sep 12 · 9:04am PT · question</div>
+    <blockquote style="margin:0;white-space:pre-wrap;color:#222">when is the app going to be widely available?</blockquote>
+  </div>
+  <div style="border:1px solid #ddd;border-radius:12px;padding:14px 16px;margin:0 0 12px;background:#fafafa">
+    <div style="font-size:12px;color:#888;margin-bottom:6px">Discord · #feature-requests thread · Android Advocate (NERU) · Sat Sep 12 · 9:30am PT · reply</div>
+    <blockquote style="margin:0;white-space:pre-wrap;color:#222">When us Androidians finally overthrow the Applonian regime and put into place a new form of Latent governance designed to give equal opportunities to all who want to study</blockquote>
+  </div>
+  <div style="border:1px solid #ddd;border-radius:12px;padding:14px 16px;margin:0 0 12px;background:#fafafa">
+    <div style="font-size:12px;color:#888;margin-bottom:6px">Discord · #feature-requests · @KrabbyKai · Thu Sep 10 · 6:21pm PT · feature</div>
+    <blockquote style="margin:0;white-space:pre-wrap;color:#222">Instagram Comments - Being able to add pictures/gifs.</blockquote>
+  </div>
+  <p style="color:#666;font-size:13px">No new in-app feedback or survey free-text since yesterday. Marco’s Sep 9 access email is still in yesterday’s dig if you need the full quote.</p>
+
+  <h2 style="font-size:16px;margin:20px 0 8px">By source</h2>
+  <ul style="padding-left:18px;margin:0 0 18px">
+    <li><strong>Discord</strong> — login OK; lera + Android Advocate; KrabbyKai comment media</li>
+    <li><strong>Gmail</strong> — 0 tester bugs; CI noise; PAT regen notice</li>
+    <li><strong>In-app</strong> — 0 new</li>
+    <li><strong>Survey</strong> — Active 65, Sean Ellis 38/25/2, Δ0</li>
+    <li><strong>PostHog</strong> — clip_upload cool; rageclicks noisy</li>
+    <li><strong>Sentry</strong> — NEW 2N / 2P / 2Q on build 17; A + K continuing</li>
+    <li><strong>GitHub</strong> — PAT dead on dig box; Mac unreachable; 2 agents launched</li>
+  </ul>
+  <p style="color:#888;font-size:12px;margin-top:24px">Unpaid Intern · Latent daily dig · 2026-09-13</p>
+</body></html>

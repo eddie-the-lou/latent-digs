@@ -1,5 +1,18 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-09-26",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 9,
+      "openBugs": 4,
+      "resolvedBugs": 0,
+      "filtered": 0,
+      "rawQuotes": 3
+    },
+    "path": "data/2026-09-26.json",
+    "htmlArchive": "../2026-09-26.html"
+  },
+  {
     "date": "2026-09-25",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -533,6 +546,19 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-09-26",
+      "title": "Latent feedback dig",
+      "summaryStats": {
+        "openFeatures": 9,
+        "openBugs": 4,
+        "resolvedBugs": 0,
+        "filtered": 0,
+        "rawQuotes": 3
+      },
+      "path": "data/2026-09-26.json",
+      "htmlArchive": "../2026-09-26.html"
+    },
     {
       "date": "2026-09-25",
       "title": "Latent feedback dig",
@@ -70448,6 +70474,658 @@ window.DIGESTS = {
         "build": "",
         "kind": "feature",
         "text": "Add a option for some trim widgets on your home screen also in your unlocked phone. I think once reminding you of your streak or just to work would be cool."
+      }
+    ]
+  },
+  "2026-09-26": {
+    "date": "2026-09-26",
+    "title": "Latent daily review \u00b7 Sep 26",
+    "generatedAt": "2026-09-26T16:25:12.355598+00:00",
+    "tldr": [
+      "Ready for you (3): draft #257 stef40 drafts stuck / can\u2019t publish; draft #288 suki full-view lag + cellular data (agent finished overnight); and your open #295 mid-session clock switch + Lock Screen card notice (Linear TRY-155 marked Done, but the PR is still unmerged). Do not merge any of these until you review. You usually can\u2019t QA tester bugs on your phone.",
+      "No NEW in-app feedback since yesterday\u2019s dig. Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. \u201cBuild one next\u201d still empty. No tester/user feedback emails (CI LatentServiceTests noise only).",
+      "NEW Discord: Ethan wants Instagram-style song sync on a study session, and a customizable group page. SourLemown asked where videos are stored (Ethan answered \u201cseems in-app\u201d). Product / FAQ \u2014 no auto-fix. Still open from earlier: Ichika filters, sheppard widgets, suki nudge-icon + launch-on-home, zaahirat trim-end, diwmx battery, Android Advocate.",
+      "Heads-up (Malcolm owns, no duplicate agent): Linear TRY-173 \u201cTags are broken \u2014 can\u2019t choose tags when you have more than 5\u201d (Todo, assigned Malcolm).",
+      "Overnight on main after yesterday\u2019s dig: #289\u2013#301 \u2014 groups (multiple groups #298, nudge reveal #297, Discord leaderboard #292, week Sun\u2013Sat #300), Activity/notifications (#290), kudos refresh (#291), live chat after socket drop (#293), camera toggle leaves mid-record (#294), forgot-password email code (#296), onboarding/share/clip-retry (#299), drop video-length badge (#301), migration-guard CLI fix (#289). Linear Done overnight includes TRY-147/148/151/155/158\u2013160/162/165/168/169/172 (+ earlier). Still In Progress: TRY-149 friend-from-group, TRY-163 post-to-group, TRY-167 rate prompt, TRY-170 Supabase rate limit, TRY-171 leaderboard week mismatch.",
+      "Sentry NEW hang singles 47\u201349 (plus still watching 42\u201346 / 3Y/3Z/40/41). Opaque singles \u2014 not auto-fixing. 49 PushService.setBadge for queenie (build 29); 48 FriendsListView for ethan (build 29, low power); 47 badge hang on a debug build. PostHog: clip_upload_failed Sep20\u201326 = 2/4/3/8/4/2/0(partial); rageclicks 264/200/270/230/241/325/125; clip-bloat Not firing (~1.56 MB/s).",
+      "Discord login OK as Eddie L. Window after Fri Sep 25 9:00 AM PT: 2 NEW feature asks (Ethan), 1 question (SourLemown). #questions / #tester-chat: no NEW bugs. #announcements not accessible. Mac offline \u2014 skipped local site sync."
+    ],
+    "plainTldr": [
+      "Ready for you (3): draft #257 stef40 drafts stuck / can\u2019t publish; draft #288 suki full-view lag + cellular data (agent finished overnight); and your open #295 mid-session clock switch + Lock Screen card notice (Linear TRY-155 marked Done, but the PR is still unmerged). Do not merge any of these until you review. You usually can\u2019t QA tester bugs on your phone.",
+      "No NEW in-app feedback since yesterday\u2019s dig. Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. \u201cBuild one next\u201d still empty. No tester/user feedback emails (CI LatentServiceTests noise only).",
+      "NEW Discord: Ethan wants Instagram-style song sync on a study session, and a customizable group page. SourLemown asked where videos are stored (Ethan answered \u201cseems in-app\u201d). Product / FAQ \u2014 no auto-fix. Still open from earlier: Ichika filters, sheppard widgets, suki nudge-icon + launch-on-home, zaahirat trim-end, diwmx battery, Android Advocate.",
+      "Heads-up (Malcolm owns, no duplicate agent): Linear TRY-173 \u201cTags are broken \u2014 can\u2019t choose tags when you have more than 5\u201d (Todo, assigned Malcolm).",
+      "Overnight on main after yesterday\u2019s dig: #289\u2013#301 \u2014 groups (multiple groups #298, nudge reveal #297, Discord leaderboard #292, week Sun\u2013Sat #300), Activity/notifications (#290), kudos refresh (#291), live chat after socket drop (#293), camera toggle leaves mid-record (#294), forgot-password email code (#296), onboarding/share/clip-retry (#299), drop video-length badge (#301), migration-guard CLI fix (#289). Linear Done overnight includes TRY-147/148/151/155/158\u2013160/162/165/168/169/172 (+ earlier). Still In Progress: TRY-149 friend-from-group, TRY-163 post-to-group, TRY-167 rate prompt, TRY-170 Supabase rate limit, TRY-171 leaderboard week mismatch.",
+      "Sentry NEW hang singles 47\u201349 (plus still watching 42\u201346 / 3Y/3Z/40/41). Opaque singles \u2014 not auto-fixing. 49 PushService.setBadge for queenie (build 29); 48 FriendsListView for ethan (build 29, low power); 47 badge hang on a debug build. PostHog: clip_upload_failed Sep20\u201326 = 2/4/3/8/4/2/0(partial); rageclicks 264/200/270/230/241/325/125; clip-bloat Not firing (~1.56 MB/s).",
+      "Discord login OK as Eddie L. Window after Fri Sep 25 9:00 AM PT: 2 NEW feature asks (Ethan), 1 question (SourLemown). #questions / #tester-chat: no NEW bugs. #announcements not accessible. Mac offline \u2014 skipped local site sync."
+    ],
+    "stats": {
+      "newInApp": 0,
+      "newDiscord": 3,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-47",
+        "APPLE-IOS-48",
+        "APPLE-IOS-49"
+      ],
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-20": 2,
+          "2026-09-21": 4,
+          "2026-09-22": 3,
+          "2026-09-23": 8,
+          "2026-09-24": 4,
+          "2026-09-25": 2,
+          "2026-09-26": 0
+        },
+        "rageclicks": {
+          "2026-09-20": 264,
+          "2026-09-21": 200,
+          "2026-09-22": 270,
+          "2026-09-23": 230,
+          "2026-09-24": 241,
+          "2026-09-25": 325,
+          "2026-09-26": 125
+        },
+        "clipBloatAlert": "Not firing",
+        "clipBloatLastValue": 1.5647328762541806
+      },
+      "rawQuotes": 3
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 257,
+          "title": "A draft can be posted without hunting for Log session (stef40)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/257",
+          "draft": true,
+          "agent": "bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512"
+        },
+        {
+          "pr": 288,
+          "title": "Opening a video from the feed starts right away, and uses less mobile data (suki)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/288",
+          "draft": true,
+          "agent": "bc-bce5a81a-6dba-536c-91c7-3d7d945caa20"
+        },
+        {
+          "pr": 295,
+          "title": "Switch the session clock mid-recording, and stop losing the Lock Screen card in silence",
+          "url": "https://github.com/eddie-the-lou/latent/pull/295",
+          "draft": false,
+          "agent": null
+        }
+      ],
+      "malcolmOpen": [
+        {
+          "pr": 302,
+          "title": "One request per question: stats carry their tags, engagement carries the kudos preview",
+          "url": "https://github.com/eddie-the-lou/latent/pull/302"
+        },
+        {
+          "pr": 284,
+          "title": "Cut Supabase costs: stop retrying rate-limited presigns, and download each profile photo once",
+          "url": "https://github.com/eddie-the-lou/latent/pull/284"
+        },
+        {
+          "pr": 267,
+          "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+          "url": "https://github.com/eddie-the-lou/latent/pull/267"
+        },
+        {
+          "pr": 241,
+          "title": "Save the App Store screenshot drafts and render scripts",
+          "url": "https://github.com/eddie-the-lou/latent/pull/241"
+        },
+        {
+          "pr": 164,
+          "title": "Today mini cards fit their durations; camera toggle stays put",
+          "url": "https://github.com/eddie-the-lou/latent/pull/164"
+        },
+        {
+          "pr": 162,
+          "title": "One frame rule for the timelapse clip",
+          "url": "https://github.com/eddie-the-lou/latent/pull/162"
+        },
+        {
+          "pr": 123,
+          "title": "Sequential dual-camera proof stills (draft)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/123"
+        }
+      ],
+      "agentsSpinning": [],
+      "agentsFinished": [
+        {
+          "id": "bc-bce5a81a-6dba-536c-91c7-3d7d945caa20",
+          "title": "suki full-view lag + mobile data",
+          "url": "https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20",
+          "pr": 288
+        },
+        {
+          "id": "bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512",
+          "title": "stef40 drafts stuck \u2014 can't publish",
+          "url": "https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512",
+          "pr": 257
+        }
+      ],
+      "clearedOvernight": [
+        {
+          "id": "try-147-multiple-groups",
+          "title": "Multiple groups (TRY-147)",
+          "via": "TRY-147 Done \u00b7 #298"
+        },
+        {
+          "id": "try-148-messages-sent",
+          "title": "Messages appear as sent (TRY-148)",
+          "via": "TRY-148 Done \u00b7 #293"
+        },
+        {
+          "id": "try-151-kudos",
+          "title": "Kudos refresh (TRY-151)",
+          "via": "TRY-151 Done \u00b7 #291"
+        },
+        {
+          "id": "try-162-notifications",
+          "title": "Notifications page (TRY-162)",
+          "via": "TRY-162 Done \u00b7 #290"
+        },
+        {
+          "id": "jia-delete-messages",
+          "title": "Delete on messages (jia)",
+          "via": "#287 on main (await TF)"
+        }
+      ],
+      "mergedOvernight": [
+        {
+          "pr": 301,
+          "title": "Drop the video length badge from attached videos in the feed"
+        },
+        {
+          "pr": 300,
+          "title": "Group weeks run Sunday to Saturday in the admin's zone, Discord post included"
+        },
+        {
+          "pr": 299,
+          "title": "Onboarding dashes, full-screen Share, a real clip retry, and quiet-feed telemetry"
+        },
+        {
+          "pr": 298,
+          "title": "Groups: several per person, a home in Friends, a group page, settings and photos"
+        },
+        {
+          "pr": 297,
+          "title": "Play a group nudge's reveal before its chat opens"
+        },
+        {
+          "pr": 296,
+          "title": "Forgot password: reset by emailed code, then sign in with the new one"
+        },
+        {
+          "pr": 294,
+          "title": "Once a session is rolling, the camera toggle leaves with the framing controls"
+        },
+        {
+          "pr": 293,
+          "title": "Keep an open chat live after the realtime socket drops, and search New message"
+        },
+        {
+          "pr": 292,
+          "title": "A read-only groups leaderboard for the Discord #groups post"
+        },
+        {
+          "pr": 291,
+          "title": "Refresh a post's kudos when you return to the app or open its notification"
+        },
+        {
+          "pr": 290,
+          "title": "Make Activity read like Instagram's notifications"
+        },
+        {
+          "pr": 289,
+          "title": "The migration guards asked the CLI for json and got a table, for humans only"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "pr-257-stef40-draft-publish",
+        "title": "PR #257 \u2014 stef40 drafts stuck / can't publish",
+        "status": "waiting",
+        "resolved": false,
+        "plainTitle": "Ready to approve: stef40 can\u2019t find Post",
+        "plainSummary": "Still draft. Root cause: Log session / Post was folded away until a tag was picked. Do not merge until you review.",
+        "actionStatus": "Waiting on you \u00b7 draft PR #257",
+        "people": [
+          "stef40"
+        ],
+        "url": "https://github.com/eddie-the-lou/latent/pull/257",
+        "links": [
+          {
+            "label": "PR #257",
+            "url": "https://github.com/eddie-the-lou/latent/pull/257"
+          },
+          {
+            "label": "Agent",
+            "url": "https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512"
+          }
+        ]
+      },
+      {
+        "id": "pr-288-suki-fullview-data",
+        "title": "PR #288 \u2014 suki full-view lag + mobile data",
+        "status": "waiting",
+        "resolved": false,
+        "plainTitle": "Ready to approve: full-view laggy + too much cellular data",
+        "plainSummary": "Agent finished. Reuses the feed\u2019s already-buffered clip instead of re-downloading; on cellular stops launch prefetch of ~8 own clips and off-screen warming. QA needs a tester phone on cellular tapping a friend\u2019s playing clip. Do not merge until someone checks that.",
+        "actionStatus": "Waiting on you \u00b7 draft PR #288",
+        "people": [
+          "suki"
+        ],
+        "url": "https://github.com/eddie-the-lou/latent/pull/288",
+        "links": [
+          {
+            "label": "PR #288",
+            "url": "https://github.com/eddie-the-lou/latent/pull/288"
+          },
+          {
+            "label": "Agent",
+            "url": "https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20"
+          }
+        ]
+      },
+      {
+        "id": "pr-295-clock-switch",
+        "title": "PR #295 \u2014 mid-session clock switch + Lock Screen notice",
+        "status": "waiting",
+        "resolved": false,
+        "plainTitle": "Your open PR: switch clock mid-recording",
+        "plainSummary": "Linear TRY-155 is marked Done, but #295 is still open (not draft). Also surfaces a notice when Live Activities are off for Latent. Device verification of the clock switch still outstanding per the PR.",
+        "actionStatus": "Waiting on you \u00b7 open PR #295",
+        "people": [
+          "Eddie"
+        ],
+        "url": "https://github.com/eddie-the-lou/latent/pull/295",
+        "links": [
+          {
+            "label": "PR #295",
+            "url": "https://github.com/eddie-the-lou/latent/pull/295"
+          },
+          {
+            "label": "TRY-155",
+            "url": "https://linear.app/trylatent/issue/TRY-155/able-to-switch-clock-type-mid-session"
+          }
+        ]
+      }
+    ],
+    "bugs": [
+      {
+        "id": "stef40-drafts-stuck",
+        "title": "Recordings stay in draft / can't publish (stef40)",
+        "plainTitle": "Drafts stuck \u2014 not sure how to publish",
+        "plainSummary": "Draft PR #257 still waiting on you.",
+        "status": "waiting",
+        "resolved": false,
+        "actionStatus": "Waiting \u00b7 draft PR #257",
+        "people": [
+          "stef40"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 stef40 \u00b7 continuing"
+          },
+          {
+            "label": "PR #257",
+            "url": "https://github.com/eddie-the-lou/latent/pull/257"
+          }
+        ],
+        "detail": "Hey, my recordings stay in draft. Not sure how to publish. Might be a bug because I can only make edits.",
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/257"
+      },
+      {
+        "id": "suki-fullview-lag-data",
+        "title": "Full-view laggy + heavy mobile data (suki)",
+        "plainTitle": "Full-view playback laggy and burns mobile data",
+        "plainSummary": "Draft PR #288 ready. Reuses feed buffer; cellular stops background prefetch. Needs tester QA on cellular.",
+        "status": "waiting",
+        "resolved": false,
+        "actionStatus": "Waiting \u00b7 draft PR #288",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 Thu Sep 24 \u00b7 4:37pm PT \u00b7 build 29 \u00b7 bug"
+          },
+          {
+            "label": "PR #288",
+            "url": "https://github.com/eddie-the-lou/latent/pull/288"
+          }
+        ],
+        "detail": "How come when I view the posts, the timelapses are smooth and when I open one video by clicking it, when the video opens in full view, it\u2019s laggy and takes time? Why does it take time? And Latent has been using a hell lot of mobile data. Please make it so that it uses less mobile data. I would really appreciate it if you could look into this.",
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/288"
+      },
+      {
+        "id": "try-173-tags-gt5",
+        "title": "Can't choose tags when you have more than 5 (TRY-173)",
+        "plainTitle": "Tags picker breaks past 5 tags",
+        "plainSummary": "Malcolm filed + owns TRY-173 Todo. No duplicate Cloud Agent.",
+        "status": "owned",
+        "resolved": false,
+        "actionStatus": "Malcolm \u00b7 TRY-173",
+        "people": [
+          "Malcolm"
+        ],
+        "supportCount": 0,
+        "sources": [
+          {
+            "label": "Linear TRY-173",
+            "url": "https://linear.app/trylatent/issue/TRY-173/tags-are-broken"
+          }
+        ],
+        "detail": "You can't choose tags when you have more than 5 of them",
+        "novelty": "new",
+        "url": "https://linear.app/trylatent/issue/TRY-173/tags-are-broken"
+      },
+      {
+        "id": "apple-ios-47-49-watch",
+        "title": "Sentry NEW 47\u201349 hang singles (+ still 42\u201346 / 3Y/3Z/40/41)",
+        "plainTitle": "Three new hang singles \u2014 watching",
+        "plainSummary": "49 PushService.setBadge (queenie build 29); 48 FriendsListView (ethan build 29, low power); 47 badge hang on a debug build. Opaque singles \u2014 not auto-fixing.",
+        "status": "watching",
+        "resolved": false,
+        "actionStatus": "Watching",
+        "people": [
+          "queenie",
+          "ethan"
+        ],
+        "supportCount": 0,
+        "sources": [
+          {
+            "label": "Sentry APPLE-IOS-47",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-47"
+          },
+          {
+            "label": "Sentry APPLE-IOS-48",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-48"
+          },
+          {
+            "label": "Sentry APPLE-IOS-49",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-49"
+          }
+        ],
+        "novelty": "new"
+      }
+    ],
+    "features": [
+      {
+        "id": "discord-ethan-song-sync",
+        "title": "Sync a song to your study session (Ethan)",
+        "plainTitle": "Instagram-style song on a study session",
+        "plainSummary": "Discord #feature-requests. Royalty question noted. Product ask; no auto-fix.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "Ethan"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 Fri Sep 25 \u00b7 ~5:06pm PT"
+          }
+        ],
+        "detail": "Sync a song to your study session like Instagram",
+        "novelty": "new"
+      },
+      {
+        "id": "discord-ethan-customize-group",
+        "title": "Customize your group page (Ethan)",
+        "plainTitle": "Let people customize their group page",
+        "plainSummary": "Discord #feature-requests (+1 reaction). Product ask; no auto-fix.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "Ethan"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 Fri Sep 25 \u00b7 ~8:06pm PT"
+          }
+        ],
+        "detail": "Customize your group page",
+        "novelty": "new"
+      },
+      {
+        "id": "discord-ichika-filters",
+        "title": "Light face filters / touch-up (Ichika_.2)",
+        "plainTitle": "Soft face filters for camera-shy people",
+        "plainSummary": "Still open from yesterday.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "Ichika_.2"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "discord-sheppard-widgets",
+        "title": "Home / Lock Screen widgets for streak (sheppard.c)",
+        "plainTitle": "Widgets that remind you of your streak / to work",
+        "plainSummary": "Still open from yesterday.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "sheppard.c"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "jia-delete-messages",
+        "title": "Delete function on messages (jia)",
+        "plainTitle": "Please add delete on messages",
+        "plainSummary": "#287 on main \u2014 await TestFlight confirmation.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "Likely shipped \u00b7 #287 on main \u00b7 await TF",
+        "people": [
+          "jia"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 jia \u00b7 continuing"
+          },
+          {
+            "label": "PR #287",
+            "url": "https://github.com/eddie-the-lou/latent/pull/287"
+          }
+        ],
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/287"
+      },
+      {
+        "id": "suki-nudge-sent-icon",
+        "title": "Keep nudged icon on Home after refresh (suki)",
+        "plainTitle": "After I nudge someone, don\u2019t snap back to \ud83d\udc4b",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "discord-android-ask",
+        "title": "Android version (Android Advocate)",
+        "plainTitle": "Please release Latent on Android",
+        "plainSummary": "Still open. Kill-list candidate.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 kill-list candidate",
+        "people": [
+          "Android Advocate"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "zaahirat-trim-end",
+        "title": "Trim end of session (zaahirat)",
+        "plainTitle": "Cut dead time off the end of a sitting",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product",
+        "people": [
+          "zaahirat"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 zaahirat \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "diwmx-battery",
+        "title": "Better battery life (diwmx survey)",
+        "plainTitle": "Survey: better battery life if possible",
+        "plainSummary": "Still open. Sean Ellis unchanged 39/25/2 of 66.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 survey",
+        "people": [
+          "diwmx"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "PMF survey \u00b7 Active Users \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "launch-on-home-feed",
+        "title": "Launch on home feed instead of camera (suki)",
+        "plainTitle": "Open Latent on the home feed, not the camera",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product choice",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      }
+    ],
+    "bySource": {
+      "inApp": [
+        {
+          "summary": "No NEW rows after Fri Sep 25 9:00 AM PT dig (latest still suki Thu Sep 24 4:37pm PT / jia 9:57am PT)."
+        }
+      ],
+      "discord": [
+        {
+          "summary": "Login OK as Eddie L. Window after Fri Sep 25 9:00 AM PT. NEW: Ethan song-sync + customize group page; SourLemown \u201cwhere do the vids get stored?\u201d. #questions/#tester-chat no NEW bugs. #announcements not accessible."
+        }
+      ],
+      "email": [
+        {
+          "summary": "No new tester/user feedback. GitHub CI LatentServiceTests failures only."
+        }
+      ],
+      "survey": [
+        {
+          "summary": "Unchanged Active Users n=66 \u00b7 Sean Ellis 39/25/2 \u00b7 no new rows \u00b7 build-one-next column still empty"
+        }
+      ],
+      "sentry": [
+        {
+          "summary": "NEW 47\u201349 hang singles \u2014 watching (plus still 42\u201346 / 3Y/3Z/40/41). 49 setBadge queenie build 29; 48 FriendsListView ethan build 29; 47 debug badge hang."
+        }
+      ],
+      "posthog": [
+        {
+          "summary": "clip_upload_failed 2/4/3/8/4/2/0(partial) Sep20\u201326; rageclicks 264/200/270/230/241/325/125; clip-bloat Not firing ~1.56 MB/s"
+        }
+      ],
+      "linear": [
+        {
+          "summary": "NEW TRY-173 tags>5 (Malcolm Todo). Done overnight: TRY-147/148/151/155/158\u2013160/162/165/168/169/172 (+ earlier). In Progress: TRY-149/163/167/170/171."
+        }
+      ]
+    },
+    "rawQuotes": [
+      {
+        "source": "Discord \u00b7 #feature-requests",
+        "who": "Ethan",
+        "when": "Fri Sep 25 \u00b7 ~5:06pm PT",
+        "build": "",
+        "kind": "feature",
+        "text": "Sync a song to your study session like Instagram\n\nNot sure how this would work with royalties but it could definitely add an engaging element to the feed"
+      },
+      {
+        "source": "Discord \u00b7 #feature-requests",
+        "who": "Ethan",
+        "when": "Fri Sep 25 \u00b7 ~8:06pm PT",
+        "build": "",
+        "kind": "feature",
+        "text": "Customize your group page"
+      },
+      {
+        "source": "Discord \u00b7 #general-chat",
+        "who": "SourLemown\ud83c\udf4b",
+        "when": "Sat Sep 26 \u00b7 ~1:56am PT",
+        "build": "",
+        "kind": "question",
+        "text": "where do the vids get stored tho?"
       }
     ]
   }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Latent daily review · 2026-09-26</title></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.5;color:#111;max-width:720px;margin:0 auto;padding:24px;">
+<p style="font-size:13px;color:#666;margin:0 0 8px;">From Unpaid Intern · plain English · 9:00 AM PT dig</p>
+<h1 style="font-size:22px;margin:0 0 16px;">Latent daily review · Sep 26</h1>
+
+<p style="background:#f4f7ff;border:1px solid #c9d7ff;border-radius:8px;padding:12px 14px;">
+<strong>Live archive (bookmark this):</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/">https://eddie-the-lou.github.io/latent-digs/</a><br>
+<strong>Today’s review:</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-26">https://eddie-the-lou.github.io/latent-digs/#/2026-09-26</a>
+</p>
+
+<h2 style="font-size:16px;margin-top:28px;">In plain English</h2>
+<ul>
+<li>Ready for you (3): draft #257 stef40 drafts stuck / can’t publish; draft #288 suki full-view lag + cellular data (agent finished overnight); and your open #295 mid-session clock switch + Lock Screen card notice (Linear TRY-155 marked Done, but the PR is still unmerged). Do not merge any of these until you review. You usually can’t QA tester bugs on your phone.</li><li>No NEW in-app feedback since yesterday’s dig. Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. “Build one next” still empty. No tester/user feedback emails (CI LatentServiceTests noise only).</li><li>NEW Discord: Ethan wants Instagram-style song sync on a study session, and a customizable group page. SourLemown asked where videos are stored (Ethan answered “seems in-app”). Product / FAQ — no auto-fix. Still open from earlier: Ichika filters, sheppard widgets, suki nudge-icon + launch-on-home, zaahirat trim-end, diwmx battery, Android Advocate.</li><li>Heads-up (Malcolm owns, no duplicate agent): Linear TRY-173 “Tags are broken — can’t choose tags when you have more than 5” (Todo, assigned Malcolm).</li><li>Overnight on main after yesterday’s dig: #289–#301 — groups (multiple groups #298, nudge reveal #297, Discord leaderboard #292, week Sun–Sat #300), Activity/notifications (#290), kudos refresh (#291), live chat after socket drop (#293), camera toggle leaves mid-record (#294), forgot-password email code (#296), onboarding/share/clip-retry (#299), drop video-length badge (#301), migration-guard CLI fix (#289). Linear Done overnight includes TRY-147/148/151/155/158–160/162/165/168/169/172 (+ earlier). Still In Progress: TRY-149 friend-from-group, TRY-163 post-to-group, TRY-167 rate prompt, TRY-170 Supabase rate limit, TRY-171 leaderboard week mismatch.</li><li>Sentry NEW hang singles 47–49 (plus still watching 42–46 / 3Y/3Z/40/41). Opaque singles — not auto-fixing. 49 PushService.setBadge for queenie (build 29); 48 FriendsListView for ethan (build 29, low power); 47 badge hang on a debug build. PostHog: clip_upload_failed Sep20–26 = 2/4/3/8/4/2/0(partial); rageclicks 264/200/270/230/241/325/125; clip-bloat Not firing (~1.56 MB/s).</li><li>Discord login OK as Eddie L. Window after Fri Sep 25 9:00 AM PT: 2 NEW feature asks (Ethan), 1 question (SourLemown). #questions / #tester-chat: no NEW bugs. #announcements not accessible. Mac offline — skipped local site sync.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Ready for you to approve</h2>
+<ul>
+<li><strong><a href="https://github.com/eddie-the-lou/latent/pull/257">#257</a></strong> (draft) — stef40 drafts stuck / can’t publish. Post was hidden until a tag was picked. <a href="https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512">Agent bc-51f4d01d</a>. Do not merge until you review.</li>
+<li><strong><a href="https://github.com/eddie-the-lou/latent/pull/288">#288</a></strong> (draft) — suki full-view lag + cellular data. Reuses the feed buffer; on cellular stops ~200MB launch prefetch. <a href="https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20">Agent bc-bce5a81a</a> finished. QA needs a tester on cellular tapping a friend’s playing clip. Do not merge yet.</li>
+<li><strong><a href="https://github.com/eddie-the-lou/latent/pull/295">#295</a></strong> (open, not draft) — your mid-session clock switch + Lock Screen notice. Linear TRY-155 is Done, but this PR is still unmerged. Device verification still outstanding per the PR body.</li>
+</ul>
+<p style="color:#555;font-size:14px;">Malcolm open (not blocking you): <a href="https://github.com/eddie-the-lou/latent/pull/302">#302</a> tags/stats requests, <a href="https://github.com/eddie-the-lou/latent/pull/284">#284</a> presign costs, <a href="https://github.com/eddie-the-lou/latent/pull/267">#267</a> group hand/chat, plus #241/#164/#162/#123. Also Linear <a href="https://linear.app/trylatent/issue/TRY-173/tags-are-broken">TRY-173</a> tags&gt;5 (his Todo).</p>
+
+<h2 style="font-size:16px;margin-top:28px;">Broken / confusing</h2>
+<ul>
+<li><strong>suki</strong> — full-view laggy + heavy mobile data (build 29). Fix in draft <a href="https://github.com/eddie-the-lou/latent/pull/288">#288</a>.</li>
+<li><strong>stef40</strong> — drafts stuck / can’t publish (build 27). Fix in draft <a href="https://github.com/eddie-the-lou/latent/pull/257">#257</a>.</li>
+<li><strong>Tags &gt; 5</strong> — Malcolm’s <a href="https://linear.app/trylatent/issue/TRY-173/tags-are-broken">TRY-173</a> (can’t choose tags past 5). He owns it; no duplicate agent.</li>
+<li>Sentry NEW hang singles 47–49 (plus still 42–46 / 3Y/3Z/40/41) — watching. Not auto-fixing opaque singles. 49 queenie setBadge; 48 ethan FriendsList.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Things people want</h2>
+<ul>
+<li><strong>Ethan</strong> (NEW, Discord) — Instagram-style song sync on a study session (royalties note).</li>
+<li><strong>Ethan</strong> (NEW, Discord) — customize your group page.</li>
+<li><strong>SourLemown</strong> (NEW, Discord) — “where do the vids get stored tho?” (Ethan: seems in-app).</li>
+<li><strong>Ichika_.2</strong> — light face touch-up filters (continuing).</li>
+<li><strong>sheppard.c</strong> — Home / Lock Screen widgets (continuing).</li>
+<li><strong>suki</strong> — keep nudged icon on Home after refresh; launch on home feed.</li>
+<li><strong>Android Advocate</strong> — Android Latent (kill-list candidate).</li>
+<li><strong>zaahirat</strong> — trim the end of a sitting.</li>
+<li><strong>diwmx</strong> — better battery (survey; Sean Ellis still 39/25/2 of 66).</li>
+<li><strong>jia</strong> delete on messages — likely covered by #287; await TF.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">What they actually wrote</h2>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #feature-requests · Ethan · Fri Sep 25 · ~5:06pm PT · feature</div><div style="white-space:pre-wrap;">Sync a song to your study session like Instagram
+
+Not sure how this would work with royalties but it could definitely add an engaging element to the feed</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #feature-requests · Ethan · Fri Sep 25 · ~8:06pm PT · feature</div><div style="white-space:pre-wrap;">Customize your group page</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #general-chat · SourLemown🍋 · Sat Sep 26 · ~1:56am PT · question</div><div style="white-space:pre-wrap;">where do the vids get stored tho?</div></blockquote>
+
+<p style="font-size:12px;color:#888;margin-top:32px;">Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-26">https://eddie-the-lou.github.io/latent-digs/#/2026-09-26</a></p>
+</body></html>
