@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Latent daily review · 2026-09-27</title></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.5;color:#111;max-width:720px;margin:0 auto;padding:24px;">
+<p style="font-size:13px;color:#666;margin:0 0 8px;">From Unpaid Intern · plain English · 9:00 AM PT dig</p>
+<h1 style="font-size:22px;margin:0 0 16px;">Latent daily review · Sep 27</h1>
+
+<p style="background:#f4f7ff;border:1px solid #c9d7ff;border-radius:8px;padding:12px 14px;">
+<strong>Live archive (bookmark this):</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/">https://eddie-the-lou.github.io/latent-digs/</a><br>
+<strong>Today’s review:</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-27">https://eddie-the-lou.github.io/latent-digs/#/2026-09-27</a>
+</p>
+
+<h2 style="font-size:16px;margin-top:28px;">In plain English</h2>
+<ul>
+<li>Ready for you (2): draft #257 stef40 drafts stuck / can’t publish; draft #288 suki full-view lag + cellular data. #295 clock-switch merged overnight — cleared from your queue. Do not merge the drafts until you review. You usually can’t QA tester bugs on your phone.</li><li>No NEW in-app feedback. No NEW Discord bugs/features/questions after Sat Sep 26 9:00 AM PT (Malcolm answered SourLemown’s vids-storage question: “in the app! we store it for you”). Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. “Build one next” still empty. No tester/user feedback emails.</li><li>NEW overnight (user voice → already on main): Chloe paused a session, came back, and Latent recovered then ended it instead of letting her resume — Linear TRY-176 → merged #308. Tags &gt;5 (TRY-173) → merged #309. Also on main: #295 clock switch, #303 friend-from-group, #284/#304 rate-limit + profile rules, #305 App Store rating prompt, #306 post-to-groups, #307 Today row / group standings.</li><li>Heads-up (Malcolm owns — no duplicate agent): TRY-180 “Videos not loading” (Todo — sometimes first open / profile need a refresh); TRY-179 pause button on the pill too close to the left (In Progress). NEW product ask TRY-181: tap anywhere to skip the nudge animation (TestFlight).</li><li>Sentry NEW APPLE-IOS-4A hang single (DailyReminder.init) for krabbykai build 29 — watching; still watching 47–49 (+ earlier). 49 setBadge now at 3 users. PostHog: clip_upload_failed Sep20–27 = 2/4/3/8/4/2/0/8(partial today — spike to watch); rageclicks 264/200/270/230/241/325/221/151(partial); clip-bloat Not firing (~1.57 MB/s). Edge-function loop alert Not firing.</li><li>Discord login OK as Eddie L. Window after Sat Sep 26 9:00 AM PT: 0 NEW. Mac offline — skipped local site sync.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Ready for you to approve</h2>
+<ul>
+<li><strong><a href="https://github.com/eddie-the-lou/latent/pull/257">#257</a></strong> (draft) — stef40 drafts stuck / can’t publish. Post was hidden until a tag was picked. <a href="https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512">Agent bc-51f4d01d</a>. Do not merge until you review.</li>
+<li><strong><a href="https://github.com/eddie-the-lou/latent/pull/288">#288</a></strong> (draft) — suki full-view lag + cellular data. Reuses the feed buffer; on cellular stops ~200MB launch prefetch. <a href="https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20">Agent bc-bce5a81a</a> finished. QA needs a tester on cellular tapping a friend’s playing clip. Do not merge yet.</li>
+</ul>
+<p style="color:#555;font-size:14px;">Cleared overnight: <a href="https://github.com/eddie-the-lou/latent/pull/295">#295</a> clock-switch merged. Malcolm open (not blocking you): <a href="https://github.com/eddie-the-lou/latent/pull/302">#302</a>, <a href="https://github.com/eddie-the-lou/latent/pull/267">#267</a>, #241/#164/#162/#123. He also owns <a href="https://linear.app/trylatent/issue/TRY-180/videos-not-loading">TRY-180</a> videos-not-loading and <a href="https://linear.app/trylatent/issue/TRY-179/the-pause-button-on-the-pill-is-too-close-to-the-left">TRY-179</a> pause-pill spacing.</p>
+
+<h2 style="font-size:16px;margin-top:28px;">Broken / confusing</h2>
+<ul>
+<li><strong>stef40</strong> — drafts stuck / can’t publish (build 27). Fix in draft <a href="https://github.com/eddie-the-lou/latent/pull/257">#257</a>.</li>
+<li><strong>suki</strong> — full-view laggy + heavy mobile data (build 29). Fix in draft <a href="https://github.com/eddie-the-lou/latent/pull/288">#288</a>.</li>
+<li><strong>Chloe</strong> (NEW, fixed on main) — paused, came back, session recovered then ended. <a href="https://linear.app/trylatent/issue/TRY-176/session-gets-recovered-then-ended-after-pausing">TRY-176</a> → <a href="https://github.com/eddie-the-lou/latent/pull/308">#308</a>. Await TF.</li>
+<li><strong>Tags &gt; 5</strong> — fixed overnight <a href="https://github.com/eddie-the-lou/latent/pull/309">#309</a> / TRY-173 Done.</li>
+<li><strong>Videos not loading</strong> — Malcolm’s <a href="https://linear.app/trylatent/issue/TRY-180/videos-not-loading">TRY-180</a> (Todo). No duplicate agent.</li>
+<li><strong>Pause pill spacing</strong> — Malcolm’s <a href="https://linear.app/trylatent/issue/TRY-179/the-pause-button-on-the-pill-is-too-close-to-the-left">TRY-179</a> (In Progress).</li>
+<li>Sentry NEW <a href="https://weaive.sentry.io/issues/APPLE-IOS-4A">APPLE-IOS-4A</a> hang (krabbykai DailyReminder) + still watching 47–49. Not auto-fixing opaque singles.</li>
+<li>PostHog: clip_upload_failed spiked to <strong>8</strong> today (partial) after 0 yesterday — watch. Clip-bloat / edge-loop alerts Not firing.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Things people want</h2>
+<ul>
+<li><strong>TestFlight</strong> (NEW) — tap anywhere to skip the nudge animation (<a href="https://linear.app/trylatent/issue/TRY-181/tap-anywhere-to-skip-the-nudge-animation">TRY-181</a>).</li>
+<li><strong>Ethan</strong> — Instagram-style song sync; customize group page (continuing).</li>
+<li><strong>SourLemown</strong> — vids storage — answered by Malcolm in Discord.</li>
+<li><strong>Ichika_.2</strong> — light face touch-up filters (continuing).</li>
+<li><strong>sheppard.c</strong> — Home / Lock Screen widgets (continuing).</li>
+<li><strong>suki</strong> — keep nudged icon on Home; launch on home feed.</li>
+<li><strong>Android Advocate</strong> — Android Latent (kill-list candidate).</li>
+<li><strong>zaahirat</strong> — trim the end of a sitting.</li>
+<li><strong>diwmx</strong> — better battery (survey; Sean Ellis still 39/25/2 of 66).</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">What they actually wrote</h2>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Linear / WhatsApp · TRY-176 · chloe · Fri Sep 26 (reported) · bug</div><div style="white-space:pre-wrap;">bro this keeps happening to me i paused it to go to the bathroom and then i come back and it recovers my session and ends it</div><div style="font-size:12px;color:#666;margin-top:6px;">Chloe (+1 616 274 8949). Fixed overnight on main via #308 / TRY-176 Done.</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">TestFlight / Linear · TRY-181 · TestFlight feedback · Sat Sep 26 ~5:28pm PT (filed) · build 29 · feature</div><div style="white-space:pre-wrap;">You could make the nudge skip by just tapping the screen. Its kinda annyoing reaching for the button in the top right.</div><div style="font-size:12px;color:#666;margin-top:6px;">iPhone 17, iOS 27.0. Linear TRY-181 Todo.</div></blockquote>
+
+<p style="font-size:12px;color:#888;margin-top:32px;">Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-27">https://eddie-the-lou.github.io/latent-digs/#/2026-09-27</a></p>
+</body></html>

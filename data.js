@@ -1,5 +1,18 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-09-27",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 10,
+      "openBugs": 5,
+      "resolvedBugs": 2,
+      "filtered": 0,
+      "rawQuotes": 2
+    },
+    "path": "data/2026-09-27.json",
+    "htmlArchive": "../2026-09-27.html"
+  },
+  {
     "date": "2026-09-26",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -546,6 +559,19 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-09-27",
+      "title": "Latent feedback dig",
+      "summaryStats": {
+        "openFeatures": 10,
+        "openBugs": 5,
+        "resolvedBugs": 2,
+        "filtered": 0,
+        "rawQuotes": 2
+      },
+      "path": "data/2026-09-27.json",
+      "htmlArchive": "../2026-09-27.html"
+    },
     {
       "date": "2026-09-26",
       "title": "Latent feedback dig",
@@ -71126,6 +71152,740 @@ window.DIGESTS = {
         "build": "",
         "kind": "question",
         "text": "where do the vids get stored tho?"
+      }
+    ]
+  },
+  "2026-09-27": {
+    "date": "2026-09-27",
+    "title": "Latent daily review \u00b7 Sep 27",
+    "generatedAt": "2026-09-27T16:20:07.227570+00:00",
+    "tldr": [
+      "Ready for you (2): draft #257 stef40 drafts stuck / can\u2019t publish; draft #288 suki full-view lag + cellular data. #295 clock-switch merged overnight \u2014 cleared from your queue. Do not merge the drafts until you review. You usually can\u2019t QA tester bugs on your phone.",
+      "No NEW in-app feedback. No NEW Discord bugs/features/questions after Sat Sep 26 9:00 AM PT (Malcolm answered SourLemown\u2019s vids-storage question: \u201cin the app! we store it for you\u201d). Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. \u201cBuild one next\u201d still empty. No tester/user feedback emails.",
+      "NEW overnight (user voice \u2192 already on main): Chloe paused a session, came back, and Latent recovered then ended it instead of letting her resume \u2014 Linear TRY-176 \u2192 merged #308. Tags >5 (TRY-173) \u2192 merged #309. Also on main: #295 clock switch, #303 friend-from-group, #284/#304 rate-limit + profile rules, #305 App Store rating prompt, #306 post-to-groups, #307 Today row / group standings.",
+      "Heads-up (Malcolm owns \u2014 no duplicate agent): TRY-180 \u201cVideos not loading\u201d (Todo \u2014 sometimes first open / profile need a refresh); TRY-179 pause button on the pill too close to the left (In Progress). NEW product ask TRY-181: tap anywhere to skip the nudge animation (TestFlight).",
+      "Sentry NEW APPLE-IOS-4A hang single (DailyReminder.init) for krabbykai build 29 \u2014 watching; still watching 47\u201349 (+ earlier). 49 setBadge now at 3 users. PostHog: clip_upload_failed Sep20\u201327 = 2/4/3/8/4/2/0/8(partial today \u2014 spike to watch); rageclicks 264/200/270/230/241/325/221/151(partial); clip-bloat Not firing (~1.57 MB/s). Edge-function loop alert Not firing.",
+      "Discord login OK as Eddie L. Window after Sat Sep 26 9:00 AM PT: 0 NEW. Mac offline \u2014 skipped local site sync."
+    ],
+    "plainTldr": [
+      "Ready for you (2): draft #257 stef40 drafts stuck / can\u2019t publish; draft #288 suki full-view lag + cellular data. #295 clock-switch merged overnight \u2014 cleared from your queue. Do not merge the drafts until you review. You usually can\u2019t QA tester bugs on your phone.",
+      "No NEW in-app feedback. No NEW Discord bugs/features/questions after Sat Sep 26 9:00 AM PT (Malcolm answered SourLemown\u2019s vids-storage question: \u201cin the app! we store it for you\u201d). Survey unchanged: Sean Ellis 39/25/2 of 66. No new free-text. \u201cBuild one next\u201d still empty. No tester/user feedback emails.",
+      "NEW overnight (user voice \u2192 already on main): Chloe paused a session, came back, and Latent recovered then ended it instead of letting her resume \u2014 Linear TRY-176 \u2192 merged #308. Tags >5 (TRY-173) \u2192 merged #309. Also on main: #295 clock switch, #303 friend-from-group, #284/#304 rate-limit + profile rules, #305 App Store rating prompt, #306 post-to-groups, #307 Today row / group standings.",
+      "Heads-up (Malcolm owns \u2014 no duplicate agent): TRY-180 \u201cVideos not loading\u201d (Todo \u2014 sometimes first open / profile need a refresh); TRY-179 pause button on the pill too close to the left (In Progress). NEW product ask TRY-181: tap anywhere to skip the nudge animation (TestFlight).",
+      "Sentry NEW APPLE-IOS-4A hang single (DailyReminder.init) for krabbykai build 29 \u2014 watching; still watching 47\u201349 (+ earlier). 49 setBadge now at 3 users. PostHog: clip_upload_failed Sep20\u201327 = 2/4/3/8/4/2/0/8(partial today \u2014 spike to watch); rageclicks 264/200/270/230/241/325/221/151(partial); clip-bloat Not firing (~1.57 MB/s). Edge-function loop alert Not firing.",
+      "Discord login OK as Eddie L. Window after Sat Sep 26 9:00 AM PT: 0 NEW. Mac offline \u2014 skipped local site sync."
+    ],
+    "stats": {
+      "newInApp": 0,
+      "newDiscord": 0,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-4A"
+      ],
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-20": 2,
+          "2026-09-21": 4,
+          "2026-09-22": 3,
+          "2026-09-23": 8,
+          "2026-09-24": 4,
+          "2026-09-25": 2,
+          "2026-09-26": 0,
+          "2026-09-27": 8
+        },
+        "rageclicks": {
+          "2026-09-20": 264,
+          "2026-09-21": 200,
+          "2026-09-22": 270,
+          "2026-09-23": 230,
+          "2026-09-24": 241,
+          "2026-09-25": 325,
+          "2026-09-26": 221,
+          "2026-09-27": 151
+        },
+        "clipBloatAlert": "Not firing",
+        "clipBloatLastValue": 1.56534345367893,
+        "edgeLoopAlert": "Not firing",
+        "notes": "Sep 27 upload-failed 8 is partial-day but already a spike vs Sep 26\u2019s 0 \u2014 watch."
+      },
+      "rawQuotes": 2
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 257,
+          "title": "A draft can be posted without hunting for Log session (stef40)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/257",
+          "draft": true,
+          "agent": "bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512"
+        },
+        {
+          "pr": 288,
+          "title": "Opening a video from the feed starts right away, and uses less mobile data (suki)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/288",
+          "draft": true,
+          "agent": "bc-bce5a81a-6dba-536c-91c7-3d7d945caa20"
+        }
+      ],
+      "malcolmOpen": [
+        {
+          "pr": 302,
+          "title": "One request per question: stats carry their tags, engagement carries the kudos preview",
+          "url": "https://github.com/eddie-the-lou/latent/pull/302"
+        },
+        {
+          "pr": 267,
+          "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+          "url": "https://github.com/eddie-the-lou/latent/pull/267"
+        },
+        {
+          "pr": 241,
+          "title": "Save the App Store screenshot drafts and render scripts",
+          "url": "https://github.com/eddie-the-lou/latent/pull/241"
+        },
+        {
+          "pr": 164,
+          "title": "Today mini cards fit their durations; camera toggle stays put",
+          "url": "https://github.com/eddie-the-lou/latent/pull/164"
+        },
+        {
+          "pr": 162,
+          "title": "One frame rule for the timelapse clip",
+          "url": "https://github.com/eddie-the-lou/latent/pull/162"
+        },
+        {
+          "pr": 123,
+          "title": "Sequential dual-camera proof stills (draft)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/123"
+        }
+      ],
+      "agentsSpinning": [],
+      "agentsFinished": [
+        {
+          "id": "bc-bce5a81a-6dba-536c-91c7-3d7d945caa20",
+          "title": "suki full-view lag + mobile data",
+          "url": "https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20",
+          "pr": 288
+        },
+        {
+          "id": "bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512",
+          "title": "stef40 drafts stuck \u2014 can't publish",
+          "url": "https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512",
+          "pr": 257
+        }
+      ],
+      "clearedOvernight": [
+        {
+          "id": "pr-295-clock-switch",
+          "title": "Mid-session clock switch (#295 / TRY-155)",
+          "via": "#295 merged"
+        },
+        {
+          "id": "try-176-chloe-pause",
+          "title": "Paused session recovered then ended (Chloe)",
+          "via": "TRY-176 Done \u00b7 #308"
+        },
+        {
+          "id": "try-173-tags-gt5",
+          "title": "Tags >5 broken",
+          "via": "TRY-173 Done \u00b7 #309"
+        },
+        {
+          "id": "try-163-post-to-group",
+          "title": "Post to a specific group",
+          "via": "TRY-163 Done \u00b7 #306"
+        }
+      ],
+      "mergedOvernight": [
+        {
+          "pr": 309,
+          "title": "Save screen always offers Other, so a new account can pick it (TRY-173)"
+        },
+        {
+          "pr": 308,
+          "title": "Bring a paused session back after iOS closes the app (TRY-176)"
+        },
+        {
+          "pr": 307,
+          "title": "Whoever is recording leads Today's row, and a group card says where I stand"
+        },
+        {
+          "pr": 306,
+          "title": "Post to groups: Share switch with an Everyone or groups picker"
+        },
+        {
+          "pr": 305,
+          "title": "Ask for an App Store rating at the end of post-auth onboarding"
+        },
+        {
+          "pr": 304,
+          "title": "Hold profile writes to the app's rules in the database"
+        },
+        {
+          "pr": 303,
+          "title": "Group members who aren't friends open private and can be added"
+        },
+        {
+          "pr": 295,
+          "title": "Switch the session clock mid-recording, and stop losing the Lock Screen card"
+        },
+        {
+          "pr": 284,
+          "title": "Cut Supabase costs: stop retrying rate-limited presigns"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "pr-257-stef40-draft-publish",
+        "title": "PR #257 \u2014 stef40 drafts stuck / can't publish",
+        "status": "waiting",
+        "resolved": false,
+        "plainTitle": "Ready to approve: stef40 can\u2019t find Post",
+        "plainSummary": "Still draft. Root cause: Log session / Post was folded away until a tag was picked. Do not merge until you review.",
+        "actionStatus": "Waiting on you \u00b7 draft PR #257",
+        "people": [
+          "stef40"
+        ],
+        "url": "https://github.com/eddie-the-lou/latent/pull/257",
+        "links": [
+          {
+            "label": "PR #257",
+            "url": "https://github.com/eddie-the-lou/latent/pull/257"
+          },
+          {
+            "label": "Agent",
+            "url": "https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512"
+          }
+        ]
+      },
+      {
+        "id": "pr-288-suki-fullview-data",
+        "title": "PR #288 \u2014 suki full-view lag + mobile data",
+        "status": "waiting",
+        "resolved": false,
+        "plainTitle": "Ready to approve: full-view laggy + too much cellular data",
+        "plainSummary": "Still draft. Reuses the feed\u2019s already-buffered clip; on cellular stops ~200MB launch prefetch. QA needs a tester on cellular tapping a friend\u2019s playing clip. Do not merge yet.",
+        "actionStatus": "Waiting on you \u00b7 draft PR #288",
+        "people": [
+          "suki"
+        ],
+        "url": "https://github.com/eddie-the-lou/latent/pull/288",
+        "links": [
+          {
+            "label": "PR #288",
+            "url": "https://github.com/eddie-the-lou/latent/pull/288"
+          },
+          {
+            "label": "Agent",
+            "url": "https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20"
+          }
+        ]
+      }
+    ],
+    "bugs": [
+      {
+        "id": "stef40-drafts-stuck",
+        "title": "Recordings stay in draft / can't publish (stef40)",
+        "plainTitle": "Drafts stuck \u2014 not sure how to publish",
+        "plainSummary": "Draft PR #257 still waiting on you.",
+        "status": "waiting",
+        "resolved": false,
+        "actionStatus": "Waiting \u00b7 draft PR #257",
+        "people": [
+          "stef40"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 stef40 \u00b7 continuing"
+          },
+          {
+            "label": "PR #257",
+            "url": "https://github.com/eddie-the-lou/latent/pull/257"
+          }
+        ],
+        "detail": "Hey, my recordings stay in draft. Not sure how to publish. Might be a bug because I can only make edits.",
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/257"
+      },
+      {
+        "id": "suki-fullview-lag-data",
+        "title": "Full-view laggy + heavy mobile data (suki)",
+        "plainTitle": "Full-view playback laggy and burns mobile data",
+        "plainSummary": "Draft PR #288 still waiting. Needs tester QA on cellular.",
+        "status": "waiting",
+        "resolved": false,
+        "actionStatus": "Waiting \u00b7 draft PR #288",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 continuing \u00b7 build 29"
+          },
+          {
+            "label": "PR #288",
+            "url": "https://github.com/eddie-the-lou/latent/pull/288"
+          }
+        ],
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/288"
+      },
+      {
+        "id": "try-180-videos-not-loading",
+        "title": "Videos not loading until refresh (TRY-180)",
+        "plainTitle": "Videos sometimes won\u2019t play until you refresh",
+        "plainSummary": "Malcolm owns TRY-180 Todo. First open or opening a profile. No duplicate Cloud Agent.",
+        "status": "owned",
+        "resolved": false,
+        "actionStatus": "Malcolm \u00b7 TRY-180 Todo",
+        "people": [
+          "Malcolm"
+        ],
+        "supportCount": 0,
+        "sources": [
+          {
+            "label": "Linear TRY-180",
+            "url": "https://linear.app/trylatent/issue/TRY-180/videos-not-loading"
+          }
+        ],
+        "detail": "Sometimes on first opening the app or opening a profile, the videos wont play unless you refresh the page/app",
+        "novelty": "new",
+        "url": "https://linear.app/trylatent/issue/TRY-180/videos-not-loading"
+      },
+      {
+        "id": "try-179-pause-pill",
+        "title": "Pause button on the pill too close to the left (TRY-179)",
+        "plainTitle": "Pause on the recording pill is too far left",
+        "plainSummary": "Malcolm In Progress on TRY-179. No duplicate agent.",
+        "status": "owned",
+        "resolved": false,
+        "actionStatus": "Malcolm \u00b7 TRY-179 In Progress",
+        "people": [
+          "Malcolm"
+        ],
+        "supportCount": 0,
+        "sources": [
+          {
+            "label": "Linear TRY-179",
+            "url": "https://linear.app/trylatent/issue/TRY-179/the-pause-button-on-the-pill-is-too-close-to-the-left"
+          }
+        ],
+        "novelty": "new",
+        "url": "https://linear.app/trylatent/issue/TRY-179/the-pause-button-on-the-pill-is-too-close-to-the-left"
+      },
+      {
+        "id": "chloe-pause-recover-ended",
+        "title": "Paused session recovered then ended (Chloe / TRY-176)",
+        "plainTitle": "Pause \u2192 come back \u2192 session ends instead of resume",
+        "plainSummary": "Fixed overnight on main via #308. Awaiting TestFlight.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "On main \u00b7 #308 \u00b7 await TF",
+        "people": [
+          "chloe"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Linear TRY-176",
+            "url": "https://linear.app/trylatent/issue/TRY-176/session-gets-recovered-then-ended-after-pausing"
+          },
+          {
+            "label": "PR #308",
+            "url": "https://github.com/eddie-the-lou/latent/pull/308"
+          }
+        ],
+        "detail": "bro this keeps happening to me i paused it to go to the bathroom and then i come back and it recovers my session and ends it",
+        "novelty": "new",
+        "url": "https://github.com/eddie-the-lou/latent/pull/308"
+      },
+      {
+        "id": "try-173-tags-gt5",
+        "title": "Can't choose tags when you have more than 5 (TRY-173)",
+        "plainTitle": "Tags picker breaks past 5 tags",
+        "plainSummary": "Done overnight \u2014 #309 on main (Save screen always offers Other).",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "On main \u00b7 #309 \u00b7 await TF",
+        "people": [
+          "Malcolm"
+        ],
+        "supportCount": 0,
+        "sources": [
+          {
+            "label": "Linear TRY-173",
+            "url": "https://linear.app/trylatent/issue/TRY-173/tags-are-broken"
+          },
+          {
+            "label": "PR #309",
+            "url": "https://github.com/eddie-the-lou/latent/pull/309"
+          }
+        ],
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/309"
+      },
+      {
+        "id": "apple-ios-4a-47-49-watch",
+        "title": "Sentry NEW 4A + still watching 47\u201349",
+        "plainTitle": "New hang single on DailyReminder \u2014 watching",
+        "plainSummary": "4A DailyReminder.init for krabbykai (build 29, low power). 49 setBadge now 3 users. Opaque singles \u2014 not auto-fixing.",
+        "status": "watching",
+        "resolved": false,
+        "actionStatus": "Watching",
+        "people": [
+          "krabbykai",
+          "queenie",
+          "ethan"
+        ],
+        "supportCount": 0,
+        "sources": [
+          {
+            "label": "Sentry APPLE-IOS-4A",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-4A"
+          },
+          {
+            "label": "Sentry APPLE-IOS-49",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-49"
+          }
+        ],
+        "novelty": "new"
+      }
+    ],
+    "features": [
+      {
+        "id": "try-181-tap-skip-nudge",
+        "title": "Tap anywhere to skip the nudge animation (TRY-181)",
+        "plainTitle": "Tap the screen to skip the nudge",
+        "plainSummary": "TestFlight ask. Skip is top-right only today. Product; no auto-fix.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 TRY-181 Todo",
+        "people": [
+          "TestFlight"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Linear TRY-181",
+            "url": "https://linear.app/trylatent/issue/TRY-181/tap-anywhere-to-skip-the-nudge-animation"
+          }
+        ],
+        "detail": "You could make the nudge skip by just tapping the screen. Its kinda annyoing reaching for the button in the top right.",
+        "novelty": "new",
+        "url": "https://linear.app/trylatent/issue/TRY-181/tap-anywhere-to-skip-the-nudge-animation"
+      },
+      {
+        "id": "discord-ethan-song-sync",
+        "title": "Sync a song to your study session (Ethan)",
+        "plainTitle": "Instagram-style song on a study session",
+        "plainSummary": "Still open. Discord #feature-requests. Royalty question noted. Product ask; no auto-fix.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "Ethan"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 Fri Sep 25 \u00b7 ~5:06pm PT"
+          }
+        ],
+        "detail": "Sync a song to your study session like Instagram",
+        "novelty": "continuing"
+      },
+      {
+        "id": "discord-ethan-customize-group",
+        "title": "Customize your group page (Ethan)",
+        "plainTitle": "Let people customize their group page",
+        "plainSummary": "Still open. Discord #feature-requests (+1 reaction). Product ask; no auto-fix.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "Ethan"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 Fri Sep 25 \u00b7 ~8:06pm PT"
+          }
+        ],
+        "detail": "Customize your group page",
+        "novelty": "continuing"
+      },
+      {
+        "id": "discord-ichika-filters",
+        "title": "Light face filters / touch-up (Ichika_.2)",
+        "plainTitle": "Soft face filters for camera-shy people",
+        "plainSummary": "Still open from yesterday.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "Ichika_.2"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "discord-sheppard-widgets",
+        "title": "Home / Lock Screen widgets for streak (sheppard.c)",
+        "plainTitle": "Widgets that remind you of your streak / to work",
+        "plainSummary": "Still open from yesterday.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "sheppard.c"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "jia-delete-messages",
+        "title": "Delete function on messages (jia)",
+        "plainTitle": "Please add delete on messages",
+        "plainSummary": "#287 on main \u2014 await TestFlight confirmation.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "Likely shipped \u00b7 #287 on main \u00b7 await TF",
+        "people": [
+          "jia"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 jia \u00b7 continuing"
+          },
+          {
+            "label": "PR #287",
+            "url": "https://github.com/eddie-the-lou/latent/pull/287"
+          }
+        ],
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/287"
+      },
+      {
+        "id": "suki-nudge-sent-icon",
+        "title": "Keep nudged icon on Home after refresh (suki)",
+        "plainTitle": "After I nudge someone, don\u2019t snap back to \ud83d\udc4b",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "discord-android-ask",
+        "title": "Android version (Android Advocate)",
+        "plainTitle": "Please release Latent on Android",
+        "plainSummary": "Still open. Kill-list candidate.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 kill-list candidate",
+        "people": [
+          "Android Advocate"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "zaahirat-trim-end",
+        "title": "Trim end of session (zaahirat)",
+        "plainTitle": "Cut dead time off the end of a sitting",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product",
+        "people": [
+          "zaahirat"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 zaahirat \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "diwmx-battery",
+        "title": "Better battery life (diwmx survey)",
+        "plainTitle": "Survey: better battery life if possible",
+        "plainSummary": "Still open. Sean Ellis unchanged 39/25/2 of 66.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 survey",
+        "people": [
+          "diwmx"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "PMF survey \u00b7 Active Users \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "launch-on-home-feed",
+        "title": "Launch on home feed instead of camera (suki)",
+        "plainTitle": "Open Latent on the home feed, not the camera",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product choice",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 0,
+        "notes": "No NEW rows in public.feedback since Sep 26 dig."
+      },
+      "discord": {
+        "new": 0,
+        "notes": "Login OK as Eddie L. Window after Sat Sep 26 9:00 AM PT: 0 NEW bugs/features/questions. Malcolm answered SourLemown vids-storage. #announcements / #tester-chat not in channel list."
+      },
+      "gmail": {
+        "new": 0,
+        "notes": "No tester/user bug or feedback emails. Collab spam / calendar / Rho expense only."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": {
+          "very": 39,
+          "somewhat": 25,
+          "not": 2,
+          "n": 66
+        },
+        "buildOneNext": "still empty (66/66)",
+        "notes": "No new free-text since last dig. Latest Active User row still Sep 21."
+      },
+      "sentry": {
+        "new": [
+          "APPLE-IOS-4A"
+        ],
+        "watching": [
+          "APPLE-IOS-47",
+          "APPLE-IOS-48",
+          "APPLE-IOS-49"
+        ],
+        "notes": "4A DailyReminder hang \u00b7 krabbykai \u00b7 build 29. 49 setBadge now 3 users."
+      },
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-20": 2,
+          "2026-09-21": 4,
+          "2026-09-22": 3,
+          "2026-09-23": 8,
+          "2026-09-24": 4,
+          "2026-09-25": 2,
+          "2026-09-26": 0,
+          "2026-09-27": 8
+        },
+        "rageclicks": {
+          "2026-09-20": 264,
+          "2026-09-21": 200,
+          "2026-09-22": 270,
+          "2026-09-23": 230,
+          "2026-09-24": 241,
+          "2026-09-25": 325,
+          "2026-09-26": 221,
+          "2026-09-27": 151
+        },
+        "clipBloatAlert": "Not firing",
+        "clipBloatLastValue": 1.56534345367893,
+        "edgeLoopAlert": "Not firing",
+        "notes": "Sep 27 upload-failed 8 is partial-day but already a spike vs Sep 26\u2019s 0 \u2014 watch."
+      },
+      "linear": {
+        "doneOvernight": [
+          "TRY-176",
+          "TRY-173",
+          "TRY-163",
+          "TRY-170",
+          "TRY-167",
+          "TRY-149",
+          "TRY-171",
+          "TRY-182",
+          "TRY-178",
+          "TRY-177"
+        ],
+        "openOwned": [
+          "TRY-180",
+          "TRY-179",
+          "TRY-181",
+          "TRY-175",
+          "TRY-174",
+          "TRY-161",
+          "TRY-156"
+        ]
+      }
+    },
+    "rawQuotes": [
+      {
+        "source": "Linear / WhatsApp",
+        "channel": "TRY-176",
+        "username": "chloe",
+        "timePT": "Fri Sep 26 (reported)",
+        "build": null,
+        "kind": "bug",
+        "text": "bro this keeps happening to me i paused it to go to the bathroom and then i come back and it recovers my session and ends it",
+        "meta": "Chloe (+1 616 274 8949). Fixed overnight on main via #308 / TRY-176 Done."
+      },
+      {
+        "source": "TestFlight / Linear",
+        "channel": "TRY-181",
+        "username": "TestFlight feedback",
+        "timePT": "Sat Sep 26 ~5:28pm PT (filed)",
+        "build": "29",
+        "kind": "feature",
+        "text": "You could make the nudge skip by just tapping the screen. Its kinda annyoing reaching for the button in the top right.",
+        "meta": "iPhone 17, iOS 27.0. Linear TRY-181 Todo."
       }
     ]
   }
