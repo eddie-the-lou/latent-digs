@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Latent daily review · 2026-09-28</title></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.5;color:#111;max-width:720px;margin:0 auto;padding:24px;">
+<p style="font-size:13px;color:#666;margin:0 0 8px;">From Unpaid Intern · plain English · 9:00 AM PT dig</p>
+<h1 style="font-size:22px;margin:0 0 16px;">Latent daily review · Sep 28</h1>
+
+<p style="background:#f4f7ff;border:1px solid #c9d7ff;border-radius:8px;padding:12px 14px;">
+<strong>Live archive (bookmark this):</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/">https://eddie-the-lou.github.io/latent-digs/</a><br>
+<strong>Today’s review:</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-28">https://eddie-the-lou.github.io/latent-digs/#/2026-09-28</a>
+</p>
+
+<h2 style="font-size:16px;margin-top:28px;">In plain English</h2>
+<ul>
+<li>Ready for you (2): draft <a href="https://github.com/eddie-the-lou/latent/pull/257">#257</a> stef40 drafts stuck / can’t publish; draft <a href="https://github.com/eddie-the-lou/latent/pull/288">#288</a> suki full-view lag + cellular data. Still drafts — do not merge until you review. You usually can’t QA tester bugs on your phone.</li>
+<li>Cleared overnight: TRY-180 videos-not-loading → <a href="https://github.com/eddie-the-lou/latent/pull/310">#310</a>; TRY-179 pause-pill → <a href="https://github.com/eddie-the-lou/latent/pull/314">#314</a>; TRY-181 tap-skip-nudge → <a href="https://github.com/eddie-the-lou/latent/pull/317">#317</a>; plus #311–#313/#315–#320 on main.</li>
+<li>No NEW in-app feedback. Survey unchanged: Sean Ellis 39/25/2 of 66. No tester/user feedback emails. <strong>Discord scrape FAILED</strong> (login wall — needs computerUse re-auth as Eddie L).</li>
+<li>Heads-up: Malcolm owns NEW <a href="https://linear.app/trylatent/issue/TRY-193/apple-id-email-is-broke-when-you-go-to-edit-profile">TRY-193</a> Apple ID email on Edit Profile. Malcolm product notes <a href="https://linear.app/trylatent/issue/TRY-188/save-session-page-should-feel-better-to-use-more-gamified-less-static">TRY-188</a> Save Session UX. <a href="https://linear.app/trylatent/issue/TRY-191/dry-run-the-app">TRY-191</a> Dry run assigned to you.</li>
+<li>Sentry NEW <a href="https://weaive.sentry.io/issues/APPLE-IOS-4B">APPLE-IOS-4B</a> hang (isabelle / PlatformItem) — watching. PostHog upload-failed spiked to 23 today, but almost all old <strong>build 10</strong> (not 29). Clip-bloat / edge-loop Not firing.</li>
+<li>Mac offline — skipped local sync. No new Cloud Agents.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Ready for you to approve</h2>
+<ul>
+<li><strong><a href="https://github.com/eddie-the-lou/latent/pull/257">#257</a></strong> (draft) — stef40 drafts stuck / can’t publish. Post was hidden until a tag was picked. <a href="https://cursor.com/agents/bc-51f4d01d-a499-5bcf-b7bb-d5157acdd512">Agent bc-51f4d01d</a>. Do not merge until you review.</li>
+<li><strong><a href="https://github.com/eddie-the-lou/latent/pull/288">#288</a></strong> (draft) — suki full-view lag + cellular data. Reuses the feed buffer; on cellular stops ~200MB launch prefetch. <a href="https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20">Agent bc-bce5a81a</a> finished. QA needs a tester on cellular tapping a friend’s playing clip. Do not merge yet.</li>
+</ul>
+<p style="color:#555;font-size:14px;">Also on your plate: <a href="https://linear.app/trylatent/issue/TRY-191/dry-run-the-app">TRY-191</a> Dry run the app (assigned to you). Malcolm open (not blocking): <a href="https://github.com/eddie-the-lou/latent/pull/321">#321</a> ASC groups screenshot, <a href="https://github.com/eddie-the-lou/latent/pull/302">#302</a>, <a href="https://github.com/eddie-the-lou/latent/pull/267">#267</a>, #241/#164/#162/#123.</p>
+
+<h2 style="font-size:16px;margin-top:28px;">Broken / confusing</h2>
+<ul>
+<li><strong>stef40</strong> — drafts stuck / can’t publish. Fix in draft <a href="https://github.com/eddie-the-lou/latent/pull/257">#257</a>.</li>
+<li><strong>suki</strong> — full-view laggy + heavy mobile data. Fix in draft <a href="https://github.com/eddie-the-lou/latent/pull/288">#288</a>.</li>
+<li><strong>Apple ID email on Edit Profile</strong> (NEW) — Malcolm’s <a href="https://linear.app/trylatent/issue/TRY-193/apple-id-email-is-broke-when-you-go-to-edit-profile">TRY-193</a> Todo. No duplicate agent.</li>
+<li><strong>Videos not loading</strong> — fixed overnight <a href="https://github.com/eddie-the-lou/latent/pull/310">#310</a> / TRY-180 Done.</li>
+<li><strong>Pause pill spacing</strong> — fixed overnight <a href="https://github.com/eddie-the-lou/latent/pull/314">#314</a> / TRY-179 Done.</li>
+<li>Sentry NEW <a href="https://weaive.sentry.io/issues/APPLE-IOS-4B">APPLE-IOS-4B</a> (isabelle hang) + still watching 4A/47–49. Not auto-fixing opaque singles.</li>
+<li>PostHog: clip_upload_failed = <strong>23</strong> today (partial) — almost all build 10. Build 29 only 1. Watch, don’t panic.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Things people want</h2>
+<ul>
+<li><strong>Malcolm</strong> (NEW) — Save Session: Post always visible, smaller tags, Draft next to Post like TikTok (<a href="https://linear.app/trylatent/issue/TRY-188/save-session-page-should-feel-better-to-use-more-gamified-less-static">TRY-188</a>).</li>
+<li><strong>TestFlight</strong> — tap anywhere to skip nudge — shipped overnight <a href="https://github.com/eddie-the-lou/latent/pull/317">#317</a> / TRY-181 Done.</li>
+<li><strong>Ethan</strong> — Instagram-style song sync; customize group page (continuing).</li>
+<li><strong>Ichika_.2</strong> — light face touch-up filters (continuing).</li>
+<li><strong>sheppard.c</strong> — Home / Lock Screen widgets (continuing).</li>
+<li><strong>suki</strong> — keep nudged icon on Home; launch on home feed.</li>
+<li><strong>Android Advocate</strong> — Android Latent (kill-list candidate).</li>
+<li><strong>zaahirat</strong> — trim the end of a sitting.</li>
+<li><strong>diwmx</strong> — better battery (survey; Sean Ellis still 39/25/2 of 66).</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">What they actually wrote</h2>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Linear · TRY-188 · Malcolm · Sun Sep 27 ~4:12pm PT (filed) · feature</div><div style="white-space:pre-wrap;">My first thought thought with this is that needing to scroll to post is wrong, sometimes i just want to finish the video as fast as i can. get it done with. it should be on the screen. 
+
+the tags also feel off, they take up so much of the screen for no reason.
+
+there should be a draft button next to the post button. like tiktok</div><div style="font-size:12px;color:#666;margin-top:6px;">Malcolm product notes. TRY-188 Todo. No auto-fix.</div></blockquote>
+
+<p style="font-size:12px;color:#888;margin-top:32px;">Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-28">https://eddie-the-lou.github.io/latent-digs/#/2026-09-28</a></p>
+</body></html>
