@@ -1,5 +1,18 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-09-29",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 11,
+      "openBugs": 2,
+      "resolvedBugs": 2,
+      "filtered": 0,
+      "rawQuotes": 2
+    },
+    "path": "data/2026-09-29.json",
+    "htmlArchive": "../2026-09-29.html"
+  },
+  {
     "date": "2026-09-28",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -572,6 +585,19 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-09-29",
+      "title": "Latent feedback dig",
+      "summaryStats": {
+        "openFeatures": 11,
+        "openBugs": 2,
+        "resolvedBugs": 2,
+        "filtered": 0,
+        "rawQuotes": 2
+      },
+      "path": "data/2026-09-29.json",
+      "htmlArchive": "../2026-09-29.html"
+    },
     {
       "date": "2026-09-28",
       "title": "Latent feedback dig",
@@ -72648,6 +72674,699 @@ window.DIGESTS = {
         "kind": "feature",
         "text": "My first thought thought with this is that needing to scroll to post is wrong, sometimes i just want to finish the video as fast as i can. get it done with. it should be on the screen. \n\nthe tags also feel off, they take up so much of the screen for no reason.\n\nthere should be a draft button next to the post button. like tiktok",
         "meta": "Malcolm product notes. TRY-188 Todo. No auto-fix."
+      }
+    ]
+  },
+  "2026-09-29": {
+    "date": "2026-09-29",
+    "title": "Latent daily review \u00b7 Sep 29",
+    "generatedAt": "2026-09-29T16:43:58.504009+00:00",
+    "tldr": [
+      "Ready for you (1): #327 suki full-view lag + cellular data (ready, not draft) \u2014 supersedes closed #288. Review before merge. You usually can\u2019t QA tester bugs on your phone.",
+      "Cleared overnight: #257 closed \u2192 stef40 fix on main as #326; #288 closed \u2192 replaced by #327; TRY-193\u2192#324; TRY-187\u2192#329; TRY-201+TRY-202\u2192#325; TRY-204\u2192#334; TRY-122\u2192#331/#332; also #322/#323/#321/#328/#330/#333/#241 on main.",
+      "Discord OK (re-auth as Eddie L). NEW: SourLemown gold-league / gold ticks for top streak groups; Android Advocate asks again about Android. No NEW in-app, Gmail tester, or survey rows. Sean Ellis still 39/25/2 of 66.",
+      "Also on your plate: TRY-191 Dry run (Todo). Lightly: TRY-196 camera off on home (In Progress), TRY-203 customizable recording notification (In Progress; related #330 mute pushes on main).",
+      "Sentry NEW APPLE-IOS-4D ethan hang, 4E svevux YouView hang, 4F adjace fatal text-layout hang (all singles, build 29) \u2014 watching with 4B isabelle. 4C eddie debug IGNORE. PostHog: clip_upload_failed Sep21\u201329 = 4/3/8/4/2/0/11/25/5(partial); Sep28 finalized 25 (22\u00d7build10 + 3\u00d7build29). Rageclicks 200/270/230/241/325/221/363/363/291(partial). Clip-bloat / edge-loop Not firing.",
+      "Mac offline \u2014 skipped local site sync. No new Cloud Agents."
+    ],
+    "plainTldr": [
+      "Ready for you (1): #327 suki full-view lag + cellular data (ready, not draft) \u2014 supersedes closed #288. Review before merge. You usually can\u2019t QA tester bugs on your phone.",
+      "Cleared overnight: #257 closed \u2192 stef40 fix on main as #326; #288 closed \u2192 replaced by #327; TRY-193\u2192#324; TRY-187\u2192#329; TRY-201+TRY-202\u2192#325; TRY-204\u2192#334; TRY-122\u2192#331/#332; also #322/#323/#321/#328/#330/#333/#241 on main.",
+      "Discord OK (re-auth as Eddie L). NEW: SourLemown gold-league / gold ticks for top streak groups; Android Advocate asks again about Android. No NEW in-app, Gmail tester, or survey rows. Sean Ellis still 39/25/2 of 66.",
+      "Also on your plate: TRY-191 Dry run (Todo). Lightly: TRY-196 camera off on home (In Progress), TRY-203 customizable recording notification (In Progress; related #330 mute pushes on main).",
+      "Sentry NEW APPLE-IOS-4D ethan hang, 4E svevux YouView hang, 4F adjace fatal text-layout hang (all singles, build 29) \u2014 watching with 4B isabelle. 4C eddie debug IGNORE. PostHog: clip_upload_failed Sep21\u201329 = 4/3/8/4/2/0/11/25/5(partial); Sep28 finalized 25 (22\u00d7build10 + 3\u00d7build29). Rageclicks 200/270/230/241/325/221/363/363/291(partial). Clip-bloat / edge-loop Not firing.",
+      "Mac offline \u2014 skipped local site sync. No new Cloud Agents."
+    ],
+    "stats": {
+      "newInApp": 0,
+      "newDiscord": 2,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-4D",
+        "APPLE-IOS-4E",
+        "APPLE-IOS-4F"
+      ],
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-21": 4,
+          "2026-09-22": 3,
+          "2026-09-23": 8,
+          "2026-09-24": 4,
+          "2026-09-25": 2,
+          "2026-09-26": 0,
+          "2026-09-27": 11,
+          "2026-09-28": 25,
+          "2026-09-29": 5
+        },
+        "rageclicks": {
+          "2026-09-21": 200,
+          "2026-09-22": 270,
+          "2026-09-23": 230,
+          "2026-09-24": 241,
+          "2026-09-25": 325,
+          "2026-09-26": 221,
+          "2026-09-27": 363,
+          "2026-09-28": 363,
+          "2026-09-29": 291
+        },
+        "clipBloatAlert": "Not firing",
+        "clipBloatLastValue": 1.5623738127090299,
+        "edgeLoopAlert": "Not firing",
+        "notes": "Sep28 finalized 25 (22\u00d7build10 + 3\u00d7build29). Sep29 partial 5 (2\u00d710 + 3\u00d729). Clip-bloat ~1.56; edge-loop Not firing."
+      },
+      "rawQuotes": 2
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 327,
+          "title": "Opening a feed video reuses its load, and cellular stops pulling clips nobody asked for",
+          "url": "https://github.com/eddie-the-lou/latent/pull/327",
+          "draft": false,
+          "agent": "bc-bce5a81a-6dba-536c-91c7-3d7d945caa20"
+        }
+      ],
+      "malcolmOpen": [
+        {
+          "pr": 302,
+          "title": "One request per question: stats carry their tags, engagement carries the kudos preview",
+          "url": "https://github.com/eddie-the-lou/latent/pull/302"
+        },
+        {
+          "pr": 267,
+          "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+          "url": "https://github.com/eddie-the-lou/latent/pull/267"
+        },
+        {
+          "pr": 164,
+          "title": "Today mini cards fit their durations; camera toggle stays put",
+          "url": "https://github.com/eddie-the-lou/latent/pull/164"
+        },
+        {
+          "pr": 162,
+          "title": "One frame rule for the timelapse clip",
+          "url": "https://github.com/eddie-the-lou/latent/pull/162"
+        },
+        {
+          "pr": 123,
+          "title": "Sequential dual-camera proof stills (draft)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/123"
+        }
+      ],
+      "agentsSpinning": [],
+      "agentsFinished": [
+        {
+          "id": "bc-bce5a81a-6dba-536c-91c7-3d7d945caa20",
+          "title": "suki full-view lag + mobile data \u2192 #327 (supersedes #288)",
+          "url": "https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20",
+          "pr": 327
+        }
+      ],
+      "clearedOvernight": [
+        {
+          "id": "pr-257-stef40",
+          "title": "stef40 drafts stuck / can\u2019t publish",
+          "via": "#257 closed \u00b7 #326 on main"
+        },
+        {
+          "id": "pr-288-suki",
+          "title": "suki full-view lag + cellular (draft #288)",
+          "via": "#288 closed \u00b7 replaced by #327"
+        },
+        {
+          "id": "try-193-apple-id-email",
+          "title": "Apple ID email on Edit Profile",
+          "via": "TRY-193 Done \u00b7 #324"
+        },
+        {
+          "id": "try-187-timer-synced",
+          "title": "Timer synced to video",
+          "via": "TRY-187 Done \u00b7 #329"
+        },
+        {
+          "id": "try-201-202",
+          "title": "TRY-201 + TRY-202",
+          "via": "Done \u00b7 #325"
+        },
+        {
+          "id": "try-204",
+          "title": "TRY-204",
+          "via": "Done \u00b7 #334"
+        },
+        {
+          "id": "try-122",
+          "title": "TRY-122",
+          "via": "Done \u00b7 #331/#332"
+        }
+      ],
+      "mergedOvernight": [
+        {
+          "pr": 334,
+          "title": "TRY-204"
+        },
+        {
+          "pr": 333,
+          "title": "on main overnight"
+        },
+        {
+          "pr": 332,
+          "title": "TRY-122"
+        },
+        {
+          "pr": 331,
+          "title": "TRY-122"
+        },
+        {
+          "pr": 330,
+          "title": "mute pushes (related TRY-203)"
+        },
+        {
+          "pr": 329,
+          "title": "TRY-187 timer synced to video"
+        },
+        {
+          "pr": 328,
+          "title": "on main overnight"
+        },
+        {
+          "pr": 326,
+          "title": "stef40 drafts stuck / can\u2019t publish (was #257)"
+        },
+        {
+          "pr": 325,
+          "title": "TRY-201 + TRY-202"
+        },
+        {
+          "pr": 324,
+          "title": "TRY-193 Apple ID email on Edit Profile"
+        },
+        {
+          "pr": 323,
+          "title": "on main overnight"
+        },
+        {
+          "pr": 322,
+          "title": "on main overnight"
+        },
+        {
+          "pr": 321,
+          "title": "Add groups App Store screenshot"
+        },
+        {
+          "pr": 241,
+          "title": "Save the App Store screenshot drafts and render scripts"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "pr-327-suki-fullview-data",
+        "title": "PR #327 \u2014 suki full-view lag + cellular data",
+        "status": "waiting",
+        "resolved": false,
+        "plainTitle": "Ready to approve: full-view laggy + too much cellular data",
+        "plainSummary": "Ready (not draft). Supersedes closed #288. Reuses the feed\u2019s already-buffered clip; on cellular stops pulling clips nobody asked for. QA needs a tester on cellular tapping a friend\u2019s playing clip.",
+        "actionStatus": "Waiting on you \u00b7 ready PR #327",
+        "people": [
+          "suki"
+        ],
+        "url": "https://github.com/eddie-the-lou/latent/pull/327",
+        "links": [
+          {
+            "label": "PR #327",
+            "url": "https://github.com/eddie-the-lou/latent/pull/327"
+          },
+          {
+            "label": "Agent",
+            "url": "https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20"
+          }
+        ]
+      },
+      {
+        "id": "try-191-dry-run",
+        "title": "Dry run the app (TRY-191)",
+        "status": "open",
+        "resolved": false,
+        "plainTitle": "Your dry-run checklist (TestFlight)",
+        "plainSummary": "Still Todo assigned to you: fresh TF download + account, record/post 25 min, join group, add friend, send/receive kudos.",
+        "actionStatus": "Assigned to you \u00b7 TRY-191 Todo",
+        "people": [
+          "Eddie"
+        ],
+        "url": "https://linear.app/trylatent/issue/TRY-191/dry-run-the-app",
+        "links": [
+          {
+            "label": "TRY-191",
+            "url": "https://linear.app/trylatent/issue/TRY-191/dry-run-the-app"
+          }
+        ]
+      }
+    ],
+    "bugs": [
+      {
+        "id": "suki-fullview-lag-data",
+        "title": "Full-view laggy + heavy mobile data (suki)",
+        "plainTitle": "Full-view playback laggy and burns mobile data",
+        "plainSummary": "Continuing via ready PR #327 (supersedes closed #288). Needs tester QA on cellular.",
+        "status": "waiting",
+        "resolved": false,
+        "actionStatus": "Waiting \u00b7 ready PR #327",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 continuing \u00b7 build 29"
+          },
+          {
+            "label": "PR #327",
+            "url": "https://github.com/eddie-the-lou/latent/pull/327"
+          }
+        ],
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/327"
+      },
+      {
+        "id": "stef40-drafts-stuck",
+        "title": "Recordings stay in draft / can't publish (stef40)",
+        "plainTitle": "Drafts stuck \u2014 not sure how to publish",
+        "plainSummary": "Fixed overnight \u2014 #257 closed, #326 on main. Await TestFlight.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "On main \u00b7 #326 \u00b7 await TF",
+        "people": [
+          "stef40"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 stef40 \u00b7 resolved"
+          },
+          {
+            "label": "PR #326",
+            "url": "https://github.com/eddie-the-lou/latent/pull/326"
+          }
+        ],
+        "detail": "Hey, my recordings stay in draft. Not sure how to publish. Might be a bug because I can only make edits.",
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/326"
+      },
+      {
+        "id": "try-193-apple-id-email",
+        "title": "Apple id email is broke when you go to edit profile (TRY-193)",
+        "plainTitle": "Apple ID email looks broken on Edit Profile",
+        "plainSummary": "Done overnight \u2014 #324 on main. Await TF.",
+        "status": "resolved",
+        "resolved": true,
+        "actionStatus": "On main \u00b7 #324 \u00b7 await TF",
+        "people": [
+          "Malcolm"
+        ],
+        "supportCount": 0,
+        "sources": [
+          {
+            "label": "Linear TRY-193",
+            "url": "https://linear.app/trylatent/issue/TRY-193/apple-id-email-is-broke-when-you-go-to-edit-profile"
+          },
+          {
+            "label": "PR #324",
+            "url": "https://github.com/eddie-the-lou/latent/pull/324"
+          }
+        ],
+        "novelty": "continuing",
+        "url": "https://github.com/eddie-the-lou/latent/pull/324"
+      },
+      {
+        "id": "apple-ios-4b-4d-4e-4f-watch",
+        "title": "Sentry NEW 4D/4E/4F + still watching 4B (ignore 4C)",
+        "plainTitle": "New hang singles (ethan / svevux / adjace) \u2014 watching with isabelle 4B",
+        "plainSummary": "NEW 4D ethan hang, 4E svevux YouView hang, 4F adjace fatal text-layout hang \u2014 all singles, build 29. Still watching 4B isabelle. 4C eddie debug IGNORE. Opaque singles \u2014 not auto-fixing.",
+        "status": "watching",
+        "resolved": false,
+        "actionStatus": "Watching",
+        "people": [
+          "ethan",
+          "svevux",
+          "adjace",
+          "isabelle"
+        ],
+        "supportCount": 0,
+        "sources": [
+          {
+            "label": "Sentry APPLE-IOS-4D",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-4D"
+          },
+          {
+            "label": "Sentry APPLE-IOS-4E",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-4E"
+          },
+          {
+            "label": "Sentry APPLE-IOS-4F",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-4F"
+          },
+          {
+            "label": "Sentry APPLE-IOS-4B",
+            "url": "https://weaive.sentry.io/issues/APPLE-IOS-4B"
+          }
+        ],
+        "novelty": "new"
+      }
+    ],
+    "features": [
+      {
+        "id": "discord-sourlemown-gold-league",
+        "title": "Gold league / gold ticks for top streak groups (SourLemown)",
+        "plainTitle": "Gold / silver / bronze ticks for top streak groups",
+        "plainSummary": "NEW Discord #feature-requests. Dynamic top 5/10/15 groups by streak get gold/silver/bronze ticks \u2014 thresholds rise with average group streak.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "SourLemown\ud83c\udf4b"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 NEW \u00b7 Gold league"
+          }
+        ],
+        "detail": "Can we add a gold league or something for the top 5 or 10 latent groups and give gold ticks or something it will look sick and give some incentives for high streak groups instead of keeping the group streak for fun like top 5 groups will get gold tick top 10 will get silver top 15 bronze and this system is dynamic based on all groups streak (not like 50 days streak gives gold, if average group streak increased the requirements for the ticks will be higher)",
+        "novelty": "new"
+      },
+      {
+        "id": "discord-android-ask",
+        "title": "Android version (Android Advocate)",
+        "plainTitle": "Please release Latent on Android",
+        "plainSummary": "NEW ask in #questions Mon Sep 28 (~10:49 AM PT): \u201cis there an android version for this app or will there be one?\u201d Continuing feature \u2014 bump support. Kill-list candidate for Android port.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 kill-list candidate \u00b7 NEW ask",
+        "people": [
+          "Android Advocate"
+        ],
+        "supportCount": 2,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #questions \u00b7 NEW"
+          },
+          {
+            "label": "Discord \u00b7 continuing"
+          }
+        ],
+        "detail": "is there an android version for this app or will there be one?",
+        "novelty": "continuing"
+      },
+      {
+        "id": "try-188-save-session-ux",
+        "title": "Save Session page more gamified / Post always visible (TRY-188)",
+        "plainTitle": "Save Session: Post always on screen + draft button",
+        "plainSummary": "Still open \u2014 Malcolm In Progress. Scroll-to-post feels wrong; tags take too much space; want Draft next to Post like TikTok.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Malcolm \u00b7 TRY-188 In Progress",
+        "people": [
+          "Malcolm"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Linear TRY-188",
+            "url": "https://linear.app/trylatent/issue/TRY-188/save-session-page-should-feel-better-to-use-more-gamified-less-static"
+          }
+        ],
+        "detail": "My first thought thought with this is that needing to scroll to post is wrong, sometimes i just want to finish the video as fast as i can. get it done with. it should be on the screen. \n\nthe tags also feel off, they take up so much of the screen for no reason.\n\nthere should be a draft button next to the post button. like tiktok",
+        "novelty": "continuing",
+        "url": "https://linear.app/trylatent/issue/TRY-188/save-session-page-should-feel-better-to-use-more-gamified-less-static"
+      },
+      {
+        "id": "discord-ethan-song-sync",
+        "title": "Sync a song to your study session (Ethan)",
+        "plainTitle": "Instagram-style song on a study session",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "Ethan"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 continuing"
+          }
+        ],
+        "detail": "Sync a song to your study session like Instagram",
+        "novelty": "continuing"
+      },
+      {
+        "id": "discord-ethan-customize-group",
+        "title": "Customize your group page (Ethan)",
+        "plainTitle": "Let people customize their group page",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "Ethan"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 continuing"
+          }
+        ],
+        "detail": "Customize your group page",
+        "novelty": "continuing"
+      },
+      {
+        "id": "discord-ichika-filters",
+        "title": "Light face filters / touch-up (Ichika_.2)",
+        "plainTitle": "Soft face filters for camera-shy people",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "Ichika_.2"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "discord-sheppard-widgets",
+        "title": "Home / Lock Screen widgets for streak (sheppard.c)",
+        "plainTitle": "Widgets that remind you of your streak / to work",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 Discord \u00b7 product",
+        "people": [
+          "sheppard.c"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "Discord \u00b7 #feature-requests \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "suki-nudge-sent-icon",
+        "title": "Keep nudged icon on Home after refresh (suki)",
+        "plainTitle": "After I nudge someone, don\u2019t snap back to \ud83d\udc4b",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "zaahirat-trim-end",
+        "title": "Trim end of session (zaahirat)",
+        "plainTitle": "Cut dead time off the end of a sitting",
+        "plainSummary": "Still open.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product",
+        "people": [
+          "zaahirat"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 zaahirat \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "diwmx-battery",
+        "title": "Better battery life (diwmx survey)",
+        "plainTitle": "Survey: better battery life if possible",
+        "plainSummary": "Still open. Sean Ellis unchanged 39/25/2 of 66.",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 survey",
+        "people": [
+          "diwmx"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "PMF survey \u00b7 Active Users \u00b7 continuing"
+          }
+        ],
+        "novelty": "continuing"
+      },
+      {
+        "id": "launch-on-home-feed",
+        "title": "Launch on home feed instead of camera (suki)",
+        "plainTitle": "Open Latent on the home feed, not the camera",
+        "plainSummary": "Still open. Related: Eddie-owned TRY-196 camera off on home (In Progress).",
+        "status": "open",
+        "resolved": false,
+        "actionStatus": "Logged \u00b7 product choice \u00b7 TRY-196 In Progress",
+        "people": [
+          "suki"
+        ],
+        "supportCount": 1,
+        "sources": [
+          {
+            "label": "In-app \u00b7 suki \u00b7 continuing"
+          },
+          {
+            "label": "TRY-196",
+            "url": "https://linear.app/trylatent/issue/TRY-196"
+          }
+        ],
+        "novelty": "continuing"
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 0,
+        "notes": "0 NEW rows in public.feedback since last dig."
+      },
+      "discord": {
+        "new": 2,
+        "notes": "OK \u2014 signed in as Eddie L. NEW: 1 feature (SourLemown gold league), 1 product Q (Android Advocate Android ask). Report: /workspace/feedback-digests/discord-2026-09-29.md"
+      },
+      "gmail": {
+        "new": 0,
+        "notes": "0 tester/user feedback emails."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": {
+          "very": 39,
+          "somewhat": 25,
+          "not": 2,
+          "n": 66
+        },
+        "buildOneNext": "still empty (66/66)",
+        "notes": "No new free-text. Sean Ellis unchanged 39/25/2 of 66."
+      },
+      "sentry": {
+        "new": [
+          "APPLE-IOS-4D",
+          "APPLE-IOS-4E",
+          "APPLE-IOS-4F"
+        ],
+        "watching": [
+          "APPLE-IOS-4B"
+        ],
+        "ignored": [
+          "APPLE-IOS-4C"
+        ],
+        "notes": "4D ethan hang, 4E svevux YouView hang, 4F adjace fatal text-layout hang \u2014 all singles build 29. Still watching 4B isabelle. 4C eddie debug IGNORE. Not auto-fixing."
+      },
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-21": 4,
+          "2026-09-22": 3,
+          "2026-09-23": 8,
+          "2026-09-24": 4,
+          "2026-09-25": 2,
+          "2026-09-26": 0,
+          "2026-09-27": 11,
+          "2026-09-28": 25,
+          "2026-09-29": 5
+        },
+        "rageclicks": {
+          "2026-09-21": 200,
+          "2026-09-22": 270,
+          "2026-09-23": 230,
+          "2026-09-24": 241,
+          "2026-09-25": 325,
+          "2026-09-26": 221,
+          "2026-09-27": 363,
+          "2026-09-28": 363,
+          "2026-09-29": 291
+        },
+        "clipBloatAlert": "Not firing",
+        "clipBloatLastValue": 1.5623738127090299,
+        "edgeLoopAlert": "Not firing",
+        "notes": "Sep28 finalized 25 (22\u00d7build10 + 3\u00d7build29). Sep29 partial 5 (2\u00d710 + 3\u00d729)."
+      },
+      "linear": {
+        "doneOvernight": [
+          "TRY-193",
+          "TRY-187",
+          "TRY-201",
+          "TRY-202",
+          "TRY-204",
+          "TRY-122"
+        ],
+        "openOwned": [
+          "TRY-191",
+          "TRY-196",
+          "TRY-203",
+          "TRY-188"
+        ]
+      }
+    },
+    "rawQuotes": [
+      {
+        "source": "Discord",
+        "channel": "#feature-requests \u00b7 Gold league",
+        "username": "SourLemown\ud83c\udf4b",
+        "timePT": "Mon Sep 28 ~11:15 AM PT",
+        "build": null,
+        "kind": "feature",
+        "text": "Can we add a gold league or something for the top 5 or 10 latent groups and give gold ticks or something it will look sick and give some incentives for high streak groups instead of keeping the group streak for fun like top 5 groups will get gold tick top 10 will get silver top 15 bronze and this system is dynamic based on all groups streak (not like 50 days streak gives gold, if average group streak increased the requirements for the ticks will be higher)",
+        "meta": "sourlemown \u00b7 NEW feature request"
+      },
+      {
+        "source": "Discord",
+        "channel": "#questions",
+        "username": "Android Advocate",
+        "timePT": "Mon Sep 28 ~10:49 AM PT",
+        "build": null,
+        "kind": "question",
+        "text": "is there an android version for this app or will there be one?",
+        "meta": "androidadvocate_94884 \u00b7 NEW ask (continuing Android feature / kill-list candidate)"
       }
     ]
   }

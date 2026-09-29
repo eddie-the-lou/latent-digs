@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Latent daily review · 2026-09-29</title></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.5;color:#111;max-width:720px;margin:0 auto;padding:24px;">
+<p style="font-size:13px;color:#666;margin:0 0 8px;">From Unpaid Intern · plain English · 9:00 AM PT dig</p>
+<h1 style="font-size:22px;margin:0 0 16px;">Latent daily review · Sep 29</h1>
+
+<p style="background:#f4f7ff;border:1px solid #c9d7ff;border-radius:8px;padding:12px 14px;">
+<strong>Live archive (bookmark this):</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/">https://eddie-the-lou.github.io/latent-digs/</a><br>
+<strong>Today’s review:</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-29">https://eddie-the-lou.github.io/latent-digs/#/2026-09-29</a>
+</p>
+
+<h2 style="font-size:16px;margin-top:28px;">In plain English</h2>
+<ul>
+<li>Ready for you (1): <a href="https://github.com/eddie-the-lou/latent/pull/327">#327</a> suki full-view lag + cellular data (ready, not draft) — supersedes closed #288. Review before merge. You usually can’t QA tester bugs on your phone.</li>
+<li>Cleared overnight: #257 closed → stef40 on main as <a href="https://github.com/eddie-the-lou/latent/pull/326">#326</a>; #288 closed → replaced by #327; TRY-193→#324; TRY-187→#329; TRY-201+TRY-202→#325; TRY-204→#334; TRY-122→#331/#332; also #322/#323/#321/#328/#330/#333/#241 on main.</li>
+<li>Discord OK (re-auth as Eddie L). NEW: SourLemown gold-league ticks; Android Advocate asks again about Android. No NEW in-app, Gmail tester, or survey rows. Sean Ellis still 39/25/2 of 66.</li>
+<li>Also on your plate: <a href="https://linear.app/trylatent/issue/TRY-191/dry-run-the-app">TRY-191</a> Dry run (Todo). Lightly: TRY-196 camera off on home, TRY-203 customizable recording notification (related #330 mute pushes on main).</li>
+<li>Sentry NEW <a href="https://weaive.sentry.io/issues/APPLE-IOS-4D">4D</a>/<a href="https://weaive.sentry.io/issues/APPLE-IOS-4E">4E</a>/<a href="https://weaive.sentry.io/issues/APPLE-IOS-4F">4F</a> hang singles (build 29) — watching with <a href="https://weaive.sentry.io/issues/APPLE-IOS-4B">4B</a>. 4C eddie debug IGNORE. PostHog upload-failed Sep28 finalized 25 (mostly build 10); Sep29 partial 5. Clip-bloat / edge-loop Not firing.</li>
+<li>Mac offline — skipped local sync. No new Cloud Agents.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Ready for you to approve</h2>
+<ul>
+<li><strong><a href="https://github.com/eddie-the-lou/latent/pull/327">#327</a></strong> (ready, not draft) — suki full-view lag + cellular data. Title: “Opening a feed video reuses its load, and cellular stops pulling clips nobody asked for.” Supersedes closed #288. <a href="https://cursor.com/agents/bc-bce5a81a-6dba-536c-91c7-3d7d945caa20">Agent bc-bce5a81a</a>. QA needs a tester on cellular tapping a friend’s playing clip.</li>
+</ul>
+<p style="color:#555;font-size:14px;">Also on your plate: <a href="https://linear.app/trylatent/issue/TRY-191/dry-run-the-app">TRY-191</a> Dry run the app (assigned to you). Malcolm open (not blocking): <a href="https://github.com/eddie-the-lou/latent/pull/302">#302</a>, <a href="https://github.com/eddie-the-lou/latent/pull/267">#267</a>, #164/#162/#123. TRY-188 Save Session still In Progress (Malcolm).</p>
+
+<h2 style="font-size:16px;margin-top:28px;">Cleared overnight</h2>
+<ul>
+<li><strong>stef40</strong> drafts stuck — #257 closed → <a href="https://github.com/eddie-the-lou/latent/pull/326">#326</a> on main.</li>
+<li><strong>suki</strong> draft #288 closed → replaced by ready <a href="https://github.com/eddie-the-lou/latent/pull/327">#327</a> (still waiting on you).</li>
+<li>TRY-193 Apple ID email → Done · <a href="https://github.com/eddie-the-lou/latent/pull/324">#324</a></li>
+<li>TRY-187 → Done · #329; TRY-201+TRY-202 → Done · #325; TRY-204 → Done · #334; TRY-122 → Done · #331/#332</li>
+<li>Also on main: #322, #323, #321, #328, #330, #333, #241</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Broken / confusing</h2>
+<ul>
+<li><strong>suki</strong> — full-view laggy + heavy mobile data. Fix ready in <a href="https://github.com/eddie-the-lou/latent/pull/327">#327</a>.</li>
+<li><strong>stef40</strong> — drafts stuck / can’t publish — resolved overnight <a href="https://github.com/eddie-the-lou/latent/pull/326">#326</a>.</li>
+<li><strong>Apple ID email on Edit Profile</strong> — resolved overnight <a href="https://github.com/eddie-the-lou/latent/pull/324">#324</a> / TRY-193 Done.</li>
+<li>Sentry watching (no auto-fix): NEW <a href="https://weaive.sentry.io/issues/APPLE-IOS-4D">APPLE-IOS-4D</a> ethan hang, <a href="https://weaive.sentry.io/issues/APPLE-IOS-4E">4E</a> svevux YouView hang, <a href="https://weaive.sentry.io/issues/APPLE-IOS-4F">4F</a> adjace fatal text-layout hang; still watching <a href="https://weaive.sentry.io/issues/APPLE-IOS-4B">4B</a> isabelle. All singles, build 29. 4C eddie debug IGNORE.</li>
+<li>PostHog: clip_upload_failed Sep21–29 = 4/3/8/4/2/0/11/<strong>25</strong>/<strong>5</strong>(partial). Sep28 mostly old build 10. Rageclicks …/363/363/291(partial). Clip-bloat / edge-loop Not firing.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Things people want</h2>
+<ul>
+<li><strong>SourLemown🍋</strong> (NEW) — gold league / gold·silver·bronze ticks for top 5/10/15 streak groups (dynamic thresholds).</li>
+<li><strong>Android Advocate</strong> (NEW ask in #questions) — “is there an android version for this app or will there be one?” Continuing Android ask; kill-list candidate.</li>
+<li><strong>Malcolm</strong> — Save Session UX still In Progress (<a href="https://linear.app/trylatent/issue/TRY-188/save-session-page-should-feel-better-to-use-more-gamified-less-static">TRY-188</a>).</li>
+<li><strong>Ethan</strong> — Instagram-style song sync; customize group page (continuing).</li>
+<li><strong>Ichika_.2</strong> — light face touch-up filters (continuing).</li>
+<li><strong>sheppard.c</strong> — Home / Lock Screen widgets (continuing).</li>
+<li><strong>suki</strong> — keep nudged icon on Home; launch on home feed (TRY-196 In Progress).</li>
+<li><strong>zaahirat</strong> — trim the end of a sitting.</li>
+<li><strong>diwmx</strong> — better battery (survey; Sean Ellis still 39/25/2 of 66).</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">What they actually wrote</h2>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #feature-requests · Gold league · SourLemown🍋 · Mon Sep 28 ~11:15 AM PT · feature</div><div style="white-space:pre-wrap;">Can we add a gold league or something for the top 5 or 10 latent groups and give gold ticks or something it will look sick and give some incentives for high streak groups instead of keeping the group streak for fun like top 5 groups will get gold tick top 10 will get silver top 15 bronze and this system is dynamic based on all groups streak (not like 50 days streak gives gold, if average group streak increased the requirements for the ticks will be higher)</div></blockquote>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #questions · Android Advocate · Mon Sep 28 ~10:49 AM PT · question</div><div style="white-space:pre-wrap;">is there an android version for this app or will there be one?</div></blockquote>
+
+<p style="font-size:13px;color:#555;margin-top:24px;">Survey: Sean Ellis <strong>39/25/2 of 66</strong>; build-one-next still empty. PostHog one-liner: Sep28 upload-failed finalized at 25 (22×build10 + 3×build29); Sep29 partial 5; clip-bloat / edge-loop Not firing.</p>
+
+<p style="font-size:12px;color:#888;margin-top:32px;">Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-29">https://eddie-the-lou.github.io/latent-digs/#/2026-09-29</a></p>
+</body></html>
