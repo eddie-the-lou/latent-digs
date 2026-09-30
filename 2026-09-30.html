@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Latent daily review · 2026-09-30</title></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;line-height:1.5;color:#111;max-width:720px;margin:0 auto;padding:24px;">
+<p style="font-size:13px;color:#666;margin:0 0 8px;">From Unpaid Intern · plain English · 9:00 AM PT dig</p>
+<h1 style="font-size:22px;margin:0 0 16px;">Latent daily review · Sep 30</h1>
+
+<p style="background:#f4f7ff;border:1px solid #c9d7ff;border-radius:8px;padding:12px 14px;">
+<strong>Live archive (bookmark this):</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/">https://eddie-the-lou.github.io/latent-digs/</a><br>
+<strong>Today’s review:</strong>
+<a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-30">https://eddie-the-lou.github.io/latent-digs/#/2026-09-30</a>
+</p>
+
+<h2 style="font-size:16px;margin-top:28px;">In plain English</h2>
+<ul>
+<li>No ready PRs waiting — yesterday’s <a href="https://github.com/eddie-the-lou/latent/pull/327">#327</a> suki full-view + cellular is on main. Malcolm open (not dig blockers): <a href="https://github.com/eddie-the-lou/latent/pull/267">#267</a>/#164/#162/#123.</li><li>NEW in-app: <strong>ellie</strong> group-chat notif stale (build 29) → agent spinning; <strong>von</strong> multi-group hours (build 29) → agent spinning; <strong>suki</strong> clans + group on profile (build 30) — feature only.</li><li>NEW <a href="https://linear.app/trylatent/issue/TRY-210/activity-doesnt-show-up-until-you-refresh-the-home-page-or-sometimes">TRY-210</a> Activity needs home refresh → agent spinning. Still: <a href="https://linear.app/trylatent/issue/TRY-191/dry-run-the-app">TRY-191</a> Dry run (High). TRY-196 camera-off In Progress.</li><li>Discord OK (Eddie L). NEW: Lovestruck_gg7 sessions-over-time individual leaderboard; ki Duo-style leagues but study-hours-only.</li><li>Sentry NEW <a href="https://weaive.sentry.io/issues/APPLE-IOS-4K">APPLE-IOS-4K</a> lilwuchi AccessModel crash (Catalyst, build 30) → agent spinning. Hang singles 4G/4H/4J watching. Clip-bloat alert Errored overnight; edge-loop Not firing.</li><li>Cleared overnight: #327, #335–#342, #302; TRY-188/#341, TRY-205/#339, TRY-203, TRY-86/#342, TRY-91/#340. Survey unchanged 39/25/2 of 66. 4 Cloud Agents on Grok 4.6 (PRs not ready yet). Mac offline.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Ready for you to approve</h2>
+<p>No dig Cloud Agent PRs ready yet — 4 agents just launched on Grok 4.6 and are still spinning:</p>
+<ul>
+<li><a href="https://cursor.com/agents/bc-8d1865d2-14bc-55c3-8a95-edc8786eae81">bc-8d1865d2</a> — von multi-group hours</li>
+<li><a href="https://cursor.com/agents/bc-635ad64c-4413-5993-9e98-54d26cfa6069">bc-635ad64c</a> — ellie group chat notif stale</li>
+<li><a href="https://cursor.com/agents/bc-58871902-198f-5d38-a5ea-2c89d7093003">bc-58871902</a> — APPLE-IOS-4K AccessModel crash</li>
+<li><a href="https://cursor.com/agents/bc-715ccae4-9137-5405-be07-cd9abd897bfa">bc-715ccae4</a> — TRY-210 Activity home refresh</li>
+</ul>
+<p style="color:#555;font-size:14px;">Also on your plate: <a href="https://linear.app/trylatent/issue/TRY-191/dry-run-the-app">TRY-191</a> Dry run (High · Todo). Lightly: <a href="https://linear.app/trylatent/issue/TRY-196/camera-off-on-home-screen">TRY-196</a> camera off on home (In Progress). Malcolm open: <a href="https://github.com/eddie-the-lou/latent/pull/267">#267</a>, #164, #162, draft #123.</p>
+
+<h2 style="font-size:16px;margin-top:28px;">Cleared overnight</h2>
+<ul>
+<li><strong>suki</strong> full-view lag + cellular — <a href="https://github.com/eddie-the-lou/latent/pull/327">#327</a> merged on main (was yesterday’s waiting PR).</li>
+<li>TRY-188 Save Session → Done · <a href="https://github.com/eddie-the-lou/latent/pull/341">#341</a></li>
+<li>TRY-205 nudge videos + Home reread → Done · <a href="https://github.com/eddie-the-lou/latent/pull/339">#339</a></li>
+<li>TRY-203 customizable recording notification → Done</li>
+<li>TRY-86 post lands on Home → Done · <a href="https://github.com/eddie-the-lou/latent/pull/342">#342</a>; TRY-91 ASC keywords → Done · <a href="https://github.com/eddie-the-lou/latent/pull/340">#340</a></li>
+<li>Also on main: #335 delete-account why, #336 outreach SES, #337 day bars, #338 cancelled scrub, #302 one-request stats</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Broken / confusing</h2>
+<ul>
+<li><strong>ellie</strong> — group message notif / chat shows stale messages (build 29). Agent spinning. Related chat freshness work already shipped (#339 / TRY-201); agent checking the remaining gap.</li>
+<li><strong>von</strong> — in multiple groups but can only see hours for one (build 29). Agent spinning.</li>
+<li><strong>TRY-210</strong> — Activity doesn’t show until you refresh Home. Agent spinning.</li>
+<li><strong>lilwuchi</strong> — crash: AccessModel missing (<a href="https://weaive.sentry.io/issues/APPLE-IOS-4K">APPLE-IOS-4K</a>, Catalyst iPad, build 30). Agent spinning.</li>
+<li>Sentry watching (no auto-fix): NEW hang singles <a href="https://weaive.sentry.io/issues/APPLE-IOS-4G">4G</a> isabelle, <a href="https://weaive.sentry.io/issues/APPLE-IOS-4H">4H</a> colstudys Avatar downsample, <a href="https://weaive.sentry.io/issues/APPLE-IOS-4J">4J</a> krabbykai; still watching 4B/4D/4E/4F. 4C eddie debug IGNORE.</li>
+<li>PostHog: clip_upload_failed Sep22–30 = 3/8/4/2/0/11/<strong>25</strong>/<strong>6</strong>/<strong>1</strong>(partial). Sep29 = 2×build10 + 4×build29. Rageclicks …/365/<strong>428</strong>/176(partial). Clip-bloat alert <strong>Errored</strong> overnight; edge-loop Not firing.</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">Things people want</h2>
+<ul>
+<li><strong>suki</strong> (NEW in-app) — make groups more like a clan; show which group someone is in on their profile.</li>
+<li><strong>Lovestruck_gg7</strong> (NEW Discord) — individual leaderboard based on sessions over time (spread through the day), not one long session then inactive.</li>
+<li><strong>ki (is tired)</strong> (NEW Discord) — Duo-style leagues, but hours must be declared study-only.</li>
+<li><strong>SourLemown</strong> — gold league / gold·silver·bronze ticks (continuing from Sep 29).</li>
+<li><strong>Android Advocate</strong> — Android version? (continuing; kill-list candidate).</li>
+</ul>
+
+<h2 style="font-size:16px;margin-top:28px;">What they actually wrote</h2>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">In-app · public.feedback · ellie · Mon Sep 29 11:01 AM PT · 1.0.1 (29) · bug</div><div style="white-space:pre-wrap;">Sometimes when I click on a message noti for my group the chats aren’t updated 
+Or when I click on the group’s chat don’t see the message i most recently git a notification for</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">In-app · public.feedback · von · Mon Sep 29 4:44 PM PT · 1.0.1 (29) · bug</div><div style="white-space:pre-wrap;">I am in multiple groups but i can only look at one group and see how much hours that group has</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">In-app · public.feedback · suki · Mon Sep 29 9:41 PM PT · 1.0.1 (30) · feature</div><div style="white-space:pre-wrap;">Make the group feature like a clan or something and make the group someone is in show in their profile page</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #questions · Competition/Challenges · Lovestruck_gg7 · Mon Sep 29 ~6:49 PM PT · feature</div><div style="white-space:pre-wrap;">smth with amount of sessions over a certain amount of time</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #questions · Competition/Challenges · Lovestruck_gg7 · Mon Sep 29 ~6:49 PM PT · feature</div><div style="white-space:pre-wrap;">like the individual winning would be someone whos logged the most sessions at diff times throughout the day</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #questions · Competition/Challenges · Lovestruck_gg7 · Mon Sep 29 ~6:50 PM PT · feature</div><div style="white-space:pre-wrap;">isn&#x27;t just one long session on a singular day and then inactive for the rest of the week</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #questions · Competition/Challenges · ki (is tired) · Mon Sep 29 ~8:05 PM PT · feature</div><div style="white-space:pre-wrap;">leagues from duo but you have to like state that these hrs are all used for studyig or smt</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #888;background:#fafafa;"><div style="font-size:12px;color:#666;margin-bottom:6px;">Discord · #questions · Competition/Challenges · ki (is tired) · Mon Sep 29 ~8:06 PM PT · feature</div><div style="white-space:pre-wrap;">coz i think sm ppl using for other stuff</div></blockquote>
+
+<p style="font-size:13px;color:#555;margin-top:24px;">Survey: Sean Ellis <strong>39/25/2 of 66</strong>; no new rows; build-one-next still empty. PostHog one-liner: Sep29 upload-failed finalized at 6 (2×10 + 4×29); Sep30 partial 1×30; clip-bloat Errored; edge-loop Not firing.</p>
+
+<p style="font-size:12px;color:#888;margin-top:32px;">Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-09-30">https://eddie-the-lou.github.io/latent-digs/#/2026-09-30</a></p>
+</body></html>

@@ -1,5 +1,18 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-09-30",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 5,
+      "openBugs": 4,
+      "resolvedBugs": 6,
+      "filtered": 0,
+      "rawQuotes": 8
+    },
+    "path": "data/2026-09-30.json",
+    "htmlArchive": "../2026-09-30.html"
+  },
+  {
     "date": "2026-09-29",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -585,6 +598,19 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-09-30",
+      "title": "Latent feedback dig",
+      "summaryStats": {
+        "openFeatures": 5,
+        "openBugs": 4,
+        "resolvedBugs": 6,
+        "filtered": 0,
+        "rawQuotes": 8
+      },
+      "path": "data/2026-09-30.json",
+      "htmlArchive": "../2026-09-30.html"
+    },
     {
       "date": "2026-09-29",
       "title": "Latent feedback dig",
@@ -73367,6 +73393,513 @@ window.DIGESTS = {
         "kind": "question",
         "text": "is there an android version for this app or will there be one?",
         "meta": "androidadvocate_94884 \u00b7 NEW ask (continuing Android feature / kill-list candidate)"
+      }
+    ]
+  },
+  "2026-09-30": {
+    "date": "2026-09-30",
+    "title": "Latent daily review \u00b7 Sep 30",
+    "generatedAt": "2026-09-30T16:25:36.655361+00:00",
+    "tldr": [
+      "No ready PRs waiting on you \u2014 yesterday\u2019s #327 suki full-view + cellular landed on main (merged Sep 29 ~1:35 PM PT). Malcolm still has open #267/#164/#162/#123 (not dig blockers).",
+      "NEW in-app (3): ellie group-chat notification shows stale messages (build 29) \u2192 Cloud Agent spinning; von multi-group hours only shows one group (build 29) \u2192 Cloud Agent spinning; suki wants clans + show group on profile (build 30) \u2014 feature, no auto-fix.",
+      "NEW Linear TRY-210 Activity needs home refresh (Todo, you) \u2192 Cloud Agent spinning. Still on your plate: TRY-191 Dry run (High). TRY-196 camera off on home still In Progress. TRY-188 Save Session + TRY-203 recording notifs Done overnight.",
+      "Discord OK (Eddie L). NEW in #questions Competition/Challenges: Lovestruck_gg7 individual leaderboard by sessions-over-time (not one long sit); ki wants Duo-style leagues but study-hours-only. No NEW bugs in Discord.",
+      "Sentry NEW APPLE-IOS-4K lilwuchi AccessModel missing crash (fatal, Catalyst iPad, build 30) \u2192 Cloud Agent spinning. Also NEW hang singles 4G isabelle / 4H colstudys / 4J krabbykai \u2014 watching with prior 4B/4D/4E/4F. 4C eddie debug IGNORE.",
+      "Cleared overnight after yesterday\u2019s dig: #327 suki, #335 delete-account why, #336 delete outreach SES, #337 day bars, #338 cancelled scrub, #302 Malcolm one-request, #339 nudge videos + Home reread (TRY-205), #340 ASC keywords (TRY-91), #341 Save Session (TRY-188), #342 post lands on Home (TRY-86).",
+      "Survey unchanged Sean Ellis 39/25/2 of 66; no new rows. PostHog clip_upload_failed Sep22\u201330 trends 3/8/4/2/0/11/25/6/1(partial); Sep29 = 2\u00d7build10 + 4\u00d7build29; Sep30 partial 1\u00d7build30. Rageclicks \u2026/365/428/176(partial). Clip-bloat alert Errored (couldn\u2019t evaluate overnight); edge-loop Not firing (0). Mac offline \u2014 skipped local sync. 4 Cloud Agents on Grok 4.6 (no PRs yet)."
+    ],
+    "plainTldr": [
+      "No ready PRs waiting on you \u2014 yesterday\u2019s #327 suki full-view + cellular landed on main (merged Sep 29 ~1:35 PM PT). Malcolm still has open #267/#164/#162/#123 (not dig blockers).",
+      "NEW in-app (3): ellie group-chat notification shows stale messages (build 29) \u2192 Cloud Agent spinning; von multi-group hours only shows one group (build 29) \u2192 Cloud Agent spinning; suki wants clans + show group on profile (build 30) \u2014 feature, no auto-fix.",
+      "NEW Linear TRY-210 Activity needs home refresh (Todo, you) \u2192 Cloud Agent spinning. Still on your plate: TRY-191 Dry run (High). TRY-196 camera off on home still In Progress. TRY-188 Save Session + TRY-203 recording notifs Done overnight.",
+      "Discord OK (Eddie L). NEW in #questions Competition/Challenges: Lovestruck_gg7 individual leaderboard by sessions-over-time (not one long sit); ki wants Duo-style leagues but study-hours-only. No NEW bugs in Discord.",
+      "Sentry NEW APPLE-IOS-4K lilwuchi AccessModel missing crash (fatal, Catalyst iPad, build 30) \u2192 Cloud Agent spinning. Also NEW hang singles 4G isabelle / 4H colstudys / 4J krabbykai \u2014 watching with prior 4B/4D/4E/4F. 4C eddie debug IGNORE.",
+      "Cleared overnight after yesterday\u2019s dig: #327 suki, #335 delete-account why, #336 delete outreach SES, #337 day bars, #338 cancelled scrub, #302 Malcolm one-request, #339 nudge videos + Home reread (TRY-205), #340 ASC keywords (TRY-91), #341 Save Session (TRY-188), #342 post lands on Home (TRY-86).",
+      "Survey unchanged Sean Ellis 39/25/2 of 66; no new rows. PostHog clip_upload_failed Sep22\u201330 trends 3/8/4/2/0/11/25/6/1(partial); Sep29 = 2\u00d7build10 + 4\u00d7build29; Sep30 partial 1\u00d7build30. Rageclicks \u2026/365/428/176(partial). Clip-bloat alert Errored (couldn\u2019t evaluate overnight); edge-loop Not firing (0). Mac offline \u2014 skipped local sync. 4 Cloud Agents on Grok 4.6 (no PRs yet)."
+    ],
+    "stats": {
+      "newInApp": 3,
+      "newDiscord": 2,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-4K",
+        "APPLE-IOS-4J",
+        "APPLE-IOS-4H",
+        "APPLE-IOS-4G"
+      ],
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-22": 3,
+          "2026-09-23": 8,
+          "2026-09-24": 4,
+          "2026-09-25": 2,
+          "2026-09-26": 0,
+          "2026-09-27": 11,
+          "2026-09-28": 25,
+          "2026-09-29": 6,
+          "2026-09-30": 1
+        },
+        "rageclicks": {
+          "2026-09-22": 270,
+          "2026-09-23": 230,
+          "2026-09-24": 241,
+          "2026-09-25": 325,
+          "2026-09-26": 223,
+          "2026-09-27": 363,
+          "2026-09-28": 365,
+          "2026-09-29": 428,
+          "2026-09-30": 176
+        },
+        "clipBloatAlert": "Errored",
+        "edgeLoopAlert": "Not firing",
+        "notes": "Sep29 upload-failed 6 (2\u00d710 + 4\u00d729); Sep30 partial 1\u00d730. Clip-bloat could not evaluate overnight; edge-loop last_value 0."
+      },
+      "rawQuotes": 8
+    },
+    "prStatus": {
+      "waiting": [],
+      "malcolmOpen": [
+        {
+          "pr": 267,
+          "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+          "url": "https://github.com/eddie-the-lou/latent/pull/267"
+        },
+        {
+          "pr": 164,
+          "title": "Today mini cards fit their durations; camera toggle stays put",
+          "url": "https://github.com/eddie-the-lou/latent/pull/164"
+        },
+        {
+          "pr": 162,
+          "title": "One frame rule for the timelapse clip",
+          "url": "https://github.com/eddie-the-lou/latent/pull/162"
+        },
+        {
+          "pr": 123,
+          "title": "Sequential dual-camera proof stills (draft)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/123"
+        }
+      ],
+      "agentsSpinning": [
+        {
+          "id": "bc-8d1865d2-14bc-55c3-8a95-edc8786eae81",
+          "title": "von multi-group hours",
+          "url": "https://cursor.com/agents/bc-8d1865d2-14bc-55c3-8a95-edc8786eae81"
+        },
+        {
+          "id": "bc-635ad64c-4413-5993-9e98-54d26cfa6069",
+          "title": "ellie group chat notif stale",
+          "url": "https://cursor.com/agents/bc-635ad64c-4413-5993-9e98-54d26cfa6069"
+        },
+        {
+          "id": "bc-58871902-198f-5d38-a5ea-2c89d7093003",
+          "title": "APPLE-IOS-4K AccessModel crash",
+          "url": "https://cursor.com/agents/bc-58871902-198f-5d38-a5ea-2c89d7093003"
+        },
+        {
+          "id": "bc-715ccae4-9137-5405-be07-cd9abd897bfa",
+          "title": "TRY-210 activity home refresh",
+          "url": "https://cursor.com/agents/bc-715ccae4-9137-5405-be07-cd9abd897bfa"
+        }
+      ],
+      "agentsFinished": [],
+      "clearedOvernight": [
+        {
+          "id": "pr-327-suki",
+          "title": "suki full-view lag + cellular",
+          "via": "#327 merged on main"
+        },
+        {
+          "id": "try-188",
+          "title": "Save Session UX",
+          "via": "TRY-188 Done \u00b7 #341"
+        },
+        {
+          "id": "try-205",
+          "title": "Nudge videos + Home reread",
+          "via": "TRY-205 Done \u00b7 #339"
+        },
+        {
+          "id": "try-203",
+          "title": "Customizable recording notification",
+          "via": "TRY-203 Done"
+        },
+        {
+          "id": "try-86",
+          "title": "Post lands on Home haptics",
+          "via": "TRY-86 Done \u00b7 #342"
+        },
+        {
+          "id": "try-91",
+          "title": "ASC listing keywords",
+          "via": "TRY-91 Done \u00b7 #340"
+        }
+      ],
+      "mergedOvernight": [
+        {
+          "pr": 327,
+          "url": "https://github.com/eddie-the-lou/latent/pull/327"
+        },
+        {
+          "pr": 335,
+          "url": "https://github.com/eddie-the-lou/latent/pull/335"
+        },
+        {
+          "pr": 336,
+          "url": "https://github.com/eddie-the-lou/latent/pull/336"
+        },
+        {
+          "pr": 337,
+          "url": "https://github.com/eddie-the-lou/latent/pull/337"
+        },
+        {
+          "pr": 338,
+          "url": "https://github.com/eddie-the-lou/latent/pull/338"
+        },
+        {
+          "pr": 302,
+          "url": "https://github.com/eddie-the-lou/latent/pull/302"
+        },
+        {
+          "pr": 339,
+          "url": "https://github.com/eddie-the-lou/latent/pull/339"
+        },
+        {
+          "pr": 340,
+          "url": "https://github.com/eddie-the-lou/latent/pull/340"
+        },
+        {
+          "pr": 341,
+          "url": "https://github.com/eddie-the-lou/latent/pull/341"
+        },
+        {
+          "pr": 342,
+          "url": "https://github.com/eddie-the-lou/latent/pull/342"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "agent-von",
+        "title": "von multi-group hours \u2192 Cloud Agent launched (Grok 4.6)",
+        "status": "spinning",
+        "url": "https://cursor.com/agents/bc-8d1865d2-14bc-55c3-8a95-edc8786eae81"
+      },
+      {
+        "id": "agent-ellie",
+        "title": "ellie group chat notif stale \u2192 Cloud Agent launched (Grok 4.6)",
+        "status": "spinning",
+        "url": "https://cursor.com/agents/bc-635ad64c-4413-5993-9e98-54d26cfa6069"
+      },
+      {
+        "id": "agent-4k",
+        "title": "APPLE-IOS-4K AccessModel crash \u2192 Cloud Agent launched (Grok 4.6)",
+        "status": "spinning",
+        "url": "https://cursor.com/agents/bc-58871902-198f-5d38-a5ea-2c89d7093003"
+      },
+      {
+        "id": "agent-210",
+        "title": "TRY-210 activity home refresh \u2192 Cloud Agent launched (Grok 4.6)",
+        "status": "spinning",
+        "url": "https://cursor.com/agents/bc-715ccae4-9137-5405-be07-cd9abd897bfa"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "pending"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive to latent-digs GitHub Pages",
+        "status": "pending"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "ellie-chat",
+        "title": "Group message notification / chat opens stale",
+        "who": "ellie",
+        "build": "1.0.1 (29)",
+        "status": "fixing",
+        "detail": "Cloud Agent bc-635ad64c. Related TRY-201 Done + #339 merged \u2014 agent checking remaining gap.",
+        "url": null
+      },
+      {
+        "id": "von-hours",
+        "title": "Multi-group hours only shows one group",
+        "who": "von",
+        "build": "1.0.1 (29)",
+        "status": "fixing",
+        "detail": "Cloud Agent bc-8d1865d2. Open #267 is Friends nudge / open-into-thread \u2014 different.",
+        "url": null
+      },
+      {
+        "id": "try-210",
+        "title": "Activity doesn\u2019t show until home refresh",
+        "who": "Linear TRY-210",
+        "build": null,
+        "status": "fixing",
+        "detail": "Todo assigned to Eddie. Cloud Agent bc-715ccae4. Related #339 Home reread on return.",
+        "url": "https://linear.app/trylatent/issue/TRY-210/activity-doesnt-show-up-until-you-refresh-the-home-page-or-sometimes"
+      },
+      {
+        "id": "4k",
+        "title": "Crash: AccessModel missing from environment",
+        "who": "lilwuchi",
+        "build": "1.0.1 (30)",
+        "status": "fixing",
+        "detail": "APPLE-IOS-4K fatal on Mac Catalyst iPad. Cloud Agent bc-58871902.",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-4K"
+      },
+      {
+        "id": "hangs",
+        "title": "Sentry hang singles watching",
+        "who": "isabelle / colstudys / krabbykai (+ prior)",
+        "build": "29\u201330",
+        "status": "watching",
+        "detail": "NEW 4G/4H/4J singles; still watching 4B/4D/4E/4F. 4C eddie IGNORE.",
+        "url": "https://weaive.sentry.io/issues/?project=apple-ios&query=is%3Aunresolved"
+      }
+    ],
+    "features": [
+      {
+        "id": "suki-clan",
+        "title": "Clans + show group on profile",
+        "who": "suki",
+        "build": "1.0.1 (30)",
+        "status": "new",
+        "detail": "In-app feature ask. No auto-fix."
+      },
+      {
+        "id": "lovestruck-sessions",
+        "title": "Individual leaderboard by sessions over time",
+        "who": "Lovestruck_gg7",
+        "build": null,
+        "status": "new",
+        "detail": "Discord #questions Competition/Challenges \u2014 win by many sessions across the day, not one long sit."
+      },
+      {
+        "id": "ki-study-leagues",
+        "title": "Duo-style leagues but study-hours only",
+        "who": "ki (is tired)",
+        "build": null,
+        "status": "new",
+        "detail": "Discord \u2014 people may be logging non-study hours."
+      },
+      {
+        "id": "sourlemown-gold",
+        "title": "Gold league / tier ticks for top streak groups",
+        "who": "SourLemown",
+        "build": null,
+        "status": "continuing",
+        "detail": "From Sep 29 dig; no new Discord replies in Gold league thread."
+      },
+      {
+        "id": "android",
+        "title": "Android version?",
+        "who": "Android Advocate",
+        "build": null,
+        "status": "continuing",
+        "detail": "From Sep 29; kill-list candidate."
+      }
+    ],
+    "bySource": {
+      "In-app": {
+        "new": 3,
+        "items": [
+          "ellie bug chat stale",
+          "von bug multi-group hours",
+          "suki feature clans/profile"
+        ]
+      },
+      "Discord": {
+        "new": 2,
+        "items": [
+          "Lovestruck_gg7 sessions leaderboard",
+          "ki study-only leagues"
+        ],
+        "note": "Eddie L OK; #announcements/#tester-chat absent"
+      },
+      "Gmail": {
+        "new": 0,
+        "items": [
+          "reports@ alerts mirror in-app (von/suki); test alert ignored; PostHog clip-bloat evaluation-failed notice"
+        ],
+        "testerBugs": 0
+      },
+      "Survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66"
+      },
+      "Sentry": {
+        "new": [
+          "APPLE-IOS-4K",
+          "APPLE-IOS-4J",
+          "APPLE-IOS-4H",
+          "APPLE-IOS-4G"
+        ],
+        "watching": [
+          "4B",
+          "4D",
+          "4E",
+          "4F"
+        ],
+        "ignore": [
+          "4C"
+        ]
+      },
+      "PostHog": {
+        "uploadFailed": {
+          "2026-09-22": 3,
+          "2026-09-23": 8,
+          "2026-09-24": 4,
+          "2026-09-25": 2,
+          "2026-09-26": 0,
+          "2026-09-27": 11,
+          "2026-09-28": 25,
+          "2026-09-29": 6,
+          "2026-09-30": 1
+        },
+        "rageclicks": {
+          "2026-09-22": 270,
+          "2026-09-23": 230,
+          "2026-09-24": 241,
+          "2026-09-25": 325,
+          "2026-09-26": 223,
+          "2026-09-27": 363,
+          "2026-09-28": 365,
+          "2026-09-29": 428,
+          "2026-09-30": 176
+        },
+        "clipBloatAlert": "Errored",
+        "edgeLoopAlert": "Not firing",
+        "notes": "Sep29 upload-failed 6 (2\u00d710 + 4\u00d729); Sep30 partial 1\u00d730. Clip-bloat could not evaluate overnight; edge-loop last_value 0."
+      },
+      "Linear": {
+        "eddieAttention": [
+          "TRY-191 Dry run Todo High",
+          "TRY-210 Activity refresh Todo (agent spinning)",
+          "TRY-196 camera off In Progress"
+        ],
+        "doneOvernight": [
+          "TRY-188",
+          "TRY-203",
+          "TRY-205",
+          "TRY-86",
+          "TRY-91",
+          "TRY-209",
+          "TRY-78"
+        ]
+      },
+      "GitHub": {
+        "waiting": [],
+        "malcolmOpen": [
+          267,
+          164,
+          162,
+          123
+        ],
+        "mergedSinceLastDig": [
+          327,
+          335,
+          336,
+          337,
+          338,
+          302,
+          339,
+          340,
+          341,
+          342
+        ]
+      }
+    },
+    "rawQuotes": [
+      {
+        "source": "In-app",
+        "channel": "public.feedback",
+        "username": "ellie",
+        "timePT": "Mon Sep 29 11:01 AM PT",
+        "build": "1.0.1 (29)",
+        "kind": "bug",
+        "text": "Sometimes when I click on a message noti for my group the chats aren\u2019t updated \nOr when I click on the group\u2019s chat don\u2019t see the message i most recently git a notification for",
+        "meta": "ios 26.6.2 \u00b7 feedback fa3a3a72 \u00b7 Cloud Agent bc-635ad64c"
+      },
+      {
+        "source": "In-app",
+        "channel": "public.feedback",
+        "username": "von",
+        "timePT": "Mon Sep 29 4:44 PM PT",
+        "build": "1.0.1 (29)",
+        "kind": "bug",
+        "text": "I am in multiple groups but i can only look at one group and see how much hours that group has",
+        "meta": "ios 26.6 \u00b7 feedback c9e00db1 \u00b7 Cloud Agent bc-8d1865d2"
+      },
+      {
+        "source": "In-app",
+        "channel": "public.feedback",
+        "username": "suki",
+        "timePT": "Mon Sep 29 9:41 PM PT",
+        "build": "1.0.1 (30)",
+        "kind": "feature",
+        "text": "Make the group feature like a clan or something and make the group someone is in show in their profile page",
+        "meta": "ios 27.0 \u00b7 feedback 2691c966"
+      },
+      {
+        "source": "Discord",
+        "channel": "#questions \u00b7 Competition/Challenges",
+        "username": "Lovestruck_gg7",
+        "timePT": "Mon Sep 29 ~6:49 PM PT",
+        "build": null,
+        "kind": "feature",
+        "text": "smth with amount of sessions over a certain amount of time",
+        "meta": "NEW \u00b7 individual leaderboard by sessions over time"
+      },
+      {
+        "source": "Discord",
+        "channel": "#questions \u00b7 Competition/Challenges",
+        "username": "Lovestruck_gg7",
+        "timePT": "Mon Sep 29 ~6:49 PM PT",
+        "build": null,
+        "kind": "feature",
+        "text": "like the individual winning would be someone whos logged the most sessions at diff times throughout the day",
+        "meta": "NEW \u00b7 spread sessions across the day"
+      },
+      {
+        "source": "Discord",
+        "channel": "#questions \u00b7 Competition/Challenges",
+        "username": "Lovestruck_gg7",
+        "timePT": "Mon Sep 29 ~6:50 PM PT",
+        "build": null,
+        "kind": "feature",
+        "text": "isn't just one long session on a singular day and then inactive for the rest of the week",
+        "meta": "NEW \u00b7 anti one-long-session gaming"
+      },
+      {
+        "source": "Discord",
+        "channel": "#questions \u00b7 Competition/Challenges",
+        "username": "ki (is tired)",
+        "timePT": "Mon Sep 29 ~8:05 PM PT",
+        "build": null,
+        "kind": "feature",
+        "text": "leagues from duo but you have to like state that these hrs are all used for studyig or smt",
+        "meta": "NEW \u00b7 study-only league hours"
+      },
+      {
+        "source": "Discord",
+        "channel": "#questions \u00b7 Competition/Challenges",
+        "username": "ki (is tired)",
+        "timePT": "Mon Sep 29 ~8:06 PM PT",
+        "build": null,
+        "kind": "feature",
+        "text": "coz i think sm ppl using for other stuff",
+        "meta": "NEW \u00b7 study-only rationale"
       }
     ]
   }
