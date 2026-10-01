@@ -1,5 +1,18 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-01",
+    "title": "Latent feedback dig",
+    "summaryStats": {
+      "openFeatures": 4,
+      "openBugs": 3,
+      "resolvedBugs": 1,
+      "filtered": 0,
+      "rawQuotes": 0
+    },
+    "path": "data/2026-10-01.json",
+    "htmlArchive": "../2026-10-01.html"
+  },
+  {
     "date": "2026-09-30",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -598,6 +611,19 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-01",
+      "title": "Latent feedback dig",
+      "summaryStats": {
+        "openFeatures": 4,
+        "openBugs": 3,
+        "resolvedBugs": 1,
+        "filtered": 0,
+        "rawQuotes": 0
+      },
+      "path": "data/2026-10-01.json",
+      "htmlArchive": "../2026-10-01.html"
+    },
     {
       "date": "2026-09-30",
       "title": "Latent feedback dig",
@@ -73902,5 +73928,395 @@ window.DIGESTS = {
         "meta": "NEW \u00b7 study-only rationale"
       }
     ]
+  },
+  "2026-10-01": {
+    "date": "2026-10-01",
+    "title": "Latent daily review \u00b7 Oct 1",
+    "generatedAt": "2026-10-01T16:18:36.067222+00:00",
+    "tldr": [
+      "Linear dig issue: TRY-227 \u2014 3 fixes waiting (#343\u2013#345). https://linear.app/trylatent/issue/TRY-227/daily-dig-2026-10-01-3-fixes-waiting-for-review-343-345",
+      "3 dig PRs ready for review: #343 von multi-group hours, #344 ellie stale group chat notif, #345 TRY-210 Activity freshness. All draft, mergeable.",
+      "#346 APPLE-IOS-4K AccessModel crash closed on purpose yesterday (Mac-only single event; turn off Mac availability instead).",
+      "No NEW in-app feedback, survey rows, or Discord feature/bug asks since last dig. Discord OK (Eddie L); #announcements not in sidebar; #tester-chat had bot leaderboard embeds only.",
+      "Sentry NEW hang singles APPLE-IOS-4M/4N/4P \u2014 watching (no auto-fix). Prior hangs 4B/4D\u20134J still. Clip-bloat Not firing (~1.56 MB/s); edge-loop Not firing (last_value 3).",
+      "Merged overnight (tester/TRY): #347 camera-off, #350 TRY-207, #359 TRY-221 + product #348\u2013#361. Still on you: TRY-191 Dry run, TRY-217 streaks, TRY-220 recording freeze (your In Progress). Survey unchanged 39/25/2 of 66. Mac offline. No new Cloud Agents this run."
+    ],
+    "plainTldr": [
+      "Linear dig issue: TRY-227 \u2014 3 fixes waiting (#343\u2013#345). https://linear.app/trylatent/issue/TRY-227/daily-dig-2026-10-01-3-fixes-waiting-for-review-343-345",
+      "3 dig PRs ready for review: #343 von multi-group hours, #344 ellie stale group chat notif, #345 TRY-210 Activity freshness. All draft, mergeable.",
+      "#346 APPLE-IOS-4K AccessModel crash closed on purpose yesterday (Mac-only single event; turn off Mac availability instead).",
+      "No NEW in-app feedback, survey rows, or Discord feature/bug asks since last dig. Discord OK (Eddie L); #announcements not in sidebar; #tester-chat had bot leaderboard embeds only.",
+      "Sentry NEW hang singles APPLE-IOS-4M/4N/4P \u2014 watching (no auto-fix). Prior hangs 4B/4D\u20134J still. Clip-bloat Not firing (~1.56 MB/s); edge-loop Not firing (last_value 3).",
+      "Merged overnight (tester/TRY): #347 camera-off, #350 TRY-207, #359 TRY-221 + product #348\u2013#361. Still on you: TRY-191 Dry run, TRY-217 streaks, TRY-220 recording freeze (your In Progress). Survey unchanged 39/25/2 of 66. Mac offline. No new Cloud Agents this run."
+    ],
+    "stats": {
+      "newInApp": 0,
+      "newDiscord": 0,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-4P",
+        "APPLE-IOS-4N",
+        "APPLE-IOS-4M"
+      ],
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-23": 8,
+          "2026-09-24": 4,
+          "2026-09-25": 2,
+          "2026-09-26": 0,
+          "2026-09-27": 11,
+          "2026-09-28": 25,
+          "2026-09-29": 6,
+          "2026-09-30": 2,
+          "2026-10-01": 4
+        },
+        "rageclicks": {
+          "2026-09-23": 230,
+          "2026-09-24": 241,
+          "2026-09-25": 325,
+          "2026-09-26": 223,
+          "2026-09-27": 363,
+          "2026-09-28": 365,
+          "2026-09-29": 428,
+          "2026-09-30": 297,
+          "2026-10-01": 190
+        },
+        "attachmentUploadFailed": {
+          "2026-09-29": 14,
+          "2026-09-30": 27,
+          "2026-10-01": 0
+        },
+        "clipBloatAlert": "Not firing",
+        "edgeLoopAlert": "Not firing",
+        "notes": "UTC day buckets from PostHog. Oct 1 partial. Clip-bloat last_value ~1.56 MB/s (under 4). Edge-loop last_value 3 (under 200)."
+      },
+      "rawQuotes": 0
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 343,
+          "title": "Fix group hours sticking on the first group you open",
+          "url": "https://github.com/eddie-the-lou/latent/pull/343",
+          "reporter": "von",
+          "agent": "https://cursor.com/agents/bc-8d1865d2-14bc-55c3-8a95-edc8786eae81",
+          "check": "phone in two groups",
+          "draft": true
+        },
+        {
+          "pr": 344,
+          "title": "Re-read group chats when a message notification opens them",
+          "url": "https://github.com/eddie-the-lou/latent/pull/344",
+          "reporter": "ellie",
+          "agent": "https://cursor.com/agents/bc-635ad64c-4413-5993-9e98-54d26cfa6069",
+          "check": "Mac/CI MessagingTests",
+          "draft": true
+        },
+        {
+          "pr": 345,
+          "title": "Activity appears on Home without a pull-to-refresh (TRY-210)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/345",
+          "reporter": "TRY-210",
+          "agent": "https://cursor.com/agents/bc-715ccae4-9137-5405-be07-cd9abd897bfa",
+          "check": "CI",
+          "draft": true
+        }
+      ],
+      "malcolmOpen": [
+        {
+          "pr": 267,
+          "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+          "url": "https://github.com/eddie-the-lou/latent/pull/267"
+        },
+        {
+          "pr": 164,
+          "title": "Today mini cards fit their durations; camera toggle stays put",
+          "url": "https://github.com/eddie-the-lou/latent/pull/164"
+        },
+        {
+          "pr": 162,
+          "title": "One frame rule for the timelapse clip",
+          "url": "https://github.com/eddie-the-lou/latent/pull/162"
+        },
+        {
+          "pr": 123,
+          "title": "Sequential dual-camera proof stills (draft)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/123"
+        }
+      ],
+      "agentsSpinning": [],
+      "agentsFinished": [
+        {
+          "id": "bc-8d1865d2-14bc-55c3-8a95-edc8786eae81",
+          "title": "von multi-group hours",
+          "pr": 343,
+          "url": "https://cursor.com/agents/bc-8d1865d2-14bc-55c3-8a95-edc8786eae81"
+        },
+        {
+          "id": "bc-635ad64c-4413-5993-9e98-54d26cfa6069",
+          "title": "ellie group chat notif stale",
+          "pr": 344,
+          "url": "https://cursor.com/agents/bc-635ad64c-4413-5993-9e98-54d26cfa6069"
+        },
+        {
+          "id": "bc-715ccae4-9137-5405-be07-cd9abd897bfa",
+          "title": "TRY-210 activity home refresh",
+          "pr": 345,
+          "url": "https://cursor.com/agents/bc-715ccae4-9137-5405-be07-cd9abd897bfa"
+        },
+        {
+          "id": "bc-58871902-198f-5d38-a5ea-2c89d7093003",
+          "title": "APPLE-IOS-4K AccessModel crash",
+          "pr": 346,
+          "url": "https://cursor.com/agents/bc-58871902-198f-5d38-a5ea-2c89d7093003",
+          "note": "PR closed without merge"
+        }
+      ],
+      "clearedOvernight": [
+        {
+          "id": "pr-346-closed",
+          "title": "APPLE-IOS-4K AccessModel (Mac-only)",
+          "via": "#346 closed on purpose"
+        },
+        {
+          "id": "try-196",
+          "title": "camera off on home",
+          "via": "TRY-196 Done \u00b7 #347"
+        },
+        {
+          "id": "try-207",
+          "title": "group faces open profiles",
+          "via": "#350"
+        },
+        {
+          "id": "try-221",
+          "title": "kudos names other people",
+          "via": "TRY-221 \u00b7 #359"
+        },
+        {
+          "id": "try-210-linear",
+          "title": "TRY-210 marked Done in Linear (PR #345 still open awaiting review)",
+          "via": "TRY-210 Done"
+        }
+      ],
+      "mergedOvernight": [
+        {
+          "pr": 347,
+          "url": "https://github.com/eddie-the-lou/latent/pull/347",
+          "title": "camera-off session behind lock"
+        },
+        {
+          "pr": 350,
+          "url": "https://github.com/eddie-the-lou/latent/pull/350",
+          "title": "group faces open profiles (TRY-207)"
+        },
+        {
+          "pr": 359,
+          "url": "https://github.com/eddie-the-lou/latent/pull/359",
+          "title": "kudos names other people (TRY-221)"
+        },
+        {
+          "pr": 348,
+          "url": "https://github.com/eddie-the-lou/latent/pull/348"
+        },
+        {
+          "pr": 349,
+          "url": "https://github.com/eddie-the-lou/latent/pull/349"
+        },
+        {
+          "pr": 351,
+          "url": "https://github.com/eddie-the-lou/latent/pull/351"
+        },
+        {
+          "pr": 352,
+          "url": "https://github.com/eddie-the-lou/latent/pull/352"
+        },
+        {
+          "pr": 353,
+          "url": "https://github.com/eddie-the-lou/latent/pull/353"
+        },
+        {
+          "pr": 354,
+          "url": "https://github.com/eddie-the-lou/latent/pull/354"
+        },
+        {
+          "pr": 355,
+          "url": "https://github.com/eddie-the-lou/latent/pull/355"
+        },
+        {
+          "pr": 356,
+          "url": "https://github.com/eddie-the-lou/latent/pull/356"
+        },
+        {
+          "pr": 357,
+          "url": "https://github.com/eddie-the-lou/latent/pull/357"
+        },
+        {
+          "pr": 358,
+          "url": "https://github.com/eddie-the-lou/latent/pull/358"
+        },
+        {
+          "pr": 360,
+          "url": "https://github.com/eddie-the-lou/latent/pull/360"
+        },
+        {
+          "pr": 361,
+          "url": "https://github.com/eddie-the-lou/latent/pull/361"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "pr-343",
+        "title": "#343 von multi-group hours ready (draft)",
+        "status": "waiting",
+        "url": "https://github.com/eddie-the-lou/latent/pull/343"
+      },
+      {
+        "id": "pr-344",
+        "title": "#344 ellie group chat notif ready (draft)",
+        "status": "waiting",
+        "url": "https://github.com/eddie-the-lou/latent/pull/344"
+      },
+      {
+        "id": "pr-345",
+        "title": "#345 TRY-210 Activity ready (draft)",
+        "status": "waiting",
+        "url": "https://github.com/eddie-the-lou/latent/pull/345"
+      },
+      {
+        "id": "pr-346",
+        "title": "#346 APPLE-IOS-4K closed without merge (Mac-only)",
+        "status": "resolved",
+        "url": "https://github.com/eddie-the-lou/latent/pull/346"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "pending"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive to latent-digs GitHub Pages",
+        "status": "pending"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "von-hours",
+        "title": "Multi-group hours stick on first group",
+        "status": "approve",
+        "people": "von",
+        "summary": "PR #343 ready. Switching groups reused the old hours state; each group page now rebuilds. Check on a phone in two groups.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/343"
+      },
+      {
+        "id": "ellie-chat",
+        "title": "Group message notification opens stale chat",
+        "status": "approve",
+        "people": "ellie",
+        "summary": "PR #344 ready. Named opens now always refresh the thread. Needs Mac/CI MessagingTests.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/344"
+      },
+      {
+        "id": "try-210",
+        "title": "Activity needs Home refresh",
+        "status": "approve",
+        "people": "TRY-210",
+        "summary": "PR #345 ready. Activity realtime reconnects after background; foreground Activity pushes re-read the list. CI check.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/345"
+      },
+      {
+        "id": "try-220",
+        "title": "Recording screen freezes during dimming",
+        "status": "need",
+        "people": "Eddie",
+        "summary": "TRY-220 In Progress (your ticket, empty description). No Cloud Agent \u2014 needs repro detail.",
+        "url": "https://linear.app/trylatent/issue/TRY-220/recording-screen-freezes-during-dimming-when-did-htis-happen"
+      },
+      {
+        "id": "sentry-hangs",
+        "title": "Sentry hang singles 4M/4N/4P (+ prior)",
+        "status": "watch",
+        "people": "various",
+        "summary": "NEW APPLE-IOS-4M/4N/4P hang singles overnight. Watching with prior 4B/4D\u20134J. No auto-fix (singles).",
+        "url": "https://weaive.sentry.io/issues/?project=apple-ios&query=is%3Aunresolved"
+      }
+    ],
+    "features": [
+      {
+        "id": "suki-clans",
+        "title": "Groups as clans + group on profile",
+        "status": "backlog",
+        "people": "suki",
+        "summary": "Still open from Sep 30 in-app (no auto-fix)."
+      },
+      {
+        "id": "sessions-leaderboard",
+        "title": "Sessions-over-time individual leaderboard",
+        "status": "backlog",
+        "people": "Lovestruck_gg7",
+        "summary": "Discord Sep 29 \u2014 no follow-up overnight."
+      },
+      {
+        "id": "study-leagues",
+        "title": "Duo-style leagues, study-hours only",
+        "status": "backlog",
+        "people": "ki",
+        "summary": "Discord Sep 29 \u2014 no follow-up overnight."
+      },
+      {
+        "id": "try-217",
+        "title": "Daily streaks",
+        "status": "need",
+        "people": "Eddie",
+        "summary": "TRY-217 High \u00b7 Todo.",
+        "url": "https://linear.app/trylatent/issue/TRY-217/daily-streaks"
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 0,
+        "note": "No rows in public.feedback after 2026-09-30T16:25:00Z"
+      },
+      "discord": {
+        "new": 0,
+        "note": "Eddie L OK. 0 NEW feature/bug/question. #announcements inaccessible. #tester-chat: 5 Latent App leaderboard embeds (bot signal)."
+      },
+      "gmail": {
+        "new": 0,
+        "note": "No new user bug emails. PostHog clip-bloat evaluate-fail email was Sep 29/30; alert now Not firing."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "buildOneNext": "still empty (66 blank)"
+      },
+      "sentry": {
+        "new": [
+          "APPLE-IOS-4M",
+          "APPLE-IOS-4N",
+          "APPLE-IOS-4P"
+        ],
+        "note": "Hang singles watching. 4K still unresolved but PR closed as Mac-only."
+      },
+      "posthog": {
+        "note": "clip_upload_failed Sep23\u2013Oct1: 8/4/2/0/11/25/6/2/4(partial). Rageclicks \u2026/428/297/190(partial). attachment_upload_failed Sep30 spike 27 \u2192 Oct1 0. Clip-bloat Not firing; edge-loop Not firing."
+      },
+      "linear": {
+        "note": "TRY-191 High Todo; TRY-217 High Todo; TRY-220 In Progress; TRY-219 onboarding In Progress; TRY-210 Done; TRY-196 Done; TRY-212 Done."
+      }
+    },
+    "rawQuotes": [],
+    "linearIssue": {
+      "id": "TRY-227",
+      "url": "https://linear.app/trylatent/issue/TRY-227/daily-dig-2026-10-01-3-fixes-waiting-for-review-343-345"
+    }
   }
 };
