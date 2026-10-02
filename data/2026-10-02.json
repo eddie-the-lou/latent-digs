@@ -1,0 +1,400 @@
+{
+  "date": "2026-10-02",
+  "title": "Latent daily review \u00b7 Oct 2",
+  "generatedAt": "2026-10-02T16:34:28.907766+00:00",
+  "tldr": [
+    "Linear dig issue: TRY-243 \u2014 1 fix waiting (#372 APPLE-IOS-4N pasteboard hang). https://linear.app/trylatent/issue/TRY-243/daily-dig-2026-10-02-1-fix-waiting-for-review-372",
+    "Opened today: #372 clipboard reads no longer freeze the UI (draft). Escalating Sentry hang \u2014 10 users / 13 events. Check paste invite / Copy link / cold open. Agent bc-3fe3d1fd.",
+    "Yesterday\u2019s waiting #343\u2013#345 closed without merge (Claude-reviewed). TRY-227 marked Done. Merged overnight: #363 record-dim freeze (TRY-220), #365 swipe freeze (TRY-224), #368 invite paste (TRY-230) + #362/#364/#366\u2013#371.",
+    "NEW asks: Android (Discord \u00d73 + Gmail Sharon); timer alarm sound (fxyzkhan); URABOT \u201cworth downloading?\u201d (Zoe/toasted say yes). No NEW in-app or survey rows.",
+    "Sentry: 4N auto-fixed via #372. NEW hang singles 4Q/4R/4S/4T/4V/4W watching (+ prior 4M/4P/4B/4D\u20134J). Clip-bloat Not firing (~1.56 MB/s); edge-loop Not firing (last_value 3).",
+    "Still on you: TRY-118 waitlist emails (Urgent), TRY-215 YPT, TRY-197 cap table. TRY-217 streaks now on Malcolm. Survey unchanged 39/25/2 of 66. Mac offline."
+  ],
+  "plainTldr": [
+    "Linear dig issue: TRY-243 \u2014 1 fix waiting (#372 APPLE-IOS-4N pasteboard hang). https://linear.app/trylatent/issue/TRY-243/daily-dig-2026-10-02-1-fix-waiting-for-review-372",
+    "Opened today: #372 clipboard reads no longer freeze the UI (draft). Escalating Sentry hang \u2014 10 users / 13 events. Check paste invite / Copy link / cold open. Agent bc-3fe3d1fd.",
+    "Yesterday\u2019s waiting #343\u2013#345 closed without merge (Claude-reviewed). TRY-227 marked Done. Merged overnight: #363 record-dim freeze (TRY-220), #365 swipe freeze (TRY-224), #368 invite paste (TRY-230) + #362/#364/#366\u2013#371.",
+    "NEW asks: Android (Discord \u00d73 + Gmail Sharon); timer alarm sound (fxyzkhan); URABOT \u201cworth downloading?\u201d (Zoe/toasted say yes). No NEW in-app or survey rows.",
+    "Sentry: 4N auto-fixed via #372. NEW hang singles 4Q/4R/4S/4T/4V/4W watching (+ prior 4M/4P/4B/4D\u20134J). Clip-bloat Not firing (~1.56 MB/s); edge-loop Not firing (last_value 3).",
+    "Still on you: TRY-118 waitlist emails (Urgent), TRY-215 YPT, TRY-197 cap table. TRY-217 streaks now on Malcolm. Survey unchanged 39/25/2 of 66. Mac offline."
+  ],
+  "stats": {
+    "newInApp": 0,
+    "newDiscord": 4,
+    "newSurveyRows": 0,
+    "seanEllis": {
+      "very": 39,
+      "somewhat": 25,
+      "not": 2,
+      "n": 66
+    },
+    "sentryNew": [
+      "APPLE-IOS-4Q",
+      "APPLE-IOS-4R",
+      "APPLE-IOS-4S",
+      "APPLE-IOS-4T",
+      "APPLE-IOS-4V",
+      "APPLE-IOS-4W"
+    ],
+    "posthog": {
+      "uploadFailed": {
+        "2026-09-24": 4,
+        "2026-09-25": 2,
+        "2026-09-26": 0,
+        "2026-09-27": 11,
+        "2026-09-28": 25,
+        "2026-09-29": 6,
+        "2026-09-30": 2,
+        "2026-10-01": 10,
+        "2026-10-02": 2
+      },
+      "rageclicks": {
+        "2026-09-24": 241,
+        "2026-09-25": 325,
+        "2026-09-26": 223,
+        "2026-09-27": 363,
+        "2026-09-28": 365,
+        "2026-09-29": 429,
+        "2026-09-30": 297,
+        "2026-10-01": 358,
+        "2026-10-02": 267
+      },
+      "attachmentUploadFailed": {
+        "2026-09-29": 14,
+        "2026-09-30": 27,
+        "2026-10-01": 0,
+        "2026-10-02": 0
+      },
+      "clipBloatAlert": "Not firing",
+      "edgeLoopAlert": "Not firing",
+      "notes": "UTC day buckets. Oct 2 partial (~9:30 AM PT). clip_upload Oct1 rose to 10. Rageclicks Oct1 358. attachment still 0 after Sep30 spike 27. Clip-bloat last_value ~1.56 MB/s; edge-loop last_value 3."
+    },
+    "rawQuotes": 7
+  },
+  "prStatus": {
+    "waiting": [
+      {
+        "pr": 372,
+        "title": "Clipboard reads no longer freeze the UI (APPLE-IOS-4N)",
+        "url": "https://github.com/eddie-the-lou/latent/pull/372",
+        "reporter": "Sentry APPLE-IOS-4N (10 users)",
+        "agent": "https://cursor.com/agents/bc-3fe3d1fd-411c-5482-b339-692b658a4213",
+        "check": "paste invite / Copy link / cold open \u2014 UI must not freeze ~5s",
+        "draft": true
+      }
+    ],
+    "malcolmOpen": [
+      {
+        "pr": 267,
+        "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+        "url": "https://github.com/eddie-the-lou/latent/pull/267"
+      },
+      {
+        "pr": 164,
+        "title": "Today mini cards fit their durations; camera toggle stays put",
+        "url": "https://github.com/eddie-the-lou/latent/pull/164"
+      },
+      {
+        "pr": 162,
+        "title": "One frame rule for the timelapse clip",
+        "url": "https://github.com/eddie-the-lou/latent/pull/162"
+      },
+      {
+        "pr": 123,
+        "title": "Sequential dual-camera proof stills (draft)",
+        "url": "https://github.com/eddie-the-lou/latent/pull/123"
+      }
+    ],
+    "agentsSpinning": [],
+    "agentsFinished": [
+      {
+        "id": "bc-3fe3d1fd-411c-5482-b339-692b658a4213",
+        "title": "APPLE-IOS-4N pasteboard hang",
+        "pr": 372,
+        "url": "https://cursor.com/agents/bc-3fe3d1fd-411c-5482-b339-692b658a4213"
+      }
+    ],
+    "clearedOvernight": [
+      {
+        "id": "pr-343-closed",
+        "title": "von multi-group hours",
+        "via": "#343 closed without merge"
+      },
+      {
+        "id": "pr-344-closed",
+        "title": "ellie group chat notif",
+        "via": "#344 closed without merge"
+      },
+      {
+        "id": "pr-345-closed",
+        "title": "TRY-210 Activity",
+        "via": "#345 closed without merge"
+      },
+      {
+        "id": "try-227",
+        "title": "Oct 1 dig issue",
+        "via": "TRY-227 Done"
+      },
+      {
+        "id": "try-220",
+        "title": "recording freeze dimming",
+        "via": "TRY-220 Done \u00b7 #363"
+      },
+      {
+        "id": "try-191",
+        "title": "Dry run",
+        "via": "TRY-191 Done"
+      }
+    ],
+    "mergedOvernight": [
+      {
+        "pr": 363,
+        "url": "https://github.com/eddie-the-lou/latent/pull/363",
+        "title": "Stop the record screen freezing as it dims (TRY-220)"
+      },
+      {
+        "pr": 365,
+        "url": "https://github.com/eddie-the-lou/latent/pull/365",
+        "title": "Friends/Groups swipe freeze (TRY-224)"
+      },
+      {
+        "pr": 368,
+        "url": "https://github.com/eddie-the-lou/latent/pull/368",
+        "title": "Invite paste one tap + Copy link (TRY-230)"
+      },
+      {
+        "pr": 362,
+        "url": "https://github.com/eddie-the-lou/latent/pull/362",
+        "title": "App Store screenshots"
+      },
+      {
+        "pr": 364,
+        "url": "https://github.com/eddie-the-lou/latent/pull/364",
+        "title": "Onboarding mechanism/rating"
+      },
+      {
+        "pr": 366,
+        "url": "https://github.com/eddie-the-lou/latent/pull/366",
+        "title": "Age check, moderation, privacy"
+      },
+      {
+        "pr": 367,
+        "url": "https://github.com/eddie-the-lou/latent/pull/367",
+        "title": "Growth dashboard"
+      },
+      {
+        "pr": 369,
+        "url": "https://github.com/eddie-the-lou/latent/pull/369",
+        "title": "Personal streak weeks build 31"
+      },
+      {
+        "pr": 370,
+        "url": "https://github.com/eddie-the-lou/latent/pull/370",
+        "title": "Build 31 age-check card"
+      },
+      {
+        "pr": 371,
+        "url": "https://github.com/eddie-the-lou/latent/pull/371",
+        "title": "Wave email links /w/"
+      }
+    ]
+  },
+  "actions": [
+    {
+      "id": "pr-372",
+      "title": "#372 APPLE-IOS-4N pasteboard hang ready (draft)",
+      "status": "waiting",
+      "url": "https://github.com/eddie-the-lou/latent/pull/372"
+    },
+    {
+      "id": "pr-343",
+      "title": "#343 von closed without merge",
+      "status": "resolved",
+      "url": "https://github.com/eddie-the-lou/latent/pull/343"
+    },
+    {
+      "id": "pr-344",
+      "title": "#344 ellie closed without merge",
+      "status": "resolved",
+      "url": "https://github.com/eddie-the-lou/latent/pull/344"
+    },
+    {
+      "id": "pr-345",
+      "title": "#345 TRY-210 closed without merge",
+      "status": "resolved",
+      "url": "https://github.com/eddie-the-lou/latent/pull/345"
+    },
+    {
+      "id": "email",
+      "title": "Email dig to eddie@weaive.app",
+      "status": "pending"
+    },
+    {
+      "id": "archive",
+      "title": "Publish archive to latent-digs GitHub Pages",
+      "status": "pending"
+    }
+  ],
+  "bugs": [
+    {
+      "id": "apple-ios-4n",
+      "title": "Clipboard read freezes the app (~5s)",
+      "status": "approve",
+      "people": "10 Sentry users",
+      "summary": "PR #372 ready (draft). Main-thread UIPasteboard waits hung the UI. Paste/copy now run off main. Check paste invite link, Copy link, and cold open with invite gate off.",
+      "url": "https://github.com/eddie-the-lou/latent/pull/372"
+    },
+    {
+      "id": "sentry-hangs",
+      "title": "Sentry hang singles 4Q/4R/4S/4T/4V/4W (+ prior)",
+      "status": "watch",
+      "people": "various",
+      "summary": "NEW hang singles overnight (1 user each). Watching with prior 4M/4P/4B/4D\u20134J. 4N escalated \u2192 #372. No auto-fix on remaining singles.",
+      "url": "https://weaive.sentry.io/issues/?project=apple-ios&query=is%3Aunresolved"
+    }
+  ],
+  "features": [
+    {
+      "id": "android",
+      "title": "Android version",
+      "status": "backlog",
+      "people": "AaravM0910, Android Advocate, Sharon (email), BonusEarther",
+      "summary": "Loud overnight: Discord feature-requests + general-chat + waitlist reply email. No auto-fix (platform)."
+    },
+    {
+      "id": "alarm-sound",
+      "title": "Customizable session timer alarm sound",
+      "status": "backlog",
+      "people": "fxyzkhan",
+      "summary": "Discord #questions Oct 2 \u2014 new thread ask."
+    },
+    {
+      "id": "suki-clans",
+      "title": "Groups as clans + group on profile",
+      "status": "backlog",
+      "people": "suki",
+      "summary": "Still open from Sep 30 in-app (no auto-fix)."
+    },
+    {
+      "id": "sessions-leaderboard",
+      "title": "Sessions-over-time individual leaderboard",
+      "status": "backlog",
+      "people": "Lovestruck_gg7",
+      "summary": "Discord Sep 29 \u2014 no follow-up overnight."
+    },
+    {
+      "id": "study-leagues",
+      "title": "Duo-style leagues, study-hours only",
+      "status": "backlog",
+      "people": "ki",
+      "summary": "Discord Sep 29 \u2014 no follow-up overnight."
+    },
+    {
+      "id": "try-217",
+      "title": "Daily streaks",
+      "status": "need",
+      "people": "Malcolm",
+      "summary": "TRY-217 High \u00b7 Todo (now assigned Malcolm).",
+      "url": "https://linear.app/trylatent/issue/TRY-217/daily-streaks"
+    }
+  ],
+  "bySource": {
+    "inApp": {
+      "new": 0,
+      "note": "No rows in public.feedback after 2026-10-01T16:19:00Z"
+    },
+    "discord": {
+      "new": 4,
+      "note": "Eddie L OK. NEW: Android (AaravM0910 + Android Advocate), alarm sound (fxyzkhan), worth-downloading Q (URABOT; Zoe/toasted yes). #announcements inaccessible. #tester-chat: no NEW since Sep 30."
+    },
+    "gmail": {
+      "new": 1,
+      "note": "Sharon waitlist reply asking for Android. No bug emails."
+    },
+    "survey": {
+      "newRows": 0,
+      "seanEllis": "39/25/2 of 66",
+      "buildOneNext": "still empty (66 blank)"
+    },
+    "sentry": {
+      "new": [
+        "APPLE-IOS-4Q",
+        "APPLE-IOS-4R",
+        "APPLE-IOS-4S",
+        "APPLE-IOS-4T",
+        "APPLE-IOS-4V",
+        "APPLE-IOS-4W"
+      ],
+      "note": "4N escalated (10 users) \u2192 Cloud Agent #372. New hang singles watching. 4K still unresolved Sentry (PR closed Mac-only)."
+    },
+    "posthog": {
+      "note": "clip_upload_failed Sep24\u2013Oct2: 4/2/0/11/25/6/2/10/2(partial). Rageclicks \u2026/429/297/358/267(partial). attachment_upload_failed still 0. Clip-bloat Not firing; edge-loop Not firing."
+    },
+    "linear": {
+      "note": "TRY-118 Urgent Pre Launch; TRY-215 Todo; TRY-197 Todo; TRY-217 High Todo (Malcolm). TRY-191/220/219/225/232 Done. TRY-227 Done. New dig TRY-243."
+    }
+  },
+  "rawQuotes": [
+    {
+      "id": "gmail-sharon-android",
+      "source": "gmail",
+      "username": "sharontinaaustin@gmail.com",
+      "when": "2026-10-02T14:53:45Z",
+      "whenPT": "Oct 2, 2026, 7:53 AM PT",
+      "quote": "Thank you so much Eddie but why is not available for Android yet?\nPlease let me know when it is available.",
+      "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1877950163483230334|msg-f:1877950163483230334"
+    },
+    {
+      "id": "discord-aarav-android",
+      "source": "discord",
+      "username": "AaravM0910",
+      "channel": "#feature-requests",
+      "whenPT": "Oct 1, 2026, 9:28 PM PT",
+      "quote": "Add this for Android."
+    },
+    {
+      "id": "discord-bonus-android",
+      "source": "discord",
+      "username": "BonusEarther",
+      "channel": "#feature-requests",
+      "whenPT": "Oct 2 morning PT",
+      "quote": "I can't help but agree"
+    },
+    {
+      "id": "discord-advocate-android",
+      "source": "discord",
+      "username": "Android Advocate",
+      "channel": "#general-chat",
+      "whenPT": "Oct 2, 2026, 4:25 AM PT",
+      "quote": "App store version's out, android when?\nThe people I represent are getting more and more restless, as the Applonian regime is giving Latent to even more of themselves, while us Androidians remain oppressed"
+    },
+    {
+      "id": "discord-fxyzkhan-alarm",
+      "source": "discord",
+      "username": "fxyzkhan",
+      "channel": "#questions",
+      "whenPT": "Oct 2, 2026, 5:30 AM PT",
+      "quote": "Hey can i change the alarm sound of the timer in the session?"
+    },
+    {
+      "id": "discord-urabot-worth",
+      "source": "discord",
+      "username": "URABOT",
+      "channel": "#general-chat",
+      "whenPT": "Oct 2, 2026, 6:04 AM PT",
+      "quote": "Is the platform worth downloading rn?\nOr do I wait for a couple more updates to roll out\nDoes it run well and stuff?"
+    },
+    {
+      "id": "discord-zoe-reply",
+      "source": "discord",
+      "username": "Zoe",
+      "channel": "#general-chat",
+      "whenPT": "Oct 2, 2026, 6:59 AM PT",
+      "quote": "It runs very well I'd def recommend downloading rn"
+    }
+  ],
+  "linearIssue": {
+    "id": "TRY-243",
+    "url": "https://linear.app/trylatent/issue/TRY-243/daily-dig-2026-10-02-1-fix-waiting-for-review-372"
+  }
+}
