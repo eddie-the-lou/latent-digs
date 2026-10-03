@@ -1,0 +1,383 @@
+{
+  "date": "2026-10-03",
+  "title": "Latent daily review \u00b7 Oct 3",
+  "generatedAt": "2026-10-03T16:18:00.574429+00:00",
+  "tldr": [
+    "No new dig-fix PRs waiting. Yesterday\u2019s #372 APPLE-IOS-4N pasteboard hang merged to main (Oct 2 ~3:41 PM PT). Sentry still shows 4N unresolved until that build reaches phones.",
+    "Merged overnight #372\u2013#388: pasteboard hang, invite/paste polish (#381/#383), pull-to-refresh spam (#380), cover orientation (#384), email 6-digit signup (#385), Home Friends/Groups tabs (#387), App Store bump 1.0.3 (34) (#388), plus growth/invite work.",
+    "NEW Discord: fxyzkhan clarified the timer-alarm ask \u2014 hates the iPhone default alarm when the session timer ends (thread replies Oct 3 ~7:34\u20138:24 AM PT). No NEW feature-request threads.",
+    "Gmail: seongmindylan waitlist reply \u201cThx man Appreciate it.\u201d Sharon Android already covered Oct 2. 0 NEW in-app. Survey unchanged 39/25/2 of 66.",
+    "Sentry NEW hang singles 4X/4Y/4Z + fatal 50 (1 user, sheet open, build 33) \u2014 watching with prior 4M/4P/4Q\u20134W/4B/4D\u20134J. No auto-fix (singles / no clear repro).",
+    "PostHog: clip_upload Oct2=4; rageclicks Oct2 rose to 436; attachment Oct2=1. Clip-bloat Not firing (~1.56 MB/s); edge-loop Not firing (last_value 3). Linear MCP needs re-auth \u2014 dig issue skipped (nothing waiting). Still on you: TRY-118/215/197; TRY-217 Malcolm. Mac offline."
+  ],
+  "plainTldr": [
+    "No new dig-fix PRs waiting. Yesterday\u2019s #372 APPLE-IOS-4N pasteboard hang merged to main (Oct 2 ~3:41 PM PT). Sentry still shows 4N unresolved until that build reaches phones.",
+    "Merged overnight #372\u2013#388: pasteboard hang, invite/paste polish (#381/#383), pull-to-refresh spam (#380), cover orientation (#384), email 6-digit signup (#385), Home Friends/Groups tabs (#387), App Store bump 1.0.3 (34) (#388), plus growth/invite work.",
+    "NEW Discord: fxyzkhan clarified the timer-alarm ask \u2014 hates the iPhone default alarm when the session timer ends (thread replies Oct 3 ~7:34\u20138:24 AM PT). No NEW feature-request threads.",
+    "Gmail: seongmindylan waitlist reply \u201cThx man Appreciate it.\u201d Sharon Android already covered Oct 2. 0 NEW in-app. Survey unchanged 39/25/2 of 66.",
+    "Sentry NEW hang singles 4X/4Y/4Z + fatal 50 (1 user, sheet open, build 33) \u2014 watching with prior 4M/4P/4Q\u20134W/4B/4D\u20134J. No auto-fix (singles / no clear repro).",
+    "PostHog: clip_upload Oct2=4; rageclicks Oct2 rose to 436; attachment Oct2=1. Clip-bloat Not firing (~1.56 MB/s); edge-loop Not firing (last_value 3). Linear MCP needs re-auth \u2014 dig issue skipped (nothing waiting). Still on you: TRY-118/215/197; TRY-217 Malcolm. Mac offline."
+  ],
+  "stats": {
+    "newInApp": 0,
+    "newDiscord": 8,
+    "newSurveyRows": 0,
+    "seanEllis": {
+      "very": 39,
+      "somewhat": 25,
+      "not": 2,
+      "n": 66
+    },
+    "sentryNew": [
+      "APPLE-IOS-4X",
+      "APPLE-IOS-4Y",
+      "APPLE-IOS-4Z",
+      "APPLE-IOS-50"
+    ],
+    "posthog": {
+      "uploadFailed": {
+        "2026-09-24": 4,
+        "2026-09-25": 2,
+        "2026-09-26": 0,
+        "2026-09-27": 11,
+        "2026-09-28": 25,
+        "2026-09-29": 6,
+        "2026-09-30": 2,
+        "2026-10-01": 10,
+        "2026-10-02": 4,
+        "2026-10-03": 0
+      },
+      "rageclicks": {
+        "2026-09-24": 241,
+        "2026-09-25": 325,
+        "2026-09-26": 223,
+        "2026-09-27": 363,
+        "2026-09-28": 365,
+        "2026-09-29": 429,
+        "2026-09-30": 297,
+        "2026-10-01": 358,
+        "2026-10-02": 436,
+        "2026-10-03": 274
+      },
+      "attachmentUploadFailed": {
+        "2026-09-29": 14,
+        "2026-09-30": 27,
+        "2026-10-01": 0,
+        "2026-10-02": 1,
+        "2026-10-03": 0
+      },
+      "clipBloatAlert": "Not firing",
+      "edgeLoopAlert": "Not firing",
+      "notes": "UTC day buckets. Oct 3 partial (~9:20 AM PT). clip_upload Oct2 full day 4. Rageclicks Oct2 436 (up). attachment Oct2=1 after quiet Oct1. Clip-bloat last_value ~1.56 MB/s; edge-loop last_value 3."
+    },
+    "rawQuotes": 9
+  },
+  "prStatus": {
+    "waiting": [],
+    "malcolmOpen": [
+      {
+        "pr": 267,
+        "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+        "url": "https://github.com/eddie-the-lou/latent/pull/267"
+      },
+      {
+        "pr": 164,
+        "title": "Today mini cards fit their durations; camera toggle stays put",
+        "url": "https://github.com/eddie-the-lou/latent/pull/164"
+      },
+      {
+        "pr": 162,
+        "title": "One frame rule for the timelapse clip",
+        "url": "https://github.com/eddie-the-lou/latent/pull/162"
+      },
+      {
+        "pr": 123,
+        "title": "Sequential dual-camera proof stills (draft)",
+        "url": "https://github.com/eddie-the-lou/latent/pull/123"
+      }
+    ],
+    "agentsSpinning": [],
+    "agentsFinished": [],
+    "clearedOvernight": [
+      {
+        "id": "pr-372-merged",
+        "title": "APPLE-IOS-4N pasteboard hang",
+        "via": "#372 merged"
+      },
+      {
+        "id": "try-243",
+        "title": "Oct 2 dig issue",
+        "via": "TRY-243 (yesterday; Linear re-auth blocked status check)"
+      }
+    ],
+    "mergedOvernight": [
+      {
+        "pr": 372,
+        "url": "https://github.com/eddie-the-lou/latent/pull/372",
+        "title": "Clipboard reads no longer freeze the UI (APPLE-IOS-4N)"
+      },
+      {
+        "pr": 373,
+        "url": "https://github.com/eddie-the-lou/latent/pull/373",
+        "title": "Wave points at App Store; compose skips people with accounts"
+      },
+      {
+        "pr": 374,
+        "url": "https://github.com/eddie-the-lou/latent/pull/374",
+        "title": "Replying to a reply names the person you tapped (TRY-240)"
+      },
+      {
+        "pr": 375,
+        "url": "https://github.com/eddie-the-lou/latent/pull/375",
+        "title": "Comment send button lights up yellow"
+      },
+      {
+        "pr": 376,
+        "url": "https://github.com/eddie-the-lou/latent/pull/376",
+        "title": "Inviter hears joined once setup ends; Add friend by id"
+      },
+      {
+        "pr": 377,
+        "url": "https://github.com/eddie-the-lou/latent/pull/377",
+        "title": "Growth: split Eddie's code into Discord and Email"
+      },
+      {
+        "pr": 378,
+        "url": "https://github.com/eddie-the-lou/latent/pull/378",
+        "title": "Group bars count private tag as Private (TRY-241)"
+      },
+      {
+        "pr": 379,
+        "url": "https://github.com/eddie-the-lou/latent/pull/379",
+        "title": "Stamp events with how far along + whose code"
+      },
+      {
+        "pr": 380,
+        "url": "https://github.com/eddie-the-lou/latent/pull/380",
+        "title": "Pull-to-refresh spam no longer stacks reloads (TRY-226)"
+      },
+      {
+        "pr": 381,
+        "url": "https://github.com/eddie-the-lou/latent/pull/381",
+        "title": "Paste friend link: You're in! Eddie wants you to lock in."
+      },
+      {
+        "pr": 382,
+        "url": "https://github.com/eddie-the-lou/latent/pull/382",
+        "title": "Growth: new people = got in with a code"
+      },
+      {
+        "pr": 383,
+        "url": "https://github.com/eddie-the-lou/latent/pull/383",
+        "title": "Invite gate: paste lands at once with green check"
+      },
+      {
+        "pr": 384,
+        "url": "https://github.com/eddie-the-lou/latent/pull/384",
+        "title": "Cover never decides clip shape (TRY-236)"
+      },
+      {
+        "pr": 385,
+        "url": "https://github.com/eddie-the-lou/latent/pull/385",
+        "title": "Email sign-up 6-digit code (TRY-252)"
+      },
+      {
+        "pr": 386,
+        "url": "https://github.com/eddie-the-lou/latent/pull/386",
+        "title": "Profile invite sheet = Friends invite row (TRY-247)"
+      },
+      {
+        "pr": 387,
+        "url": "https://github.com/eddie-the-lou/latent/pull/387",
+        "title": "Home Friends/Groups tabs; calendar/flame/self cards removed"
+      },
+      {
+        "pr": 388,
+        "url": "https://github.com/eddie-the-lou/latent/pull/388",
+        "title": "Bump to 1.0.3 (34) for the App Store"
+      }
+    ]
+  },
+  "actions": [
+    {
+      "id": "pr-372",
+      "title": "#372 APPLE-IOS-4N merged",
+      "status": "resolved",
+      "url": "https://github.com/eddie-the-lou/latent/pull/372"
+    },
+    {
+      "id": "email",
+      "title": "Email dig to eddie@weaive.app",
+      "status": "done"
+    },
+    {
+      "id": "archive",
+      "title": "Publish archive to latent-digs GitHub Pages",
+      "status": "done"
+    },
+    {
+      "id": "linear",
+      "title": "Linear dig issue skipped (nothing waiting + MCP needs re-auth)",
+      "status": "skipped"
+    }
+  ],
+  "bugs": [
+    {
+      "id": "apple-ios-4n",
+      "title": "Clipboard hang (APPLE-IOS-4N) \u2014 fix merged, waiting on build",
+      "status": "resolved",
+      "people": "10 Sentry users",
+      "summary": "#372 merged Oct 2. Sentry still unresolved until 1.0.3+ with the fix ships to testers. Last 4N events ~1 day ago.",
+      "url": "https://github.com/eddie-the-lou/latent/pull/372"
+    },
+    {
+      "id": "sentry-hangs",
+      "title": "Sentry hang singles 4X/4Y/4Z/50 (+ prior)",
+      "status": "watch",
+      "people": "various (1 each)",
+      "summary": "NEW: 4X/4Y/4Z hang singles + fatal 50 (improving_ab, sheet open, build 33). Watching with 4M/4P/4Q\u20134W and older 4B/4D\u20134J. No auto-fix on singles.",
+      "url": "https://weaive.sentry.io/issues/?project=apple-ios&query=is%3Aunresolved"
+    }
+  ],
+  "features": [
+    {
+      "id": "alarm-sound",
+      "title": "Change session timer alarm sound (hates iPhone default)",
+      "status": "backlog",
+      "people": "fxyzkhan",
+      "summary": "NEW Oct 3 replies clarify: when the timer goes off it plays the iPhone alarm; asking if change is possible; hates that sound. Peer said bigger fish to fry."
+    },
+    {
+      "id": "android",
+      "title": "Android version",
+      "status": "backlog",
+      "people": "AaravM0910, Android Advocate, Sharon, BonusEarther",
+      "summary": "Still loud from Oct 2; no NEW threads today. No auto-fix (platform)."
+    },
+    {
+      "id": "suki-clans",
+      "title": "Groups as clans + group on profile",
+      "status": "backlog",
+      "people": "suki",
+      "summary": "Still open from Sep 30 in-app."
+    },
+    {
+      "id": "try-217",
+      "title": "Daily streaks",
+      "status": "need",
+      "people": "Malcolm",
+      "summary": "TRY-217 High \u00b7 Todo (Malcolm). Linear status not re-checked (MCP auth).",
+      "url": "https://linear.app/trylatent/issue/TRY-217/daily-streaks"
+    }
+  ],
+  "bySource": {
+    "inApp": {
+      "new": 0,
+      "note": "No rows in public.feedback after 2026-10-02T16:25:00Z"
+    },
+    "discord": {
+      "new": 8,
+      "note": "Eddie L OK. NEW: 8 replies in fxyzkhan timer-alarm thread (hate iPhone alarm). #feature-requests/#general-chat no NEW product. #announcements/#tester-chat inaccessible."
+    },
+    "gmail": {
+      "new": 1,
+      "note": "seongmindylan waitlist thanks. Sharon Android already in Oct 2. No bug emails."
+    },
+    "survey": {
+      "newRows": 0,
+      "seanEllis": "39/25/2 of 66",
+      "buildOneNext": "still empty (66 blank)"
+    },
+    "sentry": {
+      "new": [
+        "APPLE-IOS-4X",
+        "APPLE-IOS-4Y",
+        "APPLE-IOS-4Z",
+        "APPLE-IOS-50"
+      ],
+      "note": "4N fix merged via #372; still unresolved in Sentry until build ships. NEW hang singles watching. Fatal 50 = sheet-open hang, 1 user build 33."
+    },
+    "posthog": {
+      "note": "clip_upload_failed \u2026/10/4/0(partial). Rageclicks \u2026/358/436/274(partial). attachment_upload_failed Oct2=1. Clip-bloat Not firing; edge-loop Not firing."
+    },
+    "linear": {
+      "note": "MCP requires re-auth \u2014 could not refresh TRY-118/215/197/217/243. Assumed still on Eddie: TRY-118 Urgent waitlist, TRY-215 YPT, TRY-197 cap table; TRY-217 Malcolm. No dig Linear issue (nothing waiting)."
+    }
+  },
+  "rawQuotes": [
+    {
+      "id": "gmail-seongmin-thanks",
+      "source": "gmail",
+      "username": "seongmindylan@gmail.com",
+      "when": "2026-10-02T19:50:37Z",
+      "whenPT": "Oct 2, 2026, 12:50 PM PT",
+      "quote": "Thx man\nAppreciate it",
+      "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1877968839707630969|msg-f:1877968839707630969"
+    },
+    {
+      "id": "discord-fxyzkhan-qmark",
+      "source": "discord",
+      "username": "fxyzkhan",
+      "channel": "#questions",
+      "whenPT": "Oct 3, 2026, ~7:34 AM PT",
+      "quote": "??"
+    },
+    {
+      "id": "discord-star-brutha",
+      "source": "discord",
+      "username": "\u2606",
+      "channel": "#questions",
+      "whenPT": "Oct 3, 2026, ~8:23 AM PT",
+      "quote": "brutha"
+    },
+    {
+      "id": "discord-star-ques",
+      "source": "discord",
+      "username": "\u2606",
+      "channel": "#questions",
+      "whenPT": "Oct 3, 2026, ~8:23 AM PT",
+      "quote": "what kind of ques is that"
+    },
+    {
+      "id": "discord-fxyzkhan-what",
+      "source": "discord",
+      "username": "fxyzkhan",
+      "channel": "#questions",
+      "whenPT": "Oct 3, 2026, ~8:24 AM PT",
+      "quote": "What?"
+    },
+    {
+      "id": "discord-star-bigger",
+      "source": "discord",
+      "username": "\u2606",
+      "channel": "#questions",
+      "whenPT": "Oct 3, 2026, ~8:24 AM PT",
+      "quote": "bigger fishes to fry in the app changes rn"
+    },
+    {
+      "id": "discord-fxyzkhan-iphone",
+      "source": "discord",
+      "username": "fxyzkhan",
+      "channel": "#questions",
+      "whenPT": "Oct 3, 2026, ~8:24 AM PT",
+      "quote": "When timer goes off the sound is of ipjone alarm"
+    },
+    {
+      "id": "discord-fxyzkhan-asking",
+      "source": "discord",
+      "username": "fxyzkhan",
+      "channel": "#questions",
+      "whenPT": "Oct 3, 2026, ~8:24 AM PT",
+      "quote": "I am asking if its possible not suggesting a change"
+    },
+    {
+      "id": "discord-fxyzkhan-hate",
+      "source": "discord",
+      "username": "fxyzkhan",
+      "channel": "#questions",
+      "whenPT": "Oct 3, 2026, ~8:24 AM PT",
+      "quote": "Hate that sound"
+    }
+  ],
+  "linearIssue": null
+}
