@@ -1,5 +1,10 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-04",
+    "title": "Latent daily review \u00b7 Oct 4",
+    "tldr": "No dig-fix PRs waiting. NEW in-app @lilwuchi (build 30): \u201cDraft didn\u2019t save and can\u2019t find it\u201d \u2014 DraftStore durability already shipped; App Store is 1.0.3 (34). Ask them to update; no new agent."
+  },
+  {
     "date": "2026-10-03",
     "title": "Latent feedback dig",
     "summaryStats": {
@@ -637,6 +642,11 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-04",
+      "title": "Latent daily review \u00b7 Oct 4",
+      "tldr": "No dig-fix PRs waiting. NEW in-app @lilwuchi (build 30): \u201cDraft didn\u2019t save and can\u2019t find it\u201d \u2014 DraftStore durability already shipped; App Store is 1.0.3 (34). Ask them to update; no new agent."
+    },
     {
       "date": "2026-10-03",
       "title": "Latent feedback dig",
@@ -75150,6 +75160,355 @@ window.DIGESTS = {
         "channel": "#questions",
         "whenPT": "Oct 3, 2026, ~8:24 AM PT",
         "quote": "Hate that sound"
+      }
+    ],
+    "linearIssue": null
+  },
+  "2026-10-04": {
+    "date": "2026-10-04",
+    "title": "Latent daily review \u00b7 Oct 4",
+    "generatedAt": "2026-10-04T16:22:26.369560+00:00",
+    "tldr": [
+      "No dig-fix PRs waiting. NEW in-app @lilwuchi (build 30): \u201cDraft didn\u2019t save and can\u2019t find it\u201d \u2014 DraftStore durability already shipped; App Store is 1.0.3 (34). Ask them to update; no new agent.",
+      "Merged overnight #389\u2013#393 (all Malcolm): Discord leaderboard commands, message copy/tappable links (TRY-256), server-owned friendships (TRY-255).",
+      "NEW Discord: eman wants a desktop app that tracks live sessions + Discord status (Zoe/Ethan hyped). SourLemown asked if people study only in Latent or also off-screen.",
+      "Gmail: 5 NEW Android/waitlist replies (Daniela, Tiago, Tejaswi, Andrew/Pixel, rbalintfi) + one confused waitlist (\u201cwhat ts is\u201d). Same lilwuchi draft relay. No video attachments.",
+      "Sentry NEW hang singles APPLE-IOS-51\u201354 (1 user each). APPLE-IOS-50 now 2 users. APPLE-IOS-4N still escalating on build 33 despite #372 merged \u2014 wait for 1.0.3 (34) rollout. No auto-fix.",
+      "PostHog: clip_upload Oct3=0, Oct4 partial spike 15 (watch). Rageclicks Oct3=453. Clip-bloat / Edge-loop Not firing. Survey unchanged 39/25/2 of 66. Linear MCP still needs re-auth. Mac offline."
+    ],
+    "plainTldr": [
+      "No dig-fix PRs waiting. NEW in-app @lilwuchi (build 30): \u201cDraft didn\u2019t save and can\u2019t find it\u201d \u2014 DraftStore durability already shipped; App Store is 1.0.3 (34). Ask them to update; no new agent.",
+      "Merged overnight #389\u2013#393 (all Malcolm): Discord leaderboard commands, message copy/tappable links (TRY-256), server-owned friendships (TRY-255).",
+      "NEW Discord: eman wants a desktop app that tracks live sessions + Discord status (Zoe/Ethan hyped). SourLemown asked if people study only in Latent or also off-screen.",
+      "Gmail: 5 NEW Android/waitlist replies (Daniela, Tiago, Tejaswi, Andrew/Pixel, rbalintfi) + one confused waitlist (\u201cwhat ts is\u201d). Same lilwuchi draft relay. No video attachments.",
+      "Sentry NEW hang singles APPLE-IOS-51\u201354 (1 user each). APPLE-IOS-50 now 2 users. APPLE-IOS-4N still escalating on build 33 despite #372 merged \u2014 wait for 1.0.3 (34) rollout. No auto-fix.",
+      "PostHog: clip_upload Oct3=0, Oct4 partial spike 15 (watch). Rageclicks Oct3=453. Clip-bloat / Edge-loop Not firing. Survey unchanged 39/25/2 of 66. Linear MCP still needs re-auth. Mac offline."
+    ],
+    "stats": {
+      "newInApp": 1,
+      "newDiscord": 9,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-51",
+        "APPLE-IOS-52",
+        "APPLE-IOS-53",
+        "APPLE-IOS-54"
+      ],
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-25": 2,
+          "2026-09-26": 0,
+          "2026-09-27": 11,
+          "2026-09-28": 25,
+          "2026-09-29": 6,
+          "2026-09-30": 2,
+          "2026-10-01": 10,
+          "2026-10-02": 4,
+          "2026-10-03": 0,
+          "2026-10-04": 15
+        },
+        "rageclicks": {
+          "2026-09-25": 325,
+          "2026-09-26": 223,
+          "2026-09-27": 363,
+          "2026-09-28": 365,
+          "2026-09-29": 429,
+          "2026-09-30": 297,
+          "2026-10-01": 358,
+          "2026-10-02": 437,
+          "2026-10-03": 453,
+          "2026-10-04": 219
+        },
+        "attachmentUploadFailed": {
+          "2026-09-29": 14,
+          "2026-09-30": 27,
+          "2026-10-01": 0,
+          "2026-10-02": 1,
+          "2026-10-03": 0,
+          "2026-10-04": 0
+        },
+        "clipBloatAlert": "Not firing",
+        "edgeLoopAlert": "Not firing",
+        "notes": "UTC day buckets. Oct 4 partial (~9:20 AM PT). clip_upload Oct3=0, Oct4 partial spike 15. Rageclicks Oct3=453. Clip-bloat ~1.56 MB/s; edge-loop last_value 0."
+      },
+      "rawQuotes": 11
+    },
+    "prStatus": {
+      "waiting": [],
+      "malcolmOpen": [
+        {
+          "pr": 267,
+          "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+          "url": "https://github.com/eddie-the-lou/latent/pull/267"
+        },
+        {
+          "pr": 164,
+          "title": "Today mini cards fit their durations; camera toggle stays put",
+          "url": "https://github.com/eddie-the-lou/latent/pull/164"
+        },
+        {
+          "pr": 162,
+          "title": "One frame rule for the timelapse clip",
+          "url": "https://github.com/eddie-the-lou/latent/pull/162"
+        },
+        {
+          "pr": 123,
+          "title": "Sequential dual-camera proof stills (draft)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/123"
+        }
+      ],
+      "agentsSpinning": [],
+      "agentsFinished": [],
+      "clearedOvernight": [],
+      "mergedOvernight": [
+        {
+          "pr": 389,
+          "url": "https://github.com/eddie-the-lou/latent/pull/389",
+          "title": "/leaderboard user:<@> shows where you rank this week"
+        },
+        {
+          "pr": 390,
+          "url": "https://github.com/eddie-the-lou/latent/pull/390",
+          "title": "All-time Discord leaderboards: /leaderboard people, /groupleaderboard groups"
+        },
+        {
+          "pr": 391,
+          "url": "https://github.com/eddie-the-lou/latent/pull/391",
+          "title": "/group is the all-time group leaderboard; /groupleaderboard is gone"
+        },
+        {
+          "pr": 392,
+          "url": "https://github.com/eddie-the-lou/latent/pull/392",
+          "title": "Hold a message to copy it, and links in messages are tappable (TRY-256)"
+        },
+        {
+          "pr": 393,
+          "url": "https://github.com/eddie-the-lou/latent/pull/393",
+          "title": "Friendships are server-owned: clients can no longer write the table (TRY-255)"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "triage-lilwuchi",
+        "title": "lilwuchi draft loss on build 30 \u2014 ask update to 1.0.3 (34); DraftStore already shipped",
+        "status": "noted"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "pending"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive to latent-digs GitHub Pages",
+        "status": "pending"
+      },
+      {
+        "id": "linear",
+        "title": "Linear dig issue skipped (nothing waiting + MCP needs re-auth)",
+        "status": "skipped"
+      },
+      {
+        "id": "agents",
+        "title": "No Cloud Agents (no clear multi-user actionable bug)",
+        "status": "skipped"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "lilwuchi-draft",
+        "title": "Draft didn\u2019t save / can\u2019t find it (@lilwuchi)",
+        "status": "mitigated",
+        "people": "lilwuchi",
+        "summary": "Build 1.0.1 (30). DraftStore durability already shipped; App Store is 1.0.3 (34). No new agent \u2014 confirm on latest build.",
+        "url": null
+      },
+      {
+        "id": "apple-ios-4n",
+        "title": "Clipboard hang (APPLE-IOS-4N) \u2014 fix merged, still on build 33",
+        "status": "watch",
+        "people": "11 Sentry users",
+        "summary": "#372 merged Oct 2. Still escalating on 1.0.2 (33); wait for 1.0.3 (34) rollout before another fix.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/372"
+      },
+      {
+        "id": "sentry-hangs",
+        "title": "Sentry hang singles 51\u201354 (+ prior 4X/4Y/4Z/50)",
+        "status": "watch",
+        "people": "various (1\u20132 each)",
+        "summary": "NEW: APPLE-IOS-51\u201354 single-user hangs (54 on build 34). APPLE-IOS-50 now 2 users. Watching with prior singles. No auto-fix.",
+        "url": "https://weaive.sentry.io/issues/?project=apple-ios&query=is%3Aunresolved"
+      }
+    ],
+    "features": [
+      {
+        "id": "desktop-discord-status",
+        "title": "Desktop app: live sessions + Discord status",
+        "status": "backlog",
+        "people": "eman, Zoe, Ethan",
+        "summary": "NEW Oct 3\u20134 in #feature-requests. eman asked for a computer app that tracks live sessions and shows on Discord status; Zoe/Ethan hyped."
+      },
+      {
+        "id": "android",
+        "title": "Android version",
+        "status": "backlog",
+        "people": "daniboehm0305, tiagoalexandre8442, tejaswisingh605, ajmcallister27, rbalintfi, AaravM0910, Sharon, BonusEarther",
+        "summary": "5 NEW waitlist Android asks today via Gmail (Pixel included). Still loud."
+      },
+      {
+        "id": "alarm-sound",
+        "title": "Change session timer alarm sound (hates iPhone default)",
+        "status": "backlog",
+        "people": "fxyzkhan",
+        "summary": "Still open from Oct 3; no NEW replies after cutoff today."
+      },
+      {
+        "id": "suki-clans",
+        "title": "Groups as clans + group on profile",
+        "status": "backlog",
+        "people": "suki",
+        "summary": "Still open from Sep 30 in-app."
+      },
+      {
+        "id": "try-217",
+        "title": "Daily streaks",
+        "status": "need",
+        "people": "Malcolm",
+        "summary": "TRY-217 High \u00b7 Todo (Malcolm). Linear status not re-checked (MCP auth).",
+        "url": "https://linear.app/trylatent/issue/TRY-217/daily-streaks"
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 1,
+        "note": "NEW @lilwuchi bug: Draft didn\u2019t save and can\u2019t find it (build 30). DraftStore durability known-shipped; prefer update to 1.0.3 (34)."
+      },
+      "discord": {
+        "new": 9,
+        "note": "Eddie L OK. NEW: eman desktop/Discord-status FR (+ Zoe/Ethan). SourLemown study exclusivity question. #general-chat also had non-product chatter. #announcements/#tester-chat inaccessible."
+      },
+      "gmail": {
+        "new": 7,
+        "note": "lilwuchi draft relay + 5 Android asks + 1 confused waitlist. No video attachments. No PostHog alert mail."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "buildOneNext": "still empty (66 blank)"
+      },
+      "sentry": {
+        "new": [
+          "APPLE-IOS-51",
+          "APPLE-IOS-52",
+          "APPLE-IOS-53",
+          "APPLE-IOS-54"
+        ],
+        "note": "4N still unresolved on build 33 despite #372. NEW singles 51\u201354 watching. 50 now 2 users."
+      },
+      "posthog": {
+        "note": "clip_upload Oct3=0 Oct4=15(partial spike). Rageclicks Oct3=453. attachment quiet. Clip-bloat & edge-loop Not firing."
+      },
+      "linear": {
+        "note": "MCP requires re-auth \u2014 could not refresh TRY-118/215/197/217. Assumed still on Eddie: TRY-118 Urgent waitlist, TRY-215 YPT, TRY-197 cap table; TRY-217 Malcolm. No dig Linear issue (nothing waiting)."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "inapp-lilwuchi-draft",
+        "source": "in-app",
+        "username": "lilwuchi",
+        "when": "2026-10-03T22:46:11.864731Z",
+        "whenPT": "Oct 3, 2026, 3:46 PM PT",
+        "build": "1.0.1 (30)",
+        "kind": "bug",
+        "quote": "Draft didn\u2019t save and can\u2019t find it"
+      },
+      {
+        "id": "gmail-aliasgharsyed275",
+        "source": "gmail",
+        "username": "aliasgharsyed275@gmail.com",
+        "when": "2026-10-04T12:46:36Z",
+        "whenPT": "Oct 4, 2026, 5:46 AM PT",
+        "quote": "Yo i do not remember what ts is can u remind me"
+      },
+      {
+        "id": "gmail-daniboehm0305",
+        "source": "gmail",
+        "username": "daniboehm0305@gmail.com",
+        "when": "2026-10-04T12:12:11Z",
+        "whenPT": "Oct 4, 2026, 5:12 AM PT",
+        "quote": "Hii, thank you so much for the invite, unfortunately I have an android so I can't download it, but let me know if you'd make an android version too that would be awesome!!\nHope to hear from you again and thanks!\nDaniela"
+      },
+      {
+        "id": "gmail-tiagoalexandre8442",
+        "source": "gmail",
+        "username": "tiagoalexandre8442@escolasdesatao.pt",
+        "when": "2026-10-03T20:28:10Z",
+        "whenPT": "Oct 3, 2026, 1:28 PM PT",
+        "quote": "I know this is a pre recorded email, so you probably won't see this, but is there a android version coming out? I signed to get the app, but I realized it was only for IOS. Thanks"
+      },
+      {
+        "id": "gmail-tejaswisingh605",
+        "source": "gmail",
+        "username": "tejaswisingh605@gmail.com",
+        "when": "2026-10-03T20:13:34Z",
+        "whenPT": "Oct 3, 2026, 1:13 PM PT",
+        "quote": "Please please pleaseee make it available on android os as well."
+      },
+      {
+        "id": "gmail-ajmcallister27",
+        "source": "gmail",
+        "username": "ajmcallister27@gmail.com",
+        "when": "2026-10-03T19:43:19Z",
+        "whenPT": "Oct 3, 2026, 12:43 PM PT",
+        "quote": "Welp I have a Pixel phone, so lmk when you get it into the Play Store!\n\nAndrew"
+      },
+      {
+        "id": "gmail-rbalintfi",
+        "source": "gmail",
+        "username": "rbalintfi@gmail.com",
+        "when": "2026-10-03T19:42:03Z",
+        "whenPT": "Oct 3, 2026, 12:42 PM PT",
+        "quote": "Hi,\n\nI have a quick question. Are you planning to release it on android anytime soon?\n\nThanks in advance for your response."
+      },
+      {
+        "id": "discord-eman-desktop",
+        "source": "discord",
+        "username": "eman",
+        "channel": "#feature-requests",
+        "whenPT": "Oct 3, 2026, 9:32 AM PT",
+        "quote": "Make a computer app that tracks live sessions and can be presented on discord status and others"
+      },
+      {
+        "id": "discord-zoe-cool",
+        "source": "discord",
+        "username": "Zoe",
+        "channel": "#feature-requests",
+        "whenPT": "Oct 3, 2026, 10:55 AM PT",
+        "quote": "Oooo that'd be cool"
+      },
+      {
+        "id": "discord-ethan-hype",
+        "source": "discord",
+        "username": "Ethan",
+        "channel": "#feature-requests",
+        "whenPT": "Oct 4, 2026, 12:19 AM PT",
+        "quote": "THIS IS HYPE"
+      },
+      {
+        "id": "discord-sourlemown-study",
+        "source": "discord",
+        "username": "SourLemown\ud83c\udf4b",
+        "channel": "#general-chat",
+        "whenPT": "Oct 4, 2026, 1:52 AM PT",
+        "quote": "do y'all study exclusively while using latent or is there some off screen grinding?"
       }
     ],
     "linearIssue": null
