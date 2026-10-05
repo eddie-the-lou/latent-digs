@@ -13,6 +13,8 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,
 .sidebar{background:rgba(20,24,31,.95);border-right:1px solid var(--border);padding:20px 12px;position:sticky;top:0;height:100vh;overflow:auto}
 .brand{font-weight:750;margin:0 0 2px;letter-spacing:-.02em}
 .brand-sub{color:var(--muted);font-size:.8rem;margin-bottom:16px}
+.act-link{display:block;margin:0 0 6px;padding:9px 12px;border-radius:10px;border:1px solid rgba(124,156,255,.35);background:rgba(124,156,255,.10);color:var(--text);text-decoration:none;font-weight:650;font-size:.9rem}
+.act-link:hover{background:rgba(124,156,255,.18)}
 .nav-label{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;margin:14px 6px 8px}
 .date-btn{display:block;width:100%;text-align:left;background:transparent;border:1px solid transparent;color:var(--text);padding:10px 12px;border-radius:10px;cursor:pointer;margin-bottom:4px}
 .date-btn:hover{background:rgba(255,255,255,.03);border-color:var(--border)}
@@ -70,6 +72,7 @@ footer{margin-top:28px;color:var(--muted);font-size:.8rem}
   <aside class="sidebar">
     <div class="brand">Unpaid Intern</div>
     <div class="brand-sub">Daily Latent review</div>
+    <a class="act-link" href="./activation/">Activation report →</a>
     <div class="nav-label">Past reviews</div>
     <div id="archive"></div>
   </aside>
