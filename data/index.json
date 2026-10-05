@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-05",
+    "title": "Latent daily review \u00b7 Oct 5",
+    "tldr": "1 fix waiting on you: #402 stops the app freezing for 7\u20138 seconds when it updates the red badge number on its icon (Sentry APPLE-IOS-47, 11 users). Draft PR by a Cloud Agent; no CI checks have run yet."
+  },
+  {
     "date": "2026-10-04",
     "title": "Latent daily review \u00b7 Oct 4",
     "tldr": "No dig-fix PRs waiting. NEW in-app @lilwuchi (build 30): \u201cDraft didn\u2019t save and can\u2019t find it\u201d \u2014 DraftStore durability already shipped; App Store is 1.0.3 (34). Ask them to update; no new agent."

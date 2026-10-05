@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Latent daily review · 2026-10-05</title></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;line-height:1.45;color:#111;max-width:680px;margin:0 auto;padding:20px">
+<p style="font-size:13px;color:#555;margin:0 0 8px">From Unpaid Intern · plain English · ~9:30 AM PT dig</p>
+<h1 style="font-size:22px;margin:0 0 12px">Latent daily review · Oct 5 — 1 fix waiting</h1>
+<p style="background:#fff8d6;border:1px solid #f5c542;padding:12px 14px;border-radius:8px">
+  <strong>Live archive (bookmark this):</strong>
+  <a href="https://eddie-the-lou.github.io/latent-digs/">https://eddie-the-lou.github.io/latent-digs/</a><br>
+  <strong>Today’s review:</strong>
+  <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-10-05">https://eddie-the-lou.github.io/latent-digs/#/2026-10-05</a>
+</p>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">What I did today</h2>
+<h3 style="font-size:15px;margin:14px 0 6px">Fixes I opened today</h3>
+<ul>
+  <li><strong><a href="https://github.com/eddie-the-lou/latent/pull/402">#402 Updating the app badge no longer freezes the app (APPLE-IOS-47)</a></strong> (draft PR)
+    <ul>
+      <li><strong>Source:</strong> Sentry <a href="https://weaive.sentry.io/issues/?project=apple-ios&query=APPLE-IOS-47">APPLE-IOS-47</a> — 11 users, 12 events since Sep 25; 3 users in the last 24h on builds 30 and 33. Nobody wrote in.</li>
+      <li><strong>What it fixes:</strong> When the app updated the red badge number on its icon it waited on iOS’s notification service while holding the screen, freezing 7–8 s. The fix moves that onto the app’s existing background queue for notifications (same one used for the APPLE-IOS-36 fix). +196/−17 across 3 files with new NotificationQueueTests.</li>
+      <li><strong>How to check:</strong> CI and unit tests pass (no checks had run on head <code>17cd0d2</code> as of ~9:38 AM PT; it’s a draft). After the next build, APPLE-IOS-47 should get no new events on it. Smoke test on any phone: open Activity, read notifications, confirm the icon badge clears with no stutter.</li>
+      <li><strong>Agent:</strong> <a href="https://cursor.com/agents/bc-782d6a18-04b1-5316-81bf-963a4d6205ab">https://cursor.com/agents/bc-782d6a18-04b1-5316-81bf-963a4d6205ab</a> (Grok 4.6, finished)</li>
+    </ul>
+  </li>
+</ul>
+<h3 style="font-size:15px;margin:14px 0 6px">Merged overnight</h3>
+<ul><li><strong><a href="https://github.com/eddie-the-lou/latent/pull/395">#395</a> — A failed timelapse export never deletes the footage (TRY-257)</strong> <span style="color:#666">(Malcolm · Oct 4, 9:50 AM PT)</span> — Fixes lilwuchi’s lost 91-min recording (about 6 users / 9 sessions in 30 days).</li><li><a href="https://github.com/eddie-the-lou/latent/pull/394">#394</a> — Resume and Finish stay tappable when iOS leaves a keyboard gap behind <span style="color:#666">(Malcolm · Oct 4, 9:40 AM PT)</span> — A tester’s camera-off session had dead Finish/Resume after the Lock Screen (build 33, rage clicks).</li><li><a href="https://github.com/eddie-the-lou/latent/pull/398">#398</a> — The feed keeps your spot when you leave the app and come back (TRY-260) <span style="color:#666">(Malcolm · Oct 4, 3:35 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/396">#396</a> — Group chats can block a member from the menu (TRY-237) <span style="color:#666">(Malcolm · Oct 4, 3:01 PM PT)</span> — Needed for App Store guideline 1.2.</li><li><a href="https://github.com/eddie-the-lou/latent/pull/399">#399</a> — Sign in with no account goes to the code screen; the code screen is just the field <span style="color:#666">(you · Oct 4, 4:32 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/400">#400</a> — Save opens on a tag so Post is always lit; Draft is a small round button that confirms &quot;Draft saved&quot; <span style="color:#666">(you · Oct 4, 5:24 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/401">#401</a> — The Groups empty state fits on one screen without scrolling <span style="color:#666">(you · Oct 4, 5:19 PM PT)</span></li></ul>
+<h3 style="font-size:15px;margin:14px 0 6px">Still on you</h3>
+<ul>
+  <li>Review/merge <a href="https://github.com/eddie-the-lou/latent/pull/402">#402</a> once CI is green.</li>
+  <li><a href="https://linear.app/trylatent/issue/TRY-258">TRY-258</a> “groups with a lot of people look bad on the groups page” — Malcolm assigned it to you Oct 5, 8:02 AM PT.</li>
+  <li>Reply to <strong>juwayriyah2404@gmail.com</strong> (asked about Android / non-Apple devices).</li>
+  <li><strong>Reconnect Linear.</strong> Linear issue not created: Linear needs reconnecting.</li>
+  <li>Carried over (statuses not refreshed while Linear is disconnected): TRY-118 waitlist emails (Urgent), TRY-215 YPT study session, TRY-197 cap table. TRY-217 streaks on Malcolm. Your <a href="https://github.com/eddie-the-lou/latent/pull/397">#397</a> activation report PR is still open (FYI).</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Ready for you to approve</h2>
+<ul><li><a href="https://github.com/eddie-the-lou/latent/pull/402">#402</a> — badge freeze fix (APPLE-IOS-47, 11 users). Draft; mark ready and merge once CI is green.</li></ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Broken / confusing</h2>
+<ul>
+  <li><strong>App freezes 7–8 s when it updates the icon badge</strong> (APPLE-IOS-47, 11 users) — fix waiting in #402.</li>
+  <li><strong>lilwuchi’s lost recording</strong> — fixed on main by <a href="https://github.com/eddie-the-lou/latent/pull/395">#395</a>; ships in the next build after 1.0.3 (34).</li>
+  <li><strong>Clipboard freeze APPLE-IOS-4N</strong> — no events for ~2 days; build 34 looks like it’s fixing it.</li>
+  <li><strong>4 new single-user freezes</strong> <a href="https://weaive.sentry.io/issues/?project=apple-ios&query=is%3Aunresolved+lastSeen%3A-24h">APPLE-IOS-55–58</a> (56 and 58 on build 34) — watching, no auto-fix.</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Things people want</h2>
+<ul>
+  <li><strong>Desktop app that screen-records</strong> (1qrobo1 NEW; clusters with eman’s desktop + Discord-status ask, Zoe, Ethan) — record the computer screen instead of the camera, maybe a browser extension showing which sites you were on. Malcolm: “looking into it.”</li>
+  <li><strong>Android / non-Apple</strong> — +2 today (juwayriyah2404 email, Lando on Discord). Still the loudest ask.</li>
+  <li><strong>Catch AFK recording that farms hours</strong> (Suki) — Malcolm says more gamification is coming; ranks may be local to friends/groups.</li>
+  <li><strong>Big groups look bad on the Groups page</strong> — TRY-258, now yours.</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">What they actually wrote</h2>
+<p style="font-size:13px;color:#555">Every new item, word for word. No new in-app feedback or survey responses today.</p>
+<h3 style="font-size:15px;margin:14px 0 6px">Email</h3>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">juwayriyah2404@gmail.com · Oct 5, 2026, 7:47 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px">Heyyyyy.I just wanted to ask if this app would be available on other devices than Apple. Would appreciate your help.</div></blockquote>
+<h3 style="font-size:15px;margin:14px 0 6px">Discord</h3>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">1qrobo1 · #feature-requests › Desktop App with screen recording · Oct 4, 2026, 4:03 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">Like instead of a camera recording the screen the computer could record the screen without draining battery life.</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Malcolm McDonald · #feature-requests › Desktop App with screen recording · Oct 4, 2026, 4:10 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">@1qrobo1 say more!</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">1qrobo1 · #feature-requests › Desktop App with screen recording · Oct 4, 2026, 4:34 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">So like any app screen records the screen and basically be like a port of the mobile version of latent with all the same features and it could maybe even connect with a browser extension to show witch sites you were on or smth like that</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Malcolm McDonald · #feature-requests › Desktop App with screen recording · Oct 4, 2026, 4:35 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">It&#x27;s definitely something we&#x27;ve thought about! I don&#x27;t want to promise anything, but we&#x27;re looking into doing something like this!!!</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Malcolm McDonald · #feature-requests › Gold league · Oct 4, 2026, 4:12 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">we plan on adding more gamification! not sure if it will be ranks but definitely more</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Suki · #feature-requests › Gold league · Oct 4, 2026, 4:14 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">also something is needed to catch people just afk record and gain hours :/</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Malcolm McDonald · #feature-requests › Gold league · Oct 4, 2026, 4:15 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">ranks might be more localized to your friends/groups</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Ethan · #feature-requests › Gold league · Oct 4, 2026, 7:39 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">YIPPEEEE</div><div style="font-size:11px;color:#888;margin-top:4px">Author inferred as Ethan (message grouped under the thread starter; name not shown on the line).</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">j3 · #general-chat · Oct 4, 2026, 12:16 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">i dont gotta update the app or nun right</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Malcolm McDonald · #general-chat · Oct 4, 2026, 12:18 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">It depends on whether you have auto update on! if there is a version we want you to get, it will tell you to update in the app!</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">veeraj · #general-chat · Oct 4, 2026, 12:35 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">I remember commenting on an instagram reel and I got the dm for the link, but I never did anything. Then i was scrolling through old DMs and remembered about this. Just wanna say thanks to the devs bc this app is incredible and has turned studying into a competitive game.</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Lando · #general-chat · Oct 4, 2026, 3:25 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">When is it going to be released on Android</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Malcolm McDonald · #announcements · Oct 4, 2026, 4:21 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">Yo im doing a study session Monday (tomorrow) at 7:30pm PT in 🔊Lock in
+Thats 7:30 PM your time
+Muted and cameras on
+Come lock in with me
+React if interested</div></blockquote>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Discord</h2>
+<p>Read as Eddie L. NEW #feature-requests thread “Desktop App with screen recording” (1qrobo1, 4 messages) and 8 new replies in “Gold league”. #general-chat had Lando’s Android question, veeraj’s praise and j3’s update question (Malcolm answered), plus 55 messages of social chatter (not quoted). #announcements (now accessible): Malcolm’s study session tonight, Mon Oct 5, 7:30 PM PT in Lock in. #questions: nothing new. #tester-chat: inaccessible. The “YIPPEEEE” author was inferred as Ethan.</p>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Survey</h2>
+<p>No new rows. Sean Ellis unchanged: <strong>39 very / 25 somewhat / 2 not</strong>, of 66 Active Users. “Build one next” is still empty.</p>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Sentry</h2>
+<ul>
+  <li><strong>Auto-fixed:</strong> APPLE-IOS-47 badge freeze → #402.</li>
+  <li><strong>NEW singles (watching):</strong> 55 (6–7 s freeze, build 33), 56 (FATAL freeze at launch, build 34, iPhone 13), 57 (FATAL, old build 30), 58 (6 s freeze after opening, build 34, mannywitdafatty).</li>
+  <li><strong>4N clipboard freeze:</strong> quiet since Oct 3, 10:32 AM PT.</li>
+  <li><strong>Recurring:</strong> APPLE-IOS-35 long idle “hang” (24 users; 5 in last 24h) looks like a locked-app artefact; F server 500s (send_friend_request P0002); A iOS kills on 34 (2 users); 50 now 3 users; 4X 3 users; 3C 4 users.</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">PostHog</h2>
+<ul>
+  <li>clip_upload_failed: Oct 4 = 15, all on ancient build 10 (network timeouts / connection lost, 3 people); Oct 5 = 0 so far.</li>
+  <li>attachment_upload_failed: Oct 5 = 2 (one each on builds 33 and 34).</li>
+  <li>Rage clicks: Oct 4 = 444, spread across generic screens; no hot button.</li>
+  <li>Clip-bloat and edge-loop alerts: Not firing.</li>
+</ul>
+
+<p style="font-size:12px;color:#666;margin-top:28px">0 new in-app feedback. Survey unchanged. Linear issue not created: Linear needs reconnecting. Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-10-05">https://eddie-the-lou.github.io/latent-digs/#/2026-10-05</a></p>
+</body></html>

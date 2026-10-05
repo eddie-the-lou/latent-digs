@@ -1,0 +1,545 @@
+{
+  "date": "2026-10-05",
+  "title": "Latent daily review \u00b7 Oct 5",
+  "generatedAt": "2026-10-05T16:41:54.140136+00:00",
+  "tldr": [
+    "1 fix waiting on you: #402 stops the app freezing for 7\u20138 seconds when it updates the red badge number on its icon (Sentry APPLE-IOS-47, 11 users). Draft PR by a Cloud Agent; no CI checks have run yet.",
+    "Merged overnight: #394\u2013#401 (except your #397). Big one: #395 means a failed timelapse export no longer deletes the footage \u2014 that\u2019s lilwuchi\u2019s lost 91-min recording from yesterday.",
+    "NEW Discord: 1qrobo1 wants a desktop app that screen-records instead of using the camera, maybe with a browser extension showing which sites you were on (Malcolm: \u201clooking into it\u201d). Clusters with eman\u2019s desktop + Discord-status ask. Suki: need something to catch people who AFK-record to farm hours.",
+    "Android keeps coming: juwayriyah2404 emailed asking about non-Apple devices; Lando asked on Discord. veeraj: \u201cthis app is incredible and has turned studying into a competitive game.\u201d",
+    "Malcolm assigned you TRY-258 (big groups look bad on the Groups page). Linear issue for this dig not created: Linear needs reconnecting.",
+    "Sentry: 4 new single-user freezes (APPLE-IOS-55\u201358; 56 and 58 on build 34) \u2014 watching. Clipboard freeze 4N quiet ~2 days. No new in-app feedback, survey unchanged 39/25/2 of 66, PostHog alerts not firing."
+  ],
+  "plainTldr": [
+    "1 fix waiting on you: #402 stops the app freezing for 7\u20138 seconds when it updates the red badge number on its icon (Sentry APPLE-IOS-47, 11 users). Draft PR by a Cloud Agent; no CI checks have run yet.",
+    "Merged overnight: #394\u2013#401 (except your #397). Big one: #395 means a failed timelapse export no longer deletes the footage \u2014 that\u2019s lilwuchi\u2019s lost 91-min recording from yesterday.",
+    "NEW Discord: 1qrobo1 wants a desktop app that screen-records instead of using the camera, maybe with a browser extension showing which sites you were on (Malcolm: \u201clooking into it\u201d). Clusters with eman\u2019s desktop + Discord-status ask. Suki: need something to catch people who AFK-record to farm hours.",
+    "Android keeps coming: juwayriyah2404 emailed asking about non-Apple devices; Lando asked on Discord. veeraj: \u201cthis app is incredible and has turned studying into a competitive game.\u201d",
+    "Malcolm assigned you TRY-258 (big groups look bad on the Groups page). Linear issue for this dig not created: Linear needs reconnecting.",
+    "Sentry: 4 new single-user freezes (APPLE-IOS-55\u201358; 56 and 58 on build 34) \u2014 watching. Clipboard freeze 4N quiet ~2 days. No new in-app feedback, survey unchanged 39/25/2 of 66, PostHog alerts not firing."
+  ],
+  "stats": {
+    "newInApp": 0,
+    "newDiscord": 13,
+    "newSurveyRows": 0,
+    "seanEllis": {
+      "very": 39,
+      "somewhat": 25,
+      "not": 2,
+      "n": 66
+    },
+    "sentryNew": [
+      "APPLE-IOS-55",
+      "APPLE-IOS-56",
+      "APPLE-IOS-57",
+      "APPLE-IOS-58"
+    ],
+    "posthog": {
+      "uploadFailed": {
+        "2026-09-26": 0,
+        "2026-09-27": 11,
+        "2026-09-28": 25,
+        "2026-09-29": 6,
+        "2026-09-30": 2,
+        "2026-10-01": 10,
+        "2026-10-02": 4,
+        "2026-10-03": 0,
+        "2026-10-04": 15,
+        "2026-10-05": 0
+      },
+      "rageclicks": {
+        "2026-09-26": 223,
+        "2026-09-27": 363,
+        "2026-09-28": 365,
+        "2026-09-29": 429,
+        "2026-09-30": 297,
+        "2026-10-01": 358,
+        "2026-10-02": 437,
+        "2026-10-03": 455,
+        "2026-10-04": 444,
+        "2026-10-05": 346
+      },
+      "attachmentUploadFailed": {
+        "2026-09-29": 14,
+        "2026-09-30": 27,
+        "2026-10-01": 0,
+        "2026-10-02": 1,
+        "2026-10-03": 0,
+        "2026-10-04": 0,
+        "2026-10-05": 2
+      },
+      "clipBloatAlert": "Not firing",
+      "edgeLoopAlert": "Not firing",
+      "notes": "UTC day buckets. Oct 5 partial (~9:35 AM PT). Oct 4 clip_upload 15 all on ancient build 10 (timeouts / connection lost from 3 people) \u2014 network flakiness, not a current bug. Oct 5 attachment failures: 1 on 34, 1 on 33. Clip-bloat last 1.565 MB/s (threshold 4); edge-loop last 0."
+    },
+    "rawQuotes": 14
+  },
+  "prStatus": {
+    "waiting": [
+      {
+        "pr": 402,
+        "title": "Updating the app badge no longer freezes the app (APPLE-IOS-47)",
+        "url": "https://github.com/eddie-the-lou/latent/pull/402",
+        "reporter": "Sentry APPLE-IOS-47 (11 users, 12 events; 3 users in last 24h on builds 30 & 33)",
+        "agent": "https://cursor.com/agents/bc-782d6a18-04b1-5316-81bf-963a4d6205ab",
+        "plain": "When the app updated the red badge number on its icon it waited on iOS\u2019s notification service while holding the screen, freezing 7\u20138 s. The fix moves that onto the app\u2019s existing background queue for notifications (same one used for the APPLE-IOS-36 fix). +196/\u221217 across 3 files with new NotificationQueueTests.",
+        "check": "CI/unit tests green (none had run on head 17cd0d2 as of ~9:38 AM PT; PR is a draft). After the next build, APPLE-IOS-47 should get no new events on it. Smoke test: open Activity, read notifications, icon badge clears with no stutter.",
+        "draft": true
+      }
+    ],
+    "malcolmOpen": [
+      {
+        "pr": 267,
+        "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+        "url": "https://github.com/eddie-the-lou/latent/pull/267"
+      },
+      {
+        "pr": 164,
+        "title": "Today mini cards fit their durations; camera toggle stays put",
+        "url": "https://github.com/eddie-the-lou/latent/pull/164"
+      },
+      {
+        "pr": 162,
+        "title": "One frame rule for the timelapse clip",
+        "url": "https://github.com/eddie-the-lou/latent/pull/162"
+      },
+      {
+        "pr": 123,
+        "title": "Sequential dual-camera proof stills (draft)",
+        "url": "https://github.com/eddie-the-lou/latent/pull/123"
+      }
+    ],
+    "eddieOpen": [
+      {
+        "pr": 397,
+        "title": "Activation report (daily), plus two analytics fixes",
+        "url": "https://github.com/eddie-the-lou/latent/pull/397",
+        "note": "FYI only"
+      }
+    ],
+    "agentsSpinning": [],
+    "agentsFinished": [
+      {
+        "id": "bc-782d6a18-04b1-5316-81bf-963a4d6205ab",
+        "title": "APPLE-IOS-47 badge freeze",
+        "pr": 402,
+        "url": "https://cursor.com/agents/bc-782d6a18-04b1-5316-81bf-963a4d6205ab",
+        "model": "Grok 4.6"
+      }
+    ],
+    "clearedOvernight": [
+      {
+        "id": "lilwuchi-draft",
+        "title": "lilwuchi lost recording",
+        "via": "#395 merged (TRY-257)"
+      },
+      {
+        "id": "apple-ios-4n",
+        "title": "Clipboard freeze APPLE-IOS-4N",
+        "via": "quiet ~2 days after #372 / build 34"
+      }
+    ],
+    "mergedOvernight": [
+      {
+        "pr": 395,
+        "url": "https://github.com/eddie-the-lou/latent/pull/395",
+        "title": "A failed timelapse export never deletes the footage (TRY-257)",
+        "by": "Malcolm \u00b7 Oct 4, 9:50 AM PT",
+        "note": "Fixes lilwuchi\u2019s lost 91-min recording (about 6 users / 9 sessions in 30 days)."
+      },
+      {
+        "pr": 394,
+        "url": "https://github.com/eddie-the-lou/latent/pull/394",
+        "title": "Resume and Finish stay tappable when iOS leaves a keyboard gap behind",
+        "by": "Malcolm \u00b7 Oct 4, 9:40 AM PT",
+        "note": "A tester\u2019s camera-off session had dead Finish/Resume after the Lock Screen (build 33, rage clicks)."
+      },
+      {
+        "pr": 398,
+        "url": "https://github.com/eddie-the-lou/latent/pull/398",
+        "title": "The feed keeps your spot when you leave the app and come back (TRY-260)",
+        "by": "Malcolm \u00b7 Oct 4, 3:35 PM PT"
+      },
+      {
+        "pr": 396,
+        "url": "https://github.com/eddie-the-lou/latent/pull/396",
+        "title": "Group chats can block a member from the menu (TRY-237)",
+        "by": "Malcolm \u00b7 Oct 4, 3:01 PM PT",
+        "note": "Needed for App Store guideline 1.2."
+      },
+      {
+        "pr": 399,
+        "url": "https://github.com/eddie-the-lou/latent/pull/399",
+        "title": "Sign in with no account goes to the code screen; the code screen is just the field",
+        "by": "you \u00b7 Oct 4, 4:32 PM PT"
+      },
+      {
+        "pr": 400,
+        "url": "https://github.com/eddie-the-lou/latent/pull/400",
+        "title": "Save opens on a tag so Post is always lit; Draft is a small round button that confirms \"Draft saved\"",
+        "by": "you \u00b7 Oct 4, 5:24 PM PT"
+      },
+      {
+        "pr": 401,
+        "url": "https://github.com/eddie-the-lou/latent/pull/401",
+        "title": "The Groups empty state fits on one screen without scrolling",
+        "by": "you \u00b7 Oct 4, 5:19 PM PT"
+      }
+    ],
+    "stillOnYou": [
+      {
+        "id": "pr-402",
+        "title": "Review/merge #402 once CI is green",
+        "url": "https://github.com/eddie-the-lou/latent/pull/402"
+      },
+      {
+        "id": "try-258",
+        "title": "TRY-258 groups with a lot of people look bad on the groups page (assigned by Malcolm Oct 5, 8:02 AM PT)",
+        "url": "https://linear.app/trylatent/issue/TRY-258"
+      },
+      {
+        "id": "reply-juwayriyah",
+        "title": "Reply to juwayriyah2404 (Android / other devices)"
+      },
+      {
+        "id": "linear-reconnect",
+        "title": "Reconnect Linear (MCP needs re-auth) so the dig can create its daily issue"
+      },
+      {
+        "id": "try-118",
+        "title": "TRY-118 waitlist emails (Urgent) \u2014 status not refreshed"
+      },
+      {
+        "id": "try-215",
+        "title": "TRY-215 YPT study session \u2014 status not refreshed"
+      },
+      {
+        "id": "try-197",
+        "title": "TRY-197 cap table \u2014 status not refreshed"
+      }
+    ]
+  },
+  "actions": [
+    {
+      "id": "pr-402",
+      "title": "#402 APPLE-IOS-47 badge freeze fix ready (draft)",
+      "status": "waiting",
+      "url": "https://github.com/eddie-the-lou/latent/pull/402"
+    },
+    {
+      "id": "try-258",
+      "title": "TRY-258 big groups look bad on Groups page (assigned to you)",
+      "status": "waiting",
+      "url": "https://linear.app/trylatent/issue/TRY-258"
+    },
+    {
+      "id": "reply-juwayriyah",
+      "title": "Reply to juwayriyah2404 about Android / other devices",
+      "status": "waiting"
+    },
+    {
+      "id": "email",
+      "title": "Email dig to eddie@weaive.app",
+      "status": "done"
+    },
+    {
+      "id": "archive",
+      "title": "Publish archive to latent-digs GitHub Pages",
+      "status": "done"
+    },
+    {
+      "id": "linear",
+      "title": "Linear issue not created: Linear needs reconnecting",
+      "status": "skipped"
+    },
+    {
+      "id": "agents",
+      "title": "Cloud Agent bc-782d6a18 (Grok 4.6) opened #402",
+      "status": "done",
+      "url": "https://cursor.com/agents/bc-782d6a18-04b1-5316-81bf-963a4d6205ab"
+    }
+  ],
+  "bugs": [
+    {
+      "id": "apple-ios-47",
+      "title": "App freezes 7\u20138 s while updating the icon badge (APPLE-IOS-47)",
+      "status": "waiting",
+      "people": "11 Sentry users",
+      "summary": "Fix in draft #402 (moves badge update off the main thread onto the notification queue). 3 users hit it in the last 24h on builds 30 & 33.",
+      "url": "https://github.com/eddie-the-lou/latent/pull/402"
+    },
+    {
+      "id": "lilwuchi-recording",
+      "title": "Failed timelapse export deleted the footage (lilwuchi, TRY-257)",
+      "status": "resolved",
+      "people": "lilwuchi (~6 users / 9 sessions in 30 days)",
+      "summary": "Fixed on main via #395 (Malcolm, Oct 4). Ships in the next build after 1.0.3 (34).",
+      "url": "https://github.com/eddie-the-lou/latent/pull/395"
+    },
+    {
+      "id": "apple-ios-4n",
+      "title": "Clipboard freeze (APPLE-IOS-4N)",
+      "status": "watch",
+      "people": "11 Sentry users",
+      "summary": "No events for ~2 days (last Oct 3, 10:32 AM PT on build 33). Build 34 with #372 looks to be fixing it. Sentry still labels it escalating.",
+      "url": "https://github.com/eddie-the-lou/latent/pull/372"
+    },
+    {
+      "id": "sentry-singles",
+      "title": "Sentry single-user freezes APPLE-IOS-55\u201358",
+      "status": "watch",
+      "people": "1 each",
+      "summary": "56 (fatal at launch, build 34) and 58 (6 s freeze after opening, build 34, mannywitdafatty) are on the latest build; 55 on 33; 57 fatal on old build 30. Watching, no auto-fix.",
+      "url": "https://weaive.sentry.io/issues/?project=apple-ios&query=is%3Aunresolved+lastSeen%3A-24h"
+    },
+    {
+      "id": "apple-ios-35",
+      "title": "Long ~57 s idle \u201chang\u201d (APPLE-IOS-35)",
+      "status": "watch",
+      "people": "24 Sentry users",
+      "summary": "6 events / 5 users in last 24h on 33 & 34. Main thread idle with no app code on the stack \u2014 looks like a backgrounded/locked-app artefact. Not clearly actionable.",
+      "url": "https://weaive.sentry.io/issues/?project=apple-ios&query=is%3Aunresolved+lastSeen%3A-24h"
+    }
+  ],
+  "features": [
+    {
+      "id": "android",
+      "title": "Android / non-Apple devices",
+      "status": "backlog",
+      "people": "juwayriyah2404, Lando, daniboehm0305, tiagoalexandre8442, tejaswisingh605, ajmcallister27, rbalintfi, AaravM0910, Sharon, BonusEarther",
+      "summary": "+2 NEW today (juwayriyah2404 email, Lando on Discord). Still the loudest ask."
+    },
+    {
+      "id": "desktop-screen-record",
+      "title": "Desktop app: screen-record instead of camera (+ browser extension, Discord status)",
+      "status": "backlog",
+      "people": "1qrobo1, eman, Zoe, Ethan",
+      "summary": "NEW thread by 1qrobo1: record the computer screen instead of the camera, a port of mobile Latent, maybe a browser extension showing which sites you were on. Malcolm: \u201cwe\u2019re looking into doing something like this\u201d. Clusters with eman\u2019s Oct 3 desktop + Discord-status ask."
+    },
+    {
+      "id": "anti-afk",
+      "title": "Catch AFK recording that farms hours",
+      "status": "backlog",
+      "people": "Suki",
+      "summary": "In the Gold league thread. Malcolm: more gamification coming; ranks may be local to friends/groups."
+    },
+    {
+      "id": "try-258",
+      "title": "Big groups look bad on the Groups page (TRY-258)",
+      "status": "need",
+      "people": "Malcolm \u2192 you",
+      "summary": "Assigned to you Oct 5, 8:02 AM PT.",
+      "url": "https://linear.app/trylatent/issue/TRY-258"
+    },
+    {
+      "id": "alarm-sound",
+      "title": "Change session timer alarm sound",
+      "status": "backlog",
+      "people": "fxyzkhan",
+      "summary": "Carried over from Oct 3; no new replies."
+    },
+    {
+      "id": "suki-clans",
+      "title": "Groups as clans + group on profile",
+      "status": "backlog",
+      "people": "suki",
+      "summary": "Carried over from Sep 30 in-app."
+    },
+    {
+      "id": "try-217",
+      "title": "Daily streaks",
+      "status": "need",
+      "people": "Malcolm",
+      "summary": "TRY-217 (Malcolm). Linear status not re-checked (needs reconnecting).",
+      "url": "https://linear.app/trylatent/issue/TRY-217/daily-streaks"
+    }
+  ],
+  "bySource": {
+    "inApp": {
+      "new": 0,
+      "note": "0 new rows since Oct 4 9:17 AM PT. Newest row is still lilwuchi (Oct 3), already covered."
+    },
+    "discord": {
+      "new": 13,
+      "note": "Read as Eddie L. NEW #feature-requests thread \u201cDesktop App with screen recording\u201d (1qrobo1, 4 msgs) + 8 new Gold league replies (Suki AFK-farming concern; Malcolm on gamification/local ranks). #general-chat: Lando Android ask, veeraj praise, j3 update question (Malcolm answered); plus 55 social-chatter messages not quoted. #announcements (now accessible): Malcolm study session Mon Oct 5, 7:30 PM PT in Lock in. #questions: nothing new. #tester-chat: inaccessible. \u2018YIPPEEEE\u2019 author inferred as Ethan."
+    },
+    "gmail": {
+      "new": 1,
+      "note": "NEW juwayriyah2404 waitlist reply asking about non-Apple devices. Internal: Linear email \u2014 Malcolm assigned you TRY-258. No video attachments, no PostHog alert mail; pitches/newsletters skipped."
+    },
+    "survey": {
+      "newRows": 0,
+      "seanEllis": "39/25/2 of 66",
+      "buildOneNext": "still empty (66 blank)"
+    },
+    "sentry": {
+      "new": [
+        "APPLE-IOS-55",
+        "APPLE-IOS-56",
+        "APPLE-IOS-57",
+        "APPLE-IOS-58"
+      ],
+      "note": "Auto-fixed APPLE-IOS-47 (11 users) \u2192 #402. NEW singles 55\u201358 watching (56 & 58 on build 34). 4N quiet ~2 days. Recurring: 35 (24 users, idle artefact), F (server 500s), A (5 events/2 users on 34), 50 now 3 users, 4X 3 users, 3C 4 users."
+    },
+    "posthog": {
+      "note": "clip_upload Oct 4 = 15 (all ancient build 10, network), Oct 5 = 0. attachment_upload Oct 5 = 2. Rageclicks Oct 4 = 444, no hot button. Clip-bloat & edge-loop Not firing."
+    },
+    "linear": {
+      "note": "Linear MCP needs re-auth \u2014 dig issue not created; TRY-118/215/197/217 statuses not refreshed. TRY-258 assignment seen via Linear email."
+    }
+  },
+  "rawQuotes": [
+    {
+      "id": "gmail-juwayriyah2404",
+      "source": "gmail",
+      "username": "juwayriyah2404@gmail.com",
+      "when": "2026-10-05T14:47:12Z",
+      "whenPT": "Oct 5, 2026, 7:47 AM PT",
+      "kind": "android_ask",
+      "quote": "Heyyyyy.I just wanted to ask if this app would be available on other devices than Apple. Would appreciate your help."
+    },
+    {
+      "id": "discord-1qrobo1-desktop-1",
+      "source": "discord",
+      "username": "1qrobo1",
+      "when": "2026-10-04T23:03:00Z",
+      "whenPT": "Oct 4, 2026, 4:03 PM PT",
+      "channel": "#feature-requests",
+      "thread": "Desktop App with screen recording",
+      "kind": "feature",
+      "quote": "Like instead of a camera recording the screen the computer could record the screen without draining battery life."
+    },
+    {
+      "id": "discord-malcolm-saymore",
+      "source": "discord",
+      "username": "Malcolm McDonald",
+      "when": "2026-10-04T23:10:00Z",
+      "whenPT": "Oct 4, 2026, 4:10 PM PT",
+      "channel": "#feature-requests",
+      "thread": "Desktop App with screen recording",
+      "kind": "team",
+      "quote": "@1qrobo1 say more!"
+    },
+    {
+      "id": "discord-1qrobo1-desktop-2",
+      "source": "discord",
+      "username": "1qrobo1",
+      "when": "2026-10-04T23:34:00Z",
+      "whenPT": "Oct 4, 2026, 4:34 PM PT",
+      "channel": "#feature-requests",
+      "thread": "Desktop App with screen recording",
+      "kind": "feature",
+      "quote": "So like any app screen records the screen and basically be like a port of the mobile version of latent with all the same features and it could maybe even connect with a browser extension to show witch sites you were on or smth like that"
+    },
+    {
+      "id": "discord-malcolm-desktop",
+      "source": "discord",
+      "username": "Malcolm McDonald",
+      "when": "2026-10-04T23:35:00Z",
+      "whenPT": "Oct 4, 2026, 4:35 PM PT",
+      "channel": "#feature-requests",
+      "thread": "Desktop App with screen recording",
+      "kind": "team",
+      "quote": "It's definitely something we've thought about! I don't want to promise anything, but we're looking into doing something like this!!!"
+    },
+    {
+      "id": "discord-malcolm-gamification",
+      "source": "discord",
+      "username": "Malcolm McDonald",
+      "when": "2026-10-04T23:12:00Z",
+      "whenPT": "Oct 4, 2026, 4:12 PM PT",
+      "channel": "#feature-requests",
+      "thread": "Gold league",
+      "replyTo": "Ethan",
+      "kind": "team",
+      "quote": "we plan on adding more gamification! not sure if it will be ranks but definitely more"
+    },
+    {
+      "id": "discord-suki-afk",
+      "source": "discord",
+      "username": "Suki",
+      "when": "2026-10-04T23:14:00Z",
+      "whenPT": "Oct 4, 2026, 4:14 PM PT",
+      "channel": "#feature-requests",
+      "thread": "Gold league",
+      "kind": "feature",
+      "quote": "also something is needed to catch people just afk record and gain hours :/"
+    },
+    {
+      "id": "discord-malcolm-ranks-local",
+      "source": "discord",
+      "username": "Malcolm McDonald",
+      "when": "2026-10-04T23:15:00Z",
+      "whenPT": "Oct 4, 2026, 4:15 PM PT",
+      "channel": "#feature-requests",
+      "thread": "Gold league",
+      "kind": "team",
+      "quote": "ranks might be more localized to your friends/groups"
+    },
+    {
+      "id": "discord-ethan-yippee",
+      "source": "discord",
+      "username": "Ethan",
+      "when": "2026-10-05T02:39:00Z",
+      "whenPT": "Oct 4, 2026, 7:39 PM PT",
+      "channel": "#feature-requests",
+      "thread": "Gold league",
+      "kind": "reaction",
+      "note": "Author inferred as Ethan (message grouped under the thread starter; name not shown on the line).",
+      "quote": "YIPPEEEE"
+    },
+    {
+      "id": "discord-j3-update",
+      "source": "discord",
+      "username": "j3",
+      "when": "2026-10-04T19:16:00Z",
+      "whenPT": "Oct 4, 2026, 12:16 PM PT",
+      "channel": "#general-chat",
+      "kind": "question",
+      "quote": "i dont gotta update the app or nun right"
+    },
+    {
+      "id": "discord-malcolm-j3",
+      "source": "discord",
+      "username": "Malcolm McDonald",
+      "when": "2026-10-04T19:18:00Z",
+      "whenPT": "Oct 4, 2026, 12:18 PM PT",
+      "channel": "#general-chat",
+      "replyTo": "j3",
+      "kind": "team",
+      "quote": "It depends on whether you have auto update on! if there is a version we want you to get, it will tell you to update in the app!"
+    },
+    {
+      "id": "discord-veeraj-praise",
+      "source": "discord",
+      "username": "veeraj",
+      "when": "2026-10-04T19:35:00Z",
+      "whenPT": "Oct 4, 2026, 12:35 PM PT",
+      "channel": "#general-chat",
+      "kind": "praise",
+      "quote": "I remember commenting on an instagram reel and I got the dm for the link, but I never did anything. Then i was scrolling through old DMs and remembered about this. Just wanna say thanks to the devs bc this app is incredible and has turned studying into a competitive game."
+    },
+    {
+      "id": "discord-lando-android",
+      "source": "discord",
+      "username": "Lando",
+      "when": "2026-10-04T22:25:00Z",
+      "whenPT": "Oct 4, 2026, 3:25 PM PT",
+      "channel": "#general-chat",
+      "kind": "android_ask",
+      "quote": "When is it going to be released on Android"
+    },
+    {
+      "id": "discord-malcolm-announcement",
+      "source": "discord",
+      "username": "Malcolm McDonald",
+      "when": "2026-10-04T23:21:00Z",
+      "whenPT": "Oct 4, 2026, 4:21 PM PT",
+      "channel": "#announcements",
+      "kind": "team",
+      "quote": "Yo im doing a study session Monday (tomorrow) at 7:30pm PT in \ud83d\udd0aLock in\nThats 7:30 PM your time\nMuted and cameras on\nCome lock in with me\nReact if interested"
+    }
+  ],
+  "linearIssue": null,
+  "linearNote": "Linear issue not created: Linear needs reconnecting (MCP needsAuth)."
+}
