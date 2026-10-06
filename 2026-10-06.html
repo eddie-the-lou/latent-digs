@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Latent daily review · 2026-10-06</title></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;line-height:1.45;color:#111;max-width:680px;margin:0 auto;padding:20px">
+<p style="font-size:13px;color:#555;margin:0 0 8px">From Unpaid Intern · plain English · ~9:30 AM PT dig</p>
+<h1 style="font-size:22px;margin:0 0 12px">Latent daily review · Oct 6 — 1 fix waiting</h1>
+<p style="background:#fff8d6;border:1px solid #f5c542;padding:12px 14px;border-radius:8px">
+  <strong>Live archive (bookmark this):</strong>
+  <a href="https://eddie-the-lou.github.io/latent-digs/">https://eddie-the-lou.github.io/latent-digs/</a><br>
+  <strong>Today’s review:</strong>
+  <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-10-06">https://eddie-the-lou.github.io/latent-digs/#/2026-10-06</a>
+</p>
+<p><strong>In short:</strong> 1 fix still waiting on you: #402 stops the app freezing when it updates the red badge number on its icon. It got worse overnight: 15 people have hit it now (was 11), 4 of them in the last day, including on build 34. Nothing new needed an auto-fix today, so I opened no new PRs. Version 1.0.4 (35) is live on the App Store. It includes #395 (lilwuchi&#x27;s lost-recording fix) but not #402. Overnight you and Malcolm merged #403–#411; your #407 handles TRY-258 (big groups now show three faces and a count).</p>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">What I did today</h2>
+<h3 style="font-size:15px;margin:14px 0 6px">Fixes I opened today</h3>
+<p>None. Nothing new was a clear bug that wasn’t already fixed or being worked on, so I didn’t launch any Cloud Agents. The new Sentry freezes each hit one person, and today’s feedback was all feature requests.</p>
+<h3 style="font-size:15px;margin:14px 0 6px">Still waiting from yesterday</h3>
+<ul>
+  <li><strong><a href="https://github.com/eddie-the-lou/latent/pull/402">#402 Updating the app badge no longer freezes the app (APPLE-IOS-47)</a></strong> (draft PR)
+    <ul>
+      <li><strong>Source:</strong> Sentry <a href="https://weaive.sentry.io/issues/APPLE-IOS-47">APPLE-IOS-47</a>: 15 people, 17 events (was 11 people yesterday). 4 people hit it in the last 24 hours on builds 33 and 34. The same call also shows up as <a href="https://weaive.sentry.io/issues/APPLE-IOS-49">APPLE-IOS-49</a> (8 people). Nobody wrote in about it.</li>
+      <li><strong>What it fixes:</strong> When the app updated the red badge number on its icon, it waited on iOS&#x27;s notification service while holding the screen, so the app froze (overnight freezes ran 11–70 seconds). The fix moves that work onto the app&#x27;s existing background queue for notifications. Opened yesterday; still a draft, no changes since, and it merges cleanly with today&#x27;s main.</li>
+      <li><strong>How to check:</strong> You can&#x27;t make this freeze happen on demand, so rely on the PR&#x27;s evidence: new NotificationQueueTests check that the badge update never runs on the main thread. CI is switched off, so there are no automatic checks to wait for; mark it ready and merge if the diff looks right. After the next build ships, APPLE-IOS-47 and APPLE-IOS-49 should get no new events on it. Quick smoke test on any phone: open Activity, read your notifications, and check that the icon badge clears with no stutter.</li>
+      <li><strong>Agent:</strong> <a href="https://cursor.com/agents/bc-782d6a18-04b1-5316-81bf-963a4d6205ab">https://cursor.com/agents/bc-782d6a18-04b1-5316-81bf-963a4d6205ab</a> (Grok 4.6, finished Oct 5)</li>
+    </ul>
+  </li>
+</ul>
+<h3 style="font-size:15px;margin:14px 0 6px">Merged overnight</h3>
+<ul><li><a href="https://github.com/eddie-the-lou/latent/pull/407">#407</a> — Group cards draw Home&#x27;s story row, so big groups show three faces and a count <span style="color:#666">(you · Oct 5, 5:31 PM PT)</span> — Fixes TRY-258 (big groups looked squished on the Groups page).</li><li><a href="https://github.com/eddie-the-lou/latent/pull/405">#405</a> — Bump to 1.0.4 (35) for the App Store <span style="color:#666">(Malcolm · Oct 5, 5:09 PM PT)</span> — 1.0.4 (35) is now live on the App Store.</li><li><a href="https://github.com/eddie-the-lou/latent/pull/410">#410</a> — Pinch zoom on a photo zooms where your fingers are, and panning no longer jumps (TRY-267) <span style="color:#666">(Malcolm · Oct 5, 7:33 PM PT)</span> — A user reported photo zoom only went to the middle.</li><li><a href="https://github.com/eddie-the-lou/latent/pull/406">#406</a> — The Groups empty state stops rumbling the moment you leave it <span style="color:#666">(Malcolm · Oct 5, 6:38 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/411">#411</a> — Saves that move you up a group&#x27;s board open on a leaderboard climb (TRY-262) <span style="color:#666">(Malcolm · Oct 5, 7:41 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/408">#408</a> — Messages rows carry one signal: the conversation, then a play button or a dot <span style="color:#666">(you · Oct 5, 5:47 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/409">#409</a> — Nudge many picks people one by one; the sample group shows real faces <span style="color:#666">(you · Oct 5, 5:51 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/403">#403</a> — Wave sends survive non-ASCII and unfamiliar-TLD addresses; the update wall points at the App Store <span style="color:#666">(you · Oct 5, 3:43 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/404">#404</a> — Real TLDs come from IANA, and gmail/icloud must be their real domain <span style="color:#666">(you · Oct 5, 4:01 PM PT)</span></li></ul>
+<p><strong>App Store:</strong> 1.0.4 (35) is live. It includes #395 (lilwuchi’s lost-recording fix) but not #402.</p>
+<h3 style="font-size:15px;margin:14px 0 6px">Still on you</h3>
+<ul>
+  <li>Review/merge <a href="https://github.com/eddie-the-lou/latent/pull/402">#402</a>. CI is switched off, so there’s nothing to wait for.</li>
+  <li>Reply to <strong>Aarav</strong> (a40969420@gmail.com: Google Play + Mac app) and <strong>juwayriyah2404@gmail.com</strong> (non-Apple devices). I found no reply from you in Gmail yet.</li>
+  <li><strong>Reconnect Linear.</strong> Linear issue not created: Linear needs reconnecting.</li>
+  <li>Carried over (statuses not refreshed while Linear is disconnected): TRY-118 waitlist emails (Urgent), TRY-215 YPT study session, TRY-197 cap table. Your <a href="https://github.com/eddie-the-lou/latent/pull/397">#397</a> activation report PR is still open (FYI).</li>
+  <li><span style="color:#666">Done since yesterday:</span> TRY-258 big groups, fixed by your <a href="https://github.com/eddie-the-lou/latent/pull/407">#407</a>.</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Ready for you to approve</h2>
+<ul><li><a href="https://github.com/eddie-the-lou/latent/pull/402">#402</a> badge freeze fix (APPLE-IOS-47, 15 people). It’s a draft: mark it ready and merge.</li>
+<li><span style="color:#666">FYI, not the dig’s:</span> Malcolm opened <a href="https://github.com/eddie-the-lou/latent/pull/412">#412</a>, which moves streak math to the server (TRY-261). No streak numbers change yet.</li></ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Broken / confusing</h2>
+<ul>
+  <li><strong>App freezes when it updates the icon badge</strong> (APPLE-IOS-47, 15 people, up from 11). Overnight freezes ran 11–70 seconds. Fix waiting in #402.</li>
+  <li><strong>8 new one-person freezes</strong> <a href="https://weaive.sentry.io/issues/?project=apple-ios&query=is%3Aunresolved+lastSeen%3A-24h">APPLE-IOS-59 to 5G</a> (3–44 s, mostly build 34; 5C and 5F are Malcolm’s phone). Watching, no auto-fix.</li>
+  <li><strong>APPLE-IOS-35</strong> is a grab-bag of long “hangs” (28 people, was 24). Most come from one person on build 33 who left the app open; 2 are short launch hiccups on build 35 inside iOS’s own code. Not clearly actionable.</li>
+  <li><strong>Clipboard freeze APPLE-IOS-4N:</strong> still quiet (last event ~2 days ago).</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Things people want</h2>
+<ul>
+  <li><strong>Android</strong>: +5 today. Aarav emailed, and 4 people asked on Discord (SourLemown, Empyrean, Android Advocate, Wakanda Panda). Android Advocate joked about protesting at “Latent HQ”. Still by far the loudest ask.</li>
+  <li><strong>Mac / desktop app</strong>: +1 (Aarav). This joins 1qrobo1’s screen-recording desktop idea and eman’s desktop + Discord-status ask.</li>
+  <li><strong>Sunday-start streak weeks</strong> (TRY-261): Malcolm’s #412 lays the groundwork, with the Sunday rule still switched off.</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">What they actually wrote</h2>
+<p style="font-size:13px;color:#555">Every new item, word for word. No new in-app feedback or survey responses today.</p>
+<h3 style="font-size:15px;margin:14px 0 6px">Email</h3>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Aarav (a40969420@gmail.com) · Oct 5, 2026, 8:25 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px">Hi Eddie,
+Just wanted to know when will you be launching the app on Google Play Store
+as I am an Android Phone user and also the desktop app for Mac as well
+
+Thanks,
+Aarav</div></blockquote>
+<h3 style="font-size:15px;margin:14px 0 6px">Discord</h3>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">SourLemown🍋 · #general-chat · Oct 5, 2026, 11:21 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">ah im on android</div><div style="font-size:11px;color:#888;margin-top:4px">Reply to Malcolm McDonald (“whats you @ ?”)</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Empyrean · #general-chat · Oct 6, 2026, 4:15 AM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">Android latent when</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Android Advocate · #general-chat · Oct 6, 2026, 4:25 AM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">Hi my fellow Androidians! No clue when it&#x27;ll come out. Considering going to Latent HQ and protesting, but idk if Latent even has an HQ.</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Wakanda Panda · #general-chat · Oct 6, 2026, 8:16 AM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">Me toooo</div><div style="font-size:11px;color:#888;margin-top:4px">Reply to SourLemown🍋 (“ah im on android”)</div></blockquote>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Discord</h2>
+<p>Read as Eddie L. by the Discord reader. #general-chat had 4 app-related messages, all about Android, plus 8 study-session and social messages (not quoted). #feature-requests, #questions and #announcements had nothing new. #tester-chat is still not in the sidebar.</p>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Survey</h2>
+<p>No new rows; the newest response is from Sep 21. Sean Ellis is unchanged: <strong>39 very / 25 somewhat / 2 not</strong>, of 66 Active Users. “If we could only build one of these next” is still empty.</p>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Sentry</h2>
+<ul>
+  <li><strong>Waiting fix:</strong> APPLE-IOS-47 badge freeze is up to 15 people → #402.</li>
+  <li><strong>NEW singles (watching):</strong> 59 (44 s, build 33), 5A (5 s at launch, 1.0.4 test build, philan_jin), 5B (8 s), 5C (10 s, Malcolm), 5D (17 s), 5E (9 s), 5F (8 s, Malcolm), 5G (3 s). All but 59 and 5A are on build 34.</li>
+  <li><strong>Recurring:</strong> A (iOS killed the app, maybe memory) had 8 events from 2 people on 34, including Malcolm. F (server errors) had Cloudflare 522 “server didn’t answer in time” errors from one person early this morning. 3C had 2 people. 3F had 1 event on App Store build 35.</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">PostHog</h2>
+<ul>
+  <li>Clip upload failures: 2 on Oct 5 and 4 so far Oct 6. All were phone-network errors (offline or connection lost), one person each.</li>
+  <li>Attachment upload failures: 5 on Oct 5 and 5 so far Oct 6. Today’s 5 all came from one person on build 34 this morning.</li>
+  <li>Rage clicks: 559 on Oct 5 (up from 444). They’re spread across generic screens, with no single hot button.</li>
+  <li>Clip-bloat and edge-loop alerts: Not firing.</li>
+</ul>
+
+<p style="font-size:12px;color:#666;margin-top:28px">0 new in-app feedback. Survey unchanged. No new Cloud Agents today. Linear issue not created: Linear needs reconnecting. Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-10-06">https://eddie-the-lou.github.io/latent-digs/#/2026-10-06</a></p>
+</body></html>

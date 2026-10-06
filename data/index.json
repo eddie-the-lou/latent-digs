@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-06",
+    "title": "Latent daily review \u00b7 Oct 6",
+    "tldr": "1 fix still waiting on you: #402 stops the app freezing when it updates the red badge number on its icon. It got worse overnight: 15 people have hit it now (was 11), 4 of them in the last day, including on build 34. Nothing new needed an auto-fix today, so I opened no new PRs."
+  },
+  {
     "date": "2026-10-05",
     "title": "Latent daily review \u00b7 Oct 5",
     "tldr": "1 fix waiting on you: #402 stops the app freezing for 7\u20138 seconds when it updates the red badge number on its icon (Sentry APPLE-IOS-47, 11 users). Draft PR by a Cloud Agent; no CI checks have run yet."

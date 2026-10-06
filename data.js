@@ -1,5 +1,10 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-06",
+    "title": "Latent daily review \u00b7 Oct 6",
+    "tldr": "1 fix still waiting on you: #402 stops the app freezing when it updates the red badge number on its icon. It got worse overnight: 15 people have hit it now (was 11), 4 of them in the last day, including on build 34. Nothing new needed an auto-fix today, so I opened no new PRs."
+  },
+  {
     "date": "2026-10-05",
     "title": "Latent daily review \u00b7 Oct 5",
     "tldr": "1 fix waiting on you: #402 stops the app freezing for 7\u20138 seconds when it updates the red badge number on its icon (Sentry APPLE-IOS-47, 11 users). Draft PR by a Cloud Agent; no CI checks have run yet."
@@ -647,6 +652,11 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-06",
+      "title": "Latent daily review \u00b7 Oct 6",
+      "tldr": "1 fix still waiting on you: #402 stops the app freezing when it updates the red badge number on its icon. It got worse overnight: 15 people have hit it now (was 11), 4 of them in the last day, including on build 34. Nothing new needed an auto-fix today, so I opened no new PRs."
+    },
     {
       "date": "2026-10-05",
       "title": "Latent daily review \u00b7 Oct 5",
@@ -75313,12 +75323,12 @@ window.DIGESTS = {
       {
         "id": "email",
         "title": "Email dig to eddie@weaive.app",
-        "status": "done"
+        "status": "pending"
       },
       {
         "id": "archive",
         "title": "Publish archive to latent-digs GitHub Pages",
-        "status": "done"
+        "status": "pending"
       },
       {
         "id": "linear",
@@ -76063,6 +76073,475 @@ window.DIGESTS = {
         "channel": "#announcements",
         "kind": "team",
         "quote": "Yo im doing a study session Monday (tomorrow) at 7:30pm PT in \ud83d\udd0aLock in\nThats 7:30 PM your time\nMuted and cameras on\nCome lock in with me\nReact if interested"
+      }
+    ],
+    "linearIssue": null,
+    "linearNote": "Linear issue not created: Linear needs reconnecting (MCP needsAuth)."
+  },
+  "2026-10-06": {
+    "date": "2026-10-06",
+    "title": "Latent daily review \u00b7 Oct 6",
+    "generatedAt": "2026-10-06T16:33:05.715294+00:00",
+    "tldr": [
+      "1 fix still waiting on you: #402 stops the app freezing when it updates the red badge number on its icon. It got worse overnight: 15 people have hit it now (was 11), 4 of them in the last day, including on build 34. Nothing new needed an auto-fix today, so I opened no new PRs.",
+      "Version 1.0.4 (35) is live on the App Store. It includes #395 (lilwuchi's lost-recording fix) but not #402. Overnight you and Malcolm merged #403\u2013#411; your #407 handles TRY-258 (big groups now show three faces and a count).",
+      "Android is still the loudest ask: Aarav emailed asking for Google Play and a Mac app, and 4 people asked on Discord (SourLemown, Empyrean, Android Advocate, Wakanda Panda). Nobody's had a reply from you yet \u2014 juwayriyah2404 is still waiting too.",
+      "Sentry: 8 new one-person freezes (APPLE-IOS-59 to 5G; two are Malcolm's phone). Watching, not auto-fixed. No new in-app feedback, survey unchanged at 39/25/2 of 66, PostHog alerts not firing. Linear still needs reconnecting, so no Linear dig issue."
+    ],
+    "plainTldr": [
+      "1 fix still waiting on you: #402 stops the app freezing when it updates the red badge number on its icon. It got worse overnight: 15 people have hit it now (was 11), 4 of them in the last day, including on build 34. Nothing new needed an auto-fix today, so I opened no new PRs.",
+      "Version 1.0.4 (35) is live on the App Store. It includes #395 (lilwuchi's lost-recording fix) but not #402. Overnight you and Malcolm merged #403\u2013#411; your #407 handles TRY-258 (big groups now show three faces and a count).",
+      "Android is still the loudest ask: Aarav emailed asking for Google Play and a Mac app, and 4 people asked on Discord (SourLemown, Empyrean, Android Advocate, Wakanda Panda). Nobody's had a reply from you yet \u2014 juwayriyah2404 is still waiting too.",
+      "Sentry: 8 new one-person freezes (APPLE-IOS-59 to 5G; two are Malcolm's phone). Watching, not auto-fixed. No new in-app feedback, survey unchanged at 39/25/2 of 66, PostHog alerts not firing. Linear still needs reconnecting, so no Linear dig issue."
+    ],
+    "stats": {
+      "newInApp": 0,
+      "newDiscord": 4,
+      "newGmail": 1,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-59",
+        "APPLE-IOS-5A",
+        "APPLE-IOS-5B",
+        "APPLE-IOS-5C",
+        "APPLE-IOS-5D",
+        "APPLE-IOS-5E",
+        "APPLE-IOS-5F",
+        "APPLE-IOS-5G"
+      ],
+      "posthog": {
+        "uploadFailed": {
+          "2026-09-27": 11,
+          "2026-09-28": 25,
+          "2026-09-29": 6,
+          "2026-09-30": 2,
+          "2026-10-01": 10,
+          "2026-10-02": 4,
+          "2026-10-03": 0,
+          "2026-10-04": 15,
+          "2026-10-05": 2,
+          "2026-10-06": 4
+        },
+        "rageclicks": {
+          "2026-09-27": 363,
+          "2026-09-28": 365,
+          "2026-09-29": 429,
+          "2026-09-30": 297,
+          "2026-10-01": 358,
+          "2026-10-02": 437,
+          "2026-10-03": 455,
+          "2026-10-04": 444,
+          "2026-10-05": 559,
+          "2026-10-06": 392
+        },
+        "attachmentUploadFailed": {
+          "2026-09-29": 14,
+          "2026-09-30": 27,
+          "2026-10-01": 0,
+          "2026-10-02": 1,
+          "2026-10-03": 0,
+          "2026-10-04": 0,
+          "2026-10-05": 5,
+          "2026-10-06": 5
+        },
+        "clipBloatAlert": "Not firing",
+        "edgeLoopAlert": "Not firing",
+        "notes": "UTC day buckets. Oct 6 partial (~9:40 AM PT). Clip failures since the dig are all phone-network errors (offline / connection lost / TLS), 1 person each. Attachment failures: 5 from one person on build 34 this morning, 2 from one person on 33, 1 on 35. Rage clicks spread across generic screens, no hot button. Clip-bloat last 1.564 MB/s (threshold 4); edge-loop last 2 (threshold 200)."
+      },
+      "rawQuotes": 5
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "note": "No new fix PRs today: nothing new was a clear, unowned bug. #402 from yesterday is still waiting.",
+      "agentsLaunched": []
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 402,
+          "title": "Updating the app badge no longer freezes the app (APPLE-IOS-47)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/402",
+          "reporter": "Sentry APPLE-IOS-47 (15 users, 17 events; 4 users / 5 events in the last 24h on builds 33 and 34). Same call shows up as APPLE-IOS-49 (8 users).",
+          "agent": "https://cursor.com/agents/bc-782d6a18-04b1-5316-81bf-963a4d6205ab",
+          "plain": "When the app updated the red badge number on its icon, it waited on iOS's notification service while holding the screen, so the app froze (overnight freezes ran 11\u201370 seconds). The fix moves that work onto the app's existing background queue for notifications. Opened yesterday; still a draft, no changes since, and it merges cleanly with today's main.",
+          "check": "You can't make this freeze happen on demand, so rely on the PR's evidence: new NotificationQueueTests check that the badge update never runs on the main thread. CI is switched off, so there are no automatic checks to wait for; mark it ready and merge if the diff looks right. After the next build ships, APPLE-IOS-47 and APPLE-IOS-49 should get no new events on it. Quick smoke test on any phone: open Activity, read your notifications, and check that the icon badge clears with no stutter.",
+          "draft": true
+        }
+      ],
+      "openedToday": [],
+      "malcolmOpen": [
+        {
+          "pr": 412,
+          "title": "Server-owned streaks: one author for every streak number (TRY-261)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/412",
+          "note": "NEW Oct 5, 8:08 PM PT"
+        },
+        {
+          "pr": 267,
+          "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+          "url": "https://github.com/eddie-the-lou/latent/pull/267"
+        },
+        {
+          "pr": 164,
+          "title": "Today mini cards fit their durations; camera toggle stays put",
+          "url": "https://github.com/eddie-the-lou/latent/pull/164"
+        },
+        {
+          "pr": 162,
+          "title": "One frame rule for the timelapse clip",
+          "url": "https://github.com/eddie-the-lou/latent/pull/162"
+        },
+        {
+          "pr": 123,
+          "title": "Sequential dual-camera proof stills (draft)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/123"
+        }
+      ],
+      "eddieOpen": [
+        {
+          "pr": 397,
+          "title": "Activation report (daily), plus two analytics fixes",
+          "url": "https://github.com/eddie-the-lou/latent/pull/397",
+          "note": "FYI only"
+        }
+      ],
+      "agentsSpinning": [],
+      "agentsFinished": [
+        {
+          "id": "bc-782d6a18-04b1-5316-81bf-963a4d6205ab",
+          "title": "APPLE-IOS-47 badge freeze (launched Oct 5)",
+          "pr": 402,
+          "url": "https://cursor.com/agents/bc-782d6a18-04b1-5316-81bf-963a4d6205ab",
+          "model": "Grok 4.6"
+        }
+      ],
+      "clearedOvernight": [
+        {
+          "id": "try-258",
+          "title": "TRY-258 big groups on Groups page",
+          "via": "#407 merged (you)"
+        },
+        {
+          "id": "lilwuchi-shipped",
+          "title": "lilwuchi lost recording fix",
+          "via": "1.0.4 (35) live on the App Store with #395"
+        }
+      ],
+      "mergedOvernight": [
+        {
+          "pr": 407,
+          "url": "https://github.com/eddie-the-lou/latent/pull/407",
+          "title": "Group cards draw Home's story row, so big groups show three faces and a count",
+          "by": "you \u00b7 Oct 5, 5:31 PM PT",
+          "note": "Fixes TRY-258 (big groups looked squished on the Groups page)."
+        },
+        {
+          "pr": 405,
+          "url": "https://github.com/eddie-the-lou/latent/pull/405",
+          "title": "Bump to 1.0.4 (35) for the App Store",
+          "by": "Malcolm \u00b7 Oct 5, 5:09 PM PT",
+          "note": "1.0.4 (35) is now live on the App Store."
+        },
+        {
+          "pr": 410,
+          "url": "https://github.com/eddie-the-lou/latent/pull/410",
+          "title": "Pinch zoom on a photo zooms where your fingers are, and panning no longer jumps (TRY-267)",
+          "by": "Malcolm \u00b7 Oct 5, 7:33 PM PT",
+          "note": "A user reported photo zoom only went to the middle."
+        },
+        {
+          "pr": 406,
+          "url": "https://github.com/eddie-the-lou/latent/pull/406",
+          "title": "The Groups empty state stops rumbling the moment you leave it",
+          "by": "Malcolm \u00b7 Oct 5, 6:38 PM PT"
+        },
+        {
+          "pr": 411,
+          "url": "https://github.com/eddie-the-lou/latent/pull/411",
+          "title": "Saves that move you up a group's board open on a leaderboard climb (TRY-262)",
+          "by": "Malcolm \u00b7 Oct 5, 7:41 PM PT"
+        },
+        {
+          "pr": 408,
+          "url": "https://github.com/eddie-the-lou/latent/pull/408",
+          "title": "Messages rows carry one signal: the conversation, then a play button or a dot",
+          "by": "you \u00b7 Oct 5, 5:47 PM PT"
+        },
+        {
+          "pr": 409,
+          "url": "https://github.com/eddie-the-lou/latent/pull/409",
+          "title": "Nudge many picks people one by one; the sample group shows real faces",
+          "by": "you \u00b7 Oct 5, 5:51 PM PT"
+        },
+        {
+          "pr": 403,
+          "url": "https://github.com/eddie-the-lou/latent/pull/403",
+          "title": "Wave sends survive non-ASCII and unfamiliar-TLD addresses; the update wall points at the App Store",
+          "by": "you \u00b7 Oct 5, 3:43 PM PT"
+        },
+        {
+          "pr": 404,
+          "url": "https://github.com/eddie-the-lou/latent/pull/404",
+          "title": "Real TLDs come from IANA, and gmail/icloud must be their real domain",
+          "by": "you \u00b7 Oct 5, 4:01 PM PT"
+        }
+      ],
+      "stillOnYou": [
+        {
+          "id": "pr-402",
+          "title": "Review/merge #402 (badge freeze, now 15 users). CI is off, so don't wait for checks.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/402"
+        },
+        {
+          "id": "reply-android",
+          "title": "Reply to Aarav (a40969420@gmail.com: Google Play + Mac app) and juwayriyah2404 (non-Apple devices). No reply from you in Gmail yet."
+        },
+        {
+          "id": "linear-reconnect",
+          "title": "Reconnect Linear (MCP needs re-auth) so the dig can create its daily issue"
+        },
+        {
+          "id": "try-118",
+          "title": "TRY-118 waitlist emails (Urgent). Status not refreshed (Linear disconnected)."
+        },
+        {
+          "id": "try-215",
+          "title": "TRY-215 YPT study session. Status not refreshed."
+        },
+        {
+          "id": "try-197",
+          "title": "TRY-197 cap table. Status not refreshed."
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "pr-402",
+        "title": "#402 APPLE-IOS-47 badge freeze fix (draft), now 15 users",
+        "status": "waiting",
+        "url": "https://github.com/eddie-the-lou/latent/pull/402"
+      },
+      {
+        "id": "reply-android",
+        "title": "Reply to Aarav and juwayriyah2404 about Android / Mac",
+        "status": "waiting"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive to latent-digs GitHub Pages",
+        "status": "done"
+      },
+      {
+        "id": "linear",
+        "title": "Linear issue not created: Linear needs reconnecting",
+        "status": "skipped"
+      },
+      {
+        "id": "agents",
+        "title": "No new Cloud Agents launched (no new clear, unowned bug)",
+        "status": "skipped"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "apple-ios-47",
+        "title": "App freezes while updating the icon badge (APPLE-IOS-47, also 49)",
+        "status": "waiting",
+        "people": "15 Sentry users (+4 since yesterday)",
+        "summary": "Fix in draft #402. 5 events from 4 users in the last 24h on builds 33 and 34, freezes of 11\u201370 s. Not in 1.0.4 (35).",
+        "url": "https://github.com/eddie-the-lou/latent/pull/402"
+      },
+      {
+        "id": "lilwuchi-recording",
+        "title": "Failed timelapse export deleted the footage (lilwuchi, TRY-257)",
+        "status": "resolved",
+        "people": "lilwuchi (~6 users / 9 sessions in 30 days)",
+        "summary": "#395 is in 1.0.4 (35), now live on the App Store.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/395"
+      },
+      {
+        "id": "try-258",
+        "title": "Big groups looked squished on the Groups page (TRY-258)",
+        "status": "resolved",
+        "people": "Malcolm \u2192 you",
+        "summary": "Fixed by your #407 (merged Oct 5, 5:31 PM PT).",
+        "url": "https://github.com/eddie-the-lou/latent/pull/407"
+      },
+      {
+        "id": "sentry-singles",
+        "title": "8 new one-person freezes (APPLE-IOS-59 to 5G)",
+        "status": "watch",
+        "people": "1 each (5C and 5F are Malcolm's phone)",
+        "summary": "3\u201344 s freezes, mostly build 34; 5A on a 1.0.4 (35) test build at launch with no app code on the stack. Watching, no auto-fix.",
+        "url": "https://weaive.sentry.io/issues/?project=apple-ios&query=is%3Aunresolved+lastSeen%3A-24h"
+      },
+      {
+        "id": "apple-ios-35",
+        "title": "Long \u201chang\u201d grab-bag (APPLE-IOS-35)",
+        "status": "watch",
+        "people": "28 Sentry users (was 24)",
+        "summary": "14 events / 6 users in 24h. One person on build 33 logged 7 hangs of 14\u2013797 s (app left open or locked). 2 events on build 35 are 3\u20134 s launch hiccups in iOS's own code. Not clearly actionable.",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-35"
+      },
+      {
+        "id": "apple-ios-4n",
+        "title": "Clipboard freeze (APPLE-IOS-4N)",
+        "status": "watch",
+        "people": "11 Sentry users",
+        "summary": "Still quiet: last event ~2 days ago, after #372.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/372"
+      }
+    ],
+    "features": [
+      {
+        "id": "android",
+        "title": "Android / non-Apple devices",
+        "status": "backlog",
+        "people": "Aarav (a40969420), SourLemown, Empyrean, Android Advocate, Wakanda Panda, juwayriyah2404, Lando, daniboehm0305, tiagoalexandre8442, tejaswisingh605, ajmcallister27, rbalintfi, AaravM0910, Sharon, BonusEarther",
+        "summary": "+5 NEW today (1 email, 4 Discord). Still by far the loudest ask."
+      },
+      {
+        "id": "desktop-screen-record",
+        "title": "Desktop / Mac app (screen-record instead of camera, Discord status)",
+        "status": "backlog",
+        "people": "Aarav (Mac, NEW), 1qrobo1, eman, Zoe, Ethan",
+        "summary": "+1 today: Aarav asked for a Mac desktop app in his email. Malcolm told Discord on Oct 4 \u201cwe\u2019re looking into doing something like this.\u201d"
+      },
+      {
+        "id": "anti-afk",
+        "title": "Catch AFK recording that farms hours",
+        "status": "backlog",
+        "people": "Suki",
+        "summary": "No new replies. #411 (leaderboard climb on save) shipped more gamification."
+      },
+      {
+        "id": "alarm-sound",
+        "title": "Change session timer alarm sound",
+        "status": "backlog",
+        "people": "fxyzkhan",
+        "summary": "Carried over; no new replies."
+      },
+      {
+        "id": "suki-clans",
+        "title": "Groups as clans + group on profile",
+        "status": "backlog",
+        "people": "suki",
+        "summary": "Carried over from Sep 30 in-app."
+      },
+      {
+        "id": "try-261",
+        "title": "Streak week should start on Sunday (TRY-261)",
+        "status": "need",
+        "people": "Malcolm",
+        "summary": "Malcolm's open #412 moves streak math to the server, with the Sunday rule built in but switched off. FYI, his PR.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/412"
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 0,
+        "note": "0 new rows since Oct 5 9:00 AM PT (query padded before yesterday's ~9:29 AM PT pull)."
+      },
+      "discord": {
+        "new": 4,
+        "note": "From the Discord reader (as Eddie L.): 4 app-related #general-chat messages, all Android (SourLemown, Empyrean, Android Advocate, Wakanda Panda); 8 social / study-session chatter messages (not quoted). #feature-requests, #questions, #announcements: nothing new in window. #tester-chat: still not in the sidebar."
+      },
+      "gmail": {
+        "new": 1,
+        "note": "NEW: Aarav (a40969420@gmail.com) replied to the launch email asking about Google Play and a Mac app. GitHub mail: #407 linked to TRY-258. No video attachments, no PostHog alert mail. Pitches, newsletters, DMARC, banking and receipts skipped. No reply from you to the Android emails found in Sent."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "buildOneNext": "still empty (0 of 66)",
+        "note": "Export HTTP 200, 25,298 bytes. Tabs 66/6/8 responses unchanged; newest response Sep 21."
+      },
+      "sentry": {
+        "new": [
+          "APPLE-IOS-59",
+          "APPLE-IOS-5A",
+          "APPLE-IOS-5B",
+          "APPLE-IOS-5C",
+          "APPLE-IOS-5D",
+          "APPLE-IOS-5E",
+          "APPLE-IOS-5F",
+          "APPLE-IOS-5G"
+        ],
+        "note": "APPLE-IOS-47 up to 15 users (fix in #402). 8 new one-person freezes, watching. 35 at 28 users (grab-bag, not actionable). A: 8 events/2 users on 34. F: Cloudflare 522s from one user early this morning. 4N still quiet. 1.0.4 (35) now reporting from App Store users."
+      },
+      "posthog": {
+        "note": "Upload failures are phone-network errors only. Rage clicks Oct 5 = 559 (up from 444) but spread out, no hot button. Clip-bloat & edge-loop Not firing."
+      },
+      "github": {
+        "note": "main @ b1342358 (Oct 5, 7:41 PM PT). Merged since dig: #403\u2013#411. Open: #402 (dig), #412 (Malcolm, new), #397 (you), #267, #164, #162, #123."
+      },
+      "linear": {
+        "note": "user-Linear and user-Linear--trylatent still needsAuth. Dig issue not created; TRY-118/215/197 not refreshed. TRY-258 handled via #407 (seen on GitHub)."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "gmail-aarav-a40969420",
+        "source": "gmail",
+        "username": "Aarav (a40969420@gmail.com)",
+        "when": "2026-10-06T03:25:20Z",
+        "whenPT": "Oct 5, 2026, 8:25 PM PT",
+        "kind": "android_ask",
+        "note": "Reply to the 'lock in twin' waitlist launch email.",
+        "quote": "Hi Eddie,\nJust wanted to know when will you be launching the app on Google Play Store\nas I am an Android Phone user and also the desktop app for Mac as well\n\nThanks,\nAarav"
+      },
+      {
+        "id": "discord-sourlemown-android",
+        "source": "discord",
+        "username": "SourLemown\ud83c\udf4b",
+        "when": "2026-10-06T06:21:00Z",
+        "whenPT": "Oct 5, 2026, 11:21 PM PT",
+        "channel": "#general-chat",
+        "replyTo": "Malcolm McDonald (\u201cwhats you @ ?\u201d)",
+        "kind": "android_ask",
+        "quote": "ah im on android"
+      },
+      {
+        "id": "discord-empyrean-android",
+        "source": "discord",
+        "username": "Empyrean",
+        "when": "2026-10-06T11:15:00Z",
+        "whenPT": "Oct 6, 2026, 4:15 AM PT",
+        "channel": "#general-chat",
+        "kind": "android_ask",
+        "quote": "Android latent when"
+      },
+      {
+        "id": "discord-android-advocate",
+        "source": "discord",
+        "username": "Android Advocate",
+        "when": "2026-10-06T11:25:00Z",
+        "whenPT": "Oct 6, 2026, 4:25 AM PT",
+        "channel": "#general-chat",
+        "kind": "android_ask",
+        "quote": "Hi my fellow Androidians! No clue when it'll come out. Considering going to Latent HQ and protesting, but idk if Latent even has an HQ."
+      },
+      {
+        "id": "discord-wakanda-panda",
+        "source": "discord",
+        "username": "Wakanda Panda",
+        "when": "2026-10-06T15:16:00Z",
+        "whenPT": "Oct 6, 2026, 8:16 AM PT",
+        "channel": "#general-chat",
+        "replyTo": "SourLemown\ud83c\udf4b (\u201cah im on android\u201d)",
+        "kind": "android_ask",
+        "quote": "Me toooo"
       }
     ],
     "linearIssue": null,
