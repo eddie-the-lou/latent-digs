@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Latent daily review · 2026-10-07</title></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;line-height:1.45;color:#111;max-width:680px;margin:0 auto;padding:20px">
+<p style="font-size:13px;color:#555;margin:0 0 8px">From Unpaid Intern · plain English · ~9:30 AM PT dig</p>
+<h1 style="font-size:22px;margin:0 0 12px">Latent daily review · Oct 7 — 2 fixes waiting</h1>
+<p style="background:#fff8d6;border:1px solid #f5c542;padding:12px 14px;border-radius:8px">
+  <strong>Live archive (bookmark this):</strong>
+  <a href="https://eddie-the-lou.github.io/latent-digs/">https://eddie-the-lou.github.io/latent-digs/</a><br>
+  <strong>Today’s review:</strong>
+  <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-10-07">https://eddie-the-lou.github.io/latent-digs/#/2026-10-07</a>
+</p>
+<p><strong>In short:</strong> 2 new fixes are waiting on you, both from emails people sent back after the waitlist launch email. #431: the app&#x27;s invite screen rejected the link in that email (Kinjal sent a screenshot of “That code didn&#x27;t work”). #432: the email&#x27;s “unsubscribe here” page shows a screen of code instead of a button (Darlen). #432 only takes effect after you run two deploy commands. Yesterday&#x27;s #402 badge-freeze fix is merged (you merged it at 9:43 AM PT Oct 6). It reaches people with the next App Store build, since 1.0.4 (35) doesn&#x27;t include it. You and Malcolm merged 15 more PRs overnight, plus #421, which Malcolm reverted. His #422 (server-owned streaks, TRY-261) replaced #412.</p>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">What I did today</h2>
+<h3 style="font-size:15px;margin:14px 0 6px">Fixes I opened today (2, waiting on your review)</h3>
+<ul>
+<li><strong><a href="https://github.com/eddie-the-lou/latent/pull/431">#431 Accept waitlist wave /w/ links on the invite-code screen</a></strong>
+    <ul>
+      <li><strong>Who reported:</strong> Kinjal (kinjaladdanky2.0@gmail.com) by email, Oct 6, 11:57 PM PT, with a screenshot. 78 people hit an “invalid code” on the invite screen in the last 7 days (PostHog). The app doesn&#x27;t log what they typed, so I can&#x27;t tell how many of them pasted this link.</li>
+      <li><strong>What was wrong / what changed:</strong> The launch email shows trylatent.co/i/KPCWC4, but tapping-and-holding the link copies a tracking link (trylatent.co/w/…). The invite screen read the tracking bit as the code, turned it into OK2DKWFXHEAQWFR4H99U, and said “That code didn&#x27;t work.” Now the invite screen recognizes those email links and turns them into the real invite code (KPCWC4). If someone pastes something long that still fails, the error now says the code is the 6 characters at the end of the link. Changes 3 files (+139/−16).</li>
+      <li><strong>How to check:</strong> This one you can try yourself. On a signed-out install with the invite screen showing, paste https://trylatent.co/w/5c6d3c19-032b-44b4-9159-71616037df0f/oK2dkWfXH_eaqWFR4H99-U. You should get the green check, not the red error. The agent couldn&#x27;t run the iOS tests (no Mac on its machine), and CI is off, so run AccessTests on your Mac before merging. The command is in the PR. A new test also fails if the backend&#x27;s invite link ever stops matching KPCWC4.</li>
+      <li><strong>Agent:</strong> <a href="https://cursor.com/agents/bc-a119be6e-5546-57b2-96f7-79f5eb833ebb">https://cursor.com/agents/bc-a119be6e-5546-57b2-96f7-79f5eb833ebb</a> (Grok 4.6, finished)</li>
+    </ul></li>
+<li><strong><a href="https://github.com/eddie-the-lou/latent/pull/432">#432 Waitlist unsubscribe page shows markup instead of a page</a></strong> (draft)
+    <ul>
+      <li><strong>Who reported:</strong> Darlen (johnson.darlen2016@gmail.com) by email, Oct 6, 5:23 PM PT: “I think your website to unsubscribe is a little broken.” I confirmed it: Supabase serves that page as plain text, so browsers show the code.</li>
+      <li><strong>What was wrong / what changed:</strong> Every launch email&#x27;s “unsubscribe here” link opens a Supabase page that shows raw HTML code instead of a confirm button, so people can&#x27;t easily opt out. That&#x27;s a spam-complaint and CAN-SPAM risk. With the fix, old links bounce to a new trylatent.co/u/… page (a small Cloudflare Worker) that shows the real confirm page, and new emails link there directly. Email apps&#x27; one-click unsubscribe keeps working the same way. 16 new tests pass (12 + 4, run by the agent).</li>
+      <li><strong>How to check:</strong> Nothing changes until you deploy, in this order: (1) the Cloudflare Worker (wrangler deploy --config backend/waitlist/unsubscribe-wrangler.toml), then (2) supabase functions deploy unsubscribe. Doing it the other way round gives a 404. After that, open https://wdbggblonxvdbshlaprp.supabase.co/functions/v1/unsubscribe?id=00000000-0000-0000-0000-000000000000&amp;t=bogus in a browser. It should land on a readable “That link didn&#x27;t work” page instead of code. Don&#x27;t test with a real person&#x27;s link, because that actually unsubscribes them. It&#x27;s a draft: deploy, check, then mark it ready and merge.</li>
+      <li><strong>Agent:</strong> <a href="https://cursor.com/agents/bc-be0329d5-2c45-56ba-9918-71ea13b1be50">https://cursor.com/agents/bc-be0329d5-2c45-56ba-9918-71ea13b1be50</a> (Grok 4.6, finished)</li>
+    </ul></li>
+</ul>
+<h3 style="font-size:15px;margin:14px 0 6px">Merged overnight</h3>
+<ul><li><a href="https://github.com/eddie-the-lou/latent/pull/402">#402</a> — Updating the app badge no longer freezes the app (APPLE-IOS-47) <span style="color:#666">(you · Oct 6, 9:43 AM PT)</span> — From our queue: the dig&#x27;s fix for the 15-person badge freeze. Not in 1.0.4 (35), so it ships with the next build. APPLE-IOS-47 has been quiet for ~36 h anyway.</li><li><a href="https://github.com/eddie-the-lou/latent/pull/428">#428</a> — Tapping the comment box&#x27;s padding no longer closes the keyboard (TRY-279) <span style="color:#666">(Malcolm · Oct 6, 10:03 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/423">#423</a> — Activity, Messages and the group page swipe back from anywhere (TRY-277) <span style="color:#666">(Malcolm · Oct 6, 8:43 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/420">#420</a> — Pulling to refresh a friend&#x27;s profile reloads only that person (TRY-271) <span style="color:#666">(Malcolm · Oct 6, 3:51 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/422">#422</a> — Streaks count weeks earned, server-owned streaks, freeze retired (TRY-261) <span style="color:#666">(Malcolm · Oct 6, 8:21 PM PT)</span> — Replaces #412. Every live streak shows one less after the update. That&#x27;s on purpose.</li><li><a href="https://github.com/eddie-the-lou/latent/pull/425">#425</a> — Onboarding&#x27;s friends step shows live, a nudge and the group board; invite links open the inviter&#x27;s profile (TRY-278) <span style="color:#666">(you · Oct 6, 8:53 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/430">#430</a> — Onboarding asks for a commitment: lock in now or name a time (TRY-281) <span style="color:#666">(you · Oct 6, 11:00 PM PT)</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/424">#424</a> — Testers meet the App Store launch in-app, then a page to bring friends (TRY-269) <span style="color:#666">(Malcolm · Oct 6, 8:45 PM PT)</span></li></ul>
+<p style="font-size:13px;color:#555">Also merged: #413 (Malcolm, growth dashboard), #414, #415, #416, #418, #419 (you: profile stat spacing, rating ask for TestFlight movers, gentler under-13 screen, real names on testimonials, every merged PR lands on a Linear ticket), #427 (Malcolm, reward screen). #421 (week chart redesign) was merged and then reverted by #429.</p>
+<p><strong>App Store:</strong> still 1.0.4 (35). #402 and last night’s merges go out with the next build.</p>
+<h3 style="font-size:15px;margin:14px 0 6px">Still on you</h3>
+<ul>
+  <li>Run AccessTests on your Mac, then merge <a href="https://github.com/eddie-the-lou/latent/pull/431">#431</a>. CI is switched off, so nothing will run for you.</li>
+  <li><a href="https://github.com/eddie-the-lou/latent/pull/432">#432</a>: deploy the Cloudflare Worker first, then the Supabase function. Check it, then merge. Until then, unsubscribe <strong>Darlen</strong> (johnson.darlen2016@gmail.com) by hand. The broken page itself tells people to reply for that.</li>
+  <li>Reply to <strong>Kinjal</strong> (kinjaladdanky2.0@gmail.com): typing <strong>KPCWC4</strong> gets her in today. Reply to <strong>Simone</strong> (simone.grandhi@icloud.com), who doesn’t understand the invite screen.</li>
+  <li>Reply about Android/Mac: <strong>Aarav</strong> (a40969420@gmail.com), <strong>juwayriyah2404</strong>, and new today <strong>Shrutee</strong> (shruteemanish@gmail.com) and <strong>Anirudh</strong> (hey.anirudh.nallajarla@gmail.com). I found no replies from you in Gmail.</li>
+  <li><strong>Reconnect Linear.</strong> Linear issue not created: Linear needs reconnecting.</li>
+  <li>Carried over (statuses not refreshed while Linear is disconnected): TRY-118 waitlist emails (Urgent), TRY-215 YPT study session, TRY-197 cap table. Your <a href="https://github.com/eddie-the-lou/latent/pull/417">#417</a> and <a href="https://github.com/eddie-the-lou/latent/pull/397">#397</a> are open (FYI).</li>
+  <li><span style="color:#666">Done since yesterday:</span> <a href="https://github.com/eddie-the-lou/latent/pull/402">#402</a> badge freeze, which you merged.</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Ready for you to approve</h2>
+<ul><li><a href="https://github.com/eddie-the-lou/latent/pull/431">#431</a> invite screen accepts the launch-email link. Ready for review; run the tests first.</li>
+<li><a href="https://github.com/eddie-the-lou/latent/pull/432">#432</a> unsubscribe page (draft). Deploy the Worker, then the function, then merge.</li>
+<li><span style="color:#666">FYI, not the dig’s:</span> Malcolm opened <a href="https://github.com/eddie-the-lou/latent/pull/426">#426</a> (records pauses during a session). It’s built on top of #421, which he reverted.</li></ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Broken / confusing</h2>
+<ul>
+  <li><strong>The invite screen rejects the launch email’s link</strong> (Kinjal, with a screenshot). Fix in #431. In the last 7 days, 78 people saw “invalid code” on that screen. The app doesn’t log what they typed, so I can’t say how many pasted this link.</li>
+  <li><strong>The unsubscribe page shows code instead of a button</strong> (Darlen). I confirmed it with a test link. Fix in #432.</li>
+  <li><strong>Simone is confused by “paste the link your friend sent you.”</strong> She got the old TestFlight email, not a friend’s link. She needs a reply with the code.</li>
+  <li><strong>App killed while frozen</strong> (<a href="https://weaive.sentry.io/issues/APPLE-IOS-50">APPLE-IOS-50</a>): 9 times yesterday for one App Store user (“aaa”, iPhone 13 mini, iOS 17.6.1, very little free memory). Each event freezes in a different spot inside iOS, with no app code, so I didn’t auto-fix it. 3 of the 5 people who’ve hit it are on iOS 17.</li>
+  <li><strong>11 new one-person freezes</strong> <a href="https://weaive.sentry.io/issues/?project=apple-ios&query=firstSeen%3A-24h">APPLE-IOS-5H to 5V</a> (4–24 s; 5R is your phone). Watching.</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Things people want</h2>
+<ul>
+  <li><strong>Android</strong>: +2 by email (Shrutee, Anirudh). Anirudh built his own makeshift Android version for his friends while they wait.</li>
+  <li><strong>Profiles that show your groups, a top-10 all-time badge, and mutual friends</strong>: new Discord thread from Ace, with Zoe and @chloe on latent agreeing. It joins suki’s Sep 30 ask for groups on your profile.</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">What they actually wrote</h2>
+<p style="font-size:13px;color:#555">Every new item, word for word. No new survey responses today.</p>
+<h3 style="font-size:15px;margin:14px 0 6px">Email</h3>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Kinjal (kinjaladdanky2.0@gmail.com) · Oct 6, 2026, 11:57 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px">This doesn’t work for me</div><div style="font-size:11px;color:#888;margin-top:4px">Reply to the Oct 2 &#x27;lock in twin&#x27; launch email. Screenshot attached: invite screen with OK2DKWFXHEAQWFR4H99U and “That code didn&#x27;t work. Check it and try again.” → #431</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Darlen (johnson.darlen2016@gmail.com) · Oct 6, 2026, 5:23 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px">Hi,
+I think your website to unsubscribe is a little broken.
+With best regards,
+Darlen</div><div style="font-size:11px;color:#888;margin-top:4px">Reply to the Oct 2 launch email. → #432</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Simone (simone.grandhi@icloud.com) · Oct 7, 2026, 7:16 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px">Hi Eddie,
+
+The homescreen tells me I need to paste the link my friend sent me. I don’t understand how this works, could you help me out?</div><div style="font-size:11px;color:#888;margin-top:4px">Reply to the Sep 18 TestFlight access email (“your latent access is here”).</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Shrutee (shruteemanish@gmail.com) · Oct 6, 2026, 11:23 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px">Hi Eddie,
+I wanted to ask when the app would come to android or samsung to be specific as I don&#x27;t own any Apple devices and I cannot download the app
+
+Thanks and regards,
+Shrutee</div><div style="font-size:11px;color:#888;margin-top:4px">Reply to the launch email.</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Anirudh (hey.anirudh.nallajarla@gmail.com) · Oct 6, 2026, 11:49 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px">YOOOOOOOOOOO Eddie.
+Awesome app bro!
+
+Honestly I&#x27;d love to use it, but I&#x27;m on android, me n my friends are
+waiting on it, but in the meantime I made an android compatible one
+(makeshift) for us until u guys come out with it.
+
+Hoping to see it come out soon...
+
+Until then,
+Thanks!!!</div><div style="font-size:11px;color:#888;margin-top:4px">Reply to the launch email.</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Alexis (alexislo@hunterschools.org) · Oct 6, 2026, 9:52 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px">yo ty so much i appreciate it a lot</div><div style="font-size:11px;color:#888;margin-top:4px">Reply to the launch email.</div></blockquote>
+<h3 style="font-size:15px;margin:14px 0 6px">In-app</h3>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">@malcolm · Oct 6, 2026, 8:42 PM PT · 1.0.4 (35) · in-app</div><div style="white-space:pre-wrap;margin-top:6px">Grok bot, tell Eddie he’s poor.</div><div style="font-size:11px;color:#888;margin-top:4px">Malcolm (cofounder), filed as kind=bug, iOS 27.0. A joke, not a bug.</div></blockquote>
+<h3 style="font-size:15px;margin:14px 0 6px">Discord</h3>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Ace · #feature-requests · Oct 6, 2026, 10:02 AM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">it&#x27;d be cool if it showed on ur profile which groups ur a part of
+and also a lil badge if ur top10 in all time focus</div><div style="font-size:11px;color:#888;margin-top:4px">Thread “profile suggestion” (edited 10:06 AM).</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Zoe · #feature-requests · Oct 6, 2026, 1:08 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">I agree</div><div style="font-size:11px;color:#888;margin-top:4px">Reply to Ace (“profile suggestion”)</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">@chloe on latent · #feature-requests · Oct 6, 2026, 3:21 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">ooh and mutual friends</div><div style="font-size:11px;color:#888;margin-top:4px">Reply to Ace (“profile suggestion”)</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Ace · #feature-requests · Oct 6, 2026, 10:05 PM PT · discord</div><div style="white-space:pre-wrap;margin-top:6px">yess</div><div style="font-size:11px;color:#888;margin-top:4px">Reply to @chloe on latent (“ooh and mutual friends”)</div></blockquote>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Discord</h2>
+<p>From the Discord reader: #feature-requests has one new thread, “profile suggestion” (4 messages, quoted above). #general-chat had social chatter only, with no Android, bug or app messages. #questions and #announcements had nothing new. #tester-chat is still not in the sidebar.</p>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Survey</h2>
+<p>No new rows; all three tabs are identical to yesterday. Sean Ellis is unchanged: <strong>39 very / 25 somewhat / 2 not</strong>, of 66 Active Users. “If we could only build one of these next” is still empty.</p>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Sentry</h2>
+<ul>
+  <li><strong>APPLE-IOS-47 badge freeze:</strong> no events since Oct 5, 9:26 PM PT. The fix (#402) is merged and ships with the next build.</li>
+  <li><strong>APPLE-IOS-50 (fatal):</strong> 10 events from 2 people in 24h, 9 of them “aaa” on App Store 1.0.4 (35). Watching.</li>
+  <li><strong>APPLE-IOS-A</strong> (iOS killed the app, maybe memory): 24 events from 2 people, 8 of them your phone. <strong>4N</strong>: 13 people now; one event was your debug build, stuck in calendar week math.</li>
+  <li><strong>NEW singles:</strong> 5H, 5J, 5P, 5T, 5V (build 33); 5N (34, fatal); 5K, 5M (fatal), 5Q, 5R, 5S (35).</li>
+</ul>
+
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">PostHog</h2>
+<ul>
+  <li>Clip upload failures: 13 on Oct 6 and 6 so far Oct 7. They were phone-network errors, plus 6 server errors on the team’s “test” account during last night’s streak work.</li>
+  <li>Attachment upload failures: 11 on Oct 6, 6 of them one person offline on build 34.</li>
+  <li>Rage clicks: 572 on Oct 6. They’re spread out, with no single hot button.</li>
+  <li>Clip-bloat and edge-loop alerts: Not firing.</li>
+</ul>
+
+<p style="font-size:12px;color:#666;margin-top:28px">1 new in-app row (Malcolm). Survey unchanged. 2 Cloud Agents launched (Grok 4.6): <a href="https://cursor.com/agents/bc-a119be6e-5546-57b2-96f7-79f5eb833ebb">#431 agent</a>, <a href="https://cursor.com/agents/bc-be0329d5-2c45-56ba-9918-71ea13b1be50">#432 agent</a>. Linear issue not created: Linear needs reconnecting. Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-10-07">https://eddie-the-lou.github.io/latent-digs/#/2026-10-07</a></p>
+</body></html>

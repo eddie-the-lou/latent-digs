@@ -1,0 +1,612 @@
+{
+  "date": "2026-10-07",
+  "title": "Latent daily review · Oct 7",
+  "generatedAt": "2026-10-07T16:42:12.835832+00:00",
+  "tldr": [
+    "2 new fixes are waiting on you, both from emails people sent back after the waitlist launch email. #431: the app's invite screen rejected the link in that email (Kinjal sent a screenshot of “That code didn't work”). #432: the email's “unsubscribe here” page shows a screen of code instead of a button (Darlen). #432 only takes effect after you run two deploy commands.",
+    "Yesterday's #402 badge-freeze fix is merged (you merged it at 9:43 AM PT Oct 6). It reaches people with the next App Store build, since 1.0.4 (35) doesn't include it. You and Malcolm merged 15 more PRs overnight, plus #421, which Malcolm reverted. His #422 (server-owned streaks, TRY-261) replaced #412.",
+    "Android: 2 more people asked by email (Shrutee, plus Anirudh, who built his own makeshift Android version for his friends). Aarav and juwayriyah2404 still haven't had a reply. Simone emailed confused by the “paste the link your friend sent you” screen.",
+    "Sentry: 11 new freezes that each hit one person, and I'm watching them. One App Store user (“aaa”, iPhone 13 mini on iOS 17) had the app killed 9 times yesterday (APPLE-IOS-50). There's no app code in those traces, so I didn't auto-fix it. Also: no new survey responses, one Discord feature thread (show your groups, a top-10 badge and mutual friends on profiles), and PostHog alerts are quiet. Linear still needs reconnecting, so I didn't create a dig issue."
+  ],
+  "plainTldr": [
+    "2 new fixes are waiting on you, both from emails people sent back after the waitlist launch email. #431: the app's invite screen rejected the link in that email (Kinjal sent a screenshot of “That code didn't work”). #432: the email's “unsubscribe here” page shows a screen of code instead of a button (Darlen). #432 only takes effect after you run two deploy commands.",
+    "Yesterday's #402 badge-freeze fix is merged (you merged it at 9:43 AM PT Oct 6). It reaches people with the next App Store build, since 1.0.4 (35) doesn't include it. You and Malcolm merged 15 more PRs overnight, plus #421, which Malcolm reverted. His #422 (server-owned streaks, TRY-261) replaced #412.",
+    "Android: 2 more people asked by email (Shrutee, plus Anirudh, who built his own makeshift Android version for his friends). Aarav and juwayriyah2404 still haven't had a reply. Simone emailed confused by the “paste the link your friend sent you” screen.",
+    "Sentry: 11 new freezes that each hit one person, and I'm watching them. One App Store user (“aaa”, iPhone 13 mini on iOS 17) had the app killed 9 times yesterday (APPLE-IOS-50). There's no app code in those traces, so I didn't auto-fix it. Also: no new survey responses, one Discord feature thread (show your groups, a top-10 badge and mutual friends on profiles), and PostHog alerts are quiet. Linear still needs reconnecting, so I didn't create a dig issue."
+  ],
+  "stats": {
+    "newInApp": 1,
+    "newDiscord": 4,
+    "newGmail": 6,
+    "newSurveyRows": 0,
+    "seanEllis": {
+      "very": 39,
+      "somewhat": 25,
+      "not": 2,
+      "n": 66
+    },
+    "sentryNew": [
+      "APPLE-IOS-5H",
+      "APPLE-IOS-5J",
+      "APPLE-IOS-5K",
+      "APPLE-IOS-5M",
+      "APPLE-IOS-5N",
+      "APPLE-IOS-5P",
+      "APPLE-IOS-5Q",
+      "APPLE-IOS-5R",
+      "APPLE-IOS-5S",
+      "APPLE-IOS-5T",
+      "APPLE-IOS-5V"
+    ],
+    "posthog": {
+      "uploadFailed": {
+        "2026-09-27": 11,
+        "2026-09-28": 25,
+        "2026-09-29": 6,
+        "2026-09-30": 2,
+        "2026-10-01": 10,
+        "2026-10-02": 4,
+        "2026-10-03": 0,
+        "2026-10-04": 15,
+        "2026-10-05": 2,
+        "2026-10-06": 13,
+        "2026-10-07": 6
+      },
+      "rageclicks": {
+        "2026-09-27": 363,
+        "2026-09-28": 365,
+        "2026-09-29": 429,
+        "2026-09-30": 297,
+        "2026-10-01": 358,
+        "2026-10-02": 437,
+        "2026-10-03": 455,
+        "2026-10-04": 444,
+        "2026-10-05": 559,
+        "2026-10-06": 572,
+        "2026-10-07": 338
+      },
+      "attachmentUploadFailed": {
+        "2026-09-29": 14,
+        "2026-09-30": 27,
+        "2026-10-01": 0,
+        "2026-10-02": 1,
+        "2026-10-03": 0,
+        "2026-10-04": 0,
+        "2026-10-05": 5,
+        "2026-10-06": 11,
+        "2026-10-07": 0
+      },
+      "clipBloatAlert": "Not firing",
+      "edgeLoopAlert": "Not firing",
+      "notes": "UTC day buckets. Oct 7 partial (~9:30 AM PT). Since the dig, clip failures were 7 offline errors from one person on build 34 (with 6 attachment failures in the same minutes), 2 connection-lost errors, and 6 server 500/503s on the “test” account on build 35 (team testing, around the streak migration). Rage clicks are spread across generic screens with no hot button. Clip-bloat last value 1.564 MB/s (threshold 4). Edge-loop last value 0 (threshold 200)."
+    },
+    "rawQuotes": 11
+  },
+  "whatIDidToday": {
+    "fixesOpened": [
+      {
+        "pr": 431,
+        "url": "https://github.com/eddie-the-lou/latent/pull/431",
+        "agent": "https://cursor.com/agents/bc-a119be6e-5546-57b2-96f7-79f5eb833ebb",
+        "title": "Accept waitlist wave /w/ links on the invite-code screen",
+        "reporter": "Kinjal (email + screenshot)"
+      },
+      {
+        "pr": 432,
+        "url": "https://github.com/eddie-the-lou/latent/pull/432",
+        "agent": "https://cursor.com/agents/bc-be0329d5-2c45-56ba-9918-71ea13b1be50",
+        "title": "Waitlist unsubscribe page shows markup instead of a page",
+        "reporter": "Darlen (email)"
+      }
+    ],
+    "note": "Launched 2 Cloud Agents on Grok 4.6 at ~9:28 AM PT. Both finished and opened PRs by ~9:35 AM PT.",
+    "agentsLaunched": [
+      {
+        "id": "bc-a119be6e-5546-57b2-96f7-79f5eb833ebb",
+        "url": "https://cursor.com/agents/bc-a119be6e-5546-57b2-96f7-79f5eb833ebb",
+        "model": "Grok 4.6",
+        "pr": 431
+      },
+      {
+        "id": "bc-be0329d5-2c45-56ba-9918-71ea13b1be50",
+        "url": "https://cursor.com/agents/bc-be0329d5-2c45-56ba-9918-71ea13b1be50",
+        "model": "Grok 4.6",
+        "pr": 432
+      }
+    ]
+  },
+  "prStatus": {
+    "waiting": [
+      {
+        "pr": 431,
+        "title": "Accept waitlist wave /w/ links on the invite-code screen",
+        "url": "https://github.com/eddie-the-lou/latent/pull/431",
+        "reporter": "Kinjal (kinjaladdanky2.0@gmail.com) by email, Oct 6, 11:57 PM PT, with a screenshot. 78 people hit an “invalid code” on the invite screen in the last 7 days (PostHog). The app doesn't log what they typed, so I can't tell how many of them pasted this link.",
+        "agent": "https://cursor.com/agents/bc-a119be6e-5546-57b2-96f7-79f5eb833ebb",
+        "plain": "The launch email shows trylatent.co/i/KPCWC4, but tapping-and-holding the link copies a tracking link (trylatent.co/w/…). The invite screen read the tracking bit as the code, turned it into OK2DKWFXHEAQWFR4H99U, and said “That code didn't work.” Now the invite screen recognizes those email links and turns them into the real invite code (KPCWC4). If someone pastes something long that still fails, the error now says the code is the 6 characters at the end of the link. Changes 3 files (+139/−16).",
+        "check": "This one you can try yourself. On a signed-out install with the invite screen showing, paste https://trylatent.co/w/5c6d3c19-032b-44b4-9159-71616037df0f/oK2dkWfXH_eaqWFR4H99-U. You should get the green check, not the red error. The agent couldn't run the iOS tests (no Mac on its machine), and CI is off, so run AccessTests on your Mac before merging. The command is in the PR. A new test also fails if the backend's invite link ever stops matching KPCWC4.",
+        "draft": false
+      },
+      {
+        "pr": 432,
+        "title": "Waitlist unsubscribe page shows markup instead of a page",
+        "url": "https://github.com/eddie-the-lou/latent/pull/432",
+        "reporter": "Darlen (johnson.darlen2016@gmail.com) by email, Oct 6, 5:23 PM PT: “I think your website to unsubscribe is a little broken.” I confirmed it: Supabase serves that page as plain text, so browsers show the code.",
+        "agent": "https://cursor.com/agents/bc-be0329d5-2c45-56ba-9918-71ea13b1be50",
+        "plain": "Every launch email's “unsubscribe here” link opens a Supabase page that shows raw HTML code instead of a confirm button, so people can't easily opt out. That's a spam-complaint and CAN-SPAM risk. With the fix, old links bounce to a new trylatent.co/u/… page (a small Cloudflare Worker) that shows the real confirm page, and new emails link there directly. Email apps' one-click unsubscribe keeps working the same way. 16 new tests pass (12 + 4, run by the agent).",
+        "check": "Nothing changes until you deploy, in this order: (1) the Cloudflare Worker (wrangler deploy --config backend/waitlist/unsubscribe-wrangler.toml), then (2) supabase functions deploy unsubscribe. Doing it the other way round gives a 404. After that, open https://wdbggblonxvdbshlaprp.supabase.co/functions/v1/unsubscribe?id=00000000-0000-0000-0000-000000000000&t=bogus in a browser. It should land on a readable “That link didn't work” page instead of code. Don't test with a real person's link, because that actually unsubscribes them. It's a draft: deploy, check, then mark it ready and merge.",
+        "draft": true
+      }
+    ],
+    "openedToday": [
+      {
+        "pr": 431,
+        "url": "https://github.com/eddie-the-lou/latent/pull/431",
+        "agent": "https://cursor.com/agents/bc-a119be6e-5546-57b2-96f7-79f5eb833ebb"
+      },
+      {
+        "pr": 432,
+        "url": "https://github.com/eddie-the-lou/latent/pull/432",
+        "agent": "https://cursor.com/agents/bc-be0329d5-2c45-56ba-9918-71ea13b1be50"
+      }
+    ],
+    "malcolmOpen": [
+      {
+        "pr": 426,
+        "title": "Record how many times a session is paused and for how long",
+        "url": "https://github.com/eddie-the-lou/latent/pull/426",
+        "note": "NEW Oct 6, 9:31 PM PT. Built on top of #421, which was reverted by #429."
+      },
+      {
+        "pr": 267,
+        "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+        "url": "https://github.com/eddie-the-lou/latent/pull/267"
+      },
+      {
+        "pr": 164,
+        "title": "Today mini cards fit their durations; camera toggle stays put",
+        "url": "https://github.com/eddie-the-lou/latent/pull/164"
+      },
+      {
+        "pr": 162,
+        "title": "One frame rule for the timelapse clip",
+        "url": "https://github.com/eddie-the-lou/latent/pull/162"
+      },
+      {
+        "pr": 123,
+        "title": "Sequential dual-camera proof stills (draft)",
+        "url": "https://github.com/eddie-the-lou/latent/pull/123"
+      }
+    ],
+    "eddieOpen": [
+      {
+        "pr": 417,
+        "title": "Friends' posts land before their stats; big graphs load stats in parallel",
+        "url": "https://github.com/eddie-the-lou/latent/pull/417",
+        "note": "NEW Oct 6, 2:48 PM PT, FYI"
+      },
+      {
+        "pr": 397,
+        "title": "Activation report (daily), plus two analytics fixes",
+        "url": "https://github.com/eddie-the-lou/latent/pull/397",
+        "note": "FYI only"
+      }
+    ],
+    "agentsSpinning": [],
+    "agentsFinished": [
+      {
+        "id": "bc-a119be6e-5546-57b2-96f7-79f5eb833ebb",
+        "title": "Invite gate rejects the wave email's /w/ link",
+        "pr": 431,
+        "url": "https://cursor.com/agents/bc-a119be6e-5546-57b2-96f7-79f5eb833ebb",
+        "model": "Grok 4.6"
+      },
+      {
+        "id": "bc-be0329d5-2c45-56ba-9918-71ea13b1be50",
+        "title": "Unsubscribe page shows raw HTML code",
+        "pr": 432,
+        "url": "https://cursor.com/agents/bc-be0329d5-2c45-56ba-9918-71ea13b1be50",
+        "model": "Grok 4.6"
+      }
+    ],
+    "clearedOvernight": [
+      {
+        "id": "pr-402",
+        "title": "#402 badge freeze (APPLE-IOS-47)",
+        "via": "merged by you Oct 6, 9:43 AM PT"
+      },
+      {
+        "id": "pr-412",
+        "title": "Malcolm's #412 server-owned streaks",
+        "via": "closed; replaced by #422 (merged)"
+      }
+    ],
+    "mergedOvernight": [
+      {
+        "pr": 402,
+        "url": "https://github.com/eddie-the-lou/latent/pull/402",
+        "title": "Updating the app badge no longer freezes the app (APPLE-IOS-47)",
+        "by": "you · Oct 6, 9:43 AM PT",
+        "note": "From our queue: the dig's fix for the 15-person badge freeze. Not in 1.0.4 (35), so it ships with the next build. APPLE-IOS-47 has been quiet for ~36 h anyway."
+      },
+      {
+        "pr": 428,
+        "url": "https://github.com/eddie-the-lou/latent/pull/428",
+        "title": "Tapping the comment box's padding no longer closes the keyboard (TRY-279)",
+        "by": "Malcolm · Oct 6, 10:03 PM PT"
+      },
+      {
+        "pr": 423,
+        "url": "https://github.com/eddie-the-lou/latent/pull/423",
+        "title": "Activity, Messages and the group page swipe back from anywhere (TRY-277)",
+        "by": "Malcolm · Oct 6, 8:43 PM PT"
+      },
+      {
+        "pr": 420,
+        "url": "https://github.com/eddie-the-lou/latent/pull/420",
+        "title": "Pulling to refresh a friend's profile reloads only that person (TRY-271)",
+        "by": "Malcolm · Oct 6, 3:51 PM PT"
+      },
+      {
+        "pr": 422,
+        "url": "https://github.com/eddie-the-lou/latent/pull/422",
+        "title": "Streaks count weeks earned, server-owned streaks, freeze retired (TRY-261)",
+        "by": "Malcolm · Oct 6, 8:21 PM PT",
+        "note": "Replaces #412. Every live streak shows one less after the update. That's on purpose."
+      },
+      {
+        "pr": 425,
+        "url": "https://github.com/eddie-the-lou/latent/pull/425",
+        "title": "Onboarding's friends step shows live, a nudge and the group board; invite links open the inviter's profile (TRY-278)",
+        "by": "you · Oct 6, 8:53 PM PT"
+      },
+      {
+        "pr": 430,
+        "url": "https://github.com/eddie-the-lou/latent/pull/430",
+        "title": "Onboarding asks for a commitment: lock in now or name a time (TRY-281)",
+        "by": "you · Oct 6, 11:00 PM PT"
+      },
+      {
+        "pr": 424,
+        "url": "https://github.com/eddie-the-lou/latent/pull/424",
+        "title": "Testers meet the App Store launch in-app, then a page to bring friends (TRY-269)",
+        "by": "Malcolm · Oct 6, 8:45 PM PT"
+      }
+    ],
+    "alsoMerged": "Also merged: #413 (Malcolm, growth dashboard), #414, #415, #416, #418, #419 (you: profile stat spacing, rating ask for TestFlight movers, gentler under-13 screen, real names on testimonials, every merged PR lands on a Linear ticket), #427 (Malcolm, reward screen). #421 (week chart redesign) was merged and then reverted by #429.",
+    "stillOnYou": [
+      {
+        "id": "pr-431",
+        "title": "Run AccessTests on your Mac, then merge #431 (invite screen accepts the launch email link). CI is off.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/431"
+      },
+      {
+        "id": "pr-432",
+        "title": "#432 unsubscribe page: deploy the Worker, then the Supabase function, check, then merge. Until then, unsubscribe Darlen by hand (the broken page itself tells people to reply for that).",
+        "url": "https://github.com/eddie-the-lou/latent/pull/432"
+      },
+      {
+        "id": "reply-kinjal",
+        "title": "Reply to Kinjal (kinjaladdanky2.0@gmail.com): the code is KPCWC4 for now. Reply to Simone (simone.grandhi@icloud.com), who doesn't understand the invite screen."
+      },
+      {
+        "id": "reply-android",
+        "title": "Reply about Android/Mac: Aarav (a40969420@gmail.com), juwayriyah2404, and new today Shrutee (shruteemanish@gmail.com) and Anirudh (hey.anirudh.nallajarla@gmail.com). You haven't replied to any of them in Gmail yet."
+      },
+      {
+        "id": "linear-reconnect",
+        "title": "Reconnect Linear (MCP needs re-auth) so the dig can create its daily issue"
+      },
+      {
+        "id": "try-118",
+        "title": "TRY-118 waitlist emails (Urgent). Status not refreshed (Linear disconnected)."
+      },
+      {
+        "id": "try-215",
+        "title": "TRY-215 YPT study session. Status not refreshed."
+      },
+      {
+        "id": "try-197",
+        "title": "TRY-197 cap table. Status not refreshed."
+      }
+    ]
+  },
+  "actions": [
+    {
+      "id": "pr-431",
+      "title": "#431 invite screen accepts the launch email link",
+      "status": "waiting",
+      "url": "https://github.com/eddie-the-lou/latent/pull/431"
+    },
+    {
+      "id": "pr-432",
+      "title": "#432 unsubscribe page fix (draft, needs 2 deploys)",
+      "status": "waiting",
+      "url": "https://github.com/eddie-the-lou/latent/pull/432"
+    },
+    {
+      "id": "reply-emails",
+      "title": "Reply to Kinjal, Simone, Darlen (unsubscribe by hand), and the Android askers",
+      "status": "waiting"
+    },
+    {
+      "id": "email",
+      "title": "Email dig to eddie@weaive.app",
+      "status": "done"
+    },
+    {
+      "id": "archive",
+      "title": "Publish archive to latent-digs GitHub Pages",
+      "status": "done"
+    },
+    {
+      "id": "linear",
+      "title": "Linear issue not created: Linear needs reconnecting",
+      "status": "skipped"
+    },
+    {
+      "id": "agents",
+      "title": "2 Cloud Agents launched (Grok 4.6) → #431, #432",
+      "status": "done"
+    }
+  ],
+  "bugs": [
+    {
+      "id": "invite-wave-link",
+      "title": "Invite screen rejects the launch email's link",
+      "status": "waiting",
+      "people": "Kinjal (screenshot). Maybe Simone too. 78 people got “invalid code” in 7 days, cause unknown.",
+      "summary": "Fix in #431. Copying the email link gives a tracking URL, which the invite screen turned into a nonsense code.",
+      "url": "https://github.com/eddie-the-lou/latent/pull/431"
+    },
+    {
+      "id": "unsubscribe-raw-html",
+      "title": "Unsubscribe page shows code instead of a button",
+      "status": "waiting",
+      "people": "Darlen (and everyone on the waitlist emails)",
+      "summary": "Fix in draft #432. Needs a Cloudflare Worker deploy and then a Supabase function deploy. Confirmed with a test link: Supabase serves the page as plain text.",
+      "url": "https://github.com/eddie-the-lou/latent/pull/432"
+    },
+    {
+      "id": "apple-ios-47",
+      "title": "App froze while updating the icon badge (APPLE-IOS-47, also 49)",
+      "status": "resolved",
+      "people": "15 Sentry users",
+      "summary": "Fixed on main by #402 (merged Oct 6, 9:43 AM PT). It ships with the next App Store build. No new events in ~36 h.",
+      "url": "https://github.com/eddie-the-lou/latent/pull/402"
+    },
+    {
+      "id": "apple-ios-50",
+      "title": "App killed while frozen (APPLE-IOS-50)",
+      "status": "watch",
+      "people": "5 Sentry users lifetime. 9 of the last 10 events are one App Store user, “aaa” (iPhone 13 mini, iOS 17.6.1).",
+      "summary": "Each event freezes in a different place inside iOS/SwiftUI, with no app code on the stack. The newest was opening a sheet. 3 of the 5 users are on iOS 17, and the phone had very little free memory. Not clear enough to auto-fix.",
+      "url": "https://weaive.sentry.io/issues/APPLE-IOS-50"
+    },
+    {
+      "id": "sentry-singles",
+      "title": "11 new one-person freezes (APPLE-IOS-5H to 5V)",
+      "status": "watch",
+      "people": "1 each (5R is your phone, 5M is “aaa”, 5K is hooriyah)",
+      "summary": "4–24 s freezes on builds 33, 34 and 35, and two were fatal (5M, 5N). Watching, no auto-fix.",
+      "url": "https://weaive.sentry.io/issues/?project=apple-ios&query=firstSeen%3A-24h"
+    },
+    {
+      "id": "apple-ios-4n",
+      "title": "APPLE-IOS-4N grab-bag freeze",
+      "status": "watch",
+      "people": "13 Sentry users (was 11)",
+      "summary": "2 events in 24h. One was your own debug build, stuck in calendar week math, not the clipboard. Hunch: unrelated freezes grouped together. Your open #417 moves streak math off the main thread.",
+      "url": "https://weaive.sentry.io/issues/APPLE-IOS-4N"
+    },
+    {
+      "id": "apple-ios-35",
+      "title": "Long “hang” grab-bag (APPLE-IOS-35)",
+      "status": "watch",
+      "people": "6 users in 24h",
+      "summary": "8 events, mostly 3–4 s. Not clearly actionable.",
+      "url": "https://weaive.sentry.io/issues/APPLE-IOS-35"
+    }
+  ],
+  "features": [
+    {
+      "id": "android",
+      "title": "Android / non-Apple devices",
+      "status": "backlog",
+      "people": "Shrutee (NEW), Anirudh (NEW), Aarav (a40969420), SourLemown, Empyrean, Android Advocate, Wakanda Panda, juwayriyah2404, Lando, daniboehm0305, tiagoalexandre8442, tejaswisingh605, ajmcallister27, rbalintfi, AaravM0910, Sharon, BonusEarther",
+      "summary": "+2 by email today. Anirudh built his own makeshift Android version for his friends while they wait. Still by far the loudest ask."
+    },
+    {
+      "id": "profile-groups-badge",
+      "title": "Profiles show your groups, a top-10 all-time badge, and mutual friends",
+      "status": "backlog",
+      "people": "Ace, Zoe, @chloe on latent (NEW, Discord); suki asked for “group on profile” on Sep 30",
+      "summary": "New #feature-requests thread “profile suggestion”, 4 messages."
+    },
+    {
+      "id": "desktop-screen-record",
+      "title": "Desktop / Mac app",
+      "status": "backlog",
+      "people": "Aarav, 1qrobo1, eman, Zoe, Ethan",
+      "summary": "No new asks today."
+    },
+    {
+      "id": "anti-afk",
+      "title": "Catch AFK recording that farms hours",
+      "status": "backlog",
+      "people": "Suki",
+      "summary": "Carried over; no new replies."
+    },
+    {
+      "id": "alarm-sound",
+      "title": "Change session timer alarm sound",
+      "status": "backlog",
+      "people": "fxyzkhan",
+      "summary": "Carried over; no new replies."
+    }
+  ],
+  "bySource": {
+    "inApp": {
+      "new": 1,
+      "note": "1 new row since Oct 6 9:00 AM PT: Malcolm's joke (“Grok bot, tell Eddie he’s poor.”, kind=bug, 1.0.4 (35)). No real user feedback."
+    },
+    "discord": {
+      "new": 4,
+      "note": "From the Discord reader: a new #feature-requests thread “profile suggestion” (Ace, Zoe, @chloe on latent; 4 messages). #general-chat was social chatter only (not quoted), with no Android or bug messages. #questions and #announcements had nothing new. #tester-chat is still not in the sidebar."
+    },
+    "gmail": {
+      "new": 6,
+      "note": "Replies to the launch email: Kinjal (invite link doesn't work, screenshot), Darlen (unsubscribe broken), Simone (confused by the invite screen), Shrutee and Anirudh (Android), Alexis (thanks). Also Malcolm's in-app report copy and GitHub/Linear bot mail for #418/#419/#425/#430. No video attachments and no PostHog alert mail. Pitches, DMARC reports and newsletters skipped. Sent: no replies from you to Aarav, juwayriyah2404 or anyone above."
+    },
+    "survey": {
+      "newRows": 0,
+      "seanEllis": "39/25/2 of 66",
+      "buildOneNext": "still empty (0 of 66)",
+      "note": "Export HTTP 200, 25,274 bytes. All three tabs are identical to yesterday (66/6/8 responses)."
+    },
+    "sentry": {
+      "new": [
+        "APPLE-IOS-5H",
+        "APPLE-IOS-5J",
+        "APPLE-IOS-5K",
+        "APPLE-IOS-5M",
+        "APPLE-IOS-5N",
+        "APPLE-IOS-5P",
+        "APPLE-IOS-5Q",
+        "APPLE-IOS-5R",
+        "APPLE-IOS-5S",
+        "APPLE-IOS-5T",
+        "APPLE-IOS-5V"
+      ],
+      "note": "APPLE-IOS-47: no events since Oct 5, 9:26 PM PT. Fix #402 is merged but not shipped. APPLE-IOS-50 (fatal hang): 10 events / 2 users in 24h, 9 of them from “aaa” on App Store 1.0.4 (35). APPLE-IOS-A (iOS killed the app): 24 events / 2 users, 8 of them your phone. 4N is up to 13 users. 11 new singles."
+    },
+    "posthog": {
+      "note": "Upload failures were phone-network errors, plus team-account test 500s. Rage clicks were 572 on Oct 6, spread out with no hot button. 78 people got “invalid code” on the invite screen in 7 days. Clip-bloat and edge-loop alerts: Not firing."
+    },
+    "github": {
+      "note": "main @ cf99d6a (#430, Oct 6, 11:00 PM PT). Merged since the dig: #402, #413–#416, #418–#425, #427–#430 (#421 reverted by #429). Open: #431 and #432 (dig, new), #426 (Malcolm, new), #417 (you, new), #397, #267, #164, #162, #123. #412 closed."
+    },
+    "linear": {
+      "note": "user-Linear and user-Linear--trylatent still needsAuth. Dig issue not created; TRY-118/215/197 not refreshed. FYI: your merged #419 now syncs every merged PR to a Linear ticket automatically."
+    }
+  },
+  "rawQuotes": [
+    {
+      "id": "gmail-kinjal",
+      "source": "gmail",
+      "username": "Kinjal (kinjaladdanky2.0@gmail.com)",
+      "when": "2026-10-07T06:57:43Z",
+      "whenPT": "Oct 6, 2026, 11:57 PM PT",
+      "kind": "bug",
+      "note": "Reply to the Oct 2 'lock in twin' launch email. Screenshot attached: invite screen with OK2DKWFXHEAQWFR4H99U and “That code didn't work. Check it and try again.” → #431",
+      "quote": "This doesn’t work for me"
+    },
+    {
+      "id": "gmail-darlen",
+      "source": "gmail",
+      "username": "Darlen (johnson.darlen2016@gmail.com)",
+      "when": "2026-10-07T00:23:11Z",
+      "whenPT": "Oct 6, 2026, 5:23 PM PT",
+      "kind": "bug",
+      "note": "Reply to the Oct 2 launch email. → #432",
+      "quote": "Hi,\nI think your website to unsubscribe is a little broken.\nWith best regards,\nDarlen"
+    },
+    {
+      "id": "gmail-simone",
+      "source": "gmail",
+      "username": "Simone (simone.grandhi@icloud.com)",
+      "when": "2026-10-07T14:16:54Z",
+      "whenPT": "Oct 7, 2026, 7:16 AM PT",
+      "kind": "confusion",
+      "note": "Reply to the Sep 18 TestFlight access email (“your latent access is here”).",
+      "quote": "Hi Eddie,\n\nThe homescreen tells me I need to paste the link my friend sent me. I don’t understand how this works, could you help me out?"
+    },
+    {
+      "id": "gmail-shrutee",
+      "source": "gmail",
+      "username": "Shrutee (shruteemanish@gmail.com)",
+      "when": "2026-10-06T18:23:51Z",
+      "whenPT": "Oct 6, 2026, 11:23 AM PT",
+      "kind": "android_ask",
+      "note": "Reply to the launch email.",
+      "quote": "Hi Eddie,\nI wanted to ask when the app would come to android or samsung to be specific as I don't own any Apple devices and I cannot download the app\n\nThanks and regards,\nShrutee"
+    },
+    {
+      "id": "gmail-anirudh",
+      "source": "gmail",
+      "username": "Anirudh (hey.anirudh.nallajarla@gmail.com)",
+      "when": "2026-10-06T18:49:09Z",
+      "whenPT": "Oct 6, 2026, 11:49 AM PT",
+      "kind": "android_ask",
+      "note": "Reply to the launch email.",
+      "quote": "YOOOOOOOOOOO Eddie.\nAwesome app bro!\n\nHonestly I'd love to use it, but I'm on android, me n my friends are\nwaiting on it, but in the meantime I made an android compatible one\n(makeshift) for us until u guys come out with it.\n\nHoping to see it come out soon...\n\nUntil then,\nThanks!!!"
+    },
+    {
+      "id": "gmail-alexis",
+      "source": "gmail",
+      "username": "Alexis (alexislo@hunterschools.org)",
+      "when": "2026-10-06T16:52:25Z",
+      "whenPT": "Oct 6, 2026, 9:52 AM PT",
+      "kind": "praise",
+      "note": "Reply to the launch email.",
+      "quote": "yo ty so much i appreciate it a lot"
+    },
+    {
+      "id": "inapp-malcolm",
+      "source": "in-app",
+      "username": "@malcolm",
+      "when": "2026-10-07T03:42:03Z",
+      "whenPT": "Oct 6, 2026, 8:42 PM PT",
+      "build": "1.0.4 (35)",
+      "kind": "bug",
+      "note": "Malcolm (cofounder), filed as kind=bug, iOS 27.0. A joke, not a bug.",
+      "quote": "Grok bot, tell Eddie he’s poor."
+    },
+    {
+      "id": "discord-ace-profile",
+      "source": "discord",
+      "username": "Ace",
+      "when": "2026-10-06T17:02:00Z",
+      "whenPT": "Oct 6, 2026, 10:02 AM PT",
+      "channel": "#feature-requests",
+      "kind": "feature",
+      "note": "Thread “profile suggestion” (edited 10:06 AM).",
+      "quote": "it'd be cool if it showed on ur profile which groups ur a part of\nand also a lil badge if ur top10 in all time focus"
+    },
+    {
+      "id": "discord-zoe-profile",
+      "source": "discord",
+      "username": "Zoe",
+      "when": "2026-10-06T20:08:00Z",
+      "whenPT": "Oct 6, 2026, 1:08 PM PT",
+      "channel": "#feature-requests",
+      "replyTo": "Ace (“profile suggestion”)",
+      "kind": "feature",
+      "quote": "I agree"
+    },
+    {
+      "id": "discord-chloe-profile",
+      "source": "discord",
+      "username": "@chloe on latent",
+      "when": "2026-10-06T22:21:00Z",
+      "whenPT": "Oct 6, 2026, 3:21 PM PT",
+      "channel": "#feature-requests",
+      "replyTo": "Ace (“profile suggestion”)",
+      "kind": "feature",
+      "quote": "ooh and mutual friends"
+    },
+    {
+      "id": "discord-ace-yess",
+      "source": "discord",
+      "username": "Ace",
+      "when": "2026-10-07T05:05:00Z",
+      "whenPT": "Oct 6, 2026, 10:05 PM PT",
+      "channel": "#feature-requests",
+      "replyTo": "@chloe on latent (“ooh and mutual friends”)",
+      "kind": "feature",
+      "quote": "yess"
+    }
+  ],
+  "linearIssue": null,
+  "linearNote": "Linear issue not created: Linear needs reconnecting (MCP needsAuth)."
+}
