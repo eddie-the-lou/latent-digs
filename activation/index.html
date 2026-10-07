@@ -8,7 +8,7 @@
 <meta http-equiv="Expires" content="0">
 <meta name="color-scheme" content="dark">
 <meta name="robots" content="noindex">
-<meta name="source-commit" content="a1d5fcefc49ae8efaeeaff2fabff0ff82b0e5968">
+<meta name="source-commit" content="2eae5f9cf79f314562405977fc4b25f065ffc2a7">
 <title>Latent activation</title>
 <style>
 :root{color-scheme:dark;--bg:#0b0d10;--panel:#14181f;--panel2:#1a2029;--border:#2a3340;--text:#e8edf4;--muted:#8b97a8;--accent:#7c9cff;--green:#3ecf8e;--amber:#f0b429;--red:#f07178}
@@ -56,48 +56,47 @@ footer{margin-top:36px;color:var(--muted);font-size:.8rem}
 <div class="wrap">
 <div class="top"><div class="brand">Latent<span>Activation report</span></div><a href="../">← Daily reviews</a></div>
 <h1 id="latent-activation">Latent activation</h1>
-<p>Refreshed <strong>Tue Oct 6, 3:01 PM PT</strong> · 359 people in the main cohort (first opened the app 7–21 days ago, each step within 7 days). Simulators and the local backend excluded. Regenerated every morning by <code>scripts/activation-report</code> (see <code>docs/ACTIVATION_REPORT.md</code> on main); refresh this page to see the latest.</p>
+<p>Refreshed <strong>Sun Oct 4, 4:29 PM PT</strong> · 372 people in the main cohort (first opened the app 7–21 days ago, each step within 7 days). Simulators and the local backend excluded. Regenerated every morning by <code>scripts/activation-report</code> (see <code>docs/ACTIVATION_REPORT.md</code> on main); refresh this page to see the latest.</p>
 <nav class="toc"><a href="#every-drop-off-point">Every drop-off point</a><a href="#latent-against-typical-and-exceptional-apps">Latent against typical and exceptional apps</a><a href="#save-flow-by-build">Save flow, by build</a><a href="#rage-clicks-last-7-days">Rage clicks, last 7 days</a><a href="#invite-code-screen">Invite code screen</a><a href="#activation-goal-by-how-people-got-in">Activation goal by how people got in</a></nav>
 <h2 id="every-drop-off-point">Every drop-off point</h2>
 <p>Verdicts are a rule: under the realistic target is Fix, under exceptional is Watch, at or over exceptional is Leave. The 48h column compares the newest arrivals with the main cohort at the same age, so a change shows up days before the 7-day number can move. Changes in brackets are against the run a week earlier.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Stage</th><th>Now</th><th>Of</th><th>Newest 2–6 days vs before, at 48h</th><th>Realistic / exceptional</th><th>Verdict</th><th>What it is</th></tr></thead><tbody>
-<tr><td>Started onboarding</td><td class="nw"><strong>90%</strong></td><td>of opens <sub>(324/359)</sub></td><td class="nw">90% vs 90%</td><td class="nw">90% / 95%</td><td class="nw">🟡 Watch</td><td>Left at the welcome screen without starting.</td></tr>
-<tr><td>Made an account</td><td class="nw"><strong>84%</strong></td><td>of opens <sub>(303/359)</sub></td><td class="nw">78% vs 83%</td><td class="nw">85% / 90%</td><td class="nw">🔴 Fix</td><td>Includes the invite-code screen since Oct 1.</td></tr>
-<tr><td>Got past the code screen</td><td class="nw"><strong>72%</strong></td><td>within 48h, people who reached it 2–21 days ago <sub>(130/181)</sub></td><td class="nw">—</td><td class="nw">85% / 95%</td><td class="nw">🔴 Fix</td><td class="long">Someone with no code has no way in: the screen only takes a friend's link.</td></tr>
-<tr><td>Finished setup after the account</td><td class="nw"><strong>94%</strong></td><td>of accounts <sub>(284/303)</sub></td><td class="nw">84% vs 94%</td><td class="nw">90% / 95%</td><td class="nw">🟡 Watch</td><td>Name, photo, tags, friends, reminders.</td></tr>
-<tr><td>Allowed the camera</td><td class="nw"><strong>89%</strong></td><td>of accounts <sub>(269/303)</sub></td><td class="nw">79% vs 89%</td><td class="nw">85% / 92%</td><td class="nw">🟡 Watch</td><td>Needed to record at all.</td></tr>
-<tr><td>Allowed notifications</td><td class="nw"><strong>80%</strong></td><td>of accounts <sub>(243/303)</sub></td><td class="nw">73% vs 81%</td><td class="nw">60% / 75%</td><td class="nw">🟢 Leave</td><td>Reminders and friend pushes depend on it.</td></tr>
-<tr><td class="nw">Pressed record</td><td class="nw"><strong>80%</strong></td><td>of accounts <sub>(242/303)</sub></td><td class="nw">64% vs 75%</td><td class="nw">80% / 88%</td><td class="nw">🟡 Watch</td><td>Reached a working camera and started.</td></tr>
-<tr><td>Did a real sitting (20+ min)</td><td class="nw"><strong>81%</strong></td><td>of people who pressed record <sub>(197/242)</sub></td><td class="nw">74% vs 73%</td><td class="nw">82% / 90%</td><td class="nw">🔴 Fix</td><td>The gap is test runs and quick quits.</td></tr>
-<tr><td>Saved a session</td><td class="nw"><strong>65%</strong></td><td>of accounts <sub>(198/303)</sub></td><td class="nw">51% vs 56%</td><td class="nw">75% / 80%</td><td class="nw">🔴 Fix</td><td>The activation milestone.</td></tr>
-<tr><td>Posted a real sitting within 2h</td><td class="nw"><strong>98%</strong></td><td>of 20+ min sittings on build 35 (n=84)</td><td class="nw">—</td><td class="nw">93% / 97%</td><td class="nw">🟢 Leave</td><td>Lost to Draft, discard or a killed app at the save screen.</td></tr>
-<tr><td>Saved on a second day</td><td class="nw"><strong>81%</strong></td><td>of savers <sub>(161/198)</sub></td><td class="nw">38% vs 36%</td><td class="nw">75% / 85%</td><td class="nw">🟡 Watch</td><td>The first sign of a habit.</td></tr>
-<tr><td>Saved on a third day</td><td class="nw"><strong>74%</strong></td><td>of second-day savers <sub>(119/161)</sub></td><td class="nw">—</td><td class="nw">70% / 80%</td><td class="nw">🟡 Watch</td><td>Three days is the streak bar.</td></tr>
-<tr><td>Real friend within 7 days</td><td class="nw"><strong>50%</strong></td><td class="long">of build 31+ accounts, within 48h (7 days once they are old enough) <sub>(73/145)</sub></td><td class="nw">—</td><td class="nw">70% / 85%</td><td class="nw">🔴 Fix</td><td class="long">Founders do not count. A friend's code makes one; a founder's code does not.</td></tr>
+<tr><td>Started onboarding</td><td class="nw"><strong>91%</strong></td><td>of opens <sub>(338/372)</sub></td><td class="nw">89% vs 91%</td><td class="nw">90% / 95%</td><td class="nw">🟡 Watch</td><td>Left at the welcome screen without starting.</td></tr>
+<tr><td>Made an account</td><td class="nw"><strong>85%</strong></td><td>of opens <sub>(316/372)</sub></td><td class="nw">79% vs 84%</td><td class="nw">85% / 90%</td><td class="nw">🟡 Watch</td><td>Includes the invite-code screen since Oct 1.</td></tr>
+<tr><td>Got past the code screen</td><td class="nw"><strong>75%</strong></td><td>within 48h, people who reached it 2–21 days ago <sub>(64/85)</sub></td><td class="nw">—</td><td class="nw">85% / 95%</td><td class="nw">🔴 Fix</td><td class="long">Someone with no code has no way in: the screen only takes a friend's link.</td></tr>
+<tr><td>Finished setup after the account</td><td class="nw"><strong>92%</strong></td><td>of accounts <sub>(291/316)</sub></td><td class="nw">90% vs 92%</td><td class="nw">90% / 95%</td><td class="nw">🟡 Watch</td><td>Name, photo, tags, friends, reminders.</td></tr>
+<tr><td>Allowed the camera</td><td class="nw"><strong>89%</strong></td><td>of accounts <sub>(280/316)</sub></td><td class="nw">85% vs 89%</td><td class="nw">85% / 92%</td><td class="nw">🟡 Watch</td><td>Needed to record at all.</td></tr>
+<tr><td>Allowed notifications</td><td class="nw"><strong>80%</strong></td><td>of accounts <sub>(254/316)</sub></td><td class="nw">73% vs 81%</td><td class="nw">60% / 75%</td><td class="nw">🟢 Leave</td><td>Reminders and friend pushes depend on it.</td></tr>
+<tr><td class="nw">Pressed record</td><td class="nw"><strong>78%</strong></td><td>of accounts <sub>(247/316)</sub></td><td class="nw">71% vs 73%</td><td class="nw">80% / 88%</td><td class="nw">🔴 Fix</td><td>Reached a working camera and started.</td></tr>
+<tr><td>Did a real sitting (20+ min)</td><td class="nw"><strong>81%</strong></td><td>of people who pressed record <sub>(201/247)</sub></td><td class="nw">81% vs 73%</td><td class="nw">82% / 90%</td><td class="nw">🔴 Fix</td><td>The gap is test runs and quick quits.</td></tr>
+<tr><td>Saved a session</td><td class="nw"><strong>64%</strong></td><td>of accounts <sub>(203/316)</sub></td><td class="nw">61% vs 55%</td><td class="nw">75% / 80%</td><td class="nw">🔴 Fix</td><td>The activation milestone.</td></tr>
+<tr><td>Posted a real sitting within 2h</td><td class="nw"><strong>86%</strong></td><td>of 20+ min sittings on build 34 (n=83)</td><td class="nw">—</td><td class="nw">93% / 97%</td><td class="nw">🔴 Fix</td><td>Lost to Draft, discard or a killed app at the save screen.</td></tr>
+<tr><td>Saved on a second day</td><td class="nw"><strong>80%</strong></td><td>of savers <sub>(163/203)</sub></td><td class="nw">41% vs 36%</td><td class="nw">75% / 85%</td><td class="nw">🟡 Watch</td><td>The first sign of a habit.</td></tr>
+<tr><td>Saved on a third day</td><td class="nw"><strong>74%</strong></td><td>of second-day savers <sub>(120/163)</sub></td><td class="nw">—</td><td class="nw">70% / 80%</td><td class="nw">🟡 Watch</td><td>Three days is the streak bar.</td></tr>
+<tr><td>Real friend within 7 days</td><td class="nw"><strong>67%</strong></td><td>of build 31+ accounts, within 48h (7 days once they are old enough) <sub>(41/61)</sub></td><td class="nw">—</td><td class="nw">70% / 85%</td><td class="nw">🔴 Fix</td><td class="long">Founders do not count. A friend's code makes one; a founder's code does not.</td></tr>
 </tbody></table></div>
 <h2 id="latent-against-typical-and-exceptional-apps">Latent against typical and exceptional apps</h2>
 <p>Retention counts opening the app on that day or in that week, like the published benchmarks. "Exceptional" is a16z's OK / good / great bands for consumer social apps. Latent is a three-days-a-week product, so a perfect week of the streak scores about 43% on the daily ÷ monthly line, and the daily bars are not the ones to chase.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Metric</th><th>Latent</th><th>Typical app</th><th>Health &amp; fitness / productivity</th><th>Exceptional (OK / good / great)</th><th>Where Latent stands</th><th>Source</th></tr></thead><tbody>
-<tr><td>Account → saved a session (7d)</td><td class="nw"><strong>65%</strong></td><td>34% avg, 25% median</td><td>~50% median (consumer subscription)</td><td>top 20% of products</td><td class="nw">🟢 Above typical</td><td class="long"><a href="https://www.lennysnewsletter.com/p/what-is-a-good-activation-rate" rel="noopener">Lenny's Newsletter: what is a good activation rate</a></td></tr>
-<tr><td>Notifications allowed</td><td class="nw"><strong>80%</strong></td><td class="nw">~56% (iOS)</td><td class="nw">—</td><td>56% / 60% / 70%</td><td class="nw">🟢 Great</td><td class="long"><a href="https://www.airship.com/?p=19716" rel="noopener">Airship 2025 push benchmarks</a></td></tr>
-<tr><td>Opened on day 1</td><td class="nw"><strong>52%</strong> <sub>n=675</sub></td><td class="nw">25–26%</td><td>20–27% / 17–33%</td><td>50% / 60% / 70%</td><td class="nw">🟡 OK</td><td class="long"><a href="https://appsflyer.com/?p=453529" rel="noopener">AppsFlyer 2025 app retention benchmarks</a>, <a href="https://www.plotline.so/blog/retention-rates-mobile-apps-by-industry" rel="noopener">Plotline: retention by industry</a>, <a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
-<tr><td>Opened on day 7</td><td class="nw"><strong>38%</strong> <sub>n=405</sub></td><td class="nw">11–13%</td><td class="nw">~8% / ~8%</td><td>35% / 40% / 50%</td><td class="nw">🟡 OK</td><td class="long"><a href="https://appsflyer.com/?p=453529" rel="noopener">AppsFlyer 2025 app retention benchmarks</a>, <a href="https://www.plotline.so/blog/retention-rates-mobile-apps-by-industry" rel="noopener">Plotline: retention by industry</a>, <a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
-<tr><td>Opened on day 30</td><td class="nw"><strong>14%</strong> <sub>n=189</sub></td><td class="nw">5–7%</td><td class="nw">3–8% / ~4%</td><td>20% / 25% / 30%</td><td class="nw">🔴 Below OK</td><td class="long"><a href="https://appsflyer.com/?p=453529" rel="noopener">AppsFlyer 2025 app retention benchmarks</a>, <a href="https://www.plotline.so/blog/retention-rates-mobile-apps-by-industry" rel="noopener">Plotline: retention by industry</a>, <a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
-<tr><td>Opened in week 2 (days 7–13)</td><td class="nw"><strong>61%</strong> <sub>n=308</sub></td><td class="nw">—</td><td class="nw">—</td><td>40% / 55% / 75%</td><td class="nw">🟢 Good</td><td class="long"><a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
-<tr><td>Opened in week 5 (days 28–34)</td><td class="nw"><strong>30%</strong> <sub>n=230</sub></td><td class="nw">—</td><td class="nw">—</td><td>20% / 30% / 50%</td><td class="nw">🟢 Good</td><td class="long"><a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
-<tr><td>Daily ÷ monthly actives (28d)</td><td class="nw"><strong>20%</strong></td><td class="nw">—</td><td class="nw">—</td><td>25% / 40% / 50%</td><td class="nw">🔴 Below OK</td><td class="long"><a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
+<tr><td>Account → saved a session (7d)</td><td class="nw"><strong>64%</strong></td><td>34% avg, 25% median</td><td>~50% median (consumer subscription)</td><td>top 20% of products</td><td>🟢 Above typical</td><td><a href="https://www.lennysnewsletter.com/p/what-is-a-good-activation-rate" rel="noopener">Lenny's Newsletter: what is a good activation rate</a></td></tr>
+<tr><td>Notifications allowed</td><td class="nw"><strong>80%</strong></td><td class="nw">~56% (iOS)</td><td class="nw">—</td><td>56% / 60% / 70%</td><td class="nw">🟢 Great</td><td><a href="https://www.airship.com/?p=19716" rel="noopener">Airship 2025 push benchmarks</a></td></tr>
+<tr><td>Opened on day 1</td><td class="nw"><strong>53%</strong> <sub>n=555</sub></td><td class="nw">25–26%</td><td>20–27% / 17–33%</td><td>50% / 60% / 70%</td><td class="nw">🟡 OK</td><td><a href="https://appsflyer.com/?p=453529" rel="noopener">AppsFlyer 2025 app retention benchmarks</a>, <a href="https://www.plotline.so/blog/retention-rates-mobile-apps-by-industry" rel="noopener">Plotline: retention by industry</a>, <a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
+<tr><td>Opened on day 7</td><td class="nw"><strong>38%</strong> <sub>n=372</sub></td><td class="nw">11–13%</td><td class="nw">~8% / ~8%</td><td>35% / 40% / 50%</td><td class="nw">🟡 OK</td><td><a href="https://appsflyer.com/?p=453529" rel="noopener">AppsFlyer 2025 app retention benchmarks</a>, <a href="https://www.plotline.so/blog/retention-rates-mobile-apps-by-industry" rel="noopener">Plotline: retention by industry</a>, <a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
+<tr><td>Opened on day 30</td><td class="nw"><strong>13%</strong> <sub>n=215</sub></td><td class="nw">5–7%</td><td class="nw">3–8% / ~4%</td><td>20% / 25% / 30%</td><td class="nw">🔴 Below OK</td><td><a href="https://appsflyer.com/?p=453529" rel="noopener">AppsFlyer 2025 app retention benchmarks</a>, <a href="https://www.plotline.so/blog/retention-rates-mobile-apps-by-industry" rel="noopener">Plotline: retention by industry</a>, <a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
+<tr><td>Opened in week 2 (days 7–13)</td><td class="nw"><strong>59%</strong> <sub>n=260</sub></td><td class="nw">—</td><td class="nw">—</td><td>40% / 55% / 75%</td><td class="nw">🟢 Good</td><td><a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
+<tr><td>Opened in week 5 (days 28–34)</td><td class="nw"><strong>30%</strong> <sub>n=256</sub></td><td class="nw">—</td><td class="nw">—</td><td>20% / 30% / 50%</td><td class="nw">🟢 Good</td><td><a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
+<tr><td>Daily ÷ monthly actives (28d)</td><td class="nw"><strong>21%</strong></td><td class="nw">—</td><td class="nw">—</td><td>25% / 40% / 50%</td><td class="nw">🔴 Below OK</td><td><a href="https://a16z.com/do-you-have-lightning-in-a-bottle-how-to-benchmark-your-social-app/" rel="noopener">a16z: how to benchmark your social app</a></td></tr>
 </tbody></table></div>
 <h2 id="save-flow-by-build">Save flow, by build</h2>
 <p>Every 20+ minute sitting, once: did it post within two hours, go to Draft, get discarded, or did the app just get left. "Seconds to Draft" is how fast after stopping someone tapped Draft; a few seconds is too fast to have tried posting.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Build</th><th>Real sittings</th><th>Posted ≤2h</th><th>Draft</th><th>Discarded</th><th>Nothing (app left)</th><th>Drafts posted later</th><th>Seconds to Draft (median)</th></tr></thead><tbody>
-<tr><td class="nw">35</td><td class="nw">84</td><td class="nw">97.6%</td><td class="nw">1.2%</td><td class="nw">0.0%</td><td class="nw">1.2%</td><td class="nw">1 of 1</td><td class="nw">6</td></tr>
-<tr><td class="nw">34</td><td class="nw">365</td><td class="nw">90.4%</td><td class="nw">5.2%</td><td class="nw">0.5%</td><td class="nw">3.8%</td><td class="nw">16 of 19</td><td class="nw">6</td></tr>
-<tr><td class="nw">33</td><td class="nw">812</td><td class="nw">90.6%</td><td class="nw">4.2%</td><td class="nw">1.0%</td><td class="nw">4.2%</td><td class="nw">26 of 34</td><td class="nw">14</td></tr>
-<tr><td class="nw">30</td><td class="nw">714</td><td class="nw">92.9%</td><td class="nw">1.1%</td><td class="nw">0.4%</td><td class="nw">5.6%</td><td class="nw">8 of 8</td><td class="nw">28</td></tr>
-<tr><td class="nw">29</td><td class="nw">1231</td><td class="nw">93.2%</td><td class="nw">1.1%</td><td class="nw">0.6%</td><td class="nw">5.2%</td><td class="nw">11 of 13</td><td class="nw">42</td></tr>
+<tr><td class="nw">34</td><td class="nw">83</td><td class="nw">85.5%</td><td class="nw">6.0%</td><td class="nw">1.2%</td><td class="nw">7.2%</td><td class="nw">4 of 5</td><td class="nw">6</td></tr>
+<tr><td class="nw">33</td><td class="nw">445</td><td class="nw">88.5%</td><td class="nw">5.4%</td><td class="nw">1.1%</td><td class="nw">4.9%</td><td class="nw">14 of 24</td><td class="nw">14</td></tr>
+<tr><td class="nw">30</td><td class="nw">691</td><td class="nw">92.8%</td><td class="nw">1.2%</td><td class="nw">0.4%</td><td class="nw">5.6%</td><td class="nw">7 of 8</td><td class="nw">28</td></tr>
+<tr><td class="nw">29</td><td class="nw">1216</td><td class="nw">93.2%</td><td class="nw">1.1%</td><td class="nw">0.6%</td><td class="nw">5.2%</td><td class="nw">10 of 13</td><td class="nw">42</td></tr>
 <tr><td class="nw">28</td><td class="nw">58</td><td class="nw">91.4%</td><td class="nw">3.4%</td><td class="nw">0.0%</td><td class="nw">5.2%</td><td class="nw">2 of 2</td><td class="nw">8</td></tr>
 <tr><td class="nw">27</td><td class="nw">628</td><td class="nw">93.0%</td><td class="nw">1.9%</td><td class="nw">0.6%</td><td class="nw">4.5%</td><td class="nw">7 of 12</td><td class="nw">33</td></tr>
 <tr><td class="nw">26</td><td class="nw">33</td><td class="nw">93.9%</td><td class="nw">3.0%</td><td class="nw">0.0%</td><td class="nw">3.0%</td><td class="nw">1 of 1</td><td class="nw">14</td></tr>
@@ -107,51 +106,49 @@ footer{margin-top:36px;color:var(--muted);font-size:.8rem}
 <tr><td class="nw">22</td><td class="nw">19</td><td class="nw">89.5%</td><td class="nw">0.0%</td><td class="nw">0.0%</td><td class="nw">10.5%</td><td class="nw">0 of 0</td><td class="nw">—</td></tr>
 <tr><td class="nw">21</td><td class="nw">72</td><td class="nw">93.1%</td><td class="nw">0.0%</td><td class="nw">0.0%</td><td class="nw">6.9%</td><td class="nw">0 of 0</td><td class="nw">—</td></tr>
 <tr><td class="nw">17</td><td class="nw">235</td><td class="nw">93.6%</td><td class="nw">0.9%</td><td class="nw">1.3%</td><td class="nw">4.3%</td><td class="nw">2 of 2</td><td class="nw">22</td></tr>
-<tr><td class="nw">16</td><td class="nw">301</td><td class="nw">97.7%</td><td class="nw">1.0%</td><td class="nw">0.0%</td><td class="nw">1.3%</td><td class="nw">2 of 3</td><td class="nw">101</td></tr>
+<tr><td class="nw">16</td><td class="nw">459</td><td class="nw">96.3%</td><td class="nw">0.9%</td><td class="nw">0.7%</td><td class="nw">2.2%</td><td class="nw">3 of 4</td><td class="nw">101</td></tr>
 <tr><td class="nw">10</td><td class="nw">50</td><td class="nw">90.0%</td><td class="nw">2.0%</td><td class="nw">2.0%</td><td class="nw">6.0%</td><td class="nw">1 of 1</td><td class="nw">109</td></tr>
 </tbody></table></div>
 <h2 id="rage-clicks-last-7-days">Rage clicks, last 7 days</h2>
 <p>By screen, then by control. A control only has a name where it carries an analyticsTag; everything else is a zone (top / upper / middle / lower / bottom × left / center / right).</p>
 <div class="table-wrap"><table>
 <thead><tr><th>screen</th><th>people_raging</th><th>clicks</th><th>pct_top_band</th><th>pct_bottom_band</th></tr></thead><tbody>
-<tr><td>Profile: Insights</td><td class="nw">150</td><td class="nw">420</td><td class="nw">17.0</td><td class="nw">6.0</td></tr>
-<tr><td class="nw">Save Session</td><td class="nw">144</td><td class="nw">338</td><td class="nw">20.0</td><td class="nw">13.0</td></tr>
-<tr><td>Full Screen Media</td><td class="nw">99</td><td class="nw">497</td><td class="nw">6.0</td><td class="nw">3.0</td></tr>
-<tr><td class="nw">Today</td><td class="nw">97</td><td class="nw">299</td><td class="nw">4.0</td><td class="nw">31.0</td></tr>
-<tr><td class="nw">Friends</td><td class="nw">79</td><td class="nw">149</td><td class="nw">62.0</td><td class="nw">3.0</td></tr>
-<tr><td class="nw">Thread</td><td class="nw">62</td><td class="nw">110</td><td class="nw">48.0</td><td class="nw">13.0</td></tr>
-<tr><td class="nw">Profile</td><td class="nw">58</td><td class="nw">133</td><td class="nw">2.0</td><td class="nw">29.0</td></tr>
-<tr><td class="nw">Record</td><td class="nw">49</td><td class="nw">98</td><td class="nw">7.0</td><td class="nw">32.0</td></tr>
-<tr><td class="nw">History Feed</td><td class="nw">48</td><td class="nw">83</td><td class="nw">40.0</td><td class="nw">2.0</td></tr>
-<tr><td class="nw">Cover Picker</td><td class="nw">48</td><td class="nw">93</td><td class="nw">9.0</td><td class="nw">19.0</td></tr>
-<tr><td class="nw">Post Preview</td><td class="nw">47</td><td class="nw">62</td><td class="nw">24.0</td><td class="nw">5.0</td></tr>
-<tr><td class="nw">Comments</td><td class="nw">38</td><td class="nw">144</td><td class="nw">10.0</td><td class="nw">2.0</td></tr>
+<tr><td>Profile: Insights</td><td class="nw">133</td><td class="nw">389</td><td class="nw">17.0</td><td class="nw">6.0</td></tr>
+<tr><td class="nw">Save Session</td><td class="nw">125</td><td class="nw">296</td><td class="nw">20.0</td><td class="nw">16.0</td></tr>
+<tr><td>Full Screen Media</td><td class="nw">103</td><td class="nw">424</td><td class="nw">9.0</td><td class="nw">4.0</td></tr>
+<tr><td class="nw">Today</td><td class="nw">92</td><td class="nw">267</td><td class="nw">3.0</td><td class="nw">26.0</td></tr>
+<tr><td class="nw">Friends</td><td class="nw">66</td><td class="nw">135</td><td class="nw">66.0</td><td class="nw">3.0</td></tr>
+<tr><td class="nw">Thread</td><td class="nw">60</td><td class="nw">131</td><td class="nw">44.0</td><td class="nw">12.0</td></tr>
+<tr><td class="nw">Profile</td><td class="nw">57</td><td class="nw">132</td><td class="nw">3.0</td><td class="nw">27.0</td></tr>
+<tr><td class="nw">Record</td><td class="nw">47</td><td class="nw">106</td><td class="nw">7.0</td><td class="nw">38.0</td></tr>
+<tr><td class="nw">History Feed</td><td class="nw">43</td><td class="nw">77</td><td class="nw">39.0</td><td class="nw">1.0</td></tr>
+<tr><td class="nw">Post Preview</td><td class="nw">41</td><td class="nw">52</td><td class="nw">17.0</td><td class="nw">6.0</td></tr>
+<tr><td class="nw">Cover Picker</td><td class="nw">38</td><td class="nw">65</td><td class="nw">6.0</td><td class="nw">18.0</td></tr>
+<tr><td class="nw">Comments</td><td class="nw">34</td><td class="nw">105</td><td class="nw">14.0</td><td class="nw">4.0</td></tr>
 </tbody></table></div>
 <div class="table-wrap"><table>
 <thead><tr><th>screen</th><th>control</th><th>where_on_screen</th><th>people</th><th>clicks</th></tr></thead><tbody>
-<tr><td class="nw">Save Session</td><td class="nw">(untagged)</td><td class="nw">middle-right</td><td class="nw">29</td><td class="nw">51</td></tr>
-<tr><td class="nw">Friends</td><td>headerBackButton</td><td class="nw">top-left</td><td class="nw">29</td><td class="nw">37</td></tr>
-<tr><td class="nw">Today</td><td class="nw">(untagged)</td><td class="nw">middle-right</td><td class="nw">25</td><td class="nw">59</td></tr>
-<tr><td>Full Screen Media</td><td class="nw">mediaPagerPage</td><td class="nw">middle-right</td><td class="nw">19</td><td class="nw">50</td></tr>
-<tr><td class="nw">Save Session</td><td class="nw">(untagged)</td><td class="nw">lower-right</td><td class="nw">18</td><td class="nw">24</td></tr>
-<tr><td>Profile: Insights</td><td class="nw">(untagged)</td><td class="nw">lower-right</td><td class="nw">18</td><td class="nw">21</td></tr>
-<tr><td class="nw">Today</td><td class="nw">(untagged)</td><td class="nw">bottom-left</td><td class="nw">17</td><td class="nw">46</td></tr>
-<tr><td>Profile: Insights</td><td class="nw">(untagged)</td><td class="nw">middle-right</td><td class="nw">17</td><td class="nw">42</td></tr>
-<tr><td>Full Screen Media</td><td class="nw">mediaPagerPage</td><td class="nw">middle-center</td><td class="nw">16</td><td class="nw">31</td></tr>
-<tr><td>Profile: Insights</td><td class="nw">(untagged)</td><td class="nw">top-left</td><td class="nw">16</td><td class="nw">20</td></tr>
-<tr><td>Profile: Insights</td><td>headerBackButton</td><td class="nw">top-left</td><td class="nw">16</td><td class="nw">20</td></tr>
-<tr><td class="nw">Friends</td><td class="nw">(untagged)</td><td class="nw">top-left</td><td class="nw">16</td><td class="nw">20</td></tr>
-<tr><td class="nw">Save Session</td><td class="nw">(untagged)</td><td class="nw">top-right</td><td class="nw">15</td><td class="nw">22</td></tr>
-<tr><td class="nw">Comments</td><td class="nw">(untagged)</td><td class="nw">middle-right</td><td class="nw">13</td><td class="nw">50</td></tr>
-<tr><td class="nw">Groups</td><td class="nw">(untagged)</td><td class="nw">top-left</td><td class="nw">13</td><td class="nw">33</td></tr>
+<tr><td class="nw">Friends</td><td>headerBackButton</td><td class="nw">top-left</td><td class="nw">17</td><td class="nw">21</td></tr>
+<tr><td class="nw">Save Session</td><td class="nw">(untagged)</td><td class="nw">middle-right</td><td class="nw">12</td><td class="nw">17</td></tr>
+<tr><td>Full Screen Media</td><td class="nw">mediaPagerPage</td><td class="nw">middle-right</td><td class="nw">11</td><td class="nw">18</td></tr>
+<tr><td class="nw">Today</td><td class="nw">(untagged)</td><td class="nw">middle-right</td><td class="nw">10</td><td class="nw">22</td></tr>
+<tr><td>Full Screen Media</td><td class="nw">mediaPagerPage</td><td class="nw">middle-center</td><td class="nw">10</td><td class="nw">16</td></tr>
+<tr><td>Profile: Insights</td><td>headerBackButton</td><td class="nw">top-left</td><td class="nw">10</td><td class="nw">11</td></tr>
+<tr><td>Profile: Insights</td><td class="nw">(untagged)</td><td class="nw">middle-right</td><td class="nw">9</td><td class="nw">18</td></tr>
+<tr><td class="nw">Friends</td><td class="nw">(untagged)</td><td class="nw">top-left</td><td class="nw">9</td><td class="nw">10</td></tr>
+<tr><td class="nw">Save Session</td><td class="nw">(untagged)</td><td class="nw">lower-right</td><td class="nw">9</td><td class="nw">9</td></tr>
+<tr><td>Full Screen Media</td><td class="nw">(untagged)</td><td class="nw">middle-right</td><td class="nw">8</td><td class="nw">32</td></tr>
+<tr><td class="nw">Today</td><td class="nw">(untagged)</td><td class="nw">bottom-left</td><td class="nw">8</td><td class="nw">18</td></tr>
+<tr><td class="nw">Profile</td><td class="nw">(untagged)</td><td class="nw">bottom-right</td><td class="nw">8</td><td class="nw">14</td></tr>
+<tr><td class="nw">Save Session</td><td class="nw">(untagged)</td><td class="nw">top-right</td><td class="nw">8</td><td class="nw">12</td></tr>
+<tr><td>Full Screen Media</td><td class="nw">(untagged)</td><td class="nw">upper-right</td><td class="nw">8</td><td class="nw">11</td></tr>
+<tr><td>Profile: Insights</td><td class="nw">(untagged)</td><td class="nw">middle-center</td><td class="nw">8</td><td class="nw">10</td></tr>
 </tbody></table></div>
 <h2 id="invite-code-screen">Invite code screen</h2>
 <p>Since the code gate (Oct 1, 10:20 PT), by Pacific day. Someone can get in on a later day.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>date_pt</th><th>reached_code_screen</th><th>typed_a_bad_code</th><th>got_in</th></tr></thead><tbody>
-<tr><td class="nw">2026-10-06</td><td class="nw">41</td><td class="nw">16</td><td class="nw">36</td></tr>
-<tr><td class="nw">2026-10-05</td><td class="nw">60</td><td class="nw">15</td><td class="nw">52</td></tr>
-<tr><td class="nw">2026-10-04</td><td class="nw">57</td><td class="nw">7</td><td class="nw">39</td></tr>
+<tr><td class="nw">2026-10-04</td><td class="nw">42</td><td class="nw">6</td><td class="nw">25</td></tr>
 <tr><td class="nw">2026-10-03</td><td class="nw">56</td><td class="nw">9</td><td class="nw">37</td></tr>
 <tr><td class="nw">2026-10-02</td><td class="nw">55</td><td class="nw">9</td><td class="nw">45</td></tr>
 <tr><td class="nw">2026-10-01</td><td class="nw">39</td><td class="nw">7</td><td class="nw">30</td></tr>
@@ -160,12 +157,12 @@ footer{margin-top:36px;color:var(--muted);font-size:.8rem}
 <p>Accounts whose first build is 31+: saved, a real friend, a first streak week, and both, within 7 days. Read only the rows with accounts at least 7 days old.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Came in through</th><th>Accounts</th><th>7+ days old</th><th>Saved (7d)</th><th>Real friend (7d)</th><th>Streak week (7d)</th><th>Both</th></tr></thead><tbody>
-<tr><td class="nw">Founder's code</td><td class="nw">88</td><td class="nw">0</td><td class="nw">49%</td><td class="nw">30%</td><td class="nw">3%</td><td class="nw">2%</td></tr>
-<tr><td>Friend's or founder's code (before build 34)</td><td class="nw">79</td><td class="nw">0</td><td class="nw">71%</td><td class="nw">73%</td><td class="nw">34%</td><td class="nw">27%</td></tr>
-<tr><td class="nw">Friend's code</td><td class="nw">59</td><td class="nw">0</td><td class="nw">51%</td><td class="nw">100%</td><td class="nw">7%</td><td class="nw">7%</td></tr>
-<tr><td class="nw">No code</td><td class="nw">23</td><td class="nw">0</td><td class="nw">0%</td><td class="nw">0%</td><td class="nw">0%</td><td class="nw">0%</td></tr>
+<tr><td>Friend's or founder's code (before build 34)</td><td class="nw">74</td><td class="nw">0</td><td class="nw">61%</td><td class="nw">68%</td><td class="nw">15%</td><td class="nw">9%</td></tr>
+<tr><td class="nw">Founder's code</td><td class="nw">36</td><td class="nw">0</td><td class="nw">42%</td><td class="nw">8%</td><td class="nw">0%</td><td class="nw">0%</td></tr>
+<tr><td class="nw">No code</td><td class="nw">23</td><td class="nw">0</td><td class="nw">4%</td><td class="nw">0%</td><td class="nw">0%</td><td class="nw">0%</td></tr>
+<tr><td class="nw">Friend's code</td><td class="nw">14</td><td class="nw">0</td><td class="nw">50%</td><td class="nw">100%</td><td class="nw">0%</td><td class="nw">0%</td></tr>
 </tbody></table></div>
-<footer>Regenerated from <code>scripts/activation-report</code>. Aggregate numbers only. Source commit <code>a1d5fce</code>.</footer>
+<footer>Regenerated about daily from <code>scripts/activation-report</code>. Aggregate numbers only. Source commit <code>2eae5f9</code>.</footer>
 </div>
 </body>
 </html>
