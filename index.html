@@ -185,7 +185,7 @@ function renderBySource(d,date){
   ];
   const by=d.bySource||{};
   return groups.map(([key,label])=>{
-    const ids=by[key]||[];
+    const ids=Array.isArray(by[key])?by[key]:[];
     const items=ids.map(id=>map[id]).filter(Boolean);
     // also heuristic fill if bySource empty
     let list=items;
@@ -213,8 +213,8 @@ function renderQuotes(d){
   }
   return `<div class="quotes"><h2>What they actually wrote</h2>`+qs.map(q=>{
     const who=[q.who||q.username,q.email].filter(Boolean).join(' · ');
-    const meta=[q.source,q.when,q.build?('build '+q.build):null,q.kind].filter(Boolean).join(' · ');
-    return `<div class="quote"><p class="who">${esc(who)}</p><p class="meta">${esc(meta)}</p><blockquote>${esc(q.text||'')}</blockquote></div>`;
+    const meta=[q.source,q.channel,q.whenPT||q.when,q.build?('build '+q.build):null,q.kind].filter(Boolean).join(' · ');
+    return `<div class="quote"><p class="who">${esc(who)}</p><p class="meta">${esc(meta)}</p><blockquote style="white-space:pre-wrap">${esc(q.text||q.quote||'')}</blockquote>${q.note?`<p class="meta">${esc(q.note)}</p>`:''}</div>`;
   }).join('')+`</div>`;
 }
 

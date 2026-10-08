@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-08",
+    "title": "Latent daily review \u00b7 Oct 8",
+    "tldr": "No new fixes from me today. Nothing new was a clear bug that you and Malcolm hadn't already fixed. Version 1.0.5 (36) went live on the App Store at 9:56 AM PT today. It carries the badge-freeze fix (#402) and last night's work (#433 to #442), including the invite screen that now understands the email's wave link (#438)."
+  },
+  {
     "date": "2026-10-07",
     "title": "Latent daily review \u00b7 Oct 7",
     "tldr": "2 new fixes are waiting on you, both from emails people sent back after the waitlist launch email. #431: the app's invite screen rejected the link in that email (Kinjal sent a screenshot of \u201cThat code didn't work\u201d). #432: the email's \u201cunsubscribe here\u201d page shows a screen of code instead of a button (Darlen). #432 only takes effect after you run two deploy commands."

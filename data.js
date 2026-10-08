@@ -1,5 +1,10 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-08",
+    "title": "Latent daily review \u00b7 Oct 8",
+    "tldr": "No new fixes from me today. Nothing new was a clear bug that you and Malcolm hadn't already fixed. Version 1.0.5 (36) went live on the App Store at 9:56 AM PT today. It carries the badge-freeze fix (#402) and last night's work (#433 to #442), including the invite screen that now understands the email's wave link (#438)."
+  },
+  {
     "date": "2026-10-07",
     "title": "Latent daily review \u00b7 Oct 7",
     "tldr": "2 new fixes are waiting on you, both from emails people sent back after the waitlist launch email. #431: the app's invite screen rejected the link in that email (Kinjal sent a screenshot of \u201cThat code didn't work\u201d). #432: the email's \u201cunsubscribe here\u201d page shows a screen of code instead of a button (Darlen). #432 only takes effect after you run two deploy commands."
@@ -657,6 +662,11 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-08",
+      "title": "Latent daily review \u00b7 Oct 8",
+      "tldr": "No new fixes from me today. Nothing new was a clear bug that you and Malcolm hadn't already fixed. Version 1.0.5 (36) went live on the App Store at 9:56 AM PT today. It carries the badge-freeze fix (#402) and last night's work (#433 to #442), including the invite screen that now understands the email's wave link (#438)."
+    },
     {
       "date": "2026-10-07",
       "title": "Latent daily review \u00b7 Oct 7",
@@ -77164,6 +77174,510 @@ window.DIGESTS = {
         "replyTo": "@chloe on latent (\u201cooh and mutual friends\u201d)",
         "kind": "feature",
         "quote": "yess"
+      }
+    ],
+    "linearIssue": null,
+    "linearNote": "Linear issue not created: Linear needs reconnecting (MCP needsAuth)."
+  },
+  "2026-10-08": {
+    "date": "2026-10-08",
+    "title": "Latent daily review \u00b7 Oct 8",
+    "generatedAt": "2026-10-08T17:08:45.898739+00:00",
+    "tldr": [
+      "No new fixes from me today. Nothing new was a clear bug that you and Malcolm hadn't already fixed. Version 1.0.5 (36) went live on the App Store at 9:56 AM PT today. It carries the badge-freeze fix (#402) and last night's work (#433 to #442), including the invite screen that now understands the email's wave link (#438).",
+      "The unsubscribe page works now. I checked: old email links bounce to a readable trylatent.co/u/ page (#437). So #431 and #432 from yesterday are superseded by #437/#438 and can be closed.",
+      "4 people need something from you: Radhya asked about privacy and who can see her videos, mosimon asked for a Play Store link, Simone still hasn't had a reply about the invite screen, and rjho chose \u201cStay as a Beta Tester\u201d in the new launch screen (wants a feedback call and the external TestFlight group). You replied to about 15 people yesterday, and 5 of them wrote back to say thanks.",
+      "Sentry: 7 new one-person freezes (APPLE-IOS-5W to 62; 60 is Malcolm's phone and 62 is yours). The badge freeze (APPLE-IOS-47) still hit 5 people on older builds, and none on 1.0.5. No new in-app feedback, the survey is unchanged, and PostHog alerts are quiet. I couldn't read Discord on this rerun, and Linear still needs reconnecting."
+    ],
+    "plainTldr": [
+      "No new fixes from me today. Nothing new was a clear bug that you and Malcolm hadn't already fixed. Version 1.0.5 (36) went live on the App Store at 9:56 AM PT today. It carries the badge-freeze fix (#402) and last night's work (#433 to #442), including the invite screen that now understands the email's wave link (#438).",
+      "The unsubscribe page works now. I checked: old email links bounce to a readable trylatent.co/u/ page (#437). So #431 and #432 from yesterday are superseded by #437/#438 and can be closed.",
+      "4 people need something from you: Radhya asked about privacy and who can see her videos, mosimon asked for a Play Store link, Simone still hasn't had a reply about the invite screen, and rjho chose \u201cStay as a Beta Tester\u201d in the new launch screen (wants a feedback call and the external TestFlight group). You replied to about 15 people yesterday, and 5 of them wrote back to say thanks.",
+      "Sentry: 7 new one-person freezes (APPLE-IOS-5W to 62; 60 is Malcolm's phone and 62 is yours). The badge freeze (APPLE-IOS-47) still hit 5 people on older builds, and none on 1.0.5. No new in-app feedback, the survey is unchanged, and PostHog alerts are quiet. I couldn't read Discord on this rerun, and Linear still needs reconnecting."
+    ],
+    "stats": {
+      "newInApp": 0,
+      "newDiscord": null,
+      "newGmail": 9,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-5W",
+        "APPLE-IOS-5X",
+        "APPLE-IOS-5Y",
+        "APPLE-IOS-5Z",
+        "APPLE-IOS-60",
+        "APPLE-IOS-61",
+        "APPLE-IOS-62"
+      ],
+      "posthog": {
+        "uploadFailed": {
+          "2026-10-06": 13,
+          "2026-10-07": 8,
+          "2026-10-08": 4
+        },
+        "rageclicks": {
+          "2026-10-06": 574,
+          "2026-10-07": 675,
+          "2026-10-08": 358
+        },
+        "attachmentUploadFailed": {
+          "2026-10-06": 11,
+          "2026-10-07": 0,
+          "2026-10-08": 2
+        },
+        "clipBloatAlert": "Not firing (last 1.56 MB/s, threshold 4)",
+        "edgeLoopAlert": "Not firing (last 3, threshold 200)",
+        "notes": "UTC day buckets; Oct 8 partial (~10:15 AM PT). Since the last dig: 7 clip upload failures, mostly phone network timeouts from one person on an old TestFlight build (10), plus one server PUT 500. 2 attachment failures (builds 33 and 35). Oct 7 rage clicks (675) were spread over generic app screens (120 people on the root screen), with no single hot button."
+      },
+      "rawQuotes": 9
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "note": "Rerun at ~10:15 AM PT after the 9:11 AM PT scheduled run failed partway. No Cloud Agents launched: nothing new was a clear, unfixed bug. The invite-link and unsubscribe problems from yesterday were already fixed on main by #437/#438/#439, and 1.0.5 (36) is live.",
+      "agentsLaunched": []
+    },
+    "prStatus": {
+      "waiting": [],
+      "openedToday": [],
+      "superseded": [
+        {
+          "pr": 431,
+          "url": "https://github.com/eddie-the-lou/latent/pull/431",
+          "title": "Accept waitlist wave /w/ links on the invite-code screen",
+          "note": "Superseded by #437/#438, can be closed."
+        },
+        {
+          "pr": 432,
+          "url": "https://github.com/eddie-the-lou/latent/pull/432",
+          "title": "Waitlist unsubscribe page shows markup instead of a page (draft)",
+          "note": "Superseded by #437/#438, can be closed."
+        }
+      ],
+      "malcolmOpen": [
+        {
+          "pr": 426,
+          "title": "Record how many times a session is paused and for how long",
+          "url": "https://github.com/eddie-the-lou/latent/pull/426",
+          "note": "Built on top of #421, which was reverted by #429."
+        },
+        {
+          "pr": 267,
+          "title": "Group rows nudge with the hand, and group chats open straight into the thread",
+          "url": "https://github.com/eddie-the-lou/latent/pull/267"
+        },
+        {
+          "pr": 164,
+          "title": "Today mini cards fit their durations; camera toggle stays put",
+          "url": "https://github.com/eddie-the-lou/latent/pull/164"
+        },
+        {
+          "pr": 162,
+          "title": "One frame rule for the timelapse clip",
+          "url": "https://github.com/eddie-the-lou/latent/pull/162"
+        },
+        {
+          "pr": 123,
+          "title": "Sequential dual-camera proof stills (draft)",
+          "url": "https://github.com/eddie-the-lou/latent/pull/123"
+        }
+      ],
+      "eddieOpen": [
+        {
+          "pr": 417,
+          "title": "Friends' posts land before their stats; big graphs load stats in parallel",
+          "url": "https://github.com/eddie-the-lou/latent/pull/417",
+          "note": "FYI"
+        },
+        {
+          "pr": 397,
+          "title": "Activation report (daily), plus two analytics fixes",
+          "url": "https://github.com/eddie-the-lou/latent/pull/397",
+          "note": "FYI; #445 may cover it now"
+        }
+      ],
+      "agentsSpinning": [],
+      "agentsFinished": [],
+      "clearedOvernight": [
+        {
+          "id": "pr-431",
+          "title": "#431 invite screen accepts the launch email link",
+          "via": "superseded by #437/#438 (merged), can be closed"
+        },
+        {
+          "id": "pr-432",
+          "title": "#432 unsubscribe page fix",
+          "via": "superseded by #437/#438 (merged), can be closed"
+        }
+      ],
+      "mergedOvernight": [
+        {
+          "pr": 438,
+          "url": "https://github.com/eddie-the-lou/latent/pull/438",
+          "title": "The invite gate reads a pasted wave link by its structure, and resolves the old ones (TRY-289)",
+          "by": "you \u00b7 Oct 7, 6:41 PM PT",
+          "note": "Tied to Kinjal's report. Supersedes the dig's #431."
+        },
+        {
+          "pr": 437,
+          "url": "https://github.com/eddie-the-lou/latent/pull/437",
+          "title": "Wave links carry their code, and the unsubscribe page lives on trylatent.co (TRY-289)",
+          "by": "you \u00b7 Oct 7, 2:40 PM PT",
+          "note": "Tied to Darlen's report. Supersedes the dig's #432. I checked it's live: an old Supabase unsubscribe link now redirects to a real trylatent.co/u/ page."
+        },
+        {
+          "pr": 439,
+          "url": "https://github.com/eddie-the-lou/latent/pull/439",
+          "title": "The wave email spells out the invite code (TRY-291)",
+          "by": "you \u00b7 Oct 7, 6:44 PM PT",
+          "note": "Helps people like Simone who don't know what to paste."
+        },
+        {
+          "pr": 443,
+          "url": "https://github.com/eddie-the-lou/latent/pull/443",
+          "title": "The launch takeover opens on the App Store icon, and testers who stay leave a way to reach them (TRY-269)",
+          "by": "you \u00b7 Oct 7, 8:03 PM PT",
+          "note": "This is what sent today's \u201cwants to stay a beta tester\u201d emails."
+        },
+        {
+          "pr": 434,
+          "url": "https://github.com/eddie-the-lou/latent/pull/434",
+          "title": "An invite link opens a card: Accept invite makes you friends, View profile grows it full screen (TRY-278)",
+          "by": "you \u00b7 Oct 7, 10:28 AM PT"
+        },
+        {
+          "pr": 435,
+          "url": "https://github.com/eddie-the-lou/latent/pull/435",
+          "title": "Profile: Add friends opens the Friends page, and all three stats open what they count (TRY-287)",
+          "by": "you \u00b7 Oct 7, 11:17 AM PT"
+        },
+        {
+          "pr": 433,
+          "url": "https://github.com/eddie-the-lou/latent/pull/433",
+          "title": "The record screen's dim drawer reports when it is opened and what was changed (TRY-282)",
+          "by": "you \u00b7 Oct 7, 10:12 AM PT"
+        },
+        {
+          "pr": 440,
+          "url": "https://github.com/eddie-the-lou/latent/pull/440",
+          "title": "A friend row in the Friends list opens their profile, even when they posted today",
+          "by": "Malcolm \u00b7 Oct 7, 7:20 PM PT"
+        },
+        {
+          "pr": 441,
+          "url": "https://github.com/eddie-the-lou/latent/pull/441",
+          "title": "Settings \u203a Privacy: Share usage data switch opts the phone out of PostHog",
+          "by": "Malcolm \u00b7 Oct 7, 7:27 PM PT"
+        },
+        {
+          "pr": 442,
+          "url": "https://github.com/eddie-the-lou/latent/pull/442",
+          "title": "Profiles, swipes, tab switches and feed videos stay fast as friend lists grow",
+          "by": "Malcolm \u00b7 Oct 7, 9:36 PM PT"
+        },
+        {
+          "pr": 436,
+          "url": "https://github.com/eddie-the-lou/latent/pull/436",
+          "title": "The last reward screen says what the save earned and what is next",
+          "by": "Malcolm \u00b7 Oct 7, 2:09 PM PT"
+        }
+      ],
+      "alsoMerged": "This morning: #444 (Malcolm, 10:06 AM PT) bumps main to 1.0.5 (36), the build now on the App Store, and #445 (you, 10:05 AM PT) runs the activation report from main.",
+      "stillOnYou": [
+        {
+          "id": "reply-radhya",
+          "title": "Reply to Radhya (radhyas2010@gmail.com). She downloaded the app and loves it, but asks who can see her study videos, whether non-friends can, and whether she can delete a video once it's up."
+        },
+        {
+          "id": "reply-mosimon",
+          "title": "Reply to mosimon2248@gmail.com, who asked for a Google Play Store link (Android)."
+        },
+        {
+          "id": "reply-simone",
+          "title": "Reply to Simone (simone.grandhi@icloud.com). She's still confused by \u201cpaste the link your friend sent you\u201d (Oct 7, 7:16 AM PT) and I found no reply in Sent. The code KPCWC4 gets her in."
+        },
+        {
+          "id": "rjho-beta",
+          "title": "rjho (ralphhojr@gmail.com, build 36) chose \u201cStay as a Beta Tester\u201d. The app asks you to reach out for a feedback call and add them to the external TestFlight group."
+        },
+        {
+          "id": "close-431-432",
+          "title": "#431 and #432 are superseded by #437/#438, so they can be closed. I left them open for you.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/431"
+        },
+        {
+          "id": "linear-reconnect",
+          "title": "Reconnect Linear (MCP needs re-auth) so the dig can create its daily issue."
+        },
+        {
+          "id": "carried",
+          "title": "Carried over, not refreshed while Linear is disconnected: TRY-118 waitlist emails (Urgent), TRY-215 YPT study session, TRY-197 cap table."
+        },
+        {
+          "id": "fyi-open",
+          "title": "FYI open, not the dig's: #426 (Malcolm, pause tracking, built on the reverted #421), #417 (yours, feed/stats loading), #397 (yours, activation report; #445 may cover it now)."
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "replies",
+        "title": "Reply to Radhya (privacy), mosimon (Play Store), Simone (invite help); reach out to rjho (stay a beta tester)",
+        "status": "waiting"
+      },
+      {
+        "id": "close-431-432",
+        "title": "#431 and #432 superseded by #437/#438, can be closed",
+        "status": "waiting",
+        "url": "https://github.com/eddie-the-lou/latent/pull/431"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive to latent-digs GitHub Pages",
+        "status": "done"
+      },
+      {
+        "id": "linear",
+        "title": "Linear issue not created: Linear needs reconnecting",
+        "status": "skipped"
+      },
+      {
+        "id": "discord",
+        "title": "Discord not read on this rerun (no browser available)",
+        "status": "skipped"
+      },
+      {
+        "id": "agents",
+        "title": "No Cloud Agents launched (nothing new and unfixed)",
+        "status": "done"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "invite-wave-link",
+        "title": "Invite screen rejected the launch email's link",
+        "status": "resolved",
+        "people": "Kinjal (you replied); maybe Simone",
+        "summary": "Fixed by your #438 (app) and #437/#439 (email). It's in 1.0.5, live today. The dig's #431 is superseded.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/438"
+      },
+      {
+        "id": "unsubscribe-raw-html",
+        "title": "Unsubscribe page showed code instead of a button",
+        "status": "resolved",
+        "people": "Darlen (you replied and removed her)",
+        "summary": "Fixed by your #437 and live now. Old links redirect to a trylatent.co/u/ page. The dig's #432 is superseded.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/437"
+      },
+      {
+        "id": "apple-ios-47",
+        "title": "App froze while updating the icon badge (APPLE-IOS-47)",
+        "status": "resolved",
+        "people": "5 people in 24h, all on builds 33/34/35",
+        "summary": "The fix (#402) shipped today in 1.0.5 (36). No events on 36 yet. It should fade as people update.",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-47"
+      },
+      {
+        "id": "apple-ios-50",
+        "title": "App killed while frozen (APPLE-IOS-50)",
+        "status": "watch",
+        "people": "2 people in 24h (\u201caaa\u201d 4 times, \u201c_b\u201d once)",
+        "summary": "Down from 10 events yesterday. Still no app code in the traces, so no auto-fix.",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-50"
+      },
+      {
+        "id": "sentry-singles",
+        "title": "7 new one-person freezes (APPLE-IOS-5W to 62)",
+        "status": "watch",
+        "people": "kobe, tttt, isabelle, wassap, Malcolm (60), drea, you (62)",
+        "summary": "3 to 10 s freezes on builds 33, 34 and 35. Three were fatal (5X, 60, 62). None on 1.0.5. Watching, no auto-fix.",
+        "url": "https://weaive.sentry.io/issues/?project=apple-ios&query=firstSeen%3A-24h"
+      },
+      {
+        "id": "apple-ios-35",
+        "title": "Long \u201chang\u201d grab-bag (APPLE-IOS-35)",
+        "status": "watch",
+        "people": "6 people in 24h",
+        "summary": "7 events. 2 were Malcolm on 1.0.5 (36) this morning (about 7 s), which are the only Sentry events on the new build so far.",
+        "url": "https://weaive.sentry.io/issues/APPLE-IOS-35"
+      }
+    ],
+    "features": [
+      {
+        "id": "android",
+        "title": "Android / non-Apple devices",
+        "status": "backlog",
+        "people": "mosimon2248 (NEW), Shrutee, Anirudh, Aarav, mahimakoul64, Javier, kabcde214, Sharon, rbalintfi, ajmcallister27, Tejaswi, Dani, juwayriyah2404, Tiago, plus Discord askers",
+        "summary": "+1 by email today (a Play Store link). You answered about 13 Android askers yesterday, and several wrote back to say thanks."
+      },
+      {
+        "id": "privacy-controls",
+        "title": "Privacy: who sees my videos, and can I delete them",
+        "status": "backlog",
+        "people": "Radhya (NEW)",
+        "summary": "A question rather than a bug. She wants to know the controls. Worth a reply, and maybe a short in-app or FAQ explanation."
+      },
+      {
+        "id": "profile-groups-badge",
+        "title": "Profiles show your groups, a top-10 all-time badge, and mutual friends",
+        "status": "backlog",
+        "people": "Ace, Zoe, @chloe on latent (Discord, Oct 6); suki (Sep 30)",
+        "summary": "Carried over. Discord wasn't re-read today."
+      },
+      {
+        "id": "desktop-screen-record",
+        "title": "Desktop / Mac app",
+        "status": "backlog",
+        "people": "Aarav, mahimakoul64 (Windows), 1qrobo1, eman, Zoe, Ethan",
+        "summary": "No new asks today."
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 0,
+        "note": "0 new rows since Oct 7 9:00 AM PT."
+      },
+      "discord": {
+        "new": null,
+        "note": "Not read on this rerun: no box browser was available, so I couldn't open Discord. Yesterday's thread (\u201cprofile suggestion\u201d) is carried over."
+      },
+      "gmail": {
+        "new": 9,
+        "note": "New: Radhya (privacy question), mosimon (Play Store link), rjho's \u201cStay as a Beta Tester\u201d report (plus 3 test ones from Malcolm), and thank-yous from Shrutee, nashra, Tiago, Tejaswi and juwayriyah. You replied to about 15 people on Oct 7 (Kinjal, Darlen, and 13 Android/Mac askers). Simone has no reply yet. GitHub/Linear bot mail, DMARC reports, pitches (Solo Era, #paid/Replit, Magic Patterns) and newsletters skipped. No video attachments, and no PostHog alert mail."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "buildOneNext": "still empty",
+        "note": "Export HTTP 200, 25,306 bytes. All three tabs are identical to yesterday."
+      },
+      "sentry": {
+        "new": [
+          "APPLE-IOS-5W",
+          "APPLE-IOS-5X",
+          "APPLE-IOS-5Y",
+          "APPLE-IOS-5Z",
+          "APPLE-IOS-60",
+          "APPLE-IOS-61",
+          "APPLE-IOS-62"
+        ],
+        "note": "APPLE-IOS-47: 6 events from 5 people on builds 33/34/35 (fix shipped today in 1.0.5). APPLE-IOS-50: 5 events from 2 people (down from 10). APPLE-IOS-A: 12 events from 3 people. 1.0.5 (36): 2 events, both Malcolm (APPLE-IOS-35)."
+      },
+      "posthog": {
+        "note": "Upload failures were phone network timeouts plus one server 500. Rage clicks were 675 on Oct 7, spread out with no hot button. Clip-bloat and edge-loop alerts: Not firing."
+      },
+      "github": {
+        "note": "main @ ca1219f (#444, Oct 8, 10:06 AM PT). Merged since the dig: #433 to #445. Open: #431 and #432 (superseded), #426, #417, #397, #267, #164, #162, #123."
+      },
+      "appStore": {
+        "note": "1.0.5 live since Oct 8, 9:56 AM PT (iTunes)."
+      },
+      "linear": {
+        "note": "user-Linear and user-Linear--trylatent still needsAuth. Skipped."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "gmail-radhya",
+        "source": "gmail",
+        "username": "Radhya (radhyas2010@gmail.com)",
+        "when": "2026-10-08T00:54:34Z",
+        "whenPT": "Oct 7, 2026, 5:54 PM PT",
+        "kind": "question",
+        "quote": "Hi Eddie!\n\nThank you so much for reaching out! I have successfully downloaded the app,\nand I love the content. I am reaching out because I have a few concerns\nabout safety. A feature of the app is recording yourself studying, which at\ntimes will include your face, surroundings, and work. Are there features to\nlimit who can see my content, protect my privacy, and make sure nobody else\nwho isn't my friend can see my video? Is this like social apps such as\nInstagram, where once my video is up, it can never be removed? I would love\nto hear all about the safety features you have! Thank you!",
+        "note": "Reply to the Oct 6 launch email. No reply from you yet."
+      },
+      {
+        "id": "gmail-mosimon",
+        "source": "gmail",
+        "username": "mosimon2248@gmail.com",
+        "when": "2026-10-08T02:26:34Z",
+        "whenPT": "Oct 7, 2026, 7:26 PM PT",
+        "kind": "android_ask",
+        "quote": "Is there a link for the Google play store?",
+        "note": "Reply to the Oct 2 launch email. No reply from you yet."
+      },
+      {
+        "id": "gmail-rjho-beta",
+        "source": "gmail",
+        "username": "@rjho (ralphhojr@gmail.com), via reports@mail.trylatent.co",
+        "when": "2026-10-08T15:01:40Z",
+        "whenPT": "Oct 8, 2026, 8:01 AM PT",
+        "kind": "beta_tester",
+        "quote": "ralphhojr@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @rjho\nBuild: 36\nAt: 2026-10-08 15:01:40.527647+00\nUser id: e6cd8e40-3499-43a6-a558-882943550a04",
+        "note": "Automatic email from the new launch screen (#443). Sent to support@trylatent.co and Malcolm.",
+        "build": "36"
+      },
+      {
+        "id": "gmail-malcolm-beta",
+        "source": "gmail",
+        "username": "@malcolm, via reports@mail.trylatent.co",
+        "when": "2026-10-08T16:51:23Z",
+        "whenPT": "Oct 8, 2026, 9:51 to 9:55 AM PT",
+        "kind": "test",
+        "quote": "6504849829 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @malcolm\nBuild: 36",
+        "note": "Malcolm testing the same screen: 3 emails (phone, test@test.co, malcolmemcdonald@icloud.com). Not a real tester.",
+        "build": "36"
+      },
+      {
+        "id": "gmail-shrutee",
+        "source": "gmail",
+        "username": "Shrutee (shruteemanish@gmail.com)",
+        "when": "2026-10-08T15:29:25Z",
+        "whenPT": "Oct 8, 2026, 8:29 AM PT",
+        "kind": "thanks",
+        "quote": "Hey Eddie,\nThanks for this\n\nShrutee.",
+        "note": "Reply to your Android answer."
+      },
+      {
+        "id": "gmail-nashra",
+        "source": "gmail",
+        "username": "nashranayaabnazim707@gmail.com",
+        "when": "2026-10-08T14:44:42Z",
+        "whenPT": "Oct 8, 2026, 7:44 AM PT",
+        "kind": "thanks",
+        "quote": "THANKS TWIN!",
+        "note": "Reply to the Oct 4 launch email."
+      },
+      {
+        "id": "gmail-tiago",
+        "source": "gmail",
+        "username": "Tiago (tiagoalexandre8442@escolasdesatao.pt)",
+        "when": "2026-10-08T07:01:23Z",
+        "whenPT": "Oct 8, 2026, 12:01 AM PT",
+        "kind": "thanks",
+        "quote": "Sweet, thanks for your work!",
+        "note": "Reply to your Android answer."
+      },
+      {
+        "id": "gmail-tejaswi",
+        "source": "gmail",
+        "username": "Tejaswi (tejaswisingh605@gmail.com)",
+        "when": "2026-10-08T01:24:27Z",
+        "whenPT": "Oct 7, 2026, 6:24 PM PT",
+        "kind": "thanks",
+        "quote": "Thank youuuuu \ud83c\udf38\ud83c\udf40\ud83d\udc97\ud83d\ude4f\ud83c\udffb\ud83d\ude2d",
+        "note": "Reply to your Android answer."
+      },
+      {
+        "id": "gmail-juwayriyah",
+        "source": "gmail",
+        "username": "juwayriyah2404@gmail.com",
+        "when": "2026-10-07T17:31:49Z",
+        "whenPT": "Oct 7, 2026, 10:31 AM PT",
+        "kind": "thanks",
+        "quote": "Oki thnksss",
+        "note": "Reply to your Android answer."
       }
     ],
     "linearIssue": null,
