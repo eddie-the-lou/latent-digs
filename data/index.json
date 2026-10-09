@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-09",
+    "title": "Latent daily review \u00b7 Oct 9",
+    "tldr": "No new fixes from me today. The one real problem in the inbox isn't a code bug: tridha (15) says the age check deleted her account and her 3-week streak. The age code only deletes under-13 answers, so most likely the birthday wheel landed on the wrong year. The account is hard-deleted and I can't bring it back."
+  },
+  {
     "date": "2026-10-08",
     "title": "Latent daily review \u00b7 Oct 8",
     "tldr": "No new fixes from me today. Nothing new was a clear bug that you and Malcolm hadn't already fixed. Version 1.0.5 (36) went live on the App Store at 9:56 AM PT today. It carries the badge-freeze fix (#402) and last night's work (#433 to #442), including the invite screen that now understands the email's wave link (#438)."
