@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-10",
+    "title": "Latent daily review \u00b7 Oct 10",
+    "tldr": "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue."
+  },
+  {
     "date": "2026-10-09",
     "title": "Latent daily review \u00b7 Oct 9",
     "tldr": "No new fixes from me today. The one real problem in the inbox isn't a code bug: tridha (15) says the age check deleted her account and her 3-week streak. The age code only deletes under-13 answers, so most likely the birthday wheel landed on the wrong year. The account is hard-deleted and I can't bring it back."
