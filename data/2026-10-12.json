@@ -1,0 +1,424 @@
+{
+  "date": "2026-10-12",
+  "title": "Latent daily review · Oct 12",
+  "generatedAt": "2026-10-12T16:51:10.260818+00:00",
+  "tldr": [
+    "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue (Linear is also still disconnected on my side).",
+    "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT, so no account is waiting to be deleted.",
+    "Two more people answered your App Store launch email asking for an Android or Play Store version: Sara ElKhabbaty and Neharika. Tridha, Radhya and mbuteler still have no reply from you, so there are 5 drafts below, oldest first.",
+    "Merged overnight, all Malcolm's: #471 (sign-in token refresh loop), #472 (stickers move and resize from anywhere), #473 (beta signups no longer email the team) and #474 (a full phone no longer cuts a long session to a 10-second clip). Malcolm's #475, #476 and #463 are still open.",
+    "In-app: 3 feature ideas. @luis wants a “close friends” sharing option, @spoon asks if early users get lifetime access (Malcolm already answered the same question by email for Sembiyan), and @arina wants to tag who you're studying with, which Malcolm's #475 is building. 24 new “Stay as a Beta Tester” picks (106 total); Malcolm handles those.",
+    "Survey unchanged (39/25/2 of 66). Sentry: 7 new one-person freezes (APPLE-IOS-6R to 6Y). PostHog: rage clicks up to 1,131 from 334 people, and 63 invite-code failures from 24 people are all “invalid code” entries, not a bug. Discord: #general-chat was busy since Oct 10 (Discord wasn't checked yesterday), mostly a birthday thread for KrabbyKai. One product question: Hujii asked if accounts are private by default, and another member, Ace, answered “private”. Nothing new in #feature-requests, #questions or #announcements; #tester-chat isn't visible."
+  ],
+  "plainTldr": [
+    "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue (Linear is also still disconnected on my side).",
+    "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT, so no account is waiting to be deleted.",
+    "Two more people answered your App Store launch email asking for an Android or Play Store version: Sara ElKhabbaty and Neharika. Tridha, Radhya and mbuteler still have no reply from you, so there are 5 drafts below, oldest first.",
+    "Merged overnight, all Malcolm's: #471 (sign-in token refresh loop), #472 (stickers move and resize from anywhere), #473 (beta signups no longer email the team) and #474 (a full phone no longer cuts a long session to a 10-second clip). Malcolm's #475, #476 and #463 are still open.",
+    "In-app: 3 feature ideas. @luis wants a “close friends” sharing option, @spoon asks if early users get lifetime access (Malcolm already answered the same question by email for Sembiyan), and @arina wants to tag who you're studying with, which Malcolm's #475 is building. 24 new “Stay as a Beta Tester” picks (106 total); Malcolm handles those.",
+    "Survey unchanged (39/25/2 of 66). Sentry: 7 new one-person freezes (APPLE-IOS-6R to 6Y). PostHog: rage clicks up to 1,131 from 334 people, and 63 invite-code failures from 24 people are all “invalid code” entries, not a bug. Discord: #general-chat was busy since Oct 10 (Discord wasn't checked yesterday), mostly a birthday thread for KrabbyKai. One product question: Hujii asked if accounts are private by default, and another member, Ace, answered “private”. Nothing new in #feature-requests, #questions or #announcements; #tester-chat isn't visible."
+  ],
+  "stats": {
+    "newInApp": 3,
+    "newDiscord": 32,
+    "newGmail": 3,
+    "newSurveyRows": 0,
+    "seanEllis": {
+      "very": 39,
+      "somewhat": 25,
+      "not": 2,
+      "n": 66
+    },
+    "sentryNew": [
+      "APPLE-IOS-6R",
+      "APPLE-IOS-6S",
+      "APPLE-IOS-6T",
+      "APPLE-IOS-6V",
+      "APPLE-IOS-6W",
+      "APPLE-IOS-6X",
+      "APPLE-IOS-6Y"
+    ],
+    "rawQuotes": 9,
+    "betaOptInsNew": 24,
+    "betaOptInsTotal": 106
+  },
+  "whatIDidToday": {
+    "fixesOpened": [],
+    "agentsLaunched": [],
+    "note": "No Cloud Agents launched: nothing new was a clear, unfixed code bug."
+  },
+  "prStatus": {
+    "waiting": [],
+    "openedToday": [],
+    "mergedOvernight": [
+      {
+        "pr": 474,
+        "url": "https://github.com/eddie-the-lou/latent/pull/474",
+        "title": "A full phone no longer turns a long session into a 10-second clip (TRY-320)",
+        "by": "Malcolm · Oct 11, 6:54 PM PT"
+      },
+      {
+        "pr": 473,
+        "url": "https://github.com/eddie-the-lou/latent/pull/473",
+        "title": "Beta tester signups stop emailing the team",
+        "by": "Malcolm · Oct 11, 5:56 PM PT"
+      },
+      {
+        "pr": 472,
+        "url": "https://github.com/eddie-the-lou/latent/pull/472",
+        "title": "A selected sticker moves and resizes from anywhere on the editor (TRY-321)",
+        "by": "Malcolm · Oct 11, 2:24 PM PT"
+      },
+      {
+        "pr": 471,
+        "url": "https://github.com/eddie-the-lou/latent/pull/471",
+        "title": "A token refresh no longer sets off another token refresh",
+        "by": "Malcolm · Oct 11, 2:05 PM PT"
+      }
+    ],
+    "stillOnYou": [
+      {
+        "id": "tridha",
+        "title": "Decide whether to restore Tridha's deleted account, then reply (draft below, waiting since Oct 9)."
+      },
+      {
+        "id": "replies",
+        "title": "Reply to Radhya and mbuteler (carried) plus Sara and Neharika (new). Drafts below."
+      },
+      {
+        "id": "malcolm-prs",
+        "title": "Malcolm's open PRs: #475 (Locked in with, app half), #476 (screen views), #463 (review notes on #462). Nothing from the dig."
+      },
+      {
+        "id": "linear",
+        "title": "Linear is still disconnected, so I can't file or check TryLatent tickets. Paste a Linear personal API key when you get a chance."
+      }
+    ],
+    "otherOpen": [
+      {
+        "pr": 476,
+        "url": "https://github.com/eddie-the-lou/latent/pull/476",
+        "title": "Hidden screens no longer report a visit at launch (Malcolm)"
+      },
+      {
+        "pr": 475,
+        "url": "https://github.com/eddie-the-lou/latent/pull/475",
+        "title": "Locked in with: the app half, behind a flag, TRY-312 (Malcolm)"
+      },
+      {
+        "pr": 463,
+        "url": "https://github.com/eddie-the-lou/latent/pull/463",
+        "title": "Fix review notes on #462 (Malcolm)"
+      }
+    ]
+  },
+  "ageHolds": {
+    "open": [],
+    "newLast24h": [],
+    "resolvedLast24h": [
+      {
+        "username": "omarzz",
+        "displayName": "Omar",
+        "resolution": "released",
+        "heldAtPT": "Oct 11, 9:29 AM PT",
+        "resolvedAtPT": "Oct 11, 10:34 AM PT",
+        "note": "Released after you confirmed the under-13 birthday was a mistake."
+      }
+    ],
+    "summary": "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT, so no account is waiting to be deleted.",
+    "query": "/workspace/feedback-digests/age-holds.sql"
+  },
+  "actions": [
+    {
+      "id": "ageholds",
+      "title": "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT, so no account is waiting to be deleted.",
+      "status": "done"
+    },
+    {
+      "id": "replies",
+      "title": "5 reply drafts: Tridha, mbuteler, Radhya, Sara, Neharika",
+      "status": "waiting"
+    },
+    {
+      "id": "email",
+      "title": "Email dig to eddie@weaive.app",
+      "status": "done"
+    },
+    {
+      "id": "archive",
+      "title": "Publish archive (also backfilled Oct 11, which hadn't published)",
+      "status": "done"
+    },
+    {
+      "id": "linear",
+      "title": "No Linear issue: no PRs today, and Linear still needs reconnecting",
+      "status": "skipped"
+    },
+    {
+      "id": "discord",
+      "title": "Discord: #general-chat was busy since Oct 10 (Discord wasn't checked yesterday), mostly a birthday thread for KrabbyKai. One product question: Hujii asked if accounts are private by default, and another member, Ace, answered “private”. Nothing new in #feature-requests, #questions or #announcements; #tester-chat isn't visible.",
+      "status": "done"
+    },
+    {
+      "id": "agents",
+      "title": "No Cloud Agents launched",
+      "status": "done"
+    }
+  ],
+  "bugs": [
+    {
+      "id": "privacy-confusion",
+      "title": "Not sure if accounts are private",
+      "severity": "low",
+      "people": 1,
+      "detail": "Hujii asked on Discord how to tell if their account is private or public. A community member answered “private”; nobody from the team replied. Radhya asked a similar privacy question by email on Oct 8."
+    },
+    {
+      "id": "group-action-failed",
+      "title": "Group screens failing to load (PostHog group_action_failed)",
+      "severity": "medium",
+      "people": 48,
+      "detail": "139 events from 48 people in 24h (was 186/45). Mostly network errors or cancelled loads; 9 were “no group with that code”, 2 hit “permission denied for table group_invites”. No single clear code bug to hand an agent."
+    },
+    {
+      "id": "invite-check",
+      "title": "Invite codes rejected (invite_check_failed)",
+      "severity": "low",
+      "people": 24,
+      "detail": "63 events from 24 people, up from 26/8, all with reason “invalid”, on 1.0.5. Looks like people typing wrong codes after the new launch emails, not a code bug."
+    },
+    {
+      "id": "rageclicks",
+      "title": "Rage clicks doubled",
+      "severity": "low",
+      "people": 334,
+      "detail": "1,131 rage clicks from 334 people in 24h (was 558/190). More people are using the app after the launch waves; no single screen flagged."
+    },
+    {
+      "id": "sentry-singles",
+      "title": "7 new one-person freezes (APPLE-IOS-6R, 6S, 6T, 6V, 6W, 6X, 6Y)",
+      "severity": "low",
+      "people": 7,
+      "detail": "6R was a full freeze the phone killed. Big ones continue: APPLE-IOS-35 105 events/60 people, APPLE-IOS-F (server 503s) 217/48, APPLE-IOS-7 85/43."
+    },
+    {
+      "id": "small-failures",
+      "title": "Small save and sign-in failures",
+      "severity": "low",
+      "people": 9,
+      "detail": "sign_in_failed 15 (6 people), segment_finalize_failed 12 (9), app_blocking_authorization_failed 11 (8), attachment_upload_failed 6 (5), clip_upload_failed 5 (4), session_save_failed 5 (3)."
+    }
+  ],
+  "features": [
+    {
+      "id": "android",
+      "title": "Android / Play Store",
+      "count": 2,
+      "detail": "Sara ElKhabbaty (Huawei, can install Android apps) and Neharika asked by email."
+    },
+    {
+      "id": "close-friends",
+      "title": "Share clips with a close-friends group",
+      "count": 1,
+      "detail": "@luis: right now it's all friends or private."
+    },
+    {
+      "id": "tag-partner",
+      "title": "Tag who you're studying with",
+      "count": 1,
+      "detail": "@arina. Malcolm's #475 (Locked in with) is building this."
+    },
+    {
+      "id": "lifetime",
+      "title": "Lifetime access for early users",
+      "count": 2,
+      "detail": "@spoon in-app and Sembiyan by email (Malcolm replied that the main features stay free)."
+    },
+    {
+      "id": "beta",
+      "title": "People want to stay testers",
+      "count": 24,
+      "detail": "24 new “Stay as a Beta Tester” picks since yesterday's dig, 106 total. Malcolm handles these."
+    }
+  ],
+  "bySource": {
+    "inApp": {
+      "new": 3,
+      "note": "3 new rows in public.feedback since the Oct 11 dig (@luis, @spoon, @arina), all feature ideas."
+    },
+    "discord": {
+      "new": 32,
+      "note": "Discord: #general-chat was busy since Oct 10 (Discord wasn't checked yesterday), mostly a birthday thread for KrabbyKai. One product question: Hujii asked if accounts are private by default, and another member, Ace, answered “private”. Nothing new in #feature-requests, #questions or #announcements; #tester-chat isn't visible."
+    },
+    "gmail": {
+      "new": 3,
+      "note": "New: Sara ElKhabbaty and Neharika replied to the launch email; Sembiyan asked support about lifetime access (Malcolm answered). 14 beta-tester report emails came in before Malcolm's #473 turned them off; 24 opt-ins total since the last dig per the database. You sent no tester replies since the last dig. DMARC, brand pitches and booking confirmations skipped. No video attachments, no PostHog alert mail."
+    },
+    "survey": {
+      "newRows": 0,
+      "seanEllis": "39/25/2 of 66",
+      "note": "All three tabs identical to Oct 11 (67/7/9 rows incl. headers)."
+    },
+    "sentry": {
+      "new": [
+        "APPLE-IOS-6R",
+        "APPLE-IOS-6S",
+        "APPLE-IOS-6T",
+        "APPLE-IOS-6V",
+        "APPLE-IOS-6W",
+        "APPLE-IOS-6X",
+        "APPLE-IOS-6Y"
+      ],
+      "note": "7 new single-person freezes. APPLE-IOS-35: 105/60. APPLE-IOS-F (503s): 217/48. APPLE-IOS-7: 85/43. APPLE-IOS-W (fatal hang): 14/11."
+    },
+    "posthog": {
+      "note": "Last 24h: 1,131 rage clicks (334 people), group_action_failed 139 (48), invite_check_failed 63 (24, all “invalid”), sign_in_failed 15 (6), segment_finalize_failed 12 (9), app_blocking_authorization_failed 11 (8), attachment_upload_failed 6 (5), clip_upload_failed 5 (4), session_save_failed 5 (3). No PostHog alert emails."
+    },
+    "github": {
+      "note": "Merged since the dig: #471 to #474 (Malcolm). Open: #463, #475, #476 (Malcolm)."
+    }
+  },
+  "rawQuotes": [
+    {
+      "id": "inapp-luis",
+      "source": "in-app",
+      "username": "@luis",
+      "whenPT": "Oct 11, 2:53 PM PT",
+      "kind": "feature",
+      "quote": "Add an option to share study clips with only a “close friend” group which you can select since right now you can only share with all friends or keep private",
+      "build": "1.0.6 (38)"
+    },
+    {
+      "id": "inapp-spoon",
+      "source": "in-app",
+      "username": "@spoon",
+      "whenPT": "Oct 11, 6:57 PM PT",
+      "kind": "feature",
+      "quote": "Hey! I joined via the instagram invite code phase so will early users like myself be grandfathered into lifetime access if you guys decide to launch subscriptions?",
+      "build": "1.0.5 (36)"
+    },
+    {
+      "id": "inapp-arina",
+      "source": "in-app",
+      "username": "@arina",
+      "whenPT": "Oct 12, 8:47 AM PT",
+      "kind": "feature",
+      "quote": "it’ll be great, if you could tag people, that you are studying with",
+      "note": "Malcolm's open #475 (“Locked in with”, TRY-312) is building this.",
+      "build": "1.0.5 (36)"
+    },
+    {
+      "id": "gmail-sara",
+      "source": "gmail",
+      "username": "Sara ElKhabbaty (sara.elkhabbaty@gmail.com)",
+      "whenPT": "Oct 11, 10:46 AM PT",
+      "kind": "question",
+      "quote": "Hi Eddie,\n\nUnfortunately I am not an apple user. therefore I am unable to download the\napp from the app store. Is there is a version available on the play store\nor open source? I am a Huawie user but I can download android apps.\n\nThanks.\n\nSara ElKhabbaty",
+      "note": "Reply to your App Store launch email (thread 1a12c135e454936d)."
+    },
+    {
+      "id": "gmail-neharika",
+      "source": "gmail",
+      "username": "neharikathakur0609@gmail.com",
+      "whenPT": "Oct 12, 8:17 AM PT",
+      "kind": "question",
+      "quote": "hey,\nis it only available on appstore and not playstore for non ios users?\n:(",
+      "note": "Reply to your Oct 6 App Store launch email (thread 1a130b0fa022c329)."
+    },
+    {
+      "id": "gmail-sembiyan",
+      "source": "gmail",
+      "username": "Sembiyan Poongundran (sembiyanpd1@icloud.com), via support@",
+      "whenPT": "Oct 11, 7:09 PM PT",
+      "kind": "question",
+      "quote": "Hello,\n\nI joined the app while in its instagram/ invite only phase, so I was wondering once the app is open to the public and if you guys decide to make paid subscriptions or what not, will early users like myself get lifetime access?\n\nSent from my iPhone",
+      "note": "Malcolm already replied Oct 12, 9:30 AM PT: the main features stay free if a paid version is added. No draft needed."
+    },
+    {
+      "id": "discord-0",
+      "source": "discord",
+      "username": "Hujii??wtf???",
+      "whenPT": "Oct 11, 4:03 PM PT",
+      "kind": "message",
+      "quote": "Hii, how do I know if my account is private or public? Or is it private by default?",
+      "note": "Discord #general-chat"
+    },
+    {
+      "id": "discord-1",
+      "source": "discord",
+      "username": "Ace",
+      "whenPT": "Oct 12, 2:45 AM PT",
+      "kind": "message",
+      "quote": "private",
+      "note": "Discord #general-chat"
+    },
+    {
+      "id": "discord-2",
+      "source": "discord",
+      "username": "Social chat, 30 more entries (mostly KrabbyKai's birthday)",
+      "whenPT": "Oct 10, 11:23 AM to Oct 12, 7:44 AM PT",
+      "kind": "message",
+      "quote": "Ramen_dino, Oct 10, 11:23 AM PT: \"Hiii\"\nMalcolm McDonald, Oct 10, 12:40 PM PT: \"yo!\"\n¦𓐇ໃ ۫⑅ ꩁ 𝔘𝔫𝔱𝔬𝔲𝔠𝔥𝔢𝔡 𐐿 (VIV), Oct 10, 1:28 PM PT: \"@KrabbyKai @KrabbyKai @KrabbyKai @KrabbyKai @KrabbyKai @KrabbyKai\"\nKrabbyKai, Oct 10, 1:29 PM PT: \"whay could possibly warrant this\"\n¦𓐇ໃ ۫⑅ ꩁ 𝔘𝔫𝔱𝔬𝔲𝔠𝔥𝔢𝔡 𐐿 (VIV), Oct 10, 1:29 PM PT: \"@KrabbyKai\" / \"HAPPY BIRTHDAY\" / \"if I’m correct\" / \"Right?\" / \"Yes?\"\nKrabbyKai, Oct 10, 2:22 PM PT: \"how did u remember this\"\n𝑲𝒂𝒊𝒔𝒆𝒍𝒊𝒏, Oct 10, 2:22 PM PT: \"woah happy bday\"\nKrabbyKai, Oct 10, 2:23 PM PT: \"ty giys\"\nki (is tired), Oct 10, 3:14 PM PT: \"happy birthday kai!!\"\nKrabbyKai, Oct 10, 3:37 PM PT: \"tyty\" / \"im\" / \"at a huge competition\" / \"w @parnik\" / \"in a maid costume\" / \"terrible day lmao\"\nki (is tired), Oct 10, 3:37 PM PT: \"good luck!\"\nparnik, Oct 10, 3:42 PM PT: \"WHAT\" / \"Oh yeah\" / \"I will use those pictures of ur outfit\"\nandrew, Oct 10, 4:11 PM PT: \"what\"\n¦𓐇ໃ ۫⑅ ꩁ 𝔘𝔫𝔱𝔬𝔲𝔠𝔥𝔢𝔡 𐐿 (VIV), Oct 10, 5:03 PM PT: \"I have my ways\" / (5:04 PM) \"Mb I’m at a badminton tournament\" / \"And I was rlly busy\"\nKrabbyKai, Oct 10, 5:04 PM PT: \"its chill\"\n¦𓐇ໃ ۫⑅ ꩁ 𝔘𝔫𝔱𝔬𝔲𝔠𝔥𝔢𝔡 𐐿 (VIV), Oct 10, 5:15 PM PT: \"I think it’s bc you mentioned sometime\" / \"But I don’t rmbr when\" / \"I try my best\" / \"To rmbr my friends bdays\" / [emoji/sticker-only message] / \"Oh oh\" / (5:16 PM) \"Guess who won first round of doubles and mixed doubles and lost singles, prepared to play cons singles but got a walkover from the opponent\" / (5:19 PM) \"AHHH MY FRIENDS ARENT LEAVING BADMINTON BUT I WANNA GO EAT\"\nEmpyrean, Oct 10, 7:59 PM PT: \"Locking out\"\nKrabbyKai, Oct 10, 11:14 PM PT: \"cant believe u remember\"\n¦𓐇ໃ ۫⑅ ꩁ 𝔘𝔫𝔱𝔬𝔲𝔠𝔥𝔢𝔡 𐐿 (VIV), Oct 11, 7:36 AM PT: \"Yes ofc :>\"\nNotorious R.I.B, Oct 11, 7:39 AM PT: \"woahh happy birthday kai!!\"\nKrabbyKai, Oct 11, 7:43 AM PT: \"thank you lol\" / [attachment/image, no text] / \"much appreciated\"\nNotorious R.I.B, Oct 11, 7:44 AM PT: \"finally found something that matches the description of perfection\" [replying to a KrabbyKai attachment]\n¦𓐇ໃ ۫⑅ ꩁ 𝔘𝔫𝔱𝔬𝔲𝔠𝔥𝔢𝔡 𐐿 (VIV), Oct 11, 8:01 AM PT: \"PFT- BAHAHHAHAHAH\" / (8:02 AM) \"Never would I have thought I’d see this\"\nSourLemown🍋, Oct 11, 12:31 PM PT: \"HAPPY BIRTHDAY BIGBOY @KrabbyKai\"\nKrabbyKai, Oct 11, 12:31 PM PT: \"thank u ira\" / \"we have an instagram video up\" / \"its at 200k views\" / \"biggest possible digital footprint\"\nSourLemown🍋, Oct 11, 12:31 PM PT: \"Holy hell this is awesome\" / (12:32 PM) \"Send me the link\"\nKrabbyKai, Oct 11, 12:33 PM PT: \"https://www.instagram.com/reel/DeVbqgRxhRN/?obrf=MWtrYzlhbWs4Z2lueA==\"\n¦𓐇ໃ ۫⑅ ꩁ 𝔘𝔫𝔱𝔬𝔲𝔠𝔥𝔢𝔡 𐐿 (VIV), Oct 11, 12:46 PM PT: \"OOOOOO\"\nd, Oct 12, 5:57 AM PT: \"krab catboy cosplay next\"\nKrabbyKai, Oct 12, 7:44 AM PT (replying to d): [attachment/media only, no text]",
+      "note": "Discord #general-chat"
+    }
+  ],
+  "replyDrafts": [
+    {
+      "id": "tridha",
+      "to": "tridhajaiswal0308@gmail.com",
+      "subject": "Re: TestFlight beta feedback for Latent",
+      "threadId": "1a11f0791c340586",
+      "replyToMessageId": "1a11f0791c340586",
+      "theirMessage": "Heyy\nI don’t know my when i entered my age on latent (15 year old) it deleted my acc saying its for 13 and above. I had a 3 week long streak as well. Please help me, i don’t want to lose everything please\n\nI am a high schooler and this really means a lot to me. Please i have trust in you that you’ll brung my account back. Please.",
+      "theirWhenPT": "Oct 8, 9:59 PM PT",
+      "body": "Hey Tridha, I'm so sorry this happened, that's a really rough way to lose a 3 week streak 😭 The age check removed accounts when the birthday came out under 13, so the wheel probably landed on the wrong year, and we've just changed it so that can't wipe an account anymore. [CHECK: whether you can or want to restore her account or streak; it was hard-deleted, so only promise what you can do] You're welcome to sign up again with your real birthday, and I'm here if anything else goes wrong!\n\nEddie",
+      "note": "Oldest unanswered (since Oct 9). Still blocked on your call about restoring her account."
+    },
+    {
+      "id": "mbuteler",
+      "to": "mbuteler@ieee.org",
+      "subject": "Re: lock in twin",
+      "threadId": "1a1270495def2f88",
+      "replyToMessageId": "1a1270495def2f88",
+      "theirMessage": "Too late Eddie, dropped college alr🥲",
+      "theirWhenPT": "Oct 10, 11:12 AM PT",
+      "body": "Haha no way, respect 😂 Latent works for any kind of deep work, not just studying, so it might still be useful for whatever you're building now. Your invite link from the email still works if you want to try it, and I'd love to hear what you think!\n\nEddie",
+      "note": "Carried from Oct 11, still unanswered."
+    },
+    {
+      "id": "radhya",
+      "to": "radhyas2010@gmail.com",
+      "subject": "Re: lock in twin",
+      "threadId": "1a119016d92c2469",
+      "replyToMessageId": "1a12b507319b3435",
+      "theirMessage": "Hi Eddie!\n\nThank you for the reply. I have been using Latent for 2 days now, and I\nhave already logged over 15 hours! I am loving the app. As a user, I love\nhow the app doesn't drain my battery, lets me add a live clock to my video\nat the end, and keeps all my study stats. I have even shared the app with a\ngirl who graduated from my high school and is now a small study influencer.\nI hope the app keeps doing well!",
+      "theirWhenPT": "Oct 11, 7:14 AM PT",
+      "body": "Radhya, 15 hours in 2 days is insane, I'm so happy Latent is helping you lock in! Thank you for sharing it with your friend too, that genuinely means a lot for a small team like us. If you ever have ideas or something feels off, just reply here, I read every one.\n\nEddie",
+      "note": "Carried from Oct 11, still unanswered. [CHECK: if you want to ask for an intro to the study influencer, add a line.]"
+    },
+    {
+      "id": "sara",
+      "to": "sara.elkhabbaty@gmail.com",
+      "subject": "Re: lock in twin",
+      "threadId": "1a12c135e454936d",
+      "replyToMessageId": "1a12c135e454936d",
+      "theirMessage": "Hi Eddie,\n\nUnfortunately I am not an apple user. therefore I am unable to download the\napp from the app store. Is there is a version available on the play store\nor open source? I am a Huawie user but I can download android apps.\n\nThanks.\n\nSara ElKhabbaty",
+      "theirWhenPT": "Oct 11, 10:46 AM PT",
+      "body": "Hey Sara, thanks for letting me know, and sorry about that! Right now Latent is iPhone only, so there's no Play Store or Android version yet. [CHECK: she also asked about open source, and whether you want to say anything about Android plans, without a date] Really appreciate you joining the waitlist though!\n\nEddie",
+      "note": "New. Reply to the App Store launch email."
+    },
+    {
+      "id": "neharika",
+      "to": "neharikathakur0609@gmail.com",
+      "subject": "Re: lock in twin",
+      "threadId": "1a130b0fa022c329",
+      "replyToMessageId": "1a130b0fa022c329",
+      "theirMessage": "hey,\nis it only available on appstore and not playstore for non ios users?\n:(",
+      "theirWhenPT": "Oct 12, 8:17 AM PT",
+      "body": "Hey Neharika, yeah for now it's only on the App Store, sorry! There's no Play Store version yet. [CHECK: anything you want to say about Android plans, without a date] Thank you so much for signing up though, it means a lot.\n\nEddie",
+      "note": "New. Reply to the App Store launch email."
+    }
+  ],
+  "linearIssue": null,
+  "linearNote": "No PRs from the dig today, so no Linear issue. Linear also still needs reconnecting."
+}

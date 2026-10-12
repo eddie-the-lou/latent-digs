@@ -1,5 +1,25 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-12",
+    "title": "Latent daily review \u00b7 Oct 12",
+    "tldr": "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue (Linear is also still disconnected on my side)."
+  },
+  {
+    "date": "2026-10-11",
+    "title": "Latent daily review \u00b7 Oct 11",
+    "tldr": "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue."
+  },
+  {
+    "date": "2026-10-10",
+    "title": "Latent daily review \u00b7 Oct 10",
+    "tldr": "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue."
+  },
+  {
+    "date": "2026-10-09",
+    "title": "Latent daily review \u00b7 Oct 9",
+    "tldr": "No new fixes from me today. The one real problem in the inbox isn't a code bug: tridha (15) says the age check deleted her account and her 3-week streak. The age code only deletes under-13 answers, so most likely the birthday wheel landed on the wrong year. The account is hard-deleted and I can't bring it back."
+  },
+  {
     "date": "2026-10-08",
     "title": "Latent daily review \u00b7 Oct 8",
     "tldr": "No new fixes from me today. Nothing new was a clear bug that you and Malcolm hadn't already fixed. Version 1.0.5 (36) went live on the App Store at 9:56 AM PT today. It carries the badge-freeze fix (#402) and last night's work (#433 to #442), including the invite screen that now understands the email's wave link (#438)."
@@ -662,6 +682,26 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-12",
+      "title": "Latent daily review \u00b7 Oct 12",
+      "tldr": "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue (Linear is also still disconnected on my side)."
+    },
+    {
+      "date": "2026-10-11",
+      "title": "Latent daily review \u00b7 Oct 11",
+      "tldr": "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue."
+    },
+    {
+      "date": "2026-10-10",
+      "title": "Latent daily review \u00b7 Oct 10",
+      "tldr": "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue."
+    },
+    {
+      "date": "2026-10-09",
+      "title": "Latent daily review \u00b7 Oct 9",
+      "tldr": "No new fixes from me today. The one real problem in the inbox isn't a code bug: tridha (15) says the age check deleted her account and her 3-week streak. The age code only deletes under-13 answers, so most likely the birthday wheel landed on the wrong year. The account is hard-deleted and I can't bring it back."
+    },
     {
       "date": "2026-10-08",
       "title": "Latent daily review \u00b7 Oct 8",
@@ -75343,12 +75383,12 @@ window.DIGESTS = {
       {
         "id": "email",
         "title": "Email dig to eddie@weaive.app",
-        "status": "pending"
+        "status": "done"
       },
       {
         "id": "archive",
         "title": "Publish archive to latent-digs GitHub Pages",
-        "status": "pending"
+        "status": "done"
       },
       {
         "id": "linear",
@@ -77682,5 +77722,2557 @@ window.DIGESTS = {
     ],
     "linearIssue": null,
     "linearNote": "Linear issue not created: Linear needs reconnecting (MCP needsAuth)."
+  },
+  "2026-10-09": {
+    "date": "2026-10-09",
+    "title": "Latent daily review \u00b7 Oct 9",
+    "generatedAt": "2026-10-09T16:44:53.930538+00:00",
+    "tldr": [
+      "No new fixes from me today. The one real problem in the inbox isn't a code bug: tridha (15) says the age check deleted her account and her 3-week streak. The age code only deletes under-13 answers, so most likely the birthday wheel landed on the wrong year. The account is hard-deleted and I can't bring it back.",
+      "You and Malcolm merged 17 PRs since yesterday's dig (#446 to #462), including 1.0.5 (37) for TestFlight, the iOS 26 launch takeover, Pomodoro Keep going, camera-off pauses and the Past feed. Malcolm's #463 (review notes on #462) is open.",
+      "8 more testers chose \u201cStay as a Beta Tester\u201d: 4 left an email (shlokp, charanistired, philan_jin, ankithrao30) and 4 left only a phone number (sydney, junue, chloe, amina). You've answered Radhya, mosimon, Simone, Ali and Jayden, and Jayden wrote back to say thanks.",
+      "Sentry: 6 new one-person freezes (APPLE-IOS-65 to 6B). No new in-app feedback, the survey is unchanged (39/25/2 of 66), PostHog group_action_failed is still high (166 on Oct 8, 33 people). Discord wasn't checked today. No PRs, so no Linear issue today."
+    ],
+    "plainTldr": [
+      "No new fixes from me today. The one real problem in the inbox isn't a code bug: tridha (15) says the age check deleted her account and her 3-week streak. The age code only deletes under-13 answers, so most likely the birthday wheel landed on the wrong year. The account is hard-deleted and I can't bring it back.",
+      "You and Malcolm merged 17 PRs since yesterday's dig (#446 to #462), including 1.0.5 (37) for TestFlight, the iOS 26 launch takeover, Pomodoro Keep going, camera-off pauses and the Past feed. Malcolm's #463 (review notes on #462) is open.",
+      "8 more testers chose \u201cStay as a Beta Tester\u201d: 4 left an email (shlokp, charanistired, philan_jin, ankithrao30) and 4 left only a phone number (sydney, junue, chloe, amina). You've answered Radhya, mosimon, Simone, Ali and Jayden, and Jayden wrote back to say thanks.",
+      "Sentry: 6 new one-person freezes (APPLE-IOS-65 to 6B). No new in-app feedback, the survey is unchanged (39/25/2 of 66), PostHog group_action_failed is still high (166 on Oct 8, 33 people). Discord wasn't checked today. No PRs, so no Linear issue today."
+    ],
+    "stats": {
+      "newInApp": 0,
+      "newDiscord": null,
+      "newGmail": 10,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-65",
+        "APPLE-IOS-66",
+        "APPLE-IOS-67",
+        "APPLE-IOS-68",
+        "APPLE-IOS-6A",
+        "APPLE-IOS-6B"
+      ],
+      "rawQuotes": 10
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "agentsLaunched": [],
+      "note": "No Cloud Agents launched: nothing new was a clear, unfixed code bug."
+    },
+    "prStatus": {
+      "waiting": [],
+      "openedToday": [],
+      "mergedOvernight": [
+        {
+          "pr": 462,
+          "url": "https://github.com/eddie-the-lou/latent/pull/462",
+          "title": "Activity loads older notifications as you scroll (TRY-309)",
+          "by": "Malcolm \u00b7 Oct 8, 10:24 PM PT"
+        },
+        {
+          "pr": 461,
+          "url": "https://github.com/eddie-the-lou/latent/pull/461",
+          "title": "Tags named like a built-in become that built-in, so Other matches (TRY-297)",
+          "by": "Malcolm \u00b7 Oct 8, 9:27 PM PT"
+        },
+        {
+          "pr": 460,
+          "url": "https://github.com/eddie-the-lou/latent/pull/460",
+          "title": "Activation plan: six flagged tests to get the first real session recorded",
+          "by": "you \u00b7 Oct 8, 9:16 PM PT"
+        },
+        {
+          "pr": 459,
+          "url": "https://github.com/eddie-the-lou/latent/pull/459",
+          "title": "Feed shows older friend posts under Past instead of going empty",
+          "by": "Malcolm \u00b7 Oct 8, 9:17 PM PT"
+        },
+        {
+          "pr": 458,
+          "url": "https://github.com/eddie-the-lou/latent/pull/458",
+          "title": "Post waits for the video, showing its first frame meanwhile (TRY-303)",
+          "by": "Malcolm \u00b7 Oct 8, 9:01 PM PT"
+        },
+        {
+          "pr": 457,
+          "url": "https://github.com/eddie-the-lou/latent/pull/457",
+          "title": "Camera-off app switches pause in 2.5s and stop counting time away (TRY-306)",
+          "by": "Malcolm \u00b7 Oct 8, 8:27 PM PT"
+        },
+        {
+          "pr": 456,
+          "url": "https://github.com/eddie-the-lou/latent/pull/456",
+          "title": "Design audit: small text reads, popups stop covering what they explain",
+          "by": "Malcolm \u00b7 Oct 8, 8:17 PM PT"
+        },
+        {
+          "pr": 455,
+          "url": "https://github.com/eddie-the-lou/latent/pull/455",
+          "title": "When a Pomodoro ends, Keep going starts another set (TRY-296)",
+          "by": "Malcolm \u00b7 Oct 8, 8:03 PM PT"
+        },
+        {
+          "pr": 454,
+          "url": "https://github.com/eddie-the-lou/latent/pull/454",
+          "title": "The week chart shows each session as its own block, with a time-by-tag pie",
+          "by": "Malcolm \u00b7 Oct 8, 2:17 PM PT"
+        },
+        {
+          "pr": 453,
+          "url": "https://github.com/eddie-the-lou/latent/pull/453",
+          "title": "Growth: a K cell waits until 30 people have had that long",
+          "by": "Malcolm \u00b7 Oct 8, 2:24 PM PT"
+        },
+        {
+          "pr": 452,
+          "url": "https://github.com/eddie-the-lou/latent/pull/452",
+          "title": "Hold a tag on your profile to edit it (TRY-259)",
+          "by": "Malcolm \u00b7 Oct 8, 1:54 PM PT"
+        },
+        {
+          "pr": 451,
+          "url": "https://github.com/eddie-the-lou/latent/pull/451",
+          "title": "App Store rating ask moves to the first 25-minute session",
+          "by": "you \u00b7 Oct 8, 11:52 AM PT"
+        },
+        {
+          "pr": 450,
+          "url": "https://github.com/eddie-the-lou/latent/pull/450",
+          "title": "iOS 26 TestFlight testers get the launch takeover",
+          "by": "Malcolm \u00b7 Oct 8, 11:18 AM PT"
+        },
+        {
+          "pr": 449,
+          "url": "https://github.com/eddie-the-lou/latent/pull/449",
+          "title": "The session_pauses migration lands on main, as applied to prod",
+          "by": "you \u00b7 Oct 8, 10:40 AM PT"
+        },
+        {
+          "pr": 448,
+          "url": "https://github.com/eddie-the-lou/latent/pull/448",
+          "title": "Bump to 1.0.5 (37) for TestFlight",
+          "by": "you \u00b7 Oct 8, 10:35 AM PT"
+        },
+        {
+          "pr": 447,
+          "url": "https://github.com/eddie-the-lou/latent/pull/447",
+          "title": "Activation report queries PostHog async",
+          "by": "you \u00b7 Oct 8, 10:14 AM PT"
+        },
+        {
+          "pr": 446,
+          "url": "https://github.com/eddie-the-lou/latent/pull/446",
+          "title": "The launch takeover survives whatever else is opening",
+          "by": "you \u00b7 Oct 8, 10:35 AM PT"
+        }
+      ],
+      "stillOnYou": [
+        {
+          "id": "tridha",
+          "title": "Reply to tridha (tridhajaiswal0308@gmail.com): the age check deleted her account (she says she's 15) and her 3-week streak. Draft below."
+        },
+        {
+          "id": "beta",
+          "title": "Reach out to the 8 new beta stayers: emails for shlokp, charanistired, philan_jin, ankithrao30 (drafts below); phone only for sydney, junue, chloe, amina. rjho is still open from Oct 8 too (you passed on that draft)."
+        },
+        {
+          "id": "pr463",
+          "title": "Malcolm's #463 (review notes on #462) is open.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/463"
+        },
+        {
+          "id": "linear",
+          "title": "Carried: TRY-118 (Urgent), TRY-215, TRY-197."
+        }
+      ],
+      "otherOpen": [
+        {
+          "pr": 463,
+          "url": "https://github.com/eddie-the-lou/latent/pull/463",
+          "title": "Fix review notes on #462 (Malcolm)"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "replies",
+        "title": "Reply to tridha; reach out to beta stayers",
+        "status": "waiting"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done"
+      },
+      {
+        "id": "linear",
+        "title": "No Linear issue: no PRs today",
+        "status": "skipped"
+      },
+      {
+        "id": "discord",
+        "title": "Discord wasn't checked today",
+        "status": "skipped"
+      },
+      {
+        "id": "agents",
+        "title": "No Cloud Agents launched",
+        "status": "done"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "age-delete",
+        "title": "A 15-year-old says the age check deleted her account",
+        "severity": "high",
+        "people": 1,
+        "detail": "The code only deletes under-13 answers and asks for confirmation, so likely a wheel mis-scroll. Deletion can't be undone. Worth deciding if a teen who mis-enters should get a second chance, but that's a product/COPPA call, so I didn't launch an agent."
+      },
+      {
+        "id": "group-action-failed",
+        "title": "Group stats loads keep failing (PostHog group_action_failed)",
+        "severity": "medium",
+        "people": 33,
+        "detail": "166 events from 33 people on Oct 8, 55 from 20 so far today, mostly group_session_stats. It has been climbing since Oct 5 (20)."
+      },
+      {
+        "id": "sentry-singles",
+        "title": "6 new one-person freezes (APPLE-IOS-65 to 6B)",
+        "severity": "low",
+        "people": 6,
+        "detail": "Three are fatal (66, 6A, 6B). APPLE-IOS-35 is still the big one: 74 events, 43 people overall."
+      }
+    ],
+    "features": [
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 8,
+        "detail": "8 \u201cStay as a Beta Tester\u201d picks since yesterday's dig."
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 0,
+        "note": "0 new rows in public.feedback since the Oct 8 dig."
+      },
+      "discord": {
+        "new": null,
+        "note": "Discord wasn't checked today."
+      },
+      "gmail": {
+        "new": 10,
+        "note": "tridha's TestFlight feedback, Jayden's thank-you, and 8 Stay as a Beta Tester reports (plus Malcolm test ones, skipped). You replied to Radhya, mosimon, Simone, Ali and Jayden on Oct 8. Pitches, DMARC, calendar and bot mail skipped. No video attachments, no PostHog alert mail."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "note": "All three tabs identical to Oct 8 (66/6/8 rows)."
+      },
+      "sentry": {
+        "new": [
+          "APPLE-IOS-65",
+          "APPLE-IOS-66",
+          "APPLE-IOS-67",
+          "APPLE-IOS-68",
+          "APPLE-IOS-6A",
+          "APPLE-IOS-6B"
+        ],
+        "note": "6 new single-person hangs, 3 fatal. APPLE-IOS-35: 74 events/43 people, last seen today. APPLE-IOS-A: 304/30. APPLE-IOS-47: 25/21, last seen 15h ago."
+      },
+      "posthog": {
+        "note": "Last 24h: 520 rage clicks (192 people), group_action_failed 129 (35), session_save_failed 18 (1 person), invite_check_failed 16 (8), clip_upload_failed 2 (2). No PostHog alert emails."
+      },
+      "github": {
+        "note": "Merged since the dig: #446 to #462. Open new: #463 (Malcolm)."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "gmail-tridha",
+        "source": "gmail",
+        "username": "tridhajaiswal0308@gmail.com",
+        "whenPT": "Oct 8, 2026, 9:59 PM PT",
+        "kind": "bug",
+        "quote": "Heyy\nI don\u2019t know my when i entered my age on latent (15 year old) it deleted my acc saying its for 13 and above. I had a 3 week long streak as well. Please help me, i don\u2019t want to lose everything please\n\nI am a high schooler and this really means a lot to me. Please i have trust in you that you\u2019ll brung my account back. Please.",
+        "note": "TestFlight beta feedback email (with a screenshot), sent to eddie@weaive.app. No reply yet."
+      },
+      {
+        "id": "gmail-jayden",
+        "source": "gmail",
+        "username": "Jayden (jaydenyu2018@gmail.com)",
+        "whenPT": "Oct 8, 2026, 1:56 PM PT",
+        "kind": "thanks",
+        "quote": "What's up Eddie!\n\nI really appreciate you keeping me posted! I know you're really busy so it\nmeans a lot to me for you to just personally reach out to a single person\nin the community. See you at our next meeting in the near future : )",
+        "note": "Reply to your Oct 8 note. Thanks only, no reply needed."
+      },
+      {
+        "id": "gmail-beta-shlokp",
+        "source": "gmail",
+        "username": "@shlokp, via reports@mail.trylatent.co",
+        "whenPT": "Oct 8, 2:39 PM PT",
+        "kind": "beta_tester",
+        "quote": "shlok.pandya.2010@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @shlokp\nBuild: 37",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a11d74f583bc5be).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-charanistired",
+        "source": "gmail",
+        "username": "@charanistired, via reports@mail.trylatent.co",
+        "whenPT": "Oct 8, 3:06 PM PT",
+        "kind": "beta_tester",
+        "quote": "char.emmidi@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @charanistired\nBuild: 37",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a11d8e1bd2c06c2).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-sydney",
+        "source": "gmail",
+        "username": "@sydney, via reports@mail.trylatent.co",
+        "whenPT": "Oct 8, 7:56 PM PT",
+        "kind": "beta_tester",
+        "quote": "9034499964 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @sydney\nBuild: 37",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a11e96eb36ff709).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-junue",
+        "source": "gmail",
+        "username": "@junue, via reports@mail.trylatent.co",
+        "whenPT": "Oct 8, 10:05 PM PT",
+        "kind": "beta_tester",
+        "quote": "3106344126 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @junue\nBuild: 37",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a11f0d82d5d5b54).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-chloe",
+        "source": "gmail",
+        "username": "@chloe, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 3:40 AM PT",
+        "kind": "beta_tester",
+        "quote": "6162748949 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @chloe\nBuild: 37",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12040272c11d7f).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-philan_jin",
+        "source": "gmail",
+        "username": "@philan_jin, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 4:01 AM PT",
+        "kind": "beta_tester",
+        "quote": "alcarazphilanjin@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @philan_jin\nBuild: 37",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1205324c64c8ec).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-amina",
+        "source": "gmail",
+        "username": "@amina, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 7:55 AM PT",
+        "kind": "beta_tester",
+        "quote": "+212657377328 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @amina\nBuild: 37",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a121296be9563b1).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-ankithrao30",
+        "source": "gmail",
+        "username": "@ankithrao30, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 8:52 AM PT",
+        "kind": "beta_tester",
+        "quote": "raoankith26@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @ankithrao30\nBuild: 37",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1215d83efc93a6).",
+        "build": "37"
+      }
+    ],
+    "replyDrafts": [
+      {
+        "id": "tridha",
+        "to": "tridhajaiswal0308@gmail.com",
+        "subject": "Re: TestFlight beta feedback for Latent",
+        "threadId": "1a11f0791c340586",
+        "replyToMessageId": "1a11f0791c340586",
+        "theirMessage": "Heyy\nI don\u2019t know my when i entered my age on latent (15 year old) it deleted my acc saying its for 13 and above. I had a 3 week long streak as well. Please help me, i don\u2019t want to lose everything please\n\nI am a high schooler and this really means a lot to me. Please i have trust in you that you\u2019ll brung my account back. Please.",
+        "theirWhenPT": "Oct 8, 9:59 PM PT",
+        "body": "Hey Tridha, I'm so sorry this happened, that's a really rough way to lose a 3 week streak \ud83d\ude2d The age check only removes accounts when the birthday comes out under 13, so the wheel probably landed on the wrong year. [CHECK: whether you can or want to restore her account or streak; it is hard-deleted in Supabase, so only promise what you can do] You're welcome to sign up again with your real birthday, and I'm here if anything else goes wrong!\n\nEddie",
+        "note": "The account was deleted, not paused (AgeCheck.swift calls deleteAccount for under 13), so don't promise to bring the streak back unless you can."
+      },
+      {
+        "id": "shlokp",
+        "to": "shlok.pandya.2010@gmail.com",
+        "subject": "staying a Latent beta tester",
+        "threadId": null,
+        "replyToMessageId": null,
+        "sourceReportThread": "1a11d74f583bc5be",
+        "theirMessage": "shlok.pandya.2010@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @shlokp\nBuild: 37",
+        "theirWhenPT": "Oct 8, 2:39 PM PT",
+        "body": "Hey @shlokp! Thanks so much for choosing to stay a beta tester, it really means a lot. I'd love to hop on a quick call to hear what's working and what's not for you, would any of these work? [TIMES] I'll also add you to the TestFlight group so you get new builds first.\n\nEddie",
+        "note": "New email, not a reply: the report came from the app, not from them. Carried over from Oct 8."
+      },
+      {
+        "id": "charanistired",
+        "to": "char.emmidi@gmail.com",
+        "subject": "staying a Latent beta tester",
+        "threadId": null,
+        "replyToMessageId": null,
+        "sourceReportThread": "1a11d8e1bd2c06c2",
+        "theirMessage": "char.emmidi@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @charanistired\nBuild: 37",
+        "theirWhenPT": "Oct 8, 3:06 PM PT",
+        "body": "Hey @charanistired! Thanks so much for choosing to stay a beta tester, it really means a lot. I'd love to hop on a quick call to hear what's working and what's not for you, would any of these work? [TIMES] I'll also add you to the TestFlight group so you get new builds first.\n\nEddie",
+        "note": "New email, not a reply: the report came from the app, not from them. "
+      },
+      {
+        "id": "philan_jin",
+        "to": "alcarazphilanjin@gmail.com",
+        "subject": "staying a Latent beta tester",
+        "threadId": null,
+        "replyToMessageId": null,
+        "sourceReportThread": "1a1205324c64c8ec",
+        "theirMessage": "alcarazphilanjin@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @philan_jin\nBuild: 37",
+        "theirWhenPT": "Oct 9, 4:01 AM PT",
+        "body": "Hey @philan_jin! Thanks so much for choosing to stay a beta tester, it really means a lot. I'd love to hop on a quick call to hear what's working and what's not for you, would any of these work? [TIMES] I'll also add you to the TestFlight group so you get new builds first.\n\nEddie",
+        "note": "New email, not a reply: the report came from the app, not from them. "
+      },
+      {
+        "id": "ankithrao30",
+        "to": "raoankith26@gmail.com",
+        "subject": "staying a Latent beta tester",
+        "threadId": null,
+        "replyToMessageId": null,
+        "sourceReportThread": "1a1215d83efc93a6",
+        "theirMessage": "raoankith26@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @ankithrao30\nBuild: 37",
+        "theirWhenPT": "Oct 9, 8:52 AM PT",
+        "body": "Hey @ankithrao30! Thanks so much for choosing to stay a beta tester, it really means a lot. I'd love to hop on a quick call to hear what's working and what's not for you, would any of these work? [TIMES] I'll also add you to the TestFlight group so you get new builds first.\n\nEddie",
+        "note": "New email, not a reply: the report came from the app, not from them. "
+      }
+    ],
+    "linearIssue": null,
+    "linearNote": "No PRs from the dig today, so no Linear issue."
+  },
+  "2026-10-10": {
+    "date": "2026-10-10",
+    "title": "Latent daily review \u00b7 Oct 10",
+    "generatedAt": "2026-10-10T16:19:55.091511+00:00",
+    "tldr": [
+      "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue.",
+      "Big wave of testers asking to stay: 44 more people chose \u201cStay as a Beta Tester\u201d since yesterday's dig (29 left an email, 15 only a phone number). The 4 from yesterday (shlokp, charanistired, philan_jin, ankithrao30) and tridha still have no reply from you.",
+      "You merged #464 (people who answer the age check under 13 are now held, not deleted) and #465 (1.0.6, build 38, for TestFlight). Malcolm merged #466 to #468 (week graph scale, and the Locked in with / shared posts work for TRY-312). Malcolm's #463 is still open.",
+      "One new in-app idea from @s4yy: let people change the yellow default color, and show hours on the monthly view. Discord: nothing new. Survey unchanged (39/25/2 of 66). Sentry: 3 new one-person freezes (APPLE-IOS-6D to 6F). PostHog: group stats failures are down a bit (98 from 36 people in 24h)."
+    ],
+    "plainTldr": [
+      "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue.",
+      "Big wave of testers asking to stay: 44 more people chose \u201cStay as a Beta Tester\u201d since yesterday's dig (29 left an email, 15 only a phone number). The 4 from yesterday (shlokp, charanistired, philan_jin, ankithrao30) and tridha still have no reply from you.",
+      "You merged #464 (people who answer the age check under 13 are now held, not deleted) and #465 (1.0.6, build 38, for TestFlight). Malcolm merged #466 to #468 (week graph scale, and the Locked in with / shared posts work for TRY-312). Malcolm's #463 is still open.",
+      "One new in-app idea from @s4yy: let people change the yellow default color, and show hours on the monthly view. Discord: nothing new. Survey unchanged (39/25/2 of 66). Sentry: 3 new one-person freezes (APPLE-IOS-6D to 6F). PostHog: group stats failures are down a bit (98 from 36 people in 24h)."
+    ],
+    "stats": {
+      "newInApp": 1,
+      "newDiscord": 0,
+      "newGmail": 46,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-6D",
+        "APPLE-IOS-6E",
+        "APPLE-IOS-6F"
+      ],
+      "rawQuotes": 47
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "agentsLaunched": [],
+      "note": "No Cloud Agents launched: nothing new was a clear, unfixed code bug."
+    },
+    "prStatus": {
+      "waiting": [],
+      "openedToday": [],
+      "mergedOvernight": [
+        {
+          "pr": 468,
+          "url": "https://github.com/eddie-the-lou/latent/pull/468",
+          "title": "Shared posts, plus two fixes from the review of #467 (TRY-312)",
+          "by": "Malcolm \u00b7 Oct 9, 5:29 PM PT"
+        },
+        {
+          "pr": 467,
+          "url": "https://github.com/eddie-the-lou/latent/pull/467",
+          "title": "Locked in with: the database half (TRY-312)",
+          "by": "Malcolm \u00b7 Oct 9, 4:36 PM PT"
+        },
+        {
+          "pr": 466,
+          "url": "https://github.com/eddie-the-lou/latent/pull/466",
+          "title": "Week graph shows its scale down the side, with even gaps between blocks",
+          "by": "Malcolm \u00b7 Oct 9, 4:12 PM PT"
+        },
+        {
+          "pr": 465,
+          "url": "https://github.com/eddie-the-lou/latent/pull/465",
+          "title": "Bump to 1.0.6 (38) for TestFlight",
+          "by": "you \u00b7 Oct 9, 11:08 AM PT"
+        },
+        {
+          "pr": 464,
+          "url": "https://github.com/eddie-the-lou/latent/pull/464",
+          "title": "Existing accounts that answer the age check under 13 are held, not deleted",
+          "by": "you \u00b7 Oct 9, 11:04 AM PT"
+        }
+      ],
+      "stillOnYou": [
+        {
+          "id": "tridha",
+          "title": "Reply to tridha (tridhajaiswal0308@gmail.com): age check deleted her account (she says she's 15). Draft below. #464 stops this happening again but doesn't restore hers."
+        },
+        {
+          "id": "beta",
+          "title": "Beta stayers: 33 with email (template below) and 19 phone only (4 from Oct 9: sydney, junue, chloe, amina, plus 15 new). Check with Malcolm who he's already booked."
+        },
+        {
+          "id": "pr463",
+          "title": "Malcolm's #463 (review notes on #462) is still open.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/463"
+        },
+        {
+          "id": "linear",
+          "title": "Carried: TRY-118 (Urgent), TRY-215, TRY-197."
+        }
+      ],
+      "otherOpen": [
+        {
+          "pr": 463,
+          "url": "https://github.com/eddie-the-lou/latent/pull/463",
+          "title": "Fix review notes on #462 (Malcolm)"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "replies",
+        "title": "Reply to tridha; reach out to beta stayers",
+        "status": "waiting"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done"
+      },
+      {
+        "id": "linear",
+        "title": "No Linear issue: no PRs today",
+        "status": "skipped"
+      },
+      {
+        "id": "discord",
+        "title": "Discord checked: nothing new",
+        "status": "done"
+      },
+      {
+        "id": "agents",
+        "title": "No Cloud Agents launched",
+        "status": "done"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "group-action-failed",
+        "title": "Group stats loads still failing (PostHog group_action_failed)",
+        "severity": "medium",
+        "people": 36,
+        "detail": "98 events from 36 people in the last 24h, down from 129 the day before. Malcolm/you may already be on it; no single clear bug to hand an agent."
+      },
+      {
+        "id": "attachment-upload",
+        "title": "Photo/attachment uploads failing for a few people",
+        "severity": "low",
+        "people": 5,
+        "detail": "attachment_upload_failed 23 times from 5 people in 24h; clip_upload_failed 4 (1 person); session_save_failed 5 (5 people)."
+      },
+      {
+        "id": "sentry-singles",
+        "title": "3 new one-person freezes (APPLE-IOS-6D, 6E, 6F)",
+        "severity": "low",
+        "people": 3,
+        "detail": "6E froze for about 7.7 minutes. The big ones keep going: APPLE-IOS-35 88 events/46 people (last seen 1h ago), APPLE-IOS-4N 17/14 (19 min ago)."
+      }
+    ],
+    "features": [
+      {
+        "id": "color-month",
+        "title": "Pick your own color, and show hours on the monthly view",
+        "count": 1,
+        "detail": "@s4yy (in-app, build 36): change the default yellow; show time totals per month instead of just shading."
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 44,
+        "detail": "44 new \u201cStay as a Beta Tester\u201d picks since yesterday's dig."
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 1,
+        "note": "1 new row in public.feedback since the Oct 9 dig (@s4yy feature idea)."
+      },
+      "discord": {
+        "new": 0,
+        "note": "Checked #feature-requests, #questions, #general-chat, #announcements since Oct 9 9 AM PT: no new messages. #tester-chat not visible."
+      },
+      "gmail": {
+        "new": 46,
+        "note": "46 Stay as a Beta Tester reports (44 people; Malcolm's test one skipped). No new tester emails or replies to your app emails. You sent no tester replies since the last dig. Pitches, DMARC, housing and bot mail skipped. No video attachments, no PostHog alert mail."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "note": "All three tabs identical to Oct 9 (67/7/9 rows incl. headers)."
+      },
+      "sentry": {
+        "new": [
+          "APPLE-IOS-6D",
+          "APPLE-IOS-6E",
+          "APPLE-IOS-6F"
+        ],
+        "note": "3 new single-person hangs. APPLE-IOS-35: 88/46. APPLE-IOS-A: 289/30. APPLE-IOS-47: 27/23. APPLE-IOS-4N: 17/14."
+      },
+      "posthog": {
+        "note": "Last 24h: 458 rage clicks (163 people), group_action_failed 98 (36), attachment_upload_failed 23 (5), invite_check_failed 16 (5), sign_in_failed 7 (2), session_save_failed 5 (5), clip_upload_failed 4 (1), app_blocking_authorization_failed 4 (4), segment_finalize_failed 2 (2). No PostHog alert emails."
+      },
+      "github": {
+        "note": "Merged since the dig: #464 to #468. Still open: #463 (Malcolm)."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "inapp-s4yy",
+        "source": "in-app",
+        "username": "@s4yy",
+        "whenPT": "Oct 10, 2026, 7:15 AM PT",
+        "kind": "feature",
+        "quote": "Allow default colour change (currently yellow), monthly view could show times on each month instead of just a different shade of colour",
+        "note": "public.feedback, kind feature, iOS 26.6.2",
+        "build": "1.0.5 (36)"
+      },
+      {
+        "id": "gmail-beta-1a121b11428a93b6",
+        "source": "gmail",
+        "username": "@lucasdraper, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 10:23 AM PT",
+        "kind": "beta_tester",
+        "quote": "6512388181 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @lucasdraper",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a121b11428a93b6).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-1a121b12cfc0f432",
+        "source": "gmail",
+        "username": "@lucasdraper, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 10:23 AM PT",
+        "kind": "beta_tester",
+        "quote": "6512388191 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @lucasdraper",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a121b11428a93b6).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-1a121c0d7874f465",
+        "source": "gmail",
+        "username": "@brittany, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 10:40 AM PT",
+        "kind": "beta_tester",
+        "quote": "brittanypcy@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @brittany",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a121c0d7874f465)."
+      },
+      {
+        "id": "gmail-beta-1a121e7cb42e7768",
+        "source": "gmail",
+        "username": "@prithvi, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 11:23 AM PT",
+        "kind": "beta_tester",
+        "quote": "2489829756 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @prithvi",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a121e7cb42e7768).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-1a121ea93bbaaf44",
+        "source": "gmail",
+        "username": "@maryam, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 11:26 AM PT",
+        "kind": "beta_tester",
+        "quote": "nazndahmaryam@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @maryam",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a121ea93bbaaf44)."
+      },
+      {
+        "id": "gmail-beta-1a121f32114f7958",
+        "source": "gmail",
+        "username": "@anasraad, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 11:35 AM PT",
+        "kind": "beta_tester",
+        "quote": "5068899201 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @anasraad",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a121f32114f7958).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-1a121f3b9cc4323d",
+        "source": "gmail",
+        "username": "@juan, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 11:36 AM PT",
+        "kind": "beta_tester",
+        "quote": "juanluisdlhm@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @juan",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a121f3b9cc4323d)."
+      },
+      {
+        "id": "gmail-beta-1a1221844897f9a8",
+        "source": "gmail",
+        "username": "@landon, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 12:16 PM PT",
+        "kind": "beta_tester",
+        "quote": "9092388854 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @landon",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1221844897f9a8).",
+        "build": "38"
+      },
+      {
+        "id": "gmail-beta-1a1222949809fafd",
+        "source": "gmail",
+        "username": "@finnclyne, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 12:34 PM PT",
+        "kind": "beta_tester",
+        "quote": "clynefinn26@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @finnclyne",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1222949809fafd)."
+      },
+      {
+        "id": "gmail-beta-1a12249af3697bb4",
+        "source": "gmail",
+        "username": "@rankysimmons8, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 1:10 PM PT",
+        "kind": "beta_tester",
+        "quote": "rankysimmons@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @rankysimmons8",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12249af3697bb4)."
+      },
+      {
+        "id": "gmail-beta-1a1227db6fad6cf9",
+        "source": "gmail",
+        "username": "@parnikpawar, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 2:07 PM PT",
+        "kind": "beta_tester",
+        "quote": "4242019153 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @parnikpawar",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1227db6fad6cf9).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-1a1229ec2f1b137a",
+        "source": "gmail",
+        "username": "@_b, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 2:43 PM PT",
+        "kind": "beta_tester",
+        "quote": "pluralbees@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @_b",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1229ec2f1b137a)."
+      },
+      {
+        "id": "gmail-beta-1a122a18acf6047f",
+        "source": "gmail",
+        "username": "@dahumanme, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 2:46 PM PT",
+        "kind": "beta_tester",
+        "quote": "mnudmanov@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @dahumanme",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a122a18acf6047f)."
+      },
+      {
+        "id": "gmail-beta-1a122b54d5ad072a",
+        "source": "gmail",
+        "username": "@blah_blah, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 3:07 PM PT",
+        "kind": "beta_tester",
+        "quote": "lichloe110@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @blah_blah",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a122b54d5ad072a)."
+      },
+      {
+        "id": "gmail-beta-1a122f4a48534779",
+        "source": "gmail",
+        "username": "@katie, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 4:16 PM PT",
+        "kind": "beta_tester",
+        "quote": "+85297632931 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @katie",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a122f4a48534779).",
+        "build": "38"
+      },
+      {
+        "id": "gmail-beta-1a123077f9fda382",
+        "source": "gmail",
+        "username": "@gita, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 4:37 PM PT",
+        "kind": "beta_tester",
+        "quote": "4088908823 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @gita",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a123077f9fda382).",
+        "build": "38"
+      },
+      {
+        "id": "gmail-beta-1a123147b2b27c7a",
+        "source": "gmail",
+        "username": "@wherearetheavocados, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 4:51 PM PT",
+        "kind": "beta_tester",
+        "quote": "ooannlin@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @wherearetheavocados",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a123147b2b27c7a)."
+      },
+      {
+        "id": "gmail-beta-1a123160d569251c",
+        "source": "gmail",
+        "username": "@zaahirat, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 4:53 PM PT",
+        "kind": "beta_tester",
+        "quote": "zaahirat23@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @zaahirat",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a123160d569251c)."
+      },
+      {
+        "id": "gmail-beta-1a123ab34cf80899",
+        "source": "gmail",
+        "username": "@zedrii_, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 7:36 PM PT",
+        "kind": "beta_tester",
+        "quote": "3193831752 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @zedrii_",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a123ab34cf80899).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-1a123bacd711e319",
+        "source": "gmail",
+        "username": "@x, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 7:53 PM PT",
+        "kind": "beta_tester",
+        "quote": "9548586522 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @x",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a123bacd711e319).",
+        "build": "38"
+      },
+      {
+        "id": "gmail-beta-1a123fd4e251211f",
+        "source": "gmail",
+        "username": "@von, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 9:06 PM PT",
+        "kind": "beta_tester",
+        "quote": "5063565839 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @von",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a123fd4e251211f).",
+        "build": "38"
+      },
+      {
+        "id": "gmail-beta-1a12414cb1303fac",
+        "source": "gmail",
+        "username": "@ki_, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 9:31 PM PT",
+        "kind": "beta_tester",
+        "quote": "7132991772 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @ki_",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12414cb1303fac).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-1a124202e86f5e81",
+        "source": "gmail",
+        "username": "@1emxnn, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 9:44 PM PT",
+        "kind": "beta_tester",
+        "quote": "awomoduireoluwa@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @1emxnn",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a124202e86f5e81)."
+      },
+      {
+        "id": "gmail-beta-1a12426a2e6c855f",
+        "source": "gmail",
+        "username": "@manoj, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 9:51 PM PT",
+        "kind": "beta_tester",
+        "quote": "8143252005 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @manoj",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12426a2e6c855f).",
+        "build": "37"
+      },
+      {
+        "id": "gmail-beta-1a1243890e334b2b",
+        "source": "gmail",
+        "username": "@alinx_cc, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 10:10 PM PT",
+        "kind": "beta_tester",
+        "quote": "alina_kazmierski@hotmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @alinx_cc",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1243890e334b2b)."
+      },
+      {
+        "id": "gmail-beta-1a1244437c159b1f",
+        "source": "gmail",
+        "username": "@rjt, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 10:23 PM PT",
+        "kind": "beta_tester",
+        "quote": "5128086300 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @rjt",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1244437c159b1f).",
+        "build": "38"
+      },
+      {
+        "id": "gmail-beta-1a12453bf81be8b9",
+        "source": "gmail",
+        "username": "@itsadi_1301, via reports@mail.trylatent.co",
+        "whenPT": "Oct 9, 10:40 PM PT",
+        "kind": "beta_tester",
+        "quote": "adityaballani@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @itsadi_1301",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12453bf81be8b9)."
+      },
+      {
+        "id": "gmail-beta-1a124bac6220f15d",
+        "source": "gmail",
+        "username": "@phinetic19, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 12:33 AM PT",
+        "kind": "beta_tester",
+        "quote": "josephinefischer0921@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @phinetic19",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a124bac6220f15d)."
+      },
+      {
+        "id": "gmail-beta-1a124bf2ec7dbd96",
+        "source": "gmail",
+        "username": "@1ace, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 12:37 AM PT",
+        "kind": "beta_tester",
+        "quote": "geauid1100306@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @1ace",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a124bf2ec7dbd96)."
+      },
+      {
+        "id": "gmail-beta-1a12501af662c48e",
+        "source": "gmail",
+        "username": "@charlie, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 1:50 AM PT",
+        "kind": "beta_tester",
+        "quote": "tjallingvanabbema@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @charlie",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12501af662c48e)."
+      },
+      {
+        "id": "gmail-beta-1a12502e9b4e0684",
+        "source": "gmail",
+        "username": "@eyoceax, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 1:51 AM PT",
+        "kind": "beta_tester",
+        "quote": "eyoceax@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @eyoceax",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12502e9b4e0684)."
+      },
+      {
+        "id": "gmail-beta-1a125039eb7e79f6",
+        "source": "gmail",
+        "username": "@svevux, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 1:52 AM PT",
+        "kind": "beta_tester",
+        "quote": "sveva.gnoni.03@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @svevux",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a125039eb7e79f6)."
+      },
+      {
+        "id": "gmail-beta-1a1250bd645b7f05",
+        "source": "gmail",
+        "username": "@qt3ms, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 2:01 AM PT",
+        "kind": "beta_tester",
+        "quote": "emmchen@email.cz (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @qt3ms",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1250bd645b7f05).",
+        "build": "38"
+      },
+      {
+        "id": "gmail-beta-1a12511787c29e5d",
+        "source": "gmail",
+        "username": "@aimarspyro, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 2:07 AM PT",
+        "kind": "beta_tester",
+        "quote": "aimarspyro@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @aimarspyro",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12511787c29e5d)."
+      },
+      {
+        "id": "gmail-beta-1a1255cc3a4f2f0b",
+        "source": "gmail",
+        "username": "@makulit, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 3:29 AM PT",
+        "kind": "beta_tester",
+        "quote": "hornethornet123456@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @makulit",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1255cc3a4f2f0b)."
+      },
+      {
+        "id": "gmail-beta-1a125bba9148ee07",
+        "source": "gmail",
+        "username": "@lerahshzuzuisje, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 5:13 AM PT",
+        "kind": "beta_tester",
+        "quote": "leraborysova2010@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @lerahshzuzuisje",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a125bba9148ee07)."
+      },
+      {
+        "id": "gmail-beta-1a125c291df7c490",
+        "source": "gmail",
+        "username": "@wafeeqa, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 5:21 AM PT",
+        "kind": "beta_tester",
+        "quote": "wafeeqa.ahmed@dal.ca (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @wafeeqa",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a125c291df7c490)."
+      },
+      {
+        "id": "gmail-beta-1a125cfafe2067be",
+        "source": "gmail",
+        "username": "@two, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 5:35 AM PT",
+        "kind": "beta_tester",
+        "quote": "9294866545 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @two",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a125cfafe2067be).",
+        "build": "38"
+      },
+      {
+        "id": "gmail-beta-1a125e0f2ec4fd43",
+        "source": "gmail",
+        "username": "@louis, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 5:54 AM PT",
+        "kind": "beta_tester",
+        "quote": "louislefeuvre07@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @louis",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a125e0f2ec4fd43)."
+      },
+      {
+        "id": "gmail-beta-1a125e12d38b132a",
+        "source": "gmail",
+        "username": "@louis, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 5:54 AM PT",
+        "kind": "beta_tester",
+        "quote": "louislefeuvre08@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @louis",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a125e0f2ec4fd43)."
+      },
+      {
+        "id": "gmail-beta-1a1261f6eadfea65",
+        "source": "gmail",
+        "username": "@amy_and_stuff, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 7:02 AM PT",
+        "kind": "beta_tester",
+        "quote": "sarah.krueger2010@icloud.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @amy_and_stuff",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1261f6eadfea65)."
+      },
+      {
+        "id": "gmail-beta-1a1265b78bfb1ac5",
+        "source": "gmail",
+        "username": "@ilcapooo, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 8:08 AM PT",
+        "kind": "beta_tester",
+        "quote": "nicocapo08@icloud.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @ilcapooo",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1265b78bfb1ac5)."
+      },
+      {
+        "id": "gmail-beta-1a12661cbe4c77c6",
+        "source": "gmail",
+        "username": "@rin, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 8:15 AM PT",
+        "kind": "beta_tester",
+        "quote": "omengone@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @rin",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12661cbe4c77c6).",
+        "build": "38"
+      },
+      {
+        "id": "gmail-beta-1a1268d786443d9a",
+        "source": "gmail",
+        "username": "@arad, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 9:02 AM PT",
+        "kind": "beta_tester",
+        "quote": "3012327222 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @arad",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1268d786443d9a).",
+        "build": "38"
+      },
+      {
+        "id": "gmail-beta-1a12691e1cde387c",
+        "source": "gmail",
+        "username": "@hassaan036, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 9:07 AM PT",
+        "kind": "beta_tester",
+        "quote": "hassaan.muhammad036@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @hassaan036",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12691e1cde387c)."
+      },
+      {
+        "id": "gmail-beta-1a1269b8becdc21e",
+        "source": "gmail",
+        "username": "@veeraj, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 9:18 AM PT",
+        "kind": "beta_tester",
+        "quote": "vjhaveri08@icloud.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @veeraj",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1269b8becdc21e)."
+      }
+    ],
+    "replyDrafts": [
+      {
+        "id": "tridha",
+        "to": "tridhajaiswal0308@gmail.com",
+        "subject": "Re: TestFlight beta feedback for Latent",
+        "threadId": "1a11f0791c340586",
+        "replyToMessageId": "1a11f0791c340586",
+        "theirMessage": "Heyy\nI don\u2019t know my when i entered my age on latent (15 year old) it deleted my acc saying its for 13 and above. I had a 3 week long streak as well. Please help me, i don\u2019t want to lose everything please\n\nI am a high schooler and this really means a lot to me. Please i have trust in you that you\u2019ll brung my account back. Please.",
+        "theirWhenPT": "Oct 8, 9:59 PM PT",
+        "body": "Hey Tridha, I'm so sorry this happened, that's a really rough way to lose a 3 week streak \ud83d\ude2d The age check removed accounts when the birthday came out under 13, so the wheel probably landed on the wrong year, and we've just changed it so that can't wipe an account anymore. [CHECK: whether you can or want to restore her account or streak; it was hard-deleted, so only promise what you can do] You're welcome to sign up again with your real birthday, and I'm here if anything else goes wrong!\n\nEddie",
+        "note": "Carried from Oct 9, still unanswered. #464 (merged Oct 9, in TestFlight 1.0.6 build 38) holds instead of deletes from now on, but it doesn't bring back her deleted account."
+      },
+      {
+        "id": "beta-batch",
+        "to": "shlok.pandya.2010@gmail.com, char.emmidi@gmail.com, alcarazphilanjin@gmail.com, raoankith26@gmail.com, brittanypcy@gmail.com, nazndahmaryam@gmail.com, juanluisdlhm@gmail.com, clynefinn26@gmail.com, rankysimmons@gmail.com, pluralbees@gmail.com, mnudmanov@gmail.com, lichloe110@gmail.com, ooannlin@gmail.com, zaahirat23@gmail.com, awomoduireoluwa@gmail.com, alina_kazmierski@hotmail.com, adityaballani@gmail.com, josephinefischer0921@gmail.com, geauid1100306@gmail.com, tjallingvanabbema@gmail.com, eyoceax@gmail.com, sveva.gnoni.03@gmail.com, emmchen@email.cz, aimarspyro@gmail.com, hornethornet123456@gmail.com, leraborysova2010@gmail.com, wafeeqa.ahmed@dal.ca, louislefeuvre07@gmail.com, sarah.krueger2010@icloud.com, nicocapo08@icloud.com, omengone@gmail.com, hassaan.muhammad036@gmail.com, vjhaveri08@icloud.com",
+        "subject": "staying a Latent beta tester",
+        "threadId": null,
+        "replyToMessageId": null,
+        "theirMessage": "33 automatic \u201cStay as a Beta Tester\u201d reports with an email (4 carried from Oct 8-9, 29 new).",
+        "theirWhenPT": "Oct 8 to Oct 10",
+        "body": "Hey @[username]! Thanks so much for choosing to stay a beta tester, it really means a lot. I'd love to hop on a quick call to hear what's working and what's not for you, would any of these work? [TIMES] I'll also add you to the TestFlight group so you get new builds first.\n\nEddie",
+        "recipients": [
+          {
+            "username": "shlokp",
+            "email": "shlok.pandya.2010@gmail.com",
+            "whenPT": "Oct 8, 2:39 PM PT",
+            "sourceReportThread": "1a11d74f583bc5be"
+          },
+          {
+            "username": "charanistired",
+            "email": "char.emmidi@gmail.com",
+            "whenPT": "Oct 8, 3:06 PM PT",
+            "sourceReportThread": "1a11d8e1bd2c06c2"
+          },
+          {
+            "username": "philan_jin",
+            "email": "alcarazphilanjin@gmail.com",
+            "whenPT": "Oct 9, 4:01 AM PT",
+            "sourceReportThread": "1a1205324c64c8ec"
+          },
+          {
+            "username": "ankithrao30",
+            "email": "raoankith26@gmail.com",
+            "whenPT": "Oct 9, 8:52 AM PT",
+            "sourceReportThread": "1a1215d83efc93a6"
+          },
+          {
+            "username": "brittany",
+            "email": "brittanypcy@gmail.com",
+            "whenPT": "Oct 9, 10:40 AM PT",
+            "sourceReportThread": "1a121c0d7874f465"
+          },
+          {
+            "username": "maryam",
+            "email": "nazndahmaryam@gmail.com",
+            "whenPT": "Oct 9, 11:26 AM PT",
+            "sourceReportThread": "1a121ea93bbaaf44"
+          },
+          {
+            "username": "juan",
+            "email": "juanluisdlhm@gmail.com",
+            "whenPT": "Oct 9, 11:36 AM PT",
+            "sourceReportThread": "1a121f3b9cc4323d"
+          },
+          {
+            "username": "finnclyne",
+            "email": "clynefinn26@gmail.com",
+            "whenPT": "Oct 9, 12:34 PM PT",
+            "sourceReportThread": "1a1222949809fafd"
+          },
+          {
+            "username": "rankysimmons8",
+            "email": "rankysimmons@gmail.com",
+            "whenPT": "Oct 9, 1:10 PM PT",
+            "sourceReportThread": "1a12249af3697bb4"
+          },
+          {
+            "username": "_b",
+            "email": "pluralbees@gmail.com",
+            "whenPT": "Oct 9, 2:43 PM PT",
+            "sourceReportThread": "1a1229ec2f1b137a"
+          },
+          {
+            "username": "dahumanme",
+            "email": "mnudmanov@gmail.com",
+            "whenPT": "Oct 9, 2:46 PM PT",
+            "sourceReportThread": "1a122a18acf6047f"
+          },
+          {
+            "username": "blah_blah",
+            "email": "lichloe110@gmail.com",
+            "whenPT": "Oct 9, 3:07 PM PT",
+            "sourceReportThread": "1a122b54d5ad072a"
+          },
+          {
+            "username": "wherearetheavocados",
+            "email": "ooannlin@gmail.com",
+            "whenPT": "Oct 9, 4:51 PM PT",
+            "sourceReportThread": "1a123147b2b27c7a"
+          },
+          {
+            "username": "zaahirat",
+            "email": "zaahirat23@gmail.com",
+            "whenPT": "Oct 9, 4:53 PM PT",
+            "sourceReportThread": "1a123160d569251c"
+          },
+          {
+            "username": "1emxnn",
+            "email": "awomoduireoluwa@gmail.com",
+            "whenPT": "Oct 9, 9:44 PM PT",
+            "sourceReportThread": "1a124202e86f5e81"
+          },
+          {
+            "username": "alinx_cc",
+            "email": "alina_kazmierski@hotmail.com",
+            "whenPT": "Oct 9, 10:10 PM PT",
+            "sourceReportThread": "1a1243890e334b2b"
+          },
+          {
+            "username": "itsadi_1301",
+            "email": "adityaballani@gmail.com",
+            "whenPT": "Oct 9, 10:40 PM PT",
+            "sourceReportThread": "1a12453bf81be8b9"
+          },
+          {
+            "username": "phinetic19",
+            "email": "josephinefischer0921@gmail.com",
+            "whenPT": "Oct 10, 12:33 AM PT",
+            "sourceReportThread": "1a124bac6220f15d"
+          },
+          {
+            "username": "1ace",
+            "email": "geauid1100306@gmail.com",
+            "whenPT": "Oct 10, 12:37 AM PT",
+            "sourceReportThread": "1a124bf2ec7dbd96"
+          },
+          {
+            "username": "charlie",
+            "email": "tjallingvanabbema@gmail.com",
+            "whenPT": "Oct 10, 1:50 AM PT",
+            "sourceReportThread": "1a12501af662c48e"
+          },
+          {
+            "username": "eyoceax",
+            "email": "eyoceax@gmail.com",
+            "whenPT": "Oct 10, 1:51 AM PT",
+            "sourceReportThread": "1a12502e9b4e0684"
+          },
+          {
+            "username": "svevux",
+            "email": "sveva.gnoni.03@gmail.com",
+            "whenPT": "Oct 10, 1:52 AM PT",
+            "sourceReportThread": "1a125039eb7e79f6"
+          },
+          {
+            "username": "qt3ms",
+            "email": "emmchen@email.cz",
+            "whenPT": "Oct 10, 2:01 AM PT",
+            "sourceReportThread": "1a1250bd645b7f05"
+          },
+          {
+            "username": "aimarspyro",
+            "email": "aimarspyro@gmail.com",
+            "whenPT": "Oct 10, 2:07 AM PT",
+            "sourceReportThread": "1a12511787c29e5d"
+          },
+          {
+            "username": "makulit",
+            "email": "hornethornet123456@gmail.com",
+            "whenPT": "Oct 10, 3:29 AM PT",
+            "sourceReportThread": "1a1255cc3a4f2f0b"
+          },
+          {
+            "username": "lerahshzuzuisje",
+            "email": "leraborysova2010@gmail.com",
+            "whenPT": "Oct 10, 5:13 AM PT",
+            "sourceReportThread": "1a125bba9148ee07"
+          },
+          {
+            "username": "wafeeqa",
+            "email": "wafeeqa.ahmed@dal.ca",
+            "whenPT": "Oct 10, 5:21 AM PT",
+            "sourceReportThread": "1a125c291df7c490"
+          },
+          {
+            "username": "louis",
+            "email": "louislefeuvre07@gmail.com",
+            "whenPT": "Oct 10, 5:54 AM PT",
+            "sourceReportThread": "1a125e0f2ec4fd43"
+          },
+          {
+            "username": "amy_and_stuff",
+            "email": "sarah.krueger2010@icloud.com",
+            "whenPT": "Oct 10, 7:02 AM PT",
+            "sourceReportThread": "1a1261f6eadfea65"
+          },
+          {
+            "username": "ilcapooo",
+            "email": "nicocapo08@icloud.com",
+            "whenPT": "Oct 10, 8:08 AM PT",
+            "sourceReportThread": "1a1265b78bfb1ac5"
+          },
+          {
+            "username": "rin",
+            "email": "omengone@gmail.com",
+            "whenPT": "Oct 10, 8:15 AM PT",
+            "sourceReportThread": "1a12661cbe4c77c6"
+          },
+          {
+            "username": "hassaan036",
+            "email": "hassaan.muhammad036@gmail.com",
+            "whenPT": "Oct 10, 9:07 AM PT",
+            "sourceReportThread": "1a12691e1cde387c"
+          },
+          {
+            "username": "veeraj",
+            "email": "vjhaveri08@icloud.com",
+            "whenPT": "Oct 10, 9:18 AM PT",
+            "sourceReportThread": "1a1269b8becdc21e"
+          }
+        ],
+        "note": "One template, send as separate new emails (swap in each username). These reports also go to Malcolm, and his booking calendar shows tester calls (Maahidul Islam Sat 11 AM, Celine Chang Sat 11:30 AM, Ethan Mowry Tue). [CHECK: with Malcolm which of these he's already contacted so nobody gets two emails.]"
+      }
+    ],
+    "linearIssue": null,
+    "linearNote": "No PRs from the dig today, so no Linear issue."
+  },
+  "2026-10-11": {
+    "date": "2026-10-11",
+    "title": "Latent daily review \u00b7 Oct 11",
+    "generatedAt": "2026-10-12T16:44:35.078487+00:00",
+    "tldr": [
+      "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue.",
+      "27 more people chose \u201cStay as a Beta Tester\u201d since yesterday's dig (18 left an email, 9 only a phone number). None of the beta stayers or tridha have a reply from you yet.",
+      "Two new email replies: Radhya wrote back that she's logged 15+ hours in 2 days and shared Latent with a small study influencer, and mbuteler answered the launch email with \u201cToo late Eddie, dropped college alr\ud83e\udd72\u201d. Drafts below.",
+      "Merged overnight: your #469 (one bad email address no longer breaks the whole batch of 100) and Malcolm's #470 (PostHog only sends profile details when they change). Malcolm's #463 is still open.",
+      "In-app: nothing new. Survey unchanged (39/25/2 of 66). Sentry: 5 new one-person freezes/crashes (APPLE-IOS-6K, 6M, 6N, 6P, 6Q). PostHog: group loading failures went up to 186 from 45 people, but they're almost all network errors (no clear code bug). Discord wasn't checked."
+    ],
+    "plainTldr": [
+      "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue.",
+      "27 more people chose \u201cStay as a Beta Tester\u201d since yesterday's dig (18 left an email, 9 only a phone number). None of the beta stayers or tridha have a reply from you yet.",
+      "Two new email replies: Radhya wrote back that she's logged 15+ hours in 2 days and shared Latent with a small study influencer, and mbuteler answered the launch email with \u201cToo late Eddie, dropped college alr\ud83e\udd72\u201d. Drafts below.",
+      "Merged overnight: your #469 (one bad email address no longer breaks the whole batch of 100) and Malcolm's #470 (PostHog only sends profile details when they change). Malcolm's #463 is still open.",
+      "In-app: nothing new. Survey unchanged (39/25/2 of 66). Sentry: 5 new one-person freezes/crashes (APPLE-IOS-6K, 6M, 6N, 6P, 6Q). PostHog: group loading failures went up to 186 from 45 people, but they're almost all network errors (no clear code bug). Discord wasn't checked."
+    ],
+    "stats": {
+      "newInApp": 0,
+      "newDiscord": null,
+      "newGmail": 29,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-6K",
+        "APPLE-IOS-6M",
+        "APPLE-IOS-6N",
+        "APPLE-IOS-6P",
+        "APPLE-IOS-6Q"
+      ],
+      "rawQuotes": 29
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "agentsLaunched": [],
+      "note": "No Cloud Agents launched: nothing new was a clear, unfixed code bug."
+    },
+    "prStatus": {
+      "waiting": [],
+      "openedToday": [],
+      "mergedOvernight": [
+        {
+          "pr": 470,
+          "url": "https://github.com/eddie-the-lou/latent/pull/470",
+          "title": "PostHog: send person properties only when they change",
+          "by": "Malcolm \u00b7 Oct 10, 1:14 PM PT"
+        },
+        {
+          "pr": 469,
+          "url": "https://github.com/eddie-the-lou/latent/pull/469",
+          "title": "A malformed address no longer takes out its 99 neighbours either (TRY-319)",
+          "by": "you \u00b7 Oct 10, 11:13 AM PT"
+        }
+      ],
+      "stillOnYou": [
+        {
+          "id": "tridha",
+          "title": "Reply to tridha (tridhajaiswal0308@gmail.com): age check deleted her account. Draft below (carried since Oct 9)."
+        },
+        {
+          "id": "radhya",
+          "title": "Reply to Radhya (loving it, shared with a study influencer) and mbuteler (dropped college). Drafts below."
+        },
+        {
+          "id": "beta",
+          "title": "Beta stayers: 51 with email (template below) and 28 phone only. Check with Malcolm who he's already booked."
+        },
+        {
+          "id": "pr463",
+          "title": "Malcolm's #463 (review notes on #462) is still open.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/463"
+        },
+        {
+          "id": "linear",
+          "title": "Carried: TRY-118 (Urgent), TRY-215, TRY-197."
+        }
+      ],
+      "otherOpen": [
+        {
+          "pr": 463,
+          "url": "https://github.com/eddie-the-lou/latent/pull/463",
+          "title": "Fix review notes on #462 (Malcolm)"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "replies",
+        "title": "Reply to tridha, Radhya, mbuteler; reach out to beta stayers",
+        "status": "waiting"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done"
+      },
+      {
+        "id": "linear",
+        "title": "No Linear issue: no PRs today",
+        "status": "skipped"
+      },
+      {
+        "id": "discord",
+        "title": "Discord wasn't checked",
+        "status": "skipped"
+      },
+      {
+        "id": "agents",
+        "title": "No Cloud Agents launched",
+        "status": "done"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "group-action-failed",
+        "title": "Group screens failing to load (PostHog group_action_failed)",
+        "severity": "medium",
+        "people": 45,
+        "detail": "186 events from 45 people in 24h (up from 98/36). Almost all are network errors or cancelled loads (group stats 88, invites 62, my groups 32); 2 people hit \u201cpermission denied for table group_invites\u201d. No single clear code bug to hand an agent."
+      },
+      {
+        "id": "uploads",
+        "title": "A few saves/uploads failing",
+        "severity": "low",
+        "people": 6,
+        "detail": "session_save_failed 15 (6 people, all offline/timeout/TLS errors), clip_upload_failed 11 (5), attachment_upload_failed 10 (3), invite_check_failed 26 (8). launch_beta_contact_failed 10 from 1 person."
+      },
+      {
+        "id": "sentry-singles",
+        "title": "5 new one-person freezes/crashes (APPLE-IOS-6K, 6M, 6N, 6P, 6Q)",
+        "severity": "low",
+        "people": 5,
+        "detail": "6M is a crash; 6Q froze in the capture screen for ~10s. Big ones continue: APPLE-IOS-35 98 events/53 people, APPLE-IOS-7 88/45 (both last seen 2h ago)."
+      }
+    ],
+    "features": [
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 27,
+        "detail": "27 new \u201cStay as a Beta Tester\u201d picks since yesterday's dig."
+      },
+      {
+        "id": "praise",
+        "title": "What Radhya loves",
+        "count": 1,
+        "detail": "Doesn't drain battery, live clock on the video, keeps all study stats."
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 0,
+        "note": "No new rows in public.feedback since the Oct 10 dig."
+      },
+      "discord": {
+        "new": null,
+        "note": "Discord wasn't checked today."
+      },
+      "gmail": {
+        "new": 29,
+        "note": "27 Stay as a Beta Tester reports, plus replies from Radhya and mbuteler. You sent no tester replies since the last dig. DMARC, billing, housing and booking mail skipped. No video attachments, no PostHog alert mail."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "note": "All three tabs identical to Oct 10 (67/7/9 rows incl. headers)."
+      },
+      "sentry": {
+        "new": [
+          "APPLE-IOS-6K",
+          "APPLE-IOS-6M",
+          "APPLE-IOS-6N",
+          "APPLE-IOS-6P",
+          "APPLE-IOS-6Q"
+        ],
+        "note": "5 new single-person issues. APPLE-IOS-35: 98/53. APPLE-IOS-7: 88/45. APPLE-IOS-W (fatal hang): 13/10."
+      },
+      "posthog": {
+        "note": "Last 24h: 558 rage clicks (190 people), group_action_failed 186 (45), invite_check_failed 26 (8), session_save_failed 15 (6), clip_upload_failed 11 (5), attachment_upload_failed 10 (3), launch_beta_contact_failed 10 (1), app_blocking_authorization_failed 8 (5), sign_in_failed 7 (3), friend_request_failed 7 (3). No PostHog alert emails."
+      },
+      "github": {
+        "note": "Merged since the dig: #469, #470. Still open: #463 (Malcolm)."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "gmail-mbuteler",
+        "source": "gmail",
+        "username": "mbuteler@ieee.org",
+        "whenPT": "Oct 10, 11:12 AM PT",
+        "kind": "reply",
+        "quote": "Too late Eddie, dropped college alr\ud83e\udd72",
+        "note": "Reply to the App Store launch email (thread 1a1270495def2f88)."
+      },
+      {
+        "id": "gmail-radhya",
+        "source": "gmail",
+        "username": "Radhya (radhyas2010@gmail.com)",
+        "whenPT": "Oct 11, 7:14 AM PT",
+        "kind": "praise",
+        "quote": "Hi Eddie!\n\nThank you for the reply. I have been using Latent for 2 days now, and I\nhave already logged over 15 hours! I am loving the app. As a user, I love\nhow the app doesn't drain my battery, lets me add a live clock to my video\nat the end, and keeps all my study stats. I have even shared the app with a\ngirl who graduated from my high school and is now a small study influencer.\nI hope the app keeps doing well!",
+        "note": "Reply to your Oct 8 privacy answer (thread 1a119016d92c2469)."
+      },
+      {
+        "id": "gmail-beta-1a1269c1ceffb994",
+        "source": "gmail",
+        "username": "@maxwell18597, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 9:18 AM PT",
+        "kind": "beta_tester",
+        "quote": "maxwell18597@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @maxwell18597",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1269c1ceffb994)."
+      },
+      {
+        "id": "gmail-beta-1a12743fc5213b16",
+        "source": "gmail",
+        "username": "@buns, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 12:22 PM PT",
+        "kind": "beta_tester",
+        "quote": "arjun_t@icloud.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @buns",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12743fc5213b16)."
+      },
+      {
+        "id": "gmail-beta-1a1275965c7dffe5",
+        "source": "gmail",
+        "username": "@slade_s, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 12:45 PM PT",
+        "kind": "beta_tester",
+        "quote": "4802902281 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @slade_s",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1275965c7dffe5)."
+      },
+      {
+        "id": "gmail-beta-1a1275c6b20ae3b5",
+        "source": "gmail",
+        "username": "@nomko1025, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 12:48 PM PT",
+        "kind": "beta_tester",
+        "quote": "nomko1025@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @nomko1025",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1275c6b20ae3b5)."
+      },
+      {
+        "id": "gmail-beta-1a127730f1465883",
+        "source": "gmail",
+        "username": "@andreichetty3, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 1:13 PM PT",
+        "kind": "beta_tester",
+        "quote": "07756136284 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @andreichetty3",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a127730f1465883)."
+      },
+      {
+        "id": "gmail-beta-1a1284d69095912a",
+        "source": "gmail",
+        "username": "@krabbykai, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 5:12 PM PT",
+        "kind": "beta_tester",
+        "quote": "5628792412 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @krabbykai",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1284d69095912a)."
+      },
+      {
+        "id": "gmail-beta-1a12851ce3270461",
+        "source": "gmail",
+        "username": "@navvy, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 5:16 PM PT",
+        "kind": "beta_tester",
+        "quote": "arnxv.blue@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @navvy",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12851b8a40ab32)."
+      },
+      {
+        "id": "gmail-beta-1a12877b4a0927dc",
+        "source": "gmail",
+        "username": "@lucianaaad_, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 5:58 PM PT",
+        "kind": "beta_tester",
+        "quote": "lucianadelacruzg@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @lucianaaad_",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12877b4a0927dc)."
+      },
+      {
+        "id": "gmail-beta-1a1289656babe476",
+        "source": "gmail",
+        "username": "@nshaveta09, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 6:31 PM PT",
+        "kind": "beta_tester",
+        "quote": "6692939297 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @nshaveta09",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1289656babe476)."
+      },
+      {
+        "id": "gmail-beta-1a128ff011056d1c",
+        "source": "gmail",
+        "username": "@batuadigozel, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 8:26 PM PT",
+        "kind": "beta_tester",
+        "quote": "7738447785 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @batuadigozel",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a128ff011056d1c)."
+      },
+      {
+        "id": "gmail-beta-1a1297b39cdddaf0",
+        "source": "gmail",
+        "username": "@focus, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 10:41 PM PT",
+        "kind": "beta_tester",
+        "quote": "3478325011 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @focus",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1297b39cdddaf0)."
+      },
+      {
+        "id": "gmail-beta-1a1298fd231cced3",
+        "source": "gmail",
+        "username": "@audreyisasleep, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 11:04 PM PT",
+        "kind": "beta_tester",
+        "quote": "ojasvirathi.a@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @audreyisasleep",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a1298fd231cced3)."
+      },
+      {
+        "id": "gmail-beta-1a129977f8ddc5aa",
+        "source": "gmail",
+        "username": "@vince, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 11:12 PM PT",
+        "kind": "beta_tester",
+        "quote": "gelbertvincent@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @vince",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a129977f8ddc5aa)."
+      },
+      {
+        "id": "gmail-beta-1a129b9f0f54ce83",
+        "source": "gmail",
+        "username": "@tracksmyman, via reports@mail.trylatent.co",
+        "whenPT": "Oct 10, 11:50 PM PT",
+        "kind": "beta_tester",
+        "quote": "tracksmyman@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @tracksmyman",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a129b9f0f54ce83)."
+      },
+      {
+        "id": "gmail-beta-1a129cdf3caffb91",
+        "source": "gmail",
+        "username": "@tnymck, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 12:12 AM PT",
+        "kind": "beta_tester",
+        "quote": "mertalicitpis@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @tnymck",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a129cdf3caffb91)."
+      },
+      {
+        "id": "gmail-beta-1a129ddde5557fe4",
+        "source": "gmail",
+        "username": "@nateyog, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 12:29 AM PT",
+        "kind": "beta_tester",
+        "quote": "9294738363 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @nateyog",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a129ddde5557fe4)."
+      },
+      {
+        "id": "gmail-beta-1a12a1363cfeb69a",
+        "source": "gmail",
+        "username": "@jayjay67, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 1:27 AM PT",
+        "kind": "beta_tester",
+        "quote": "ubaidahali2014@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @jayjay67",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12a1363cfeb69a)."
+      },
+      {
+        "id": "gmail-beta-1a12a579e1df2cc7",
+        "source": "gmail",
+        "username": "@suki, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 2:42 AM PT",
+        "kind": "beta_tester",
+        "quote": "msukithan24@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @suki",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12a579e1df2cc7)."
+      },
+      {
+        "id": "gmail-beta-1a12a6504d171bad",
+        "source": "gmail",
+        "username": "@zozo, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 2:57 AM PT",
+        "kind": "beta_tester",
+        "quote": "zoe@zoemartini.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @zozo",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12a6504d171bad)."
+      },
+      {
+        "id": "gmail-beta-1a12abeef905721a",
+        "source": "gmail",
+        "username": "@ethan, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 4:35 AM PT",
+        "kind": "beta_tester",
+        "quote": "6082051269 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @ethan",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12abeef905721a)."
+      },
+      {
+        "id": "gmail-beta-1a12adc401e9b5b6",
+        "source": "gmail",
+        "username": "@one, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 5:07 AM PT",
+        "kind": "beta_tester",
+        "quote": "sheppardcall0@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @one",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12adc401e9b5b6)."
+      },
+      {
+        "id": "gmail-beta-1a12b123d4bafef6",
+        "source": "gmail",
+        "username": "@theoodoreajm, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 6:06 AM PT",
+        "kind": "beta_tester",
+        "quote": "theodoreajm@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @theoodoreajm",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12b123d4bafef6)."
+      },
+      {
+        "id": "gmail-beta-1a12b1df73229246",
+        "source": "gmail",
+        "username": "@melvena, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 6:19 AM PT",
+        "kind": "beta_tester",
+        "quote": "mathewmelvena@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @melvena",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12b1ddc45a8c15)."
+      },
+      {
+        "id": "gmail-beta-1a12b8ad489566e4",
+        "source": "gmail",
+        "username": "@chopper, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 8:17 AM PT",
+        "kind": "beta_tester",
+        "quote": "luisdg2008@gmail.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @chopper",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12b8ad489566e4)."
+      },
+      {
+        "id": "gmail-beta-1a12baac7f4e59c2",
+        "source": "gmail",
+        "username": "@ellie, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 8:52 AM PT",
+        "kind": "beta_tester",
+        "quote": "5856221713 (phone)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @ellie",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12baac7f4e59c2)."
+      },
+      {
+        "id": "gmail-beta-1a12bb0a9b99fa8e",
+        "source": "gmail",
+        "username": "@danielw, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 8:59 AM PT",
+        "kind": "beta_tester",
+        "quote": "daniel.weir2@mail.dcu.ie (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @danielw",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12bb0a9b99fa8e)."
+      },
+      {
+        "id": "gmail-beta-1a12bb6e56d1b61f",
+        "source": "gmail",
+        "username": "@mimo, via reports@mail.trylatent.co",
+        "whenPT": "Oct 11, 9:06 AM PT",
+        "kind": "beta_tester",
+        "quote": "mime.mo@icloud.com (email)\n\nThey chose \"Stay as a Beta Tester\" on the App Store launch screen: reach out for a feedback call and add them to the external TestFlight group.\n\nFrom: @mimo",
+        "note": "Automatic \u201cStay as a Beta Tester\u201d report (thread 1a12bb6e56d1b61f)."
+      }
+    ],
+    "replyDrafts": [
+      {
+        "id": "tridha",
+        "to": "tridhajaiswal0308@gmail.com",
+        "subject": "Re: TestFlight beta feedback for Latent",
+        "threadId": "1a11f0791c340586",
+        "replyToMessageId": "1a11f0791c340586",
+        "theirMessage": "Heyy\nI don\u2019t know my when i entered my age on latent (15 year old) it deleted my acc saying its for 13 and above. I had a 3 week long streak as well. Please help me, i don\u2019t want to lose everything please\n\nI am a high schooler and this really means a lot to me. Please i have trust in you that you\u2019ll brung my account back. Please.",
+        "theirWhenPT": "Oct 8, 9:59 PM PT",
+        "body": "Hey Tridha, I'm so sorry this happened, that's a really rough way to lose a 3 week streak \ud83d\ude2d The age check removed accounts when the birthday came out under 13, so the wheel probably landed on the wrong year, and we've just changed it so that can't wipe an account anymore. [CHECK: whether you can or want to restore her account or streak; it was hard-deleted, so only promise what you can do] You're welcome to sign up again with your real birthday, and I'm here if anything else goes wrong!\n\nEddie",
+        "note": "Carried since Oct 9, still unanswered. #464 stops this happening again but doesn't bring back her deleted account."
+      },
+      {
+        "id": "mbuteler",
+        "to": "mbuteler@ieee.org",
+        "subject": "Re: lock in twin",
+        "threadId": "1a1270495def2f88",
+        "replyToMessageId": "1a1270495def2f88",
+        "theirMessage": "Too late Eddie, dropped college alr\ud83e\udd72",
+        "theirWhenPT": "Oct 10, 11:12 AM PT",
+        "body": "Haha no way, respect \ud83d\ude02 Latent works for any kind of deep work, not just studying, so it might still be useful for whatever you're building now. Your invite link from the email still works if you want to try it, and I'd love to hear what you think!\n\nEddie",
+        "note": "New. Reply to the App Store launch email."
+      },
+      {
+        "id": "radhya",
+        "to": "radhyas2010@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a119016d92c2469",
+        "replyToMessageId": "1a12b507319b3435",
+        "theirMessage": "Hi Eddie!\n\nThank you for the reply. I have been using Latent for 2 days now, and I\nhave already logged over 15 hours! I am loving the app. As a user, I love\nhow the app doesn't drain my battery, lets me add a live clock to my video\nat the end, and keeps all my study stats. I have even shared the app with a\ngirl who graduated from my high school and is now a small study influencer.\nI hope the app keeps doing well!",
+        "theirWhenPT": "Oct 11, 7:14 AM PT",
+        "body": "Radhya, 15 hours in 2 days is insane, I'm so happy Latent is helping you lock in! Thank you for sharing it with your friend too, that genuinely means a lot for a small team like us. If you ever have ideas or something feels off, just reply here, I read every one.\n\nEddie",
+        "note": "New. Follow-up to your Oct 8 privacy answer. [CHECK: if you want to ask for an intro to the study influencer, add a line.]"
+      },
+      {
+        "id": "beta-batch",
+        "to": "shlok.pandya.2010@gmail.com, char.emmidi@gmail.com, alcarazphilanjin@gmail.com, raoankith26@gmail.com, brittanypcy@gmail.com, nazndahmaryam@gmail.com, juanluisdlhm@gmail.com, clynefinn26@gmail.com, rankysimmons@gmail.com, pluralbees@gmail.com, mnudmanov@gmail.com, lichloe110@gmail.com, ooannlin@gmail.com, zaahirat23@gmail.com, awomoduireoluwa@gmail.com, alina_kazmierski@hotmail.com, adityaballani@gmail.com, josephinefischer0921@gmail.com, geauid1100306@gmail.com, tjallingvanabbema@gmail.com, eyoceax@gmail.com, sveva.gnoni.03@gmail.com, emmchen@email.cz, aimarspyro@gmail.com, hornethornet123456@gmail.com, leraborysova2010@gmail.com, wafeeqa.ahmed@dal.ca, louislefeuvre07@gmail.com, sarah.krueger2010@icloud.com, nicocapo08@icloud.com, omengone@gmail.com, hassaan.muhammad036@gmail.com, vjhaveri08@icloud.com, maxwell18597@gmail.com, arjun_t@icloud.com, nomko1025@gmail.com, arnxv.blue@gmail.com, lucianadelacruzg@gmail.com, ojasvirathi.a@gmail.com, gelbertvincent@gmail.com, tracksmyman@gmail.com, mertalicitpis@gmail.com, ubaidahali2014@gmail.com, msukithan24@gmail.com, zoe@zoemartini.com, sheppardcall0@gmail.com, theodoreajm@gmail.com, mathewmelvena@gmail.com, luisdg2008@gmail.com, daniel.weir2@mail.dcu.ie, mime.mo@icloud.com",
+        "subject": "staying a Latent beta tester",
+        "threadId": null,
+        "replyToMessageId": null,
+        "theirMessage": "51 automatic \u201cStay as a Beta Tester\u201d reports with an email (33 carried from Oct 8-10, 18 new).",
+        "theirWhenPT": "Oct 8 to Oct 11",
+        "body": "Hey @[username]! Thanks so much for choosing to stay a beta tester, it really means a lot. I'd love to hop on a quick call to hear what's working and what's not for you, would any of these work? [TIMES] I'll also add you to the TestFlight group so you get new builds first.\n\nEddie",
+        "recipients": [
+          {
+            "username": "shlokp",
+            "email": "shlok.pandya.2010@gmail.com",
+            "whenPT": "Oct 8, 2:39 PM PT",
+            "sourceReportThread": "1a11d74f583bc5be"
+          },
+          {
+            "username": "charanistired",
+            "email": "char.emmidi@gmail.com",
+            "whenPT": "Oct 8, 3:06 PM PT",
+            "sourceReportThread": "1a11d8e1bd2c06c2"
+          },
+          {
+            "username": "philan_jin",
+            "email": "alcarazphilanjin@gmail.com",
+            "whenPT": "Oct 9, 4:01 AM PT",
+            "sourceReportThread": "1a1205324c64c8ec"
+          },
+          {
+            "username": "ankithrao30",
+            "email": "raoankith26@gmail.com",
+            "whenPT": "Oct 9, 8:52 AM PT",
+            "sourceReportThread": "1a1215d83efc93a6"
+          },
+          {
+            "username": "brittany",
+            "email": "brittanypcy@gmail.com",
+            "whenPT": "Oct 9, 10:40 AM PT",
+            "sourceReportThread": "1a121c0d7874f465"
+          },
+          {
+            "username": "maryam",
+            "email": "nazndahmaryam@gmail.com",
+            "whenPT": "Oct 9, 11:26 AM PT",
+            "sourceReportThread": "1a121ea93bbaaf44"
+          },
+          {
+            "username": "juan",
+            "email": "juanluisdlhm@gmail.com",
+            "whenPT": "Oct 9, 11:36 AM PT",
+            "sourceReportThread": "1a121f3b9cc4323d"
+          },
+          {
+            "username": "finnclyne",
+            "email": "clynefinn26@gmail.com",
+            "whenPT": "Oct 9, 12:34 PM PT",
+            "sourceReportThread": "1a1222949809fafd"
+          },
+          {
+            "username": "rankysimmons8",
+            "email": "rankysimmons@gmail.com",
+            "whenPT": "Oct 9, 1:10 PM PT",
+            "sourceReportThread": "1a12249af3697bb4"
+          },
+          {
+            "username": "_b",
+            "email": "pluralbees@gmail.com",
+            "whenPT": "Oct 9, 2:43 PM PT",
+            "sourceReportThread": "1a1229ec2f1b137a"
+          },
+          {
+            "username": "dahumanme",
+            "email": "mnudmanov@gmail.com",
+            "whenPT": "Oct 9, 2:46 PM PT",
+            "sourceReportThread": "1a122a18acf6047f"
+          },
+          {
+            "username": "blah_blah",
+            "email": "lichloe110@gmail.com",
+            "whenPT": "Oct 9, 3:07 PM PT",
+            "sourceReportThread": "1a122b54d5ad072a"
+          },
+          {
+            "username": "wherearetheavocados",
+            "email": "ooannlin@gmail.com",
+            "whenPT": "Oct 9, 4:51 PM PT",
+            "sourceReportThread": "1a123147b2b27c7a"
+          },
+          {
+            "username": "zaahirat",
+            "email": "zaahirat23@gmail.com",
+            "whenPT": "Oct 9, 4:53 PM PT",
+            "sourceReportThread": "1a123160d569251c"
+          },
+          {
+            "username": "1emxnn",
+            "email": "awomoduireoluwa@gmail.com",
+            "whenPT": "Oct 9, 9:44 PM PT",
+            "sourceReportThread": "1a124202e86f5e81"
+          },
+          {
+            "username": "alinx_cc",
+            "email": "alina_kazmierski@hotmail.com",
+            "whenPT": "Oct 9, 10:10 PM PT",
+            "sourceReportThread": "1a1243890e334b2b"
+          },
+          {
+            "username": "itsadi_1301",
+            "email": "adityaballani@gmail.com",
+            "whenPT": "Oct 9, 10:40 PM PT",
+            "sourceReportThread": "1a12453bf81be8b9"
+          },
+          {
+            "username": "phinetic19",
+            "email": "josephinefischer0921@gmail.com",
+            "whenPT": "Oct 10, 12:33 AM PT",
+            "sourceReportThread": "1a124bac6220f15d"
+          },
+          {
+            "username": "1ace",
+            "email": "geauid1100306@gmail.com",
+            "whenPT": "Oct 10, 12:37 AM PT",
+            "sourceReportThread": "1a124bf2ec7dbd96"
+          },
+          {
+            "username": "charlie",
+            "email": "tjallingvanabbema@gmail.com",
+            "whenPT": "Oct 10, 1:50 AM PT",
+            "sourceReportThread": "1a12501af662c48e"
+          },
+          {
+            "username": "eyoceax",
+            "email": "eyoceax@gmail.com",
+            "whenPT": "Oct 10, 1:51 AM PT",
+            "sourceReportThread": "1a12502e9b4e0684"
+          },
+          {
+            "username": "svevux",
+            "email": "sveva.gnoni.03@gmail.com",
+            "whenPT": "Oct 10, 1:52 AM PT",
+            "sourceReportThread": "1a125039eb7e79f6"
+          },
+          {
+            "username": "qt3ms",
+            "email": "emmchen@email.cz",
+            "whenPT": "Oct 10, 2:01 AM PT",
+            "sourceReportThread": "1a1250bd645b7f05"
+          },
+          {
+            "username": "aimarspyro",
+            "email": "aimarspyro@gmail.com",
+            "whenPT": "Oct 10, 2:07 AM PT",
+            "sourceReportThread": "1a12511787c29e5d"
+          },
+          {
+            "username": "makulit",
+            "email": "hornethornet123456@gmail.com",
+            "whenPT": "Oct 10, 3:29 AM PT",
+            "sourceReportThread": "1a1255cc3a4f2f0b"
+          },
+          {
+            "username": "lerahshzuzuisje",
+            "email": "leraborysova2010@gmail.com",
+            "whenPT": "Oct 10, 5:13 AM PT",
+            "sourceReportThread": "1a125bba9148ee07"
+          },
+          {
+            "username": "wafeeqa",
+            "email": "wafeeqa.ahmed@dal.ca",
+            "whenPT": "Oct 10, 5:21 AM PT",
+            "sourceReportThread": "1a125c291df7c490"
+          },
+          {
+            "username": "louis",
+            "email": "louislefeuvre07@gmail.com",
+            "whenPT": "Oct 10, 5:54 AM PT",
+            "sourceReportThread": "1a125e0f2ec4fd43"
+          },
+          {
+            "username": "amy_and_stuff",
+            "email": "sarah.krueger2010@icloud.com",
+            "whenPT": "Oct 10, 7:02 AM PT",
+            "sourceReportThread": "1a1261f6eadfea65"
+          },
+          {
+            "username": "ilcapooo",
+            "email": "nicocapo08@icloud.com",
+            "whenPT": "Oct 10, 8:08 AM PT",
+            "sourceReportThread": "1a1265b78bfb1ac5"
+          },
+          {
+            "username": "rin",
+            "email": "omengone@gmail.com",
+            "whenPT": "Oct 10, 8:15 AM PT",
+            "sourceReportThread": "1a12661cbe4c77c6"
+          },
+          {
+            "username": "hassaan036",
+            "email": "hassaan.muhammad036@gmail.com",
+            "whenPT": "Oct 10, 9:07 AM PT",
+            "sourceReportThread": "1a12691e1cde387c"
+          },
+          {
+            "username": "veeraj",
+            "email": "vjhaveri08@icloud.com",
+            "whenPT": "Oct 10, 9:18 AM PT",
+            "sourceReportThread": "1a1269b8becdc21e"
+          },
+          {
+            "username": "maxwell18597",
+            "email": "maxwell18597@gmail.com",
+            "whenPT": "Oct 10, 9:18 AM PT",
+            "sourceReportThread": "1a1269c1ceffb994"
+          },
+          {
+            "username": "buns",
+            "email": "arjun_t@icloud.com",
+            "whenPT": "Oct 10, 12:22 PM PT",
+            "sourceReportThread": "1a12743fc5213b16"
+          },
+          {
+            "username": "nomko1025",
+            "email": "nomko1025@gmail.com",
+            "whenPT": "Oct 10, 12:48 PM PT",
+            "sourceReportThread": "1a1275c6b20ae3b5"
+          },
+          {
+            "username": "navvy",
+            "email": "arnxv.blue@gmail.com",
+            "whenPT": "Oct 10, 5:16 PM PT",
+            "sourceReportThread": "1a12851b8a40ab32"
+          },
+          {
+            "username": "lucianaaad_",
+            "email": "lucianadelacruzg@gmail.com",
+            "whenPT": "Oct 10, 5:58 PM PT",
+            "sourceReportThread": "1a12877b4a0927dc"
+          },
+          {
+            "username": "audreyisasleep",
+            "email": "ojasvirathi.a@gmail.com",
+            "whenPT": "Oct 10, 11:04 PM PT",
+            "sourceReportThread": "1a1298fd231cced3"
+          },
+          {
+            "username": "vince",
+            "email": "gelbertvincent@gmail.com",
+            "whenPT": "Oct 10, 11:12 PM PT",
+            "sourceReportThread": "1a129977f8ddc5aa"
+          },
+          {
+            "username": "tracksmyman",
+            "email": "tracksmyman@gmail.com",
+            "whenPT": "Oct 10, 11:50 PM PT",
+            "sourceReportThread": "1a129b9f0f54ce83"
+          },
+          {
+            "username": "tnymck",
+            "email": "mertalicitpis@gmail.com",
+            "whenPT": "Oct 11, 12:12 AM PT",
+            "sourceReportThread": "1a129cdf3caffb91"
+          },
+          {
+            "username": "jayjay67",
+            "email": "ubaidahali2014@gmail.com",
+            "whenPT": "Oct 11, 1:27 AM PT",
+            "sourceReportThread": "1a12a1363cfeb69a"
+          },
+          {
+            "username": "suki",
+            "email": "msukithan24@gmail.com",
+            "whenPT": "Oct 11, 2:42 AM PT",
+            "sourceReportThread": "1a12a579e1df2cc7"
+          },
+          {
+            "username": "zozo",
+            "email": "zoe@zoemartini.com",
+            "whenPT": "Oct 11, 2:57 AM PT",
+            "sourceReportThread": "1a12a6504d171bad"
+          },
+          {
+            "username": "one",
+            "email": "sheppardcall0@gmail.com",
+            "whenPT": "Oct 11, 5:07 AM PT",
+            "sourceReportThread": "1a12adc401e9b5b6"
+          },
+          {
+            "username": "theoodoreajm",
+            "email": "theodoreajm@gmail.com",
+            "whenPT": "Oct 11, 6:06 AM PT",
+            "sourceReportThread": "1a12b123d4bafef6"
+          },
+          {
+            "username": "melvena",
+            "email": "mathewmelvena@gmail.com",
+            "whenPT": "Oct 11, 6:19 AM PT",
+            "sourceReportThread": "1a12b1ddc45a8c15"
+          },
+          {
+            "username": "chopper",
+            "email": "luisdg2008@gmail.com",
+            "whenPT": "Oct 11, 8:17 AM PT",
+            "sourceReportThread": "1a12b8ad489566e4"
+          },
+          {
+            "username": "danielw",
+            "email": "daniel.weir2@mail.dcu.ie",
+            "whenPT": "Oct 11, 8:59 AM PT",
+            "sourceReportThread": "1a12bb0a9b99fa8e"
+          },
+          {
+            "username": "mimo",
+            "email": "mime.mo@icloud.com",
+            "whenPT": "Oct 11, 9:06 AM PT",
+            "sourceReportThread": "1a12bb6e56d1b61f"
+          }
+        ],
+        "note": "One template, send as separate new emails (swap in each username). Malcolm also gets these reports and is booking tester calls (new today: Yng Luo, Sun). [CHECK: with Malcolm which of these he's already contacted so nobody gets two emails.]"
+      }
+    ],
+    "linearIssue": null,
+    "linearNote": "No PRs from the dig today, so no Linear issue."
+  },
+  "2026-10-12": {
+    "date": "2026-10-12",
+    "title": "Latent daily review \u00b7 Oct 12",
+    "generatedAt": "2026-10-12T16:51:10.260818+00:00",
+    "tldr": [
+      "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue (Linear is also still disconnected on my side).",
+      "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT, so no account is waiting to be deleted.",
+      "Two more people answered your App Store launch email asking for an Android or Play Store version: Sara ElKhabbaty and Neharika. Tridha, Radhya and mbuteler still have no reply from you, so there are 5 drafts below, oldest first.",
+      "Merged overnight, all Malcolm's: #471 (sign-in token refresh loop), #472 (stickers move and resize from anywhere), #473 (beta signups no longer email the team) and #474 (a full phone no longer cuts a long session to a 10-second clip). Malcolm's #475, #476 and #463 are still open.",
+      "In-app: 3 feature ideas. @luis wants a \u201cclose friends\u201d sharing option, @spoon asks if early users get lifetime access (Malcolm already answered the same question by email for Sembiyan), and @arina wants to tag who you're studying with, which Malcolm's #475 is building. 24 new \u201cStay as a Beta Tester\u201d picks (106 total); Malcolm handles those.",
+      "Survey unchanged (39/25/2 of 66). Sentry: 7 new one-person freezes (APPLE-IOS-6R to 6Y). PostHog: rage clicks up to 1,131 from 334 people, and 63 invite-code failures from 24 people are all \u201cinvalid code\u201d entries, not a bug. Discord: #general-chat was busy since Oct 10 (Discord wasn't checked yesterday), mostly a birthday thread for KrabbyKai. One product question: Hujii asked if accounts are private by default, and another member, Ace, answered \u201cprivate\u201d. Nothing new in #feature-requests, #questions or #announcements; #tester-chat isn't visible."
+    ],
+    "plainTldr": [
+      "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue (Linear is also still disconnected on my side).",
+      "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT, so no account is waiting to be deleted.",
+      "Two more people answered your App Store launch email asking for an Android or Play Store version: Sara ElKhabbaty and Neharika. Tridha, Radhya and mbuteler still have no reply from you, so there are 5 drafts below, oldest first.",
+      "Merged overnight, all Malcolm's: #471 (sign-in token refresh loop), #472 (stickers move and resize from anywhere), #473 (beta signups no longer email the team) and #474 (a full phone no longer cuts a long session to a 10-second clip). Malcolm's #475, #476 and #463 are still open.",
+      "In-app: 3 feature ideas. @luis wants a \u201cclose friends\u201d sharing option, @spoon asks if early users get lifetime access (Malcolm already answered the same question by email for Sembiyan), and @arina wants to tag who you're studying with, which Malcolm's #475 is building. 24 new \u201cStay as a Beta Tester\u201d picks (106 total); Malcolm handles those.",
+      "Survey unchanged (39/25/2 of 66). Sentry: 7 new one-person freezes (APPLE-IOS-6R to 6Y). PostHog: rage clicks up to 1,131 from 334 people, and 63 invite-code failures from 24 people are all \u201cinvalid code\u201d entries, not a bug. Discord: #general-chat was busy since Oct 10 (Discord wasn't checked yesterday), mostly a birthday thread for KrabbyKai. One product question: Hujii asked if accounts are private by default, and another member, Ace, answered \u201cprivate\u201d. Nothing new in #feature-requests, #questions or #announcements; #tester-chat isn't visible."
+    ],
+    "stats": {
+      "newInApp": 3,
+      "newDiscord": 32,
+      "newGmail": 3,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [
+        "APPLE-IOS-6R",
+        "APPLE-IOS-6S",
+        "APPLE-IOS-6T",
+        "APPLE-IOS-6V",
+        "APPLE-IOS-6W",
+        "APPLE-IOS-6X",
+        "APPLE-IOS-6Y"
+      ],
+      "rawQuotes": 9,
+      "betaOptInsNew": 24,
+      "betaOptInsTotal": 106
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "agentsLaunched": [],
+      "note": "No Cloud Agents launched: nothing new was a clear, unfixed code bug."
+    },
+    "prStatus": {
+      "waiting": [],
+      "openedToday": [],
+      "mergedOvernight": [
+        {
+          "pr": 474,
+          "url": "https://github.com/eddie-the-lou/latent/pull/474",
+          "title": "A full phone no longer turns a long session into a 10-second clip (TRY-320)",
+          "by": "Malcolm \u00b7 Oct 11, 6:54 PM PT"
+        },
+        {
+          "pr": 473,
+          "url": "https://github.com/eddie-the-lou/latent/pull/473",
+          "title": "Beta tester signups stop emailing the team",
+          "by": "Malcolm \u00b7 Oct 11, 5:56 PM PT"
+        },
+        {
+          "pr": 472,
+          "url": "https://github.com/eddie-the-lou/latent/pull/472",
+          "title": "A selected sticker moves and resizes from anywhere on the editor (TRY-321)",
+          "by": "Malcolm \u00b7 Oct 11, 2:24 PM PT"
+        },
+        {
+          "pr": 471,
+          "url": "https://github.com/eddie-the-lou/latent/pull/471",
+          "title": "A token refresh no longer sets off another token refresh",
+          "by": "Malcolm \u00b7 Oct 11, 2:05 PM PT"
+        }
+      ],
+      "stillOnYou": [
+        {
+          "id": "tridha",
+          "title": "Decide whether to restore Tridha's deleted account, then reply (draft below, waiting since Oct 9)."
+        },
+        {
+          "id": "replies",
+          "title": "Reply to Radhya and mbuteler (carried) plus Sara and Neharika (new). Drafts below."
+        },
+        {
+          "id": "malcolm-prs",
+          "title": "Malcolm's open PRs: #475 (Locked in with, app half), #476 (screen views), #463 (review notes on #462). Nothing from the dig."
+        },
+        {
+          "id": "linear",
+          "title": "Linear is still disconnected, so I can't file or check TryLatent tickets. Paste a Linear personal API key when you get a chance."
+        }
+      ],
+      "otherOpen": [
+        {
+          "pr": 476,
+          "url": "https://github.com/eddie-the-lou/latent/pull/476",
+          "title": "Hidden screens no longer report a visit at launch (Malcolm)"
+        },
+        {
+          "pr": 475,
+          "url": "https://github.com/eddie-the-lou/latent/pull/475",
+          "title": "Locked in with: the app half, behind a flag, TRY-312 (Malcolm)"
+        },
+        {
+          "pr": 463,
+          "url": "https://github.com/eddie-the-lou/latent/pull/463",
+          "title": "Fix review notes on #462 (Malcolm)"
+        }
+      ]
+    },
+    "ageHolds": {
+      "open": [],
+      "newLast24h": [],
+      "resolvedLast24h": [
+        {
+          "username": "omarzz",
+          "displayName": "Omar",
+          "resolution": "released",
+          "heldAtPT": "Oct 11, 9:29 AM PT",
+          "resolvedAtPT": "Oct 11, 10:34 AM PT",
+          "note": "Released after you confirmed the under-13 birthday was a mistake."
+        }
+      ],
+      "summary": "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT, so no account is waiting to be deleted.",
+      "query": "/workspace/feedback-digests/age-holds.sql"
+    },
+    "actions": [
+      {
+        "id": "ageholds",
+        "title": "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT, so no account is waiting to be deleted.",
+        "status": "done"
+      },
+      {
+        "id": "replies",
+        "title": "5 reply drafts: Tridha, mbuteler, Radhya, Sara, Neharika",
+        "status": "waiting"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive (also backfilled Oct 11, which hadn't published)",
+        "status": "done"
+      },
+      {
+        "id": "linear",
+        "title": "No Linear issue: no PRs today, and Linear still needs reconnecting",
+        "status": "skipped"
+      },
+      {
+        "id": "discord",
+        "title": "Discord: #general-chat was busy since Oct 10 (Discord wasn't checked yesterday), mostly a birthday thread for KrabbyKai. One product question: Hujii asked if accounts are private by default, and another member, Ace, answered \u201cprivate\u201d. Nothing new in #feature-requests, #questions or #announcements; #tester-chat isn't visible.",
+        "status": "done"
+      },
+      {
+        "id": "agents",
+        "title": "No Cloud Agents launched",
+        "status": "done"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "privacy-confusion",
+        "title": "Not sure if accounts are private",
+        "severity": "low",
+        "people": 1,
+        "detail": "Hujii asked on Discord how to tell if their account is private or public. A community member answered \u201cprivate\u201d; nobody from the team replied. Radhya asked a similar privacy question by email on Oct 8."
+      },
+      {
+        "id": "group-action-failed",
+        "title": "Group screens failing to load (PostHog group_action_failed)",
+        "severity": "medium",
+        "people": 48,
+        "detail": "139 events from 48 people in 24h (was 186/45). Mostly network errors or cancelled loads; 9 were \u201cno group with that code\u201d, 2 hit \u201cpermission denied for table group_invites\u201d. No single clear code bug to hand an agent."
+      },
+      {
+        "id": "invite-check",
+        "title": "Invite codes rejected (invite_check_failed)",
+        "severity": "low",
+        "people": 24,
+        "detail": "63 events from 24 people, up from 26/8, all with reason \u201cinvalid\u201d, on 1.0.5. Looks like people typing wrong codes after the new launch emails, not a code bug."
+      },
+      {
+        "id": "rageclicks",
+        "title": "Rage clicks doubled",
+        "severity": "low",
+        "people": 334,
+        "detail": "1,131 rage clicks from 334 people in 24h (was 558/190). More people are using the app after the launch waves; no single screen flagged."
+      },
+      {
+        "id": "sentry-singles",
+        "title": "7 new one-person freezes (APPLE-IOS-6R, 6S, 6T, 6V, 6W, 6X, 6Y)",
+        "severity": "low",
+        "people": 7,
+        "detail": "6R was a full freeze the phone killed. Big ones continue: APPLE-IOS-35 105 events/60 people, APPLE-IOS-F (server 503s) 217/48, APPLE-IOS-7 85/43."
+      },
+      {
+        "id": "small-failures",
+        "title": "Small save and sign-in failures",
+        "severity": "low",
+        "people": 9,
+        "detail": "sign_in_failed 15 (6 people), segment_finalize_failed 12 (9), app_blocking_authorization_failed 11 (8), attachment_upload_failed 6 (5), clip_upload_failed 5 (4), session_save_failed 5 (3)."
+      }
+    ],
+    "features": [
+      {
+        "id": "android",
+        "title": "Android / Play Store",
+        "count": 2,
+        "detail": "Sara ElKhabbaty (Huawei, can install Android apps) and Neharika asked by email."
+      },
+      {
+        "id": "close-friends",
+        "title": "Share clips with a close-friends group",
+        "count": 1,
+        "detail": "@luis: right now it's all friends or private."
+      },
+      {
+        "id": "tag-partner",
+        "title": "Tag who you're studying with",
+        "count": 1,
+        "detail": "@arina. Malcolm's #475 (Locked in with) is building this."
+      },
+      {
+        "id": "lifetime",
+        "title": "Lifetime access for early users",
+        "count": 2,
+        "detail": "@spoon in-app and Sembiyan by email (Malcolm replied that the main features stay free)."
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 24,
+        "detail": "24 new \u201cStay as a Beta Tester\u201d picks since yesterday's dig, 106 total. Malcolm handles these."
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 3,
+        "note": "3 new rows in public.feedback since the Oct 11 dig (@luis, @spoon, @arina), all feature ideas."
+      },
+      "discord": {
+        "new": 32,
+        "note": "Discord: #general-chat was busy since Oct 10 (Discord wasn't checked yesterday), mostly a birthday thread for KrabbyKai. One product question: Hujii asked if accounts are private by default, and another member, Ace, answered \u201cprivate\u201d. Nothing new in #feature-requests, #questions or #announcements; #tester-chat isn't visible."
+      },
+      "gmail": {
+        "new": 3,
+        "note": "New: Sara ElKhabbaty and Neharika replied to the launch email; Sembiyan asked support about lifetime access (Malcolm answered). 14 beta-tester report emails came in before Malcolm's #473 turned them off; 24 opt-ins total since the last dig per the database. You sent no tester replies since the last dig. DMARC, brand pitches and booking confirmations skipped. No video attachments, no PostHog alert mail."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "note": "All three tabs identical to Oct 11 (67/7/9 rows incl. headers)."
+      },
+      "sentry": {
+        "new": [
+          "APPLE-IOS-6R",
+          "APPLE-IOS-6S",
+          "APPLE-IOS-6T",
+          "APPLE-IOS-6V",
+          "APPLE-IOS-6W",
+          "APPLE-IOS-6X",
+          "APPLE-IOS-6Y"
+        ],
+        "note": "7 new single-person freezes. APPLE-IOS-35: 105/60. APPLE-IOS-F (503s): 217/48. APPLE-IOS-7: 85/43. APPLE-IOS-W (fatal hang): 14/11."
+      },
+      "posthog": {
+        "note": "Last 24h: 1,131 rage clicks (334 people), group_action_failed 139 (48), invite_check_failed 63 (24, all \u201cinvalid\u201d), sign_in_failed 15 (6), segment_finalize_failed 12 (9), app_blocking_authorization_failed 11 (8), attachment_upload_failed 6 (5), clip_upload_failed 5 (4), session_save_failed 5 (3). No PostHog alert emails."
+      },
+      "github": {
+        "note": "Merged since the dig: #471 to #474 (Malcolm). Open: #463, #475, #476 (Malcolm)."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "inapp-luis",
+        "source": "in-app",
+        "username": "@luis",
+        "whenPT": "Oct 11, 2:53 PM PT",
+        "kind": "feature",
+        "quote": "Add an option to share study clips with only a \u201cclose friend\u201d group which you can select since right now you can only share with all friends or keep private",
+        "build": "1.0.6 (38)"
+      },
+      {
+        "id": "inapp-spoon",
+        "source": "in-app",
+        "username": "@spoon",
+        "whenPT": "Oct 11, 6:57 PM PT",
+        "kind": "feature",
+        "quote": "Hey! I joined via the instagram invite code phase so will early users like myself be grandfathered into lifetime access if you guys decide to launch subscriptions?",
+        "build": "1.0.5 (36)"
+      },
+      {
+        "id": "inapp-arina",
+        "source": "in-app",
+        "username": "@arina",
+        "whenPT": "Oct 12, 8:47 AM PT",
+        "kind": "feature",
+        "quote": "it\u2019ll be great, if you could tag people, that you are studying with",
+        "note": "Malcolm's open #475 (\u201cLocked in with\u201d, TRY-312) is building this.",
+        "build": "1.0.5 (36)"
+      },
+      {
+        "id": "gmail-sara",
+        "source": "gmail",
+        "username": "Sara ElKhabbaty (sara.elkhabbaty@gmail.com)",
+        "whenPT": "Oct 11, 10:46 AM PT",
+        "kind": "question",
+        "quote": "Hi Eddie,\n\nUnfortunately I am not an apple user. therefore I am unable to download the\napp from the app store. Is there is a version available on the play store\nor open source? I am a Huawie user but I can download android apps.\n\nThanks.\n\nSara ElKhabbaty",
+        "note": "Reply to your App Store launch email (thread 1a12c135e454936d)."
+      },
+      {
+        "id": "gmail-neharika",
+        "source": "gmail",
+        "username": "neharikathakur0609@gmail.com",
+        "whenPT": "Oct 12, 8:17 AM PT",
+        "kind": "question",
+        "quote": "hey,\nis it only available on appstore and not playstore for non ios users?\n:(",
+        "note": "Reply to your Oct 6 App Store launch email (thread 1a130b0fa022c329)."
+      },
+      {
+        "id": "gmail-sembiyan",
+        "source": "gmail",
+        "username": "Sembiyan Poongundran (sembiyanpd1@icloud.com), via support@",
+        "whenPT": "Oct 11, 7:09 PM PT",
+        "kind": "question",
+        "quote": "Hello,\n\nI joined the app while in its instagram/ invite only phase, so I was wondering once the app is open to the public and if you guys decide to make paid subscriptions or what not, will early users like myself get lifetime access?\n\nSent from my iPhone",
+        "note": "Malcolm already replied Oct 12, 9:30 AM PT: the main features stay free if a paid version is added. No draft needed."
+      },
+      {
+        "id": "discord-0",
+        "source": "discord",
+        "username": "Hujii??wtf???",
+        "whenPT": "Oct 11, 4:03 PM PT",
+        "kind": "message",
+        "quote": "Hii, how do I know if my account is private or public? Or is it private by default?",
+        "note": "Discord #general-chat"
+      },
+      {
+        "id": "discord-1",
+        "source": "discord",
+        "username": "Ace",
+        "whenPT": "Oct 12, 2:45 AM PT",
+        "kind": "message",
+        "quote": "private",
+        "note": "Discord #general-chat"
+      },
+      {
+        "id": "discord-2",
+        "source": "discord",
+        "username": "Social chat, 30 more entries (mostly KrabbyKai's birthday)",
+        "whenPT": "Oct 10, 11:23 AM to Oct 12, 7:44 AM PT",
+        "kind": "message",
+        "quote": "Ramen_dino, Oct 10, 11:23 AM PT: \"Hiii\"\nMalcolm McDonald, Oct 10, 12:40 PM PT: \"yo!\"\n\u00a6\ud80d\udc07\u0ec3 \u06eb\u2445 \uaa41 \ud835\udd18\ud835\udd2b\ud835\udd31\ud835\udd2c\ud835\udd32\ud835\udd20\ud835\udd25\ud835\udd22\ud835\udd21 \ud801\udc3f (VIV), Oct 10, 1:28 PM PT: \"@KrabbyKai @KrabbyKai @KrabbyKai @KrabbyKai @KrabbyKai @KrabbyKai\"\nKrabbyKai, Oct 10, 1:29 PM PT: \"whay could possibly warrant this\"\n\u00a6\ud80d\udc07\u0ec3 \u06eb\u2445 \uaa41 \ud835\udd18\ud835\udd2b\ud835\udd31\ud835\udd2c\ud835\udd32\ud835\udd20\ud835\udd25\ud835\udd22\ud835\udd21 \ud801\udc3f (VIV), Oct 10, 1:29 PM PT: \"@KrabbyKai\" / \"HAPPY BIRTHDAY\" / \"if I\u2019m correct\" / \"Right?\" / \"Yes?\"\nKrabbyKai, Oct 10, 2:22 PM PT: \"how did u remember this\"\n\ud835\udc72\ud835\udc82\ud835\udc8a\ud835\udc94\ud835\udc86\ud835\udc8d\ud835\udc8a\ud835\udc8f, Oct 10, 2:22 PM PT: \"woah happy bday\"\nKrabbyKai, Oct 10, 2:23 PM PT: \"ty giys\"\nki (is tired), Oct 10, 3:14 PM PT: \"happy birthday kai!!\"\nKrabbyKai, Oct 10, 3:37 PM PT: \"tyty\" / \"im\" / \"at a huge competition\" / \"w @parnik\" / \"in a maid costume\" / \"terrible day lmao\"\nki (is tired), Oct 10, 3:37 PM PT: \"good luck!\"\nparnik, Oct 10, 3:42 PM PT: \"WHAT\" / \"Oh yeah\" / \"I will use those pictures of ur outfit\"\nandrew, Oct 10, 4:11 PM PT: \"what\"\n\u00a6\ud80d\udc07\u0ec3 \u06eb\u2445 \uaa41 \ud835\udd18\ud835\udd2b\ud835\udd31\ud835\udd2c\ud835\udd32\ud835\udd20\ud835\udd25\ud835\udd22\ud835\udd21 \ud801\udc3f (VIV), Oct 10, 5:03 PM PT: \"I have my ways\" / (5:04 PM) \"Mb I\u2019m at a badminton tournament\" / \"And I was rlly busy\"\nKrabbyKai, Oct 10, 5:04 PM PT: \"its chill\"\n\u00a6\ud80d\udc07\u0ec3 \u06eb\u2445 \uaa41 \ud835\udd18\ud835\udd2b\ud835\udd31\ud835\udd2c\ud835\udd32\ud835\udd20\ud835\udd25\ud835\udd22\ud835\udd21 \ud801\udc3f (VIV), Oct 10, 5:15 PM PT: \"I think it\u2019s bc you mentioned sometime\" / \"But I don\u2019t rmbr when\" / \"I try my best\" / \"To rmbr my friends bdays\" / [emoji/sticker-only message] / \"Oh oh\" / (5:16 PM) \"Guess who won first round of doubles and mixed doubles and lost singles, prepared to play cons singles but got a walkover from the opponent\" / (5:19 PM) \"AHHH MY FRIENDS ARENT LEAVING BADMINTON BUT I WANNA GO EAT\"\nEmpyrean, Oct 10, 7:59 PM PT: \"Locking out\"\nKrabbyKai, Oct 10, 11:14 PM PT: \"cant believe u remember\"\n\u00a6\ud80d\udc07\u0ec3 \u06eb\u2445 \uaa41 \ud835\udd18\ud835\udd2b\ud835\udd31\ud835\udd2c\ud835\udd32\ud835\udd20\ud835\udd25\ud835\udd22\ud835\udd21 \ud801\udc3f (VIV), Oct 11, 7:36 AM PT: \"Yes ofc :>\"\nNotorious R.I.B, Oct 11, 7:39 AM PT: \"woahh happy birthday kai!!\"\nKrabbyKai, Oct 11, 7:43 AM PT: \"thank you lol\" / [attachment/image, no text] / \"much appreciated\"\nNotorious R.I.B, Oct 11, 7:44 AM PT: \"finally found something that matches the description of perfection\" [replying to a KrabbyKai attachment]\n\u00a6\ud80d\udc07\u0ec3 \u06eb\u2445 \uaa41 \ud835\udd18\ud835\udd2b\ud835\udd31\ud835\udd2c\ud835\udd32\ud835\udd20\ud835\udd25\ud835\udd22\ud835\udd21 \ud801\udc3f (VIV), Oct 11, 8:01 AM PT: \"PFT- BAHAHHAHAHAH\" / (8:02 AM) \"Never would I have thought I\u2019d see this\"\nSourLemown\ud83c\udf4b, Oct 11, 12:31 PM PT: \"HAPPY BIRTHDAY BIGBOY @KrabbyKai\"\nKrabbyKai, Oct 11, 12:31 PM PT: \"thank u ira\" / \"we have an instagram video up\" / \"its at 200k views\" / \"biggest possible digital footprint\"\nSourLemown\ud83c\udf4b, Oct 11, 12:31 PM PT: \"Holy hell this is awesome\" / (12:32 PM) \"Send me the link\"\nKrabbyKai, Oct 11, 12:33 PM PT: \"https://www.instagram.com/reel/DeVbqgRxhRN/?obrf=MWtrYzlhbWs4Z2lueA==\"\n\u00a6\ud80d\udc07\u0ec3 \u06eb\u2445 \uaa41 \ud835\udd18\ud835\udd2b\ud835\udd31\ud835\udd2c\ud835\udd32\ud835\udd20\ud835\udd25\ud835\udd22\ud835\udd21 \ud801\udc3f (VIV), Oct 11, 12:46 PM PT: \"OOOOOO\"\nd, Oct 12, 5:57 AM PT: \"krab catboy cosplay next\"\nKrabbyKai, Oct 12, 7:44 AM PT (replying to d): [attachment/media only, no text]",
+        "note": "Discord #general-chat"
+      }
+    ],
+    "replyDrafts": [
+      {
+        "id": "tridha",
+        "to": "tridhajaiswal0308@gmail.com",
+        "subject": "Re: TestFlight beta feedback for Latent",
+        "threadId": "1a11f0791c340586",
+        "replyToMessageId": "1a11f0791c340586",
+        "theirMessage": "Heyy\nI don\u2019t know my when i entered my age on latent (15 year old) it deleted my acc saying its for 13 and above. I had a 3 week long streak as well. Please help me, i don\u2019t want to lose everything please\n\nI am a high schooler and this really means a lot to me. Please i have trust in you that you\u2019ll brung my account back. Please.",
+        "theirWhenPT": "Oct 8, 9:59 PM PT",
+        "body": "Hey Tridha, I'm so sorry this happened, that's a really rough way to lose a 3 week streak \ud83d\ude2d The age check removed accounts when the birthday came out under 13, so the wheel probably landed on the wrong year, and we've just changed it so that can't wipe an account anymore. [CHECK: whether you can or want to restore her account or streak; it was hard-deleted, so only promise what you can do] You're welcome to sign up again with your real birthday, and I'm here if anything else goes wrong!\n\nEddie",
+        "note": "Oldest unanswered (since Oct 9). Still blocked on your call about restoring her account."
+      },
+      {
+        "id": "mbuteler",
+        "to": "mbuteler@ieee.org",
+        "subject": "Re: lock in twin",
+        "threadId": "1a1270495def2f88",
+        "replyToMessageId": "1a1270495def2f88",
+        "theirMessage": "Too late Eddie, dropped college alr\ud83e\udd72",
+        "theirWhenPT": "Oct 10, 11:12 AM PT",
+        "body": "Haha no way, respect \ud83d\ude02 Latent works for any kind of deep work, not just studying, so it might still be useful for whatever you're building now. Your invite link from the email still works if you want to try it, and I'd love to hear what you think!\n\nEddie",
+        "note": "Carried from Oct 11, still unanswered."
+      },
+      {
+        "id": "radhya",
+        "to": "radhyas2010@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a119016d92c2469",
+        "replyToMessageId": "1a12b507319b3435",
+        "theirMessage": "Hi Eddie!\n\nThank you for the reply. I have been using Latent for 2 days now, and I\nhave already logged over 15 hours! I am loving the app. As a user, I love\nhow the app doesn't drain my battery, lets me add a live clock to my video\nat the end, and keeps all my study stats. I have even shared the app with a\ngirl who graduated from my high school and is now a small study influencer.\nI hope the app keeps doing well!",
+        "theirWhenPT": "Oct 11, 7:14 AM PT",
+        "body": "Radhya, 15 hours in 2 days is insane, I'm so happy Latent is helping you lock in! Thank you for sharing it with your friend too, that genuinely means a lot for a small team like us. If you ever have ideas or something feels off, just reply here, I read every one.\n\nEddie",
+        "note": "Carried from Oct 11, still unanswered. [CHECK: if you want to ask for an intro to the study influencer, add a line.]"
+      },
+      {
+        "id": "sara",
+        "to": "sara.elkhabbaty@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a12c135e454936d",
+        "replyToMessageId": "1a12c135e454936d",
+        "theirMessage": "Hi Eddie,\n\nUnfortunately I am not an apple user. therefore I am unable to download the\napp from the app store. Is there is a version available on the play store\nor open source? I am a Huawie user but I can download android apps.\n\nThanks.\n\nSara ElKhabbaty",
+        "theirWhenPT": "Oct 11, 10:46 AM PT",
+        "body": "Hey Sara, thanks for letting me know, and sorry about that! Right now Latent is iPhone only, so there's no Play Store or Android version yet. [CHECK: she also asked about open source, and whether you want to say anything about Android plans, without a date] Really appreciate you joining the waitlist though!\n\nEddie",
+        "note": "New. Reply to the App Store launch email."
+      },
+      {
+        "id": "neharika",
+        "to": "neharikathakur0609@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a130b0fa022c329",
+        "replyToMessageId": "1a130b0fa022c329",
+        "theirMessage": "hey,\nis it only available on appstore and not playstore for non ios users?\n:(",
+        "theirWhenPT": "Oct 12, 8:17 AM PT",
+        "body": "Hey Neharika, yeah for now it's only on the App Store, sorry! There's no Play Store version yet. [CHECK: anything you want to say about Android plans, without a date] Thank you so much for signing up though, it means a lot.\n\nEddie",
+        "note": "New. Reply to the App Store launch email."
+      }
+    ],
+    "linearIssue": null,
+    "linearNote": "No PRs from the dig today, so no Linear issue. Linear also still needs reconnecting."
   }
 };
