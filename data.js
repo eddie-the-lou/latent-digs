@@ -1,5 +1,10 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-13",
+    "title": "Latent daily review \u00b7 Oct 13",
+    "tldr": "1 fix waiting for your review: #491 Group invites no longer error when the app is still signing in (PostHog \u201cpermission denied for table group_invites\u201d)."
+  },
+  {
     "date": "2026-10-12",
     "title": "Latent daily review \u00b7 Oct 12",
     "tldr": "No new fixes from me today. Nothing new was a clear, unfixed code bug, so I launched no Cloud Agents and made no Linear issue (Linear is also still disconnected on my side)."
@@ -682,6 +687,11 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-13",
+      "title": "Latent daily review \u00b7 Oct 13",
+      "tldr": "1 fix waiting for your review: #491 Group invites no longer error when the app is still signing in (PostHog \u201cpermission denied for table group_invites\u201d)."
+    },
     {
       "date": "2026-10-12",
       "title": "Latent daily review \u00b7 Oct 12",
@@ -75383,12 +75393,12 @@ window.DIGESTS = {
       {
         "id": "email",
         "title": "Email dig to eddie@weaive.app",
-        "status": "done"
+        "status": "pending"
       },
       {
         "id": "archive",
         "title": "Publish archive to latent-digs GitHub Pages",
-        "status": "done"
+        "status": "pending"
       },
       {
         "id": "linear",
@@ -80274,5 +80284,446 @@ window.DIGESTS = {
     ],
     "linearIssue": null,
     "linearNote": "No PRs from the dig today, so no Linear issue. Linear also still needs reconnecting."
+  },
+  "2026-10-13": {
+    "date": "2026-10-13",
+    "title": "Latent daily review \u00b7 Oct 13",
+    "generatedAt": "2026-10-13T16:48:37.402858+00:00",
+    "tldr": [
+      "1 fix waiting for your review: #491 Group invites no longer error when the app is still signing in (PostHog \u201cpermission denied for table group_invites\u201d, 6 events / 3 people).",
+      "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT; nothing open, new, or resolved in the last 24h.",
+      "Two new Android asks by email: Amitai and Serenity. Tridha's restore reply is still blocked on TRY-333. Amelia's fan email was answered (she booked Malcolm). Do not redraft mbuteler (discarded). 3 drafts below.",
+      "Merged overnight (Malcolm + you): #490 camera-off offer for first-session stalls; #488 bump to 1.0.6 (39); #487 maintenance screen when the backend is down; #481 HEVC timelapse (flag off); #480 tag case no longer flips posts to Other (TRY-323); #479 discard no longer flashes sideways (TRY-238); #478 feed holds still / one tag list / audience selector / record gear; #477 birthday wheel no longer deletes adults; #482 debug-only disposable account delete. Rollbacks: #483 undid #475 (shared posts / TRY-312); #485 undid #484 share stickers, re-opened as #486.",
+      "In-app: 0 new. 15 new \u201cStay as a Beta Tester\u201d picks (121 total); Malcolm handles those. Discord: Krishna asked when Android launches; Android Advocate joked \u201c3 days after the last solar eclipse.\u201d Survey unchanged 39/25/2 of 66. Sentry unavailable (MCP needs re-auth). PostHog: rage clicks 1,269/386; clip_upload_failed 28/5 all network; sign_up_failed AuthError spike 15/5; invite_check_failed 77/23 all invalid."
+    ],
+    "plainTldr": [
+      "1 fix waiting for your review: #491 Group invites no longer error when the app is still signing in (PostHog \u201cpermission denied for table group_invites\u201d, 6 events / 3 people).",
+      "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT; nothing open, new, or resolved in the last 24h.",
+      "Two new Android asks by email: Amitai and Serenity. Tridha's restore reply is still blocked on TRY-333. Amelia's fan email was answered (she booked Malcolm). Do not redraft mbuteler (discarded). 3 drafts below.",
+      "Merged overnight (Malcolm + you): #490 camera-off offer for first-session stalls; #488 bump to 1.0.6 (39); #487 maintenance screen when the backend is down; #481 HEVC timelapse (flag off); #480 tag case no longer flips posts to Other (TRY-323); #479 discard no longer flashes sideways (TRY-238); #478 feed holds still / one tag list / audience selector / record gear; #477 birthday wheel no longer deletes adults; #482 debug-only disposable account delete. Rollbacks: #483 undid #475 (shared posts / TRY-312); #485 undid #484 share stickers, re-opened as #486.",
+      "In-app: 0 new. 15 new \u201cStay as a Beta Tester\u201d picks (121 total); Malcolm handles those. Discord: Krishna asked when Android launches; Android Advocate joked \u201c3 days after the last solar eclipse.\u201d Survey unchanged 39/25/2 of 66. Sentry unavailable (MCP needs re-auth). PostHog: rage clicks 1,269/386; clip_upload_failed 28/5 all network; sign_up_failed AuthError spike 15/5; invite_check_failed 77/23 all invalid."
+    ],
+    "stats": {
+      "newInApp": 0,
+      "newDiscord": 2,
+      "newGmail": 2,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [],
+      "sentryUnavailable": true,
+      "rawQuotes": 5,
+      "betaOptInsNew": 15,
+      "betaOptInsTotal": 121
+    },
+    "whatIDidToday": {
+      "fixesOpened": [
+        {
+          "pr": 491,
+          "url": "https://github.com/eddie-the-lou/latent/pull/491",
+          "agent": "https://cursor.com/agents/bc-582e0b54-dd25-59ab-9aa2-f65617a66ee3",
+          "title": "Group invites no longer error when the app is still signing in",
+          "reporter": "PostHog \u00b7 6 events / 3 people \u00b7 builds 36 and 39",
+          "status": "waiting for your review",
+          "whatItFixes": "Fixes PostHog \u201cpermission denied for table group_invites\u201d (6 events / 3 people, builds 36\u201339): a brief signed-out request at launch was refused. Now that request may read invites; row rules still only show your own invites. Database change only, no app update needed.",
+          "howToCheck": "Sign in as a tester, get invited to a group, force-quit and reopen, open Groups and Activity: pending invites show and Join/Decline work. After it\u2019s on prod, group_action_failed should stop showing this error."
+        }
+      ],
+      "agentsLaunched": [
+        {
+          "id": "bc-582e0b54-dd25-59ab-9aa2-f65617a66ee3",
+          "url": "https://cursor.com/agents/bc-582e0b54-dd25-59ab-9aa2-f65617a66ee3",
+          "status": "finished",
+          "pr": 491,
+          "prUrl": "https://github.com/eddie-the-lou/latent/pull/491"
+        }
+      ],
+      "note": "Launched 1 Cloud Agent for PostHog \u201cpermission denied for table group_invites\u201d; it opened #491."
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 491,
+          "url": "https://github.com/eddie-the-lou/latent/pull/491",
+          "title": "Group invites no longer error when the app is still signing in",
+          "by": "Cloud Agent \u00b7 Oct 13"
+        }
+      ],
+      "openedToday": [
+        {
+          "pr": 491,
+          "url": "https://github.com/eddie-the-lou/latent/pull/491",
+          "title": "Group invites no longer error when the app is still signing in",
+          "agent": "https://cursor.com/agents/bc-582e0b54-dd25-59ab-9aa2-f65617a66ee3"
+        }
+      ],
+      "mergedOvernight": [
+        {
+          "pr": 490,
+          "url": "https://github.com/eddie-the-lou/latent/pull/490",
+          "title": "Camera-off offer for first-session stalls (A/B, flag first_session_camera_off)",
+          "by": "Malcolm \u00b7 Oct 12, 10:22 PM PT"
+        },
+        {
+          "pr": 488,
+          "url": "https://github.com/eddie-the-lou/latent/pull/488",
+          "title": "Bump to 1.0.6 (39) for TestFlight",
+          "by": "Malcolm \u00b7 Oct 12, 8:28 PM PT"
+        },
+        {
+          "pr": 487,
+          "url": "https://github.com/eddie-the-lou/latent/pull/487",
+          "title": "Show a maintenance screen when the backend is down",
+          "by": "Malcolm \u00b7 Oct 12, 2:27 PM PT"
+        },
+        {
+          "pr": 483,
+          "url": "https://github.com/eddie-the-lou/latent/pull/483",
+          "title": "Rollback: hold off on shared posts \u2014 reverts the app half of TRY-312 (#475)",
+          "by": "Malcolm \u00b7 Oct 12, 2:53 PM PT"
+        },
+        {
+          "pr": 485,
+          "url": "https://github.com/eddie-the-lou/latent/pull/485",
+          "title": "Rollback: revert share stickers (#484); re-opened for review as #486",
+          "by": "Malcolm \u00b7 Oct 12, 2:16 PM PT"
+        },
+        {
+          "pr": 481,
+          "url": "https://github.com/eddie-the-lou/latent/pull/481",
+          "title": "Timelapse clips can finish in HEVC, behind a flag that ships off",
+          "by": "Malcolm \u00b7 Oct 12, 1:00 PM PT"
+        },
+        {
+          "pr": 480,
+          "url": "https://github.com/eddie-the-lou/latent/pull/480",
+          "title": "A tag recapitalised offline no longer turns its posts into Other (TRY-323)",
+          "by": "Malcolm \u00b7 Oct 12, 2:57 PM PT"
+        },
+        {
+          "pr": 479,
+          "url": "https://github.com/eddie-the-lou/latent/pull/479",
+          "title": "Discard no longer flashes the record screen sideways (TRY-238)",
+          "by": "Malcolm \u00b7 Oct 12, 10:32 AM PT"
+        },
+        {
+          "pr": 478,
+          "url": "https://github.com/eddie-the-lou/latent/pull/478",
+          "title": "Feed holds still until you pull or come back; one tag list; audience selector; record gear",
+          "by": "Eddie \u00b7 Oct 12, 10:08 AM PT"
+        },
+        {
+          "pr": 477,
+          "url": "https://github.com/eddie-the-lou/latent/pull/477",
+          "title": "Adults no longer get deleted as newborns by the birthday wheel",
+          "by": "Eddie \u00b7 Oct 12, 9:55 AM PT"
+        },
+        {
+          "pr": 482,
+          "url": "https://github.com/eddie-the-lou/latent/pull/482",
+          "title": "Signing out of a disposable test account deletes it (Debug only)",
+          "by": "Eddie \u00b7 Oct 12, 11:47 AM PT"
+        }
+      ],
+      "stillOnYou": [
+        {
+          "id": "tridha",
+          "title": "Decide whether to restore Tridha's deleted account (TRY-333 Need Approval), then reply. Draft below, blocked since Oct 9."
+        },
+        {
+          "id": "replies",
+          "title": "Reply to Amitai and Serenity (new Android asks). Drafts below. Tridha stays blocked until TRY-333."
+        },
+        {
+          "id": "try-331",
+          "title": "TRY-331 pomodoro breaks cut camera segments (Need Approval) \u2014 https://linear.app/trylatent/issue/TRY-331/pomodoro-breaks-make-the-camera-watchdog-cut-segments-some-get-lost"
+        },
+        {
+          "id": "eddie-prs",
+          "title": "Your older open PRs still needing attention: #417 (friends' posts before stats) and #397 (activation report)."
+        },
+        {
+          "id": "agent-group-invites",
+          "title": "Cloud Agent still working on group_invites permission denied \u2014 check back when a PR lands."
+        }
+      ],
+      "otherOpen": [
+        {
+          "pr": 489,
+          "url": "https://github.com/eddie-the-lou/latent/pull/489",
+          "title": "sim: run lane simulators slim (Malcolm)"
+        },
+        {
+          "pr": 486,
+          "url": "https://github.com/eddie-the-lou/latent/pull/486",
+          "title": "Share stickers: logo, card, activity strip and week, TRY-325 \u2014 re-opened after #485 rollback (Malcolm)"
+        },
+        {
+          "pr": 476,
+          "url": "https://github.com/eddie-the-lou/latent/pull/476",
+          "title": "Hidden screens no longer report a visit at launch (Malcolm)"
+        },
+        {
+          "pr": 463,
+          "url": "https://github.com/eddie-the-lou/latent/pull/463",
+          "title": "Fix review notes on #462: Activity loads older notifications as you scroll, TRY-309 (Malcolm)"
+        },
+        {
+          "pr": 417,
+          "url": "https://github.com/eddie-the-lou/latent/pull/417",
+          "title": "Friends' posts land before their stats; big graphs load stats in parallel (Eddie)"
+        },
+        {
+          "pr": 397,
+          "url": "https://github.com/eddie-the-lou/latent/pull/397",
+          "title": "Activation report (daily), plus two analytics fixes (Eddie)"
+        }
+      ]
+    },
+    "ageHolds": {
+      "open": [],
+      "newLast24h": [],
+      "resolvedLast24h": [],
+      "summary": "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT; nothing open, new, or resolved in the last 24h. Holds ever: 1.",
+      "query": "/workspace/feedback-digests/age-holds.sql"
+    },
+    "actions": [
+      {
+        "id": "agent-group-invites",
+        "title": "Review #491: Group invites no longer error when the app is still signing in",
+        "status": "waiting",
+        "url": "https://github.com/eddie-the-lou/latent/pull/491"
+      },
+      {
+        "id": "ageholds",
+        "title": "No age holds. Omar (@omarzz) was released Oct 11 at 10:34 AM PT.",
+        "status": "done"
+      },
+      {
+        "id": "replies",
+        "title": "3 reply drafts: Tridha (blocked on TRY-333), Amitai, Serenity",
+        "status": "waiting"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done"
+      },
+      {
+        "id": "linear",
+        "title": "Linear dig issue TRY-344 (Need Approval)",
+        "status": "done",
+        "url": "https://linear.app/trylatent/issue/TRY-344/daily-dig-2026-10-13-1-fix-waiting-for-review-491"
+      },
+      {
+        "id": "discord",
+        "title": "Discord: Krishna asked about Android; joke reply from Android Advocate. Light social otherwise. #tester-chat not visible.",
+        "status": "done"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "group-invites-permission",
+        "title": "Permission denied for table group_invites",
+        "severity": "high",
+        "people": 3,
+        "detail": "PostHog group_action_failed: 6 events from 3 people (builds 36 and 39, Oct 12 2:27 PM \u2013 Oct 13 8:02 AM PT). Backend permission error, not network. Cloud Agent bc-582e0b54\u2026 still working; no TRY issue yet."
+      },
+      {
+        "id": "try-339",
+        "title": "Feed buffers and does not load on iPhone 17 Pro family (build 39)",
+        "severity": "high",
+        "people": null,
+        "detail": "TRY-339 In Progress, assigned to Malcolm. Link only; do not duplicate a fix. https://linear.app/trylatent/issue/TRY-339/feed-buffers-and-does-not-load-on-iphone-17-pro-family-build-39"
+      },
+      {
+        "id": "try-331",
+        "title": "Pomodoro breaks make the camera watchdog cut segments",
+        "severity": "medium",
+        "people": 19,
+        "detail": "TRY-331 Need Approval. capture_stalled 141/19 and segment_finalize_failed 13/8 in 24h map here. https://linear.app/trylatent/issue/TRY-331/pomodoro-breaks-make-the-camera-watchdog-cut-segments-some-get-lost"
+      },
+      {
+        "id": "clip-upload-failed",
+        "title": "clip_upload_failed network-only spike",
+        "severity": "medium",
+        "people": 5,
+        "detail": "28 events / 5 people (was 5/4), all build 36, stage=retry: 14\u00d7 NSURLError -1005 network lost + 14\u00d7 -1009 offline. No server errors."
+      },
+      {
+        "id": "sign-up-failed",
+        "title": "sign_up_failed AuthError spike (watch)",
+        "severity": "medium",
+        "people": 5,
+        "detail": "15/5 vs 0 yesterday. Email provider: AuthError \u00d78 (2 people, build 36), NSURLError \u00d75, AuthError \u00d72 (build 38). Watch."
+      },
+      {
+        "id": "invite-check",
+        "title": "Invite codes rejected (invite_check_failed)",
+        "severity": "low",
+        "people": 23,
+        "detail": "77 events from 23 people (was 64/25), all reason \u201cinvalid\u201d. Looks like mistyped codes after launch waves, not a code bug."
+      },
+      {
+        "id": "rageclicks",
+        "title": "Rage clicks up with traffic",
+        "severity": "low",
+        "people": 386,
+        "detail": "1,269 rage clicks from 386 people (was 1,142/336). ~12% up with ~30% more sessions; spread out. Save Session has the most distinct people (103)."
+      },
+      {
+        "id": "sentry-auth",
+        "title": "Sentry connector needs re-auth",
+        "severity": "low",
+        "people": null,
+        "detail": "user-Sentry MCP requires authentication at cursor.com/agents. No Sentry data gathered today; nothing invented."
+      }
+    ],
+    "features": [
+      {
+        "id": "android",
+        "title": "Android / Play Store",
+        "count": 3,
+        "detail": "Amitai and Serenity asked by email; Krishna asked on Discord #general-chat (joke reply from Android Advocate)."
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 15,
+        "detail": "15 new \u201cStay as a Beta Tester\u201d picks since yesterday's dig, 121 total. Malcolm handles these."
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 0,
+        "note": "0 new rows in public.feedback since the Oct 12 dig. Latest still @arina (Oct 12 8:47 AM PT), already reported."
+      },
+      "discord": {
+        "new": 2,
+        "note": "Discord: Krishna asked when Android launches (Oct 12 11:01 AM PT); Android Advocate joked \u201c3 days after the last solar eclipse.\u201d Light social otherwise (Trid asked for a group study session). Nothing new in #feature-requests, #questions or #announcements; #tester-chat isn't visible."
+      },
+      "gmail": {
+        "new": 2,
+        "note": "New unanswered: Amitai and Serenity (Android). Amelia Huang sent a fan email (\u201cLatent is lowkey awesome\u201d) Oct 12 12:13 PM PT; you replied and she booked a call with Malcolm. Sara, Neharika, and Radhya answered yesterday. mbuteler discarded (do not redraft). Tridha still unanswered, blocked on TRY-333. Cloudflare business thread and pitches skipped. No PostHog alert mail. Beta-stayer report emails: 0 (Malcolm's #473)."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "note": "Unchanged vs Oct 12. All three tabs identical."
+      },
+      "sentry": {
+        "new": [],
+        "note": "Unavailable: Sentry MCP needs re-auth at cursor.com/agents. No data invented."
+      },
+      "posthog": {
+        "note": "Last 24h: rage clicks 1,269/386; group_action_failed 165/58 (incl. 6 group_invites permission denied); invite_check_failed 77/23 all invalid; clip_upload_failed 28/5 network-only; clip_upload_abandoned 157/5 no_filename loops; capture_stalled 141/19 (TRY-331); sign_up_failed 15/5 AuthError spike; friend_request_failed 19/2 rate_limited. Sessions up (~1,349 started / 581 people). Alerts not firing."
+      },
+      "github": {
+        "note": "Merged since last dig: #475\u2190#483 rollback, #484\u2190#485\u2192#486 reopen, #477\u2013#482, #487, #488, #490. Open Malcolm: #489, #486, #476, #463. Eddie open older: #417, #397 (and stale #267/#164/#162/#123)."
+      },
+      "linear": {
+        "note": "Linear reachable via personal API key. TRY-333 still Need Approval (Tridha). TRY-339 In Progress (Malcolm, iPhone 17 feed). TRY-331 Need Approval (pomodoro). TRY-341 In Progress (tagging/shared post, successor to reverted #475). No dig issue for 2026-10-13 yet."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "discord-krishna",
+        "source": "discord",
+        "username": "Krishna",
+        "whenPT": "Oct 12, 11:01 AM PT",
+        "kind": "question",
+        "quote": "does anyone know when its launching on android?",
+        "note": "Discord #general-chat"
+      },
+      {
+        "id": "discord-android-advocate",
+        "source": "discord",
+        "username": "Android Advocate",
+        "whenPT": "Oct 12, 12:27 PM PT",
+        "kind": "message",
+        "quote": "3 days after the last solar eclipse",
+        "note": "Discord #general-chat \u00b7 joke reply to Krishna, not an official answer"
+      },
+      {
+        "id": "gmail-amitai",
+        "source": "gmail",
+        "username": "amitaibarak8@gmail.com",
+        "whenPT": "Oct 13, 1:35 AM PT",
+        "kind": "question",
+        "quote": "Hey, I would like to know if there is or would be a version for android\nphones too?",
+        "note": "Reply to wave email (thread 1a1346790c86817a)."
+      },
+      {
+        "id": "gmail-serenity",
+        "source": "gmail",
+        "username": "serenitycrown26@gmail.com",
+        "whenPT": "Oct 13, 5:28 AM PT",
+        "kind": "question",
+        "quote": "Heyyy, I wanna confirm: is this just for Apple? And are there any\nalternative ways for Android users??",
+        "note": "Reply to wave email (thread 1a1352f6a5158b88)."
+      },
+      {
+        "id": "gmail-tridha",
+        "source": "gmail",
+        "username": "tridhajaiswal0308@gmail.com",
+        "whenPT": "Oct 8, 9:59 PM PT",
+        "kind": "bug",
+        "quote": "Heyy\nI don\u2019t know my when i entered my age on latent (15 year old) it deleted my acc saying its for 13 and above. I had a 3 week long streak as well. Please help me, i don\u2019t want to lose everything please\n\nI am a high schooler and this really means a lot to me. Please i have trust in you that you\u2019ll brung my account back. Please.",
+        "note": "Carry-forward. Still unanswered; blocked on TRY-333 restore decision."
+      }
+    ],
+    "replyDrafts": [
+      {
+        "id": "tridha",
+        "to": "tridhajaiswal0308@gmail.com",
+        "subject": "Re: TestFlight beta feedback for Latent",
+        "threadId": "1a11f0791c340586",
+        "replyToMessageId": "1a11f0791c340586",
+        "theirMessage": "Heyy\nI don\u2019t know my when i entered my age on latent (15 year old) it deleted my acc saying its for 13 and above. I had a 3 week long streak as well. Please help me, i don\u2019t want to lose everything please\n\nI am a high schooler and this really means a lot to me. Please i have trust in you that you\u2019ll brung my account back. Please.",
+        "theirWhenPT": "Oct 8, 9:59 PM PT",
+        "body": "Hey Tridha, I'm so sorry this happened, that's a really rough way to lose a 3 week streak \ud83d\ude2d The age check removed accounts when the birthday came out under 13, so the wheel probably landed on the wrong year, and we've since changed it so that can't wipe an account anymore. [CHECK: restore decision] You're welcome to sign up again with your real birthday, and I'm here if anything else goes wrong!\n\nEddie",
+        "note": "Oldest unanswered (since Oct 9). BLOCKED on TRY-333 restore decision (Need Approval, no comments).",
+        "blockedOn": "https://linear.app/trylatent/issue/TRY-333/decide-restore-tester-tridhas-age-deleted-account",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878546922545087878"
+      },
+      {
+        "id": "amitai",
+        "to": "amitaibarak8@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a1346790c86817a",
+        "replyToMessageId": "1a1346790c86817a",
+        "theirMessage": "Hey, I would like to know if there is or would be a version for android\nphones too?",
+        "theirWhenPT": "Oct 13, 1:35 AM PT",
+        "body": "Hey Amitai, yeah for now it's only on the App Store, sorry! Android is coming though, and I'll email you when it's out. Thanks for signing up!\n\nEddie",
+        "note": "New. Android ask after the wave email.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878922955258757498"
+      },
+      {
+        "id": "serenity",
+        "to": "serenitycrown26@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a1352f6a5158b88",
+        "replyToMessageId": "1a1352f6a5158b88",
+        "theirMessage": "Heyyy, I wanna confirm: is this just for Apple? And are there any\nalternative ways for Android users??",
+        "theirWhenPT": "Oct 13, 5:28 AM PT",
+        "body": "Hey Serenity, right now Latent is iPhone only, so there's no Play Store or Android version yet. Android is coming though, and I'll email you when it's out. Really appreciate you joining the waitlist!\n\nEddie",
+        "note": "New. Android / Apple-only ask after the wave email.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878936688828713864"
+      }
+    ],
+    "linearIssue": {
+      "id": "TRY-344",
+      "url": "https://linear.app/trylatent/issue/TRY-344/daily-dig-2026-10-13-1-fix-waiting-for-review-491"
+    },
+    "linearNote": "Dig issue TRY-344 created in Need Approval for #491."
   }
 };
