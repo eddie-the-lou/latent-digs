@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-14",
+    "title": "Latent daily review · Oct 14",
+    "tldr": "No new fixes today. 7 changes merged overnight (incl. #491 group invites fix, now live). No age holds. Tridha's reply still waits on your restore call."
+  },
+  {
     "date": "2026-10-13",
     "title": "Latent daily review · Oct 13",
     "tldr": "1 fix waiting for your review: #491 Group invites no longer error when the app is still signing in (PostHog “permission denied for table group_invites”)."

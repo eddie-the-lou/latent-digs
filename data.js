@@ -1,5 +1,10 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-14",
+    "title": "Latent daily review \u00b7 Oct 14",
+    "tldr": "No new fixes today. 7 changes merged overnight (incl. #491 group invites fix, now live). No age holds. Tridha's reply still waits on your restore call."
+  },
+  {
     "date": "2026-10-13",
     "title": "Latent daily review \u00b7 Oct 13",
     "tldr": "1 fix waiting for your review: #491 Group invites no longer error when the app is still signing in (PostHog \u201cpermission denied for table group_invites\u201d)."
@@ -687,6 +692,11 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-14",
+      "title": "Latent daily review \u00b7 Oct 14",
+      "tldr": "No new fixes today. 7 changes merged overnight (incl. #491 group invites fix, now live). No age holds. Tridha's reply still waits on your restore call."
+    },
     {
       "date": "2026-10-13",
       "title": "Latent daily review \u00b7 Oct 13",
@@ -80725,5 +80735,394 @@ window.DIGESTS = {
       "url": "https://linear.app/trylatent/issue/TRY-344/daily-dig-2026-10-13-1-fix-waiting-for-review-491"
     },
     "linearNote": "Dig issue TRY-344 created in Need Approval for #491."
+  },
+  "2026-10-14": {
+    "date": "2026-10-14",
+    "title": "Latent daily review \u00b7 Oct 14",
+    "generatedAt": "2026-10-14T16:26:09.321138+00:00",
+    "tldr": [
+      "No new fixes waiting for you today. Nothing new looked like a real, unfixed bug, so I started no Cloud Agents and made no Linear issue.",
+      "No age holds.",
+      "7 changes merged overnight: #491 (yesterday's group invite fix, now live and working), #492 tag friends on a post, #493 mute and per-friend notifications, #494 clips no longer re-download and the iPhone 17 feed loads, #495 fairer \u201cvs last week\u201d line, #496 any number of stickers per card (folds in #486), #497 build 1.0.7 (40).",
+      "Still on you: Tridha's account. TRY-333 was trashed with no decision written down, so tell me restore or don't and I'll finish her reply. Also TRY-331 (pomodoro breaks), #417 (clashes with main, rebase or close) and #397. #486 is probably closeable; worth telling Malcolm.",
+      "Replies: just Tridha (blocked). Amitai and Serenity are answered. 6 new \u201cStay as a Beta Tester\u201d picks (127 total); Malcolm's handling those (TRY-343). Discord: Lukas asked when Android launches, unanswered (optional reply below). In-app 0 new. Survey unchanged 39/25/2 of 66. Sentry unavailable (needs re-auth).",
+      "The app's backend went down for about 3 minutes Oct 13 around 3:12\u20133:15 PM PT. Some saves and group actions failed, then it came back on its own. The timing matches the Supabase \u201cnew add-on\u201d bill email, but that's my guess, not confirmed. Every other error was spotty internet."
+    ],
+    "plainTldr": [
+      "No new fixes waiting for you today. Nothing new looked like a real, unfixed bug, so I started no Cloud Agents and made no Linear issue.",
+      "No age holds.",
+      "7 changes merged overnight: #491 (yesterday's group invite fix, now live and working), #492 tag friends on a post, #493 mute and per-friend notifications, #494 clips no longer re-download and the iPhone 17 feed loads, #495 fairer \u201cvs last week\u201d line, #496 any number of stickers per card (folds in #486), #497 build 1.0.7 (40).",
+      "Still on you: Tridha's account. TRY-333 was trashed with no decision written down, so tell me restore or don't and I'll finish her reply. Also TRY-331 (pomodoro breaks), #417 (clashes with main, rebase or close) and #397. #486 is probably closeable; worth telling Malcolm.",
+      "Replies: just Tridha (blocked). Amitai and Serenity are answered. 6 new \u201cStay as a Beta Tester\u201d picks (127 total); Malcolm's handling those (TRY-343). Discord: Lukas asked when Android launches, unanswered (optional reply below). In-app 0 new. Survey unchanged 39/25/2 of 66. Sentry unavailable (needs re-auth).",
+      "The app's backend went down for about 3 minutes Oct 13 around 3:12\u20133:15 PM PT. Some saves and group actions failed, then it came back on its own. The timing matches the Supabase \u201cnew add-on\u201d bill email, but that's my guess, not confirmed. Every other error was spotty internet."
+    ],
+    "stats": {
+      "newInApp": 0,
+      "newDiscord": 16,
+      "newGmail": 0,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [],
+      "sentryUnavailable": true,
+      "rawQuotes": 3,
+      "betaOptInsNew": 6,
+      "betaOptInsTotal": 127
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "agentsLaunched": [],
+      "note": "No new fixes today. Nothing new looked like a real, unfixed bug (just spotty internet, a 3-minute backend blip, or things already tracked like TRY-331), so I started no Cloud Agents and made no Linear issue."
+    },
+    "prStatus": {
+      "waiting": [],
+      "openedToday": [],
+      "mergedOvernight": [
+        {
+          "pr": 491,
+          "url": "https://github.com/eddie-the-lou/latent/pull/491",
+          "title": "Group invites no longer error when the app is still signing in",
+          "by": "Cloud Agent fix from yesterday, merged by Malcolm \u00b7 Oct 13, 3:34 PM PT",
+          "note": "Live on prod. The \u201cpermission denied\u201d group invite error hasn't shown up once since (last seen Oct 13 8:02 AM PT)."
+        },
+        {
+          "pr": 492,
+          "url": "https://github.com/eddie-the-lou/latent/pull/492",
+          "title": "Tag friends on a post (TRY-312)",
+          "by": "Malcolm \u00b7 Oct 13, 1:26 PM PT",
+          "note": "The follow-up to the rolled-back #475. TRY-341 is Done."
+        },
+        {
+          "pr": 493,
+          "url": "https://github.com/eddie-the-lou/latent/pull/493",
+          "title": "Mute and per-friend notifications in the Friend menu (TRY-316)",
+          "by": "Malcolm \u00b7 Oct 13, 2:01 PM PT"
+        },
+        {
+          "pr": 494,
+          "url": "https://github.com/eddie-the-lou/latent/pull/494",
+          "title": "Clips that were cleared from the phone no longer download again, and Home's feed always loads (TRY-339, iPhone 17 feed)",
+          "by": "Malcolm \u00b7 Oct 13, 2:01 PM PT",
+          "note": "TRY-339 (feed stuck buffering on iPhone 17 Pro) is Done."
+        },
+        {
+          "pr": 495,
+          "url": "https://github.com/eddie-the-lou/latent/pull/495",
+          "title": "Profile \u201cvs last week\u201d line shows for empty weeks and compares new users fairly (TRY-348)",
+          "by": "Malcolm \u00b7 Oct 13, 4:17 PM PT"
+        },
+        {
+          "pr": 496,
+          "url": "https://github.com/eddie-the-lou/latent/pull/496",
+          "title": "Post overlays: any number of stickers per card (TRY-325)",
+          "by": "Eddie \u00b7 Oct 13, 6:01 PM PT",
+          "note": "Folds in Malcolm's #486 sticker designs. Already in use on build 40 (37 stickers added by 5 people)."
+        },
+        {
+          "pr": 497,
+          "url": "https://github.com/eddie-the-lou/latent/pull/497",
+          "title": "Bump to 1.0.7 (40) for TestFlight (TRY-349)",
+          "by": "Eddie \u00b7 Oct 13, 6:15 PM PT",
+          "note": "Build 40 is already showing up in analytics."
+        }
+      ],
+      "stillOnYou": [
+        {
+          "id": "tridha",
+          "title": "Tridha: restore her deleted account or not? TRY-333 was trashed on Oct 13 (9:56 AM PT) with no decision written down, so I don't know your call. Tell me \u201crestore\u201d or \u201cdon't restore\u201d and I'll finish her reply. Draft below, waiting since Oct 9.",
+          "url": "https://linear.app/trylatent/issue/TRY-333/decide-restore-tester-tridhas-age-deleted-account"
+        },
+        {
+          "id": "try-331",
+          "title": "TRY-331 pomodoro breaks cut camera segments (Need Approval, nobody assigned). Malcolm commented Oct 13 that the alert fired again. Last 24h: 18 failed segment saves from 10 people, all on build 36.",
+          "url": "https://linear.app/trylatent/issue/TRY-331/pomodoro-breaks-make-the-camera-watchdog-cut-segments-some-get-lost"
+        },
+        {
+          "id": "pr-417",
+          "title": "#417 Friends' posts before stats (yours, Oct 6) now clashes with main. Rebase it or close it.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/417"
+        },
+        {
+          "id": "pr-397",
+          "title": "#397 Activation report (yours, Oct 4) is still open.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/397"
+        },
+        {
+          "id": "pr-486",
+          "title": "For Malcolm: #486 share stickers is probably closeable because its designs went into #496 (merged). Worth a word with him; I didn't touch it.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/486"
+        }
+      ],
+      "otherOpen": [
+        {
+          "pr": 489,
+          "url": "https://github.com/eddie-the-lou/latent/pull/489",
+          "title": "sim: run lane simulators slim (Malcolm)"
+        },
+        {
+          "pr": 486,
+          "url": "https://github.com/eddie-the-lou/latent/pull/486",
+          "title": "Share stickers: logo, card, activity strip and week, TRY-325 \u2014 folded into merged #496, likely closeable (Malcolm)"
+        },
+        {
+          "pr": 476,
+          "url": "https://github.com/eddie-the-lou/latent/pull/476",
+          "title": "Hidden screens no longer report a visit at launch (Malcolm)"
+        },
+        {
+          "pr": 463,
+          "url": "https://github.com/eddie-the-lou/latent/pull/463",
+          "title": "Fix review notes on #462: Activity loads older notifications as you scroll, TRY-309 (Malcolm)"
+        },
+        {
+          "pr": 417,
+          "url": "https://github.com/eddie-the-lou/latent/pull/417",
+          "title": "Friends' posts land before their stats; big graphs load stats in parallel (Eddie) \u2014 CONFLICTING"
+        },
+        {
+          "pr": 397,
+          "url": "https://github.com/eddie-the-lou/latent/pull/397",
+          "title": "Activation report (daily), plus two analytics fixes (Eddie)"
+        },
+        {
+          "pr": 267,
+          "url": "https://github.com/eddie-the-lou/latent/pull/267",
+          "title": "Group rows nudge with the hand, and group chats open straight into the thread (Malcolm)"
+        },
+        {
+          "pr": 164,
+          "url": "https://github.com/eddie-the-lou/latent/pull/164",
+          "title": "Today mini cards fit their durations; the camera toggle stays put mid-session (Malcolm)"
+        },
+        {
+          "pr": 162,
+          "url": "https://github.com/eddie-the-lou/latent/pull/162",
+          "title": "One frame rule for the timelapse clip: stored size decides, poster is the fallback (Malcolm)"
+        },
+        {
+          "pr": 123,
+          "url": "https://github.com/eddie-the-lou/latent/pull/123",
+          "title": "Sequential dual-camera proof stills (Malcolm, draft)"
+        }
+      ]
+    },
+    "ageHolds": {
+      "open": [],
+      "newLast24h": [],
+      "resolvedLast24h": [],
+      "summary": "No age holds.",
+      "detail": "Nothing open, new, or resolved in the last 24h. Holds ever: 1 (Omar, @omarzz, held Oct 11 9:29 AM PT, released 10:34 AM PT).",
+      "query": "/workspace/feedback-digests/age-holds.sql"
+    },
+    "actions": [
+      {
+        "id": "no-fixes",
+        "title": "No new fixes today. No Cloud Agents started.",
+        "status": "done"
+      },
+      {
+        "id": "ageholds",
+        "title": "No age holds.",
+        "status": "done"
+      },
+      {
+        "id": "tridha",
+        "title": "Tridha reply blocked: restore or not? (TRY-333 trashed with no decision)",
+        "status": "waiting",
+        "url": "https://linear.app/trylatent/issue/TRY-333/decide-restore-tester-tridhas-age-deleted-account"
+      },
+      {
+        "id": "try-331",
+        "title": "TRY-331 pomodoro breaks (Need Approval)",
+        "status": "waiting",
+        "url": "https://linear.app/trylatent/issue/TRY-331/pomodoro-breaks-make-the-camera-watchdog-cut-segments-some-get-lost"
+      },
+      {
+        "id": "pr-417",
+        "title": "#417 clashes with main: rebase or close",
+        "status": "waiting",
+        "url": "https://github.com/eddie-the-lou/latent/pull/417"
+      },
+      {
+        "id": "pr-397",
+        "title": "#397 activation report still open",
+        "status": "waiting",
+        "url": "https://github.com/eddie-the-lou/latent/pull/397"
+      },
+      {
+        "id": "pr-486",
+        "title": "Tell Malcolm #486 is probably closeable (folded into #496)",
+        "status": "waiting",
+        "url": "https://github.com/eddie-the-lou/latent/pull/486"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done",
+        "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-10-14"
+      },
+      {
+        "id": "linear",
+        "title": "No Linear dig issue (no new PRs today)",
+        "status": "done"
+      },
+      {
+        "id": "discord",
+        "title": "Discord: Lukas asked about Android (unanswered, optional reply). Otherwise group study chatter. #tester-chat not visible.",
+        "status": "done"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "backend-blip",
+        "title": "Backend down ~3 minutes (Oct 13, ~3:12\u20133:15 PM PT)",
+        "severity": "medium",
+        "people": 18,
+        "detail": "Supabase returned HTTP 521/522 (origin down) for about 3 minutes: 9 session saves, 3 clip uploads and ~38 group actions failed across ~18 people. It came back on its own. It lines up with Supabase's \u201cMonthly bill increased: new add-on\u201d email at 3:11 PM PT, which fits a compute change restarting the database (my guess, not confirmed). No PostHog event shows whether #487's maintenance screen appeared."
+      },
+      {
+        "id": "try-331",
+        "title": "Pomodoro breaks make the camera watchdog cut segments",
+        "severity": "medium",
+        "people": 10,
+        "detail": "TRY-331 Need Approval, unassigned. segment_finalize_failed 18/10 (all -11847, build 36); capture_stalled dropped to 58/14 from 143/19. Malcolm commented Oct 13 9:06 AM PT that the alert fired again. https://linear.app/trylatent/issue/TRY-331/pomodoro-breaks-make-the-camera-watchdog-cut-segments-some-get-lost"
+      },
+      {
+        "id": "group-action-failed",
+        "title": "Group actions failing more, but only from bad connections",
+        "severity": "low",
+        "people": 86,
+        "detail": "group_action_failed 373/86 (was 171/61). All of it is NSURLError, CancellationError, or the 3:12 PM PT backend blip. The \u201cpermission denied for table group_invites\u201d error is gone (0 in 24h), so #491 worked."
+      },
+      {
+        "id": "save-upload-network",
+        "title": "Some saves and uploads failed on bad connections",
+        "severity": "low",
+        "people": 10,
+        "detail": "clip_upload_failed 26/10 and session_save_failed 30/7. Mostly offline/connection-lost retries plus the blip. No server bug."
+      },
+      {
+        "id": "clip-upload-abandoned",
+        "title": "clip_upload_abandoned no_filename keeps looping for a handful of people",
+        "severity": "low",
+        "people": 6,
+        "detail": "123 events / 6 people (was 157/5), all reason=no_filename, across builds 36\u201340. Long-standing. A possible low-priority fix, but it needs your or Malcolm's call first, so I didn't start an agent."
+      },
+      {
+        "id": "rageclicks",
+        "title": "Rage clicks up a bit with traffic",
+        "severity": "low",
+        "people": 430,
+        "detail": "1,372 from 430 people (was 1,267/384), with ~12% more sessions. Spread out. Top screens: Profile: Insights 188/123, Save Session 147/106, Full Screen Media 142/55, Today 122/70."
+      },
+      {
+        "id": "sentry-auth",
+        "title": "Sentry connector needs re-auth",
+        "severity": "low",
+        "people": null,
+        "detail": "user-Sentry MCP requires authentication. No Sentry data gathered today; nothing invented."
+      }
+    ],
+    "features": [
+      {
+        "id": "android",
+        "title": "Android / Play Store",
+        "count": 1,
+        "detail": "Lukas asked on Discord #general-chat (Oct 14 2:57 AM PT), unanswered. Amitai and Serenity (email, yesterday) were answered."
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 6,
+        "detail": "6 new \u201cStay as a Beta Tester\u201d picks since yesterday's dig, 127 total. Malcolm handles these (TRY-343)."
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 0,
+        "note": "0 new rows in public.feedback since the Oct 13 dig. Latest still @arina (Oct 12 8:47 AM PT), already reported. 70 rows total."
+      },
+      "discord": {
+        "new": 16,
+        "note": "16 new messages, all #general-chat, mostly group study chatter. Only one needs anything: Lukas asked \u201cWhen u gonna launch for android\u201d (Oct 14 2:57 AM PT), still unanswered. Nothing new in #feature-requests, #questions or #announcements. #tester-chat isn't visible."
+      },
+      "gmail": {
+        "new": 0,
+        "note": "0 new user replies. Amitai and Serenity answered Oct 13 3:33 PM PT. Tridha still unanswered, blocked on the restore decision. mbuteler discarded (do not redraft). Not app feedback: Cloudflare for Startups (Jason) replied on the R2 thread Oct 14 6:10 AM PT, unread; Supabase \u201cMonthly bill increased: new add-on\u201d Oct 13 3:11 PM PT; PostHog billing limits updated Oct 13 3:48 PM PT. Pitches skipped. Beta-stayer emails: 0."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "note": "Unchanged vs Oct 13. All three tabs identical (66 / 6 / 8 rows)."
+      },
+      "sentry": {
+        "new": [],
+        "note": "Unavailable: Sentry MCP needs re-auth. No data invented."
+      },
+      "posthog": {
+        "note": "Last 24h vs prior: sessions 1,505/657 (was 1,347/581), installs 367 (was 326), onboarding done 295 (was 248). Backend blip Oct 13 ~3:12\u20133:15 PM PT (HTTP 521/522). group_action_failed 373/86, all network or blip; group_invites permission denied 0. sign_up_failed 0 (spike gone). capture_stalled 58/14 (down from 143/19). segment_finalize_failed 18/10 (TRY-331). clip_upload_abandoned 123/6 no_filename (long-standing). invite_check_failed 29/10 all invalid. friend_request_failed 0. sticker_added 37/5 (new, build 40). Alerts: none firing."
+      },
+      "github": {
+        "note": "Merged since last dig: #491, #492, #493, #494, #495, #496, #497. Open Malcolm: #489, #486 (folded into #496, likely closeable), #476, #463. Eddie open: #417 (CONFLICTING), #397. Stale: #267/#164/#162/#123."
+      },
+      "linear": {
+        "note": "Linear reachable via personal API key. TRY-333 trashed + archived by Eddie Oct 13 9:56 AM PT, no comment or decision. TRY-331 Need Approval (Malcolm comment Oct 13). TRY-339, TRY-341, TRY-312, TRY-316, TRY-325, TRY-348, TRY-349 Done. New: TRY-343 beta-stayer calls (Todo), TRY-345 tag colors (Todo), TRY-346 invite contacts in onboarding (Malcolm, In Progress), TRY-347 marketing research (Malcolm, Todo). Oct 13 dig issue TRY-344 Done. No Oct 14 dig issue (no PRs)."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "discord-lukas",
+        "source": "discord",
+        "username": "Lukas",
+        "whenPT": "Oct 14, 2:57 AM PT",
+        "kind": "question",
+        "quote": "Yo\nWhen u gonna launch for android",
+        "note": "Discord #general-chat \u00b7 unanswered. Optional reply: \u201cAndroid is coming, I'll email you when it's out.\u201d"
+      },
+      {
+        "id": "discord-wakanda",
+        "source": "discord",
+        "username": "Wakanda Panda",
+        "whenPT": "Oct 13, 11:35 PM PT",
+        "kind": "message",
+        "quote": "But I don't have latent",
+        "note": "Discord #general-chat \u00b7 during group study chatter"
+      },
+      {
+        "id": "gmail-tridha",
+        "source": "gmail",
+        "username": "tridhajaiswal0308@gmail.com",
+        "whenPT": "Oct 8, 9:59 PM PT",
+        "kind": "bug",
+        "quote": "Heyy\nI don\u2019t know my when i entered my age on latent (15 year old) it deleted my acc saying its for 13 and above. I had a 3 week long streak as well. Please help me, i don\u2019t want to lose everything please\n\nI am a high schooler and this really means a lot to me. Please i have trust in you that you\u2019ll brung my account back. Please.",
+        "note": "Carry-forward. Still unanswered; blocked on the restore decision (TRY-333 trashed Oct 13 with no decision)."
+      }
+    ],
+    "replyDrafts": [
+      {
+        "id": "tridha",
+        "to": "tridhajaiswal0308@gmail.com",
+        "subject": "Re: TestFlight beta feedback for Latent",
+        "threadId": "1a11f0791c340586",
+        "replyToMessageId": "1a11f0791c340586",
+        "theirMessage": "Heyy\nI don\u2019t know my when i entered my age on latent (15 year old) it deleted my acc saying its for 13 and above. I had a 3 week long streak as well. Please help me, i don\u2019t want to lose everything please\n\nI am a high schooler and this really means a lot to me. Please i have trust in you that you\u2019ll brung my account back. Please.",
+        "theirWhenPT": "Oct 8, 9:59 PM PT",
+        "body": "Hey Tridha, I'm so sorry this happened, that's a really rough way to lose a 3 week streak \ud83d\ude2d The age check removed accounts when the birthday came out under 13, so the wheel probably landed on the wrong year, and we've since changed it so that can't wipe an account anymore. [CHECK: restore decision] You're welcome to sign up again with your real birthday, and I'm here if anything else goes wrong!\n\nEddie",
+        "note": "Oldest unanswered (since Oct 9). BLOCKED: TRY-333 was trashed Oct 13 9:56 AM PT with no decision recorded. Tell me restore or don't, or send without the [CHECK] line.",
+        "blockedOn": "https://linear.app/trylatent/issue/TRY-333/decide-restore-tester-tridhas-age-deleted-account",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878546922545087878"
+      }
+    ],
+    "linearIssue": null,
+    "linearNote": "No Linear dig issue today: no new PRs from this dig."
   }
 };
