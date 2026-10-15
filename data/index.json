@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-15",
+    "title": "Latent daily review · Oct 15",
+    "tldr": "No new fixes today. 17 changes merged overnight (incl. #513 pomodoro / TRY-331 Done). No age holds. 4 Android reply drafts. Sentry still needs re-auth."
+  },
+  {
     "date": "2026-10-14",
     "title": "Latent daily review · Oct 14",
     "tldr": "No new fixes today. 7 changes merged overnight (incl. #491 group invites fix, now live). No age holds. Tridha's reply still waits on your restore call."

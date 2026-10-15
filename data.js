@@ -1,5 +1,10 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-15",
+    "title": "Latent daily review \u00b7 Oct 15",
+    "tldr": "No new fixes today. 17 changes merged overnight (incl. #513 pomodoro / TRY-331 Done). No age holds. 4 Android reply drafts. Sentry still needs re-auth."
+  },
+  {
     "date": "2026-10-14",
     "title": "Latent daily review \u00b7 Oct 14",
     "tldr": "No new fixes today. 7 changes merged overnight (incl. #491 group invites fix, now live). No age holds. Tridha's reply still waits on your restore call."
@@ -692,6 +697,11 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-15",
+      "title": "Latent daily review \u00b7 Oct 15",
+      "tldr": "No new fixes today. 17 changes merged overnight (incl. #513 pomodoro / TRY-331 Done). No age holds. 4 Android reply drafts. Sentry still needs re-auth."
+    },
     {
       "date": "2026-10-14",
       "title": "Latent daily review \u00b7 Oct 14",
@@ -81120,6 +81130,581 @@ window.DIGESTS = {
         "note": "Oldest unanswered (since Oct 9). BLOCKED: TRY-333 was trashed Oct 13 9:56 AM PT with no decision recorded. Tell me restore or don't, or send without the [CHECK] line.",
         "blockedOn": "https://linear.app/trylatent/issue/TRY-333/decide-restore-tester-tridhas-age-deleted-account",
         "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878546922545087878"
+      }
+    ],
+    "linearIssue": null,
+    "linearNote": "No Linear dig issue today: no new PRs from this dig."
+  },
+  "2026-10-15": {
+    "date": "2026-10-15",
+    "title": "Latent daily review \u00b7 Oct 15",
+    "generatedAt": "2026-10-15T16:21:16.092897+00:00",
+    "tldr": [
+      "No new fixes waiting for you today. Nothing new looked like a clear, unfixed code bug that wasn't already owned, so I started no Cloud Agents and made no Linear dig issue.",
+      "No age holds.",
+      "17 changes merged overnight, including #513 (pomodoro breaks no longer cut the end of a focus block \u2014 TRY-331 Done), #505 (big friend lists load posts before stats), camera-off fixes (#504/#511), invite gate \u201cDon't have a code?\u201d (#506), and profile compact header (#515).",
+      "Still on you: your open PRs #512, #502, #500, and #417 (clashes with main; #505 may make it closeable). Linear Need Approval: TRY-370, TRY-369, TRY-363, TRY-361, TRY-360. TRY-343 beta calls. Malcolm has #516 in flight for the freeze (TRY-356).",
+      "4 replies drafted (all Android / Play Store): Elin, Mishad, Neharika, Candela. Tridha dropped \u2014 you already answered her elsewhere. 10 new Stay-as-Beta picks (137 total); Malcolm handles those. In-app 3 new feature asks. Discord: ducky8x wants chat timestamps and sending timelapses in chat. Survey unchanged 39/25/2 of 66. Sentry still needs re-auth."
+    ],
+    "plainTldr": [
+      "No new fixes waiting for you today. Nothing new looked like a clear, unfixed code bug that wasn't already owned, so I started no Cloud Agents and made no Linear dig issue.",
+      "No age holds.",
+      "17 changes merged overnight, including #513 (pomodoro breaks no longer cut the end of a focus block \u2014 TRY-331 Done), #505 (big friend lists load posts before stats), camera-off fixes (#504/#511), invite gate \u201cDon't have a code?\u201d (#506), and profile compact header (#515).",
+      "Still on you: your open PRs #512, #502, #500, and #417 (clashes with main; #505 may make it closeable). Linear Need Approval: TRY-370, TRY-369, TRY-363, TRY-361, TRY-360. TRY-343 beta calls. Malcolm has #516 in flight for the freeze (TRY-356).",
+      "4 replies drafted (all Android / Play Store): Elin, Mishad, Neharika, Candela. Tridha dropped \u2014 you already answered her elsewhere. 10 new Stay-as-Beta picks (137 total); Malcolm handles those. In-app 3 new feature asks. Discord: ducky8x wants chat timestamps and sending timelapses in chat. Survey unchanged 39/25/2 of 66. Sentry still needs re-auth."
+    ],
+    "stats": {
+      "newInApp": 3,
+      "newDiscord": 7,
+      "newGmail": 4,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [],
+      "sentryUnavailable": true,
+      "rawQuotes": 8,
+      "betaOptInsNew": 10,
+      "betaOptInsTotal": 137
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "agentsLaunched": [],
+      "note": "No new fixes today. Nothing new looked like a clear, unfixed code bug that wasn't already owned (features already have Linear tickets; TRY-356 has Malcolm's #516; failure spikes are network or one-person loops), so I started no Cloud Agents and made no Linear dig issue."
+    },
+    "prStatus": {
+      "waiting": [],
+      "openedToday": [],
+      "mergedOvernight": [
+        {
+          "pr": 397,
+          "url": "https://github.com/eddie-the-lou/latent/pull/397",
+          "title": "Two analytics fixes: founder real_friend_added, rage clicks on the front screen",
+          "by": "Eddie \u00b7 Oct 14, 9:44 AM PT",
+          "note": "TRY-351 Done."
+        },
+        {
+          "pr": 476,
+          "url": "https://github.com/eddie-the-lou/latent/pull/476",
+          "title": "Hidden screens no longer report a visit at launch",
+          "by": "Malcolm \u00b7 Oct 14, 10:10 AM PT"
+        },
+        {
+          "pr": 489,
+          "url": "https://github.com/eddie-the-lou/latent/pull/489",
+          "title": "Simulators run leaner (unused iOS services switched off)",
+          "by": "Malcolm \u00b7 Oct 14, 11:09 AM PT",
+          "note": "TRY-355 Done."
+        },
+        {
+          "pr": 501,
+          "url": "https://github.com/eddie-the-lou/latent/pull/501",
+          "title": "Close private tables to signed-out callers; remove friends Reset button",
+          "by": "Malcolm \u00b7 Oct 14, 1:46 PM PT"
+        },
+        {
+          "pr": 504,
+          "url": "https://github.com/eddie-the-lou/latent/pull/504",
+          "title": "Camera-off: pause banner shows in under a second, and you get a full 15:00 to come back",
+          "by": "Eddie \u00b7 Oct 14, 3:15 PM PT",
+          "note": "Part of TRY-306."
+        },
+        {
+          "pr": 503,
+          "url": "https://github.com/eddie-the-lou/latent/pull/503",
+          "title": "Empty Insights sample chart opens Record when you tap it",
+          "by": "Eddie \u00b7 Oct 14, 3:29 PM PT",
+          "note": "TRY-365 Done."
+        },
+        {
+          "pr": 507,
+          "url": "https://github.com/eddie-the-lou/latent/pull/507",
+          "title": "First-post welcome: inviter push + founder-kudos experiment (off)",
+          "by": "Eddie \u00b7 Oct 14, 3:34 PM PT",
+          "note": "TRY-364."
+        },
+        {
+          "pr": 508,
+          "url": "https://github.com/eddie-the-lou/latent/pull/508",
+          "title": "First-post read survives deleted accounts",
+          "by": "Eddie \u00b7 Oct 14, 3:46 PM PT",
+          "note": "TRY-364."
+        },
+        {
+          "pr": 506,
+          "url": "https://github.com/eddie-the-lou/latent/pull/506",
+          "title": "Invite gate: \u201cDon't have a code?\u201d path to the phone waitlist",
+          "by": "Eddie \u00b7 Oct 14, 3:46 PM PT",
+          "note": "TRY-366 Done."
+        },
+        {
+          "pr": 505,
+          "url": "https://github.com/eddie-the-lou/latent/pull/505",
+          "title": "Big friend lists: posts land before stats, and launch stutters less",
+          "by": "Malcolm \u00b7 Oct 14, 4:04 PM PT",
+          "note": "TRY-362 Done. Same idea as open #417."
+        },
+        {
+          "pr": 510,
+          "url": "https://github.com/eddie-the-lou/latent/pull/510",
+          "title": "Profile: yellow Add friends; Friends page: INVITE FRIENDS label",
+          "by": "Eddie \u00b7 Oct 14, 4:06 PM PT",
+          "note": "TRY-367 Done."
+        },
+        {
+          "pr": 509,
+          "url": "https://github.com/eddie-the-lou/latent/pull/509",
+          "title": "Waitlist confirmation points people to a friend's invite link",
+          "by": "Eddie \u00b7 Oct 14, 4:09 PM PT"
+        },
+        {
+          "pr": 511,
+          "url": "https://github.com/eddie-the-lou/latent/pull/511",
+          "title": "Camera-off: a Lock Screen wake is not a return, and recovery waits for the user",
+          "by": "Eddie \u00b7 Oct 14, 7:27 PM PT",
+          "note": "TRY-306 Done."
+        },
+        {
+          "pr": 513,
+          "url": "https://github.com/eddie-the-lou/latent/pull/513",
+          "title": "Pomodoro breaks no longer cut off the end of a focus block",
+          "by": "Malcolm \u00b7 Oct 14, 8:53 PM PT",
+          "note": "TRY-331 Done."
+        },
+        {
+          "pr": 514,
+          "url": "https://github.com/eddie-the-lou/latent/pull/514",
+          "title": "Old posts keep their stickers; sticker drag and pinch rebuilt",
+          "by": "Malcolm \u00b7 Oct 14, 8:57 PM PT",
+          "note": "TRY-354 Done."
+        },
+        {
+          "pr": 498,
+          "url": "https://github.com/eddie-the-lou/latent/pull/498",
+          "title": "Tagged posts opened from a push or Activity show the tag without a relaunch",
+          "by": "Malcolm \u00b7 Oct 14, 9:05 PM PT",
+          "note": "TRY-358 Done (review notes on #492)."
+        },
+        {
+          "pr": 515,
+          "url": "https://github.com/eddie-the-lou/latent/pull/515",
+          "title": "Profile header scrolls away; a compact bar drops in on scroll-up",
+          "by": "Eddie \u00b7 Oct 14, 9:31 PM PT",
+          "note": "TRY-368 Done."
+        }
+      ],
+      "stillOnYou": [
+        {
+          "id": "pr-512",
+          "title": "#512 Invite around the first session (Today card, first-share invite test, invite link on shared cards). Yours, clean, waiting for review.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/512"
+        },
+        {
+          "id": "pr-502",
+          "title": "#502 Activation workplan docs (five handoff briefs). Yours, clean.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/502"
+        },
+        {
+          "id": "pr-500",
+          "title": "#500 Activation page (join-week funnels, Refresh button). Yours, clean.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/500"
+        },
+        {
+          "id": "pr-417",
+          "title": "#417 Friends' posts before stats (yours, Oct 6) still clashes with main. Malcolm's #505 (merged) covers the same idea \u2014 rebase or close.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/417"
+        },
+        {
+          "id": "try-370",
+          "title": "TRY-370 longer timelapse option (Need Approval). From Leo's in-app ask.",
+          "url": "https://linear.app/trylatent/issue/TRY-370/let-people-make-a-longer-timelapse"
+        },
+        {
+          "id": "try-369",
+          "title": "TRY-369 attached videos go silent in full screen (Need Approval). TestFlight report.",
+          "url": "https://linear.app/trylatent/issue/TRY-369/attached-videos-go-silent-when-you-open-them-full-screen"
+        },
+        {
+          "id": "try-363",
+          "title": "TRY-363 let texts from certain contacts through app blocking (Need Approval). From Kristen's in-app ask.",
+          "url": "https://linear.app/trylatent/issue/TRY-363/let-texts-from-certain-people-through-app-blocking"
+        },
+        {
+          "id": "try-361",
+          "title": "TRY-361 app crashes on Mac at the launch screen (Need Approval). Mac isn't a shipping product; decide whether to close.",
+          "url": "https://linear.app/trylatent/issue/TRY-361/app-crashes-on-mac-right-when-the-launch-screen-opens"
+        },
+        {
+          "id": "try-360",
+          "title": "TRY-360 resume a draft after a long break (Need Approval).",
+          "url": "https://linear.app/trylatent/issue/TRY-360/resume-a-draft-after-a-long-break"
+        },
+        {
+          "id": "try-343",
+          "title": "TRY-343 book calls with Stay-as-Beta testers (Todo, assigned to you). 10 new opt-ins today / 137 total.",
+          "url": "https://linear.app/trylatent/issue/TRY-343/book-calls-external-testers-who-want-to-stay-on-as-beta"
+        }
+      ],
+      "otherOpen": [
+        {
+          "pr": 516,
+          "url": "https://github.com/eddie-the-lou/latent/pull/516",
+          "title": "Analytics writes to disk off the main thread (Malcolm, TRY-356 In Progress)"
+        },
+        {
+          "pr": 512,
+          "url": "https://github.com/eddie-the-lou/latent/pull/512",
+          "title": "Invite around the first session (Eddie)"
+        },
+        {
+          "pr": 502,
+          "url": "https://github.com/eddie-the-lou/latent/pull/502",
+          "title": "Activation workplan Oct 14 (Eddie)"
+        },
+        {
+          "pr": 500,
+          "url": "https://github.com/eddie-the-lou/latent/pull/500",
+          "title": "Activation page Refresh + funnels (Eddie)"
+        },
+        {
+          "pr": 499,
+          "url": "https://github.com/eddie-the-lou/latent/pull/499",
+          "title": "Fix review notes on #491 group invites (Malcolm)"
+        },
+        {
+          "pr": 417,
+          "url": "https://github.com/eddie-the-lou/latent/pull/417",
+          "title": "Friends' posts before stats (Eddie) \u2014 CONFLICTING; likely superseded by #505"
+        }
+      ]
+    },
+    "ageHolds": {
+      "open": [],
+      "newLast24h": [],
+      "resolvedLast24h": [],
+      "summary": "No age holds.",
+      "detail": "Nothing open, new, or resolved in the last 24h. Holds ever: 1 (Omar, @omarzz, held Oct 11 9:29 AM PT, released 10:34 AM PT).",
+      "query": "/workspace/feedback-digests/age-holds.sql"
+    },
+    "actions": [
+      {
+        "id": "no-fixes",
+        "title": "No new fixes today. No Cloud Agents started.",
+        "status": "done"
+      },
+      {
+        "id": "ageholds",
+        "title": "No age holds.",
+        "status": "done"
+      },
+      {
+        "id": "replies",
+        "title": "4 Android/Play Store replies drafted (Elin, Mishad, Neharika, Candela). Tridha excluded.",
+        "status": "waiting"
+      },
+      {
+        "id": "pr-512",
+        "title": "Review #512 invite around first session",
+        "status": "waiting",
+        "url": "https://github.com/eddie-the-lou/latent/pull/512"
+      },
+      {
+        "id": "pr-417",
+        "title": "#417 clashes with main; #505 may supersede \u2014 rebase or close",
+        "status": "waiting",
+        "url": "https://github.com/eddie-the-lou/latent/pull/417"
+      },
+      {
+        "id": "need-approval",
+        "title": "Linear Need Approval: TRY-370, TRY-369, TRY-363, TRY-361, TRY-360",
+        "status": "waiting"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done",
+        "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-10-15"
+      },
+      {
+        "id": "linear",
+        "title": "No Linear dig issue (no new PRs from this dig)",
+        "status": "done"
+      },
+      {
+        "id": "discord",
+        "title": "Discord: ducky8x chat features ask; Lukas Android still unanswered from before cutoff. #tester-chat not visible.",
+        "status": "done"
+      },
+      {
+        "id": "sentry",
+        "title": "Sentry needs re-auth",
+        "status": "waiting"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "try-369",
+        "title": "Attached videos go silent in full screen",
+        "severity": "medium",
+        "people": 1,
+        "detail": "TRY-369 Need Approval. TestFlight tester (iPhone 16 Pro): opening a friend's attached video full screen mutes the audio. Not launched \u2014 waiting on your approval call."
+      },
+      {
+        "id": "try-356",
+        "title": "App freezes 4\u201350 sec, sometimes iOS kills it",
+        "severity": "medium",
+        "people": null,
+        "detail": "TRY-356 In Progress (Malcolm). #516 Analytics writes to disk off the main thread is open against it. Owned \u2014 not duplicated."
+      },
+      {
+        "id": "clip-upload-abandoned",
+        "title": "clip_upload_abandoned no_filename still loops for a few people",
+        "severity": "low",
+        "people": 4,
+        "detail": "271 events / 4 people (was 123/6), almost all on build 40 (265). Same long-standing pattern. Needs your or Malcolm's call before an agent."
+      },
+      {
+        "id": "attachment-upload-failed",
+        "title": "attachment_upload_failed spiked for one person",
+        "severity": "low",
+        "people": 5,
+        "detail": "56/5 (was 3/3). 49 of those are one person on build 40 looping. Not a clear multi-user bug."
+      },
+      {
+        "id": "capture-stalled",
+        "title": "capture_stalled and segment_finalize_failed still showing",
+        "severity": "low",
+        "people": 22,
+        "detail": "capture_stalled 86/22 (was 58/14); segment_finalize_failed 28/16. TRY-331 (#513) merged last night ~8:53 PM PT, so today's window still includes older builds. Watch tomorrow."
+      },
+      {
+        "id": "group-action-network",
+        "title": "Group actions failing from bad connections",
+        "severity": "low",
+        "people": 71,
+        "detail": "group_action_failed 271/71 (down from 379/88). Almost all NSURLError / CancellationError. Permission-denied leftovers: group_invites x1, my_groups x3. Malcolm's #499 still open for the #491 review notes."
+      },
+      {
+        "id": "rageclicks",
+        "title": "Rage clicks up with traffic",
+        "severity": "low",
+        "people": 567,
+        "detail": "1,595 from 567 people (was 1,377/430), with more sessions and installs. Top screens: Save Session 220/154, Full Screen Media 198/84, Profile: Insights 177/130, Today 154/102."
+      },
+      {
+        "id": "sentry-auth",
+        "title": "Sentry connector needs re-auth",
+        "severity": "low",
+        "people": null,
+        "detail": "user-Sentry MCP still requires authentication (several days running). No Sentry data gathered; nothing invented. Please re-authorize."
+      }
+    ],
+    "features": [
+      {
+        "id": "android",
+        "title": "Android / Play Store",
+        "count": 5,
+        "detail": "4 new emails (Elin, Mishad, Neharika follow-up, Candela) plus Discord Lukas still unanswered from before cutoff. Drafts below use the stock line."
+      },
+      {
+        "id": "timelapse-length",
+        "title": "Longer / timed timelapse",
+        "count": 1,
+        "detail": "Leo (@ultimatiset) in-app Oct 14 10:25 PM PT. Already TRY-370 Need Approval."
+      },
+      {
+        "id": "contacts-through-block",
+        "title": "Let certain contacts through app blocking",
+        "count": 1,
+        "detail": "Kristen (@krisppro) in-app Oct 14 10:44 AM PT. Already TRY-363 Need Approval."
+      },
+      {
+        "id": "deadlines",
+        "title": "Schedule exam deadlines + hour goals (maybe in groups)",
+        "count": 1,
+        "detail": "Martins (@martins) in-app Oct 15 5:05 AM PT. No open TRY yet \u2014 product call, not a bug fix."
+      },
+      {
+        "id": "discord-chat",
+        "title": "Chat timestamps + send timelapses in Discord chat",
+        "count": 1,
+        "detail": "ducky8x on Discord #feature-requests Oct 15 8:11 AM PT, unanswered."
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 10,
+        "detail": "10 new \u201cStay as a Beta Tester\u201d picks since yesterday, 137 total. Malcolm handles these (TRY-343)."
+      },
+      {
+        "id": "resume-draft",
+        "title": "Resume a draft after a long break",
+        "count": 1,
+        "detail": "Already TRY-360 Need Approval."
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 3,
+        "note": "3 new public.feedback rows since Oct 14 9 AM PT: @martins (deadlines), @ultimatiset/Leo (longer timelapse \u2192 TRY-370), @krisppro/Kristen (contacts through blocking \u2192 TRY-363). 73 rows total."
+      },
+      "discord": {
+        "new": 7,
+        "note": "7 new messages. Actionable: ducky8x in #feature-requests (chat timestamps + send timelapses). #general-chat group study (Trid / \u2606). Lukas Android ask was before cutoff, still unanswered. #tester-chat not visible."
+      },
+      "gmail": {
+        "new": 4,
+        "note": "4 unanswered user replies to lock-in-twin emails (Elin, Mishad, Neharika follow-up, Candela) \u2014 all Android/Play Store. Tridha excluded (answered elsewhere). mbuteler discarded. Amitai/Serenity answered Oct 13. Pitches/DMARC/GitHub skipped."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "note": "Unchanged vs Oct 14. Tabs identical (66 / 6 / 8 rows)."
+      },
+      "sentry": {
+        "new": [],
+        "note": "Unavailable: Sentry MCP needs re-auth (several days). No data invented."
+      },
+      "posthog": {
+        "note": "Last 24h vs prior: sessions 1,781/789 (was 1,510/657), installs 492 (was 367), onboarding 383 (was 295). clip_upload_abandoned 271/4 no_filename (build 40 loop). attachment_upload_failed 56/5 (49 from 1 person). capture_stalled 86/22; segment_finalize_failed 28/16 (TRY-331 merged late evening). group_action_failed 271/71 mostly network. friend_request_failed 8/2 rate_limited. Alerts: none firing (edge loop last 13; clip bloat 1.56)."
+      },
+      "github": {
+        "note": "17 merged since last dig (#397\u2013#515 list above). Open: Eddie #512/#502/#500/#417(dirty); Malcolm #516/#499."
+      },
+      "linear": {
+        "note": "TRY-331 Done (#513). Need Approval: TRY-370, TRY-369, TRY-363, TRY-361, TRY-360. TRY-356 In Progress (Malcolm, #516). TRY-343 Todo (Eddie). No Oct 15 dig issue (no dig PRs)."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "inapp-martins",
+        "source": "in-app",
+        "username": "@martins",
+        "whenPT": "Oct 15, 5:05 AM PT",
+        "kind": "feature",
+        "quote": "hi one thing you could add that i would personally appreciate a lot is the ability to schedule deadlines (for example the date of exams for students) and a set amount of hours you need to dedicate to it, maybe in total or on set days. i think it would help a lot with commitment, especially if we had the ability to add them to groups in order to compete for who gets to it with the most hours with maybe a dedicated leaderboard",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 feature"
+      },
+      {
+        "id": "inapp-leo",
+        "source": "in-app",
+        "username": "@ultimatiset (Leo)",
+        "whenPT": "Oct 14, 10:25 PM PT",
+        "kind": "feature",
+        "quote": "Set a time for the timelapse. Seems like shorter study times get more frames while longer ones cut more. Would like there to be an option to have a longer timelapse",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 already TRY-370"
+      },
+      {
+        "id": "inapp-kristen",
+        "source": "in-app",
+        "username": "@krisppro (Kristen)",
+        "whenPT": "Oct 14, 10:44 AM PT",
+        "kind": "feature",
+        "quote": "Could we block apps but keep specific ones like for emergencies I need to still get them from specific people at least from contacts. That would be an awesome feature",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 already TRY-363"
+      },
+      {
+        "id": "discord-ducky",
+        "source": "discord",
+        "username": "ducky8x",
+        "whenPT": "Oct 15, 8:11 AM PT",
+        "kind": "feature",
+        "quote": "maybe show time and date in the chat? also sending your timelapses in chat would be cool",
+        "note": "Discord #feature-requests \u00b7 no team reply"
+      },
+      {
+        "id": "gmail-elin",
+        "source": "gmail",
+        "username": "elinxu808@gmail.com",
+        "whenPT": "Oct 14, 10:55 PM PT",
+        "kind": "question",
+        "quote": "Hi Eddiie,\nIs this app only for apple users right now? Are you planning on making it so that android users can also access this app?\n\nJust wondering",
+        "note": "Reply to lock in twin \u00b7 draft below"
+      },
+      {
+        "id": "gmail-mishad",
+        "source": "gmail",
+        "username": "mishadritov@gmail.com",
+        "whenPT": "Oct 15, 4:10 AM PT",
+        "kind": "question",
+        "quote": "Hi, Eddie! Will Latent be released on Google Play?",
+        "note": "Reply to lock in twin \u00b7 draft below"
+      },
+      {
+        "id": "gmail-neharika",
+        "source": "gmail",
+        "username": "neharikathakur0609@gmail.com",
+        "whenPT": "Oct 15, 5:33 AM PT",
+        "kind": "question",
+        "quote": "oh alright\ni was looking forward to it \ud83e\udd13\nupdate me once its avl for android thou.",
+        "note": "Follow-up after Eddie's Oct 12 Android reply \u00b7 draft below"
+      },
+      {
+        "id": "gmail-candela",
+        "source": "gmail",
+        "username": "boggiacandelapilar@gmail.com",
+        "whenPT": "Oct 15, 7:12 AM PT",
+        "kind": "question",
+        "quote": "Hi Eddie,\nHow are you? I've waited for this since I saw the reel on ig. Congrats on the official launching. I'd love to try it but recently I switched to Samsung and it's not available on PlaysStore, anyway as soon as it becomes available there I will download it and enjoy it.\nGreetings and, again, congratulations on it launching.\nSincerely,\nCandela",
+        "note": "Reply to lock in twin \u00b7 Samsung / Play Store \u00b7 draft below"
+      }
+    ],
+    "replyDrafts": [
+      {
+        "id": "elin",
+        "to": "elinxu808@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a13e214ba152066",
+        "replyToMessageId": "1a13e214ba152066",
+        "theirMessage": "Hi Eddiie,\nIs this app only for apple users right now? Are you planning on making it so that android users can also access this app?\n\nJust wondering",
+        "theirWhenPT": "Oct 14, 10:55 PM PT",
+        "body": "Hey Elin, yeah for now it's only on the App Store, sorry! Android is coming, I'll email you when it's out. Thanks so much for signing up, it means a lot.\n\nEddie",
+        "note": "Unanswered. Android stock line.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879094048192798822"
+      },
+      {
+        "id": "mishad",
+        "to": "mishadritov@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a13f41856ab5311",
+        "replyToMessageId": "1a13f41856ab5311",
+        "theirMessage": "Hi, Eddie! Will Latent be released on Google Play?",
+        "theirWhenPT": "Oct 15, 4:10 AM PT",
+        "body": "Hey, not yet, sorry! It's App Store only for now. Android is coming, I'll email you when it's out. Thanks for signing up!\n\nEddie",
+        "note": "Unanswered. Android stock line.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879113854914089745"
+      },
+      {
+        "id": "neharika",
+        "to": "neharikathakur0609@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a130b0fa022c329",
+        "replyToMessageId": "1a13f8dd7e841bf2",
+        "theirMessage": "oh alright\ni was looking forward to it \ud83e\udd13\nupdate me once its avl for android thou.",
+        "theirWhenPT": "Oct 15, 5:33 AM PT",
+        "body": "Will do, you're on the list! I'll email you the second Android is out.\n\nEddie",
+        "note": "Unanswered. Android stock line.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878857631282676521"
+      },
+      {
+        "id": "candela",
+        "to": "boggiacandelapilar@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a13fe8c69ac69ff",
+        "replyToMessageId": "1a13fe8c69ac69ff",
+        "theirMessage": "Hi Eddie,\nHow are you? I've waited for this since I saw the reel on ig. Congrats on the official launching. I'd love to try it but recently I switched to Samsung and it's not available on PlaysStore, anyway as soon as it becomes available there I will download it and enjoy it.\nGreetings and, again, congratulations on it launching.\nSincerely,\nCandela",
+        "theirWhenPT": "Oct 15, 7:12 AM PT",
+        "body": "Hey Candela, thank you so much, that means a lot! Yeah it's App Store only for now, sorry about the Samsung switch. Android is coming, I'll email you when it's out so you can grab it on Play Store. Can't wait for you to try it.\n\nEddie",
+        "note": "Unanswered. Android stock line.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879125348565412351"
       }
     ],
     "linearIssue": null,
