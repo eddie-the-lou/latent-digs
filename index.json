@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-17",
+    "title": "Latent daily review · Oct 17",
+    "tldr": "4 fixes waiting (#523, #534, #535, #536): Dynamic Island stuck, Edit tags button, Camera switch missing, plus Oct 16's video-link loop. Oct 16's review didn't go out; folded in. @faisal report closed. 10 merged overnight. No age holds. 10 reply drafts."
+  },
+  {
+    "date": "2026-10-16",
+    "title": "Latent daily review · Oct 16",
+    "tldr": "(Not emailed; folded into Oct 17.) URGENT child safety report still open. 1 fix: stop the video-link retry loop on bad networks (PR #523). 6 merged overnight (incl. #516 freezes fix). No age holds. 4 reply drafts. Sentry still needs re-auth."
+  },
+  {
     "date": "2026-10-15",
     "title": "Latent daily review · Oct 15",
     "tldr": "No new fixes today. 17 changes merged overnight (incl. #513 pomodoro / TRY-331 Done). No age holds. 4 Android reply drafts. Sentry still needs re-auth."

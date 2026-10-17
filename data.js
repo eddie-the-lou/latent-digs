@@ -1,5 +1,15 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-17",
+    "title": "Latent daily review \u00b7 Oct 17",
+    "tldr": "4 fixes waiting (#523, #534, #535, #536): Dynamic Island stuck, Edit tags button, Camera switch missing, plus Oct 16's video-link loop. Oct 16's review didn't go out; folded in. @faisal report closed. 10 merged overnight. No age holds. 10 reply drafts."
+  },
+  {
+    "date": "2026-10-16",
+    "title": "Latent daily review \u00b7 Oct 16",
+    "tldr": "(Not emailed; folded into Oct 17.) URGENT child safety report still open. 1 fix: stop the video-link retry loop on bad networks (PR #523). 6 merged overnight (incl. #516 freezes fix). No age holds. 4 reply drafts. Sentry still needs re-auth."
+  },
+  {
     "date": "2026-10-15",
     "title": "Latent daily review \u00b7 Oct 15",
     "tldr": "No new fixes today. 17 changes merged overnight (incl. #513 pomodoro / TRY-331 Done). No age holds. 4 Android reply drafts. Sentry still needs re-auth."
@@ -697,6 +707,16 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-17",
+      "title": "Latent daily review \u00b7 Oct 17",
+      "tldr": "4 fixes waiting (#523, #534, #535, #536): Dynamic Island stuck, Edit tags button, Camera switch missing, plus Oct 16's video-link loop. Oct 16's review didn't go out; folded in. @faisal report closed. 10 merged overnight. No age holds. 10 reply drafts."
+    },
+    {
+      "date": "2026-10-16",
+      "title": "Latent daily review \u00b7 Oct 16",
+      "tldr": "(Not emailed; folded into Oct 17.) URGENT child safety report still open. 1 fix: stop the video-link retry loop on bad networks (PR #523). 6 merged overnight (incl. #516 freezes fix). No age holds. 4 reply drafts. Sentry still needs re-auth."
+    },
     {
       "date": "2026-10-15",
       "title": "Latent daily review \u00b7 Oct 15",
@@ -81709,5 +81729,1904 @@ window.DIGESTS = {
     ],
     "linearIssue": null,
     "linearNote": "No Linear dig issue today: no new PRs from this dig."
+  },
+  "2026-10-16": {
+    "date": "2026-10-16",
+    "title": "Latent daily review \u00b7 Oct 16",
+    "generatedAt": "2026-10-16T16:35:35.882513+00:00",
+    "tldr": [
+      "Update Oct 17: this review was prepared but never emailed, so its items were folded into the Oct 17 review. Since then the @faisal child safety report was dismissed by Malcolm (Oct 16, 11:30 AM PT, TRY-388 Done), PR #523 opened for the video-link loop, and the loop alert stopped firing after #532.",
+      "URGENT: a child safety report on @faisal (from @larp, 8:20 AM PT today) is still open in the moderation queue. You or Malcolm need to handle it now per docs/MODERATION.md. I didn't touch it.",
+      "1 fix in progress: a Cloud Agent is stopping a video-link retry loop on bad cellular (one phone hit ~794 failed retries in an evening; PostHog's \u201cEdge function loop\u201d alert is firing at 217/hr). PR: #523.",
+      "No age holds.",
+      "6 changes merged overnight plus a 1.0.7 (41) TestFlight build: #516 fixes the 4\u201350 second freezes (TRY-356 Done), #517 adds Korean and Spanish, #512 invite-around-sessions, #520 share-sticker test, #519 note-to-future-self test, #521 flags doc.",
+      "Still on you: #502, #500, #417 (clashes with main; #505 likely replaces it). 5 new Linear Need Approval tickets (TRY-386 friend-stats crash, TRY-385 camera freeze, TRY-384, TRY-381, TRY-376) plus 5 carried over. New: TRY-374 App Store screenshots.",
+      "4 replies drafted: mamaev and imthe.abete (Android), Matthew Kelly (wants to be a tester; has a [CHECK]), Mishad's thank-you (optional). Discord: parnik wants a yearly \u201cSpotify Wrapped for Latent\u201d; Hagaywub asked where to get an invite code (unanswered). Installs ~3x (1,604). 4 new beta opt-ins / 141 (Malcolm). Survey unchanged. Sentry still needs re-auth."
+    ],
+    "plainTldr": [
+      "Update Oct 17: this review was prepared but never emailed, so its items were folded into the Oct 17 review. Since then the @faisal child safety report was dismissed by Malcolm (Oct 16, 11:30 AM PT, TRY-388 Done), PR #523 opened for the video-link loop, and the loop alert stopped firing after #532.",
+      "URGENT: a child safety report on @faisal (from @larp, 8:20 AM PT today) is still open in the moderation queue. You or Malcolm need to handle it now per docs/MODERATION.md. I didn't touch it.",
+      "1 fix in progress: a Cloud Agent is stopping a video-link retry loop on bad cellular (one phone hit ~794 failed retries in an evening; PostHog's \u201cEdge function loop\u201d alert is firing at 217/hr). PR: #523.",
+      "No age holds.",
+      "6 changes merged overnight plus a 1.0.7 (41) TestFlight build: #516 fixes the 4\u201350 second freezes (TRY-356 Done), #517 adds Korean and Spanish, #512 invite-around-sessions, #520 share-sticker test, #519 note-to-future-self test, #521 flags doc.",
+      "Still on you: #502, #500, #417 (clashes with main; #505 likely replaces it). 5 new Linear Need Approval tickets (TRY-386 friend-stats crash, TRY-385 camera freeze, TRY-384, TRY-381, TRY-376) plus 5 carried over. New: TRY-374 App Store screenshots.",
+      "4 replies drafted: mamaev and imthe.abete (Android), Matthew Kelly (wants to be a tester; has a [CHECK]), Mishad's thank-you (optional). Discord: parnik wants a yearly \u201cSpotify Wrapped for Latent\u201d; Hagaywub asked where to get an invite code (unanswered). Installs ~3x (1,604). 4 new beta opt-ins / 141 (Malcolm). Survey unchanged. Sentry still needs re-auth."
+    ],
+    "urgent": [
+      {
+        "id": "child-safety",
+        "kind": "moderation",
+        "title": "Child safety report: @faisal (reported by @larp)",
+        "whenPT": "Oct 16, 8:20 AM PT",
+        "reportId": "ceac95cf-5553-426a-91b5-152633c20b07",
+        "subject": "[URGENT \u00b7 child safety] [Latent] user reported: @faisal",
+        "from": "reports@mail.trylatent.co",
+        "to": "support@trylatent.co, Malcolm",
+        "status": "Still open in the moderation queue at ~9:25 AM PT (about an hour old).",
+        "ask": "You or Malcolm need to handle this now, per docs/MODERATION.md. The dig only looked (read-only) and took no action."
+      },
+      {
+        "id": "edge-loop-alert",
+        "kind": "alert",
+        "title": "PostHog alert firing: \u201cEdge function loop: over 200 retry failures in an hour\u201d",
+        "whenPT": "notified Oct 16, 8:27 AM PT (Malcolm subscribed)",
+        "url": "https://us.posthog.com/project/505306/alerts?alert_type=insights&alert_id=01a0d53a-52f9-0000-c224-2e912c93aa4a",
+        "status": "Firing at 217/hr (worst hour 288/hr, 10 PM PT last night).",
+        "ask": "This is today's fix (Cloud Agent still working). Nothing else needed from you yet; Malcolm gets this alert and fixed earlier loops (#225/#284), so he may want a look at the PR."
+      }
+    ],
+    "stats": {
+      "newInApp": 3,
+      "newDiscord": 76,
+      "newGmail": 4,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [],
+      "sentryUnavailable": true,
+      "rawQuotes": 16,
+      "betaOptInsNew": 4,
+      "betaOptInsTotal": 141,
+      "installs24h": 1604,
+      "installsPrev24h": 498
+    },
+    "whatIDidToday": {
+      "fixesOpened": [
+        {
+          "pr": 523,
+          "url": "https://github.com/eddie-the-lou/latent/pull/523",
+          "agent": "https://cursor.com/agents/bc-285f06ed-2714-5cb2-852d-049ca5044cc7",
+          "title": "Stop the clip stream fallback retry loop on bad networks",
+          "reporter": "PostHog \u00b7 \u201cEdge function loop\u201d alert firing (217/hr) \u00b7 ~1,265 failed retries since yesterday 9 AM PT \u00b7 build 39, mostly 2 phones on cellular",
+          "status": "waiting for your review",
+          "whatItFixes": "On bad cellular, the app kept re-asking our server for a video link in a loop for hours. One phone hit ~794 failed retries in a single evening (Oct 15, 5:05\u201310:54 PM PT), a second ~370 this morning, and PostHog's \u201cEdge function loop\u201d alert fired at 217 an hour. The fix makes the app back off after a failure instead of retrying right away, and recover on its own when the network comes back.",
+          "howToCheck": "On cellular or weak signal, leave a friend's clip that hasn't finished loading on screen. Turn airplane mode on for a minute, then off: within a few seconds the clip should play without force-quitting. Scrolling the post away and back should also retry."
+        }
+      ],
+      "agentsLaunched": [
+        {
+          "id": "bc-285f06ed-2714-5cb2-852d-049ca5044cc7",
+          "url": "https://cursor.com/agents/bc-285f06ed-2714-5cb2-852d-049ca5044cc7",
+          "status": "finished",
+          "pr": 523,
+          "prUrl": "https://github.com/eddie-the-lou/latent/pull/523"
+        }
+      ],
+      "note": "Launched 1 Cloud Agent for the video-link retry loop behind PostHog's firing \u201cEdge function loop\u201d alert. PR: #523."
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 523,
+          "url": "https://github.com/eddie-the-lou/latent/pull/523",
+          "title": "Stop the clip stream fallback retry loop on bad networks",
+          "by": "Cloud Agent \u00b7 Oct 16",
+          "agent": "https://cursor.com/agents/bc-285f06ed-2714-5cb2-852d-049ca5044cc7"
+        }
+      ],
+      "openedToday": [
+        {
+          "pr": 523,
+          "url": "https://github.com/eddie-the-lou/latent/pull/523",
+          "title": "Stop the clip stream fallback retry loop on bad networks",
+          "agent": "https://cursor.com/agents/bc-285f06ed-2714-5cb2-852d-049ca5044cc7"
+        }
+      ],
+      "mergedOvernight": [
+        {
+          "pr": 516,
+          "url": "https://github.com/eddie-the-lou/latent/pull/516",
+          "title": "Analytics writes to disk off the main thread (fixes the 4\u201350 second freezes)",
+          "by": "Malcolm \u00b7 Oct 15, 10:01 AM PT",
+          "note": "TRY-356 Done."
+        },
+        {
+          "pr": 517,
+          "url": "https://github.com/eddie-the-lou/latent/pull/517",
+          "title": "Korean and Spanish: whole app translated; Settings \u203a Language switches it",
+          "by": "Malcolm \u00b7 Oct 15, 12:18 PM PT",
+          "note": "TRY-372 Done."
+        },
+        {
+          "pr": 520,
+          "url": "https://github.com/eddie-the-lou/latent/pull/520",
+          "title": "A/B test of the default share sticker: Editorial vs Big number",
+          "by": "Eddie \u00b7 Oct 15, 3:59 PM PT",
+          "note": "TRY-378 Done."
+        },
+        {
+          "pr": 512,
+          "url": "https://github.com/eddie-the-lou/latent/pull/512",
+          "title": "Invite around sessions: Today card for anyone with no real friend, Share screen leads with inviting, invite link on shared cards",
+          "by": "Eddie \u00b7 Oct 15, 4:48 PM PT",
+          "note": "TRY-380 Done. Was on yesterday's Still on you."
+        },
+        {
+          "pr": 519,
+          "url": "https://github.com/eddie-the-lou/latent/pull/519",
+          "title": "A note to your future self at the commitment step (commitment_message, 50/50)",
+          "by": "Eddie \u00b7 Oct 15, 5:42 PM PT",
+          "note": "TRY-383 Done."
+        },
+        {
+          "pr": 521,
+          "url": "https://github.com/eddie-the-lou/latent/pull/521",
+          "title": "Feature flags doc: commitment_message",
+          "by": "Eddie \u00b7 Oct 15, 5:43 PM PT",
+          "note": "TRY-382 Done."
+        }
+      ],
+      "directCommits": [
+        {
+          "sha": "ddeffbb",
+          "url": "https://github.com/eddie-the-lou/latent/commit/ddeffbb",
+          "title": "Bump to 1.0.7 (41) for TestFlight",
+          "by": "Eddie \u00b7 Oct 15, 6:15 PM PT"
+        }
+      ],
+      "stillOnYou": [
+        {
+          "id": "child-safety",
+          "title": "URGENT: child safety report on @faisal (from @larp, Oct 16 8:20 AM PT) is still open in the moderation queue. You or Malcolm need to handle it per docs/MODERATION.md.",
+          "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-10-16"
+        },
+        {
+          "id": "pr-502",
+          "title": "#502 Activation workplan docs (five handoff briefs). Yours, clean.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/502"
+        },
+        {
+          "id": "pr-500",
+          "title": "#500 Activation page (join-week funnels, Refresh button). Yours, clean.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/500"
+        },
+        {
+          "id": "pr-417",
+          "title": "#417 Friends' posts before stats (yours, Oct 6) still clashes with main. Malcolm's merged #505 likely covers the same idea, so rebase or close.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/417"
+        },
+        {
+          "id": "try-386",
+          "title": "NEW \u00b7 TRY-386 app crashes opening a friend's profile stats (Need Approval; a bot bot fix branch is waiting).",
+          "url": "https://linear.app/trylatent/issue/TRY-386/app-crashes-opening-a-friends-profile-stats"
+        },
+        {
+          "id": "try-385",
+          "title": "NEW \u00b7 TRY-385 app freezes while the camera sets up (Need Approval).",
+          "url": "https://linear.app/trylatent/issue/TRY-385/app-freezes-while-the-camera-sets-up"
+        },
+        {
+          "id": "try-384",
+          "title": "NEW \u00b7 TRY-384 keep the session running in another app (Need Approval). From Hsyn's in-app ask.",
+          "url": "https://linear.app/trylatent/issue/TRY-384/keep-the-session-running-when-i-switch-to-another-app"
+        },
+        {
+          "id": "try-381",
+          "title": "NEW \u00b7 TRY-381 private sessions out of total time (Need Approval). From Sophia's in-app ask.",
+          "url": "https://linear.app/trylatent/issue/TRY-381/private-sessions-shouldnt-have-to-count-in-total-time"
+        },
+        {
+          "id": "try-376",
+          "title": "NEW \u00b7 TRY-376 sent message stays in the group-chat typing bar (Need Approval; a bot bot fix branch is waiting). From Shlok's in-app report.",
+          "url": "https://linear.app/trylatent/issue/TRY-376/sent-message-stays-in-the-typing-bar-in-group-chat"
+        },
+        {
+          "id": "try-370",
+          "title": "TRY-370 longer timelapse option (Need Approval, carried over).",
+          "url": "https://linear.app/trylatent/issue/TRY-370/let-people-make-a-longer-timelapse"
+        },
+        {
+          "id": "try-369",
+          "title": "TRY-369 attached videos go silent in full screen (Need Approval, carried over).",
+          "url": "https://linear.app/trylatent/issue/TRY-369/attached-videos-go-silent-when-you-open-them-full-screen"
+        },
+        {
+          "id": "try-363",
+          "title": "TRY-363 let texts from certain contacts through app blocking (Need Approval, carried over).",
+          "url": "https://linear.app/trylatent/issue/TRY-363/let-texts-from-certain-people-through-app-blocking"
+        },
+        {
+          "id": "try-361",
+          "title": "TRY-361 app crashes on Mac at the launch screen (Need Approval, carried over). Mac isn't a shipping product; decide whether to close.",
+          "url": "https://linear.app/trylatent/issue/TRY-361/app-crashes-on-mac-right-when-the-launch-screen-opens"
+        },
+        {
+          "id": "try-360",
+          "title": "TRY-360 resume a draft after a long break (Need Approval, carried over).",
+          "url": "https://linear.app/trylatent/issue/TRY-360/resume-a-draft-after-a-long-break"
+        },
+        {
+          "id": "try-374",
+          "title": "NEW \u00b7 TRY-374 update App Store screenshots (Todo, assigned to you Oct 15).",
+          "url": "https://linear.app/trylatent/issue/TRY-374/update-app-store-screenshots"
+        },
+        {
+          "id": "try-343",
+          "title": "TRY-343 book calls with Stay-as-Beta testers (Todo, assigned to you). 4 new opt-ins today / 141 total; Malcolm handles these.",
+          "url": "https://linear.app/trylatent/issue/TRY-343/book-calls-external-testers-who-want-to-stay-on-as-beta"
+        }
+      ],
+      "otherOpen": [
+        {
+          "pr": 522,
+          "url": "https://github.com/eddie-the-lou/latent/pull/522",
+          "title": "Changing the clock mid-session keeps the time worked (Malcolm, TRY-375 In Progress). Clean. TRY-375 says to reply to Jaeha once it ships."
+        },
+        {
+          "pr": 518,
+          "url": "https://github.com/eddie-the-lou/latent/pull/518",
+          "title": "Review notes on #505 (Malcolm placeholder, no code yet). Flags a possible crash: a friend's stats could overflow a number on refresh."
+        },
+        {
+          "pr": 499,
+          "url": "https://github.com/eddie-the-lou/latent/pull/499",
+          "title": "Review notes on #491 group invites (Malcolm placeholder, no code yet)."
+        },
+        {
+          "pr": 502,
+          "url": "https://github.com/eddie-the-lou/latent/pull/502",
+          "title": "Activation workplan Oct 14 (Eddie)"
+        },
+        {
+          "pr": 500,
+          "url": "https://github.com/eddie-the-lou/latent/pull/500",
+          "title": "Activation page Refresh + funnels (Eddie)"
+        },
+        {
+          "pr": 417,
+          "url": "https://github.com/eddie-the-lou/latent/pull/417",
+          "title": "Friends' posts before stats (Eddie). CONFLICTING; likely superseded by #505"
+        }
+      ]
+    },
+    "ageHolds": {
+      "open": [],
+      "newLast24h": [],
+      "resolvedLast24h": [],
+      "summary": "No age holds.",
+      "detail": "Nothing open, new, or resolved in the last 24h. Holds ever: 1 (Omar, @omarzz, held Oct 11 9:29 AM PT, released 10:34 AM PT).",
+      "query": "/workspace/feedback-digests/age-holds.sql"
+    },
+    "actions": [
+      {
+        "id": "child-safety",
+        "title": "URGENT: handle the child safety report on @faisal (still open)",
+        "plainSummary": "Reported by @larp at 8:20 AM PT. You or Malcolm, per docs/MODERATION.md. The dig took no action.",
+        "status": "Needs you now"
+      },
+      {
+        "id": "fix-edge-loop",
+        "title": "Review the fix: stop the video-link retry loop on bad networks",
+        "plainSummary": "On bad cellular, the app kept re-asking our server for a video link in a loop for hours. One phone hit ~794 failed retries in a single evening (Oct 15, 5:05\u201310:54 PM PT), a second ~370 this morning, and PostHog's \u201cEdge function loop\u201d alert fired at 217 an hour. The fix makes the app back off after a failure instead of retrying right away, and recover on its own when the network comes back. How to check: On cellular or weak signal, leave a friend's clip that hasn't finished loading on screen. Turn airplane mode on for a minute, then off: within a few seconds the clip should play without force-quitting. Scrolling the post away and back should also retry.",
+        "status": "Waiting for your review",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/523",
+        "agentUrl": "https://cursor.com/agents/bc-285f06ed-2714-5cb2-852d-049ca5044cc7"
+      },
+      {
+        "id": "replies",
+        "title": "4 reply drafts: mamaev, Mishad (optional), Matthew Kelly ([CHECK]), imthe.abete",
+        "plainSummary": "Not sent. Approve each in chat.",
+        "status": "Waiting for your review"
+      },
+      {
+        "id": "need-approval-new",
+        "title": "Linear Need Approval (new): TRY-386, TRY-385, TRY-384, TRY-381, TRY-376",
+        "plainSummary": "TRY-386 and TRY-376 already have bot bot fix branches.",
+        "status": "Needs your approval"
+      },
+      {
+        "id": "need-approval-old",
+        "title": "Linear Need Approval (carried over): TRY-370, TRY-369, TRY-363, TRY-361, TRY-360",
+        "plainSummary": "No change since yesterday.",
+        "status": "Needs your approval"
+      },
+      {
+        "id": "pr-417",
+        "title": "#417 clashes with main; #505 likely replaces it, so rebase or close",
+        "plainSummary": "Open since Oct 6.",
+        "status": "Waiting for your review",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/417",
+        "prNumber": 417
+      },
+      {
+        "id": "pr-502-500",
+        "title": "Your open PRs #502 (workplan docs) and #500 (activation page)",
+        "plainSummary": "Both clean.",
+        "status": "Waiting for your review",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/500",
+        "prNumber": 500
+      },
+      {
+        "id": "try-374",
+        "title": "TRY-374 update App Store screenshots (assigned to you)",
+        "plainSummary": "New Oct 15.",
+        "status": "Todo"
+      },
+      {
+        "id": "sentry",
+        "title": "Sentry needs re-auth",
+        "plainSummary": "No crash data again today.",
+        "status": "Needs you"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done",
+        "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-10-16"
+      },
+      {
+        "id": "linear",
+        "title": "Linear dig issue (Need Approval)",
+        "status": "done",
+        "url": "https://linear.app/trylatent/issue/TRY-410/daily-dig-2026-10-17-4-fixes-waiting-for-review-523-536"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "child-safety",
+        "title": "URGENT: child safety report on @faisal still open",
+        "severity": "urgent",
+        "people": 1,
+        "status": "Needs you now",
+        "summary": "Reported by @larp Oct 16 8:20 AM PT. Still open in the moderation queue at ~9:25 AM PT.",
+        "detail": "Email \u201c[URGENT \u00b7 child safety] [Latent] user reported: @faisal\u201d from reports@mail.trylatent.co to support@ and Malcolm, Oct 16 8:20 AM PT. Reason: child safety (involves a minor). Report id ceac95cf-5553-426a-91b5-152633c20b07. Read-only check at ~9:25 AM PT: still open in private.moderation_queue. Per docs/MODERATION.md this needs action immediately by Eddie or Malcolm. The dig took no action.",
+        "sources": [
+          "gmail",
+          "supabase moderation_queue"
+        ]
+      },
+      {
+        "id": "edge-loop",
+        "title": "Video-link retry loop on bad cellular (alert firing)",
+        "severity": "medium",
+        "people": 4,
+        "status": "Fix opened \u2014 agent still working",
+        "summary": "PostHog \u201cEdge function loop\u201d alert firing at 217/hr. A Cloud Agent is fixing it today.",
+        "detail": "media_invoke_retry_exhausted ~1,330 since Oct 15 9 AM PT; ~1,265 from clip_stream_fallback (playback_batch, 3 attempts), build 39 only. Two phones on cellular: 794 (Oct 15 5:05\u201310:54 PM PT, while recording a session) and 370 (Oct 16 6:28\u20138:09 AM PT); next 60 and 18. None had these the day before. Peak 288/hr at 10 PM PT. Cause (likely): a failed video-link request can be re-asked right away by every redraw. Fix: back off per clip after a failure; recover when the network returns.",
+        "actionNote": "Launched a Cloud Agent (https://cursor.com/agents/bc-285f06ed-2714-5cb2-852d-049ca5044cc7). PR: #523.",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/523",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "try-386",
+        "title": "App crashes opening a friend's profile stats",
+        "severity": "medium",
+        "people": null,
+        "status": "Need Approval",
+        "summary": "TRY-386, new. A bot bot fix branch is waiting for approval.",
+        "detail": "TRY-386 Need Approval (filed by bot bot from Sentry APPLE-IOS-81). Fix branch malcolmemcdonald1/try-386-\u2026. Malcolm's #518 placeholder also flags a possible crash when a friend's stats refresh (a number overflow); may be related.",
+        "sources": [
+          "linear",
+          "sentry"
+        ]
+      },
+      {
+        "id": "try-385",
+        "title": "App freezes while the camera sets up",
+        "severity": "medium",
+        "people": null,
+        "status": "Need Approval",
+        "summary": "TRY-385, new.",
+        "detail": "TRY-385 Need Approval (bot bot, from a Sentry ~22 s camera-start hang).",
+        "sources": [
+          "linear",
+          "sentry"
+        ]
+      },
+      {
+        "id": "try-376",
+        "title": "Sent group-chat message stays in the typing bar",
+        "severity": "low",
+        "people": 1,
+        "status": "Need Approval",
+        "summary": "Shlok (@shlokp) in-app, build 1.0.7 (40). TRY-376 with a bot bot fix branch.",
+        "detail": "Shlok Pandya, in-app bug, 1.0.7 (40), iOS 26.6.1, Oct 15 1:43 PM PT. TRY-376 Need Approval; fix branch malcolmemcdonald1/try-376-\u2026.",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "invite-code",
+        "title": "People don't know where to get an invite code",
+        "severity": "low",
+        "people": 128,
+        "status": "Open",
+        "summary": "Hagaywub asked on Discord (unanswered). invite_check_failed 302 tries / 128 people, all invalid codes.",
+        "detail": "Discord #general-chat Oct 16 8:12 AM PT, Hagaywub: \u201cWhere can i get the invitation code\u201d (no team reply). PostHog invite_check_failed 302/128 (was 64/25), all \u2018invalid\u2019 code, rising with the install spike. #506 (\u201cDon't have a code?\u201d \u2192 phone waitlist) merged Oct 14. Onboarding rage clicks also rose faster than installs (Evidence 231/144, was 58; Reframe 130/99; Trap 75/57).",
+        "sources": [
+          "discord",
+          "posthog"
+        ]
+      },
+      {
+        "id": "try-369",
+        "title": "Attached videos go silent in full screen",
+        "severity": "medium",
+        "people": 1,
+        "status": "Need Approval",
+        "summary": "TRY-369, carried over.",
+        "detail": "TRY-369 Need Approval. TestFlight report. Waiting on your call.",
+        "sources": [
+          "linear"
+        ]
+      },
+      {
+        "id": "clip-upload-abandoned",
+        "title": "TestFlight upload loop (build 40) still running",
+        "severity": "low",
+        "people": 5,
+        "status": "Watch",
+        "summary": "clip_upload_abandoned 337/5, almost all build 40.",
+        "detail": "337 events / 5 people (was 271/4), all no_filename; build 40 336/4. Same TestFlight loop as yesterday. attachment_upload_failed down to 30/6 (24 from one build-40 person).",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "capture-stalled",
+        "title": "Recording stalls still showing on App Store builds",
+        "severity": "low",
+        "people": 22,
+        "status": "Watch",
+        "summary": "capture_stalled 125/22. The fix (#513) is in build 41, not on the App Store yet.",
+        "detail": "capture_stalled 125/22 (was 87/22): build 39 76/19, build 36 43/2. segment_finalize_failed down to 11/6 (from 29). session_save_failed down to 11/7, all offline.",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "group-network",
+        "title": "Group actions failing on bad connections",
+        "severity": "low",
+        "people": 115,
+        "status": "Watch",
+        "summary": "group_action_failed 414/115, mostly network errors.",
+        "detail": "414/115 (was 286/73), mostly NSURLError/CancellationError. Also join_group \u201cno group with that code\u201d 11/6 and permission denied group_invites 1/1. Malcolm's #499 still a placeholder.",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "sign-in",
+        "title": "Sign-in failures up",
+        "severity": "low",
+        "people": 21,
+        "status": "Watch",
+        "summary": "sign_in_failed 44/21 (was 8/7).",
+        "detail": "Codes 1 (16/12), 1000 (13/7), -1 (9/3), network. Build 41 16/2 is TestFlight. Rising with installs.",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "sentry-auth",
+        "title": "Sentry connector needs re-auth",
+        "severity": "low",
+        "people": null,
+        "status": "Needs you",
+        "summary": "Still unavailable, many days running.",
+        "detail": "user-Sentry MCP still requires authentication. No Sentry data gathered; nothing invented. TRY-386/385 cite Sentry issues via bot bot.",
+        "sources": [
+          "sentry"
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "android",
+        "title": "Android / Play Store",
+        "count": 3,
+        "peopleCountLabel": "3 people",
+        "status": "Open",
+        "summary": "mamaev and imthe.abete emailed; Lukas on Discord still unanswered.",
+        "detail": "Emails: mamaev (Oct 15 12:24 PM PT), imthe.abete (Oct 16 8:27 AM PT, \u201cgot some friends really yearning for it\u201d). Drafts below. Discord: Lukas (Oct 14) still has no team reply. Earlier in #questions ashii asked too (answered by a community member, \u201cNo :(\u201d, before the cutoff).",
+        "sources": [
+          "gmail",
+          "discord"
+        ]
+      },
+      {
+        "id": "wrapped",
+        "title": "Yearly \u201cSpotify Wrapped for Latent\u201d recap",
+        "count": 3,
+        "peopleCountLabel": "3 people",
+        "status": "Open",
+        "summary": "parnik started it on Discord; KrabbyKai and Notorious R.I.B loved it.",
+        "detail": "Discord #feature-requests thread \u201cAt the end of the year make a recap\u201d (parnik, Oct 15 9:42 PM PT): total time locked in, what you locked in for most, rank among users, join date, likes, nudges sent and received. KrabbyKai: \u201cspotify wrap for latent\u201d. No team reply. Related Linear backlog: TRY-62 Weekly + Monthly wrapped.",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "send-timelapse-chat",
+        "title": "Send timelapses straight into a group chat or DM",
+        "count": 1,
+        "peopleCountLabel": "1 person",
+        "status": "Open",
+        "summary": "ducky8x follow-up: without having to nudge.",
+        "detail": "Discord #feature-requests \u201cchat\u201d thread, Oct 15 9:59 AM PT. chloe pointed out nudging; ducky8x: it would be cooler to send it in gc or dm without nudging. No team reply. (Yesterday ducky8x also asked for time and date in chat.)",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "private-sessions",
+        "title": "Private sessions shouldn't have to count in total time",
+        "count": 1,
+        "peopleCountLabel": "1 person",
+        "status": "Need Approval",
+        "summary": "Sophia (@sophi) in-app. Already TRY-381.",
+        "detail": "In-app, 1.0.6 (39), Oct 15 5:34 PM PT. TRY-381 Need Approval.",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "background",
+        "title": "Keep recording/counting when I switch apps",
+        "count": 1,
+        "peopleCountLabel": "1 person",
+        "status": "Need Approval",
+        "summary": "Hsyn (@hfguynxggjji) in-app, in Arabic. Already TRY-384.",
+        "detail": "In-app, 1.0.6 (39), iOS 27.0.1, Oct 15 8:44 PM PT. Studies on the same phone; leaving Latent stops the recording and the count. TRY-384 Need Approval.",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "private-tester",
+        "title": "Wants to be a private tester",
+        "count": 1,
+        "peopleCountLabel": "1 person",
+        "status": "Open",
+        "summary": "Matthew Kelly emailed you directly. Draft below has a [CHECK].",
+        "detail": "Oct 16 7:50 AM PT. Not a Stay-as-Beta tap; he wrote to you. You may want to loop in Malcolm (TRY-343).",
+        "sources": [
+          "gmail"
+        ]
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 4,
+        "peopleCountLabel": "4 new / 141 total",
+        "status": "Malcolm handles",
+        "summary": "4 new \u201cStay as a Beta Tester\u201d picks since yesterday, 141 total.",
+        "detail": "Latest Oct 16 8:38 AM PT. Count only; Malcolm handles these (TRY-343).",
+        "sources": [
+          "supabase"
+        ]
+      },
+      {
+        "id": "carryover-asks",
+        "title": "Carried over: longer timelapse, contacts through blocking, resume draft",
+        "count": 3,
+        "peopleCountLabel": "Already in Linear",
+        "status": "Need Approval",
+        "summary": "TRY-370, TRY-363, TRY-360 still in Need Approval.",
+        "detail": "No new asks on these today.",
+        "sources": [
+          "linear"
+        ]
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 3,
+        "note": "3 new public.feedback rows since Oct 15 9 AM PT: @shlokp/Shlok (gc typing bar bug \u2192 TRY-376), @sophi/Sophia (private sessions out of total \u2192 TRY-381), @hfguynxggjji/Hsyn (keep running in background, Arabic \u2192 TRY-384). 76 rows total."
+      },
+      "discord": {
+        "new": 76,
+        "note": "76 new: 70 #general-chat (late-night study chatter; Hagaywub asked where to get an invite code, unanswered; Wakanda Panda said hi), 6 #feature-requests (parnik's yearly recap / \u201cSpotify Wrapped for Latent\u201d thread with KrabbyKai and Notorious R.I.B; ducky8x follow-up on sending timelapses in GC/DM). No team replies anywhere. Lukas's Oct 14 Android question still unanswered. #tester-chat not visible."
+      },
+      "gmail": {
+        "new": 4,
+        "note": "Yesterday's 4 (Elin, Mishad, Neharika, Candela) answered Oct 15 9:47 AM PT. New: mamaev (Android), Mishad thank-you (optional), Matthew Kelly (private tester), imthe.abete (Android ETA). URGENT child safety report email (8:20 AM PT). Tridha and mbuteler excluded. FYI: Cloudflare moved the Latent + Cloudflare call to Mon Oct 19, 7:00 AM PT. No PostHog alert emails reached you (the alert notifies Malcolm)."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "note": "Unchanged vs Oct 15. Tabs identical (66 / 6 / 8 rows). No new free text."
+      },
+      "sentry": {
+        "new": [],
+        "note": "Unavailable: Sentry MCP needs re-auth (many days running). No data invented."
+      },
+      "posthog": {
+        "note": "Last 24h vs prior: installs 1,604 (was 498, ~3.2x); onboarding 992 (was 392); sessions 2,191/1,078 (was 1,786/791). Edge function loop alert FIRING (217): clip_stream_fallback ~1,265, build 39, 2 cellular phones = 794 + 370 \u2192 today's Cloud Agent fix. clip_upload_abandoned 337/5 (build 40 loop). capture_stalled 125/22 (fix is in build 41). group_action_failed 414/115 mostly network. invite_check_failed 302/128 invalid codes. sign_in_failed 44/21. Rage clicks 2,417/855; onboarding screens up faster than installs. Clip bloat not firing (1.56)."
+      },
+      "github": {
+        "note": "6 merged since last dig (#516, #517, #520, #512, #519, #521) + direct commit ddeffbb (1.0.7 (41) TestFlight). Open: Eddie #502/#500/#417 (dirty); Malcolm #522 (TRY-375), #518, #499."
+      },
+      "linear": {
+        "note": "Done: TRY-356 (#516), TRY-372 (#517), TRY-378, TRY-380, TRY-382, TRY-383. New Need Approval: TRY-386, TRY-385, TRY-384, TRY-381, TRY-376. Carried: TRY-370, TRY-369, TRY-363, TRY-361, TRY-360. New for Eddie: TRY-374. TRY-375 In Progress (Malcolm, #522)."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "inapp-shlok",
+        "source": "in-app",
+        "username": "@shlokp (Shlok Pandya)",
+        "whenPT": "Oct 15, 1:43 PM PT",
+        "build": "1.0.7 (40)",
+        "kind": "bug",
+        "quote": "When i send a message in a gc the message gets sent but it stays in the typing bar as well",
+        "note": "In-app \u00b7 build 1.0.7 (40) \u00b7 iOS 26.6.1 \u00b7 TRY-376 (Need Approval, fix branch waiting)"
+      },
+      {
+        "id": "inapp-sophia",
+        "source": "in-app",
+        "username": "@sophi (Sophia)",
+        "whenPT": "Oct 15, 5:34 PM PT",
+        "build": "1.0.6 (39)",
+        "kind": "feature",
+        "quote": "if i do private sessions can it not add to my total time unless I want to",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 iOS 26.6.2 \u00b7 TRY-381"
+      },
+      {
+        "id": "inapp-hsyn",
+        "source": "in-app",
+        "username": "@hfguynxggjji (Hsyn Ibrahim)",
+        "whenPT": "Oct 15, 8:44 PM PT",
+        "build": "1.0.6 (39)",
+        "kind": "feature",
+        "quote": "\u0627\u0646\u0627 \u0627\u062f\u0631\u0633 \u0641\u064a \u0646\u0641\u0633 \u0627\u0644\u0647\u0627\u062a\u0641 \u0627\u0644\u0630\u064a \u0646\u0632\u0644\u062a \u0639\u0644\u064a\u0647 \u062a\u0637\u0628\u064a\u0642 latent\n\u0627\u0644\u0645\u0634\u0643\u0644\u0629 \u0647\u064a \u0627\u0646\u0647 \u0639\u0646\u062f\u0645\u0627 \u0627\u062e\u0631\u062c \u0645\u0646 \u062a\u0637\u0628\u064a\u0642 latent \u060c\u064a\u062a\u0648\u0642\u0641 \u0627\u0644\u062a\u0635\u0648\u064a\u0631 \u0648\u064a\u062a\u0648\u0642\u0641 \u0627\u0644\u0639\u062f\n\n\u0627\u0644\u0645\u0637\u0644\u0648\u0628 \u060c\u0627\u062a\u0645\u0646\u0649 \u0627\u0646 \u064a\u0628\u0642\u0649 \u0645\u0634\u062a\u063a\u0644\u0627 \u0641\u064a \u0627\u0644\u062e\u0644\u0641\u064a\u0629\n\n[Translation, from TRY-384:] I study on the same phone I have Latent on. When I leave Latent the recording stops and the count stops. I wish it kept running in the background.",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 iOS 27.0.1 \u00b7 written in Arabic \u00b7 TRY-384"
+      },
+      {
+        "id": "discord-chloe",
+        "source": "discord",
+        "channel": "#feature-requests \u203a chat",
+        "username": "@chloe on latent",
+        "whenPT": "Oct 15, 9:55 AM PT",
+        "kind": "chatter",
+        "quote": "can't you already do that by nudging",
+        "note": "Replying to ducky8x's ask to send timelapses in chat \u00b7 no team reply"
+      },
+      {
+        "id": "discord-ducky",
+        "source": "discord",
+        "channel": "#feature-requests \u203a chat",
+        "username": "ducky8x",
+        "whenPT": "Oct 15, 9:59 AM PT",
+        "kind": "feature",
+        "quote": "it would be cooler if you could just send it in gc or dm without nudging idk",
+        "note": "Send timelapses in group chat / DM without nudging \u00b7 no team reply"
+      },
+      {
+        "id": "discord-parnik-1",
+        "source": "discord",
+        "channel": "#feature-requests \u203a recap",
+        "username": "parnik",
+        "whenPT": "Oct 15, 9:42 PM PT",
+        "kind": "feature",
+        "quote": "At the end of the year make a recap",
+        "note": "New thread (title/post) \u00b7 no team reply"
+      },
+      {
+        "id": "discord-krabby",
+        "source": "discord",
+        "channel": "#feature-requests \u203a recap",
+        "username": "KrabbyKai",
+        "whenPT": "Oct 15, 9:44 PM PT",
+        "kind": "feature",
+        "quote": "wait i love this\nspotify wrap for latent",
+        "note": "+1 \u00b7 no team reply"
+      },
+      {
+        "id": "discord-parnik-2",
+        "source": "discord",
+        "channel": "#feature-requests \u203a recap",
+        "username": "parnik",
+        "whenPT": "Oct 15, 9:49 PM PT",
+        "kind": "feature",
+        "quote": "yes basically like the total time you've locked in, what you locked in for the most, and then give u a rank among the users and then like the date you joined and the amount of likes ur posts have accumulated and how many nudges sent and received",
+        "note": "Yearly Wrapped-style recap \u00b7 related backlog TRY-62 \u00b7 no team reply"
+      },
+      {
+        "id": "discord-rib",
+        "source": "discord",
+        "channel": "#feature-requests \u203a recap",
+        "username": "Notorious R.I.B",
+        "whenPT": "Oct 15, 11:39 PM PT",
+        "kind": "chatter",
+        "quote": "OOOO THATS SO PEAK, ACADEMIC MAXXXING",
+        "note": "+1"
+      },
+      {
+        "id": "discord-wakanda",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Wakanda Panda",
+        "whenPT": "Oct 16, 7:42 AM PT",
+        "kind": "chatter",
+        "quote": "Hai",
+        "note": "Hello in #general-chat"
+      },
+      {
+        "id": "discord-hagaywub",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Hagaywub",
+        "whenPT": "Oct 16, 8:12 AM PT",
+        "kind": "question",
+        "quote": "Where can i get the invitation code",
+        "note": "UNANSWERED \u00b7 no team reply"
+      },
+      {
+        "id": "discord-general-chatter",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai, Notorious R.I.B, Trid, charan, Evie, pandateaa",
+        "whenPT": "Oct 15, 11:46 PM \u2013 Oct 16, 3:38 AM PT",
+        "kind": "chatter",
+        "quote": "KrabbyKai (11:46 PM): gangalang / study session in vc rn / join if you can\nTrid (11:47 PM): alright\nKrabbyKai (11:48 PM): lmao then immediately leaves lol\n\u2026about 26 late-night homework / college-app messages (1:02\u20131:55 AM), e.g. \u201cfinally done with gov\u201d, \u201ci have metal pipe falling randomly for 4 hours playing in the background in case i fall asleep\u201d\n\u2026about 35 more (3:24\u20133:38 AM), e.g. \u201ci got so much work done today\u201d, charan: \u201cjust got my receipt of application from homerton college at cambridge guysss :))))\u201d",
+        "note": "Chatter summary (about 65 messages). Nothing posted in #general-chat between Oct 15 9 AM and 11:46 PM PT. No product asks."
+      },
+      {
+        "id": "gmail-mamaev",
+        "source": "gmail",
+        "username": "mamaev-Ford.2010@yandex.ru",
+        "email": "mamaev-Ford.2010@yandex.ru",
+        "whenPT": "Oct 15, 12:24 PM PT",
+        "kind": "question",
+        "quote": "Make one for android",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-mishad-followup",
+        "source": "gmail",
+        "username": "Mishad",
+        "email": "mishadritov@gmail.com",
+        "whenPT": "Oct 15, 4:59 PM PT",
+        "kind": "thanks",
+        "quote": "Ok, thanks for the reply. Thank you for developing!",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "gmail-matthew",
+        "source": "gmail",
+        "username": "Matthew Kelly",
+        "email": "matthewk2808@icloud.com",
+        "whenPT": "Oct 16, 7:50 AM PT",
+        "kind": "question",
+        "quote": "Good Morning,\n\nI'd like to see about becoming a private tester for Latent. How can I go about that?\n\nBest,\nMatthew Kelly\nmatthewk2808@icloud.com",
+        "note": "Email \u00b7 Re: Latent Beta Tester \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-abete",
+        "source": "gmail",
+        "username": "imthe.abete@gmail.com",
+        "email": "imthe.abete@gmail.com",
+        "whenPT": "Oct 16, 8:27 AM PT",
+        "kind": "question",
+        "quote": "Heyy man do you have an eta for the android version? got some friends\nreally yearning for it hahaha great app btw",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 reply drafted below"
+      }
+    ],
+    "replyDrafts": [
+      {
+        "id": "mamaev",
+        "to": "mamaev-Ford.2010@yandex.ru",
+        "subject": "Re: lock in twin",
+        "threadId": "1a141057e62c6b3e",
+        "replyToMessageId": "1a141057e62c6b3e",
+        "theirMessage": "Make one for android",
+        "theirWhenPT": "Oct 15, 12:24 PM PT",
+        "body": "Hey, it's on the way! Android is coming, I'll email you when it's out. Thanks for signing up!\n\nEddie",
+        "optional": false,
+        "note": "Unanswered. Android stock line.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879144914230209342"
+      },
+      {
+        "id": "mishad-followup",
+        "to": "mishadritov@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a13f41856ab5311",
+        "replyToMessageId": "1a142021fbdbc3ca",
+        "theirMessage": "Ok, thanks for the reply. Thank you for developing!",
+        "theirWhenPT": "Oct 15, 4:59 PM PT",
+        "body": "Of course, thank you for the support! Talk soon.\n\nEddie",
+        "optional": true,
+        "note": "OPTIONAL. Closing thanks after your Oct 15 reply; fine to skip and just mark read.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879113854914089745"
+      },
+      {
+        "id": "matthew",
+        "to": "matthewk2808@icloud.com",
+        "subject": "Re: Latent Beta Tester",
+        "threadId": "1a14531db16e1d24",
+        "replyToMessageId": "1a14531db16e1d24",
+        "theirMessage": "Good Morning,\n\nI'd like to see about becoming a private tester for Latent. How can I go about that?\n\nBest,\nMatthew Kelly\nmatthewk2808@icloud.com",
+        "theirWhenPT": "Oct 16, 7:50 AM PT",
+        "body": "Hey Matthew, thanks for reaching out, love that you want to help test! [CHECK: how new private testers join right now, e.g. a TestFlight invite, or start on the App Store version with an invite code, and whether Malcolm should take this one]. Let me know if you have any questions.\n\nEddie",
+        "optional": false,
+        "note": "Unanswered. Has a [CHECK] for how new private testers join; you may want to loop in Malcolm.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879218331516280100"
+      },
+      {
+        "id": "abete",
+        "to": "imthe.abete@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a14553c02beb2a5",
+        "replyToMessageId": "1a14553c02beb2a5",
+        "theirMessage": "Heyy man do you have an eta for the android version? got some friends\nreally yearning for it hahaha great app btw",
+        "theirWhenPT": "Oct 16, 8:27 AM PT",
+        "body": "Haha love that, thank you! No ETA yet, sorry. Android is coming, I'll email you when it's out so you can tell your friends. And if you're enjoying it, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review\n\nEddie",
+        "optional": false,
+        "note": "Unanswered. Android stock line + App Store rating ask.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879220660752790181"
+      }
+    ],
+    "linearIssue": {
+      "id": "TRY-410 (Oct 17 dig, includes #523)",
+      "url": "https://linear.app/trylatent/issue/TRY-410/daily-dig-2026-10-17-4-fixes-waiting-for-review-523-536"
+    },
+    "linearNote": "Linear dig issue (Need Approval, assigned to Eddie): https://linear.app/trylatent/issue/TRY-410/daily-dig-2026-10-17-4-fixes-waiting-for-review-523-536",
+    "deliveryNote": "Update Oct 17: this review was prepared but never emailed, so its items were folded into the Oct 17 review. Since then the @faisal child safety report was dismissed by Malcolm (Oct 16, 11:30 AM PT, TRY-388 Done), PR #523 opened for the video-link loop, and the loop alert stopped firing after #532."
+  },
+  "2026-10-17": {
+    "date": "2026-10-17",
+    "title": "Latent daily review \u00b7 Oct 17",
+    "generatedAt": "2026-10-17T16:35:40.322757+00:00",
+    "tldr": [
+      "Yesterday's review (Oct 16) didn't go out, so its leftovers are folded in here. The urgent @faisal child safety report from yesterday is closed: Malcolm reviewed and dismissed it Oct 16, 11:30 AM PT (TRY-388 Done). The moderation queue is empty.",
+      "3 fixes opened today (#534, #535, #536): Latent stuck in the Dynamic Island (Steven), the \u201cEdit tags\u2026\u201d button doing nothing (migue), and the missing Camera switch in Settings (support email). Plus yesterday's #523 (video-link retry loop on flaky networks) is still waiting.",
+      "No age holds.",
+      "10 merged overnight: #532 quiets the \u201cEdge function loop\u201d alert (no longer firing, last value 13), #522 clock change keeps your time, #525 iOS 17 setup fix, #533 record screen video, #527/#528 save the birthday from the age check, #502 workplan, #524 moderation runbook, #526 leaderboard command (reverted by #531).",
+      "Still on you: #523, #534, #535, #536, #500, #417, Samuel Downs' account deletion request, 6 new Need Approval tickets (TRY-409 recovered recording only counts 6 min, plus 4 freezes from Sentry and TRY-407 friends leaderboard).",
+      "10 replies drafted (3 optional): 4 carried from yesterday plus Meghana (thanks for the iOS 17 email), Anika (safety ideas), Samuel (account deletion), the Camera Access email, and two short thank-yous. Installs doubled again (3,046 in 24h). 2 new beta opt-ins / 143. Survey unchanged. Discord quiet. Sentry still needs re-auth."
+    ],
+    "plainTldr": [
+      "Yesterday's review (Oct 16) didn't go out, so its leftovers are folded in here. The urgent @faisal child safety report from yesterday is closed: Malcolm reviewed and dismissed it Oct 16, 11:30 AM PT (TRY-388 Done). The moderation queue is empty.",
+      "3 fixes opened today (#534, #535, #536): Latent stuck in the Dynamic Island (Steven), the \u201cEdit tags\u2026\u201d button doing nothing (migue), and the missing Camera switch in Settings (support email). Plus yesterday's #523 (video-link retry loop on flaky networks) is still waiting.",
+      "No age holds.",
+      "10 merged overnight: #532 quiets the \u201cEdge function loop\u201d alert (no longer firing, last value 13), #522 clock change keeps your time, #525 iOS 17 setup fix, #533 record screen video, #527/#528 save the birthday from the age check, #502 workplan, #524 moderation runbook, #526 leaderboard command (reverted by #531).",
+      "Still on you: #523, #534, #535, #536, #500, #417, Samuel Downs' account deletion request, 6 new Need Approval tickets (TRY-409 recovered recording only counts 6 min, plus 4 freezes from Sentry and TRY-407 friends leaderboard).",
+      "10 replies drafted (3 optional): 4 carried from yesterday plus Meghana (thanks for the iOS 17 email), Anika (safety ideas), Samuel (account deletion), the Camera Access email, and two short thank-yous. Installs doubled again (3,046 in 24h). 2 new beta opt-ins / 143. Survey unchanged. Discord quiet. Sentry still needs re-auth."
+    ],
+    "yesterdayNote": "Yesterday's review (Oct 16) was prepared but never emailed. Its page is now in the archive (https://eddie-the-lou.github.io/latent-digs/#/2026-10-16). Still-relevant items (PR #523, the @faisal report, 4 reply drafts) are folded in here.",
+    "urgent": [],
+    "resolvedUrgent": [
+      {
+        "id": "child-safety",
+        "title": "Child safety report on @faisal (by @larp, Oct 16 8:20 AM PT)",
+        "reportId": "ceac95cf-5553-426a-91b5-152633c20b07",
+        "status": "Closed. Dismissed Oct 16, 11:30 AM PT (reviewed: user self-reports 13\u201317, which is allowed; only post is a normal study timelapse; no DMs or friendship with the reporter; reporter gave no detail). TRY-388 Done.",
+        "also": "A second report on @faisal (by @hamzah, \u201cinappropriate or explicit\u201d, Oct 16 12:34 PM PT) was dismissed 2:52 PM PT. Moderation queue empty at ~9:25 AM PT today."
+      },
+      {
+        "id": "edge-loop-alert",
+        "title": "PostHog \u201cEdge function loop\u201d alert",
+        "url": "https://us.posthog.com/project/505306/alerts?alert_type=insights&alert_id=01a0d53a-52f9-0000-c224-2e912c93aa4a",
+        "status": "Not firing (last value 13, checked 9:23 AM PT). #532 merged; #523 still waiting."
+      }
+    ],
+    "stats": {
+      "newInApp": 9,
+      "newDiscord": 30,
+      "newGmail": 10,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [],
+      "sentryUnavailable": true,
+      "rawQuotes": 20,
+      "betaOptInsNew": 2,
+      "betaOptInsTotal": 143,
+      "installs24h": 3046,
+      "installsPrev24h": 1522
+    },
+    "whatIDidToday": {
+      "fixesOpened": [
+        {
+          "pr": 534,
+          "url": "https://github.com/eddie-the-lou/latent/pull/534",
+          "agent": "https://cursor.com/agents/bc-b50b47db-2b3f-5ad1-979f-43646ff44e77",
+          "title": "Stop Latent from lingering in the Dynamic Island after you close the app",
+          "reporter": "Steven (@starz), in-app bug, build 1.0.6 (39), iOS 26.6.1, Oct 16 5:29 PM PT",
+          "status": "waiting for your review (draft PR)",
+          "whatItFixes": "Latent's session pill could stay in the Dynamic Island after the session ended or the app was closed, and it blocked other apps' Live Activities. Now the pill goes away as soon as a session ends (saved, discarded, recovered, or signed out), any leftover pill is cleared whenever you open Latent outside a session, and a running pill expires on its own if the app gets killed.",
+          "howToCheck": "Start a session, then end it an awkward way (discard it, swipe Latent away in the app switcher, or sign out): the pill should disappear within a second or two. Start another session and switch to another app: the pill should stay while the session runs. Open Latent when you're not in a session: any leftover pill should clear."
+        },
+        {
+          "pr": 535,
+          "url": "https://github.com/eddie-the-lou/latent/pull/535",
+          "agent": "https://cursor.com/agents/bc-5b55d5e4-e850-5086-bbc4-3920d00e4013",
+          "title": "Make \u201cEdit tags\u2026\u201d on your profile open the tag editor",
+          "reporter": "migue (@m1guelch), in-app bug, build 1.0.6 (39), iOS 26.5.2, Oct 17 1:50 AM PT",
+          "status": "waiting for your review (draft PR)",
+          "whatItFixes": "On your profile, \u201cEdit tags\u2026\u201d in the tag filter menu looked tappable, but taps fell through to the chart underneath. Even when a tap landed, iOS 26 dropped the editor because it opened at the same moment the menu closed. Now the tap reaches the button and the editor opens right after the menu closes. Nothing new was built; it just reaches the tag editor that already exists.",
+          "howToCheck": "Open You, tap the sliders chip at the end of the tag row, then tap \u201cEdit tags\u2026\u201d: the tag editor should slide up. Add, rename, or delete a tag and tap Done; the profile chips should update. Holding a tag chip and tapping Edit tag should open the same editor."
+        },
+        {
+          "pr": 536,
+          "url": "https://github.com/eddie-the-lou/latent/pull/536",
+          "agent": "https://cursor.com/agents/bc-3422928a-38a1-58a8-8314-033fc2e95c32",
+          "title": "Don't send people to Settings when there's no Camera switch",
+          "reporter": "\u201cCamera Access\u201d email to support@, Oct 16 9:28 AM PT (sender address hidden)",
+          "status": "waiting for your review (draft PR)",
+          "whatItFixes": "iPhone only shows a Camera switch under Settings \u203a Latent after the app has asked for the camera once, and hides it when Screen Time blocks the camera. Latent treated both cases like \u201cthey said no\u201d and sent people to a Settings page with nothing to turn on. Now it shows the normal Allow prompt if it hasn't asked yet, says plainly when Screen Time is blocking the camera, and only opens Settings after someone tapped Don't Allow.",
+          "howToCheck": "On a real iPhone, delete and reinstall Latent and open Record: you should see \u201cTurn on camera\u201d and the iOS Allow prompt, not Open Settings. Tap Don't Allow, then Open Settings: Settings \u203a Latent should now list Camera. With Screen Time \u203a Content & Privacy Restrictions \u203a Camera set to Don't Allow, Record should show a short message and no Settings button."
+        }
+      ],
+      "carriedFromYesterday": [
+        {
+          "pr": 523,
+          "url": "https://github.com/eddie-the-lou/latent/pull/523",
+          "agent": "https://cursor.com/agents/bc-285f06ed-2714-5cb2-852d-049ca5044cc7",
+          "title": "Stop the video-link retry loop when a clip can't stream",
+          "reporter": "PostHog \u201cEdge function loop\u201d alert (fired Oct 16 at 217/hr), build 39 phones on flaky cellular",
+          "status": "waiting for your review (from Oct 16)",
+          "whatItFixes": "On a flaky connection, a clip that couldn't stream kept asking our server for a video link every few seconds, for hours. Now, after a failure, the app waits before asking again (1 minute, doubling up to 10) and tries right away once the phone is back online or you scroll the post away and back. Malcolm's merged #532 already handles fully offline phones; his note says merge both.",
+          "howToCheck": "On cellular or weak signal, leave a friend's clip that hasn't finished loading on screen. Turn airplane mode on for a minute, then off: within a few seconds the clip should play without force-quitting. Scrolling the post away and back should also retry."
+        }
+      ],
+      "agentsLaunched": [
+        {
+          "id": "bc-b50b47db-2b3f-5ad1-979f-43646ff44e77",
+          "url": "https://cursor.com/agents/bc-b50b47db-2b3f-5ad1-979f-43646ff44e77",
+          "status": "finished",
+          "pr": 534,
+          "prUrl": "https://github.com/eddie-the-lou/latent/pull/534"
+        },
+        {
+          "id": "bc-5b55d5e4-e850-5086-bbc4-3920d00e4013",
+          "url": "https://cursor.com/agents/bc-5b55d5e4-e850-5086-bbc4-3920d00e4013",
+          "status": "finished",
+          "pr": 535,
+          "prUrl": "https://github.com/eddie-the-lou/latent/pull/535"
+        },
+        {
+          "id": "bc-3422928a-38a1-58a8-8314-033fc2e95c32",
+          "url": "https://cursor.com/agents/bc-3422928a-38a1-58a8-8314-033fc2e95c32",
+          "status": "finished",
+          "pr": 536,
+          "prUrl": "https://github.com/eddie-the-lou/latent/pull/536"
+        }
+      ],
+      "note": "Launched 3 Cloud Agents for the clear, unowned bugs from in-app feedback and support email. 3 opened PRs."
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 534,
+          "url": "https://github.com/eddie-the-lou/latent/pull/534",
+          "title": "Stop Latent from lingering in the Dynamic Island after you close the app",
+          "by": "Cloud Agent \u00b7 Oct 17",
+          "agent": "https://cursor.com/agents/bc-b50b47db-2b3f-5ad1-979f-43646ff44e77"
+        },
+        {
+          "pr": 535,
+          "url": "https://github.com/eddie-the-lou/latent/pull/535",
+          "title": "Make \u201cEdit tags\u2026\u201d on your profile open the tag editor",
+          "by": "Cloud Agent \u00b7 Oct 17",
+          "agent": "https://cursor.com/agents/bc-5b55d5e4-e850-5086-bbc4-3920d00e4013"
+        },
+        {
+          "pr": 536,
+          "url": "https://github.com/eddie-the-lou/latent/pull/536",
+          "title": "Don't send people to Settings when there's no Camera switch",
+          "by": "Cloud Agent \u00b7 Oct 17",
+          "agent": "https://cursor.com/agents/bc-3422928a-38a1-58a8-8314-033fc2e95c32"
+        },
+        {
+          "pr": 523,
+          "url": "https://github.com/eddie-the-lou/latent/pull/523",
+          "title": "Stop the video-link retry loop when a clip can't stream",
+          "by": "Cloud Agent \u00b7 Oct 16",
+          "agent": "https://cursor.com/agents/bc-285f06ed-2714-5cb2-852d-049ca5044cc7"
+        }
+      ],
+      "openedToday": [
+        {
+          "pr": 534,
+          "url": "https://github.com/eddie-the-lou/latent/pull/534",
+          "title": "Stop Latent from lingering in the Dynamic Island after you close the app",
+          "agent": "https://cursor.com/agents/bc-b50b47db-2b3f-5ad1-979f-43646ff44e77"
+        },
+        {
+          "pr": 535,
+          "url": "https://github.com/eddie-the-lou/latent/pull/535",
+          "title": "Make \u201cEdit tags\u2026\u201d on your profile open the tag editor",
+          "agent": "https://cursor.com/agents/bc-5b55d5e4-e850-5086-bbc4-3920d00e4013"
+        },
+        {
+          "pr": 536,
+          "url": "https://github.com/eddie-the-lou/latent/pull/536",
+          "title": "Don't send people to Settings when there's no Camera switch",
+          "agent": "https://cursor.com/agents/bc-3422928a-38a1-58a8-8314-033fc2e95c32"
+        }
+      ],
+      "mergedOvernight": [
+        {
+          "pr": 522,
+          "url": "https://github.com/eddie-the-lou/latent/pull/522",
+          "title": "Changing the clock mid-session keeps the time worked",
+          "by": "Malcolm \u00b7 Oct 16, 9:48 AM PT",
+          "note": "TRY-375 Done. The ticket says to reply to Jaeha once it ships."
+        },
+        {
+          "pr": 524,
+          "url": "https://github.com/eddie-the-lou/latent/pull/524",
+          "title": "Moderation runbook: how to decide on a report, and how to look at private media",
+          "by": "Malcolm \u00b7 Oct 16, 11:32 AM PT",
+          "note": "TRY-393 Done."
+        },
+        {
+          "pr": 525,
+          "url": "https://github.com/eddie-the-lou/latent/pull/525",
+          "title": "iOS 17 can finish setup again, and one slow check no longer shows the maintenance screen",
+          "by": "Eddie \u00b7 Oct 16, 11:37 AM PT",
+          "note": "TRY-394 Done. Your email to stuck iOS 17 users says the fix is in the next update."
+        },
+        {
+          "pr": 526,
+          "url": "https://github.com/eddie-the-lou/latent/pull/526",
+          "title": "/globalleaderboard [country] Discord command (all-time top 10)",
+          "by": "Malcolm \u00b7 Oct 16, 3:26 PM PT",
+          "note": "TRY-400. Reverted 13 minutes later by #531."
+        },
+        {
+          "pr": 527,
+          "url": "https://github.com/eddie-the-lou/latent/pull/527",
+          "title": "Keep the birthday from the age check, not just teen/adult (backend)",
+          "by": "Malcolm \u00b7 Oct 16, 3:33 PM PT",
+          "note": "TRY-391 Done. Note: this means a birthday is now saved, so the age-holds query's note that no birthday is stored is out of date."
+        },
+        {
+          "pr": 531,
+          "url": "https://github.com/eddie-the-lou/latent/pull/531",
+          "title": "Revert /globalleaderboard [country]",
+          "by": "Malcolm \u00b7 Oct 16, 3:39 PM PT",
+          "note": "TRY-399 Done. Undoes #526. Separately, Malcolm's #529 review notes said #526 showed which country users' phones are set to."
+        },
+        {
+          "pr": 528,
+          "url": "https://github.com/eddie-the-lou/latent/pull/528",
+          "title": "Keep the birthday from the age check, not just teen/adult (app)",
+          "by": "Malcolm \u00b7 Oct 16, 3:44 PM PT",
+          "note": "TRY-391 Done."
+        },
+        {
+          "pr": 502,
+          "url": "https://github.com/eddie-the-lou/latent/pull/502",
+          "title": "Activation workplan (Oct 14): five handoff briefs",
+          "by": "Eddie \u00b7 Oct 16, 3:49 PM PT",
+          "note": "TRY-401 Done. Was on yesterday's Still on you."
+        },
+        {
+          "pr": 532,
+          "url": "https://github.com/eddie-the-lou/latent/pull/532",
+          "title": "A phone with no network stops retrying media calls and stops paging the loop alarm",
+          "by": "Malcolm \u00b7 Oct 16, 4:04 PM PT",
+          "note": "TRY-390 Done. Fixes most of the \u201cEdge function loop\u201d alert (offline phones). Malcolm says merge #523 too for the flaky-but-online case."
+        },
+        {
+          "pr": 533,
+          "url": "https://github.com/eddie-the-lou/latent/pull/533",
+          "title": "The video keeps playing while the record screen dims, even right after launch",
+          "by": "Malcolm \u00b7 Oct 16, 11:08 PM PT",
+          "note": "TRY-406 Done."
+        }
+      ],
+      "directCommits": [],
+      "stillOnYou": [
+        {
+          "id": "pr-534",
+          "title": "#534 Stop Latent from lingering in the Dynamic Island after you close the app (today; draft PR, waiting for your review).",
+          "url": "https://github.com/eddie-the-lou/latent/pull/534"
+        },
+        {
+          "id": "pr-535",
+          "title": "#535 Make \u201cEdit tags\u2026\u201d on your profile open the tag editor (today; draft PR, waiting for your review).",
+          "url": "https://github.com/eddie-the-lou/latent/pull/535"
+        },
+        {
+          "id": "pr-536",
+          "title": "#536 Don't send people to Settings when there's no Camera switch (today; draft PR, waiting for your review).",
+          "url": "https://github.com/eddie-the-lou/latent/pull/536"
+        },
+        {
+          "id": "pr-523",
+          "title": "#523 Stop the video-link retry loop when a clip can't stream (from Oct 16; draft PR, waiting for your review).",
+          "url": "https://github.com/eddie-the-lou/latent/pull/523"
+        },
+        {
+          "id": "samuel-delete",
+          "title": "Account deletion request: Samuel Downs (srdowns2010@gmail.com) emailed support@ Oct 16, 4:13 PM PT. His account still existed at ~9:30 AM PT today. Reply draft below waits on the deletion.",
+          "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+        },
+        {
+          "id": "pr-500",
+          "title": "#500 Activation page (join-week funnels, Refresh button). Yours, clean.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/500"
+        },
+        {
+          "id": "pr-417",
+          "title": "#417 Friends' posts before stats (yours, Oct 6) still clashes with main. Merged #505 likely covers it, so rebase or close.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/417"
+        },
+        {
+          "id": "try-409",
+          "title": "NEW \u00b7 TRY-409 recovered recording only counts the first 6 min after the phone died (Aakaisha's in-app report; bot bot fix branch waiting) (Need Approval).",
+          "url": "https://linear.app/trylatent/issue/TRY-409/recovered-recording-only-counts-the-first-6-min-after-phone-died"
+        },
+        {
+          "id": "try-408",
+          "title": "NEW \u00b7 TRY-408 app freezes and closes when picking a timer (Sentry; fix branch waiting) (Need Approval).",
+          "url": "https://linear.app/trylatent/issue/TRY-408/app-freezes-and-closes-when-picking-a-timer"
+        },
+        {
+          "id": "try-407",
+          "title": "NEW \u00b7 TRY-407 leaderboard with all friends without making a group (Nadhanya's in-app ask) (Need Approval).",
+          "url": "https://linear.app/trylatent/issue/TRY-407/leaderboard-with-all-friends-without-making-a-group"
+        },
+        {
+          "id": "try-405",
+          "title": "NEW \u00b7 TRY-405 app freezes a few seconds right after saving a session (Sentry; fix branch waiting) (Need Approval).",
+          "url": "https://linear.app/trylatent/issue/TRY-405/app-freezes-for-a-few-sec-right-after-saving-a-session"
+        },
+        {
+          "id": "try-403",
+          "title": "NEW \u00b7 TRY-403 app froze 4 seconds on the record screen (Sentry; fix branch waiting) (Need Approval).",
+          "url": "https://linear.app/trylatent/issue/TRY-403/app-froze-for-4-sec-on-the-record-screen"
+        },
+        {
+          "id": "try-387",
+          "title": "NEW \u00b7 TRY-387 app freezes and closes inside a chat (Sentry; fix branch waiting) (Need Approval).",
+          "url": "https://linear.app/trylatent/issue/TRY-387/app-freezes-and-closes-inside-a-chat"
+        },
+        {
+          "id": "need-old",
+          "title": "Carried over in Need Approval: TRY-386, TRY-385, TRY-384, TRY-381, TRY-376, TRY-369, TRY-363, TRY-361, TRY-360. TRY-370 (longer timelapse) is now Done.",
+          "url": "https://linear.app/trylatent/team/TRY/active"
+        },
+        {
+          "id": "try-374",
+          "title": "TRY-374 update App Store screenshots (Todo, assigned to you).",
+          "url": "https://linear.app/trylatent/issue/TRY-374/update-app-store-screenshots"
+        },
+        {
+          "id": "try-343",
+          "title": "TRY-343 calls with Stay-as-Beta testers (Todo, assigned to you). 2 new opt-ins / 143 total; Malcolm handles these.",
+          "url": "https://linear.app/trylatent/issue/TRY-343/book-calls-external-testers-who-want-to-stay-on-as-beta"
+        },
+        {
+          "id": "try-404",
+          "title": "TRY-404 poochina can't tap the three-dots menu to edit a post (Backlog, you filed it Oct 16). The Edit tags agent checked and found it's a different cause.",
+          "url": "https://linear.app/trylatent/issue/TRY-404/user-poochina-cant-click-the-three-dots-menu-to-edit-a-post"
+        }
+      ],
+      "otherOpen": [
+        {
+          "pr": 530,
+          "url": "https://github.com/eddie-the-lou/latent/pull/530",
+          "title": "Opening a profile reports one screen view, not two (Malcolm). Clean."
+        },
+        {
+          "pr": 529,
+          "url": "https://github.com/eddie-the-lou/latent/pull/529",
+          "title": "Review notes on #526 (Malcolm placeholder, no code). #526 was already reverted by #531, so this can likely close."
+        },
+        {
+          "pr": 518,
+          "url": "https://github.com/eddie-the-lou/latent/pull/518",
+          "title": "Review notes on #505 (Malcolm placeholder, no code). Flags a possible crash: a friend's stats could overflow a number on refresh."
+        },
+        {
+          "pr": 499,
+          "url": "https://github.com/eddie-the-lou/latent/pull/499",
+          "title": "Review notes on #491 group invites (Malcolm placeholder, no code)."
+        }
+      ]
+    },
+    "ageHolds": {
+      "open": [],
+      "newLast24h": [],
+      "resolvedLast24h": [],
+      "summary": "No age holds.",
+      "detail": "Nothing open, new, or resolved in the last 24h (checked ~9:22 AM PT). Holds ever: 1 (Omar, @omarzz, held Oct 11 9:29 AM PT, released 10:34 AM PT).",
+      "query": "/workspace/feedback-digests/age-holds.sql"
+    },
+    "actions": [
+      {
+        "id": "fix-534",
+        "title": "Review #534: Stop Latent from lingering in the Dynamic Island after you close the app",
+        "plainSummary": "Latent's session pill could stay in the Dynamic Island after the session ended or the app was closed, and it blocked other apps' Live Activities. Now the pill goes away as soon as a session ends (saved, discarded, recovered, or signed out), any leftover pill is cleared whenever you open Latent outside a session, and a running pill expires on its own if the app gets killed. How to check: Start a session, then end it an awkward way (discard it, swipe Latent away in the app switcher, or sign out): the pill should disappear within a second or two. Start another session and switch to another app: the pill should stay while the session runs. Open Latent when you're not in a session: any leftover pill should clear.",
+        "status": "Waiting for your review",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/534",
+        "agentUrl": "https://cursor.com/agents/bc-b50b47db-2b3f-5ad1-979f-43646ff44e77"
+      },
+      {
+        "id": "fix-535",
+        "title": "Review #535: Make \u201cEdit tags\u2026\u201d on your profile open the tag editor",
+        "plainSummary": "On your profile, \u201cEdit tags\u2026\u201d in the tag filter menu looked tappable, but taps fell through to the chart underneath. Even when a tap landed, iOS 26 dropped the editor because it opened at the same moment the menu closed. Now the tap reaches the button and the editor opens right after the menu closes. Nothing new was built; it just reaches the tag editor that already exists. How to check: Open You, tap the sliders chip at the end of the tag row, then tap \u201cEdit tags\u2026\u201d: the tag editor should slide up. Add, rename, or delete a tag and tap Done; the profile chips should update. Holding a tag chip and tapping Edit tag should open the same editor.",
+        "status": "Waiting for your review",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/535",
+        "agentUrl": "https://cursor.com/agents/bc-5b55d5e4-e850-5086-bbc4-3920d00e4013"
+      },
+      {
+        "id": "fix-536",
+        "title": "Review #536: Don't send people to Settings when there's no Camera switch",
+        "plainSummary": "iPhone only shows a Camera switch under Settings \u203a Latent after the app has asked for the camera once, and hides it when Screen Time blocks the camera. Latent treated both cases like \u201cthey said no\u201d and sent people to a Settings page with nothing to turn on. Now it shows the normal Allow prompt if it hasn't asked yet, says plainly when Screen Time is blocking the camera, and only opens Settings after someone tapped Don't Allow. How to check: On a real iPhone, delete and reinstall Latent and open Record: you should see \u201cTurn on camera\u201d and the iOS Allow prompt, not Open Settings. Tap Don't Allow, then Open Settings: Settings \u203a Latent should now list Camera. With Screen Time \u203a Content & Privacy Restrictions \u203a Camera set to Don't Allow, Record should show a short message and no Settings button.",
+        "status": "Waiting for your review",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/536",
+        "agentUrl": "https://cursor.com/agents/bc-3422928a-38a1-58a8-8314-033fc2e95c32"
+      },
+      {
+        "id": "fix-523",
+        "title": "Review #523: Stop the video-link retry loop when a clip can't stream",
+        "plainSummary": "On a flaky connection, a clip that couldn't stream kept asking our server for a video link every few seconds, for hours. Now, after a failure, the app waits before asking again (1 minute, doubling up to 10) and tries right away once the phone is back online or you scroll the post away and back. Malcolm's merged #532 already handles fully offline phones; his note says merge both. How to check: On cellular or weak signal, leave a friend's clip that hasn't finished loading on screen. Turn airplane mode on for a minute, then off: within a few seconds the clip should play without force-quitting. Scrolling the post away and back should also retry.",
+        "status": "Waiting for your review",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/523",
+        "agentUrl": "https://cursor.com/agents/bc-285f06ed-2714-5cb2-852d-049ca5044cc7"
+      },
+      {
+        "id": "samuel-delete",
+        "title": "Delete Samuel Downs' account (he asked by email), then send the reply",
+        "plainSummary": "srdowns2010@gmail.com, Oct 16 4:13 PM PT. The dig changed nothing.",
+        "status": "Needs you"
+      },
+      {
+        "id": "replies",
+        "title": "10 reply drafts (3 optional)",
+        "plainSummary": "Not sent. Approve each in chat.",
+        "status": "Waiting for your review"
+      },
+      {
+        "id": "need-approval-new",
+        "title": "Linear Need Approval (new): TRY-409, TRY-408, TRY-407, TRY-405, TRY-403, TRY-387",
+        "plainSummary": "Five have bot bot fix branches.",
+        "status": "Needs your approval"
+      },
+      {
+        "id": "pr-500-417",
+        "title": "Your open PRs #500 (activation page) and #417 (clashes with main)",
+        "plainSummary": "#502 merged yesterday.",
+        "status": "Waiting for your review",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/417"
+      },
+      {
+        "id": "sentry",
+        "title": "Sentry needs re-auth",
+        "plainSummary": "No crash data from the dig again.",
+        "status": "Needs you"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done",
+        "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-10-17"
+      },
+      {
+        "id": "linear",
+        "title": "Linear dig issue (Need Approval)",
+        "status": "done",
+        "url": "https://linear.app/trylatent/issue/TRY-410/daily-dig-2026-10-17-4-fixes-waiting-for-review-523-536"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "dynamic-island",
+        "title": "Latent stays stuck in the Dynamic Island after the app is closed",
+        "severity": "medium",
+        "people": 1,
+        "status": "Fix opened",
+        "summary": "Steven (@starz) in-app. Blocks other apps' Live Activities. Fix PR today.",
+        "detail": "In-app bug, 1.0.6 (39), iOS 26.6.1, Oct 16 5:29 PM PT. PR #534.",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/534",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "edit-tags",
+        "title": "\u201cEdit tags\u2026\u201d button on your profile does nothing",
+        "severity": "medium",
+        "people": 1,
+        "status": "Fix opened",
+        "summary": "migue (@m1guelch) in-app. Fix PR today.",
+        "detail": "In-app bug, 1.0.6 (39), iOS 26.5.2, Oct 17 1:50 AM PT (plus a follow-up with the build). The menu looked like it sat on the chart but taps went to the chart, and the editor sheet got dropped on iOS 26. PR #535.",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/535",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "camera-toggle",
+        "title": "No Camera switch in Settings \u203a Latent",
+        "severity": "medium",
+        "people": 1,
+        "status": "Fix opened",
+        "summary": "Support email Oct 16 9:28 AM PT; can't record. Fix PR #536 today: the app sent people to Settings before ever asking for the camera (or when Screen Time blocks it), so there was no switch to turn on.",
+        "detail": "\u201cCamera Access\u201d email to support@ (sender address hidden; shows as support@trylatent.co). Fix PR #536 today: the app sent people to Settings before ever asking for the camera (or when Screen Time blocks it), so there was no switch to turn on.",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/536",
+        "sources": [
+          "gmail"
+        ]
+      },
+      {
+        "id": "recovered-recording",
+        "title": "Recovered recording only counts the first 6 minutes",
+        "severity": "medium",
+        "people": 1,
+        "status": "Need Approval",
+        "summary": "Aakaisha (@aakaisha) in-app. Already TRY-409 with a bot bot fix branch.",
+        "detail": "In-app bug, 1.0.6 (39), Oct 17 4:07 AM PT. Phone died ~55 min into a 1-hour session; after recovery the session showed 6 min 1 s. TRY-409 Need Approval (fix branch).",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "clip-loop",
+        "title": "Video-link retry loop: alert quiet now",
+        "severity": "low",
+        "people": 72,
+        "status": "Fix waiting (#523)",
+        "summary": "#532 merged (offline phones stop retrying). Alert not firing (last value 13). #523 handles the flaky-but-online case.",
+        "detail": "media_invoke_retry_exhausted 1,083 events / 72 people in 24h (was 1,709 / 39), and 996 of them were sent while the phone was fully offline, which the alert now ignores (TRY-390). 87 were online. Most are clip_stream_fallback on build 39 (968). Malcolm's #532 note: merge #523 too.",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/523",
+        "sources": [
+          "posthog",
+          "github"
+        ]
+      },
+      {
+        "id": "freezes",
+        "title": "4 new freezes from Sentry (via bot bot)",
+        "severity": "medium",
+        "people": null,
+        "status": "Need Approval",
+        "summary": "TRY-387 chat, TRY-403 record screen, TRY-405 after saving, TRY-408 picking a timer. All have fix branches.",
+        "detail": "Filed by Malcolm's bot bot from Sentry hangs (one person each). TRY-408 froze 4 times in 3 minutes for one person. Fix branches waiting for approval.",
+        "sources": [
+          "linear",
+          "sentry"
+        ]
+      },
+      {
+        "id": "capture-stalled",
+        "title": "Recording stalls rising faster than installs",
+        "severity": "low",
+        "people": 90,
+        "status": "Watch",
+        "summary": "capture_stalled 442/90 (was 122/21); segment_finalize_failed 76/45 (was 10/5).",
+        "detail": "All build 39, mostly on Record and Profile: Insights. Installs doubled, these rose 3.6x and 7.6x. The pomodoro gap fix (#513, TRY-331) is in build 41, not on the App Store yet. Malcolm's TRY-389 also notes capture_interrupted/resumed growing ~7x.",
+        "sources": [
+          "posthog",
+          "linear"
+        ]
+      },
+      {
+        "id": "invite-code",
+        "title": "Invalid invite codes rising with installs",
+        "severity": "low",
+        "people": 238,
+        "status": "Watch",
+        "summary": "invite_check_failed 565/238 (was 276/120).",
+        "detail": "All invalid codes. On Discord, Hagaywub's invite-code question got a community pointer to #how-to-download, no team reply.",
+        "sources": [
+          "posthog",
+          "discord"
+        ]
+      },
+      {
+        "id": "sentry-auth",
+        "title": "Sentry connector needs re-auth",
+        "severity": "low",
+        "people": null,
+        "status": "Needs you",
+        "summary": "Still unavailable.",
+        "detail": "user-Sentry still needs authentication. No Sentry data gathered by the dig; bot bot's Sentry tickets are listed above.",
+        "sources": [
+          "sentry"
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "android",
+        "title": "Android",
+        "count": 4,
+        "peopleCountLabel": "2 new in-app + 2 emails",
+        "status": "Open",
+        "summary": "Guy (@arazi) and Egemen (@shinoda) asked in-app; mamaev and imthe.abete still waiting on email replies.",
+        "detail": "Egemen: \u201cI LITERALLY FELL IN LOVE WITH THIS APP\u2026\u201d and wants Android to add friends. Malcolm's TRY-395 (Done) says keep a simple waitlist answer and count the asks.",
+        "sources": [
+          "in-app",
+          "gmail",
+          "linear"
+        ]
+      },
+      {
+        "id": "safety-trim",
+        "title": "Hide bystanders and trim footage before posting",
+        "count": 1,
+        "peopleCountLabel": "1 person",
+        "status": "Open",
+        "summary": "Anika emailed: a stranger and her sister walked into frame; she deleted a 3-hour session.",
+        "detail": "Ideas: edit/trim footage, sticker or blur over other people's faces, a gentle check before posting if someone may be undressed, or make people review their timelapse. Reply drafted.",
+        "sources": [
+          "gmail"
+        ]
+      },
+      {
+        "id": "friends-leaderboard",
+        "title": "Leaderboard with all your friends (no group needed)",
+        "count": 1,
+        "peopleCountLabel": "1 person",
+        "status": "Need Approval",
+        "summary": "Nadhanya (@ndhnyuh) in-app. Already TRY-407.",
+        "detail": "Also asked for a search bar to add friends (TRY-407 notes the Friends page already has one) and \u201cfeature to lock in together\u201d.",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "dual-capture",
+        "title": "Dual camera (front + back)",
+        "count": 1,
+        "peopleCountLabel": "1 person",
+        "status": "Open",
+        "summary": "Sebastian (@sebaba208) in-app.",
+        "detail": "\u201cAdd dual capture support\u201d. Related backlog TRY-38 (BeReal-style double camera).",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "laptop-ipad",
+        "title": "Laptop and iPad",
+        "count": 1,
+        "peopleCountLabel": "1 person",
+        "status": "Open",
+        "summary": "Anika can't wait for laptop and iPad.",
+        "detail": "On Discord, Wakanda Panda said they got Latent on their iPad. Related backlog TRY-166.",
+        "sources": [
+          "gmail",
+          "discord"
+        ]
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 2,
+        "peopleCountLabel": "2 new / 143 total",
+        "status": "Malcolm handles",
+        "summary": "2 new \u201cStay as a Beta Tester\u201d picks since yesterday 9 AM, 143 total.",
+        "detail": "Latest Oct 17 8:43 AM PT. Count only; Malcolm handles these (TRY-343).",
+        "sources": [
+          "supabase"
+        ]
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 9,
+        "note": "9 new public.feedback rows since Oct 16 9 AM PT (85 total): Steven (Dynamic Island, PR), migue (Edit tags, 2 rows, PR), Aakaisha (recovered recording, TRY-409), Guy and Egemen (Android), Nadhanya (friends leaderboard, lock in together; TRY-407), Sebastian (dual capture)."
+      },
+      "discord": {
+        "new": 30,
+        "note": "30 new, all #general-chat chatter. Hagaywub's invite-code question got a community pointer to #how-to-download. Wakanda Panda got Latent on an iPad. No team replies. Other channels: nothing new."
+      },
+      "gmail": {
+        "new": 10,
+        "note": "None of yesterday's 4 drafts were sent (mamaev, Mishad, Matthew, imthe.abete still unanswered). New: Meghana (thanks for the iOS 17 email), Anika (safety ideas), Samuel Downs (delete my account), a Camera Access support email (sender hidden), and short thank-yous from Neharika and Serenity. Both @faisal report emails (child safety, then explicit) were dismissed. Tridha and mbuteler excluded. No PostHog alert emails. FYI: Cloudflare call booked Mon Oct 19; Malcolm invited you to his Cloudflare account (invite expires Mon Oct 19)."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "note": "Unchanged vs Oct 16 (export HTTP 200). Tabs identical (66 / 6 / 8 rows). No new free text."
+      },
+      "sentry": {
+        "new": [],
+        "note": "Unavailable: Sentry MCP needs re-auth. No data invented."
+      },
+      "posthog": {
+        "note": "Last 24h vs prior 24h (events/people): installs 3,046 (was 1,522, 2x); onboarding done 2,272 (was 934); sessions started 4,788/2,136 (was 2,136/1,051); sessions discarded 1,153/765. Edge function loop alert NOT firing (last value 13; #532 now ignores offline phones). Clip bloat not firing (1.56). Failures: capture_stalled 442/90 (was 122/21), segment_finalize_failed 76/45 (was 10/5), session_save_failed 17/13, backend_unreachable_shown 380/297, group_action_failed 501/180, invite_check_failed 565/238, sign_in_failed 46/32, clip_upload_abandoned down to 121/7, attachment_upload_failed 7/4. Rage clicks 4,944/1,703 (was 2,342/821, in line with installs). No PostHog alert emails reached your Gmail."
+      },
+      "github": {
+        "note": "10 merged since Oct 16 9 AM PT (#522, #524, #525, #526, #527, #531, #528, #502, #532, #533). Open: today's #534, #535, #536, Oct 16's #523, Eddie #500/#417 (dirty), Malcolm #530, #529, #518, #499."
+      },
+      "linear": {
+        "note": "Done since yesterday: TRY-375, 388, 390, 391, 393, 394, 395, 397, 399, 400, 401, 406, 370, 371, 317. New Need Approval: TRY-409, 408, 407, 405, 403, 387. Malcolm In Progress: TRY-389 (PostHog volume), TRY-347. New Todo: TRY-392, 396, 398. New Backlog: TRY-402, 404."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "inapp-e373a22f",
+        "source": "in-app",
+        "username": "@arazi (Guy)",
+        "whenPT": "Oct 16, 11:04 AM PT",
+        "build": "1.0.6 (39)",
+        "kind": "feature",
+        "quote": "Android version",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 iOS 27.0.1 \u00b7 TRY-395 (Android asks)"
+      },
+      {
+        "id": "inapp-0eb58de5",
+        "source": "in-app",
+        "username": "@shinoda (Egemen)",
+        "whenPT": "Oct 16, 4:49 PM PT",
+        "build": "1.0.6 (39)",
+        "kind": "feature",
+        "quote": "I LITERALLY FELL IN LOVE WITH THIS APP THANK YOU SO MUCH I ALWAYS WANTED THIS TYPE OF TIMELAPSE APP. anyway my request is bringing this app to android to add some friends BUT THANK YOU SO MUCH \ud83e\udd29\ud83e\udd29\ud83e\udd29\ud83e\udd29\ud83e\udd29",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 iOS 27.0.1 \u00b7 Android ask"
+      },
+      {
+        "id": "inapp-83e914f7",
+        "source": "in-app",
+        "username": "@starz (Steven)",
+        "whenPT": "Oct 16, 5:29 PM PT",
+        "build": "1.0.6 (39)",
+        "kind": "bug",
+        "quote": "The app kept staying in my iOS Dynamic Island even when the app is closed, when I click the dynamic island it opens the app, so now it doesn\u2019t show my live activity when I use other apps",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 iOS 26.6.1 \u00b7 Fix PR #534"
+      },
+      {
+        "id": "inapp-aa3018b6",
+        "source": "in-app",
+        "username": "@sebaba208 (Sebastian)",
+        "whenPT": "Oct 16, 11:35 PM PT",
+        "build": "1.0.6 (39)",
+        "kind": "feature",
+        "quote": "Add dual capture support",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 iOS 27.0.1 \u00b7 Related backlog TRY-38"
+      },
+      {
+        "id": "inapp-ae41d1ab",
+        "source": "in-app",
+        "username": "@ndhnyuh (Nadhanya)",
+        "whenPT": "Oct 17, 1:34 AM PT",
+        "build": "1.0.6 (39)",
+        "kind": "feature",
+        "quote": "leaderboard with all friends without making group \n\nsearch bar to add friends",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 iOS 26.6.2 \u00b7 TRY-407"
+      },
+      {
+        "id": "inapp-97af5a7d",
+        "source": "in-app",
+        "username": "@m1guelch (migue \ud83e\udd88)",
+        "whenPT": "Oct 17, 1:50 AM PT",
+        "build": "1.0.6 (39)",
+        "kind": "bug",
+        "quote": "The \u201cEdit tags\u2026\u201d button doesn\u2019t work\n\nI wanted to edit my tags so I could add a new one and delete some of them, but when I tried to do this on my profile by tapping the \u201cEdit tags\u2026\u201d button, it simply doesn\u2019t do anything, it doesn\u2019t let me tap on it\n\nIdk if this is a feature you guys are working on still or maybe it\u2019s a frontend bug",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 iOS 26.5.2 \u00b7 Fix PR #535"
+      },
+      {
+        "id": "inapp-9ea7e254",
+        "source": "in-app",
+        "username": "@m1guelch (migue \ud83e\udd88)",
+        "whenPT": "Oct 17, 1:51 AM PT",
+        "build": "1.0.6 (39)",
+        "kind": "bug",
+        "quote": "I forgot to add the version I\u2019m in on my last feedback comment regarding the \u201cEdit tags\u2026\u201d bug, I\u2019m on the 1.0.6 (39)",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 iOS 26.5.2 \u00b7 Follow-up to the Edit tags report \u00b7 PR #535"
+      },
+      {
+        "id": "inapp-6f2b98a3",
+        "source": "in-app",
+        "username": "@ndhnyuh (Nadhanya)",
+        "whenPT": "Oct 17, 2:20 AM PT",
+        "build": "1.0.6 (39)",
+        "kind": "feature",
+        "quote": "feature to lock in together",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 iOS 26.6.2 \u00b7 Feature ask"
+      },
+      {
+        "id": "inapp-836642f0",
+        "source": "in-app",
+        "username": "@aakaisha (Aakaisha)",
+        "whenPT": "Oct 17, 4:07 AM PT",
+        "build": "1.0.6 (39)",
+        "kind": "bug",
+        "quote": "I was in the middle of recording a one hour study session and my phone died near the end around 55 minutes in. When I put it on charging and opened the app, it showed recovering your recording and it did but it showed the time I studied as only 6 minutes 1 second even though the recording is much longer than that since my phone was charged for the major portion of the session. Any way to fix this and add the actual time of the recording to the number of hours I studied?",
+        "note": "In-app \u00b7 build 1.0.6 (39) \u00b7 iOS 26.6.1 \u00b7 TRY-409 (Need Approval, fix branch)"
+      },
+      {
+        "id": "gmail-mamaev",
+        "source": "gmail",
+        "username": "(no name given; mamaev-Ford.2010)",
+        "email": "mamaev-Ford.2010@yandex.ru",
+        "whenPT": "Oct 15, 12:24 PM PT",
+        "kind": "email",
+        "quote": "Make one for android",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-mishad-followup",
+        "source": "gmail",
+        "username": "Mishad",
+        "email": "mishadritov@gmail.com",
+        "whenPT": "Oct 15, 4:59 PM PT",
+        "kind": "email",
+        "quote": "Ok, thanks for the reply. Thank you for developing!",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "gmail-matthew",
+        "source": "gmail",
+        "username": "Matthew Kelly",
+        "email": "matthewk2808@icloud.com",
+        "whenPT": "Oct 16, 7:50 AM PT",
+        "kind": "email",
+        "quote": "Good Morning,\n\nI'd like to see about becoming a private tester for Latent. How can I go about that?\n\nBest,\nMatthew Kelly\nmatthewk2808@icloud.com",
+        "note": "Email \u00b7 Re: Latent Beta Tester \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-abete",
+        "source": "gmail",
+        "username": "(no name given; imthe.abete)",
+        "email": "imthe.abete@gmail.com",
+        "whenPT": "Oct 16, 8:27 AM PT",
+        "kind": "email",
+        "quote": "Heyy man do you have an eta for the android version? got some friends\nreally yearning for it hahaha great app btw",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-camera-access",
+        "source": "gmail",
+        "username": "(unknown sender; the email shows support@trylatent.co as the sender)",
+        "email": "[CHECK: original sender address is hidden; Gmail shows support@trylatent.co \u2192 support@trylatent.co]",
+        "whenPT": "Oct 16, 9:28 AM PT",
+        "kind": "email",
+        "quote": "Hi, I\u2019m trying to enable camera access to start recording the time lapses but when I\u2019m redirected to Settings, it doesn\u2019t show Camera as an option to toggle under Latent settings. Let me know how to proceed, thanks!\n\nSent from my iPhone",
+        "note": "Email \u00b7 Re: Camera Access \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-meghana",
+        "source": "gmail",
+        "username": "Meghana",
+        "email": "ravulapatikrishnameghana@gmail.com",
+        "whenPT": "Oct 16, 11:25 AM PT",
+        "kind": "email",
+        "quote": "Hey,\nThanks for clarifying that!\nI thought it was some fault on my side, but now I understand. I really\nappreciate how Latent is putting efforts into customer service and\ncare(emailing every customer about the issue is crazy man\ud83d\ude2d). Love how\naccountable yall are!",
+        "note": "Email \u00b7 Re: How to get into Latent (the focus screen bug) \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-neharika-followup",
+        "source": "gmail",
+        "username": "Neharika Thakur",
+        "email": "neharikathakur0609@gmail.com",
+        "whenPT": "Oct 16, 11:26 AM PT",
+        "kind": "email",
+        "quote": "worksss!",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "gmail-samuel",
+        "source": "gmail",
+        "username": "Samuel Downs",
+        "email": "srdowns2010@gmail.com",
+        "whenPT": "Oct 16, 4:13 PM PT",
+        "kind": "email",
+        "quote": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+        "note": "Email \u00b7 Re: Delete account \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-anika",
+        "source": "gmail",
+        "username": "Anika (anikadey0913)",
+        "email": "anikadey0913@gmail.com",
+        "whenPT": "Oct 16, 4:52 PM PT",
+        "kind": "email",
+        "quote": "Hi eddie,\n\nSo iv been following your account a while and was in th waitlist thing.\nTried it out for the first time today and it seemed awesome. A lot of my\nfriends would also love it. Great idea and cant wait for it to be available\nfor laptop and ipad.\n\nSo when I was using it - we seemed to run into an issue.\nFirstly - i was using it in a library and ur like technicallyh publishing\nit right so your friends can also see the great 3 hour lock in im always\ntalking about. And I didnt notice but there was somebody behind me and they\nwere on camera. Not enough - and they were in an unseemly manner - which is\nok and understandable and when I notices this i simply deleted my three\nhours of footage, which maybe other people wouldnt do.\nso maybe you could add a feature where i could edit some of the footage or\nif other people are in the frame then put a sticker over their face before\nputting it up. And many people might wanna use that footage to\namke aesthetic edits of themselves locking in and if some peoples face is\nvisible or smth - thats not good.\n\nand also wherever there is a camera - there is a concern of indecency where\nI share a room with my sister and she walked in rather indecent. And I\nalmost published that and fortunately im like oh lemme see and on the\nsecond take i could see her crossing the screen a few times with her in her\nunderclothes - so maybe like make a scanner thing where it could check and\nif assumes ppl are indecently dressed they ask to confirm it - like in a\nnice manner where theyre concerned for safety - cuz like i might just be\nwearing a tank top and it flags me for indecent exposure or make it\ncomulsary for everyone to go through their time laps twice.\n\nThis is rlly nice tho",
+        "note": "Email \u00b7 Re: Important suggestions related to safety \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-serenity-followup",
+        "source": "gmail",
+        "username": "Serenity",
+        "email": "serenitycrown26@gmail.com",
+        "whenPT": "Oct 17, 5:52 AM PT",
+        "kind": "email",
+        "quote": "Awesome, thank you so much!",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "discord-summary",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Snowsnarl, charan, parnik, andrew, Wakanda Panda, HikokoRui, KrabbyKai, Android Advocate",
+        "whenPT": "Oct 16, 9:39 AM \u2013 Oct 17, 8:22 AM PT",
+        "kind": "chatter",
+        "quote": "Snowsnarl (9:39 AM): #how-to-download  [reply to Hagaywub's \u201cWhere can i get the invitation code\u201d]\nparnik (10:50 AM): omg everyone so locked in\nWakanda Panda (9:26 PM): I don't have latent tho\nWakanda Panda (9:27 PM): Yoooo I just remembered / I have an ipad / I can get latent / OMGGG\nWakanda Panda (10:00 PM): I finallyy used my brain / I have an ipad i literally forgot. So I finally got latent on my ipad\nWakanda Panda (10:00 PM): Ppl add mee @wakandapanda",
+        "note": "30 messages, all #general-chat chatter; quoted the app-related ones. No product asks. No team replies. Other channels: nothing new."
+      }
+    ],
+    "replyDrafts": [
+      {
+        "id": "mamaev",
+        "name": "(no name given; mamaev-Ford.2010)",
+        "to": "mamaev-Ford.2010@yandex.ru",
+        "subject": "Re: lock in twin",
+        "threadId": "1a141057e62c6b3e",
+        "replyToMessageId": "1a141057e62c6b3e",
+        "theirMessage": "Make one for android",
+        "theirWhenPT": "Oct 15, 12:24 PM PT",
+        "body": "Hey, it's on the way! Android is coming, I'll email you when it's out. Thanks for signing up!\n\nEddie",
+        "optional": false,
+        "note": "Carried over from Oct 16 (unanswered). Android stock line.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879144914230209342"
+      },
+      {
+        "id": "mishad-followup",
+        "name": "Mishad",
+        "to": "mishadritov@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a13f41856ab5311",
+        "replyToMessageId": "1a142021fbdbc3ca",
+        "theirMessage": "Ok, thanks for the reply. Thank you for developing!",
+        "theirWhenPT": "Oct 15, 4:59 PM PT",
+        "body": "Of course, thank you for the support! Talk soon.\n\nEddie",
+        "optional": true,
+        "note": "OPTIONAL. Closing thanks after your Oct 15 reply; fine to skip and just mark read.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879113854914089745"
+      },
+      {
+        "id": "matthew",
+        "name": "Matthew Kelly",
+        "to": "matthewk2808@icloud.com",
+        "subject": "Re: Latent Beta Tester",
+        "threadId": "1a14531db16e1d24",
+        "replyToMessageId": "1a14531db16e1d24",
+        "theirMessage": "Good Morning,\n\nI'd like to see about becoming a private tester for Latent. How can I go about that?\n\nBest,\nMatthew Kelly\nmatthewk2808@icloud.com",
+        "theirWhenPT": "Oct 16, 7:50 AM PT",
+        "body": "Hey Matthew, thanks for reaching out, love that you want to help test! [CHECK: how new private testers join right now, e.g. a TestFlight invite, or start on the App Store version with an invite code, and whether Malcolm should take this one]. Let me know if you have any questions.\n\nEddie",
+        "optional": false,
+        "note": "Carried over (unanswered). Has a [CHECK]; you may want to loop in Malcolm (TRY-343). No Latent account under this email yet.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879218331516280100"
+      },
+      {
+        "id": "abete",
+        "name": "(no name given; imthe.abete)",
+        "to": "imthe.abete@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a14553c02beb2a5",
+        "replyToMessageId": "1a14553c02beb2a5",
+        "theirMessage": "Heyy man do you have an eta for the android version? got some friends\nreally yearning for it hahaha great app btw",
+        "theirWhenPT": "Oct 16, 8:27 AM PT",
+        "body": "Haha love that, thank you! No ETA yet, sorry. Android is coming, I'll email you when it's out so you can tell your friends. And if you're enjoying it, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review\n\nEddie",
+        "optional": false,
+        "note": "Carried over (unanswered). Android stock line + App Store rating ask.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879220660752790181"
+      },
+      {
+        "id": "camera-access",
+        "name": "(unknown sender; the email shows support@trylatent.co as the sender)",
+        "to": "[CHECK: original sender address is hidden; Gmail shows support@trylatent.co \u2192 support@trylatent.co]",
+        "subject": "Re: Camera Access",
+        "threadId": "1a1458b1869abfdd",
+        "replyToMessageId": "1a1458b1869abfdd",
+        "theirMessage": "Hi, I\u2019m trying to enable camera access to start recording the time lapses but when I\u2019m redirected to Settings, it doesn\u2019t show Camera as an option to toggle under Latent settings. Let me know how to proceed, thanks!\n\nSent from my iPhone",
+        "theirWhenPT": "Oct 16, 9:28 AM PT",
+        "body": "Hey, sorry about that! iPhone only shows the Camera switch for an app after the app has asked for the camera once, so [CHECK: what they should do, e.g. check Settings \u203a Screen Time \u203a Content & Privacy Restrictions \u203a Camera is allowed, or delete and reinstall Latent and tap Allow when it asks]. Let me know if that works, and if not just reply here.\n\nEddie",
+        "optional": false,
+        "note": "Can't reply until you know who sent it (the support form/group hid the address). Today's camera Cloud Agent is checking whether the app causes this.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879224464011083741"
+      },
+      {
+        "id": "meghana",
+        "name": "Meghana",
+        "to": "ravulapatikrishnameghana@gmail.com",
+        "subject": "Re: How to get into Latent (the focus screen bug)",
+        "threadId": "1a145f6309db12bf",
+        "replyToMessageId": "1a145f6309db12bf",
+        "theirMessage": "Hey,\nThanks for clarifying that!\nI thought it was some fault on my side, but now I understand. I really\nappreciate how Latent is putting efforts into customer service and\ncare(emailing every customer about the issue is crazy man\ud83d\ude2d). Love how\naccountable yall are!",
+        "theirWhenPT": "Oct 16, 11:25 AM PT",
+        "body": "Haha of course, it was totally on us, not you! Thanks for being so patient with it. If you end up enjoying Latent, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review\n\nEddie",
+        "optional": false,
+        "note": "New. Reply to your iOS 17 focus-screen email. Happy, so includes the rating ask.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879231823492092607"
+      },
+      {
+        "id": "neharika-followup",
+        "name": "Neharika Thakur",
+        "to": "neharikathakur0609@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a130b0fa022c329",
+        "replyToMessageId": "1a145f701079379e",
+        "theirMessage": "worksss!",
+        "theirWhenPT": "Oct 16, 11:26 AM PT",
+        "body": "Awesome, talk soon!\n\nEddie",
+        "optional": true,
+        "note": "OPTIONAL. One-word closing (\"worksss!\") after your Oct 15 reply; fine to skip.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878857631282676521"
+      },
+      {
+        "id": "samuel",
+        "name": "Samuel Downs",
+        "to": "srdowns2010@gmail.com",
+        "subject": "Re: Delete account",
+        "threadId": "1a146fe4c9172b23",
+        "replyToMessageId": "1a146fe4c9172b23",
+        "theirMessage": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+        "theirWhenPT": "Oct 16, 4:13 PM PT",
+        "body": "Hi Samuel, sorry to see you go! [CHECK: delete the account first; a Latent account under srdowns2010@gmail.com still existed at ~9:30 AM PT Oct 17] Your Latent account and all the data tied to srdowns2010@gmail.com have now been permanently deleted. Thanks for giving Latent a try.\n\nEddie",
+        "optional": false,
+        "note": "New. Account deletion request sent to support@. Needs the deletion done before the reply goes out (the dig changed nothing). Send from support@ if that is how you answer support mail.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+      },
+      {
+        "id": "anika",
+        "name": "Anika (anikadey0913)",
+        "to": "anikadey0913@gmail.com",
+        "subject": "Re: Important suggestions related to safety",
+        "threadId": "1a14721c6beca184",
+        "replyToMessageId": "1a14721c6beca184",
+        "theirMessage": "Hi eddie,\n\nSo iv been following your account a while and was in th waitlist thing.\nTried it out for the first time today and it seemed awesome. A lot of my\nfriends would also love it. Great idea and cant wait for it to be available\nfor laptop and ipad.\n\nSo when I was using it - we seemed to run into an issue.\nFirstly - i was using it in a library and ur like technicallyh publishing\nit right so your friends can also see the great 3 hour lock in im always\ntalking about. And I didnt notice but there was somebody behind me and they\nwere on camera. Not enough - and they were in an unseemly manner - which is\nok and understandable and when I notices this i simply deleted my three\nhours of footage, which maybe other people wouldnt do.\nso maybe you could add a feature where i could edit some of the footage or\nif other people are in the frame then put a sticker over their face before\nputting it up. And many people might wanna use that footage to\namke aesthetic edits of themselves locking in and if some peoples face is\nvisible or smth - thats not good.\n\nand also wherever there is a camera - there is a concern of indecency where\nI share a room with my sister and she walked in rather indecent. And I\nalmost published that and fortunately im like oh lemme see and on the\nsecond take i could see her crossing the screen a few times with her in her\nunderclothes - so maybe like make a scanner thing where it could check and\nif assumes ppl are indecently dressed they ask to confirm it - like in a\nnice manner where theyre concerned for safety - cuz like i might just be\nwearing a tank top and it flags me for indecent exposure or make it\ncomulsary for everyone to go through their time laps twice.\n\nThis is rlly nice tho",
+        "theirWhenPT": "Oct 16, 4:52 PM PT",
+        "body": "Hey Anika, thank you so much for trying Latent and for writing all of this out, it's super helpful. You're right that people walking through the background is a real concern, and I'm sorry you had to delete a 3 hour session because of it. Trimming footage and covering other people before you post are both great ideas, and I'm sharing them with the team. Really glad you liked it overall!\n\nEddie",
+        "optional": false,
+        "note": "New. Privacy/safety suggestions (trim footage, cover bystanders, check before posting). No promises made. No Latent account under this email (she may have signed up with another).",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879252410915660164"
+      },
+      {
+        "id": "serenity-followup",
+        "name": "Serenity",
+        "to": "serenitycrown26@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a1352f6a5158b88",
+        "replyToMessageId": "1a149ebe3d803d4d",
+        "theirMessage": "Awesome, thank you so much!",
+        "theirWhenPT": "Oct 17, 5:52 AM PT",
+        "body": "Of course! Talk soon.\n\nEddie",
+        "optional": true,
+        "note": "OPTIONAL. Closing thanks after your Oct 13 reply; fine to skip.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878936688828713864"
+      }
+    ],
+    "linearIssue": {
+      "id": "TRY-410",
+      "url": "https://linear.app/trylatent/issue/TRY-410/daily-dig-2026-10-17-4-fixes-waiting-for-review-523-536"
+    },
+    "linearNote": "Linear dig issue (Need Approval, assigned to Eddie): TRY-410 https://linear.app/trylatent/issue/TRY-410/daily-dig-2026-10-17-4-fixes-waiting-for-review-523-536"
   }
 };
