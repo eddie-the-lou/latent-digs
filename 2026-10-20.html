@@ -1,0 +1,425 @@
+<!-- Subject: Latent daily review · 2026-10-20 — 1 fix waiting -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Latent daily review · 2026-10-20</title></head>
+<body style="font-family:-apple-system,Helvetica,Arial,sans-serif;line-height:1.45;color:#111;max-width:680px;margin:0 auto;padding:20px">
+<h1 style="font-size:22px;margin:0 0 12px">Latent daily review · Oct 20: 1 fix waiting</h1>
+<p style="background:#fff8d6;border:1px solid #f5c542;padding:12px 14px;border-radius:8px"><strong>Live archive (bookmark this):</strong> <a href="https://eddie-the-lou.github.io/latent-digs/">https://eddie-the-lou.github.io/latent-digs/</a><br><strong>Today’s review:</strong> <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-10-20">https://eddie-the-lou.github.io/latent-digs/#/2026-10-20</a><br><strong>Linear dig issue:</strong> <a href="https://linear.app/trylatent/issue/TRY-473/daily-dig-2026-10-20-1-fix-waiting-for-review-568">TRY-473</a></p>
+<p><strong>In short:</strong></p><ul><li>1 fix opened today (#568): a save that retries when someone reopens the app could go out as if they were signed out and get refused, so the post was lost or stuck. 6 people in a week, 4 since yesterday.</li><li>All 5 earlier fixes merged yesterday (#523, #534, #535, #536, #555), plus your 5 bundles (#557 to #560, #566) that closed about 30 Linear tickets. None of these are in a released build yet: 1.0.8 (43), on about 1,500 phones since Oct 18 evening, was built before they merged and still shows the stuck-upload error. They reach people with the next build.</li><li>No age holds.</li><li>5 new in-app notes: nico lost a 2-hour session when his internet dropped (the exact bug #555 fixes), Andrija is the 5th person asking for Monday weeks (TRY-439), Damon wants phone study to count (TRY-472), edriselle wants photos in messages (no ticket).</li><li>24 reply drafts (8 optional): 22 carried (none sent) plus Swetha (log a session without recording) and Noel (already applied). Samuel Downs&#x27; account still exists after 4 days.</li><li>2 new beta opt-ins / 152. Survey unchanged. Discord wasn&#x27;t checked today (the Discord results never arrived by 9:53 AM PT). Sentry still needs re-auth. PostHog alerts not firing.</li></ul>
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">What I did today</h2>
+<h3 style="font-size:15px;margin:14px 0 6px">Fixes I opened today (1, waiting on review)</h3>
+<div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div><strong>Saves retried when you reopen the app no longer go out as if you&#x27;re signed out</strong> <span style="background:#eee;border-radius:4px;padding:1px 6px;font-size:12px">NEW · OCT 20</span></div><div style="font-size:14px;margin-top:4px"><strong>PR:</strong> <a href="https://github.com/eddie-the-lou/latent/pull/568">#568</a> · <strong>Agent:</strong> <a href="https://cursor.com/agents/bc-03de55a2-556e-5a06-b816-71a2182de0e9">Cloud Agent</a> · <strong>Status:</strong> PR open (draft), not merged</div><div style="margin-top:6px"><strong>Reported by:</strong> PostHog (session_save_failed, “permission denied for table work_types”, sent as the signed-out role): 6 people in 7 days on builds 1.0.6 (39) and 1.0.7 (41), 4 of them since yesterday&#x27;s review. Each one fired within a second of the app reopening after 45+ minutes in the background. I couldn&#x27;t find 4 of those 6 sessions in the database afterwards, and one person&#x27;s video then got stuck uploading to a post that never saved.</div><div style="margin-top:6px"><strong>What was wrong and what changed:</strong> When someone saved a session and then left the app for about an hour, the save that retries as the app reopens could go out before the app had signed the person back in. The server treated it like a logged-out visitor and refused it (“permission denied for table work_types”), so the post never reached the server and its video then got stuck. Now the app waits until the person is signed in again before sending, retries once if it is still refused, and never throws away the session or its video. A normal save without leaving the app works the same as today.</div><div style="margin-top:6px"><strong>How to check:</strong> On a phone with this build: sign in, record a short session, save it (with a clip, shared with friends), then put Latent in the background right away and leave it for more than an hour. Reopen Latent: the post should still be on your profile, a friend should see it with a playable video, and PostHog should show no “permission denied for table work_types” save failure for that reopen. The agent couldn&#x27;t compile it (no Mac), so it asks you to run the Mac tests and this phone check before merging.</div></div>
+<p style="font-size:13px;color:#555">Not duplicated: nico's lost session, the stuck uploads and the empty clips are already fixed on main (<a href="https://github.com/eddie-the-lou/latent/pull/555">#555</a>, <a href="https://github.com/eddie-the-lou/latent/pull/557">#557</a>); the new freeze and crash tickets belong to Malcolm's bot (<a href="https://linear.app/trylatent/issue/TRY-468">TRY-468</a> with #567, TRY-469, TRY-470, TRY-471).</p>
+<h3 style="font-size:15px;margin:14px 0 6px">Merged overnight (10)</h3><ul><li><a href="https://github.com/eddie-the-lou/latent/pull/555">#555</a> An offline-failed session save is retried before its clip upload (TRY-455) <span style="color:#666">(Eddie · Oct 19, 3:39 PM PT)</span><br><span style="font-size:13px;color:#444">Was carried from Oct 18. Fixes the stuck “does not reference an existing session” uploads, including nico&#x27;s lost 2-hour session below, once it&#x27;s in a build.</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/557">#557</a> Posts: no empty clips, no needless discard prompt, Undo on delete, sound full screen (TRY-437, TRY-446, TRY-421, TRY-369) <span style="color:#666">(Eddie · Oct 19, 3:41 PM PT)</span><br><span style="font-size:13px;color:#444">All 4 tickets Done.</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/558">#558</a> Ten freezes the app no longer waits on (TRY-440, 408, 412, 403, 405, 451, 413, 387, 449, 385) <span style="color:#666">(Eddie · Oct 19, 3:43 PM PT)</span><br><span style="font-size:13px;color:#444">Replaces Malcolm&#x27;s bot PRs #561 to #565, which were closed the same minute.</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/559">#559</a> Record: no lost session with camera off, zoom survives Low Power Mode, roomier Pomodoro picker (TRY-460, TRY-441, TRY-461) <span style="color:#666">(Eddie · Oct 19, 3:45 PM PT)</span><br><span style="font-size:13px;color:#444">All 3 tickets Done.</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/560">#560</a> Feedback-sent toast, chat box clears after send, Mac launch-screen crash (TRY-447, TRY-376, TRY-361) <span style="color:#666">(Eddie · Oct 19, 3:47 PM PT)</span><br><span style="font-size:13px;color:#444">All 3 tickets Done.</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/523">#523</a> A clip that can&#x27;t stream backs off instead of re-asking every 5 seconds (TRY-292) <span style="color:#666">(Eddie · Oct 19, 6:21 PM PT)</span><br><span style="font-size:13px;color:#444">Was carried from Oct 16.</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/535">#535</a> Tapping “Edit tags…” on your profile opens the tag editor <span style="color:#666">(Eddie · Oct 19, 6:25 PM PT)</span><br><span style="font-size:13px;color:#444">Was carried from Oct 17 (migue&#x27;s report).</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/534">#534</a> Latent no longer lingers in the Dynamic Island after a session ends <span style="color:#666">(Eddie · Oct 19, 6:27 PM PT)</span><br><span style="font-size:13px;color:#444">Was carried from Oct 17 (Steven&#x27;s report).</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/536">#536</a> Don&#x27;t send people to Settings when there&#x27;s no Camera switch <span style="color:#666">(Eddie · Oct 19, 6:29 PM PT)</span><br><span style="font-size:13px;color:#444">Was carried from Oct 17 (the “Camera Access” support email).</span></li><li><a href="https://github.com/eddie-the-lou/latent/pull/566">#566</a> Messaging someone who&#x27;s no longer a friend, group invites open the group, inbox select buttons float, iOS 17 post menu works (TRY-414, TRY-416, TRY-415, TRY-404) <span style="color:#666">(Eddie · Oct 19, 9:03 PM PT)</span><br><span style="font-size:13px;color:#444">All 4 tickets Done.</span></li></ul>
+<p style="font-size:13px;color:#555">None of these are in a released build yet: 1.0.8 (43), on about 1,500 phones since Oct 18 evening, was built before they merged and still shows the stuck-upload error. They reach people with the next build. Malcolm's bot PRs <a href="https://github.com/eddie-the-lou/latent/pull/561">#561</a>, <a href="https://github.com/eddie-the-lou/latent/pull/562">#562</a>, <a href="https://github.com/eddie-the-lou/latent/pull/563">#563</a>, <a href="https://github.com/eddie-the-lou/latent/pull/564">#564</a>, <a href="https://github.com/eddie-the-lou/latent/pull/565">#565</a> were closed (folded into #558).</p>
+<h3 style="font-size:15px;margin:14px 0 6px">Still on you</h3><ul><li>Account deletion request: Samuel Downs (srdowns2010@gmail.com, @captsam) emailed support@ Oct 16, 4:13 PM PT. His account still existed at ~9:20 AM PT today (4 days). Reply draft below waits on the deletion. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867">Open</a></li><li>Next build: the 10 fixes merged yesterday (including #555 for stuck and lost posts, and #557 for empty clips) aren&#x27;t in any released build yet. PostHog still shows 4 people with stuck uploads and 2 with empty clips since yesterday.</li><li>NEW · Malcolm&#x27;s #567: app froze 2 to 3 sec as a recording started or ended (TRY-468, In Progress, merges cleanly; his note says build and check on a simulator before merging). <a href="https://github.com/eddie-the-lou/latent/pull/567">Open</a></li><li>NEW in Need Approval (Malcolm&#x27;s bot): TRY-469 freeze when the lock screen timer starts or ends, TRY-470 crash on the friends list, TRY-471 freeze while the feed readies the next videos, TRY-472 let study on your phone count (Damon&#x27;s ask below), TRY-463 light mode (Heidi), TRY-465 something for early users when paid features come. TRY-467 (notification when someone passes you in a group) went to Backlog. <a href="https://linear.app/trylatent/issue/TRY-470">Open</a></li><li>Older open PRs: yours #500 (Activation page) and #417 (clashes with main); Malcolm&#x27;s #543 (friend profile stats crash, TRY-386 In Progress, merges cleanly), #537 (clashes), #530, #529, #518, #499. <a href="https://github.com/eddie-the-lou/latent/pulls">Open</a></li><li>Today: EF call Eddie/Malcolm &lt;&gt; Chris Mairs (invite from Oct 18). <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879452845994948857">Open</a></li><li>FYI: your “Joining the Latent team” emails since yesterday link forms.gle/xGCb7mjZs8RpNihHA, not the form I had on file (forms.gle/H7vYiUfV3QMXiqP89). Just flagging in case one of them is old. One of those emails, to carycx.li@mail.toronto.ca, bounced (address not found) Oct 19, 7:18 PM PT. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#search/carycx.li">Open</a></li></ul>
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Age holds</h2><p><strong>No age holds.</strong> Nothing open, new, or resolved in the last 24 hours.</p>
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Ready for you to approve</h2><ul><li><strong>Review #568: Saves retried when you reopen the app no longer go out as if you&#x27;re signed out</strong>. When someone saved a session and then left the app for about an hour, the save that retries as the app reopens could go out before the app had signed the person back in. The server treated it like a logged-out visitor and refused it (“permission denied for table work_types”), so the post never reached the server and its video then got stuck. Now the app waits until the person is signed in again before sending, retries once if it is still refused, and never throws away the session or its video. A normal save without leaving the app works the same as today. How to check: On a phone with this build: sign in, record a short session, save it (with a clip, shared with friends), then put Latent in the background right away and leave it for more than an hour. Reopen Latent: the post should still be on your profile, a friend should see it with a playable video, and PostHog should show no “permission denied for table work_types” save failure for that reopen. The agent couldn&#x27;t compile it (no Mac), so it asks you to run the Mac tests and this phone check before merging. <a href="https://github.com/eddie-the-lou/latent/pull/568">PR</a> · <a href="https://cursor.com/agents/bc-03de55a2-556e-5a06-b816-71a2182de0e9">agent</a></li><li><strong>Ship the 10 fixes merged yesterday in the next build</strong>. None of these are in a released build yet: 1.0.8 (43), on about 1,500 phones since Oct 18 evening, was built before they merged and still shows the stuck-upload error. They reach people with the next build.</li><li><strong>Delete Samuel Downs&#x27; account (he asked by email Oct 16), then send the reply</strong>. srdowns2010@gmail.com (@captsam). Still exists after 4 days. The dig changed nothing.</li><li><strong>24 reply drafts (8 optional)</strong>. Not sent. Approve each in chat.</li><li><strong>Malcolm&#x27;s #567: freeze going in or out of recording (TRY-468)</strong>. New, merges cleanly. His note: build and check on a simulator before merging. <a href="https://github.com/eddie-the-lou/latent/pull/567">PR</a></li><li><strong>6 new Linear tickets in Need Approval</strong>. TRY-469, 470, 471 (freezes/crash), TRY-472 (phone study), TRY-463 (light mode), TRY-465 (early users when paid features come).</li><li><strong>Re-connect Sentry</strong>. Still needsAuth.</li></ul>
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Replies drafted for you</h2><p style="font-size:13px;color:#555">Not sent and not saved as Gmail drafts. Oldest first. None of the 22 from yesterday went out, so they’re carried; 2 new at the end. Tridha and mbuteler are left out; Stay-as-Beta taps are just counted.</p>
+<div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>(no name given; mamaev-Ford.2010)</strong> · <strong>To:</strong> mamaev-Ford.2010@yandex.ru · <strong>Subject:</strong> Re: lock in twin · <span style="color:#666">they wrote Oct 15, 12:24 PM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Make one for android</div><div style="white-space:pre-wrap;margin-top:8px">Hey, it&#x27;s on the way! Android is coming, I&#x27;ll email you when it&#x27;s out. Thanks for signing up!
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Android stock line. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879144914230209342">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Mishad</strong> · <strong>To:</strong> mishadritov@gmail.com · <strong>Subject:</strong> Re: lock in twin · <span style="color:#666">they wrote Oct 15, 4:59 PM PT</span> <span style="background:#eee;border-radius:4px;padding:1px 6px;font-size:12px">OPTIONAL</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Ok, thanks for the reply. Thank you for developing!</div><div style="white-space:pre-wrap;margin-top:8px">Of course, thank you for the support! Talk soon.
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">OPTIONAL. Closing thanks after your Oct 15 reply; fine to skip and just mark read. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879113854914089745">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Matthew Kelly</strong> · <strong>To:</strong> matthewk2808@icloud.com · <strong>Subject:</strong> Re: Latent Beta Tester · <span style="color:#666">they wrote Oct 16, 7:50 AM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Good Morning,
+
+I&#x27;d like to see about becoming a private tester for Latent. How can I go about that?
+
+Best,
+Matthew Kelly
+matthewk2808@icloud.com</div><div style="white-space:pre-wrap;margin-top:8px">Hey Matthew, thanks for reaching out, love that you want to help test! [CHECK: how new private testers join right now, e.g. a TestFlight invite, or start on the App Store version with an invite code, and whether Malcolm should take this one]. Let me know if you have any questions.
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Has a [CHECK]; you may want to loop in Malcolm (TRY-343). No Latent account under this email yet. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879218331516280100">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>(no name given; imthe.abete)</strong> · <strong>To:</strong> imthe.abete@gmail.com · <strong>Subject:</strong> Re: lock in twin · <span style="color:#666">they wrote Oct 16, 8:27 AM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Heyy man do you have an eta for the android version? got some friends
+really yearning for it hahaha great app btw</div><div style="white-space:pre-wrap;margin-top:8px">Haha love that, thank you! No ETA yet, sorry. Android is coming, I&#x27;ll email you when it&#x27;s out so you can tell your friends. And if you&#x27;re enjoying it, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Android stock line + App Store rating ask. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879220660752790181">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>(unknown sender; the email shows support@trylatent.co as the sender)</strong> · <strong>To:</strong> [CHECK: original sender address is hidden; Gmail shows support@trylatent.co → support@trylatent.co] · <strong>Subject:</strong> Re: Camera Access · <span style="color:#666">they wrote Oct 16, 9:28 AM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Hi, I’m trying to enable camera access to start recording the time lapses but when I’m redirected to Settings, it doesn’t show Camera as an option to toggle under Latent settings. Let me know how to proceed, thanks!
+
+Sent from my iPhone</div><div style="white-space:pre-wrap;margin-top:8px">Hey, sorry about that! iPhone only shows the Camera switch for an app after the app has asked for the camera once, so [CHECK: what they should do, e.g. check Settings › Screen Time › Content &amp; Privacy Restrictions › Camera is allowed, or delete and reinstall Latent and tap Allow when it asks]. Let me know if that works, and if not just reply here.
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over. Can&#x27;t reply until you know who sent it (the support form/group hid the address). Fix #536 merged Oct 19, 6:29 PM PT but isn&#x27;t in a released build yet. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879224464011083741">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Meghana</strong> · <strong>To:</strong> ravulapatikrishnameghana@gmail.com · <strong>Subject:</strong> Re: How to get into Latent (the focus screen bug) · <span style="color:#666">they wrote Oct 16, 11:25 AM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Hey,
+Thanks for clarifying that!
+I thought it was some fault on my side, but now I understand. I really
+appreciate how Latent is putting efforts into customer service and
+care(emailing every customer about the issue is crazy man😭). Love how
+accountable yall are!</div><div style="white-space:pre-wrap;margin-top:8px">Haha of course, it was totally on us, not you! Thanks for being so patient with it. If you end up enjoying Latent, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Reply to your iOS 17 focus-screen email. Happy, so includes the rating ask. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879231823492092607">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Neharika Thakur</strong> · <strong>To:</strong> neharikathakur0609@gmail.com · <strong>Subject:</strong> Re: lock in twin · <span style="color:#666">they wrote Oct 16, 11:26 AM PT</span> <span style="background:#eee;border-radius:4px;padding:1px 6px;font-size:12px">OPTIONAL</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">worksss!</div><div style="white-space:pre-wrap;margin-top:8px">Awesome, talk soon!
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">OPTIONAL. One-word closing (&quot;worksss!&quot;) after your Oct 15 reply; fine to skip. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878857631282676521">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Samuel Downs</strong> · <strong>To:</strong> srdowns2010@gmail.com · <strong>Subject:</strong> Re: Delete account · <span style="color:#666">they wrote Oct 16, 4:13 PM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Dear Latent Support Team,
+
+I am writing to formally request the permanent deletion of my account and
+all associated personal data stored with Latent.
+
+Please delete my account linked to this email address (srdowns2010@gmail.com)
+and remove all of my stored information, history, and personal details from
+your systems and databases.
+
+Once the account and data have been fully deleted, please send a
+confirmation email to confirm that this process is complete.
+
+Thank you,
+
+Samuel Downs</div><div style="white-space:pre-wrap;margin-top:8px">Hi Samuel, sorry to see you go! [CHECK: delete the account first; his Latent account (@captsam, made Oct 16) still existed at ~9:20 AM PT Oct 20] Your Latent account and all the data tied to srdowns2010@gmail.com have now been permanently deleted. Thanks for giving Latent a try.
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered since Oct 16). Account deletion request sent to support@. His account (@captsam) still exists as of ~9:20 AM PT Oct 20 (4 days); the dig changed nothing. Delete first, then send (from support@ if that is how you answer support mail). <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Anika (anikadey0913)</strong> · <strong>To:</strong> anikadey0913@gmail.com · <strong>Subject:</strong> Re: Important suggestions related to safety · <span style="color:#666">they wrote Oct 16, 4:52 PM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Hi eddie,
+
+So iv been following your account a while and was in th waitlist thing.
+Tried it out for the first time today and it seemed awesome. A lot of my
+friends would also love it. Great idea and cant wait for it to be available
+for laptop and ipad.
+
+So when I was using it - we seemed to run into an issue.
+Firstly - i was using it in a library and ur like technicallyh publishing
+it right so your friends can also see the great 3 hour lock in im always
+talking about. And I didnt notice but there was somebody behind me and they
+were on camera. Not enough - and they were in an unseemly manner - which is
+ok and understandable and when I notices this i simply deleted my three
+hours of footage, which maybe other people wouldnt do.
+so maybe you could add a feature where i could edit some of the footage or
+if other people are in the frame then put a sticker over their face before
+putting it up. And many people might wanna use that footage to
+amke aesthetic edits of themselves locking in and if some peoples face is
+visible or smth - thats not good.
+
+and also wherever there is a camera - there is a concern of indecency where
+I share a room with my sister and she walked in rather indecent. And I
+almost published that and fortunately im like oh lemme see and on the
+second take i could see her crossing the screen a few times with her in her
+underclothes - so maybe like make a scanner thing where it could check and
+if assumes ppl are indecently dressed they ask to confirm it - like in a
+nice manner where theyre concerned for safety - cuz like i might just be
+wearing a tank top and it flags me for indecent exposure or make it
+comulsary for everyone to go through their time laps twice.
+
+This is rlly nice tho</div><div style="white-space:pre-wrap;margin-top:8px">Hey Anika, thank you so much for trying Latent and for writing all of this out, it&#x27;s super helpful. You&#x27;re right that people walking through the background is a real concern, and I&#x27;m sorry you had to delete a 3 hour session because of it. Trimming footage and covering other people before you post are both great ideas, and I&#x27;m sharing them with the team. Really glad you liked it overall!
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Privacy/safety suggestions (trim footage, cover bystanders, check before posting). No promises made. No Latent account under this email (she may have signed up with another). <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879252410915660164">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Serenity</strong> · <strong>To:</strong> serenitycrown26@gmail.com · <strong>Subject:</strong> Re: lock in twin · <span style="color:#666">they wrote Oct 17, 5:52 AM PT</span> <span style="background:#eee;border-radius:4px;padding:1px 6px;font-size:12px">OPTIONAL</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Awesome, thank you so much!</div><div style="white-space:pre-wrap;margin-top:8px">Of course! Talk soon.
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">OPTIONAL. Closing thanks after your Oct 13 reply; fine to skip. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878936688828713864">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Ty Tran-Nguyen</strong> · <strong>To:</strong> tyatrannguyen@gmail.com · <strong>Subject:</strong> Re: Joining the Latent team · <span style="color:#666">they wrote Oct 18, 12:06 PM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Hi Eddie,
+
+Messaged you on a couple of platforms (discord, instagram, linkedin) — was
+just wondering if you could elaborate on the growth internship a bit more?
+
+I am an industrial and systems engineering major at the University of
+Minnesota, looking for anything data/process improvement related.
+
+I have some experience with Python and SQL. I just finished up a project
+where I mapped the webinar setup process for UMN&#x27;s Office of IT and built a
+Python tool that automates Zoom and Google Calendar setup, cutting 8 steps
+to 2 and saving about 20 minutes per webinar.
+
+I have a knack for seeing processes that are inefficient and solving them
+in some way, and I hope to bring that to Latent.
+
+I was wondering if the growth internship would align at all with anything I
+have just mentioned and any other details you could provide.
+
+Look forward to hearing from you!
+
+Best,
+Ty Tran-Nguyen</div><div style="white-space:pre-wrap;margin-top:8px">Hey Ty, thanks for reaching out, and that Zoom and Calendar tool sounds super useful! For Growth we&#x27;re looking for someone who uses and loves the app and is aligned with the mission. Past results are a plus, but we approach growth pretty unconventionally. [CHECK: anything else you want to say about the role, e.g. how data/process work fits in or time commitment]. Hires get flown out with housing and food covered, and there&#x27;s a remote option too, so if it sounds like a fit, the form I sent is the best way to apply!
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Replied to your &quot;Joining the Latent team&quot; email asking what the Growth internship involves. Has a [CHECK] for anything you want to add about the role. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879415188676770608">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Landon Metzger</strong> · <strong>To:</strong> landonmetzger01@gmail.com · <strong>Subject:</strong> Re: Joining the Latent team · <span style="color:#666">they wrote Oct 18, 12:22 PM and 12:24 PM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">[12:22 PM PT]
+Thanks for reaching out!
+
+My first thoughts on the app are that it&#x27;s a really unique way to get
+people to be productive. I know I personally struggle with staying on task,
+especially when I&#x27;m not interested in the work, but I also know from
+experience that working in a group setting is something that motivates me
+to stay on task, and is something the app leverages well.
+
+I&#x27;m not sure what sort of commitments you guys are looking for, but I
+probably can&#x27;t be full-time during school, and would have to work at
+irregular times like between classes and on the weekends. Thanks so much
+for reaching out almost instantly when I posted on LinkedIn, I really
+appreciate that, and am sure many others do too.
+
+Best,
+Landon Metzger
+
+[12:24 PM PT]
+I did go ahead and fill out the form for the engineering position, looking
+forward to hearing back from you!</div><div style="white-space:pre-wrap;margin-top:8px">Hey Landon, thanks for applying and for the kind words! Studying with other people keeping you on task is a big part of why we built Latent, so that&#x27;s awesome to hear. [CHECK: whether part-time between classes and on weekends can work for the Engineering role]. Thanks again!
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Two replies to your hiring email: first thoughts on the app, says he can&#x27;t be full-time during school, and that he applied for Engineering. Has a [CHECK] on part-time. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879409985522861741">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Ahmar</strong> · <strong>To:</strong> ahmarali2004@gmail.com · <strong>Subject:</strong> Re: Joining the Latent team · <span style="color:#666">they wrote Oct 18, 1:14 PM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Hi,
+
+Thank you so much for sharing this Google Form with me.
+
+I really appreciate it!
+
+I wanted to share that I have just filled it out and submitted a response,
+kindly share if you have received it.
+
+Thanks &amp; Best Regards!
+Ahmar</div><div style="white-space:pre-wrap;margin-top:8px">Hey Ahmar, yep, got it [CHECK: confirm his response is in the form responses], thanks for applying!
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Filled out the hiring form and asks you to confirm you got it. [CHECK] that it&#x27;s in the form responses. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879417374340541791">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Mushahid</strong> · <strong>To:</strong> mushahidahmed42@gmail.com · <strong>Subject:</strong> Re: Joining the Latent team · <span style="color:#666">they wrote Oct 18, 6:54 PM PT</span> <span style="background:#eee;border-radius:4px;padding:1px 6px;font-size:12px">OPTIONAL</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">I just submitted my application.</div><div style="white-space:pre-wrap;margin-top:8px">Awesome, thanks Mushahid!
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">OPTIONAL. &quot;I just submitted my application&quot; after your hiring email; fine to skip. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879418386430961444">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Mushahid</strong> · <strong>To:</strong> mushahidahmed42@gmail.com · <strong>Subject:</strong> Re: How to get into Latent (the focus screen bug) · <span style="color:#666">they wrote Oct 18, 6:54 PM PT</span> <span style="background:#eee;border-radius:4px;padding:1px 6px;font-size:12px">OPTIONAL</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Sure</div><div style="white-space:pre-wrap;margin-top:8px">Awesome, let me know if anything still doesn&#x27;t work!
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">OPTIONAL. &quot;Sure&quot; reply to your iOS 17 focus-screen email (sent from eddie@mail.trylatent.co); fine to skip. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879441284094175176">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Karla</strong> · <strong>To:</strong> lieukarla@gmail.com · <strong>Subject:</strong> Re: How to get into Latent (the focus screen bug) · <span style="color:#666">they wrote Oct 18, 7:17 PM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">I got into the app but it couldn’t record, not sure if that’s because I’m
+on an iPad but it’s the only device I can use since I have a Samsung phone.
+
+Thanks,
+
+Karla</div><div style="white-space:pre-wrap;margin-top:8px">Hey Karla, glad you got in, and sorry it won&#x27;t record on your iPad! [CHECK: what to tell her about iPad recording, e.g. that it&#x27;s a known iPad issue you&#x27;re looking into, or something to try like checking Settings › Latent › Camera]. Android is coming too, I&#x27;ll email you when it&#x27;s out.
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). She got in after your iOS 17 focus-screen email but it won&#x27;t record on her iPad (she has a Samsung phone). #559 fixed recording with the camera turned off (TRY-460), which may or may not be her case. Has a [CHECK]. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879442748582595647">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Gautamvir</strong> · <strong>To:</strong> [CHECK: original sender address is hidden; Gmail shows support@trylatent.co → support@trylatent.co] · <strong>Subject:</strong> Re: Campus ambassador? · <span style="color:#666">they wrote Oct 18, 9:15 PM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Hi,
+I hope you&#x27;re well. I came across the app on LinkedIn. I&#x27;m keen to use the app since for me it&#x27;d be another jab at the doomscrolling which, for a change, seems promising.
+
+I&#x27;d love to be a part of the beta program and get a link to start using the app.
+
+Also, I&#x27;m a student and Purdue and entrenched in the startup ecosystem here. With college students working on startups being a great market for your app, I&#x27;d be happy to work on a referral / marketing program on campus.
+
+Do let me know.
+
+Best,
+Gautamvir
+
+linkedin.com/in/gautamvirbhatia</div><div style="white-space:pre-wrap;margin-top:8px">Hey Gautamvir, thanks for reaching out! Here&#x27;s a link to get in: [CHECK: your invite link]. Love the campus idea, [CHECK: how you want to handle it, e.g. point him to the Growth application form]. Let me know how you like the app!
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Sent to support@ (sender address hidden by the group, like the Camera Access email). Purdue student wants in and offers to run a campus referral program. Has [CHECK]s. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879450121123368863">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Jan</strong> · <strong>To:</strong> djaymegshroom@gmail.com · <strong>Subject:</strong> Re: Joining the Latent team · <span style="color:#666">they wrote Oct 18, 9:57 PM PT</span> <span style="background:#eee;border-radius:4px;padding:1px 6px;font-size:12px">OPTIONAL</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Hey Eddie
+
+Received with thanks!
+
+All the best with the app, love the concept a lot! Love to explore
+potential ways to collab down the road!
+
+Regards
+Jan</div><div style="white-space:pre-wrap;margin-top:8px">Thanks Jan, glad you love it! If you end up enjoying Latent, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">OPTIONAL. Thanked you for the early access link you sent Oct 18 and mentioned a possible collab later. Happy, so includes the rating ask. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879397341166325858">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Aleksandra</strong> · <strong>To:</strong> aleksandra.dudko01@gmail.com · <strong>Subject:</strong> Re: Screen time · <span style="color:#666">they wrote Oct 19, 1:33 AM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Hi! I use Latent to record my study sessions, but because the screen stays
+on (even when fully dimmed), it adds hours to my iPhone’s Screen Time.
+
+Is there a way to record sessions in the background or lock my iPhone
+without stopping the recording? Alternatively, is there a way to prevent
+Latent from contributing to Apple’s Screen Time total?
+
+Thanks!</div><div style="white-space:pre-wrap;margin-top:8px">Hey Aleksandra, thanks for writing in, that&#x27;s a really fair point! [CHECK: whether a session can keep recording with the screen locked or in the background, and whether anything can keep Latent out of Screen Time; if not, say so plainly]. You&#x27;re not the only one who&#x27;s asked, so I&#x27;m sharing it with the team.
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Emailed support@ (and sent the same note in the app as @aleksandra). Second Screen Time ask in two days (Ethan @soriyen yesterday). No Linear ticket yet. Has a [CHECK]. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879466403698440317">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>(no name given; fatmahafeezuddin)</strong> · <strong>To:</strong> fatmahafeezuddin@gmail.com · <strong>Subject:</strong> Re: lock in twin · <span style="color:#666">they wrote Oct 19, 3:03 AM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Subject: Android Version Request
+
+Body:
+
+Hi Eddie,
+
+I joined the waitlist from your Instagram reel because I am really
+interested in Latent. However, I noticed it is currently only available on
+the App Store.
+Since I am an Android user, I&#x27;m disappointed that I can&#x27;t use it right now.
+Please consider launching an Android version soon so I can finally try it
+out!</div><div style="white-space:pre-wrap;margin-top:8px">Hey, thanks so much for joining the waitlist, and sorry you can&#x27;t use it yet! Android is coming, I&#x27;ll email you when it&#x27;s out.
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Reply to your launch email: Android user asking for an Android version. Android stock line. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879472067419194172">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Anirudh</strong> · <strong>To:</strong> hey.anirudh.nallajarla@gmail.com · <strong>Subject:</strong> Re: lock in twin · <span style="color:#666">they wrote Oct 19, 3:05 AM PT</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Haha, thanks!
+Ye, I can show you! It&#x27;s kinda a skuffed apk version, but it does the work
+for now for me and my friends, and just got through the exams season wit it.
+I&#x27;ll see how I can share it.
+Will do so soon!
+
+Thanks again! :)</div><div style="white-space:pre-wrap;margin-top:8px">Haha that&#x27;s awesome, glad it got you guys through exams! Would love to see it whenever you get the chance. Android is coming, I&#x27;ll email you when it&#x27;s out.
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">Carried over (unanswered). Follow-up to your Oct 7 reply: he&#x27;ll share the makeshift Android version he built for his friends. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878327360135959682">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Niketh</strong> · <strong>To:</strong> niketh13putta@gmail.com · <strong>Subject:</strong> Re: Joining the Latent team · <span style="color:#666">they wrote Oct 19, 8:59 AM PT</span> <span style="background:#eee;border-radius:4px;padding:1px 6px;font-size:12px">OPTIONAL</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Yo, I applied</div><div style="white-space:pre-wrap;margin-top:8px">Awesome, thanks Niketh!
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">OPTIONAL. &quot;Yo, I applied&quot; after your hiring email; fine to skip. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879397334266363883">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Noel Emmanuel</strong> · <strong>To:</strong> noel.emmanuel20@gmail.com · <strong>Subject:</strong> Re: Joining the Latent team · <span style="color:#666">they wrote Oct 19, 4:37 PM PT</span> <span style="background:#eee;border-radius:4px;padding:1px 6px;font-size:12px">OPTIONAL</span> <span style="background:#eee;border-radius:4px;padding:1px 6px;font-size:12px">NEW</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Hey Eddie,
+
+Thanks for getting back to me! I actually filled out the form earlier after
+coming across Latent on Instagram, so my application should already be in
+there.
+
+Really interested in what you’re building and would love the opportunity to
+contribute. Looking forward to hearing back!
+Best,
+Noel Emmanuel</div><div style="white-space:pre-wrap;margin-top:8px">Hey Noel, thanks for applying, and glad you found Latent on Instagram! [CHECK: confirm his application is in the form responses]. Appreciate you reaching out!
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">OPTIONAL. New. Replied 5 minutes after your “Joining the Latent team” email (Oct 19, 4:32 PM PT) to say he already applied through the form. Fine to skip. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879522911027494194">Open thread</a></div></div><div style="border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin:10px 0"><div style="font-size:13px"><strong>Swetha Venkedesh</strong> · <strong>To:</strong> swetha_venkedesh@windermereprep.com · <strong>Subject:</strong> Re: lock in twin · <span style="color:#666">they wrote Oct 19, 6:47 PM PT</span> <span style="background:#eee;border-radius:4px;padding:1px 6px;font-size:12px">NEW</span></div><div style="font-size:13px;color:#444;margin-top:6px;white-space:pre-wrap;border-left:3px solid #ccc;padding-left:8px">Hello, is there a feature on the app where you can log sessions without recording yourself? As I&#x27;m getting in the habit, I sometimes forget, but I still want to track my study sessions. Is there any way to do so? I also study when my phone is dead so I can&#x27;t always record
+
+Thank you for making this app its great!
+Swetha</div><div style="white-space:pre-wrap;margin-top:8px">Hey Swetha, so glad you&#x27;re liking it, thank you! [CHECK: whether there&#x27;s any way right now to log a session without recording; if not, say so plainly]. Adding a session you didn&#x27;t record is something other people have asked for too, so I&#x27;m sharing your note with the team. And if you&#x27;re enjoying Latent, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review
+
+Eddie</div><div style="font-size:12px;color:#777;margin-top:6px">New. Reply to your Oct 10 launch email (“lock in twin”). Wants to log study sessions without recording (she forgets, or her phone is dead). Matches TRY-411 (add a session you didn&#x27;t record, Need Approval). Happy, so includes the rating ask. Has a [CHECK]. <a href="https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879531404000622165">Open thread</a></div></div>
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Broken or confusing</h2><ul><li><strong>Saves retried when you reopen the app fail as if you&#x27;re signed out</strong> <span style="color:#666">(Fix opened today (#568))</span>: 6 people in 7 days, 4 since yesterday. Some of those posts never reached the server. PostHog session_save_failed “permission denied for table work_types” (the server saw a signed-out visitor). Every one fired as the app reopened after 45+ minutes in the background. Yesterday this was 2 people and too unclear to fix; today the pattern is clear, no Linear ticket or PR covers it, so I opened a Cloud Agent. <a href="https://github.com/eddie-the-lou/latent/pull/568">Link</a></li><li><strong>A 2-hour session disappeared after the internet dropped</strong> <span style="color:#666">(Fixed on main (#555), not in a build yet)</span>: nico (@nicod) in-app, 1.0.6 (39), Oct 19 10:24 PM PT. His session from 8:00 to 10:08 PM PT tried to save while his phone was offline, the save failed, his edit and upload then failed against a post the server never got, and it never reached the database. That&#x27;s exactly what #555 fixes (merged 3:39 PM PT yesterday). His two earlier sessions that evening saved fine. <a href="https://github.com/eddie-the-lou/latent/pull/555">Link</a></li><li><strong>Video uploads stuck because the post never saved</strong> <span style="color:#666">(Fixed on main (#555), not in a build yet)</span>: 4 people since yesterday (26 failed retries), on 1.0.6 (39) and the new 1.0.8 (43). clip_upload_failed “does not reference an existing session”. One is nico, one followed a signed-out save failure (the fix opened today). TRY-455 is Done. <a href="https://linear.app/trylatent/issue/TRY-455">Link</a></li><li><strong>Empty video files</strong> <span style="color:#666">(Fixed on main (#557), not in a build yet)</span>: 2 people, 51 failed uploads since yesterday (builds 39 and 41). clip_upload_failed “emptyClip”. TRY-437 (a clip can be left at 0 bytes) is Done via #557. <a href="https://linear.app/trylatent/issue/TRY-437">Link</a></li><li><strong>New freeze and crash tickets from Malcolm&#x27;s bot</strong> <span style="color:#666">(Need Approval / In Progress)</span>: TRY-469 (lock screen timer), TRY-470 (friends list crash), TRY-471 (feed readying videos); TRY-468 has Malcolm&#x27;s PR #567. Sentry-sourced, so I can&#x27;t see the details (Sentry needs re-auth). Not duplicated. <a href="https://linear.app/trylatent/issue/TRY-470">Link</a></li><li><strong>Can&#x27;t record on iPad</strong> <span style="color:#666">(Reply drafted (watch))</span>: Karla, carried from yesterday. Not clear enough to auto-fix. #559 fixed recording with the camera off, which may or may not be her case.</li><li><strong>Saves and uploads failing on bad connections</strong> <span style="color:#666">(Watch)</span>: session_save_failed 55 from 34 people in 24h (was 51/23), nearly all “offline” or “connection lost”. Expected on flaky networks; #555 makes the retry work once it ships. clip_upload_abandoned 216 from 5 people (was 54/5).</li><li><strong>Sentry connector needs re-auth</strong> <span style="color:#666">(Needs you)</span>: Still needsAuth (recurring for many days). No crash data from me today. Malcolm&#x27;s bot still files Sentry tickets, so freezes keep landing in Linear.</li></ul>
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Things people want</h2><ul><li><strong>Week starts on Monday</strong> <span style="color:#666">(1 new today, 5 total · Need Approval (TRY-439))</span>: Andrija (@andrija) in-app, after Mathis, alex, Gunnar and Till. TRY-439. <a href="https://linear.app/trylatent/issue/TRY-439">Link</a></li><li><strong>Log a session without recording</strong> <span style="color:#666">(1 new · Need Approval (TRY-411))</span>: Swetha by email: she sometimes forgets to record, or her phone is dead while she studies. TRY-411 (add a session you didn&#x27;t record). Reply drafted. <a href="https://linear.app/trylatent/issue/TRY-411">Link</a></li><li><strong>Count studying you do on your phone (flashcards, reading)</strong> <span style="color:#666">(1 new · Need Approval (TRY-472))</span>: Damon (@damo) in-app, TestFlight 1.0.7 (41): wants to screen-record his own phone. Malcolm&#x27;s bot filed TRY-472 this morning. <a href="https://linear.app/trylatent/issue/TRY-472">Link</a></li><li><strong>Send photos in messages</strong> <span style="color:#666">(1 new · Open (no ticket found))</span>: edriselle (@edi) in-app. I didn&#x27;t find a Linear ticket for photos in chats.</li><li><strong>Light mode</strong> <span style="color:#666">(from yesterday · Need Approval (TRY-463))</span>: Heidi&#x27;s ask now has a ticket. TRY-463 filed Oct 19. <a href="https://linear.app/trylatent/issue/TRY-463">Link</a></li><li><strong>Don&#x27;t count Latent toward Screen Time / record with the phone locked</strong> <span style="color:#666">(no new asks · Open (no ticket))</span>: Aleksandra and Ethan (carried). Still no Linear ticket. Reply drafted for Aleksandra (carried).</li><li><strong>Android</strong> <span style="color:#666">(carried · Replies drafted)</span>: mamaev, imthe.abete, fatmahafeezuddin, Anirudh, Karla (carried). Stock line: Android is coming, I&#x27;ll email you when it&#x27;s out.</li><li><strong>People want to stay testers</strong> <span style="color:#666">(2 new, 152 total · Malcolm handles)</span>: 2 new “Stay as a Beta Tester” picks since yesterday&#x27;s review (latest Oct 19, 2:16 PM PT). Count only (TRY-343).</li></ul>
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">Numbers and sources</h2><ul>
+<li><strong>In-app feedback:</strong> 5 new public.feedback rows since yesterday&#x27;s review (117 total): 1 bug (nico&#x27;s lost 2-hour session, #555) and 4 ideas from edriselle (photos in messages, no ticket), Andrija (Monday weeks, TRY-439), nico (upload the video he saved) and Damon (count phone study, TRY-472). Heidi&#x27;s 9:39 AM row was in yesterday&#x27;s review.</li>
+<li><strong>Discord:</strong> Discord wasn&#x27;t checked today (the Discord results never arrived by 9:53 AM PT).</li>
+<li><strong>Email:</strong> None of yesterday&#x27;s 22 drafts were sent, so all 22 are carried. 2 new replies: Noel (hiring email, already applied) and Swetha (launch email, wants to log sessions without recording). No new cold hiring emails or PostHog alert emails. FYI: the form email to carycx.li@mail.toronto.ca bounced; EF call with Chris Mairs is today.</li>
+<li><strong>Survey:</strong> unchanged, 39 very / 25 somewhat / 2 not disappointed, out of 66. No new free text.</li>
+<li><strong>Sentry:</strong> still needs re-auth. No crash data from the dig today.</li>
+<li><strong>PostHog:</strong> Last 24h vs prior 24h (events/people): installs 1,246 (was 1,353); onboarding done 862 (was 969); sessions started 8,004/3,223 (was 6,845/2,848); sessions discarded 1,524/918 (was 1,204/773). Edge function loop alert NOT firing (last value 27). Clip size alert not firing (1.56). Since yesterday&#x27;s review: session_save_failed 52/33 (nearly all offline; 4 people with the signed-out permission error, fix opened today), clip_upload_failed 147/34 (26/4 missing post, 51/2 empty clip, the rest offline or lost connection), media_invoke_retry_exhausted 2,476/107, session_capture_failed 4/2 (was 14/6), sign_up_failed 6/3. Last 24h: capture_stalled 328/66 (was 524/113), segment_finalize_failed 58/34, group_action_failed 1,215/341, backend_unreachable_shown 583/419, invite_check_failed 196/65, friend_request_failed 11/3 (was 124/9), sign_in_failed 19/15, clip_upload_abandoned 216/5 (was 54/5). Rage clicks 6,230/2,027 (was 5,186/1,780), about the same share of active people. Build 1.0.8 (43) is new: about 1,500 people since Oct 18 evening. No PostHog alert emails.</li>
+<li><strong>GitHub:</strong> 10 merged since yesterday&#x27;s review (#555, #557, #558, #559, #560, #523, #535, #534, #536, #566); Malcolm&#x27;s bot PRs #561 to #565 closed (folded into #558). All 5 carried PRs are merged. Open: Malcolm #567 (new, clean), #543 (clean), #537 (clashes), #530, #529, #518, #499; yours #500, #417.</li>
+<li><strong>Linear:</strong> Since yesterday: about 30 tickets moved to Done with your merges. New Need Approval: TRY-463, 465, 469, 470, 471, 472. In Progress: TRY-468 (#567), TRY-466, TRY-386. TRY-462 (yesterday&#x27;s dig issue) is Done; TRY-410 and TRY-444 marked Duplicate.</li>
+<li><strong>Beta opt-ins:</strong> 2 new / 152 total. Malcolm handles these (TRY-343).</li></ul>
+<h2 style="font-size:17px;border-bottom:2px solid #111;padding-bottom:4px">What they actually wrote</h2><p style="font-size:13px;color:#555">Word for word. Every new in-app row, any new Discord messages, and every email waiting on a reply. Survey free text: none new.</p>
+<blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">@edi (edriselle) · Oct 19, 10:30 AM PT · build 1.0.6 (39) · in-app</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Make us able to send photos on messages</div><div style="font-size:11px;color:#888;margin-top:4px">In-app feature · no Linear ticket found</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">@andrija (Andrija) · Oct 19, 1:13 PM PT · build 1.0.6 (39) · in-app</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Hello guys! I wanted to ask if it would be possible to implement a feature where the week starts on Monday instead of Sunday.
+
+Thanks! Great app!</div><div style="font-size:11px;color:#888;margin-top:4px">In-app feature · TRY-439 (now 5 people)</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">@nicod (nico) · Oct 19, 10:24 PM PT · build 1.0.6 (39) · in-app</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">I did a 2hr video and then my internet like disconnected so i added it back and it was fine but when i tried uploading it, it didnt work. I saved the vid and then closed latent and opened again to see if it was just a problem on my screen, and then i see it disappeared. I cant uploud it anymore</div><div style="font-size:11px;color:#888;margin-top:4px">In-app bug · the offline-save bug #555 fixes (merged Oct 19, not in a build yet)</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">@nicod (nico) · Oct 19, 10:24 PM PT · build 1.0.6 (39) · in-app</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">lemme upload the latent video i saved</div><div style="font-size:11px;color:#888;margin-top:4px">In-app feature (same person, same minute)</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">@damo (Damon) · Oct 20, 6:45 AM PT · build 1.0.7 (41) · in-app</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Aye I think an option to screen record your own phone would be really good because many people do things like research (reading) and flashcards on their phone and for someone like me seeing the total study hours is super rewarding and if I can’t include it it’s kinda bum lowk. Anywho it’s not that deep love the app already and I love to concept. It’s helped me make the most of my time. Love you</div><div style="font-size:11px;color:#888;margin-top:4px">In-app feature · TRY-472</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">(no name given; mamaev-Ford.2010) · Oct 15, 12:24 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Make one for android</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: lock in twin · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Mishad · Oct 15, 4:59 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Ok, thanks for the reply. Thank you for developing!</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: lock in twin · carried from earlier · optional reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Matthew Kelly · Oct 16, 7:50 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Good Morning,
+
+I&#x27;d like to see about becoming a private tester for Latent. How can I go about that?
+
+Best,
+Matthew Kelly
+matthewk2808@icloud.com</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Latent Beta Tester · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">(no name given; imthe.abete) · Oct 16, 8:27 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Heyy man do you have an eta for the android version? got some friends
+really yearning for it hahaha great app btw</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: lock in twin · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">(unknown sender; the email shows support@trylatent.co as the sender) · Oct 16, 9:28 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Hi, I’m trying to enable camera access to start recording the time lapses but when I’m redirected to Settings, it doesn’t show Camera as an option to toggle under Latent settings. Let me know how to proceed, thanks!
+
+Sent from my iPhone</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Camera Access · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Meghana · Oct 16, 11:25 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Hey,
+Thanks for clarifying that!
+I thought it was some fault on my side, but now I understand. I really
+appreciate how Latent is putting efforts into customer service and
+care(emailing every customer about the issue is crazy man😭). Love how
+accountable yall are!</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: How to get into Latent (the focus screen bug) · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Neharika Thakur · Oct 16, 11:26 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">worksss!</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: lock in twin · carried from earlier · optional reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Samuel Downs · Oct 16, 4:13 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Dear Latent Support Team,
+
+I am writing to formally request the permanent deletion of my account and
+all associated personal data stored with Latent.
+
+Please delete my account linked to this email address (srdowns2010@gmail.com)
+and remove all of my stored information, history, and personal details from
+your systems and databases.
+
+Once the account and data have been fully deleted, please send a
+confirmation email to confirm that this process is complete.
+
+Thank you,
+
+Samuel Downs</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Delete account · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Anika (anikadey0913) · Oct 16, 4:52 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Hi eddie,
+
+So iv been following your account a while and was in th waitlist thing.
+Tried it out for the first time today and it seemed awesome. A lot of my
+friends would also love it. Great idea and cant wait for it to be available
+for laptop and ipad.
+
+So when I was using it - we seemed to run into an issue.
+Firstly - i was using it in a library and ur like technicallyh publishing
+it right so your friends can also see the great 3 hour lock in im always
+talking about. And I didnt notice but there was somebody behind me and they
+were on camera. Not enough - and they were in an unseemly manner - which is
+ok and understandable and when I notices this i simply deleted my three
+hours of footage, which maybe other people wouldnt do.
+so maybe you could add a feature where i could edit some of the footage or
+if other people are in the frame then put a sticker over their face before
+putting it up. And many people might wanna use that footage to
+amke aesthetic edits of themselves locking in and if some peoples face is
+visible or smth - thats not good.
+
+and also wherever there is a camera - there is a concern of indecency where
+I share a room with my sister and she walked in rather indecent. And I
+almost published that and fortunately im like oh lemme see and on the
+second take i could see her crossing the screen a few times with her in her
+underclothes - so maybe like make a scanner thing where it could check and
+if assumes ppl are indecently dressed they ask to confirm it - like in a
+nice manner where theyre concerned for safety - cuz like i might just be
+wearing a tank top and it flags me for indecent exposure or make it
+comulsary for everyone to go through their time laps twice.
+
+This is rlly nice tho</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Important suggestions related to safety · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Serenity · Oct 17, 5:52 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Awesome, thank you so much!</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: lock in twin · carried from earlier · optional reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Ty Tran-Nguyen · Oct 18, 12:06 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Hi Eddie,
+
+Messaged you on a couple of platforms (discord, instagram, linkedin) — was
+just wondering if you could elaborate on the growth internship a bit more?
+
+I am an industrial and systems engineering major at the University of
+Minnesota, looking for anything data/process improvement related.
+
+I have some experience with Python and SQL. I just finished up a project
+where I mapped the webinar setup process for UMN&#x27;s Office of IT and built a
+Python tool that automates Zoom and Google Calendar setup, cutting 8 steps
+to 2 and saving about 20 minutes per webinar.
+
+I have a knack for seeing processes that are inefficient and solving them
+in some way, and I hope to bring that to Latent.
+
+I was wondering if the growth internship would align at all with anything I
+have just mentioned and any other details you could provide.
+
+Look forward to hearing from you!
+
+Best,
+Ty Tran-Nguyen</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Joining the Latent team · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Landon Metzger · Oct 18, 12:22 PM and 12:24 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">[12:22 PM PT]
+Thanks for reaching out!
+
+My first thoughts on the app are that it&#x27;s a really unique way to get
+people to be productive. I know I personally struggle with staying on task,
+especially when I&#x27;m not interested in the work, but I also know from
+experience that working in a group setting is something that motivates me
+to stay on task, and is something the app leverages well.
+
+I&#x27;m not sure what sort of commitments you guys are looking for, but I
+probably can&#x27;t be full-time during school, and would have to work at
+irregular times like between classes and on the weekends. Thanks so much
+for reaching out almost instantly when I posted on LinkedIn, I really
+appreciate that, and am sure many others do too.
+
+Best,
+Landon Metzger
+
+[12:24 PM PT]
+I did go ahead and fill out the form for the engineering position, looking
+forward to hearing back from you!</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Joining the Latent team · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Ahmar · Oct 18, 1:14 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Hi,
+
+Thank you so much for sharing this Google Form with me.
+
+I really appreciate it!
+
+I wanted to share that I have just filled it out and submitted a response,
+kindly share if you have received it.
+
+Thanks &amp; Best Regards!
+Ahmar</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Joining the Latent team · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Mushahid · Oct 18, 6:54 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">I just submitted my application.</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Joining the Latent team · carried from earlier · optional reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Mushahid · Oct 18, 6:54 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Sure</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: How to get into Latent (the focus screen bug) · carried from earlier · optional reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Karla · Oct 18, 7:17 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">I got into the app but it couldn’t record, not sure if that’s because I’m
+on an iPad but it’s the only device I can use since I have a Samsung phone.
+
+Thanks,
+
+Karla</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: How to get into Latent (the focus screen bug) · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Gautamvir · Oct 18, 9:15 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Hi,
+I hope you&#x27;re well. I came across the app on LinkedIn. I&#x27;m keen to use the app since for me it&#x27;d be another jab at the doomscrolling which, for a change, seems promising.
+
+I&#x27;d love to be a part of the beta program and get a link to start using the app.
+
+Also, I&#x27;m a student and Purdue and entrenched in the startup ecosystem here. With college students working on startups being a great market for your app, I&#x27;d be happy to work on a referral / marketing program on campus.
+
+Do let me know.
+
+Best,
+Gautamvir
+
+linkedin.com/in/gautamvirbhatia</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Campus ambassador? · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Jan · Oct 18, 9:57 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Hey Eddie
+
+Received with thanks!
+
+All the best with the app, love the concept a lot! Love to explore
+potential ways to collab down the road!
+
+Regards
+Jan</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Joining the Latent team · carried from earlier · optional reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Aleksandra · Oct 19, 1:33 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Hi! I use Latent to record my study sessions, but because the screen stays
+on (even when fully dimmed), it adds hours to my iPhone’s Screen Time.
+
+Is there a way to record sessions in the background or lock my iPhone
+without stopping the recording? Alternatively, is there a way to prevent
+Latent from contributing to Apple’s Screen Time total?
+
+Thanks!</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Screen time · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">(no name given; fatmahafeezuddin) · Oct 19, 3:03 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Subject: Android Version Request
+
+Body:
+
+Hi Eddie,
+
+I joined the waitlist from your Instagram reel because I am really
+interested in Latent. However, I noticed it is currently only available on
+the App Store.
+Since I am an Android user, I&#x27;m disappointed that I can&#x27;t use it right now.
+Please consider launching an Android version soon so I can finally try it
+out!</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: lock in twin · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Anirudh · Oct 19, 3:05 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Haha, thanks!
+Ye, I can show you! It&#x27;s kinda a skuffed apk version, but it does the work
+for now for me and my friends, and just got through the exams season wit it.
+I&#x27;ll see how I can share it.
+Will do so soon!
+
+Thanks again! :)</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: lock in twin · carried from earlier · reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Niketh · Oct 19, 8:59 AM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Yo, I applied</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Joining the Latent team · carried from earlier · optional reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Noel Emmanuel · Oct 19, 4:37 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Hey Eddie,
+
+Thanks for getting back to me! I actually filled out the form earlier after
+coming across Latent on Instagram, so my application should already be in
+there.
+
+Really interested in what you’re building and would love the opportunity to
+contribute. Looking forward to hearing back!
+Best,
+Noel Emmanuel</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: Joining the Latent team · NEW · optional reply drafted below</div></blockquote><blockquote style="margin:12px 0;padding:10px 14px;border-left:3px solid #f5c542;background:#faf8f0"><div style="font-size:12px;color:#666">Swetha Venkedesh · Oct 19, 6:47 PM PT · gmail</div><div style="white-space:pre-wrap;margin-top:6px" dir="auto">Hello, is there a feature on the app where you can log sessions without recording yourself? As I&#x27;m getting in the habit, I sometimes forget, but I still want to track my study sessions. Is there any way to do so? I also study when my phone is dead so I can&#x27;t always record
+
+Thank you for making this app its great!
+Swetha</div><div style="font-size:11px;color:#888;margin-top:4px">Email · Re: lock in twin · NEW · reply drafted below</div></blockquote>
+<p style="font-size:12px;color:#666;margin-top:28px">Linear dig issue: TRY-473 https://linear.app/trylatent/issue/TRY-473/daily-dig-2026-10-20-1-fix-waiting-for-review-568. Archive: <a href="https://eddie-the-lou.github.io/latent-digs/#/2026-10-20">https://eddie-the-lou.github.io/latent-digs/#/2026-10-20</a> · <a href="https://eddie-the-lou.github.io/latent-digs/">all days</a></p>
+</body></html>

@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-20",
+    "title": "Latent daily review · Oct 20",
+    "tldr": "1 fix waiting (#568): saves retried on reopen fail as signed-out. All 5 earlier fixes merged + 5 bundles (10 merged). nico lost a 2-hour session (#555 fixes it, not shipped). No age holds. 24 reply drafts."
+  },
+  {
     "date": "2026-10-19",
     "title": "Latent daily review · Oct 19",
     "tldr": "No new fixes; 5 still waiting (#523, #534, #535, #536, #555). 2 merged overnight (#552 phone-dies time, #556 Discord link). 15 in-app notes, all but 2 ticketed. No age holds. 22 reply drafts."
