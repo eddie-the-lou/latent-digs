@@ -8,7 +8,7 @@
   "No age holds.",
   "5 new in-app notes: nico lost a 2-hour session when his internet dropped (the exact bug #555 fixes), Andrija is the 5th person asking for Monday weeks (TRY-439), Damon wants phone study to count (TRY-472), edriselle wants photos in messages (no ticket).",
   "24 reply drafts (8 optional): 22 carried (none sent) plus Swetha (log a session without recording) and Noel (already applied). Samuel Downs' account still exists after 4 days.",
-  "2 new beta opt-ins / 152. Survey unchanged. Discord wasn't checked today (the Discord results never arrived by 9:53 AM PT). Sentry still needs re-auth. PostHog alerts not firing."
+  "2 new beta opt-ins / 152. Survey unchanged. Discord was read after the email went out: 16 new, no bugs. laid wants an all-time longest-session leaderboard command, Sarnai is confused how to use the app, sophie asked how to run it on an emulator, and morecalcium hopes early users get something when paid features come (TRY-465). Sentry still needs re-auth. PostHog alerts not firing."
  ],
  "plainTldr": [
   "1 fix opened today (#568): a save that retries when someone reopens the app could go out as if they were signed out and get refused, so the post was lost or stuck. 6 people in a week, 4 since yesterday.",
@@ -16,12 +16,12 @@
   "No age holds.",
   "5 new in-app notes: nico lost a 2-hour session when his internet dropped (the exact bug #555 fixes), Andrija is the 5th person asking for Monday weeks (TRY-439), Damon wants phone study to count (TRY-472), edriselle wants photos in messages (no ticket).",
   "24 reply drafts (8 optional): 22 carried (none sent) plus Swetha (log a session without recording) and Noel (already applied). Samuel Downs' account still exists after 4 days.",
-  "2 new beta opt-ins / 152. Survey unchanged. Discord wasn't checked today (the Discord results never arrived by 9:53 AM PT). Sentry still needs re-auth. PostHog alerts not firing."
+  "2 new beta opt-ins / 152. Survey unchanged. Discord was read after the email went out: 16 new, no bugs. laid wants an all-time longest-session leaderboard command, Sarnai is confused how to use the app, sophie asked how to run it on an emulator, and morecalcium hopes early users get something when paid features come (TRY-465). Sentry still needs re-auth. PostHog alerts not firing."
  ],
  "urgent": [],
  "stats": {
   "newInApp": 5,
-  "newDiscord": 0,
+  "newDiscord": 16,
   "newGmail": 2,
   "newSurveyRows": 0,
   "seanEllis": {
@@ -32,7 +32,7 @@
   },
   "sentryNew": [],
   "sentryUnavailable": true,
-  "rawQuotes": 29,
+  "rawQuotes": 45,
   "betaOptInsNew": 2,
   "betaOptInsTotal": 152,
   "installs24h": 1246,
@@ -559,14 +559,54 @@
    ]
   },
   {
+   "id": "longest-session-leaderboard",
+   "title": "All-time longest session leaderboard (Discord command)",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Open (no ticket)",
+   "summary": "laid in Discord #general-chat: “can we get all time longest session leaderboard command?” Ace replied “bro knows he got that 11hr”.",
+   "detail": "No Linear ticket for a longest-single-session board. Closest: TRY-400 (/globalleaderboard, all-time top 10 by hours), which was reverted because Malcolm didn't want it.",
+   "url": "https://linear.app/trylatent/issue/TRY-400",
+   "sources": [
+    "discord"
+   ]
+  },
+  {
+   "id": "early-users-pricing",
+   "title": "Something for early users when paid features come",
+   "count": 1,
+   "peopleCountLabel": "1 new (Discord)",
+   "status": "Need Approval (TRY-465)",
+   "summary": "morecalcium in Discord: hopes early users get some appreciation, “it would be sad if it gets expensive suddenly”.",
+   "detail": "TRY-465 already quotes these messages (Malcolm's bot filed it Oct 19).",
+   "url": "https://linear.app/trylatent/issue/TRY-465",
+   "sources": [
+    "discord",
+    "linear"
+   ]
+  },
+  {
+   "id": "how-to-use",
+   "title": "Question: how do I use the app?",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Question (no reply from the team)",
+   "summary": "Sarnai in Discord #general-chat at 3:25 AM PT: “Guys lwk how to use the app im so confused”. Only Ace answered (“wait few months… there will be a yt tutorial”).",
+   "detail": "No team reply yet. Might be worth a quick answer or a pinned how-to.",
+   "sources": [
+    "discord"
+   ]
+  },
+  {
    "id": "android",
    "title": "Android",
    "count": null,
    "peopleCountLabel": "carried",
    "status": "Replies drafted",
-   "summary": "mamaev, imthe.abete, fatmahafeezuddin, Anirudh, Karla (carried).",
+   "summary": "mamaev, imthe.abete, fatmahafeezuddin, Anirudh, Karla (carried). Discord: sophie asked how to run Latent on an emulator (“Android pls” thread, after kavijaar said he'd try an iPhone emulator).",
    "detail": "Stock line: Android is coming, I'll email you when it's out.",
    "sources": [
+    "discord",
     "gmail"
    ]
   },
@@ -589,8 +629,8 @@
    "note": "5 new public.feedback rows since yesterday's review (117 total): 1 bug (nico's lost 2-hour session, #555) and 4 ideas from edriselle (photos in messages, no ticket), Andrija (Monday weeks, TRY-439), nico (upload the video he saved) and Damon (count phone study, TRY-472). Heidi's 9:39 AM row was in yesterday's review."
   },
   "discord": {
-   "new": 0,
-   "note": "Discord wasn't checked today (the Discord results never arrived by 9:53 AM PT)."
+   "new": 16,
+   "note": "Read after the email went out (Discord checked ~9:13 AM PT, results arrived ~9:56 AM PT, folded into this page; no second email). 16 new since yesterday's review (Oct 19 ~9:40 AM PT): 14 in #general-chat, 2 in the #feature-requests “Android pls” thread. 0 bugs. 1 feature: laid wants an all-time longest-session leaderboard command (no ticket; the all-time /globalleaderboard command, TRY-400, was reverted). 2 questions: Sarnai doesn't know how to use the app (Ace replied “wait few months”), and sophie asked how to run Latent on an emulator (follow-up to kavijaar in “Android pls”). Pricing: morecalcium hopes early users get some appreciation when paid features come (already TRY-465, Need Approval). Also: W (back from beta) and idkoen posted invite links looking for friends, mehtab made a group for engineering students. You and Malcolm posted nothing in the window. #questions, #announcements: nothing new. #tester-chat not present. No attachments."
   },
   "gmail": {
    "new": 2,
@@ -909,6 +949,182 @@
    "kind": "email",
    "quote": "Hello, is there a feature on the app where you can log sessions without recording yourself? As I'm getting in the habit, I sometimes forget, but I still want to track my study sessions. Is there any way to do so? I also study when my phone is dead so I can't always record\n\nThank you for making this app its great!\nSwetha",
    "note": "Email · Re: lock in twin · NEW · reply drafted below"
+  },
+  {
+   "id": "discord-1020-1",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "morecalcium",
+   "author": "morecalcium",
+   "whenPT": "Oct 19, 1:12 PM PT",
+   "kind": "feature",
+   "quote": "i hope early users would get some appreciation whenever paid features get introduced",
+   "note": "Discord · pricing concern (TRY-465)"
+  },
+  {
+   "id": "discord-1020-2",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "morecalcium",
+   "author": "morecalcium",
+   "whenPT": "Oct 19, 1:12 PM PT",
+   "kind": "chatter",
+   "quote": "[message with no visible text]",
+   "note": "Discord · chatter"
+  },
+  {
+   "id": "discord-1020-3",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "morecalcium",
+   "author": "morecalcium",
+   "whenPT": "Oct 19, 1:13 PM PT",
+   "kind": "feature",
+   "quote": "cuz the app is great but it would be sad if it gets expensive suddenly",
+   "note": "Discord · pricing concern (TRY-465)"
+  },
+  {
+   "id": "discord-1020-4",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "W",
+   "author": "W",
+   "whenPT": "Oct 19, 6:23 PM PT",
+   "kind": "chatter",
+   "quote": "Hi guys I got latent in beta then left it for a while and Im back now and I want friends",
+   "note": "Discord · chatter · invite link https://trylatent.co/i/KSNFTB"
+  },
+  {
+   "id": "discord-1020-5",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "idkoen",
+   "author": "idkoen",
+   "whenPT": "Oct 19, 6:55 PM PT",
+   "kind": "chatter",
+   "quote": "new to latent pls add",
+   "note": "Discord · chatter · invite link https://trylatent.co/i/EWF9BF"
+  },
+  {
+   "id": "discord-1020-6",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "laid",
+   "author": "laid",
+   "whenPT": "Oct 19, 8:28 PM PT",
+   "kind": "feature",
+   "quote": "can we get all time longest session leaderboard command?",
+   "note": "Discord · feature · no ticket (TRY-400 reverted)"
+  },
+  {
+   "id": "discord-1020-7",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "SourLemown🍋",
+   "author": "SourLemown🍋",
+   "whenPT": "Oct 19, 8:36 PM PT",
+   "kind": "chatter",
+   "quote": "Ello",
+   "note": "Discord · chatter"
+  },
+  {
+   "id": "discord-1020-8",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "SourLemown🍋",
+   "author": "SourLemown🍋",
+   "whenPT": "Oct 19, 8:37 PM PT",
+   "kind": "chatter",
+   "quote": "Been a while",
+   "note": "Discord · chatter"
+  },
+  {
+   "id": "discord-1020-9",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "mehtab",
+   "author": "mehtab",
+   "whenPT": "Oct 20, 12:35 AM PT",
+   "kind": "chatter",
+   "quote": "Made a group for engineering students lmk if u wanna join",
+   "note": "Discord · chatter"
+  },
+  {
+   "id": "discord-1020-10",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "SourLemown🍋",
+   "author": "SourLemown🍋",
+   "whenPT": "Oct 20, 2:00 AM PT",
+   "kind": "chatter",
+   "quote": "That's a cult",
+   "note": "Discord · chatter · reply to mehtab"
+  },
+  {
+   "id": "discord-1020-11",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Sarnai",
+   "author": "Sarnai",
+   "whenPT": "Oct 20, 3:25 AM PT",
+   "kind": "question",
+   "quote": "Guys lwk how to use the app im so confused",
+   "note": "Discord · question · no team reply"
+  },
+  {
+   "id": "discord-1020-12",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Ace [GОD]",
+   "author": "Ace [GОD]",
+   "whenPT": "Oct 20, 4:10 AM PT",
+   "kind": "chatter",
+   "quote": "wait few months",
+   "note": "Discord · chatter · reply to Sarnai"
+  },
+  {
+   "id": "discord-1020-13",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Ace [GОD]",
+   "author": "Ace [GОD]",
+   "whenPT": "Oct 20, 4:10 AM PT",
+   "kind": "chatter",
+   "quote": "im sure by then there will be a yt tutorial",
+   "note": "Discord · chatter"
+  },
+  {
+   "id": "discord-1020-14",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Ace [GОD]",
+   "author": "Ace [GОD]",
+   "whenPT": "Oct 20, 4:11 AM PT",
+   "kind": "chatter",
+   "quote": "bro knows he got that 11hr",
+   "note": "Discord · chatter · reply to laid"
+  },
+  {
+   "id": "discord-1020-15",
+   "source": "discord",
+   "channel": "#feature-requests › Android pls",
+   "username": "kavijaar",
+   "author": "kavijaar",
+   "whenPT": "Oct 19, 10:52 AM PT",
+   "kind": "chatter",
+   "quote": "oh cool thanks ima try it tomorow",
+   "note": "Discord · chatter · re: running on an iPhone emulator"
+  },
+  {
+   "id": "discord-1020-16",
+   "source": "discord",
+   "channel": "#feature-requests › Android pls",
+   "username": "sophie",
+   "author": "sophie",
+   "whenPT": "Oct 20, 5:12 AM PT",
+   "kind": "question",
+   "quote": "How do you do that?",
+   "note": "Discord · question · how to run Latent on an emulator"
   }
  ],
  "replyDrafts": [
