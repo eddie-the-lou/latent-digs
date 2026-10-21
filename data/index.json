@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-21",
+    "title": "Latent daily review · Oct 21",
+    "tldr": "0 new fixes (#568 still waiting). 9 merged (freeze, crash, 2 security, Blur/Draw, songs). No age holds. 26 reply drafts. Discord: public group ideas, no bugs."
+  },
+  {
     "date": "2026-10-20",
     "title": "Latent daily review · Oct 20",
     "tldr": "1 fix waiting (#568): saves retried on reopen fail as signed-out. All 5 earlier fixes merged + 5 bundles (10 merged). nico lost a 2-hour session (#555 fixes it, not shipped). No age holds. 24 reply drafts."

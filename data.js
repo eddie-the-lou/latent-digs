@@ -1,5 +1,10 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-21",
+    "title": "Latent daily review \u00b7 Oct 21",
+    "tldr": "0 new fixes (#568 still waiting). 9 merged (freeze, crash, 2 security, Blur/Draw, songs). No age holds. 26 reply drafts. Discord: public group ideas, no bugs."
+  },
+  {
     "date": "2026-10-20",
     "title": "Latent daily review \u00b7 Oct 20",
     "tldr": "1 fix waiting (#568): saves retried on reopen fail as signed-out. All 5 earlier fixes merged + 5 bundles (10 merged). nico lost a 2-hour session (#555 fixes it, not shipped). No age holds. 24 reply drafts."
@@ -722,6 +727,11 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-21",
+      "title": "Latent daily review \u00b7 Oct 21",
+      "tldr": "0 new fixes (#568 still waiting). 9 merged (freeze, crash, 2 security, Blur/Draw, songs). No age holds. 26 reply drafts. Discord: public group ideas, no bugs."
+    },
     {
       "date": "2026-10-20",
       "title": "Latent daily review \u00b7 Oct 20",
@@ -88051,5 +88061,1741 @@ window.DIGESTS = {
     },
     "linearNote": "Linear dig issue: TRY-473 https://linear.app/trylatent/issue/TRY-473/daily-dig-2026-10-20-1-fix-waiting-for-review-568",
     "emailMessageId": "1a15a3c13caa5124"
+  },
+  "2026-10-21": {
+    "date": "2026-10-21",
+    "title": "Latent daily review \u00b7 Oct 21",
+    "generatedAt": "2026-10-21T16:26:44.635865+00:00",
+    "tldr": [
+      "No new fixes today: every new report is already covered. Kevin's stuck onboarding plan has a fix branch from Malcolm's bot (TRY-492), and the other new asks are ideas, most already ticketed. #568 from yesterday is still waiting on you.",
+      "9 merged yesterday: Malcolm's freeze fix (#569), profile-stats crash (#543), two security fixes (#570, #573), group climb bars (#571); your paused replay (#572), Rotate/Blur/Draw (#574), camera-off tips (#575) and songs (#576). None of these, or the 10 from Oct 19, are in a released build yet. Everyone is still on 1.0.8 (43) or older (about 2,100 people on 1.0.8 in the last day), which predates them.",
+      "No age holds.",
+      "6 new in-app notes, all ideas or questions: one time zone (Alice), reply to a message in chats (Sol), tag friends (hirow), lock-in mode and points (Flora), own streak rules (Husnal), and Kevin's stuck plan.",
+      "26 reply drafts (8 optional): 24 carried (none sent) plus Mihir (keep the timer running) and Kathryn (Android). Samuel Downs' account still exists after 5 days. 2 cold hiring emails (Mengwai, Rash).",
+      "Discord: about 40 new, no bugs. Mostly people wanting group codes and ideas for public group categories in Malcolm's thread, plus custom timelapse length (TRY-493) and a song tracker idea. 3 new beta opt-ins / 155. Survey unchanged. Sentry still needs re-auth. PostHog alerts not firing."
+    ],
+    "plainTldr": [
+      "No new fixes today: every new report is already covered. Kevin's stuck onboarding plan has a fix branch from Malcolm's bot (TRY-492), and the other new asks are ideas, most already ticketed. #568 from yesterday is still waiting on you.",
+      "9 merged yesterday: Malcolm's freeze fix (#569), profile-stats crash (#543), two security fixes (#570, #573), group climb bars (#571); your paused replay (#572), Rotate/Blur/Draw (#574), camera-off tips (#575) and songs (#576). None of these, or the 10 from Oct 19, are in a released build yet. Everyone is still on 1.0.8 (43) or older (about 2,100 people on 1.0.8 in the last day), which predates them.",
+      "No age holds.",
+      "6 new in-app notes, all ideas or questions: one time zone (Alice), reply to a message in chats (Sol), tag friends (hirow), lock-in mode and points (Flora), own streak rules (Husnal), and Kevin's stuck plan.",
+      "26 reply drafts (8 optional): 24 carried (none sent) plus Mihir (keep the timer running) and Kathryn (Android). Samuel Downs' account still exists after 5 days. 2 cold hiring emails (Mengwai, Rash).",
+      "Discord: about 40 new, no bugs. Mostly people wanting group codes and ideas for public group categories in Malcolm's thread, plus custom timelapse length (TRY-493) and a song tracker idea. 3 new beta opt-ins / 155. Survey unchanged. Sentry still needs re-auth. PostHog alerts not firing."
+    ],
+    "urgent": [],
+    "stats": {
+      "newInApp": 6,
+      "newDiscord": 32,
+      "newGmail": 2,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [],
+      "sentryUnavailable": true,
+      "rawQuotes": 66,
+      "betaOptInsNew": 3,
+      "betaOptInsTotal": 155,
+      "installs24h": 1039,
+      "installsPrev24h": 1253
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "carriedFromEarlier": [
+        {
+          "pr": 568,
+          "url": "https://github.com/eddie-the-lou/latent/pull/568",
+          "agent": "https://cursor.com/agents/bc-03de55a2-556e-5a06-b816-71a2182de0e9",
+          "title": "Saves retried when you reopen the app no longer go out as if you're signed out",
+          "reporter": "PostHog (session_save_failed \u201cpermission denied for table work_types\u201d, the server saw a signed-out visitor). 6 people in the week before Oct 20; 1 more person since (build 1.0.7 (41)). Opened by the Oct 20 dig.",
+          "status": "Still waiting for your review (draft PR, merges cleanly, not merged)",
+          "whatItFixes": "When someone saved a session and then left the app for about an hour, the save that retries as the app reopens could go out before the app had signed the person back in. The server treated it like a logged-out visitor and refused it (\u201cpermission denied for table work_types\u201d), so the post never reached the server and its video then got stuck. Now the app waits until the person is signed in again before sending, retries once if it is still refused, and never throws away the session or its video. A normal save without leaving the app works the same as today.",
+          "howToCheck": "On a phone with this build: sign in, record a short session, save it (with a clip, shared with friends), then put Latent in the background right away and leave it for more than an hour. Reopen Latent: the post should still be on your profile, a friend should see it with a playable video, and PostHog should show no \u201cpermission denied for table work_types\u201d save failure for that reopen. The agent couldn't compile it (no Mac), so it asks you to run the Mac tests and this phone check before merging.",
+          "from": "Oct 20"
+        }
+      ],
+      "agentsLaunched": [],
+      "mergedOvernight": [
+        {
+          "pr": 569,
+          "url": "https://github.com/eddie-the-lou/latent/pull/569",
+          "title": "Recording flags stop redrawing the whole app (TRY-468)",
+          "by": "Malcolm \u00b7 Oct 20, 12:40 PM PT",
+          "note": "Start, Pause, Finish and Save no longer freeze the app for 2 to 3 seconds. Replaces his #567, which was closed."
+        },
+        {
+          "pr": 543,
+          "url": "https://github.com/eddie-the-lou/latent/pull/543",
+          "title": "No crash opening a friend's profile stats (TRY-386)",
+          "by": "Malcolm \u00b7 Oct 20, 12:41 PM PT",
+          "note": "The time-by-tag ring crashed when a tag joined or left it mid-animation (21 people on build 39)."
+        },
+        {
+          "pr": 570,
+          "url": "https://github.com/eddie-the-lou/latent/pull/570",
+          "title": "One account can no longer copy the whole user list (TRY-454)",
+          "by": "Malcolm \u00b7 Oct 20, 2:04 PM PT",
+          "note": "Security: caps on friend lists of you and Malcolm, profile stats and search."
+        },
+        {
+          "pr": 571,
+          "url": "https://github.com/eddie-the-lou/latent/pull/571",
+          "title": "Group climb bars scale to the people you pass, not the leader (TRY-435)",
+          "by": "Malcolm \u00b7 Oct 20, 2:59 PM PT",
+          "note": ""
+        },
+        {
+          "pr": 572,
+          "url": "https://github.com/eddie-the-lou/latent/pull/572",
+          "title": "Paused replay plays once; tap to replay (TRY-485, TRY-60)",
+          "by": "Eddie \u00b7 Oct 20, 4:00 PM PT",
+          "note": ""
+        },
+        {
+          "pr": 573,
+          "url": "https://github.com/eddie-the-lou/latent/pull/573",
+          "title": "Nobody can list every profile photo anymore (TRY-486)",
+          "by": "Malcolm \u00b7 Oct 20, 7:55 PM PT",
+          "note": "Security cleanup after the Oct 2 scrape."
+        },
+        {
+          "pr": 574,
+          "url": "https://github.com/eddie-the-lou/latent/pull/574",
+          "title": "Post editor: Rotate, Blur and Draw; Post waits for the upload (TRY-479)",
+          "by": "Eddie \u00b7 Oct 20, 8:15 PM PT",
+          "note": "Blur covers faces or the background before you post, which is what Anika asked for (her reply draft below now mentions it)."
+        },
+        {
+          "pr": 575,
+          "url": "https://github.com/eddie-the-lou/latent/pull/575",
+          "title": "Camera off, said out loud: first-run tips, explainer, clock faces (TRY-476)",
+          "by": "Eddie \u00b7 Oct 20, 8:53 PM PT",
+          "note": ""
+        },
+        {
+          "pr": 576,
+          "url": "https://github.com/eddie-the-lou/latent/pull/576",
+          "title": "Songs on posts: pick a song and its part, autoplay in the feed (TRY-478)",
+          "by": "Eddie \u00b7 Oct 20, 10:54 PM PT",
+          "note": "Close to 2hz's Discord idea (show the songs from your session)."
+        }
+      ],
+      "stillOnYou": [
+        {
+          "id": "568",
+          "title": "#568 (opened by yesterday's dig): saves retried when you reopen the app no longer go out as if you're signed out. Still a draft, merges cleanly. 1 more person hit it since yesterday.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/568"
+        },
+        {
+          "id": "next-build",
+          "title": "Next build: 19 fixes merged Oct 19 and 20 (stuck and lost posts #555, empty clips #557, freezes #558/#569, profile-stats crash #543, plus your post editor, songs and camera-off work) aren't in any released build. PostHog still shows people on 1.0.8 hitting the empty-clip and missing-post upload errors those fix."
+        },
+        {
+          "id": "samuel",
+          "title": "Account deletion request: Samuel Downs (srdowns2010@gmail.com, @captsam) emailed support@ Oct 16, 4:13 PM PT. His account still existed at ~9:20 AM PT today (5 days). Reply draft below waits on the deletion.",
+          "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+        },
+        {
+          "id": "bot-branches",
+          "title": "Malcolm's bot drafted fix branches waiting for approval: TRY-492 (the onboarding plan sticks on the Record screen forever, Kevin's in-app note today) and TRY-487 (5 to 21 second freezes getting vibrations ready). New Need Approval since yesterday: TRY-474 time zone, 475 widget freeze, 480 dim-settings freeze, 484 a comment report, 493 timelapse length, 494 points, 495 lock-in mode, 496 your own streak rules.",
+          "url": "https://linear.app/trylatent/issue/TRY-492"
+        },
+        {
+          "id": "older-prs",
+          "title": "Older open PRs: yours #500 (Activation page) and #417; Malcolm's #537, #530, #529, #518, #499.",
+          "url": "https://github.com/eddie-the-lou/latent/pulls"
+        },
+        {
+          "id": "cold-hiring",
+          "title": "2 cold hiring emails (no drafts, as before): Mengwai Jim (Wharton, Growth, sent stat-card mockups and a creator outreach sheet, asks for a chat; Oct 20, 5:05 PM PT) and Rash (product designer, Growth, Android user, asks for a 15 to 30 min call; Oct 21, 1:52 AM PT). You sent the \u201cJoining the Latent team\u201d form to 8 people since yesterday.",
+          "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879615646815919866"
+        },
+        {
+          "id": "ef",
+          "title": "FYI: EF \u201cIntro to Launch\u201d moved to Thu Oct 22, 1:30 PM; Sarah Yen replied on the cofounder paperwork (Oct 21, 7:21 AM PT). Call with Jerry booked for today.",
+          "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879452845994948857"
+        }
+      ],
+      "note": "No Cloud Agents launched: nothing new was a clear bug without an owner. Kevin's stuck plan is TRY-492 (Malcolm's bot fix branch), the upload errors are fixed on main (#555, #557), freezes belong to Malcolm's bot, and the 503 upload loop was a developer test account."
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 568,
+          "url": "https://github.com/eddie-the-lou/latent/pull/568",
+          "title": "Saves retried when you reopen the app no longer go out as if you're signed out",
+          "by": "Cloud Agent \u00b7 Oct 20",
+          "agent": "https://cursor.com/agents/bc-03de55a2-556e-5a06-b816-71a2182de0e9"
+        }
+      ],
+      "openedToday": [],
+      "agentsStillWorking": [],
+      "mergedOvernight": [
+        {
+          "pr": 569,
+          "url": "https://github.com/eddie-the-lou/latent/pull/569",
+          "title": "Recording flags stop redrawing the whole app (TRY-468)",
+          "by": "Malcolm \u00b7 Oct 20, 12:40 PM PT",
+          "note": "Start, Pause, Finish and Save no longer freeze the app for 2 to 3 seconds. Replaces his #567, which was closed."
+        },
+        {
+          "pr": 543,
+          "url": "https://github.com/eddie-the-lou/latent/pull/543",
+          "title": "No crash opening a friend's profile stats (TRY-386)",
+          "by": "Malcolm \u00b7 Oct 20, 12:41 PM PT",
+          "note": "The time-by-tag ring crashed when a tag joined or left it mid-animation (21 people on build 39)."
+        },
+        {
+          "pr": 570,
+          "url": "https://github.com/eddie-the-lou/latent/pull/570",
+          "title": "One account can no longer copy the whole user list (TRY-454)",
+          "by": "Malcolm \u00b7 Oct 20, 2:04 PM PT",
+          "note": "Security: caps on friend lists of you and Malcolm, profile stats and search."
+        },
+        {
+          "pr": 571,
+          "url": "https://github.com/eddie-the-lou/latent/pull/571",
+          "title": "Group climb bars scale to the people you pass, not the leader (TRY-435)",
+          "by": "Malcolm \u00b7 Oct 20, 2:59 PM PT",
+          "note": ""
+        },
+        {
+          "pr": 572,
+          "url": "https://github.com/eddie-the-lou/latent/pull/572",
+          "title": "Paused replay plays once; tap to replay (TRY-485, TRY-60)",
+          "by": "Eddie \u00b7 Oct 20, 4:00 PM PT",
+          "note": ""
+        },
+        {
+          "pr": 573,
+          "url": "https://github.com/eddie-the-lou/latent/pull/573",
+          "title": "Nobody can list every profile photo anymore (TRY-486)",
+          "by": "Malcolm \u00b7 Oct 20, 7:55 PM PT",
+          "note": "Security cleanup after the Oct 2 scrape."
+        },
+        {
+          "pr": 574,
+          "url": "https://github.com/eddie-the-lou/latent/pull/574",
+          "title": "Post editor: Rotate, Blur and Draw; Post waits for the upload (TRY-479)",
+          "by": "Eddie \u00b7 Oct 20, 8:15 PM PT",
+          "note": "Blur covers faces or the background before you post, which is what Anika asked for (her reply draft below now mentions it)."
+        },
+        {
+          "pr": 575,
+          "url": "https://github.com/eddie-the-lou/latent/pull/575",
+          "title": "Camera off, said out loud: first-run tips, explainer, clock faces (TRY-476)",
+          "by": "Eddie \u00b7 Oct 20, 8:53 PM PT",
+          "note": ""
+        },
+        {
+          "pr": 576,
+          "url": "https://github.com/eddie-the-lou/latent/pull/576",
+          "title": "Songs on posts: pick a song and its part, autoplay in the feed (TRY-478)",
+          "by": "Eddie \u00b7 Oct 20, 10:54 PM PT",
+          "note": "Close to 2hz's Discord idea (show the songs from your session)."
+        }
+      ],
+      "closedOvernight": [
+        {
+          "pr": 567,
+          "url": "https://github.com/eddie-the-lou/latent/pull/567",
+          "note": "Malcolm's, replaced by #569"
+        }
+      ]
+    },
+    "ageHolds": {
+      "open": [],
+      "newLast24h": [],
+      "resolvedLast24h": [],
+      "summary": "No age holds.",
+      "detail": "Nothing open, new, or resolved in the last 24 hours (checked ~9:20 AM PT). Holds ever: 1 (Omar, @omarzz, held Oct 11, released the same morning).",
+      "query": "/workspace/feedback-digests/age-holds.sql"
+    },
+    "actions": [
+      {
+        "id": "fix-568",
+        "title": "Review #568: Saves retried when you reopen the app no longer go out as if you're signed out",
+        "plainSummary": "When someone saved a session and then left the app for about an hour, the save that retries as the app reopens could go out before the app had signed the person back in. The server treated it like a logged-out visitor and refused it (\u201cpermission denied for table work_types\u201d), so the post never reached the server and its video then got stuck. Now the app waits until the person is signed in again before sending, retries once if it is still refused, and never throws away the session or its video. A normal save without leaving the app works the same as today. How to check: On a phone with this build: sign in, record a short session, save it (with a clip, shared with friends), then put Latent in the background right away and leave it for more than an hour. Reopen Latent: the post should still be on your profile, a friend should see it with a playable video, and PostHog should show no \u201cpermission denied for table work_types\u201d save failure for that reopen. The agent couldn't compile it (no Mac), so it asks you to run the Mac tests and this phone check before merging.",
+        "status": "Waiting for your review",
+        "prUrl": "https://github.com/eddie-the-lou/latent/pull/568",
+        "prNumber": 568,
+        "agentUrl": "https://cursor.com/agents/bc-03de55a2-556e-5a06-b816-71a2182de0e9"
+      },
+      {
+        "id": "next-build",
+        "title": "Ship the 19 fixes merged Oct 19 and 20 in the next build",
+        "plainSummary": "None of these, or the 10 from Oct 19, are in a released build yet. Everyone is still on 1.0.8 (43) or older (about 2,100 people on 1.0.8 in the last day), which predates them.",
+        "status": "Needs you"
+      },
+      {
+        "id": "age-holds",
+        "title": "Age holds: none",
+        "plainSummary": "No age holds open, new, or resolved in the last 24 hours (checked ~9:20 AM PT).",
+        "status": "done"
+      },
+      {
+        "id": "samuel-delete",
+        "title": "Delete Samuel Downs' account (he asked by email Oct 16), then send the reply",
+        "plainSummary": "srdowns2010@gmail.com (@captsam). Still exists after 5 days. The dig changed nothing.",
+        "status": "Needs you"
+      },
+      {
+        "id": "replies",
+        "title": "26 reply drafts (8 optional)",
+        "plainSummary": "Not sent. Approve each in chat.",
+        "status": "Waiting for your review"
+      },
+      {
+        "id": "bot-branches",
+        "title": "Approve Malcolm's bot fix branches: TRY-492 (stuck onboarding plan) and TRY-487 (vibration freezes)",
+        "plainSummary": "Both have drafted branches that need a simulator check; the PR opens once approved.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-492"
+      },
+      {
+        "id": "sentry",
+        "title": "Re-connect Sentry",
+        "plainSummary": "Still needsAuth.",
+        "status": "Needs you"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done",
+        "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-10-21"
+      },
+      {
+        "id": "linear",
+        "title": "Linear dig issue TRY-497 (Need Approval)",
+        "status": "done",
+        "url": "https://linear.app/trylatent/issue/TRY-497/daily-dig-2026-10-21-1-fix-waiting-for-review-568"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "anon-save",
+        "title": "Saves retried when you reopen the app fail as if you're signed out",
+        "severity": "high",
+        "people": 1,
+        "status": "Fix waiting (#568)",
+        "summary": "1 more person since yesterday (build 1.0.7 (41)).",
+        "detail": "PostHog session_save_failed \u201cpermission denied for table work_types\u201d. #568 (opened yesterday) is still a draft waiting for your review.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/568",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "plan-sticks",
+        "title": "The plan you wrote in onboarding sticks on the Record screen and can't be changed",
+        "severity": "medium",
+        "people": 1,
+        "status": "Malcolm's bot has a fix branch (TRY-492, Need Approval)",
+        "summary": "Kevin (@kevinyyyeh) in-app: \u201cHow to change the name of my plan before recording a new session\u201d.",
+        "detail": "Malcolm's bot found 31 people in 30 days with the same stuck plan (often after saving from Drafts) and drafted a fix branch. Not duplicated.",
+        "url": "https://linear.app/trylatent/issue/TRY-492",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "stuck-uploads",
+        "title": "Video uploads stuck because the post never saved",
+        "severity": "medium",
+        "people": 6,
+        "status": "Fixed on main (#555), not in a build yet",
+        "summary": "About 6 people, 37 failed retries since yesterday, builds 39 to 43.",
+        "detail": "clip_upload_failed \u201cdoes not reference an existing session\u201d. Reaches people with the next build.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/555",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "empty-clips",
+        "title": "Empty video files",
+        "severity": "medium",
+        "people": 3,
+        "status": "Fixed on main (#557), not in a build yet",
+        "summary": "3 people, 61 failed retries since yesterday (mostly 1.0.8 (43)).",
+        "detail": "clip_upload_failed \u201cemptyClip\u201d. TRY-437 Done via #557.",
+        "url": "https://linear.app/trylatent/issue/TRY-437",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "freezes",
+        "title": "Freeze tickets from Malcolm's bot",
+        "severity": "medium",
+        "people": null,
+        "status": "Need Approval",
+        "summary": "TRY-487 (5 to 21 sec freezes getting vibrations ready, fix branch drafted), TRY-475 (11 sec freeze saving the widget), TRY-480 (freeze changing dim settings); TRY-469/470/471 from yesterday still open.",
+        "detail": "Sentry-sourced; I can't see Sentry (needs re-auth). Not duplicated. TRY-468 and TRY-386 were fixed yesterday (#569, #543).",
+        "url": "https://linear.app/trylatent/issue/TRY-487",
+        "sources": [
+          "linear"
+        ]
+      },
+      {
+        "id": "short-loop",
+        "title": "Short sessions start skipping frames and stop when they loop in the feed",
+        "severity": "low",
+        "people": null,
+        "status": "Malcolm (TRY-490, Todo)",
+        "summary": "Malcolm filed it last night.",
+        "detail": "Owned; not duplicated.",
+        "url": "https://linear.app/trylatent/issue/TRY-490",
+        "sources": [
+          "linear"
+        ]
+      },
+      {
+        "id": "offline-saves",
+        "title": "Saves and uploads failing on bad connections",
+        "severity": "low",
+        "people": 29,
+        "status": "Watch",
+        "summary": "session_save_failed 54 from 29 people in 24h (was 62/35), nearly all offline, timed out or connection lost.",
+        "detail": "Expected on flaky networks; #555 makes the retry work once it ships.",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "dev-noise",
+        "title": "Not a user problem: a test account looping on uploads",
+        "severity": "low",
+        "people": null,
+        "status": "Ignore",
+        "summary": "110 \u201cserver unavailable (503)\u201d upload failures and 245 abandoned uploads came from one developer test account (usernames dev/tetet).",
+        "detail": "Real people: 87 abandoned uploads (\u201cno filename\u201d) from 8 people in 24h.",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "ipad-record",
+        "title": "Can't record on iPad",
+        "severity": "low",
+        "people": 1,
+        "status": "Reply drafted (watch)",
+        "summary": "Karla, carried.",
+        "detail": "Not clear enough to auto-fix.",
+        "sources": [
+          "gmail"
+        ]
+      },
+      {
+        "id": "sentry-auth",
+        "title": "Sentry connector needs re-auth",
+        "severity": "low",
+        "people": null,
+        "status": "Needs you",
+        "summary": "Still needsAuth (recurring for many days). No crash data from me today.",
+        "detail": "Malcolm's bot still files Sentry tickets, so freezes keep landing in Linear.",
+        "sources": [
+          "sentry"
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "timezone",
+        "title": "Pick one home time zone",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Need Approval (TRY-474)",
+        "summary": "Alice (@_lixxie) records on two phones set to Seoul and Rome, so her days split oddly. She calls Latent \u201cvirtual body doubling\u201d.",
+        "detail": "TRY-474.",
+        "url": "https://linear.app/trylatent/issue/TRY-474",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "chat-reply",
+        "title": "Reply to a specific message in chats",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Open (no ticket found)",
+        "summary": "Sol (@solarisz) in-app, like Discord or Instagram.",
+        "detail": "Closest is Malcolm's TRY-482 Polishing messaging (In Progress).",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "tag-friends",
+        "title": "Tag friends in posts to share study hours",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "In Progress (TRY-250)",
+        "summary": "hirow (@hiro) in-app.",
+        "detail": "TRY-250 Tagging friends (Malcolm).",
+        "url": "https://linear.app/trylatent/issue/TRY-250",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "lockin",
+        "title": "Lock-in mode: lose the session if you leave the app",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Need Approval (TRY-495)",
+        "summary": "Flora (@floraaoswin), who also wants points (TRY-494), a to-do list, a talking intro before the timelapse, and a computer version (TRY-166, Backlog).",
+        "detail": "Opposite of Mihir's email ask (keep the timer running when he leaves).",
+        "url": "https://linear.app/trylatent/issue/TRY-495",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "streak-rules",
+        "title": "Set your own streak rules and heat map",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Need Approval (TRY-496)",
+        "summary": "Husnal (@hushy): pick the daily time that counts, days per week for the streak, heat map color and a yearly view.",
+        "detail": "Heat map color/yearly view has no ticket.",
+        "url": "https://linear.app/trylatent/issue/TRY-496",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "timer-background",
+        "title": "Keep the timer running when you switch apps",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Reply drafted",
+        "summary": "Mihir by email.",
+        "detail": "Malcolm's TRY-495 note says sessions already keep running in the background since Oct 17, so he may just need the latest version ([CHECK] in his draft).",
+        "sources": [
+          "gmail"
+        ]
+      },
+      {
+        "id": "public-groups",
+        "title": "Public groups by course, school or region",
+        "count": 4,
+        "peopleCountLabel": "Discord thread",
+        "status": "In Progress (TRY-477)",
+        "summary": "Malcolm asked Discord for categories: ki (AP courses, The Knowledge Society), j3 (per school), charan (regions). Several people asking for group codes.",
+        "detail": "TRY-477 Discover groups (Malcolm).",
+        "url": "https://linear.app/trylatent/issue/TRY-477",
+        "sources": [
+          "discord",
+          "linear"
+        ]
+      },
+      {
+        "id": "timelapse-length",
+        "title": "Choose how long the timelapse is",
+        "count": 2,
+        "peopleCountLabel": "1 new (3 votes)",
+        "status": "Need Approval (TRY-493)",
+        "summary": "SIMON Mathilde in Discord: 3+ hour sessions squeezed into 10 seconds look goofy.",
+        "detail": "TRY-493.",
+        "url": "https://linear.app/trylatent/issue/TRY-493",
+        "sources": [
+          "discord",
+          "linear"
+        ]
+      },
+      {
+        "id": "songs",
+        "title": "Show the songs you listened to during a session",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Close to #576 (merged)",
+        "summary": "2hz in Discord (link to Spotify/Apple Music).",
+        "detail": "#576 adds picking a song for a post; tracking what played during the session isn't part of it.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/576",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "monday",
+        "title": "Week starts on Monday",
+        "count": 5,
+        "peopleCountLabel": "no new asks",
+        "status": "Need Approval (TRY-439)",
+        "summary": "5 people so far.",
+        "detail": "TRY-439.",
+        "url": "https://linear.app/trylatent/issue/TRY-439",
+        "sources": [
+          "linear"
+        ]
+      },
+      {
+        "id": "android",
+        "title": "Android",
+        "count": null,
+        "peopleCountLabel": "2 new",
+        "status": "Replies drafted",
+        "summary": "Kathryn by email (new), YAALI in Discord (a friend on Android), Rash's cold email; plus mamaev, imthe.abete, fatmahafeezuddin, Anirudh, Karla (carried).",
+        "detail": "Stock line: Android is coming, I'll email you when it's out.",
+        "sources": [
+          "gmail",
+          "discord"
+        ]
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 3,
+        "peopleCountLabel": "3 new, 155 total",
+        "status": "Malcolm handles",
+        "summary": "3 new \u201cStay as a Beta Tester\u201d picks since yesterday's review (latest Oct 21, 6:20 AM PT).",
+        "detail": "Count only (TRY-343).",
+        "sources": [
+          "supabase"
+        ]
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 6,
+        "note": "6 new public.feedback rows since yesterday's review (123 total), all on 1.0.8 (43): 1 bug-ish question (Kevin's stuck onboarding plan, TRY-492) and 5 ideas: Alice (one time zone, TRY-474), Sol (reply to a message in chats), hirow (tag friends, TRY-250), Flora (lock-in mode, points, to-do, computer version) and Husnal (own streak rules, heat map)."
+      },
+      "discord": {
+        "new": 32,
+        "note": "About 40 new since Oct 20 ~9:15 AM PT (26 in #general-chat plus a 14-message thread Malcolm started on public group categories; 3 in #feature-requests). No bugs. Ideas: public groups by course, school or region (ki, j3, charan; TRY-477 Discover groups is In Progress), custom timelapse length (SIMON Mathilde, 3 votes; TRY-493), show the songs you listened to during a session (2hz; close to #576). Questions: several people asking for group codes (Malcolm pointed them to #find-a-group), YAALI asks if an Android friend can get a test version. 4 posts were images or embeds with no text. Source: discord-2026-10-21.md."
+      },
+      "gmail": {
+        "new": 2,
+        "note": "None of yesterday's 24 drafts were sent, so all 24 are carried (Anika's updated for the new Blur tool). 2 new replies: Mihir (keep the timer running when he leaves the app) and Kathryn (Android). 2 cold hiring emails (Mengwai, Rash; no drafts). No PostHog alert emails."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "note": "Unchanged vs Oct 20 (all 3 tabs row-for-row identical). No new free text."
+      },
+      "sentry": {
+        "new": [],
+        "note": "Unavailable: Sentry MCP still needs re-auth (recurring). No data invented."
+      },
+      "posthog": {
+        "note": "Last 24h vs prior 24h (events/people): installs 1,039 (was 1,253); onboarding done 714 (was 863); sessions started 7,900/3,347 (was 8,026/3,231); sessions discarded 1,287/855 (was 1,540/924). session_save_failed 54/29 (was 62/35; 1 signed-out error, #568), clip_upload_failed 280/37 (was 149/36; 110 of them a developer test account's 503s, 61 empty clips from 3 people, 37 missing-post from about 6, the rest network), media_invoke_retry_exhausted 2,077/129 (was 2,536/111), session_capture_failed 13/2 (was 4/2), capture_stalled 184/28 (was 328/66), segment_finalize_failed 21/14 (was 58/34), group_action_failed 1,377/370 (was 1,235/351), backend_unreachable_shown 441/316 (was 613/440), invite_check_failed 100/37 (was 196/65), friend_request_failed 18/6 (was 11/3), sign_in_failed 13/11, sign_up_failed 4/3, clip_upload_abandoned 332/7 (245 from the test account). Rage clicks 6,089/2,019 (was 6,256/2,035). Builds in the last day: 1.0.8 (43) about 2,100 people, 1.0.7 (41) about 980, 1.0.6 (39) about 455; no newer build. Alerts: media_invoke_retry_exhausted not firing (last 57), clip size not firing (1.56). No PostHog alert emails."
+      },
+      "github": {
+        "note": "9 merged since yesterday's review (#569, #543, #570, #571, #572, #573, #574, #575, #576); Malcolm closed #567 (replaced by #569). Open: #568 (dig, draft), yours #500, #417; Malcolm's #537, #530, #529, #518, #499."
+      },
+      "linear": {
+        "note": "Since yesterday: Done TRY-468, 386, 454, 435, 485, 60, 486, 479, 478, 476, 455, 452, 445, 466, 396, 481. New Need Approval (Malcolm's bot): TRY-474, 475, 480, 484, 487, 492, 493, 494, 495, 496. New Todo: TRY-488, 489, 491 (you), 490 (Malcolm). In Progress: TRY-477 Discover groups, 482 Polishing messaging, 483 reach out to churned users, 250 Tagging friends."
+      },
+      "betaOptIns": {
+        "new": 3,
+        "total": 155
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "inapp-4a8e81ac",
+        "source": "in-app",
+        "username": "@_lixxie (Alice)",
+        "whenPT": "Oct 20, 10:31 AM PT",
+        "build": "1.0.8 (43)",
+        "kind": "feature",
+        "quote": "I upload from 2 different devices, one has the system location in Seoul, the other in Rome. It keeps the \u201ctime\u201d fixed on the device default so sometimes I have wired time divisions, would it be possible to choose a fixed location from the app? Thanks anyways for this great app, it already helped a lot with improving my productivity and keeping me accountable of the time I dedicate to each task or topic. Is like a virtual body doubling assistance. Have a great day!",
+        "note": "In-app feature \u00b7 TRY-474 (pick one time zone)"
+      },
+      {
+        "id": "inapp-fcd735fe",
+        "source": "in-app",
+        "username": "@solarisz (Sol \u22c6\u27e2 Zsofia)",
+        "whenPT": "Oct 20, 5:16 PM PT",
+        "build": "1.0.8 (43)",
+        "kind": "feature",
+        "quote": "I\u2019d love to see a reply feature within chats, similar to discord or instagram where you get linked back to the exact message to which that person replied!",
+        "note": "In-app feature \u00b7 no ticket found (Malcolm's TRY-482 \u201cPolishing messaging\u201d is In Progress)"
+      },
+      {
+        "id": "inapp-a349f14f",
+        "source": "in-app",
+        "username": "@kevinyyyeh (Kevin)",
+        "whenPT": "Oct 20, 9:05 PM PT",
+        "build": "1.0.8 (43)",
+        "kind": "bug",
+        "quote": "How to change the name of my plan before recording a new session",
+        "note": "In-app bug \u00b7 TRY-492 (Malcolm's bot has a fix branch waiting for approval)"
+      },
+      {
+        "id": "inapp-648f306f",
+        "source": "in-app",
+        "username": "@hiro (hirow)",
+        "whenPT": "Oct 20, 9:51 PM PT",
+        "build": "1.0.8 (43)",
+        "kind": "feature",
+        "quote": "Tagging friends in posts to share studying hours",
+        "note": "In-app feature \u00b7 TRY-250 (Tagging friends, In Progress)"
+      },
+      {
+        "id": "inapp-073bb0af",
+        "source": "in-app",
+        "username": "@floraaoswin (Flora)",
+        "whenPT": "Oct 21, 4:06 AM PT",
+        "build": "1.0.8 (43)",
+        "kind": "feature",
+        "quote": "I absolutely love this app so much I have never found anything like it that is free, gives me how much I\u2019ve studied, it\u2019s so so good. I was wondering however if it could have a feature where your progress is lost of you leave the app- further encouragement to stay off your phone? Maybe like a to-do section as well? A thing where you gain points depending on how long you study for would be really cool too!! To make it even cooler like a bit where you can film yourself not in times lapse and say like oh hi guys this is what I\u2019m studying today\u2026 then be able to Timelapse it? A computer version would be SO GOOD too!! Overall I love it so so much never found anything like it THABK you!!",
+        "note": "In-app feature \u00b7 TRY-495 (lock-in mode), TRY-494 (points), TRY-166 (desktop, Backlog)"
+      },
+      {
+        "id": "inapp-2070592d",
+        "source": "in-app",
+        "username": "@hushy (Husnal)",
+        "whenPT": "Oct 21, 5:22 AM PT",
+        "build": "1.0.8 (43)",
+        "kind": "feature",
+        "quote": "- Change the daily required time to count as day done\n - change number of days a week to container streak\n - change colour of the heat map with a yearly view as well",
+        "note": "In-app feature \u00b7 TRY-496 (your own streak rules); heat map color/yearly view has no ticket"
+      },
+      {
+        "id": "discord-1021-0",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai [FPV]",
+        "author": "KrabbyKai [FPV]",
+        "whenPT": "Oct 20, 11:09 AM PT",
+        "kind": "chatter",
+        "quote": "wait lemme in on this",
+        "note": "Discord \u00b7 #general-chat \u00b7 reply to mehtab's engineering group"
+      },
+      {
+        "id": "discord-1021-1",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Adryel",
+        "author": "Adryel",
+        "whenPT": "Oct 20, 12:22 PM PT",
+        "kind": "question",
+        "quote": "im a math student can i join tho\ni havent gottwn to see the group feature yet",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-2",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "mehtab",
+        "author": "mehtab",
+        "whenPT": "Oct 20, 12:46 PM PT",
+        "kind": "chatter",
+        "quote": "Sure\nJoin my group \"Engineering\" on Latent. Open Groups, tap Join with a code, and enter A9HJZA.",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-3",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "Oct 20, 1:17 PM PT",
+        "kind": "chatter",
+        "quote": "what is confused as to you has done confused",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-4",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "a",
+        "author": "a",
+        "whenPT": "Oct 20, 1:54 PM PT",
+        "kind": "question",
+        "quote": "can i js join\nim not eingerneering but\ni want a group so i feel motivated lol",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-5",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "parnik",
+        "author": "parnik",
+        "whenPT": "Oct 20, 2:09 PM PT",
+        "kind": "question",
+        "quote": "wait I wanna be part of groups lmk codes",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-6",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Malcolm McDonald",
+        "author": "Malcolm McDonald",
+        "whenPT": "Oct 20, 2:10 PM PT",
+        "kind": "chatter",
+        "quote": "#find-a-group",
+        "note": "Discord \u00b7 #general-chat \u00b7 reply to parnik"
+      },
+      {
+        "id": "discord-1021-7",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai [FPV]",
+        "author": "KrabbyKai [FPV]",
+        "whenPT": "Oct 20, 2:14 PM PT",
+        "kind": "chatter",
+        "quote": "hey parnik\noof airball",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-8",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "parnik",
+        "author": "parnik",
+        "whenPT": "Oct 20, 2:14 PM PT",
+        "kind": "chatter",
+        "quote": "hi\nI\u2019m in class",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-9",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai [FPV]",
+        "author": "KrabbyKai [FPV]",
+        "whenPT": "Oct 20, 2:15 PM PT",
+        "kind": "chatter",
+        "quote": "hi in class im krabby",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-10",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "parnik",
+        "author": "parnik",
+        "whenPT": "Oct 20, 2:15 PM PT",
+        "kind": "chatter",
+        "quote": "bro end it\ngo",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-11",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "parnik",
+        "author": "parnik",
+        "whenPT": "Oct 20, 2:16 PM PT",
+        "kind": "chatter",
+        "quote": "Wait r u out of school",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-12",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai [FPV]",
+        "author": "KrabbyKai [FPV]",
+        "whenPT": "Oct 20, 2:16 PM PT",
+        "kind": "chatter",
+        "quote": "nah sick\nskipped td",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-13",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "morecalcium",
+        "author": "morecalcium",
+        "whenPT": "Oct 20, 3:25 PM PT",
+        "kind": "chatter",
+        "quote": "meow",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-14",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "j3",
+        "author": "j3",
+        "whenPT": "Oct 20, 5:47 PM PT",
+        "kind": "question",
+        "quote": "hypothetically how do you guys pay attention to lectures",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1021-15",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Malcolm McDonald",
+        "author": "Malcolm McDonald",
+        "whenPT": "Oct 20, 8:12 PM PT",
+        "kind": "question",
+        "quote": "guys im making public groups in the app for people to join\nwhat do you think the categories should be?",
+        "note": "Discord \u00b7 #general-chat \u00b7 starts a thread"
+      },
+      {
+        "id": "discord-1021-16",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "Malcolm McDonald",
+        "author": "Malcolm McDonald",
+        "whenPT": "Oct 20, 8:12 PM PT",
+        "kind": "chatter",
+        "quote": "Reply here",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread"
+      },
+      {
+        "id": "discord-1021-17",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "ki (is tired)",
+        "author": "ki (is tired)",
+        "whenPT": "Oct 20, 8:14 PM PT",
+        "kind": "feature",
+        "quote": "if you make a tks (search up the knowledge society) public group, i'll get all my tks friends to join and i'll advertise it at the big meeting im organizing",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread \u00b7 public groups (TRY-477 Discover groups, In Progress)"
+      },
+      {
+        "id": "discord-1021-18",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "Malcolm McDonald",
+        "author": "Malcolm McDonald",
+        "whenPT": "Oct 20, 8:18 PM PT",
+        "kind": "chatter",
+        "quote": "when we allow people to make public groups well get you this\ni was thinking thing more like \"math\"",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread"
+      },
+      {
+        "id": "discord-1021-19",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "ki (is tired)",
+        "author": "ki (is tired)",
+        "whenPT": "Oct 20, 8:20 PM PT",
+        "kind": "feature",
+        "quote": "wouldnt that be too similar to what our focuses for a session would be\ncoz ik fs that one of my focus options is math",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread"
+      },
+      {
+        "id": "discord-1021-20",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "Malcolm McDonald",
+        "author": "Malcolm McDonald",
+        "whenPT": "Oct 20, 8:22 PM PT",
+        "kind": "chatter",
+        "quote": "The plan is to start with something broad to test how people use them, then allow anyone to create a public group! \n\nany ideas?",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread"
+      },
+      {
+        "id": "discord-1021-21",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "ki (is tired)",
+        "author": "ki (is tired)",
+        "whenPT": "Oct 20, 8:22 PM PT",
+        "kind": "feature",
+        "quote": "for the broad ones\nmaybe do different high school courses\nfrom math n sci\nlike bio, chem, ap phys, ap phys c, ap bio, ap chem, so on",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread"
+      },
+      {
+        "id": "discord-1021-22",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "Malcolm McDonald",
+        "author": "Malcolm McDonald",
+        "whenPT": "Oct 20, 8:54 PM PT",
+        "kind": "chatter",
+        "quote": "ya thats lowkey what im thinkin",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread"
+      },
+      {
+        "id": "discord-1021-23",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "j3",
+        "author": "j3",
+        "whenPT": "Oct 20, 9:02 PM PT",
+        "kind": "feature",
+        "quote": "@Malcolm McDonald what if u made things for each school",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread"
+      },
+      {
+        "id": "discord-1021-24",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "SourLemown\ud83c\udf4b",
+        "author": "SourLemown\ud83c\udf4b",
+        "whenPT": "Oct 20, 11:11 PM PT",
+        "kind": "chatter",
+        "quote": "yea that sounds good",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread"
+      },
+      {
+        "id": "discord-1021-25",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "SourLemown\ud83c\udf4b",
+        "author": "SourLemown\ud83c\udf4b",
+        "whenPT": "Oct 20, 11:12 PM PT",
+        "kind": "chatter",
+        "quote": "i don't think alot of people are i the same region",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread"
+      },
+      {
+        "id": "discord-1021-26",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "charan",
+        "author": "charan",
+        "whenPT": "Oct 21, 5:33 AM PT",
+        "kind": "feature",
+        "quote": "maybe region ones as well so like Europe, Asia etc?",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread"
+      },
+      {
+        "id": "discord-1021-27",
+        "source": "discord",
+        "channel": "#general-chat \u203a public groups thread",
+        "username": "Malcolm McDonald",
+        "author": "Malcolm McDonald",
+        "whenPT": "Oct 21, 9:16 AM PT",
+        "kind": "chatter",
+        "quote": "not a bad idea",
+        "note": "Discord \u00b7 #general-chat \u203a public groups thread"
+      },
+      {
+        "id": "discord-1021-28",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "YAALI",
+        "author": "YAALI",
+        "whenPT": "Oct 21, 4:19 AM PT",
+        "kind": "question",
+        "quote": "My friend uses android can he get the app\nLike a testversion or smth",
+        "note": "Discord \u00b7 #general-chat \u00b7 Android"
+      },
+      {
+        "id": "discord-1021-29",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "SIMON Mathilde",
+        "author": "SIMON Mathilde",
+        "whenPT": "Oct 20, 10:20 PM PT",
+        "kind": "feature",
+        "quote": "Custom timelapse Time (over 3h hours, 10 sec can look goofy)",
+        "note": "Discord \u00b7 #feature-requests \u00b7 new thread title (no body); bot vote 3 up / 0 down \u00b7 TRY-493"
+      },
+      {
+        "id": "discord-1021-30",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "2hz",
+        "author": "2hz",
+        "whenPT": "Oct 21, 7:28 AM PT",
+        "kind": "feature",
+        "quote": "Tracks songs you listened during the session and creates a visual (link to spotify apple music etc)",
+        "note": "Discord \u00b7 #feature-requests \u00b7 new thread \u00b7 close to #576 songs on posts (merged)"
+      },
+      {
+        "id": "discord-1021-31",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "Ace [G\u041eD]",
+        "author": "Ace [G\u041eD]",
+        "whenPT": "Oct 21, 8:01 AM PT",
+        "kind": "chatter",
+        "quote": "why",
+        "note": "Discord \u00b7 #feature-requests \u00b7 reply in 2hz's thread"
+      },
+      {
+        "id": "gmail-mamaev",
+        "source": "gmail",
+        "username": "(no name given; mamaev-Ford.2010)",
+        "email": "mamaev-Ford.2010@yandex.ru",
+        "whenPT": "Oct 15, 12:24 PM PT",
+        "kind": "email",
+        "quote": "Make one for android",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-mishad-followup",
+        "source": "gmail",
+        "username": "Mishad",
+        "email": "mishadritov@gmail.com",
+        "whenPT": "Oct 15, 4:59 PM PT",
+        "kind": "email",
+        "quote": "Ok, thanks for the reply. Thank you for developing!",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 carried from earlier \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "gmail-matthew",
+        "source": "gmail",
+        "username": "Matthew Kelly",
+        "email": "matthewk2808@icloud.com",
+        "whenPT": "Oct 16, 7:50 AM PT",
+        "kind": "email",
+        "quote": "Good Morning,\n\nI'd like to see about becoming a private tester for Latent. How can I go about that?\n\nBest,\nMatthew Kelly\nmatthewk2808@icloud.com",
+        "note": "Email \u00b7 Re: Latent Beta Tester \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-abete",
+        "source": "gmail",
+        "username": "(no name given; imthe.abete)",
+        "email": "imthe.abete@gmail.com",
+        "whenPT": "Oct 16, 8:27 AM PT",
+        "kind": "email",
+        "quote": "Heyy man do you have an eta for the android version? got some friends\nreally yearning for it hahaha great app btw",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-camera-access",
+        "source": "gmail",
+        "username": "(unknown sender; the email shows support@trylatent.co as the sender)",
+        "email": "[CHECK: original sender address is hidden; Gmail shows support@trylatent.co \u2192 support@trylatent.co]",
+        "whenPT": "Oct 16, 9:28 AM PT",
+        "kind": "email",
+        "quote": "Hi, I\u2019m trying to enable camera access to start recording the time lapses but when I\u2019m redirected to Settings, it doesn\u2019t show Camera as an option to toggle under Latent settings. Let me know how to proceed, thanks!\n\nSent from my iPhone",
+        "note": "Email \u00b7 Re: Camera Access \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-meghana",
+        "source": "gmail",
+        "username": "Meghana",
+        "email": "ravulapatikrishnameghana@gmail.com",
+        "whenPT": "Oct 16, 11:25 AM PT",
+        "kind": "email",
+        "quote": "Hey,\nThanks for clarifying that!\nI thought it was some fault on my side, but now I understand. I really\nappreciate how Latent is putting efforts into customer service and\ncare(emailing every customer about the issue is crazy man\ud83d\ude2d). Love how\naccountable yall are!",
+        "note": "Email \u00b7 Re: How to get into Latent (the focus screen bug) \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-neharika-followup",
+        "source": "gmail",
+        "username": "Neharika Thakur",
+        "email": "neharikathakur0609@gmail.com",
+        "whenPT": "Oct 16, 11:26 AM PT",
+        "kind": "email",
+        "quote": "worksss!",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 carried from earlier \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "gmail-samuel",
+        "source": "gmail",
+        "username": "Samuel Downs",
+        "email": "srdowns2010@gmail.com",
+        "whenPT": "Oct 16, 4:13 PM PT",
+        "kind": "email",
+        "quote": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+        "note": "Email \u00b7 Re: Delete account \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-anika",
+        "source": "gmail",
+        "username": "Anika (anikadey0913)",
+        "email": "anikadey0913@gmail.com",
+        "whenPT": "Oct 16, 4:52 PM PT",
+        "kind": "email",
+        "quote": "Hi eddie,\n\nSo iv been following your account a while and was in th waitlist thing.\nTried it out for the first time today and it seemed awesome. A lot of my\nfriends would also love it. Great idea and cant wait for it to be available\nfor laptop and ipad.\n\nSo when I was using it - we seemed to run into an issue.\nFirstly - i was using it in a library and ur like technicallyh publishing\nit right so your friends can also see the great 3 hour lock in im always\ntalking about. And I didnt notice but there was somebody behind me and they\nwere on camera. Not enough - and they were in an unseemly manner - which is\nok and understandable and when I notices this i simply deleted my three\nhours of footage, which maybe other people wouldnt do.\nso maybe you could add a feature where i could edit some of the footage or\nif other people are in the frame then put a sticker over their face before\nputting it up. And many people might wanna use that footage to\namke aesthetic edits of themselves locking in and if some peoples face is\nvisible or smth - thats not good.\n\nand also wherever there is a camera - there is a concern of indecency where\nI share a room with my sister and she walked in rather indecent. And I\nalmost published that and fortunately im like oh lemme see and on the\nsecond take i could see her crossing the screen a few times with her in her\nunderclothes - so maybe like make a scanner thing where it could check and\nif assumes ppl are indecently dressed they ask to confirm it - like in a\nnice manner where theyre concerned for safety - cuz like i might just be\nwearing a tank top and it flags me for indecent exposure or make it\ncomulsary for everyone to go through their time laps twice.\n\nThis is rlly nice tho",
+        "note": "Email \u00b7 Re: Important suggestions related to safety \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-serenity-followup",
+        "source": "gmail",
+        "username": "Serenity",
+        "email": "serenitycrown26@gmail.com",
+        "whenPT": "Oct 17, 5:52 AM PT",
+        "kind": "email",
+        "quote": "Awesome, thank you so much!",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 carried from earlier \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "gmail-ty",
+        "source": "gmail",
+        "username": "Ty Tran-Nguyen",
+        "email": "tyatrannguyen@gmail.com",
+        "whenPT": "Oct 18, 12:06 PM PT",
+        "kind": "email",
+        "quote": "Hi Eddie,\n\nMessaged you on a couple of platforms (discord, instagram, linkedin) \u2014 was\njust wondering if you could elaborate on the growth internship a bit more?\n\nI am an industrial and systems engineering major at the University of\nMinnesota, looking for anything data/process improvement related.\n\nI have some experience with Python and SQL. I just finished up a project\nwhere I mapped the webinar setup process for UMN's Office of IT and built a\nPython tool that automates Zoom and Google Calendar setup, cutting 8 steps\nto 2 and saving about 20 minutes per webinar.\n\nI have a knack for seeing processes that are inefficient and solving them\nin some way, and I hope to bring that to Latent.\n\nI was wondering if the growth internship would align at all with anything I\nhave just mentioned and any other details you could provide.\n\nLook forward to hearing from you!\n\nBest,\nTy Tran-Nguyen",
+        "note": "Email \u00b7 Re: Joining the Latent team \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-landon",
+        "source": "gmail",
+        "username": "Landon Metzger",
+        "email": "landonmetzger01@gmail.com",
+        "whenPT": "Oct 18, 12:22 PM and 12:24 PM PT",
+        "kind": "email",
+        "quote": "[12:22 PM PT]\nThanks for reaching out!\n\nMy first thoughts on the app are that it's a really unique way to get\npeople to be productive. I know I personally struggle with staying on task,\nespecially when I'm not interested in the work, but I also know from\nexperience that working in a group setting is something that motivates me\nto stay on task, and is something the app leverages well.\n\nI'm not sure what sort of commitments you guys are looking for, but I\nprobably can't be full-time during school, and would have to work at\nirregular times like between classes and on the weekends. Thanks so much\nfor reaching out almost instantly when I posted on LinkedIn, I really\nappreciate that, and am sure many others do too.\n\nBest,\nLandon Metzger\n\n[12:24 PM PT]\nI did go ahead and fill out the form for the engineering position, looking\nforward to hearing back from you!",
+        "note": "Email \u00b7 Re: Joining the Latent team \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-ahmar",
+        "source": "gmail",
+        "username": "Ahmar",
+        "email": "ahmarali2004@gmail.com",
+        "whenPT": "Oct 18, 1:14 PM PT",
+        "kind": "email",
+        "quote": "Hi,\n\nThank you so much for sharing this Google Form with me.\n\nI really appreciate it!\n\nI wanted to share that I have just filled it out and submitted a response,\nkindly share if you have received it.\n\nThanks & Best Regards!\nAhmar",
+        "note": "Email \u00b7 Re: Joining the Latent team \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-mushahid-hiring",
+        "source": "gmail",
+        "username": "Mushahid",
+        "email": "mushahidahmed42@gmail.com",
+        "whenPT": "Oct 18, 6:54 PM PT",
+        "kind": "email",
+        "quote": "I just submitted my application.",
+        "note": "Email \u00b7 Re: Joining the Latent team \u00b7 carried from earlier \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "gmail-mushahid-focus",
+        "source": "gmail",
+        "username": "Mushahid",
+        "email": "mushahidahmed42@gmail.com",
+        "whenPT": "Oct 18, 6:54 PM PT",
+        "kind": "email",
+        "quote": "Sure",
+        "note": "Email \u00b7 Re: How to get into Latent (the focus screen bug) \u00b7 carried from earlier \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "gmail-karla",
+        "source": "gmail",
+        "username": "Karla",
+        "email": "lieukarla@gmail.com",
+        "whenPT": "Oct 18, 7:17 PM PT",
+        "kind": "email",
+        "quote": "I got into the app but it couldn\u2019t record, not sure if that\u2019s because I\u2019m\non an iPad but it\u2019s the only device I can use since I have a Samsung phone.\n\nThanks,\n\nKarla",
+        "note": "Email \u00b7 Re: How to get into Latent (the focus screen bug) \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-gautamvir",
+        "source": "gmail",
+        "username": "Gautamvir",
+        "email": "[CHECK: original sender address is hidden; Gmail shows support@trylatent.co \u2192 support@trylatent.co]",
+        "whenPT": "Oct 18, 9:15 PM PT",
+        "kind": "email",
+        "quote": "Hi,\nI hope you're well. I came across the app on LinkedIn. I'm keen to use the app since for me it'd be another jab at the doomscrolling which, for a change, seems promising.\n\nI'd love to be a part of the beta program and get a link to start using the app.\n\nAlso, I'm a student and Purdue and entrenched in the startup ecosystem here. With college students working on startups being a great market for your app, I'd be happy to work on a referral / marketing program on campus.\n\nDo let me know.\n\nBest,\nGautamvir\n\nlinkedin.com/in/gautamvirbhatia",
+        "note": "Email \u00b7 Re: Campus ambassador? \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-jan",
+        "source": "gmail",
+        "username": "Jan",
+        "email": "djaymegshroom@gmail.com",
+        "whenPT": "Oct 18, 9:57 PM PT",
+        "kind": "email",
+        "quote": "Hey Eddie\n\nReceived with thanks!\n\nAll the best with the app, love the concept a lot! Love to explore\npotential ways to collab down the road!\n\nRegards\nJan",
+        "note": "Email \u00b7 Re: Joining the Latent team \u00b7 carried from earlier \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "gmail-aleksandra",
+        "source": "gmail",
+        "username": "Aleksandra",
+        "email": "aleksandra.dudko01@gmail.com",
+        "whenPT": "Oct 19, 1:33 AM PT",
+        "kind": "email",
+        "quote": "Hi! I use Latent to record my study sessions, but because the screen stays\non (even when fully dimmed), it adds hours to my iPhone\u2019s Screen Time.\n\nIs there a way to record sessions in the background or lock my iPhone\nwithout stopping the recording? Alternatively, is there a way to prevent\nLatent from contributing to Apple\u2019s Screen Time total?\n\nThanks!",
+        "note": "Email \u00b7 Re: Screen time \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-fatma",
+        "source": "gmail",
+        "username": "(no name given; fatmahafeezuddin)",
+        "email": "fatmahafeezuddin@gmail.com",
+        "whenPT": "Oct 19, 3:03 AM PT",
+        "kind": "email",
+        "quote": "Subject: Android Version Request\n\nBody:\n\nHi Eddie,\n\nI joined the waitlist from your Instagram reel because I am really\ninterested in Latent. However, I noticed it is currently only available on\nthe App Store.\nSince I am an Android user, I'm disappointed that I can't use it right now.\nPlease consider launching an Android version soon so I can finally try it\nout!",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-anirudh",
+        "source": "gmail",
+        "username": "Anirudh",
+        "email": "hey.anirudh.nallajarla@gmail.com",
+        "whenPT": "Oct 19, 3:05 AM PT",
+        "kind": "email",
+        "quote": "Haha, thanks!\nYe, I can show you! It's kinda a skuffed apk version, but it does the work\nfor now for me and my friends, and just got through the exams season wit it.\nI'll see how I can share it.\nWill do so soon!\n\nThanks again! :)",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-niketh",
+        "source": "gmail",
+        "username": "Niketh",
+        "email": "niketh13putta@gmail.com",
+        "whenPT": "Oct 19, 8:59 AM PT",
+        "kind": "email",
+        "quote": "Yo, I applied",
+        "note": "Email \u00b7 Re: Joining the Latent team \u00b7 carried from earlier \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "gmail-noel",
+        "source": "gmail",
+        "username": "Noel Emmanuel",
+        "email": "noel.emmanuel20@gmail.com",
+        "whenPT": "Oct 19, 4:37 PM PT",
+        "kind": "email",
+        "quote": "Hey Eddie,\n\nThanks for getting back to me! I actually filled out the form earlier after\ncoming across Latent on Instagram, so my application should already be in\nthere.\n\nReally interested in what you\u2019re building and would love the opportunity to\ncontribute. Looking forward to hearing back!\nBest,\nNoel Emmanuel",
+        "note": "Email \u00b7 Re: Joining the Latent team \u00b7 carried from earlier \u00b7 optional reply drafted below"
+      },
+      {
+        "id": "gmail-swetha",
+        "source": "gmail",
+        "username": "Swetha Venkedesh",
+        "email": "swetha_venkedesh@windermereprep.com",
+        "whenPT": "Oct 19, 6:47 PM PT",
+        "kind": "email",
+        "quote": "Hello, is there a feature on the app where you can log sessions without recording yourself? As I'm getting in the habit, I sometimes forget, but I still want to track my study sessions. Is there any way to do so? I also study when my phone is dead so I can't always record\n\nThank you for making this app its great!\nSwetha",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-mihir",
+        "source": "gmail",
+        "username": "Mihir Jadhav",
+        "email": "mihirjadhav10@icloud.com",
+        "whenPT": "Oct 20, 4:27 PM PT",
+        "kind": "email",
+        "quote": "Yoo I like the app; can ugs figure out a way to keep to have an option to keep the time running when you go out of the app? (because its annoying to keep having to resume and a lot of people have to use other apps on the device using Latent when working) It would be rlly helpful and much appreciated. Thanks man\n\t\t\t\t\t\t\u2014 Mihir Jadhav",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 NEW \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-kathryn",
+        "source": "gmail",
+        "username": "Kathryn",
+        "email": "kathsnkavi1313@gmail.com",
+        "whenPT": "Oct 20, 9:46 PM PT",
+        "kind": "email",
+        "quote": "But unfortunately I have an android phone....im sad...would've loved to try\nit out though....love...kathryn",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 NEW \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-mengwai",
+        "source": "gmail",
+        "username": "Mengwai Jim",
+        "email": "mengwai@wharton.upenn.edu",
+        "whenPT": "Oct 20, 5:05 PM PT",
+        "kind": "email",
+        "quote": "Hey Eddie and Malcolm,\n\nI\u2019m Mengwai, a Wharton student applying for the growth role. Ever since I\nsaw Eddie\u2019s post calling Latent the \u201cStrava for work,\u201d it hasn\u2019t left my\nmind. I started with the application and ended up researching Strava,\nsketching out changes, and looking for creators who could help get it out\nthere.\n\nIll keep this email short.\n\nA little about me and what I\u2019ve been thinking:\n\n   - I come from a low-income household and originally planned to skip\n   college to build a business. Once I saw what college could open up, I went\n   all in, got into Harvard and Wharton, and chose Penn.\n   - I\u2019ve been selling things since I was a kid, from 2014 panini cards and\n   fidget spinners to running a vending machine business and growing my barber\n   business. During my first week at Penn, I was fully booked. Figuring out\n   what people respond to and how to earn their business has been a big part\n   of my life.\n   - *Give Latent a signature look.* Strava\u2019s stats make its posts\n   instantly recognizable on social media. Latent\u2019s stat display feels a\n   little generic to me right now, so I\u2019ve attached two quick ideas, along\n   with additional stats you could include, to give Latent that same\n   recognizable feel.\n   - *Get it into the right circles.* I\u2019ve attached an Excel sheet of\n   creators who fit the building and self-improvement niche. I\u2019d start with\n   simple Instagram story collaborations showing them using Latent for their\n   own work, with a link to try it. Then I\u2019d compare which creators bring in\n   people who actually record sessions and keep coming back.\n\nMy own page is about improving myself and going after my goals, so this\nfeels personal. What draws me in is the mission and what Latent could\nbecome: something that makes people proud to show the work behind their\nambitions. That\u2019s something I\u2019d be excited to help build.\n\nI asked my friend Andy Guos to connect us, but wanted to share this\ndirectly too. Would you guys be open to a quick chat? I\u2019d love to hear your\nguy's founder story and where I could help.\n\nBest,\nMengwai Jim\n786-725-6525",
+        "note": "Email \u00b7 Latent growth application + a few ideas \u00b7 Cold hiring email (Growth) \u00b7 attachments concept_1.png, concept_2.png, Latent_Creator_Outreach.xlsx \u00b7 no draft"
+      },
+      {
+        "id": "gmail-rash",
+        "source": "gmail",
+        "username": "Rash",
+        "email": "rashwork365@gmail.com",
+        "whenPT": "Oct 21, 1:52 AM PT",
+        "kind": "email",
+        "quote": "Tldr: I LOVE building stuffs. I'm currently exploring growth and marketing,\nand I'd love to contribute to building and scaling Latent (the next big\nthing!!). Congratulations on growing by 800% in the last week (that's\ninsane growth!!)\n\nHi, I'm Rash. I'm a product designer (UI/UX). I'm gonna be honest, I've got\nzero experience in growth, but I have good knowledge of it and I'd love to\nbuild/intern with you guys.\n\nI came across your app on IG, and did some research on it. I couldn't try\nit because I'm an android user, but your product descriptions on the App\nstore gave me lots of context on the idea and I would love to apart of it.\n\nCan we get on a 15-30 mins call so I could learn more about your app and\nhow you wanna approach growth differently than other companies?\n\nBest,\nRash",
+        "note": "Email \u00b7 Growth Role/Intern for Latent!! \u00b7 Cold hiring email (Growth) \u00b7 no draft"
+      }
+    ],
+    "replyDrafts": [
+      {
+        "id": "mamaev",
+        "name": "(no name given; mamaev-Ford.2010)",
+        "to": "mamaev-Ford.2010@yandex.ru",
+        "subject": "Re: lock in twin",
+        "threadId": "1a141057e62c6b3e",
+        "replyToMessageId": "1a141057e62c6b3e",
+        "theirMessage": "Make one for android",
+        "theirWhenPT": "Oct 15, 12:24 PM PT",
+        "body": "Hey, it's on the way! Android is coming, I'll email you when it's out. Thanks for signing up!\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Android stock line.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879144914230209342"
+      },
+      {
+        "id": "mishad-followup",
+        "name": "Mishad",
+        "to": "mishadritov@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a13f41856ab5311",
+        "replyToMessageId": "1a142021fbdbc3ca",
+        "theirMessage": "Ok, thanks for the reply. Thank you for developing!",
+        "theirWhenPT": "Oct 15, 4:59 PM PT",
+        "body": "Of course, thank you for the support! Talk soon.\n\nEddie",
+        "optional": true,
+        "isNew": false,
+        "note": "OPTIONAL. Closing thanks after your Oct 15 reply; fine to skip and just mark read.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879113854914089745"
+      },
+      {
+        "id": "matthew",
+        "name": "Matthew Kelly",
+        "to": "matthewk2808@icloud.com",
+        "subject": "Re: Latent Beta Tester",
+        "threadId": "1a14531db16e1d24",
+        "replyToMessageId": "1a14531db16e1d24",
+        "theirMessage": "Good Morning,\n\nI'd like to see about becoming a private tester for Latent. How can I go about that?\n\nBest,\nMatthew Kelly\nmatthewk2808@icloud.com",
+        "theirWhenPT": "Oct 16, 7:50 AM PT",
+        "body": "Hey Matthew, thanks for reaching out, love that you want to help test! [CHECK: how new private testers join right now, e.g. a TestFlight invite, or start on the App Store version with an invite code, and whether Malcolm should take this one]. Let me know if you have any questions.\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Has a [CHECK]; you may want to loop in Malcolm (TRY-343). No Latent account under this email yet.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879218331516280100"
+      },
+      {
+        "id": "abete",
+        "name": "(no name given; imthe.abete)",
+        "to": "imthe.abete@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a14553c02beb2a5",
+        "replyToMessageId": "1a14553c02beb2a5",
+        "theirMessage": "Heyy man do you have an eta for the android version? got some friends\nreally yearning for it hahaha great app btw",
+        "theirWhenPT": "Oct 16, 8:27 AM PT",
+        "body": "Haha love that, thank you! No ETA yet, sorry. Android is coming, I'll email you when it's out so you can tell your friends. And if you're enjoying it, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Android stock line + App Store rating ask.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879220660752790181"
+      },
+      {
+        "id": "camera-access",
+        "name": "(unknown sender; the email shows support@trylatent.co as the sender)",
+        "to": "[CHECK: original sender address is hidden; Gmail shows support@trylatent.co \u2192 support@trylatent.co]",
+        "subject": "Re: Camera Access",
+        "threadId": "1a1458b1869abfdd",
+        "replyToMessageId": "1a1458b1869abfdd",
+        "theirMessage": "Hi, I\u2019m trying to enable camera access to start recording the time lapses but when I\u2019m redirected to Settings, it doesn\u2019t show Camera as an option to toggle under Latent settings. Let me know how to proceed, thanks!\n\nSent from my iPhone",
+        "theirWhenPT": "Oct 16, 9:28 AM PT",
+        "body": "Hey, sorry about that! iPhone only shows the Camera switch for an app after the app has asked for the camera once, so [CHECK: what they should do, e.g. check Settings \u203a Screen Time \u203a Content & Privacy Restrictions \u203a Camera is allowed, or delete and reinstall Latent and tap Allow when it asks]. Let me know if that works, and if not just reply here.\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over. Can't reply until you know who sent it (the support form/group hid the address). Fix #536 merged Oct 19, 6:29 PM PT but isn't in a released build yet.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879224464011083741"
+      },
+      {
+        "id": "meghana",
+        "name": "Meghana",
+        "to": "ravulapatikrishnameghana@gmail.com",
+        "subject": "Re: How to get into Latent (the focus screen bug)",
+        "threadId": "1a145f6309db12bf",
+        "replyToMessageId": "1a145f6309db12bf",
+        "theirMessage": "Hey,\nThanks for clarifying that!\nI thought it was some fault on my side, but now I understand. I really\nappreciate how Latent is putting efforts into customer service and\ncare(emailing every customer about the issue is crazy man\ud83d\ude2d). Love how\naccountable yall are!",
+        "theirWhenPT": "Oct 16, 11:25 AM PT",
+        "body": "Haha of course, it was totally on us, not you! Thanks for being so patient with it. If you end up enjoying Latent, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Reply to your iOS 17 focus-screen email. Happy, so includes the rating ask.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879231823492092607"
+      },
+      {
+        "id": "neharika-followup",
+        "name": "Neharika Thakur",
+        "to": "neharikathakur0609@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a130b0fa022c329",
+        "replyToMessageId": "1a145f701079379e",
+        "theirMessage": "worksss!",
+        "theirWhenPT": "Oct 16, 11:26 AM PT",
+        "body": "Awesome, talk soon!\n\nEddie",
+        "optional": true,
+        "isNew": false,
+        "note": "OPTIONAL. One-word closing (\"worksss!\") after your Oct 15 reply; fine to skip.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878857631282676521"
+      },
+      {
+        "id": "samuel",
+        "name": "Samuel Downs",
+        "to": "srdowns2010@gmail.com",
+        "subject": "Re: Delete account",
+        "threadId": "1a146fe4c9172b23",
+        "replyToMessageId": "1a146fe4c9172b23",
+        "theirMessage": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+        "theirWhenPT": "Oct 16, 4:13 PM PT",
+        "body": "Hi Samuel, sorry to see you go! [CHECK: delete the account first; his Latent account (@captsam, made Oct 16) still existed at ~9:20 AM PT Oct 21] Your Latent account and all the data tied to srdowns2010@gmail.com have now been permanently deleted. Thanks for giving Latent a try.\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered since Oct 16). Account deletion request sent to support@. His account (@captsam) still exists as of ~9:20 AM PT Oct 21 (5 days); the dig changed nothing. Delete first, then send (from support@ if that is how you answer support mail).",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+      },
+      {
+        "id": "anika",
+        "name": "Anika (anikadey0913)",
+        "to": "anikadey0913@gmail.com",
+        "subject": "Re: Important suggestions related to safety",
+        "threadId": "1a14721c6beca184",
+        "replyToMessageId": "1a14721c6beca184",
+        "theirMessage": "Hi eddie,\n\nSo iv been following your account a while and was in th waitlist thing.\nTried it out for the first time today and it seemed awesome. A lot of my\nfriends would also love it. Great idea and cant wait for it to be available\nfor laptop and ipad.\n\nSo when I was using it - we seemed to run into an issue.\nFirstly - i was using it in a library and ur like technicallyh publishing\nit right so your friends can also see the great 3 hour lock in im always\ntalking about. And I didnt notice but there was somebody behind me and they\nwere on camera. Not enough - and they were in an unseemly manner - which is\nok and understandable and when I notices this i simply deleted my three\nhours of footage, which maybe other people wouldnt do.\nso maybe you could add a feature where i could edit some of the footage or\nif other people are in the frame then put a sticker over their face before\nputting it up. And many people might wanna use that footage to\namke aesthetic edits of themselves locking in and if some peoples face is\nvisible or smth - thats not good.\n\nand also wherever there is a camera - there is a concern of indecency where\nI share a room with my sister and she walked in rather indecent. And I\nalmost published that and fortunately im like oh lemme see and on the\nsecond take i could see her crossing the screen a few times with her in her\nunderclothes - so maybe like make a scanner thing where it could check and\nif assumes ppl are indecently dressed they ask to confirm it - like in a\nnice manner where theyre concerned for safety - cuz like i might just be\nwearing a tank top and it flags me for indecent exposure or make it\ncomulsary for everyone to go through their time laps twice.\n\nThis is rlly nice tho",
+        "theirWhenPT": "Oct 16, 4:52 PM PT",
+        "body": "Hey Anika, thank you so much for trying Latent and for writing all of this out, it's super helpful. You're right that people walking through the background is a real concern, and I'm sorry you had to delete a 3 hour session because of it. We just built a blur tool in the post editor that can cover faces or the background before you post, and it'll be in an upcoming update [CHECK: when the next build ships]. Really glad you liked it overall!\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Privacy/safety suggestions. Updated today: #574 (merged Oct 20, 8:15 PM PT) adds Blur for faces or background in the post editor, so the draft mentions it; not in a released build yet, so there's a [CHECK] on timing.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879252410915660164"
+      },
+      {
+        "id": "serenity-followup",
+        "name": "Serenity",
+        "to": "serenitycrown26@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a1352f6a5158b88",
+        "replyToMessageId": "1a149ebe3d803d4d",
+        "theirMessage": "Awesome, thank you so much!",
+        "theirWhenPT": "Oct 17, 5:52 AM PT",
+        "body": "Of course! Talk soon.\n\nEddie",
+        "optional": true,
+        "isNew": false,
+        "note": "OPTIONAL. Closing thanks after your Oct 13 reply; fine to skip.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878936688828713864"
+      },
+      {
+        "id": "ty",
+        "name": "Ty Tran-Nguyen",
+        "to": "tyatrannguyen@gmail.com",
+        "subject": "Re: Joining the Latent team",
+        "threadId": "1a150628128d7b30",
+        "replyToMessageId": "1a1506880bada3cf",
+        "theirMessage": "Hi Eddie,\n\nMessaged you on a couple of platforms (discord, instagram, linkedin) \u2014 was\njust wondering if you could elaborate on the growth internship a bit more?\n\nI am an industrial and systems engineering major at the University of\nMinnesota, looking for anything data/process improvement related.\n\nI have some experience with Python and SQL. I just finished up a project\nwhere I mapped the webinar setup process for UMN's Office of IT and built a\nPython tool that automates Zoom and Google Calendar setup, cutting 8 steps\nto 2 and saving about 20 minutes per webinar.\n\nI have a knack for seeing processes that are inefficient and solving them\nin some way, and I hope to bring that to Latent.\n\nI was wondering if the growth internship would align at all with anything I\nhave just mentioned and any other details you could provide.\n\nLook forward to hearing from you!\n\nBest,\nTy Tran-Nguyen",
+        "theirWhenPT": "Oct 18, 12:06 PM PT",
+        "body": "Hey Ty, thanks for reaching out, and that Zoom and Calendar tool sounds super useful! For Growth we're looking for someone who uses and loves the app and is aligned with the mission. Past results are a plus, but we approach growth pretty unconventionally. [CHECK: anything else you want to say about the role, e.g. how data/process work fits in or time commitment]. Hires get flown out with housing and food covered, and there's a remote option too, so if it sounds like a fit, the form I sent is the best way to apply!\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Replied to your \"Joining the Latent team\" email asking what the Growth internship involves. Has a [CHECK] for anything you want to add about the role.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879415188676770608"
+      },
+      {
+        "id": "landon",
+        "name": "Landon Metzger",
+        "to": "landonmetzger01@gmail.com",
+        "subject": "Re: Joining the Latent team",
+        "threadId": "1a15016c9e6986ad",
+        "replyToMessageId": "1a150795ccb60949",
+        "theirMessage": "[12:22 PM PT]\nThanks for reaching out!\n\nMy first thoughts on the app are that it's a really unique way to get\npeople to be productive. I know I personally struggle with staying on task,\nespecially when I'm not interested in the work, but I also know from\nexperience that working in a group setting is something that motivates me\nto stay on task, and is something the app leverages well.\n\nI'm not sure what sort of commitments you guys are looking for, but I\nprobably can't be full-time during school, and would have to work at\nirregular times like between classes and on the weekends. Thanks so much\nfor reaching out almost instantly when I posted on LinkedIn, I really\nappreciate that, and am sure many others do too.\n\nBest,\nLandon Metzger\n\n[12:24 PM PT]\nI did go ahead and fill out the form for the engineering position, looking\nforward to hearing back from you!",
+        "theirWhenPT": "Oct 18, 12:22 PM and 12:24 PM PT",
+        "body": "Hey Landon, thanks for applying and for the kind words! Studying with other people keeping you on task is a big part of why we built Latent, so that's awesome to hear. [CHECK: whether part-time between classes and on weekends can work for the Engineering role]. Thanks again!\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Two replies to your hiring email: first thoughts on the app, says he can't be full-time during school, and that he applied for Engineering. Has a [CHECK] on part-time.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879409985522861741"
+      },
+      {
+        "id": "ahmar",
+        "name": "Ahmar",
+        "to": "ahmarali2004@gmail.com",
+        "subject": "Re: Joining the Latent team",
+        "threadId": "1a150824f643ed5f",
+        "replyToMessageId": "1a150a6fb64c1131",
+        "theirMessage": "Hi,\n\nThank you so much for sharing this Google Form with me.\n\nI really appreciate it!\n\nI wanted to share that I have just filled it out and submitted a response,\nkindly share if you have received it.\n\nThanks & Best Regards!\nAhmar",
+        "theirWhenPT": "Oct 18, 1:14 PM PT",
+        "body": "Hey Ahmar, yep, got it [CHECK: confirm his response is in the form responses], thanks for applying!\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Filled out the hiring form and asks you to confirm you got it. [CHECK] that it's in the form responses.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879417374340541791"
+      },
+      {
+        "id": "mushahid-hiring",
+        "name": "Mushahid",
+        "to": "mushahidahmed42@gmail.com",
+        "subject": "Re: Joining the Latent team",
+        "threadId": "1a1509109b8e2724",
+        "replyToMessageId": "1a151dde1472ff03",
+        "theirMessage": "I just submitted my application.",
+        "theirWhenPT": "Oct 18, 6:54 PM PT",
+        "body": "Awesome, thanks Mushahid!\n\nEddie",
+        "optional": true,
+        "isNew": false,
+        "note": "OPTIONAL. \"I just submitted my application\" after your hiring email; fine to skip.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879418386430961444"
+      },
+      {
+        "id": "mushahid-focus",
+        "name": "Mushahid",
+        "to": "mushahidahmed42@gmail.com",
+        "subject": "Re: How to get into Latent (the focus screen bug)",
+        "threadId": "1a151de3e2a327c8",
+        "replyToMessageId": "1a151de3e2a327c8",
+        "theirMessage": "Sure",
+        "theirWhenPT": "Oct 18, 6:54 PM PT",
+        "body": "Awesome, let me know if anything still doesn't work!\n\nEddie",
+        "optional": true,
+        "isNew": false,
+        "note": "OPTIONAL. \"Sure\" reply to your iOS 17 focus-screen email (sent from eddie@mail.trylatent.co); fine to skip.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879441284094175176"
+      },
+      {
+        "id": "karla",
+        "name": "Karla",
+        "to": "lieukarla@gmail.com",
+        "subject": "Re: How to get into Latent (the focus screen bug)",
+        "threadId": "1a151f38dcf30c3f",
+        "replyToMessageId": "1a151f38dcf30c3f",
+        "theirMessage": "I got into the app but it couldn\u2019t record, not sure if that\u2019s because I\u2019m\non an iPad but it\u2019s the only device I can use since I have a Samsung phone.\n\nThanks,\n\nKarla",
+        "theirWhenPT": "Oct 18, 7:17 PM PT",
+        "body": "Hey Karla, glad you got in, and sorry it won't record on your iPad! [CHECK: what to tell her about iPad recording, e.g. that it's a known iPad issue you're looking into, or something to try like checking Settings \u203a Latent \u203a Camera]. Android is coming too, I'll email you when it's out.\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). She got in after your iOS 17 focus-screen email but it won't record on her iPad (she has a Samsung phone). #559 fixed recording with the camera turned off (TRY-460), which may or may not be her case. Has a [CHECK].",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879442748582595647"
+      },
+      {
+        "id": "gautamvir",
+        "name": "Gautamvir",
+        "to": "[CHECK: original sender address is hidden; Gmail shows support@trylatent.co \u2192 support@trylatent.co]",
+        "subject": "Re: Campus ambassador?",
+        "threadId": "1a1525ed6a9f8f9f",
+        "replyToMessageId": "1a1525ed6a9f8f9f",
+        "theirMessage": "Hi,\nI hope you're well. I came across the app on LinkedIn. I'm keen to use the app since for me it'd be another jab at the doomscrolling which, for a change, seems promising.\n\nI'd love to be a part of the beta program and get a link to start using the app.\n\nAlso, I'm a student and Purdue and entrenched in the startup ecosystem here. With college students working on startups being a great market for your app, I'd be happy to work on a referral / marketing program on campus.\n\nDo let me know.\n\nBest,\nGautamvir\n\nlinkedin.com/in/gautamvirbhatia",
+        "theirWhenPT": "Oct 18, 9:15 PM PT",
+        "body": "Hey Gautamvir, thanks for reaching out! Here's a link to get in: [CHECK: your invite link]. Love the campus idea, [CHECK: how you want to handle it, e.g. point him to the Growth application form]. Let me know how you like the app!\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Sent to support@ (sender address hidden by the group, like the Camera Access email). Purdue student wants in and offers to run a campus referral program. Has [CHECK]s.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879450121123368863"
+      },
+      {
+        "id": "jan",
+        "name": "Jan",
+        "to": "djaymegshroom@gmail.com",
+        "subject": "Re: Joining the Latent team",
+        "threadId": "1a14f5eca0085062",
+        "replyToMessageId": "1a15285c627be926",
+        "theirMessage": "Hey Eddie\n\nReceived with thanks!\n\nAll the best with the app, love the concept a lot! Love to explore\npotential ways to collab down the road!\n\nRegards\nJan",
+        "theirWhenPT": "Oct 18, 9:57 PM PT",
+        "body": "Thanks Jan, glad you love it! If you end up enjoying Latent, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review\n\nEddie",
+        "optional": true,
+        "isNew": false,
+        "note": "OPTIONAL. Thanked you for the early access link you sent Oct 18 and mentioned a possible collab later. Happy, so includes the rating ask.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879397341166325858"
+      },
+      {
+        "id": "aleksandra",
+        "name": "Aleksandra",
+        "to": "aleksandra.dudko01@gmail.com",
+        "subject": "Re: Screen time",
+        "threadId": "1a1534bc7fb9f87d",
+        "replyToMessageId": "1a1534bc7fb9f87d",
+        "theirMessage": "Hi! I use Latent to record my study sessions, but because the screen stays\non (even when fully dimmed), it adds hours to my iPhone\u2019s Screen Time.\n\nIs there a way to record sessions in the background or lock my iPhone\nwithout stopping the recording? Alternatively, is there a way to prevent\nLatent from contributing to Apple\u2019s Screen Time total?\n\nThanks!",
+        "theirWhenPT": "Oct 19, 1:33 AM PT",
+        "body": "Hey Aleksandra, thanks for writing in, that's a really fair point! [CHECK: whether a session can keep recording with the screen locked or in the background, and whether anything can keep Latent out of Screen Time; if not, say so plainly]. You're not the only one who's asked, so I'm sharing it with the team.\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Emailed support@ (and sent the same note in the app as @aleksandra). Second Screen Time ask in two days (Ethan @soriyen yesterday). No Linear ticket yet. Has a [CHECK].",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879466403698440317"
+      },
+      {
+        "id": "fatma",
+        "name": "(no name given; fatmahafeezuddin)",
+        "to": "fatmahafeezuddin@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a1539e32fca433c",
+        "replyToMessageId": "1a1539e32fca433c",
+        "theirMessage": "Subject: Android Version Request\n\nBody:\n\nHi Eddie,\n\nI joined the waitlist from your Instagram reel because I am really\ninterested in Latent. However, I noticed it is currently only available on\nthe App Store.\nSince I am an Android user, I'm disappointed that I can't use it right now.\nPlease consider launching an Android version soon so I can finally try it\nout!",
+        "theirWhenPT": "Oct 19, 3:03 AM PT",
+        "body": "Hey, thanks so much for joining the waitlist, and sorry you can't use it yet! Android is coming, I'll email you when it's out.\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Reply to your launch email: Android user asking for an Android version. Android stock line.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879472067419194172"
+      },
+      {
+        "id": "anirudh",
+        "name": "Anirudh",
+        "to": "hey.anirudh.nallajarla@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a1128c840cd1482",
+        "replyToMessageId": "1a153a03fc325ad5",
+        "theirMessage": "Haha, thanks!\nYe, I can show you! It's kinda a skuffed apk version, but it does the work\nfor now for me and my friends, and just got through the exams season wit it.\nI'll see how I can share it.\nWill do so soon!\n\nThanks again! :)",
+        "theirWhenPT": "Oct 19, 3:05 AM PT",
+        "body": "Haha that's awesome, glad it got you guys through exams! Would love to see it whenever you get the chance. Android is coming, I'll email you when it's out.\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Follow-up to your Oct 7 reply: he'll share the makeshift Android version he built for his friends.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878327360135959682"
+      },
+      {
+        "id": "niketh",
+        "name": "Niketh",
+        "to": "niketh13putta@gmail.com",
+        "subject": "Re: Joining the Latent team",
+        "threadId": "1a14f5eb04c33feb",
+        "replyToMessageId": "1a154e3dc82b2666",
+        "theirMessage": "Yo, I applied",
+        "theirWhenPT": "Oct 19, 8:59 AM PT",
+        "body": "Awesome, thanks Niketh!\n\nEddie",
+        "optional": true,
+        "isNew": false,
+        "note": "OPTIONAL. \"Yo, I applied\" after your hiring email; fine to skip.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879397334266363883"
+      },
+      {
+        "id": "noel",
+        "name": "Noel Emmanuel",
+        "to": "noel.emmanuel20@gmail.com",
+        "subject": "Re: Joining the Latent team",
+        "threadId": "1a15682123007d32",
+        "replyToMessageId": "1a15686cd746ac0b",
+        "theirMessage": "Hey Eddie,\n\nThanks for getting back to me! I actually filled out the form earlier after\ncoming across Latent on Instagram, so my application should already be in\nthere.\n\nReally interested in what you\u2019re building and would love the opportunity to\ncontribute. Looking forward to hearing back!\nBest,\nNoel Emmanuel",
+        "theirWhenPT": "Oct 19, 4:37 PM PT",
+        "body": "Hey Noel, thanks for applying, and glad you found Latent on Instagram! [CHECK: confirm his application is in the form responses]. Appreciate you reaching out!\n\nEddie",
+        "optional": true,
+        "isNew": false,
+        "note": "OPTIONAL. Carried over (unanswered). Replied 5 minutes after your \u201cJoining the Latent team\u201d email (Oct 19, 4:32 PM PT) to say he already applied through the form. Fine to skip.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879522911027494194"
+      },
+      {
+        "id": "swetha",
+        "name": "Swetha Venkedesh",
+        "to": "swetha_venkedesh@windermereprep.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a156fda8fa5f655",
+        "replyToMessageId": "1a156fda8fa5f655",
+        "theirMessage": "Hello, is there a feature on the app where you can log sessions without recording yourself? As I'm getting in the habit, I sometimes forget, but I still want to track my study sessions. Is there any way to do so? I also study when my phone is dead so I can't always record\n\nThank you for making this app its great!\nSwetha",
+        "theirWhenPT": "Oct 19, 6:47 PM PT",
+        "body": "Hey Swetha, so glad you're liking it, thank you! [CHECK: whether there's any way right now to log a session without recording; if not, say so plainly]. Adding a session you didn't record is something other people have asked for too, so I'm sharing your note with the team. And if you're enjoying Latent, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered). Reply to your Oct 10 launch email (\u201clock in twin\u201d). Wants to log study sessions without recording (she forgets, or her phone is dead). Matches TRY-411 (add a session you didn't record, Need Approval). Happy, so includes the rating ask. Has a [CHECK].",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879531404000622165"
+      },
+      {
+        "id": "mihir",
+        "name": "Mihir Jadhav",
+        "to": "mihirjadhav10@icloud.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a15ba420a90d0ef",
+        "replyToMessageId": "1a15ba420a90d0ef",
+        "theirMessage": "Yoo I like the app; can ugs figure out a way to keep to have an option to keep the time running when you go out of the app? (because its annoying to keep having to resume and a lot of people have to use other apps on the device using Latent when working) It would be rlly helpful and much appreciated. Thanks man\n\t\t\t\t\t\t\u2014 Mihir Jadhav",
+        "theirWhenPT": "Oct 20, 4:27 PM PT",
+        "body": "Hey Mihir, glad you like it, and thanks for the feedback! [CHECK: whether the current App Store version keeps the timer running when you switch to another app (Malcolm's TRY-495 note says sessions keep running in the background since Oct 17); if so, tell him to update from the App Store, if not, say you're looking at it]. And if you're enjoying Latent, a quick App Store rating would help a ton: https://apps.apple.com/app/id6788947658?action=write-review\n\nEddie",
+        "optional": false,
+        "isNew": true,
+        "note": "New. Reply to your Sep 20 early-access email (TestFlight link). Wants the timer to keep running when he leaves the app. Happy, so includes the rating ask. Has a [CHECK].",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879613212304920815"
+      },
+      {
+        "id": "kathryn",
+        "name": "Kathryn",
+        "to": "kathsnkavi1313@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a15cc893447e559",
+        "replyToMessageId": "1a15cc893447e559",
+        "theirMessage": "But unfortunately I have an android phone....im sad...would've loved to try\nit out though....love...kathryn",
+        "theirWhenPT": "Oct 20, 9:46 PM PT",
+        "body": "Hey Kathryn, sorry about that, and thanks for signing up! Android is coming, I'll email you when it's out.\n\nEddie",
+        "optional": false,
+        "isNew": true,
+        "note": "New. Reply to your Oct 5 launch email. Android stock line.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879633309156762969"
+      }
+    ],
+    "linearIssue": {
+      "id": "TRY-497",
+      "url": "https://linear.app/trylatent/issue/TRY-497/daily-dig-2026-10-21-1-fix-waiting-for-review-568"
+    },
+    "linearNote": "Linear dig issue: TRY-497 https://linear.app/trylatent/issue/TRY-497/daily-dig-2026-10-21-1-fix-waiting-for-review-568",
+    "emailMessageId": "1a15f493bb098c66"
   }
 };
