@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-22",
+    "title": "Latent daily review · Oct 22",
+    "tldr": "1 new fix (#585): camera-off locked time lost after unlocking elsewhere. #568 still waiting. 7 merged (block, messages, songs, tagging). 1.0.9 (44) in testing. No age holds. 28 reply drafts."
+  },
+  {
     "date": "2026-10-21",
     "title": "Latent daily review · Oct 21",
     "tldr": "0 new fixes (#568 still waiting). 9 merged (freeze, crash, 2 security, Blur/Draw, songs). No age holds. 26 reply drafts. Discord: public group ideas, no bugs."
