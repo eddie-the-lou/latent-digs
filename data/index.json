@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-23",
+    "title": "Latent daily review · Oct 23",
+    "tldr": "1 new fix (#601): camera-off session counted all night after an App Store update. #568 merged, #585 replaced by #595. 16 merged. No age holds. 4 reply drafts."
+  },
+  {
     "date": "2026-10-22",
     "title": "Latent daily review · Oct 22",
     "tldr": "1 new fix (#585): camera-off locked time lost after unlocking elsewhere. #568 still waiting. 7 merged (block, messages, songs, tagging). 1.0.9 (44) in testing. No age holds. 28 reply drafts."

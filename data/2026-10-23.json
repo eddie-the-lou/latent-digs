@@ -1,0 +1,1391 @@
+{
+ "date": "2026-10-23",
+ "title": "Latent daily review · Oct 23",
+ "generatedAt": "2026-10-23T16:34:09.162275+00:00",
+ "tldr": [
+  "1 new fix (#601, waiting for your review): Danny's camera-off session came back as 11 hours 3 minutes because an App Store update closed Latent at 3 AM while he slept, and Latent then counted everything until he opened it late morning. Nothing else is waiting on you from the dig: #568 merged and your #595 replaced #585.",
+  "16 merged yesterday, including your camera-off fix (#595), the plan that stuck after setup (#591), chat freezes (#593), notification banners mid-session (#596) and a tag-chart crash (#597), plus Malcolm's big-friend-list feed (#584), big chats (#599), tagging (#588) and mentions settings (#594). The App Store still has 1.0.8 (released Oct 19; 4.94 stars from 193 ratings). 1.0.9 (44) is on TestFlight: 15 people recorded on it in the last day (you, Malcolm, test accounts and about 10 testers). Everything merged since Oct 22, 10:30 AM PT (including #568 and #595) comes after 1.0.9 (44), so it needs a new build.",
+  "No age holds.",
+  "6 new in-app notes, all ideas: Lucy wants a changeable daily goal and the old stopwatch overlay (and can't change her email, which is read-only on purpose), Kevin wants deleted videos back (TRY-516), Ray wants 0.5x zoom and a weekly group-placement celebration.",
+  "4 reply drafts (1 optional): you sent 15 yesterday. Still open: Keerat (camera access) and Gautamvir (campus), now with their real addresses, Samuel (his account still isn't deleted after 7 days), and Ahmar's thank-you (optional).",
+  "Discord: about 45 new; Danny's 11 hour bug (today's fix), a debate about sleep sessions on the leaderboard, Android and Mac questions, and a tag-who-you-studied-with idea that's already built. 3 new beta opt-ins / 163. Survey unchanged. Sentry still needs re-auth."
+ ],
+ "plainTldr": [
+  "1 new fix (#601, waiting for your review): Danny's camera-off session came back as 11 hours 3 minutes because an App Store update closed Latent at 3 AM while he slept, and Latent then counted everything until he opened it late morning. Nothing else is waiting on you from the dig: #568 merged and your #595 replaced #585.",
+  "16 merged yesterday, including your camera-off fix (#595), the plan that stuck after setup (#591), chat freezes (#593), notification banners mid-session (#596) and a tag-chart crash (#597), plus Malcolm's big-friend-list feed (#584), big chats (#599), tagging (#588) and mentions settings (#594). The App Store still has 1.0.8 (released Oct 19; 4.94 stars from 193 ratings). 1.0.9 (44) is on TestFlight: 15 people recorded on it in the last day (you, Malcolm, test accounts and about 10 testers). Everything merged since Oct 22, 10:30 AM PT (including #568 and #595) comes after 1.0.9 (44), so it needs a new build.",
+  "No age holds.",
+  "6 new in-app notes, all ideas: Lucy wants a changeable daily goal and the old stopwatch overlay (and can't change her email, which is read-only on purpose), Kevin wants deleted videos back (TRY-516), Ray wants 0.5x zoom and a weekly group-placement celebration.",
+  "4 reply drafts (1 optional): you sent 15 yesterday. Still open: Keerat (camera access) and Gautamvir (campus), now with their real addresses, Samuel (his account still isn't deleted after 7 days), and Ahmar's thank-you (optional).",
+  "Discord: about 45 new; Danny's 11 hour bug (today's fix), a debate about sleep sessions on the leaderboard, Android and Mac questions, and a tag-who-you-studied-with idea that's already built. 3 new beta opt-ins / 163. Survey unchanged. Sentry still needs re-auth."
+ ],
+ "urgent": [],
+ "stats": {
+  "newInApp": 6,
+  "newDiscord": 45,
+  "newGmail": 1,
+  "newSurveyRows": 0,
+  "seanEllis": {
+   "very": 39,
+   "somewhat": 25,
+   "not": 2,
+   "n": 66
+  },
+  "sentryNew": [],
+  "sentryUnavailable": true,
+  "rawQuotes": 55,
+  "betaOptInsNew": 3,
+  "betaOptInsTotal": 163,
+  "installs24h": 874,
+  "installsPrev24h": 1124
+ },
+ "whatIDidToday": {
+  "fixesOpened": [
+   {
+    "pr": 601,
+    "url": "https://github.com/eddie-the-lou/latent/pull/601",
+    "agent": "https://cursor.com/agents/bc-882a39f8-ab29-5675-b688-658d698fc2d2",
+    "title": "A camera-off session no longer counts the whole night after an App Store update closes Latent",
+    "reporter": "Danny (@danny) in Discord #general-chat, Oct 22, 3:27 PM and 7:17 PM PT (“i recorded a latent session as i went to sleep … when i woke up latent wasn’t on, and i was using my phone like normal … so i stopped and it had been 11 hours”). You already asked him “what happened?” at 6:39 PM. PostHog: his camera-off session on 1.0.7 started 12:41 AM PT, the App Store updated Latent to 1.0.8 at 3:10 AM PT (which closes the app), and when he opened it at 11:44 AM PT all 11 hours 3 minutes were counted with 2 seconds paused. 8 recovered sessions from 6 people got 3+ extra hours this way in the last week (some may be real overnight sessions).",
+    "status": "Waiting for your review (draft PR, merges cleanly, not merged)",
+    "whatItFixes": "When you record with the camera off and lock the phone, Latent keeps counting, and if iPhone closes Latent in the meantime it credits the time up to when you next open it (capped at 12 hours). An automatic App Store update closed Danny's Latent at 3:10 AM and removed the Lock Screen timer, so he woke up thinking nothing was recording and used his phone for hours, but Latent still counted everything until he opened it at 11:44 AM. Latent only settled the locked time when someone opened the app, and the quiet restart after the update never did. Now, when Latent starts again on a new build (an update) or finds the Lock Screen timer already gone, the counted time stops at that moment and the session comes back paused so the person can resume or finish. The normal case (lock in Latent, work, unlock back into Latent) still counts the full time. PostHog also gets a new field saying why the time stopped.",
+    "howToCheck": "On a phone: start a camera-off (Photo + timer) session and lock the phone in Latent. While it's locked, install a new build over it (TestFlight or Xcode), wait a while and use other apps, then open Latent. The time should stop at the install, not when you opened it, and the session should be paused, not lost. Then check the normal path: lock in Latent, wait about 10 minutes, unlock back into Latent: about 10 minutes should count. The agent couldn't compile (no Mac), so run LockedRunRecoveryTests and LiveSessionRestoreTests on a Mac first.",
+    "from": "Oct 23"
+   }
+  ],
+  "carriedFromEarlier": [],
+  "agentsLaunched": [
+   {
+    "agent": "https://cursor.com/agents/bc-882a39f8-ab29-5675-b688-658d698fc2d2",
+    "title": "A camera-off session no longer counts the whole night after an App Store update closes Latent",
+    "model": "Grok 4.6",
+    "pr": 601
+   }
+  ],
+  "agentsStillWorking": [],
+  "mergedOvernight": [
+   {
+    "pr": 586,
+    "url": "https://github.com/eddie-the-lou/latent/pull/586",
+    "title": "Version 1.0.9 (44) for TestFlight (TRY-509)",
+    "by": "Malcolm · Oct 22, 10:30 AM PT",
+    "note": ""
+   },
+   {
+    "pr": 568,
+    "url": "https://github.com/eddie-the-lou/latent/pull/568",
+    "title": "Saves retried when you reopen the app no longer go out as if you're signed out (TRY-510)",
+    "by": "Eddie · Oct 22, 12:25 PM PT",
+    "note": "Opened by the Oct 20 dig. 4 more of these errors from 3 people in the last day on 1.0.8 and 1.0.7."
+   },
+   {
+    "pr": 591,
+    "url": "https://github.com/eddie-the-lou/latent/pull/591",
+    "title": "The plan from setup clears once the session is kept, posted or drafted (TRY-492)",
+    "by": "Eddie · Oct 22, 12:31 PM PT",
+    "note": "What Kevin and aleks hit."
+   },
+   {
+    "pr": 589,
+    "url": "https://github.com/eddie-the-lou/latent/pull/589",
+    "title": "Music picker: Instagram look, and fast (TRY-507)",
+    "by": "Malcolm · Oct 22, 2:34 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 592,
+    "url": "https://github.com/eddie-the-lou/latent/pull/592",
+    "title": "Local test setup: video and photo uploads work (TRY-511)",
+    "by": "Eddie · Oct 22, 2:42 PM PT",
+    "note": "Developer only."
+   },
+   {
+    "pr": 593,
+    "url": "https://github.com/eddie-the-lou/latent/pull/593",
+    "title": "Chats stop freezing the app (TRY-512)",
+    "by": "Eddie · Oct 22, 2:53 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 588,
+    "url": "https://github.com/eddie-the-lou/latent/pull/588",
+    "title": "Tagging: caption mentions and private posts (TRY-508)",
+    "by": "Malcolm · Oct 22, 3:28 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 590,
+    "url": "https://github.com/eddie-the-lou/latent/pull/590",
+    "title": "Tag colours: each person keeps their own colours (TRY-211)",
+    "by": "Malcolm · Oct 22, 3:32 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 594,
+    "url": "https://github.com/eddie-the-lou/latent/pull/594",
+    "title": "Mentions get their own notification switch (TRY-515)",
+    "by": "Malcolm · Oct 22, 4:01 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 595,
+    "url": "https://github.com/eddie-the-lou/latent/pull/595",
+    "title": "Camera off: leaving Latent pauses until you come back; reading the Lock Screen never pauses (TRY-514)",
+    "by": "Eddie · Oct 22, 4:03 PM PT",
+    "note": "Replaces the dig's #585 (closed), so Ace's lost-time bug is fixed on main."
+   },
+   {
+    "pr": 584,
+    "url": "https://github.com/eddie-the-lou/latent/pull/584",
+    "title": "Big friend lists: the feed loads and the story row stops freezing (TRY-489)",
+    "by": "Malcolm · Oct 22, 7:39 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 596,
+    "url": "https://github.com/eddie-the-lou/latent/pull/596",
+    "title": "No notification banners over the camera during a session (TRY-519)",
+    "by": "Eddie · Oct 22, 8:35 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 597,
+    "url": "https://github.com/eddie-the-lou/latent/pull/597",
+    "title": "Insights: the tag pie chart can no longer crash the app (TRY-386)",
+    "by": "Eddie · Oct 22, 8:38 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 598,
+    "url": "https://github.com/eddie-the-lou/latent/pull/598",
+    "title": "A new post opens on the audience your last one went to (TRY-520)",
+    "by": "Eddie · Oct 22, 9:51 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 599,
+    "url": "https://github.com/eddie-the-lou/latent/pull/599",
+    "title": "Big chats open at the bottom and load older messages a page at a time (TRY-513)",
+    "by": "Malcolm · Oct 22, 10:09 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 600,
+    "url": "https://github.com/eddie-the-lou/latent/pull/600",
+    "title": "Finish opens the editor; posting, re-editing and Share use the same edits (TRY-491)",
+    "by": "Eddie · Oct 22, 11:11 PM PT",
+    "note": ""
+   }
+  ],
+  "closedOvernight": [
+   {
+    "pr": 585,
+    "url": "https://github.com/eddie-the-lou/latent/pull/585",
+    "title": "Camera off: time worked while locked survives unlocking into another app (dig, Oct 22)",
+    "note": "Closed Oct 22, 4:03 PM PT, replaced by your #595."
+   }
+  ],
+  "stillOnYou": [
+   {
+    "id": "next-build",
+    "title": "Ship the next build: 1.0.8 still loses or over-counts time and shows upload errors that are already fixed on main. In the last day on 1.0.8: missing-post upload errors 61 from 8 people (#555), empty clips 27 from 3 people (#557), signed-out save errors 4 from 3 people (#568), and camera-off unlocked-elsewhere 203 times from 86 people (#595). #552 (phone dies mid-session) is in 1.0.9 (44)."
+   },
+   {
+    "id": "samuel",
+    "title": "Account deletion request: Samuel Downs (srdowns2010@gmail.com, @captsam) emailed support@ Oct 16, 4:13 PM PT. His account still existed at ~9:20 AM PT today (7 days). Reply draft below waits on the deletion.",
+    "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+   },
+   {
+    "id": "bot-branches",
+    "title": "Malcolm's bot tickets still Need Approval: TRY-487 (vibration freezes, fix branch), TRY-501 (camera never starts on iPad in split screen), TRY-475/480/471 (freezes, fix branches), TRY-469/470, TRY-495 (lock-in mode). TRY-492 is now Done (#591).",
+    "url": "https://linear.app/trylatent/issue/TRY-501"
+   },
+   {
+    "id": "older-prs",
+    "title": "Older open PRs: yours #500 (Activation page) and #417; Malcolm's #587 (new: profile feed song), #537, #530, #529, #518, #499. #499 still fixes group invites erroring while the app signs in.",
+    "url": "https://github.com/eddie-the-lou/latent/pulls"
+   },
+   {
+    "id": "fyi",
+    "title": "FYI: Rushton Hurley invited you to speak to the Rotary eClub of Silicon Valley (you forwarded it to Malcolm at 9:09 AM). Jerry Chen booked “Latent + Jerry” today 11 to 11:45 AM; Greta Zambrano and Eren Kahveci booked calls with Malcolm. Sideshift agreed $9,000 and you said “please proceed”; Delphi closed for now; Blink.new bumped. You sent the “Joining the Latent team” form to 6 more people (Hari, Vikrant, Asher, Ashrith, Jaden, Sriyash)."
+   }
+  ],
+  "note": "One Cloud Agent launched (Grok 4.6) for Danny's 11 hour camera-off session: clear evidence in PostHog and no ticket or PR covering it. Nothing else new was a clear bug: Lucy's email is read-only by design, and the rest are ideas. #568 merged and #585 was replaced by your #595, so nothing from earlier digs is still waiting."
+ },
+ "prStatus": {
+  "waiting": [
+   {
+    "pr": 601,
+    "url": "https://github.com/eddie-the-lou/latent/pull/601",
+    "title": "A camera-off session no longer counts the whole night after an App Store update closes Latent",
+    "by": "Cloud Agent · Oct 23",
+    "agent": "https://cursor.com/agents/bc-882a39f8-ab29-5675-b688-658d698fc2d2"
+   }
+  ],
+  "openedToday": [
+   {
+    "pr": 601,
+    "url": "https://github.com/eddie-the-lou/latent/pull/601",
+    "title": "A camera-off session no longer counts the whole night after an App Store update closes Latent",
+    "agent": "https://cursor.com/agents/bc-882a39f8-ab29-5675-b688-658d698fc2d2"
+   }
+  ],
+  "agentsStillWorking": [],
+  "mergedOvernight": [
+   {
+    "pr": 586,
+    "url": "https://github.com/eddie-the-lou/latent/pull/586",
+    "title": "Version 1.0.9 (44) for TestFlight (TRY-509)",
+    "by": "Malcolm · Oct 22, 10:30 AM PT",
+    "note": ""
+   },
+   {
+    "pr": 568,
+    "url": "https://github.com/eddie-the-lou/latent/pull/568",
+    "title": "Saves retried when you reopen the app no longer go out as if you're signed out (TRY-510)",
+    "by": "Eddie · Oct 22, 12:25 PM PT",
+    "note": "Opened by the Oct 20 dig. 4 more of these errors from 3 people in the last day on 1.0.8 and 1.0.7."
+   },
+   {
+    "pr": 591,
+    "url": "https://github.com/eddie-the-lou/latent/pull/591",
+    "title": "The plan from setup clears once the session is kept, posted or drafted (TRY-492)",
+    "by": "Eddie · Oct 22, 12:31 PM PT",
+    "note": "What Kevin and aleks hit."
+   },
+   {
+    "pr": 589,
+    "url": "https://github.com/eddie-the-lou/latent/pull/589",
+    "title": "Music picker: Instagram look, and fast (TRY-507)",
+    "by": "Malcolm · Oct 22, 2:34 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 592,
+    "url": "https://github.com/eddie-the-lou/latent/pull/592",
+    "title": "Local test setup: video and photo uploads work (TRY-511)",
+    "by": "Eddie · Oct 22, 2:42 PM PT",
+    "note": "Developer only."
+   },
+   {
+    "pr": 593,
+    "url": "https://github.com/eddie-the-lou/latent/pull/593",
+    "title": "Chats stop freezing the app (TRY-512)",
+    "by": "Eddie · Oct 22, 2:53 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 588,
+    "url": "https://github.com/eddie-the-lou/latent/pull/588",
+    "title": "Tagging: caption mentions and private posts (TRY-508)",
+    "by": "Malcolm · Oct 22, 3:28 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 590,
+    "url": "https://github.com/eddie-the-lou/latent/pull/590",
+    "title": "Tag colours: each person keeps their own colours (TRY-211)",
+    "by": "Malcolm · Oct 22, 3:32 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 594,
+    "url": "https://github.com/eddie-the-lou/latent/pull/594",
+    "title": "Mentions get their own notification switch (TRY-515)",
+    "by": "Malcolm · Oct 22, 4:01 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 595,
+    "url": "https://github.com/eddie-the-lou/latent/pull/595",
+    "title": "Camera off: leaving Latent pauses until you come back; reading the Lock Screen never pauses (TRY-514)",
+    "by": "Eddie · Oct 22, 4:03 PM PT",
+    "note": "Replaces the dig's #585 (closed), so Ace's lost-time bug is fixed on main."
+   },
+   {
+    "pr": 584,
+    "url": "https://github.com/eddie-the-lou/latent/pull/584",
+    "title": "Big friend lists: the feed loads and the story row stops freezing (TRY-489)",
+    "by": "Malcolm · Oct 22, 7:39 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 596,
+    "url": "https://github.com/eddie-the-lou/latent/pull/596",
+    "title": "No notification banners over the camera during a session (TRY-519)",
+    "by": "Eddie · Oct 22, 8:35 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 597,
+    "url": "https://github.com/eddie-the-lou/latent/pull/597",
+    "title": "Insights: the tag pie chart can no longer crash the app (TRY-386)",
+    "by": "Eddie · Oct 22, 8:38 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 598,
+    "url": "https://github.com/eddie-the-lou/latent/pull/598",
+    "title": "A new post opens on the audience your last one went to (TRY-520)",
+    "by": "Eddie · Oct 22, 9:51 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 599,
+    "url": "https://github.com/eddie-the-lou/latent/pull/599",
+    "title": "Big chats open at the bottom and load older messages a page at a time (TRY-513)",
+    "by": "Malcolm · Oct 22, 10:09 PM PT",
+    "note": ""
+   },
+   {
+    "pr": 600,
+    "url": "https://github.com/eddie-the-lou/latent/pull/600",
+    "title": "Finish opens the editor; posting, re-editing and Share use the same edits (TRY-491)",
+    "by": "Eddie · Oct 22, 11:11 PM PT",
+    "note": ""
+   }
+  ],
+  "closedOvernight": [
+   {
+    "pr": 585,
+    "url": "https://github.com/eddie-the-lou/latent/pull/585",
+    "title": "Camera off: time worked while locked survives unlocking into another app (dig, Oct 22)",
+    "note": "Closed Oct 22, 4:03 PM PT, replaced by your #595."
+   }
+  ]
+ },
+ "ageHolds": {
+  "open": [],
+  "newLast24h": [],
+  "resolvedLast24h": [],
+  "summary": "No age holds.",
+  "detail": "Nothing open, new, or resolved in the last 24 hours (checked ~9:20 AM PT). Holds ever: 1 (Omar, @omarzz, held Oct 11, released the same morning).",
+  "query": "/workspace/feedback-digests/age-holds.sql"
+ },
+ "actions": [
+  {
+   "id": "fix-601",
+   "title": "Review #601: A camera-off session no longer counts the whole night after an App Store update closes Latent",
+   "plainSummary": "When you record with the camera off and lock the phone, Latent keeps counting, and if iPhone closes Latent in the meantime it credits the time up to when you next open it (capped at 12 hours). An automatic App Store update closed Danny's Latent at 3:10 AM and removed the Lock Screen timer, so he woke up thinking nothing was recording and used his phone for hours, but Latent still counted everything until he opened it at 11:44 AM. Latent only settled the locked time when someone opened the app, and the quiet restart after the update never did. Now, when Latent starts again on a new build (an update) or finds the Lock Screen timer already gone, the counted time stops at that moment and the session comes back paused so the person can resume or finish. The normal case (lock in Latent, work, unlock back into Latent) still counts the full time. PostHog also gets a new field saying why the time stopped. How to check: On a phone: start a camera-off (Photo + timer) session and lock the phone in Latent. While it's locked, install a new build over it (TestFlight or Xcode), wait a while and use other apps, then open Latent. The time should stop at the install, not when you opened it, and the session should be paused, not lost. Then check the normal path: lock in Latent, wait about 10 minutes, unlock back into Latent: about 10 minutes should count. The agent couldn't compile (no Mac), so run LockedRunRecoveryTests and LiveSessionRestoreTests on a Mac first.",
+   "status": "Waiting for your review",
+   "prUrl": "https://github.com/eddie-the-lou/latent/pull/601",
+   "prNumber": 601,
+   "agentUrl": "https://cursor.com/agents/bc-882a39f8-ab29-5675-b688-658d698fc2d2"
+  },
+  {
+   "id": "next-build",
+   "title": "Ship the next build",
+   "plainSummary": "The App Store still has 1.0.8 (released Oct 19; 4.94 stars from 193 ratings). 1.0.9 (44) is on TestFlight: 15 people recorded on it in the last day (you, Malcolm, test accounts and about 10 testers). Everything merged since Oct 22, 10:30 AM PT (including #568 and #595) comes after 1.0.9 (44), so it needs a new build.",
+   "status": "Needs you"
+  },
+  {
+   "id": "age-holds",
+   "title": "Age holds: none",
+   "plainSummary": "No age holds open, new, or resolved in the last 24 hours (checked ~9:20 AM PT).",
+   "status": "done"
+  },
+  {
+   "id": "samuel-delete",
+   "title": "Delete Samuel Downs' account (he asked by email Oct 16), then send the reply",
+   "plainSummary": "srdowns2010@gmail.com (@captsam). Still exists after 7 days. The dig changed nothing.",
+   "status": "Needs you"
+  },
+  {
+   "id": "replies",
+   "title": "4 reply drafts (1 optional)",
+   "plainSummary": "Not sent. Approve each in chat.",
+   "status": "Waiting for your review"
+  },
+  {
+   "id": "bot-branches",
+   "title": "Malcolm's bot tickets waiting for approval: TRY-487, TRY-501 and the freeze branches",
+   "plainSummary": "TRY-492 is done.",
+   "status": "Needs you",
+   "url": "https://linear.app/trylatent/issue/TRY-487"
+  },
+  {
+   "id": "sentry",
+   "title": "Re-connect Sentry",
+   "plainSummary": "Still needs re-auth.",
+   "status": "Needs you"
+  },
+  {
+   "id": "email",
+   "title": "Email dig to eddie@weaive.app",
+   "status": "done"
+  },
+  {
+   "id": "archive",
+   "title": "Publish archive",
+   "status": "done",
+   "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-10-23"
+  },
+  {
+   "id": "linear",
+   "title": "Linear dig issue TRY-522 (Need Approval)",
+   "status": "done",
+   "url": "https://linear.app/trylatent/issue/TRY-522/daily-dig-2026-10-23-1-fix-waiting-for-review-601"
+  }
+ ],
+ "bugs": [
+  {
+   "id": "update-overnight",
+   "title": "Camera-off session counts the whole night after an App Store update closes Latent",
+   "severity": "high",
+   "people": 6,
+   "status": "Fix waiting (#601)",
+   "summary": "Danny (Discord): a session he started going to sleep saved as 11 hours 3 minutes, though he used his phone normally after waking.",
+   "detail": "PostHog: session_locked_recovered credited 39,808 s with only 327 s known; an App Store update to 1.0.8 closed Latent at 3:10 AM PT. In the last week 8 recovered sessions from 6 people got 3+ extra hours (some may be real). No ticket or PR covered it, so I opened a Cloud Agent fix.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/601",
+   "sources": [
+    "discord",
+    "posthog"
+   ]
+  },
+  {
+   "id": "unlocked-elsewhere",
+   "title": "Camera-off locked time lost after unlocking into another app (Ace, Oct 22)",
+   "severity": "medium",
+   "people": 86,
+   "status": "Fixed on main (#595), next build",
+   "summary": "Still 203 times from 86 people in the last day on released builds.",
+   "detail": "Your #595 replaced the dig's #585 and merged Oct 22, 4:03 PM PT. It is not in 1.0.9 (44).",
+   "url": "https://github.com/eddie-the-lou/latent/pull/595",
+   "sources": [
+    "posthog",
+    "github"
+   ]
+  },
+  {
+   "id": "anon-save",
+   "title": "Saves retried when you reopen the app fail as if you're signed out",
+   "severity": "medium",
+   "people": 3,
+   "status": "Fixed on main (#568), next build",
+   "summary": "4 more from 3 people in the last day.",
+   "detail": "#568 merged Oct 22, 12:25 PM PT.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/568",
+   "sources": [
+    "posthog"
+   ]
+  },
+  {
+   "id": "uploads",
+   "title": "Stuck and empty video uploads on 1.0.8",
+   "severity": "medium",
+   "people": 11,
+   "status": "Fixed on main (#555, #557), in 1.0.9",
+   "summary": "Missing-post upload errors 61 from 8 people, empty clips 27 from 3 people in the last day.",
+   "detail": "Reaches people once 1.0.9 ships.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/555",
+   "sources": [
+    "posthog"
+   ]
+  },
+  {
+   "id": "change-email",
+   "title": "Can't change your email",
+   "severity": "low",
+   "people": 1,
+   "status": "By design for now (no ticket)",
+   "summary": "Lucy (@lucyd) in-app: “i cant change my email”.",
+   "detail": "Edit Profile shows the email read-only on purpose: changing it needs a verify-your-new-email step that was never built. Needs a decision, so no auto-fix.",
+   "sources": [
+    "in-app"
+   ]
+  },
+  {
+   "id": "ipad-camera",
+   "title": "Camera never starts on iPad in split screen",
+   "severity": "low",
+   "people": null,
+   "status": "Malcolm's bot (TRY-501, Need Approval)",
+   "summary": "You told Karla yesterday you're looking into it.",
+   "detail": "Not duplicated.",
+   "url": "https://linear.app/trylatent/issue/TRY-501",
+   "sources": [
+    "linear"
+   ]
+  },
+  {
+   "id": "freezes",
+   "title": "Freeze tickets from Malcolm's bot",
+   "severity": "medium",
+   "people": null,
+   "status": "Need Approval",
+   "summary": "TRY-487 (vibrations), 475 (widget save), 480 (dim settings), 471 (feed), 469, 470 still open. Chats (#593) and big friend lists (#584) freezes are fixed on main.",
+   "detail": "Sentry-sourced; I can't see Sentry. Not duplicated.",
+   "url": "https://linear.app/trylatent/issue/TRY-487",
+   "sources": [
+    "linear",
+    "github"
+   ]
+  },
+  {
+   "id": "offline-saves",
+   "title": "Saves and uploads failing on bad connections",
+   "severity": "low",
+   "people": 28,
+   "status": "Watch",
+   "summary": "session_save_failed 50 from 28 people in the last day (was 58/36), nearly all offline, timed out or connection lost.",
+   "detail": "Expected on flaky networks.",
+   "sources": [
+    "posthog"
+   ]
+  },
+  {
+   "id": "dev-noise",
+   "title": "Not a user problem: test accounts on 1.0.9",
+   "severity": "low",
+   "people": null,
+   "status": "Ignore",
+   "summary": "119 of the 252 failed uploads came from two test accounts (dev@latent.test, friend@latent.test) on the local test setup.",
+   "detail": "Real people: about 133 from 32 people, mostly network and the 1.0.8 errors above.",
+   "sources": [
+    "posthog"
+   ]
+  },
+  {
+   "id": "sentry-auth",
+   "title": "Sentry connector needs re-auth",
+   "severity": "low",
+   "people": null,
+   "status": "Needs you",
+   "summary": "Sentry still needs re-auth (recurring). No crash data from me today.",
+   "detail": "Malcolm's bot still files Sentry tickets.",
+   "sources": [
+    "sentry"
+   ]
+  }
+ ],
+ "features": [
+  {
+   "id": "sleep-leaderboard",
+   "title": "Sleep sessions on the leaderboard",
+   "count": 4,
+   "peopleCountLabel": "4 people talking",
+   "status": "Open (no ticket found)",
+   "summary": "Suki says logging sleep “pollutes the leaderboards”; Notorious R.I.B says it's up to each person; Danny asks why not record sleep; laid wants an all-time longest session leaderboard.",
+   "detail": "Linked to Danny's 11 hour session. Could be a “don't count sleep tag on leaderboards” setting; your call.",
+   "sources": [
+    "discord"
+   ]
+  },
+  {
+   "id": "daily-goal",
+   "title": "Change the daily goal (1 hour instead of 20 minutes)",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Need Approval (TRY-496, TRY-458)",
+   "summary": "Lucy (@lucyd), twice.",
+   "detail": "Closest: TRY-496 pick your own streak rules, TRY-458 goals per tag.",
+   "url": "https://linear.app/trylatent/issue/TRY-496",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "undo-delete",
+   "title": "Get back a video you deleted",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Todo (TRY-516, Malcolm)",
+   "summary": "Kevin (@imkevintran): “Retrieve deleted videos 😭”.",
+   "detail": "Malcolm filed TRY-516 the same evening.",
+   "url": "https://linear.app/trylatent/issue/TRY-516",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "tag-who",
+   "title": "Tag the friends you locked in with",
+   "count": 1,
+   "peopleCountLabel": "1 new + 1 like",
+   "status": "Built (#582, #588), next build",
+   "summary": "cooldeath49 in #feature-requests (like Beli). notjerwee thought it already existed.",
+   "detail": "Strava-style tagging merged Oct 21 and 22; not in a released build.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/582",
+   "sources": [
+    "discord",
+    "github"
+   ]
+  },
+  {
+   "id": "timer-faces",
+   "title": "Bring back the old stopwatch timer overlay",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Open (no ticket found)",
+   "summary": "Lucy (@lucyd).",
+   "detail": "Timer faces changed in #575 (Oct 20).",
+   "sources": [
+    "in-app"
+   ]
+  },
+  {
+   "id": "group-rank",
+   "title": "Celebrate placing high in your group at the end of the week",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Need Approval (TRY-450)",
+   "summary": "Ray (@rays): a notification or animation.",
+   "detail": "Close to TRY-450 (rank groups weekly) and TRY-62 (weekly wrapped).",
+   "url": "https://linear.app/trylatent/issue/TRY-450",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "zoom",
+   "title": "0.5x camera zoom",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Open (no ticket found)",
+   "summary": "Ray (@rays), on phones that support it.",
+   "detail": "No ticket found.",
+   "sources": [
+    "in-app"
+   ]
+  },
+  {
+   "id": "trim-novideo",
+   "title": "Trim a no-video session",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Question",
+   "summary": "notjerwee in Discord.",
+   "detail": "Close to TRY-443 (cut part of a timelapse).",
+   "sources": [
+    "discord"
+   ]
+  },
+  {
+   "id": "android",
+   "title": "Android (and Mac)",
+   "count": null,
+   "peopleCountLabel": "3 new",
+   "status": "No reply needed today",
+   "summary": "nerd is alive and Sana2110 want Android; katie asks about Mac.",
+   "detail": "Stock line: Android is coming, I'll email you when it's out. No Mac app.",
+   "sources": [
+    "discord"
+   ]
+  },
+  {
+   "id": "beta",
+   "title": "People want to stay testers",
+   "count": 3,
+   "peopleCountLabel": "3 new, 163 total",
+   "status": "Malcolm handles",
+   "summary": "3 new “Stay as a Beta Tester” picks since yesterday's review (latest Oct 23, 8:04 AM PT).",
+   "detail": "Count only (TRY-343).",
+   "sources": [
+    "supabase"
+   ]
+  }
+ ],
+ "bySource": {
+  "inApp": {
+   "new": 6,
+   "note": "6 new public.feedback rows since yesterday's review (137 total), all ideas or by-design: Ray (group placement celebration, 0.5x zoom), Kevin (get deleted videos back, TRY-516), Lucy (old stopwatch overlay, a changeable daily goal, and she can't change her email, which is read-only on purpose)."
+  },
+  "discord": {
+   "new": 45,
+   "note": "About 45 new since Oct 22 ~9:15 AM PT (mostly #general-chat, 4 in #feature-requests, 2 in #questions; nothing new in #announcements or Malcolm's public-groups thread). 1 bug: Danny says a camera-off session he started going to sleep came back as 11 hours 3 minutes (today's fix; laid says it happened to a friend too). You already asked him what happened. Questions: notjerwee asks if no-video sessions can be trimmed, ki asked for the invite link (KrabbyKai: it's on your profile), nerd is alive and Sana2110 want Android, katie asks when it'll be on Mac. Ideas: cooldeath49 wants to tag who you locked in with (built in #582/#588, next build), laid wants an all-time longest session leaderboard, and Suki argues sleep sessions pollute the leaderboard. Custom timelapse length still 6 up / 2 down (TRY-493). Source: discord-2026-10-23.md."
+  },
+  "gmail": {
+   "new": 1,
+   "note": "You answered 15 of yesterday's drafts (I marked those emails read) and skipped the 10 optional ones plus Ty, so they're dropped. Still open: Keerat (camera access), Samuel (delete account) and Gautamvir (campus), now with their real addresses. 1 new: Ahmar's thank-you (optional). No video attachments, no PostHog alert emails, no new user bug emails."
+  },
+  "survey": {
+   "newRows": 0,
+   "seanEllis": "39/25/2 of 66",
+   "note": "Export HTTP 200 (25,289 bytes). Unchanged vs Oct 22 (all 3 tabs row-for-row identical). No new free text."
+  },
+  "sentry": {
+   "new": [],
+   "note": "Unavailable: Sentry still needs re-auth (recurring). No data invented."
+  },
+  "posthog": {
+   "note": "Last 24h vs prior 24h (events/people, to ~9:20 AM PT): installs 874 (was 1,124); onboarding done 620 (was 768); sessions started 7,802/3,221 (was 8,387/3,562); sessions discarded 1,319/854 (was 1,409/907). session_save_failed 50/28 (was 58/36; 4 signed-out errors from 3 people, fixed by #568), clip_upload_failed 252/34 (was 145/33; 119 from 2 test accounts, 61 missing-post from 8 people and 27 empty clips from 3 on 1.0.8, the rest network), media_invoke_retry_exhausted 1,444/97 (was 2,875/119), session_capture_failed 16/9 (was 9/6; 15 “session not running”), capture_stalled 117/23 (was 122/19), segment_finalize_failed 24/9 (was 24/12), group_action_failed 1,554/405 (was 1,981/426), backend_unreachable_shown 424/271 (was 518/346), invite_check_failed 116/36 (was 159/50), friend_request_failed 23/7 (was 14/9; 14 “blocked” from 2 people), sign_in_failed 14/10 (was 38/22), sign_up_failed 2/1 (was 0), clip_upload_abandoned 278/13 (was 1,223/9), session_unlocked_elsewhere 203/86 (was 256/91; fixed by #595). Rage clicks 6,883/2,109 (was 7,152/2,227). People starting a session in the last day by build: 1.0.8 (43) 2,946, 1.0.6 (39) 135, 1.0.7 (41) 133, 1.0.9 (44) 15 (TestFlight). App Store: 1.0.8. Alerts: media_invoke_retry_exhausted notified Oct 22, 10:25 PM PT and is not firing now (last 14); clip size not firing (1.56). No PostHog alert emails."
+  },
+  "github": {
+   "note": "16 merged since yesterday's review (#586, #568, #591, #589, #592, #593, #588, #590, #594, #595, #584, #596, #597, #598, #599, #600). #585 closed (replaced by #595). New open: #587 (Malcolm, profile feed song), #601 (today's dig, draft). Still open: yours #500, #417; Malcolm's #537, #530, #529, #518, #499."
+  },
+  "linear": {
+   "note": "Since yesterday: Done TRY-492, 507, 508, 509, 510, 511, 512, 513, 514, 515, 519, 520, 489, 491, 386, 211. New: TRY-505 pause screen when horizontal (Todo), 516 undo deleting a discarded video (Todo), 517 and 518 (founder-account slowness, analytics flood; Backlog), 521 work trial docs (Malcolm, In Progress), 506 post structure + save flow (you, In Progress). Yesterday's dig issue TRY-504 is In Progress."
+  },
+  "betaOptIns": {
+   "new": 3,
+   "total": 163
+  }
+ },
+ "rawQuotes": [
+  {
+   "id": "inapp-de24df6b",
+   "source": "in-app",
+   "username": "@rays (Ray)",
+   "whenPT": "Oct 22, 10:10 AM PT",
+   "build": "1.0.6 (39)",
+   "kind": "feature",
+   "quote": "A notification or animation for placing high in your group at the end of the week",
+   "note": "In-app feature · close to TRY-450 (rank groups each week) and TRY-62 (weekly wrapped)"
+  },
+  {
+   "id": "inapp-23886ad8",
+   "source": "in-app",
+   "username": "@rays (Ray)",
+   "whenPT": "Oct 22, 10:47 AM PT",
+   "build": "1.0.6 (39)",
+   "kind": "feature",
+   "quote": "0.5x camera zoom option for compatible phones",
+   "note": "In-app feature · no ticket found"
+  },
+  {
+   "id": "inapp-94a4db32",
+   "source": "in-app",
+   "username": "@imkevintran (Kevin)",
+   "whenPT": "Oct 22, 4:37 PM PT",
+   "build": "1.0.8 (43)",
+   "kind": "feature",
+   "quote": "Retrieve deleted videos 😭",
+   "note": "In-app feature · TRY-516 (undo deleting a video you discarded, Malcolm, Todo, filed 6:44 PM)"
+  },
+  {
+   "id": "inapp-3b10015f",
+   "source": "in-app",
+   "username": "@lucyd (Lucy)",
+   "whenPT": "Oct 23, 3:32 AM PT",
+   "build": "1.0.8 (43)",
+   "kind": "feature",
+   "quote": "bring back the old timer overlays ☹️ i miss the stopwatch one",
+   "note": "In-app feature · no ticket found (timer faces were reworked in #575)"
+  },
+  {
+   "id": "inapp-93d3e8c7",
+   "source": "in-app",
+   "username": "@lucyd (Lucy)",
+   "whenPT": "Oct 23, 3:33 AM PT",
+   "build": "1.0.8 (43)",
+   "kind": "feature",
+   "quote": "make the daily goal changeable; i want to study 1 hour every day, not just 20 minutes, but i know everyone has different goals so i think that should be customisable",
+   "note": "In-app feature · close to TRY-496 (pick your own streak rules) and TRY-458 (goals per tag), both Need Approval"
+  },
+  {
+   "id": "inapp-af09c1f6",
+   "source": "in-app",
+   "username": "@lucyd (Lucy)",
+   "whenPT": "Oct 23, 3:34 AM PT",
+   "build": "1.0.8 (43)",
+   "kind": "bug",
+   "quote": "latent 1.0.8 (43)\ni cant change my email\n\nalso make the daily goal customisable",
+   "note": "In-app · by design for now: Edit Profile shows email read-only because changing it needs a verify-your-new-email step that doesn't exist yet. No ticket."
+  },
+  {
+   "id": "discord-1023-0",
+   "source": "discord",
+   "channel": "#questions",
+   "username": "chloe",
+   "author": "chloe",
+   "whenPT": "Oct 22, 12:46 PM PT",
+   "kind": "chatter",
+   "quote": "aWhaWHAT",
+   "note": "Discord · #questions · reply in MIX's “I'm invited by ChatGPT” thread"
+  },
+  {
+   "id": "discord-1023-1",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki (is tired)",
+   "author": "ki (is tired)",
+   "whenPT": "Oct 22, 2:19 PM PT",
+   "kind": "question",
+   "quote": "wait @Malcolm McDonald wheres the link to be let into latent\ntks ppl are asking",
+   "note": "Discord · #general-chat · invite link"
+  },
+  {
+   "id": "discord-1023-2",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai [FPV]",
+   "author": "KrabbyKai [FPV]",
+   "whenPT": "Oct 22, 2:20 PM PT",
+   "kind": "chatter",
+   "quote": "go to your profile\nand there should be a link for it",
+   "note": "Discord · #general-chat · reply to ki"
+  },
+  {
+   "id": "discord-1023-3",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai [FPV]",
+   "author": "KrabbyKai [FPV]",
+   "whenPT": "Oct 22, 2:20 PM PT",
+   "kind": "chatter",
+   "quote": "thats fair\ni lowk need to be part of the racing team\nif i dont get into that ill die probably",
+   "note": "Discord · #general-chat · reply to j3"
+  },
+  {
+   "id": "discord-1023-4",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "laid",
+   "author": "laid",
+   "whenPT": "Oct 22, 3:19 PM PT",
+   "kind": "chatter",
+   "quote": "this happened to one of my friends too i believe",
+   "note": "Discord · #general-chat · reply to Ace's image"
+  },
+  {
+   "id": "discord-1023-5",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "laid",
+   "author": "laid",
+   "whenPT": "Oct 22, 3:19 PM PT",
+   "kind": "chatter",
+   "quote": "i NEED it bro\n11 hours for nothing",
+   "note": "Discord · #general-chat · reply to Ace"
+  },
+  {
+   "id": "discord-1023-6",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "laid",
+   "author": "laid",
+   "whenPT": "Oct 22, 3:27 PM PT",
+   "kind": "chatter",
+   "quote": "LIKE BRO\n@Danny has a 11 hour 3 minute session NO VIDEO and he was sleeping foe 6 hours in it",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-7",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Danny [jam]",
+   "author": "Danny [jam]",
+   "whenPT": "Oct 22, 3:27 PM PT",
+   "kind": "chatter",
+   "quote": "YO\nCHILLL ON ME",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-8",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "laid",
+   "author": "laid",
+   "whenPT": "Oct 22, 3:27 PM PT",
+   "kind": "feature",
+   "quote": "if we get an all time longest session leaderboard\nTHIS ISNT FAIR\nu have a sleeping tag\nno\nlike",
+   "note": "Discord · #general-chat · all-time longest session leaderboard"
+  },
+  {
+   "id": "discord-1023-9",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Danny [jam]",
+   "author": "Danny [jam]",
+   "whenPT": "Oct 22, 3:27 PM PT",
+   "kind": "bug",
+   "quote": "malcolm and eddie i found a bug and that's how i got the 11hr\nsleeping tag is honestly not bad",
+   "note": "Discord · #general-chat · today's fix"
+  },
+  {
+   "id": "discord-1023-10",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "laid",
+   "author": "laid",
+   "whenPT": "Oct 22, 3:28 PM PT",
+   "kind": "chatter",
+   "quote": "whatvere u say bro\ni put my soul into the 11 hours",
+   "note": "Discord · #general-chat · plus an image"
+  },
+  {
+   "id": "discord-1023-11",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Danny [jam]",
+   "author": "Danny [jam]",
+   "whenPT": "Oct 22, 3:28 PM PT",
+   "kind": "feature",
+   "quote": "in the world of optimizing sleep why are we not also recording it\non latent",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-12",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "laid",
+   "author": "laid",
+   "whenPT": "Oct 22, 3:28 PM PT",
+   "kind": "question",
+   "quote": "right\nwhat is it\ntag one of them",
+   "note": "Discord · #general-chat · reply to Danny"
+  },
+  {
+   "id": "discord-1023-13",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "notjerwee",
+   "author": "notjerwee",
+   "whenPT": "Oct 22, 3:35 PM PT",
+   "kind": "question",
+   "quote": "does no video not support trimming?",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-14",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Eddie",
+   "author": "Eddie",
+   "whenPT": "Oct 22, 6:39 PM PT",
+   "kind": "chatter",
+   "quote": "what happened?",
+   "note": "Discord · #general-chat · your reply to Danny"
+  },
+  {
+   "id": "discord-1023-15",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Danny [jam]",
+   "author": "Danny [jam]",
+   "whenPT": "Oct 22, 7:17 PM PT",
+   "kind": "bug",
+   "quote": "so i recorded a latent session as i went to sleep and left my phone on my nightstand\nwhen i woke up latent wasn’t on, and i was using my phone like normal\nit wasn’t until after i went back to the app it said it was still recording\nso i stopped and it had been 11 hours",
+   "note": "Discord · #general-chat · today's fix · PostHog: App Store update at 3:10 AM PT closed Latent mid-session"
+  },
+  {
+   "id": "discord-1023-16",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Danny [jam]",
+   "author": "Danny [jam]",
+   "whenPT": "Oct 22, 7:19 PM PT",
+   "kind": "bug",
+   "quote": "i do not have low power mode on so my iphone shouldve been awake the whole time (but it wasnt) & my phone was charging the whole night",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-17",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Ace [GОД]",
+   "author": "Ace [GОД]",
+   "whenPT": "Oct 22, 8:18 PM PT",
+   "kind": "chatter",
+   "quote": "nah fr i see many people rocking the sleeping tag",
+   "note": "Discord · #general-chat · reply to laid (edited)"
+  },
+  {
+   "id": "discord-1023-18",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "_.Rodrigo._",
+   "author": "_.Rodrigo._",
+   "whenPT": "Oct 22, 9:23 PM PT",
+   "kind": "chatter",
+   "quote": "hi",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-19",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "notjerwee",
+   "author": "notjerwee",
+   "whenPT": "Oct 22, 10:03 PM PT",
+   "kind": "chatter",
+   "quote": "hi\nsleeping tag is crazy",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-20",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Suki [BEST]",
+   "author": "Suki [BEST]",
+   "whenPT": "Oct 22, 11:44 PM PT",
+   "kind": "chatter",
+   "quote": "no way bro that's not what the app is made for",
+   "note": "Discord · #general-chat · reply to Ace"
+  },
+  {
+   "id": "discord-1023-21",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Notorious R.I.B",
+   "author": "Notorious R.I.B",
+   "whenPT": "Oct 23, 12:18 AM PT",
+   "kind": "chatter",
+   "quote": "i mean its for tracking productivity, and a lot of people have trouble with maintaining a consistent sleep cycle, so latent would deffo help with that since sleep is heavily tied with productivity\nits to each their own type shit, different people got different productivity issues",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-22",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Ace [GОД]",
+   "author": "Ace [GОД]",
+   "whenPT": "Oct 23, 12:23 AM PT",
+   "kind": "chatter",
+   "quote": "Ok unc",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-23",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Suki [BEST]",
+   "author": "Suki [BEST]",
+   "whenPT": "Oct 23, 12:24 AM PT",
+   "kind": "feedback",
+   "quote": "if  someone wants to track sleep there are dedicated sleep apps for that man. Using Latent’s study or productivity leaderboard for it is just farming bruu\nsleep is important for productivity no arguments there\nbut its a recovery activity not like an actual focus session\nlogging it as studying or focus session just pollutes the leaderboards man",
+   "note": "Discord · #general-chat · leaderboard fairness"
+  },
+  {
+   "id": "discord-1023-24",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Notorious R.I.B",
+   "author": "Notorious R.I.B",
+   "whenPT": "Oct 23, 12:27 AM PT",
+   "kind": "chatter",
+   "quote": "yee, but again i am assuming its just a lot more convinient to have it all in one place. But i do get ur point about the leader board thing\nfor people with crazy trouble with sleep, it can feel like something they genuinely have to lock in for lmao",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-25",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Suki [BEST]",
+   "author": "Suki [BEST]",
+   "whenPT": "Oct 23, 12:28 AM PT",
+   "kind": "feedback",
+   "quote": "like come on how can I ever study or lock in sessions to beat a guy who gained hours by sleeping :/",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-26",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Notorious R.I.B",
+   "author": "Notorious R.I.B",
+   "whenPT": "Oct 23, 12:28 AM PT",
+   "kind": "chatter",
+   "quote": "yea no i get that it makes competition a bit unfair\nlmaoo frrr\ni mean. you can form a group\nwhere sleeping tag\ncant be sued\nused*",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-27",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Suki [BEST]",
+   "author": "Suki [BEST]",
+   "whenPT": "Oct 23, 12:29 AM PT",
+   "kind": "chatter",
+   "quote": "lmaoo makes sense too\ni mean the overall leader board haha",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-28",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Notorious R.I.B",
+   "author": "Notorious R.I.B",
+   "whenPT": "Oct 23, 12:31 AM PT",
+   "kind": "chatter",
+   "quote": "idk, i usually just aim at competing with myself so its not really that big a deal for me lmao but for people who use latent for healthy competion, i completely understamd that\nfuhh fair enough\n@Ace watch out gang, you never know when a heehee might pop out",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-29",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Ace [GОД]",
+   "author": "Ace [GОД]",
+   "whenPT": "Oct 23, 12:32 AM PT",
+   "kind": "chatter",
+   "quote": "aaahhh\nthat shi creep me out\neven when im not in the vc\nbruh",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-30",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Notorious R.I.B",
+   "author": "Notorious R.I.B",
+   "whenPT": "Oct 23, 12:33 AM PT",
+   "kind": "chatter",
+   "quote": "LMAOOO bro yk there is a yt vid with like MJ popping ip and doing heehee\nso you dont fall asleep\nhighly reccommed gang",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-31",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Suki [BEST]",
+   "author": "Suki [BEST]",
+   "whenPT": "Oct 23, 12:33 AM PT",
+   "kind": "chatter",
+   "quote": "haha but the competitive environment drives me forward fr\nlmaooo\nyoo wha",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-32",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Ace [GОД]",
+   "author": "Ace [GОД]",
+   "whenPT": "Oct 23, 12:34 AM PT",
+   "kind": "chatter",
+   "quote": "who needs that when we got random jumpscares in the latent vc itself\nyes\nlmaoo\ndont let ppl know tho\nwhats goin on in those vc\nyessir\nimma join in after few hours",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-33",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Notorious R.I.B",
+   "author": "Notorious R.I.B",
+   "whenPT": "Oct 23, 12:34 AM PT",
+   "kind": "chatter",
+   "quote": "BAHAHAH VALIDDDD, BRO THE MJ EFFECT + THE VINE BOOM\nPEAK\nI LOVE WHOEVER UPLOADED THOSE\nTHANK YOU\nbetweeen me and you bbg\nbet bet i juist started like 20 mins ago, so i mma stay for another 3-4 hours",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-34",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Ace [GОД]",
+   "author": "Ace [GОД]",
+   "whenPT": "Oct 23, 12:36 AM PT",
+   "kind": "chatter",
+   "quote": "i gotta use the sleep tag irl but i dont use latent for it",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-35",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Suki [BEST]",
+   "author": "Suki [BEST]",
+   "whenPT": "Oct 23, 12:37 AM PT",
+   "kind": "chatter",
+   "quote": "yoo\ni'm locked in too\nhehehe\nwho you",
+   "note": "Discord · #general-chat · plus an attachment"
+  },
+  {
+   "id": "discord-1023-36",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Notorious R.I.B",
+   "author": "Notorious R.I.B",
+   "whenPT": "Oct 23, 12:37 AM PT",
+   "kind": "chatter",
+   "quote": "BLUD WHAT WAS THAT AUDIO",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-37",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "r",
+   "author": "r",
+   "whenPT": "Oct 23, 12:38 AM PT",
+   "kind": "chatter",
+   "quote": "suko shut up\nim getting notifs\nfrom your loud mouth",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1023-38",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "nerd is alive",
+   "author": "nerd is alive",
+   "whenPT": "Oct 23, 2:11 AM PT",
+   "kind": "question",
+   "quote": "any updates for Android users",
+   "note": "Discord · #general-chat · Android · 2 reactions"
+  },
+  {
+   "id": "discord-1023-39",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Sana2110",
+   "author": "Sana2110",
+   "whenPT": "Oct 23, 5:53 AM PT",
+   "kind": "chatter",
+   "quote": "I've been waiting forever",
+   "note": "Discord · #general-chat · reply to nerd is alive · Android"
+  },
+  {
+   "id": "discord-1023-40",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "cooldeath49",
+   "author": "cooldeath49",
+   "whenPT": "Oct 22, 6:24 PM PT",
+   "kind": "feature",
+   "quote": "Have option to tag others that u locked in with\nSimilar to beli feature where u tag who u ate with at a certain place, this wld be a nice qol feature",
+   "note": "Discord · #feature-requests · new thread · Strava-style tagging is on main (#582, #588), not released yet"
+  },
+  {
+   "id": "discord-1023-41",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "KrabbyKai [FPV]",
+   "author": "KrabbyKai [FPV]",
+   "whenPT": "Oct 22, 6:47 PM PT",
+   "kind": "chatter",
+   "quote": "i like this a lot",
+   "note": "Discord · #feature-requests · in cooldeath49's thread"
+  },
+  {
+   "id": "discord-1023-42",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "notjerwee",
+   "author": "notjerwee",
+   "whenPT": "Oct 22, 10:04 PM PT",
+   "kind": "question",
+   "quote": "thought this already exist?",
+   "note": "Discord · #feature-requests · in cooldeath49's thread"
+  },
+  {
+   "id": "discord-1023-43",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "KrabbyKai [FPV]",
+   "author": "KrabbyKai [FPV]",
+   "whenPT": "Oct 22, 10:10 PM PT",
+   "kind": "question",
+   "quote": "does it?",
+   "note": "Discord · #feature-requests · in cooldeath49's thread"
+  },
+  {
+   "id": "discord-1023-44",
+   "source": "discord",
+   "channel": "#questions",
+   "username": "katie [xoxo]",
+   "author": "katie [xoxo]",
+   "whenPT": "Oct 23, 6:47 AM PT",
+   "kind": "question",
+   "quote": "when will it be available on mac?\n?",
+   "note": "Discord · #questions · new thread (title, then “?”) · no Mac app"
+  },
+  {
+   "id": "gmail-camera-access",
+   "source": "gmail",
+   "username": "Keerat Virdi",
+   "email": "keerat12342@icloud.com",
+   "whenPT": "Oct 16, 9:28 AM PT",
+   "kind": "email",
+   "quote": "Hi, I’m trying to enable camera access to start recording the time lapses but when I’m redirected to Settings, it doesn’t show Camera as an option to toggle under Latent settings. Let me know how to proceed, thanks!\n\nSent from my iPhone",
+   "note": "Email · Re: Camera Access · carried from earlier · reply drafted below"
+  },
+  {
+   "id": "gmail-samuel",
+   "source": "gmail",
+   "username": "Samuel Downs",
+   "email": "srdowns2010@gmail.com",
+   "whenPT": "Oct 16, 4:13 PM PT",
+   "kind": "email",
+   "quote": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+   "note": "Email · Re: Delete account · carried from earlier · reply drafted below"
+  },
+  {
+   "id": "gmail-gautamvir",
+   "source": "gmail",
+   "username": "Gautamvir Singh Bhatia",
+   "email": "bhati154@purdue.edu",
+   "whenPT": "Oct 18, 9:15 PM PT",
+   "kind": "email",
+   "quote": "Hi,\nI hope you're well. I came across the app on LinkedIn. I'm keen to use the app since for me it'd be another jab at the doomscrolling which, for a change, seems promising.\n\nI'd love to be a part of the beta program and get a link to start using the app.\n\nAlso, I'm a student and Purdue and entrenched in the startup ecosystem here. With college students working on startups being a great market for your app, I'd be happy to work on a referral / marketing program on campus.\n\nDo let me know.\n\nBest,\nGautamvir\n\nlinkedin.com/in/gautamvirbhatia",
+   "note": "Email · Re: Campus ambassador? · carried from earlier · reply drafted below"
+  },
+  {
+   "id": "gmail-ahmar-followup",
+   "source": "gmail",
+   "username": "Ahmar",
+   "email": "ahmarali2004@gmail.com",
+   "whenPT": "Oct 22, 12:08 PM PT",
+   "kind": "email",
+   "quote": "Thanks!\n\nI will be waiting to hear from you!\n\nBest Regards!\nAhmar",
+   "note": "Email · Re: Joining the Latent team · NEW · optional reply drafted below"
+  }
+ ],
+ "replyDrafts": [
+  {
+   "id": "camera-access",
+   "name": "Keerat Virdi",
+   "to": "keerat12342@icloud.com",
+   "subject": "Re: Camera Access",
+   "threadId": "1a1458b1869abfdd",
+   "replyToMessageId": "1a1458b1869abfdd",
+   "theirMessage": "Hi, I’m trying to enable camera access to start recording the time lapses but when I’m redirected to Settings, it doesn’t show Camera as an option to toggle under Latent settings. Let me know how to proceed, thanks!\n\nSent from my iPhone",
+   "theirWhenPT": "Oct 16, 9:28 AM PT",
+   "body": "Hey Keerat, sorry about that! iPhone only shows the Camera switch for an app after the app has asked for the camera once, so [CHECK: what she should do, e.g. check Settings › Screen Time › Content & Privacy Restrictions › Camera is allowed, or delete and reinstall Latent and tap Allow when it asks; the fix (#536) is in the next build]. Let me know if that works, and if not just reply here.\n\nEddie",
+   "optional": false,
+   "isNew": false,
+   "note": "Carried over (unanswered since Oct 16). New: the sender is Keerat Virdi; the support group hid her address but the email's Reply-To is keerat12342@icloud.com, so you can reply now. Fix #536 (merged Oct 19) is in 1.0.9 (44) on TestFlight, not on the App Store yet.",
+   "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879224464011083741"
+  },
+  {
+   "id": "samuel",
+   "name": "Samuel Downs",
+   "to": "srdowns2010@gmail.com",
+   "subject": "Re: Delete account",
+   "threadId": "1a146fe4c9172b23",
+   "replyToMessageId": "1a146fe4c9172b23",
+   "theirMessage": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+   "theirWhenPT": "Oct 16, 4:13 PM PT",
+   "body": "Hi Samuel, sorry to see you go! [CHECK: delete the account first; his Latent account (@captsam, made Oct 16) still existed at ~9:20 AM PT Oct 23] Your Latent account and all the data tied to srdowns2010@gmail.com have now been permanently deleted. Thanks for giving Latent a try.\n\nEddie",
+   "optional": false,
+   "isNew": false,
+   "note": "Carried over (unanswered since Oct 16). Account deletion request sent to support@. His account (@captsam) still exists as of ~9:20 AM PT Oct 23 (7 days); the dig changed nothing. Delete first, then send (from support@ if that is how you answer support mail).",
+   "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+  },
+  {
+   "id": "gautamvir",
+   "name": "Gautamvir Singh Bhatia",
+   "to": "bhati154@purdue.edu",
+   "subject": "Re: Campus ambassador?",
+   "threadId": "1a1525ed6a9f8f9f",
+   "replyToMessageId": "1a1525ed6a9f8f9f",
+   "theirMessage": "Hi,\nI hope you're well. I came across the app on LinkedIn. I'm keen to use the app since for me it'd be another jab at the doomscrolling which, for a change, seems promising.\n\nI'd love to be a part of the beta program and get a link to start using the app.\n\nAlso, I'm a student and Purdue and entrenched in the startup ecosystem here. With college students working on startups being a great market for your app, I'd be happy to work on a referral / marketing program on campus.\n\nDo let me know.\n\nBest,\nGautamvir\n\nlinkedin.com/in/gautamvirbhatia",
+   "theirWhenPT": "Oct 18, 9:15 PM PT",
+   "body": "Hey Gautamvir, thanks for reaching out! Here's an invite link to get in: https://trylatent.co/i/KPCWC4 [CHECK: the same invite link you sent Matthew yesterday; swap it if you want a different one]. Love the campus idea, if you want to help us grow, apply here: https://forms.gle/H7vYiUfV3QMXiqP89. Let me know how you like the app!\n\nEddie",
+   "optional": false,
+   "isNew": false,
+   "note": "Carried over (unanswered since Oct 18). New: the email's Reply-To shows his address, bhati154@purdue.edu, so you can reply now. Purdue student wants in and offers to run a campus referral program; the draft uses the invite link you sent Matthew and the Growth application form.",
+   "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879450121123368863"
+  },
+  {
+   "id": "ahmar-followup",
+   "name": "Ahmar",
+   "to": "ahmarali2004@gmail.com",
+   "subject": "Re: Joining the Latent team",
+   "threadId": "1a150824f643ed5f",
+   "replyToMessageId": "1a16503dc53175e0",
+   "theirMessage": "Thanks!\n\nI will be waiting to hear from you!\n\nBest Regards!\nAhmar",
+   "theirWhenPT": "Oct 22, 12:08 PM PT",
+   "body": "Of course, talk soon!\n\nEddie",
+   "optional": true,
+   "isNew": true,
+   "note": "OPTIONAL. New. Closing thanks after your Oct 22 reply (“I'll take a look and follow up”); fine to skip and just mark read.",
+   "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879417374340541791"
+  }
+ ],
+ "linearIssue": {
+  "id": "TRY-522",
+  "url": "https://linear.app/trylatent/issue/TRY-522/daily-dig-2026-10-23-1-fix-waiting-for-review-601"
+ },
+ "linearNote": "Linear dig issue: TRY-522 https://linear.app/trylatent/issue/TRY-522/daily-dig-2026-10-23-1-fix-waiting-for-review-601",
+ "emailMessageId": "1a1699cc277756c8"
+}
