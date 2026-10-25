@@ -93824,7 +93824,7 @@ window.DIGESTS = {
   "2026-10-25": {
     "date": "2026-10-25",
     "title": "Latent daily review \u00b7 Oct 25",
-    "generatedAt": "2026-10-25T16:25:47.775113+00:00",
+    "generatedAt": "2026-10-25T16:26:23.366446+00:00",
     "tldr": [
       "1 new fix waiting for you: #617 stops Undo after Finish from uploading an empty video on 1.0.9 (8 people overnight, found in PostHog). Nothing merged since yesterday.",
       "1.0.9 is spreading fast: 1,256 updates and 715 fresh installs in the last day, and 1,036 people started a session on it. Its fixes are showing: no camera-off unlocked-elsewhere errors on 1.0.9 and sign-in failures dropped to 13 (was 46).",
@@ -94034,7 +94034,7 @@ window.DIGESTS = {
       {
         "id": "email",
         "title": "Email dig to eddie@weaive.app",
-        "status": "pending"
+        "status": "done"
       },
       {
         "id": "archive",
@@ -94677,7 +94677,7 @@ window.DIGESTS = {
       "url": "https://linear.app/trylatent/issue/TRY-546/daily-dig-2026-10-25-1-fix-waiting-for-review-617"
     },
     "linearNote": "Linear dig issue: TRY-546 https://linear.app/trylatent/issue/TRY-546/daily-dig-2026-10-25-1-fix-waiting-for-review-617",
-    "emailMessageId": null,
+    "emailMessageId": "1a173e26149bb854",
     "release": {
       "appStoreVersion": "1.0.9",
       "build": "47",
