@@ -1,0 +1,864 @@
+{
+ "date": "2026-10-25",
+ "title": "Latent daily review · Oct 25",
+ "generatedAt": "2026-10-25T16:25:47.775113+00:00",
+ "tldr": [
+  "1 new fix waiting for you: #617 stops Undo after Finish from uploading an empty video on 1.0.9 (8 people overnight, found in PostHog). Nothing merged since yesterday.",
+  "1.0.9 is spreading fast: 1,256 updates and 715 fresh installs in the last day, and 1,036 people started a session on it. Its fixes are showing: no camera-off unlocked-elsewhere errors on 1.0.9 and sign-in failures dropped to 13 (was 46).",
+  "No age holds. But 3 moderation reports wait on you or Malcolm in Linear: two child safety reports (TRY-544, TRY-545) and one bullying report (TRY-543).",
+  "8 in-app notes: Ethan's face blur crash (Malcolm's bot already has a fix drafted, TRY-539), Suki's lag on an old build, and ideas: Spotify (2), laptop support, Latent Wrapped, plan your next lock in again, a nightstand clock.",
+  "3 reply drafts: Samuel (account still not deleted after 9 days) plus 2 optional thank-yous (Hizam, Daniela). You answered Keerat, Hizam and Jango yesterday. Discord quiet: lots of love, no clear bugs. 3 new beta opt-ins / 166. Survey unchanged. Sentry still needs re-auth."
+ ],
+ "plainTldr": [
+  "1 new fix waiting for you: #617 stops Undo after Finish from uploading an empty video on 1.0.9 (8 people overnight, found in PostHog). Nothing merged since yesterday.",
+  "1.0.9 is spreading fast: 1,256 updates and 715 fresh installs in the last day, and 1,036 people started a session on it. Its fixes are showing: no camera-off unlocked-elsewhere errors on 1.0.9 and sign-in failures dropped to 13 (was 46).",
+  "No age holds. But 3 moderation reports wait on you or Malcolm in Linear: two child safety reports (TRY-544, TRY-545) and one bullying report (TRY-543).",
+  "8 in-app notes: Ethan's face blur crash (Malcolm's bot already has a fix drafted, TRY-539), Suki's lag on an old build, and ideas: Spotify (2), laptop support, Latent Wrapped, plan your next lock in again, a nightstand clock.",
+  "3 reply drafts: Samuel (account still not deleted after 9 days) plus 2 optional thank-yous (Hizam, Daniela). You answered Keerat, Hizam and Jango yesterday. Discord quiet: lots of love, no clear bugs. 3 new beta opt-ins / 166. Survey unchanged. Sentry still needs re-auth."
+ ],
+ "urgent": [],
+ "stats": {
+  "newInApp": 8,
+  "newDiscord": 19,
+  "newGmail": 2,
+  "newSurveyRows": 0,
+  "seanEllis": {
+   "very": 39,
+   "somewhat": 25,
+   "not": 2,
+   "n": 66
+  },
+  "sentryNew": [],
+  "sentryUnavailable": true,
+  "rawQuotes": 30,
+  "betaOptInsNew": 3,
+  "betaOptInsTotal": 166,
+  "installs24h": 771,
+  "installsPrev24h": 707
+ },
+ "whatIDidToday": {
+  "fixesOpened": [
+   {
+    "title": "Record: Undo after Finish no longer uploads an empty clip",
+    "whatItFixes": "On the new 1.0.9, if someone taps Finish, then Post, and then Undo to keep recording, the post they started was already saved and uploading. Undo threw away its video file, so the upload found an empty file (8 people overnight), the first post ended up as Video missing, and finishing again made a second copy of the session. Now Undo cancels that pending post and its upload, keeps all the footage, and finishing again saves exactly one session with the full video. The agent added tests but couldn't run them (no Xcode on its machine), so run them or try it on a phone.",
+    "howToCheck": "Record a short private session, tap Finish, go through to Post, and right away tap Undo to keep recording. Record a bit more and finish again. You should get one post with the whole video, no Video missing post and no duplicate.",
+    "reporter": "Found by me in PostHog (8 people on 1.0.9 (47) since about 12:30 AM PT today; nobody has written in about it yet)",
+    "agent": "https://cursor.com/agents/bc-b3087cd1-9a3d-5da8-b01d-cce9f75051ed",
+    "pr": 617,
+    "url": "https://github.com/eddie-the-lou/latent/pull/617",
+    "status": "Waiting for your review (not merged)"
+   }
+  ],
+  "carriedFromEarlier": [],
+  "agentsLaunched": [
+   {
+    "agent": "https://cursor.com/agents/bc-b3087cd1-9a3d-5da8-b01d-cce9f75051ed",
+    "title": "Undo after Finish uploads an empty clip (1.0.9)",
+    "launchedPT": "Oct 25, 9:18 AM PT"
+   }
+  ],
+  "agentsStillWorking": [],
+  "mergedOvernight": [],
+  "closedOvernight": [],
+  "stillOnYou": [
+   {
+    "id": "mod-reports",
+    "title": "3 new moderation reports are waiting on you or Malcolm in Linear (Need Approval): TRY-544 and TRY-545 are child safety reports (someone says the account belongs to a kid; both accounts' age checks say adult, no hold placed), TRY-543 is a mean comment reported as bullying. Each needs one of you to look at it from the review link and decide. The dig changed nothing.",
+    "url": "https://linear.app/trylatent/issue/TRY-544"
+   },
+   {
+    "id": "samuel",
+    "title": "Account deletion request: Samuel Downs (srdowns2010@gmail.com, @captsam) emailed support@ Oct 16, 4:13 PM PT. His account still existed at ~9:15 AM PT today (9 days). Reply draft below waits on the deletion.",
+    "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+   },
+   {
+    "id": "bot-new",
+    "title": "New from Malcolm's bot since yesterday (Need Approval): TRY-539 Ethan's face blur crash (fix drafted on a branch), TRY-542 a share screen crash (fix drafted), TRY-540 the week chart popup running into the weekday letters (fix drafted), TRY-541 aimee's ask to plan your next lock in again, TRY-538 camera-off hours counted while the phone sat locked (asks people when they actually stopped).",
+    "url": "https://linear.app/trylatent/issue/TRY-539"
+   },
+   {
+    "id": "try-522",
+    "title": "TRY-522 (the Oct 23 dig issue) still says Need Approval, but #601 merged Oct 23 and shipped in 1.0.9. You can move it to Done.",
+    "url": "https://linear.app/trylatent/issue/TRY-522"
+   },
+   {
+    "id": "bot-old",
+    "title": "Older bot tickets still Need Approval: TRY-487 (vibration freezes), TRY-501 (camera on iPad split screen), TRY-475/480/471 (freezes), TRY-469/470, TRY-495 (lock-in mode).",
+    "url": "https://linear.app/trylatent/issue/TRY-487"
+   },
+   {
+    "id": "older-prs",
+    "title": "Open PRs: new today Malcolm's #614 (public groups and Discover) and Jerry's #615 (drawings stay put) and #616 (tag colour picker); older: yours #500 and #417, Malcolm's #605, #587, #537, #530, #529, #518, #499.",
+    "url": "https://github.com/eddie-the-lou/latent/pulls"
+   },
+   {
+    "id": "fyi",
+    "title": "FYI: 36 replies to your hiring pause email came in (left for the hiring replies watch, no drafts here). Adam Chouiki (UPenn REACH) invited you to speak. Cloudflare (Jason Tidman) sent the write-up from Monday's call on credits, R2 and Stream. Jerry invited you to his LatentTrialJerry Linear workspace. Paid-collab pitches (Typeless, Moonphase via Buzzlab, Salvup Media) skipped."
+   }
+  ],
+  "note": "1 Cloud Agent launched (Grok 4.6) for the Undo empty-clip bug found in PostHog. Nothing else was a clear, unowned bug: Ethan's crash, the share crash and the week popup already have fixes drafted by Malcolm's bot, Suki's lag is on 1.0.7 and too vague, and Ace's cut time has no steps. Nothing merged since yesterday."
+ },
+ "prStatus": {
+  "waiting": [
+   {
+    "title": "Record: Undo after Finish no longer uploads an empty clip",
+    "whatItFixes": "On the new 1.0.9, if someone taps Finish, then Post, and then Undo to keep recording, the post they started was already saved and uploading. Undo threw away its video file, so the upload found an empty file (8 people overnight), the first post ended up as Video missing, and finishing again made a second copy of the session. Now Undo cancels that pending post and its upload, keeps all the footage, and finishing again saves exactly one session with the full video. The agent added tests but couldn't run them (no Xcode on its machine), so run them or try it on a phone.",
+    "howToCheck": "Record a short private session, tap Finish, go through to Post, and right away tap Undo to keep recording. Record a bit more and finish again. You should get one post with the whole video, no Video missing post and no duplicate.",
+    "reporter": "Found by me in PostHog (8 people on 1.0.9 (47) since about 12:30 AM PT today; nobody has written in about it yet)",
+    "agent": "https://cursor.com/agents/bc-b3087cd1-9a3d-5da8-b01d-cce9f75051ed",
+    "pr": 617,
+    "url": "https://github.com/eddie-the-lou/latent/pull/617",
+    "status": "Waiting for your review (not merged)"
+   }
+  ],
+  "openedToday": [
+   {
+    "title": "Record: Undo after Finish no longer uploads an empty clip",
+    "whatItFixes": "On the new 1.0.9, if someone taps Finish, then Post, and then Undo to keep recording, the post they started was already saved and uploading. Undo threw away its video file, so the upload found an empty file (8 people overnight), the first post ended up as Video missing, and finishing again made a second copy of the session. Now Undo cancels that pending post and its upload, keeps all the footage, and finishing again saves exactly one session with the full video. The agent added tests but couldn't run them (no Xcode on its machine), so run them or try it on a phone.",
+    "howToCheck": "Record a short private session, tap Finish, go through to Post, and right away tap Undo to keep recording. Record a bit more and finish again. You should get one post with the whole video, no Video missing post and no duplicate.",
+    "reporter": "Found by me in PostHog (8 people on 1.0.9 (47) since about 12:30 AM PT today; nobody has written in about it yet)",
+    "agent": "https://cursor.com/agents/bc-b3087cd1-9a3d-5da8-b01d-cce9f75051ed",
+    "pr": 617,
+    "url": "https://github.com/eddie-the-lou/latent/pull/617",
+    "status": "Waiting for your review (not merged)"
+   }
+  ],
+  "agentsStillWorking": [],
+  "mergedOvernight": [],
+  "closedOvernight": [],
+  "newOpenNotDig": [
+   {
+    "pr": 614,
+    "url": "https://github.com/eddie-the-lou/latent/pull/614",
+    "title": "Public groups: Discover, groups feed, posts to friends and groups (TRY-477, TRY-448)",
+    "by": "Malcolm · opened Oct 24, 2:52 PM PT"
+   },
+   {
+    "pr": 615,
+    "url": "https://github.com/eddie-the-lou/latent/pull/615",
+    "title": "Editor: drawings stay fixed while you move or resize the video",
+    "by": "Jerry Chen · opened Oct 24, 10:55 PM PT"
+   },
+   {
+    "pr": 616,
+    "url": "https://github.com/eddie-the-lou/latent/pull/616",
+    "title": "Tags: pick any colour with the system picker",
+    "by": "Jerry Chen · opened Oct 24, 11:35 PM PT"
+   }
+  ]
+ },
+ "ageHolds": {
+  "open": [],
+  "newLast24h": [],
+  "resolvedLast24h": [],
+  "summary": "No age holds.",
+  "detail": "Nothing open, new, or resolved in the last 24 hours (checked ~9:15 AM PT). Holds ever: 1 (Omar, @omarzz, held Oct 11, released the same morning). Heads up: two child safety reports in Linear (TRY-544 on @shaykalk1, TRY-545 on @aarav5411) could turn into age holds if one of you decides the account belongs to a kid. Nothing was changed by the dig.",
+  "query": "/workspace/feedback-digests/age-holds.sql"
+ },
+ "actions": [
+  {
+   "id": "pr-617",
+   "title": "Review #617: Record: Undo after Finish no longer uploads an empty clip",
+   "plainSummary": "On the new 1.0.9, if someone taps Finish, then Post, and then Undo to keep recording, the post they started was already saved and uploading. Undo threw away its video file, so the upload found an empty file (8 people overnight), the first post ended up as Video missing, and finishing again made a second copy of the session. Now Undo cancels that pending post and its upload, keeps all the footage, and finishing again saves exactly one session with the full video. The agent added tests but couldn't run them (no Xcode on its machine), so run them or try it on a phone.",
+   "status": "Waiting for your review",
+   "url": "https://github.com/eddie-the-lou/latent/pull/617"
+  },
+  {
+   "id": "mod-reports",
+   "title": "Look at 3 moderation reports (TRY-544, TRY-545 child safety; TRY-543 bullying)",
+   "plainSummary": "Malcolm's bot filed them from in-app reports. Decide from the review link; age hold only if an account looks under 13.",
+   "status": "Needs you",
+   "url": "https://linear.app/trylatent/issue/TRY-544"
+  },
+  {
+   "id": "samuel-delete",
+   "title": "Delete Samuel Downs' account (he asked by email Oct 16), then send the reply",
+   "plainSummary": "srdowns2010@gmail.com (@captsam). Still exists after 9 days. The dig changed nothing.",
+   "status": "Needs you"
+  },
+  {
+   "id": "replies",
+   "title": "3 reply drafts (2 optional)",
+   "plainSummary": "Not sent. Approve each in chat.",
+   "status": "Waiting for your review"
+  },
+  {
+   "id": "bot-new",
+   "title": "Malcolm's bot fixes waiting for approval: TRY-539 (face blur crash), TRY-542 (share screen crash), TRY-540 (week popup)",
+   "plainSummary": "Fixes drafted on branches; PRs open once approved.",
+   "status": "Needs you",
+   "url": "https://linear.app/trylatent/issue/TRY-539"
+  },
+  {
+   "id": "try-522",
+   "title": "Close TRY-522 (Oct 23 dig issue)",
+   "plainSummary": "#601 merged and shipped in 1.0.9.",
+   "status": "Needs you",
+   "url": "https://linear.app/trylatent/issue/TRY-522"
+  },
+  {
+   "id": "sentry",
+   "title": "Re-connect Sentry",
+   "plainSummary": "Still needs re-auth.",
+   "status": "Needs you"
+  },
+  {
+   "id": "age-holds",
+   "title": "Age holds: none",
+   "plainSummary": "No age holds open, new, or resolved in the last 24 hours (checked ~9:15 AM PT).",
+   "status": "done"
+  },
+  {
+   "id": "email",
+   "title": "Email dig to eddie@weaive.app",
+   "status": "pending"
+  },
+  {
+   "id": "archive",
+   "title": "Publish archive",
+   "status": "done",
+   "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-10-25"
+  }
+ ],
+ "bugs": [
+  {
+   "id": "undo-empty-clip",
+   "title": "Undo after Finish sometimes uploads an empty video (new on 1.0.9)",
+   "severity": "medium",
+   "people": 8,
+   "status": "PR opened: #617",
+   "summary": "8 people since about 12:30 AM PT today, each right after tapping Undo a few seconds after Finish. About 7 of 260 Undos on 1.0.9 hit it.",
+   "detail": "Could leave a post that says Video missing or a second copy of the session. I asked a Cloud Agent to fix it.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/617",
+   "sources": [
+    "posthog"
+   ]
+  },
+  {
+   "id": "face-blur-crash",
+   "title": "App crashed while switching face blur on and off (Ethan)",
+   "severity": "medium",
+   "people": 1,
+   "status": "Malcolm's bot ticket TRY-539 (fix drafted, Need Approval)",
+   "summary": "Ethan on 1.0.9 (47); his draft was still saved. Sentry has the matching crash.",
+   "detail": "Not duplicated.",
+   "url": "https://linear.app/trylatent/issue/TRY-539",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "share-crash",
+   "title": "App crashed on the share screen (1 person)",
+   "severity": "low",
+   "people": 1,
+   "status": "Malcolm's bot ticket TRY-542 (fix drafted, Need Approval)",
+   "summary": "One Sentry crash last night.",
+   "detail": "Not duplicated.",
+   "url": "https://linear.app/trylatent/issue/TRY-542",
+   "sources": [
+    "linear"
+   ]
+  },
+  {
+   "id": "week-popup",
+   "title": "Week chart day popup runs into the weekday letters",
+   "severity": "low",
+   "people": 1,
+   "status": "Malcolm's bot ticket TRY-540 (fix drafted, Need Approval)",
+   "summary": "A tester with 7 tags in one day.",
+   "detail": "",
+   "url": "https://linear.app/trylatent/issue/TRY-540",
+   "sources": [
+    "linear"
+   ]
+  },
+  {
+   "id": "lag",
+   "title": "App feels laggy scrolling the feed and group member lists (Suki)",
+   "severity": "low",
+   "people": 1,
+   "status": "Watch",
+   "summary": "Suki is on the old 1.0.7 on an iPhone 17.",
+   "detail": "Several speed fixes shipped since; close to TRY-471. Not specific enough to fix.",
+   "url": "https://linear.app/trylatent/issue/TRY-471",
+   "sources": [
+    "in-app"
+   ]
+  },
+  {
+   "id": "time-cut",
+   "title": "A session's time got cut once (Ace, Discord)",
+   "severity": "low",
+   "people": 1,
+   "status": "Watch (Malcolm asked for details)",
+   "summary": "No steps to repeat it. His earlier report of this was fixed in 1.0.9 (#595).",
+   "detail": "Malcolm's TRY-538 is about the opposite (too many hours counted).",
+   "sources": [
+    "discord"
+   ]
+  },
+  {
+   "id": "tagging-missing",
+   "title": "Can't find tagging who you locked in with (cooldeath49, Discord)",
+   "severity": "low",
+   "people": 1,
+   "status": "Probably needs the update",
+   "summary": "Tagging is in 1.0.9; others told him to update.",
+   "detail": "",
+   "sources": [
+    "discord"
+   ]
+  },
+  {
+   "id": "old-builds",
+   "title": "Old-build upload errors until people update",
+   "severity": "low",
+   "people": null,
+   "status": "Fixed in 1.0.9",
+   "summary": "Missing-post upload errors 148 from 11 people on 1.0.8/1.0.7 (fixed by #555), empty clips 62 from 2 people on 1.0.8 (#557), camera-off unlocked-elsewhere 124 on 1.0.8 and 0 on 1.0.9 (#595).",
+   "detail": "Updates are moving fast: 1,256 updates to 1.0.9 in the last day.",
+   "sources": [
+    "posthog"
+   ]
+  },
+  {
+   "id": "sentry-auth",
+   "title": "Sentry connector needs re-auth",
+   "severity": "low",
+   "people": null,
+   "status": "Needs you",
+   "summary": "Sentry still needs re-auth (recurring). No crash data from me today.",
+   "detail": "Malcolm's bot still files Sentry tickets.",
+   "sources": [
+    "sentry"
+   ]
+  }
+ ],
+ "features": [
+  {
+   "id": "spotify",
+   "title": "Spotify for songs on posts",
+   "count": 2,
+   "peopleCountLabel": "2 new",
+   "status": "Songs on posts shipped (TRY-420); Spotify: no ticket",
+   "summary": "Daniel (@dmace, on 1.0.8) asks for songs on posts like Instagram; Claudius (@claudius) wants Spotify songs and playlists.",
+   "detail": "Songs on posts are in 1.0.9 through Apple Music search, so Daniel gets it by updating.",
+   "url": "https://linear.app/trylatent/issue/TRY-420",
+   "sources": [
+    "in-app"
+   ]
+  },
+  {
+   "id": "plan-lockin",
+   "title": "Plan your next lock in again after setup",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Need Approval (TRY-541)",
+   "summary": "aimee (@aimee_) loved the setup step that asks when you'll lock in and wants it back.",
+   "detail": "",
+   "url": "https://linear.app/trylatent/issue/TRY-541",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "wrapped",
+   "title": "Latent Wrapped (year or month recap)",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Backlog (TRY-62)",
+   "summary": "Simone (@simone): a clip of all your timelapses plus stats.",
+   "detail": "",
+   "url": "https://linear.app/trylatent/issue/TRY-62",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "nightstand",
+   "title": "Nightstand-style clock while the screen is dark",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Todo (TRY-530)",
+   "summary": "Justin (@justingerstein).",
+   "detail": "TRY-530 brings your new camera-off clocks to regular sessions.",
+   "url": "https://linear.app/trylatent/issue/TRY-530",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "laptop",
+   "title": "Laptop / Mac app",
+   "count": 2,
+   "peopleCountLabel": "2 new",
+   "status": "Backlog (TRY-166); no Mac app",
+   "summary": "Mia (@mia) uses a dumb phone and wants to record on her laptop; morecalcium in Discord says a Mac app “would be fire”.",
+   "detail": "Malcolm answered “tbd” in Discord.",
+   "url": "https://linear.app/trylatent/issue/TRY-166",
+   "sources": [
+    "in-app",
+    "discord"
+   ]
+  },
+  {
+   "id": "testers",
+   "title": "How do I become a tester?",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "FYI",
+   "summary": "notjerwee in Discord.",
+   "detail": "",
+   "sources": [
+    "discord"
+   ]
+  },
+  {
+   "id": "timelapse-length",
+   "title": "Pick how long your timelapse is",
+   "count": null,
+   "peopleCountLabel": "7 up / 2 down",
+   "status": "Need Approval (TRY-493)",
+   "summary": "Unchanged.",
+   "detail": "",
+   "url": "https://linear.app/trylatent/issue/TRY-493",
+   "sources": [
+    "discord",
+    "linear"
+   ]
+  },
+  {
+   "id": "beta",
+   "title": "People want to stay testers",
+   "count": 3,
+   "peopleCountLabel": "3 new, 166 total",
+   "status": "Malcolm handles",
+   "summary": "3 new “Stay as a Beta Tester” picks since yesterday's review (latest Oct 24, 11:28 PM PT).",
+   "detail": "Count only (TRY-343).",
+   "sources": [
+    "supabase"
+   ]
+  }
+ ],
+ "bySource": {
+  "inApp": {
+   "new": 8,
+   "note": "8 new public.feedback rows since yesterday's review (150 total): 2 bugs (Ethan's face blur crash, already Malcolm's TRY-539; Suki's lag on the old 1.0.7) and 6 ideas (Spotify x2, laptop support, Latent Wrapped, plan your lock in again, nightstand clock). 6 of 8 are on 1.0.8 or older."
+  },
+  "discord": {
+   "new": 19,
+   "note": "Quiet: about 20 new since Oct 24 ~9:20 AM PT. No clear bugs: Ace says a session's time got cut once but can't say how (Malcolm asked him to DM details). Lots of love (Oreo, morecalcium: “literally larping being productive actually made me productive”). cooldeath49 can't find tagging (it's in 1.0.9, likely needs the update) and notjerwee asked how to become a tester. One more Mac app vote; Malcolm answered “tbd”. Timelapse length vote still 7 up / 2 down. Nothing new in #announcements. Source: discord-2026-10-25.md."
+  },
+  "gmail": {
+   "new": 2,
+   "note": "You replied to Keerat, Hizam and Jango yesterday (12:47 to 12:48 PM PT; Jango got invite code ZEN7AX), so they're done. Still open: Samuel (delete account, 9 days). New: Hizam's thank-you and Daniela's thank-you for the Android note (both optional). 36 hiring-pause replies skipped (the hiring watch handles those). No bug emails, no video attachments, no PostHog alert emails."
+  },
+  "survey": {
+   "newRows": 0,
+   "seanEllis": "39/25/2 of 66",
+   "note": "Export HTTP 200 (25,298 bytes). Unchanged vs Oct 24 (all 3 tabs row-for-row identical). No new free text."
+  },
+  "sentry": {
+   "new": [],
+   "note": "Unavailable: Sentry still needs re-auth (recurring). No data invented."
+  },
+  "posthog": {
+   "note": "Last 24h vs prior 24h (events/people, to ~9:15 AM PT): installs 771 (was 707); onboarding done 540 (was 501); sessions started 7,371/3,021 (was 6,225/2,666); sessions discarded 1,291/783 (was 1,067/678); app updates 1,512 (was 417). session_save_failed 26/13 (was 49/22; nearly all offline), clip_upload_failed 330/41 (was 247/25: 148 missing-post from 11 on 1.0.8/1.0.7, 126 empty clips: 64 from 9 on 1.0.9 (47), 8 of them right after an Undo, and 62 from 2 on 1.0.8; the rest network), media_invoke_retry_exhausted 885/76 (was 1,417/85), session_capture_failed 2/2 (was 2/2), capture_stalled 150/20 (was 96/13), segment_finalize_failed 12/9 (was 10/6), group_action_failed 1,492/345 (was 1,238/326), backend_unreachable_shown 267/204 (was 305/225), invite_check_failed 178/36 (was 95/30), friend_request_failed 34/6 (was 21/6), sign_in_failed 13/8 (was 46/20), sign_up_failed 7/2 (was 8/1), clip_upload_abandoned 56/9 (was 176/9), session_unlocked_elsewhere 136/55 (was 176/67; 124 on 1.0.8, none on 1.0.9). Rage clicks 6,641/2,119 (was 5,296/1,754). People starting a session in the last day by build: 1.0.8 (43) 2,089, 1.0.9 (47) 1,036, 1.0.6 (39) 86, 1.0.7 (41) 41, 1.0.9 (48) 24. 1.0.9 (47) in the last day: 715 installs, 1,256 updates. App Store: 1.0.9, 4.94 stars (194). Alerts: edge-function retry and clip size both not firing; last notification Oct 23, 6:27 PM PT. No PostHog alert emails."
+  },
+  "github": {
+   "note": "Nothing merged into main since yesterday's review (last merge #613, Oct 23, 10:45 PM PT). New open: Malcolm's #614 (public groups, Discover), Jerry Chen's #615 (drawings stay fixed while reframing) and #616 (tag colour picker). Still open: yours #500, #417; Malcolm's #605, #587, #537, #530, #529, #518, #499."
+  },
+  "linear": {
+   "note": "New since yesterday (all from Malcolm's bot, Need Approval): TRY-538 camera-off locked hours, 539 face blur crash, 540 week popup overlap, 541 plan your next lock in, 542 share screen crash, 543 bullying report, 544 and 545 child safety reports. Malcolm linked new in-app notes to TRY-62 (Wrapped), 166 (desktop) and 530 (clocks). TRY-522 still Need Approval. No open ticket covers the Undo empty-clip bug, so I opened a fix."
+  },
+  "betaOptIns": {
+   "new": 3,
+   "total": 166
+  }
+ },
+ "rawQuotes": [
+  {
+   "id": "inapp-345f27c5",
+   "source": "in-app",
+   "username": "@suki (Suki)",
+   "whenPT": "Oct 24, 9:28 AM PT",
+   "build": "1.0.7 (41)",
+   "kind": "bug",
+   "quote": "The app is sometimes heavily laggy on my iphone 17 :/ specially while scrolling the feed or browsing the members list on groups",
+   "note": "In-app bug · on an old build (1.0.7); several speed fixes shipped since (big friend lists, feed). Close to TRY-471 (feed freezes, Need Approval). Not specific enough for a fix"
+  },
+  {
+   "id": "inapp-a878deb7",
+   "source": "in-app",
+   "username": "@ethanzheng (ethan)",
+   "whenPT": "Oct 24, 10:35 AM PT",
+   "build": "1.0.9 (47)",
+   "kind": "bug",
+   "quote": "The app randomly crashed when I was switching the face blurring on and off. Draft was still saved though",
+   "note": "In-app bug · Malcolm's bot already filed TRY-539 (Need Approval) with a matching crash and drafted a fix on a branch, so I didn't open another"
+  },
+  {
+   "id": "inapp-5a2c0a85",
+   "source": "in-app",
+   "username": "@dmace (Daniel)",
+   "whenPT": "Oct 24, 11:01 AM PT",
+   "build": "1.0.8 (43)",
+   "kind": "feature",
+   "quote": "hi me and my friends really like your app and use it a lot. my request is that you can add songs to your session when you post like an instagram post. idk if you need like a partnernship with spotify like instagram does or theres like an API that you can use put you can probably figure it out. also if you guys are hiring part time devs im a waterloo cs major heres my linkedin: https://www.linkedin.com/in/daniel-mace27/",
+   "note": "In-app feature · songs on posts are in 1.0.9 (TRY-420, Done), he's on 1.0.8 so updating gets it. Hiring part is paused, no action"
+  },
+  {
+   "id": "inapp-d7feb844",
+   "source": "in-app",
+   "username": "@mia (Mia)",
+   "whenPT": "Oct 24, 11:54 AM PT",
+   "build": "1.0.8 (43)",
+   "kind": "feature",
+   "quote": "Please add laptop support 🙏 I mainly use my dumb phone now and going back to my actual phone to record results in doomscrolling, tried to download on laptop but when going onto diff tabs it auto stopped.",
+   "note": "In-app feature · no laptop or Mac app exists. Close to TRY-166 (desktop, Backlog)"
+  },
+  {
+   "id": "inapp-18af4d9e",
+   "source": "in-app",
+   "username": "@simone (Simone)",
+   "whenPT": "Oct 24, 12:50 PM PT",
+   "build": "1.0.8 (43)",
+   "kind": "feature",
+   "quote": "Could you create a feature where we can create a short clip at the end of a year (or a few months or whatever) where a snippet of all our timelapses are picked out to make an entire Latent “wrapped”? Or even an entire Latent wrapped feature where we find out stats about our productivity, time, etc.",
+   "note": "In-app feature · TRY-62 (Weekly + Monthly wrapped, Backlog); Malcolm linked it"
+  },
+  {
+   "id": "inapp-e2520465",
+   "source": "in-app",
+   "username": "@aimee_ (aimee)",
+   "whenPT": "Oct 24, 5:29 PM PT",
+   "build": "1.0.8 (43)",
+   "kind": "feature",
+   "quote": "hello! i remember when i first downloaded the app, there was a feature to schedule your ‘lock in time’, but i can’t seem to find it again. \n\nif you’re confused what i’m talking about, it was like asking what time will u lock in and what will you be doing in that time\n\ni feel like by having a set time to lock in, there’s like more accountability and i’d be more motivated to\n\nif the feature is in the app already, then make it a bit more obvious because i can’t seem to find it anywhere\n\nthanks!",
+   "note": "In-app feature · that step only exists in setup. Malcolm's bot filed TRY-541 (Need Approval)"
+  },
+  {
+   "id": "inapp-c0b3d8b6",
+   "source": "in-app",
+   "username": "@justingerstein (Justin)",
+   "whenPT": "Oct 24, 11:57 PM PT",
+   "build": "1.0.8 (43)",
+   "kind": "feature",
+   "quote": "Make an option to turn your phone into a clock like the iPhone nightstand mode when the screen turns black",
+   "note": "In-app feature · close to TRY-530 (bring your new camera-off clocks to regular sessions, Todo); Malcolm linked it"
+  },
+  {
+   "id": "inapp-6166eab7",
+   "source": "in-app",
+   "username": "@claudius (Claudius)",
+   "whenPT": "Oct 25, 5:38 AM PT",
+   "build": "1.0.9 (47)",
+   "kind": "feature",
+   "quote": "Some sort of Spotify integration - displaying songs and playlists …",
+   "note": "In-app feature · songs on posts use Apple Music search today; no Spotify ticket found"
+  },
+  {
+   "id": "discord-1025-0",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Rosamund [STDY]",
+   "author": "Rosamund [STDY]",
+   "whenPT": "Oct 24, 10:14 AM PT",
+   "kind": "chatter",
+   "quote": "https://substack.com/@beyondthemarginss?utm_source=share&utm_medium=android&r=5vt9jr",
+   "note": "Discord · #general-chat · link to her Substack · self-promo"
+  },
+  {
+   "id": "discord-1025-1",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Rosamund [STDY]",
+   "author": "Rosamund [STDY]",
+   "whenPT": "Oct 24, 10:17 AM PT",
+   "kind": "chatter",
+   "quote": "Hey guys, this is my Substack and I'd really appreciate it if you could take a look and subscribe to support me",
+   "note": "Discord · #general-chat · self-promo"
+  },
+  {
+   "id": "discord-1025-2",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Malcolm McDonald",
+   "author": "Malcolm McDonald",
+   "whenPT": "Oct 24, 11:23 AM PT",
+   "kind": "bug",
+   "quote": "wait can you dm me more details about what happened and how?",
+   "note": "Discord · #general-chat · reply to Ace"
+  },
+  {
+   "id": "discord-1025-3",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Ace [GOD]",
+   "author": "Ace [GOD]",
+   "whenPT": "Oct 24, 11:34 AM PT",
+   "kind": "bug",
+   "quote": "im not too sure myself it just glitched and reduced the time\nthough it only happened once\nif the issue repeats ill dm you with more details",
+   "note": "Discord · #general-chat · reply to Malcolm · a session's time got cut once, no steps to repeat it (like his earlier 1h11m saved as 1m29s, fixed in 1.0.9 by #595)"
+  },
+  {
+   "id": "discord-1025-4",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Oreo",
+   "author": "Oreo",
+   "whenPT": "Oct 24, 10:25 PM PT",
+   "kind": "feedback",
+   "quote": "I love this app",
+   "note": "Discord · #general-chat · new member · 2 reactions"
+  },
+  {
+   "id": "discord-1025-5",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "morecalcium",
+   "author": "morecalcium",
+   "whenPT": "Oct 24, 11:27 PM PT",
+   "kind": "feedback",
+   "quote": "changing my life fr",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1025-6",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "morecalcium",
+   "author": "morecalcium",
+   "whenPT": "Oct 24, 11:27 PM PT",
+   "kind": "feedback",
+   "quote": "literally larping being productive actually made me productive",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1025-7",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "morecalcium",
+   "author": "morecalcium",
+   "whenPT": "Oct 24, 11:28 PM PT",
+   "kind": "chatter",
+   "quote": "mom was right it's all about the phone..",
+   "note": "Discord · #general-chat"
+  },
+  {
+   "id": "discord-1025-8",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Anne",
+   "author": "Anne",
+   "whenPT": "Oct 25, 1:17 AM PT",
+   "kind": "chatter",
+   "quote": "Hey I made a group to study together, it doesn't matter what you study en how long. Your welcome to join! Code: 775EPP",
+   "note": "Discord · #general-chat · study group invite"
+  },
+  {
+   "id": "discord-1025-9",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "KrabbyKai [FPV]",
+   "author": "KrabbyKai [FPV]",
+   "whenPT": "Oct 24, 11:21 AM PT",
+   "kind": "chatter",
+   "quote": "shi u right",
+   "note": "Discord · #feature-requests · in cooldeath49's tag-who-you-locked-in-with thread"
+  },
+  {
+   "id": "discord-1025-10",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "cooldeath49",
+   "author": "cooldeath49",
+   "whenPT": "Oct 24, 12:37 PM PT",
+   "kind": "question",
+   "quote": "huh where",
+   "note": "Discord · #feature-requests · can't find tagging"
+  },
+  {
+   "id": "discord-1025-11",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "chloe",
+   "author": "chloe",
+   "whenPT": "Oct 24, 12:44 PM PT",
+   "kind": "question",
+   "quote": "when u finish the session below the description",
+   "note": "Discord · #feature-requests"
+  },
+  {
+   "id": "discord-1025-12",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "cooldeath49",
+   "author": "cooldeath49",
+   "whenPT": "Oct 24, 2:16 PM PT",
+   "kind": "question",
+   "quote": "Am i dumb or is it not here",
+   "note": "Discord · #feature-requests · tagging is in 1.0.9; probably needs to update"
+  },
+  {
+   "id": "discord-1025-13",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "KrabbyKai [FPV]",
+   "author": "KrabbyKai [FPV]",
+   "whenPT": "Oct 24, 2:30 PM PT",
+   "kind": "question",
+   "quote": "theres a chance the update hasn't been pushed to everyone yet\nboth me and chloe are testing unreleased versions",
+   "note": "Discord · #feature-requests"
+  },
+  {
+   "id": "discord-1025-14",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "notjerwee",
+   "author": "notjerwee",
+   "whenPT": "Oct 24, 9:15 PM PT",
+   "kind": "question",
+   "quote": "I'm not but I see it\nyou might just have to update the app\ndo you know if theres any way to be part of this",
+   "note": "Discord · #feature-requests · asks how to become a tester"
+  },
+  {
+   "id": "discord-1025-15",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "KrabbyKai [FPV]",
+   "author": "KrabbyKai [FPV]",
+   "whenPT": "Oct 24, 9:18 PM PT",
+   "kind": "question",
+   "quote": "well your technically part of it by being in the server\nonly some of the og ppl that eddie reached out to is part of the group im talking abt tho",
+   "note": "Discord · #feature-requests"
+  },
+  {
+   "id": "discord-1025-16",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "notjerwee",
+   "author": "notjerwee",
+   "whenPT": "Oct 24, 9:21 PM PT",
+   "kind": "chatter",
+   "quote": "wish i was og\nat least im here before public",
+   "note": "Discord · #feature-requests · 1 reaction"
+  },
+  {
+   "id": "discord-1025-17",
+   "source": "discord",
+   "channel": "#questions",
+   "username": "Malcolm McDonald",
+   "author": "Malcolm McDonald",
+   "whenPT": "Oct 24, 11:23 AM PT",
+   "kind": "question",
+   "quote": "tbd",
+   "note": "Discord · #questions · in katie's “when will it be available on mac?” thread · 3 reactions"
+  },
+  {
+   "id": "discord-1025-18",
+   "source": "discord",
+   "channel": "#questions",
+   "username": "morecalcium",
+   "author": "morecalcium",
+   "whenPT": "Oct 24, 11:36 PM PT",
+   "kind": "feature",
+   "quote": "that would be fire",
+   "note": "Discord · #questions · same thread · Mac app"
+  },
+  {
+   "id": "gmail-samuel",
+   "source": "gmail",
+   "username": "Samuel Downs",
+   "email": "srdowns2010@gmail.com",
+   "whenPT": "Oct 16, 4:13 PM PT",
+   "kind": "email",
+   "quote": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+   "note": "Email · Re: Delete account · carried from earlier · reply drafted below"
+  },
+  {
+   "id": "gmail-hizam-thanks",
+   "source": "gmail",
+   "username": "Hizam (Mohammad Tuan)",
+   "email": "mohammadtuan4@gmail.com",
+   "whenPT": "Oct 24, 11:22 PM PT",
+   "kind": "email",
+   "quote": "Awesome, thank you so much!\n\nWill get back to you soon.\n\nHizam",
+   "note": "Email · Re: Would Love to Try Latent · NEW · reply drafted below (optional)"
+  },
+  {
+   "id": "gmail-daniela",
+   "source": "gmail",
+   "username": "Daniela Boehm",
+   "email": "daniboehm0305@gmail.com",
+   "whenPT": "Oct 25, 4:51 AM PT",
+   "kind": "email",
+   "quote": "Thank you, looking forward to it!",
+   "note": "Email · Re: lock in twin · NEW · reply drafted below (optional)"
+  }
+ ],
+ "replyDrafts": [
+  {
+   "id": "samuel",
+   "name": "Samuel Downs",
+   "to": "srdowns2010@gmail.com",
+   "subject": "Re: Delete account",
+   "threadId": "1a146fe4c9172b23",
+   "replyToMessageId": "1a146fe4c9172b23",
+   "theirMessage": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+   "theirWhenPT": "Oct 16, 4:13 PM PT",
+   "body": "Hi Samuel, sorry to see you go! [CHECK: delete the account first; his Latent account (@captsam, made Oct 16) still existed at ~9:15 AM PT Oct 25] Your Latent account and all the data tied to srdowns2010@gmail.com have now been permanently deleted. Thanks for giving Latent a try.\n\nEddie",
+   "optional": false,
+   "isNew": false,
+   "note": "Carried over (unanswered since Oct 16). Account deletion request sent to support@. His account (@captsam) still exists as of ~9:15 AM PT Oct 25 (9 days); the dig changed nothing. Delete first, then send (from support@ if that is how you answer support mail).",
+   "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+  },
+  {
+   "id": "hizam-thanks",
+   "name": "Hizam (Mohammad Tuan)",
+   "to": "mohammadtuan4@gmail.com",
+   "subject": "Re: Would Love to Try Latent",
+   "threadId": "1a16cb53a23facd5",
+   "replyToMessageId": "1a171baadca18846",
+   "theirMessage": "Awesome, thank you so much!\n\nWill get back to you soon.\n\nHizam",
+   "theirWhenPT": "Oct 24, 11:22 PM PT",
+   "body": "Hey Hizam, of course! Enjoy your first few sessions and let me know what you think.\n\nEddie",
+   "optional": true,
+   "isNew": true,
+   "note": "Optional, no reply needed. He's thanking you for the invite you sent Oct 24, 12:48 PM PT.",
+   "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879913454538566869"
+  },
+  {
+   "id": "daniela",
+   "name": "Daniela Boehm",
+   "to": "daniboehm0305@gmail.com",
+   "subject": "Re: lock in twin",
+   "threadId": "1a106d45edc4d8d7",
+   "replyToMessageId": "1a172e68ae9ce001",
+   "theirMessage": "Thank you, looking forward to it!",
+   "theirWhenPT": "Oct 25, 4:51 AM PT",
+   "body": "Hey Dani, of course! Android is coming, I'll email you when it's out.\n\nEddie",
+   "optional": true,
+   "isNew": true,
+   "note": "Optional, no reply needed. Answering your Oct 7 note that Android is on the way (she's on Android, waitlist invite from your reel).",
+   "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878121191722768599"
+  }
+ ],
+ "linearIssue": {
+  "id": "TRY-546",
+  "url": "https://linear.app/trylatent/issue/TRY-546/daily-dig-2026-10-25-1-fix-waiting-for-review-617"
+ },
+ "linearNote": "Linear dig issue: TRY-546 https://linear.app/trylatent/issue/TRY-546/daily-dig-2026-10-25-1-fix-waiting-for-review-617",
+ "emailMessageId": null,
+ "release": {
+  "appStoreVersion": "1.0.9",
+  "build": "47",
+  "releasedPT": "Oct 24, 12:15 AM PT",
+  "rating": "4.94 (194)"
+ }
+}
