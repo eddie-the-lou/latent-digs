@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-26",
+    "title": "Latent daily review · Oct 26",
+    "tldr": "1 new fix (#633): empty video retried on every app open. 14 merged. 1 new age hold (@shaykalk1). 3 reply drafts."
+  },
+  {
     "date": "2026-10-25",
     "title": "Latent daily review · Oct 25",
     "tldr": "1 new fix (#617): Undo after Finish uploaded an empty video on 1.0.9. 0 merged. No age holds; 3 moderation reports in Linear. 3 reply drafts."

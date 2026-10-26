@@ -1,0 +1,1608 @@
+{
+ "date": "2026-10-26",
+ "title": "Latent daily review · Oct 26",
+ "generatedAt": "2026-10-26T16:44:12.842925+00:00",
+ "tldr": [
+  "1 new fix waiting for you: #633 stops a few phones from retrying an empty video on every app open (7 people on 1.0.9, found in PostHog). It sits on top of #617 (yesterday's Undo fix, still open), so merge #617 first or both. 14 PRs merged overnight (Malcolm's moderation site, Spain fixes, faster database; Jerry's drawings fix).",
+  "Busy day: 1,257 installs (was 776) and 3,933 people started a session (was 3,027). 1.0.9 now has 3,230 of them. App Store 4.94 stars (198).",
+  "1 new age hold: @shaykalk1 (Shay) was held last night after the child safety report (TRY-544); deletes Nov 24 unless released. Still to look at: TRY-545, TRY-555 (child safety), TRY-548 (spam), TRY-543 (bullying).",
+  "7 in-app notes: Joud can't find the camera switch in Settings, plus ideas (Monday week start, 25-min daily streak, focus sounds, whole-song picker, pause song with video, Android). Discord: Oto says friends see his videos up to a day late (unanswered).",
+  "3 reply drafts: Samuel's account is now deleted, so his confirmation is ready to send; Hizam and Daniela still optional. 2 new beta opt-ins / 168. Survey unchanged. Sentry still needs re-auth."
+ ],
+ "plainTldr": [
+  "1 new fix waiting for you: #633 stops a few phones from retrying an empty video on every app open (7 people on 1.0.9, found in PostHog). It sits on top of #617 (yesterday's Undo fix, still open), so merge #617 first or both. 14 PRs merged overnight (Malcolm's moderation site, Spain fixes, faster database; Jerry's drawings fix).",
+  "Busy day: 1,257 installs (was 776) and 3,933 people started a session (was 3,027). 1.0.9 now has 3,230 of them. App Store 4.94 stars (198).",
+  "1 new age hold: @shaykalk1 (Shay) was held last night after the child safety report (TRY-544); deletes Nov 24 unless released. Still to look at: TRY-545, TRY-555 (child safety), TRY-548 (spam), TRY-543 (bullying).",
+  "7 in-app notes: Joud can't find the camera switch in Settings, plus ideas (Monday week start, 25-min daily streak, focus sounds, whole-song picker, pause song with video, Android). Discord: Oto says friends see his videos up to a day late (unanswered).",
+  "3 reply drafts: Samuel's account is now deleted, so his confirmation is ready to send; Hizam and Daniela still optional. 2 new beta opt-ins / 168. Survey unchanged. Sentry still needs re-auth."
+ ],
+ "urgent": [],
+ "stats": {
+  "newInApp": 7,
+  "newDiscord": 65,
+  "newGmail": 0,
+  "newSurveyRows": 0,
+  "seanEllis": {
+   "very": 39,
+   "somewhat": 25,
+   "not": 2,
+   "n": 66
+  },
+  "sentryNew": [],
+  "sentryUnavailable": true,
+  "rawQuotes": 75,
+  "betaOptInsNew": 2,
+  "betaOptInsTotal": 168,
+  "installs24h": 1257,
+  "installsPrev24h": 776
+ },
+ "whatIDidToday": {
+  "fixesOpened": [
+   {
+    "title": "Stop retrying empty-clip uploads on every launch",
+    "whatItFixes": "On 1.0.9, a few phones had a post whose video file was empty or gone, and the app tried to upload it again on nearly every open, forever (48 tries in about 18 hours for one person). These people never tapped Undo. Two causes, found by reading the code: the 'give up after 3 tries' count reset every time the app opened, and an empty file was treated as a real video (so leftover recording pieces that could rebuild it could get cleaned up). Now an empty or missing video waits one launch in case it's still finishing, then tries to rebuild from leftover pieces, and otherwise stops retrying and shows the existing Video missing label. The post is kept, good videos are never deleted, and no duplicate is made. This PR is built on top of #617, so it includes that fix too: merge #617 first or merge both. Tests were added but couldn't run (no Xcode on the agent's machine).",
+    "howToCheck": "Run the new tests in Xcode (EmptyClipRetryTests and #617's FinishUndoTests; the PR lists the command). On a phone with a Debug build: do Finish, Post, then Undo right away, and you should get one post with its video and no Video missing post. Record and save a normal session and make sure friends see the video. After it ships, PostHog should show one clip_upload_abandoned per stuck post instead of an empty-clip failure on every app open.",
+    "reporter": "Found by me in PostHog (7 people on 1.0.9 (47) with an empty video retried on every app open, no Undo involved; nobody has written in about it)",
+    "agent": "https://cursor.com/agents/bc-9e2fdb68-ca7e-50e6-bf4b-5d4f05cb964a",
+    "pr": 633,
+    "url": "https://github.com/eddie-the-lou/latent/pull/633",
+    "status": "Waiting for your review (not merged)"
+   }
+  ],
+  "carriedFromEarlier": [
+   {
+    "pr": 617,
+    "url": "https://github.com/eddie-the-lou/latent/pull/617",
+    "title": "Record: Undo after Finish no longer uploads an empty clip",
+    "status": "Still waiting for your review (opened Oct 25)",
+    "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session. Still matters: 18 more people hit that Undo case in the last day."
+   }
+  ],
+  "agentsLaunched": [
+   {
+    "agent": "https://cursor.com/agents/bc-9e2fdb68-ca7e-50e6-bf4b-5d4f05cb964a",
+    "title": "Upload queue retries an empty video on every app open (1.0.9)",
+    "launchedPT": "Oct 26, 9:28 AM PT"
+   }
+  ],
+  "agentsStillWorking": [],
+  "mergedOvernight": [
+   {
+    "pr": 631,
+    "url": "https://github.com/eddie-the-lou/latent/pull/631",
+    "title": "A block hides people in groups too: live screen, board, names, posts (TRY-567)",
+    "by": "Malcolm · merged Oct 25, 10:46 PM PT"
+   },
+   {
+    "pr": 630,
+    "url": "https://github.com/eddie-the-lou/latent/pull/630",
+    "title": "Rename moderation fixes migration (housekeeping)",
+    "by": "Malcolm · merged Oct 25, 10:20 PM PT"
+   },
+   {
+    "pr": 629,
+    "url": "https://github.com/eddie-the-lou/latent/pull/629",
+    "title": "Moderation notices: an age hold is not a ban; worst rules read anywhere (TRY-534)",
+    "by": "Malcolm · merged Oct 25, 10:15 PM PT"
+   },
+   {
+    "pr": 615,
+    "url": "https://github.com/eddie-the-lou/latent/pull/615",
+    "title": "Editor: drawings stay fixed while you move or resize the video",
+    "by": "Jerry Chen · merged Oct 25, 10:16 PM PT"
+   },
+   {
+    "pr": 628,
+    "url": "https://github.com/eddie-the-lou/latent/pull/628",
+    "title": "Database: same answers, about half the database work (server only)",
+    "by": "Malcolm · merged Oct 25, 10:04 PM PT"
+   },
+   {
+    "pr": 627,
+    "url": "https://github.com/eddie-the-lou/latent/pull/627",
+    "title": "Public groups' 5 live database changes recorded on main (housekeeping)",
+    "by": "Malcolm · merged Oct 25, 10:02 PM PT"
+   },
+   {
+    "pr": 626,
+    "url": "https://github.com/eddie-the-lou/latent/pull/626",
+    "title": "Moderation site: only the founders' @trylatent.co accounts moderate",
+    "by": "Malcolm · merged Oct 25, 9:34 PM PT"
+   },
+   {
+    "pr": 625,
+    "url": "https://github.com/eddie-the-lou/latent/pull/625",
+    "title": "Rename the #624 migration (housekeeping)",
+    "by": "Malcolm · merged Oct 25, 9:23 PM PT"
+   },
+   {
+    "pr": 624,
+    "url": "https://github.com/eddie-the-lou/latent/pull/624",
+    "title": "Discord /leaderboard user answers again (was timing out)",
+    "by": "Malcolm · merged Oct 25, 9:22 PM PT"
+   },
+   {
+    "pr": 623,
+    "url": "https://github.com/eddie-the-lou/latent/pull/623",
+    "title": "Moderation site: founders' @trylatent.co accounts can sign in",
+    "by": "Malcolm · merged Oct 25, 9:08 PM PT"
+   },
+   {
+    "pr": 622,
+    "url": "https://github.com/eddie-the-lou/latent/pull/622",
+    "title": "Moderation site: sign-in code box fits 8-digit codes",
+    "by": "Malcolm · merged Oct 25, 9:00 PM PT"
+   },
+   {
+    "pr": 621,
+    "url": "https://github.com/eddie-the-lou/latent/pull/621",
+    "title": "New moderation site for founders at mod.trylatent.co",
+    "by": "Malcolm · merged Oct 25, 8:58 PM PT"
+   },
+   {
+    "pr": 620,
+    "url": "https://github.com/eddie-the-lou/latent/pull/620",
+    "title": "Spain football blocks: re-send the photos the upload queue skipped (TRY-550)",
+    "by": "Malcolm · merged Oct 25, 6:16 PM PT"
+   },
+   {
+    "pr": 618,
+    "url": "https://github.com/eddie-the-lou/latent/pull/618",
+    "title": "Spain football blocks: tell people in Spain why their videos won't upload (TRY-550)",
+    "by": "Malcolm · merged Oct 25, 5:53 PM PT"
+   }
+  ],
+  "closedOvernight": [],
+  "stillOnYou": [
+   {
+    "id": "pr-617",
+    "title": "#617 (yesterday's dig fix, Undo after Finish uploads an empty video) is still open. 18 more people hit that Undo case in the last day.",
+    "url": "https://github.com/eddie-the-lou/latent/pull/617"
+   },
+   {
+    "id": "try-544",
+    "title": "TRY-544 (child safety report on @shaykalk1) still says Need Approval, but an age hold was placed on that account last night at 9:17 PM PT. You can close the ticket.",
+    "url": "https://linear.app/trylatent/issue/TRY-544"
+   },
+   {
+    "id": "mod-reports",
+    "title": "Moderation reports still waiting in Linear (Need Approval): TRY-545 (child safety, @aarav5411), TRY-555 (new: child safety, @nikhil, maybe a friend-group joke), TRY-548 (new: spam report on @harshamatta, looks like a mislabeled movie note), TRY-543 (bullying comment). You can work them on the new mod site (mod.trylatent.co).",
+    "url": "https://linear.app/trylatent/issue/TRY-555"
+   },
+   {
+    "id": "samuel",
+    "title": "Samuel Downs' account (srdowns2010@gmail.com, @captsam) is gone from the database now, so his deletion is done. He asked for a confirmation email on Oct 16 and hasn't gotten one: the draft below is ready to send.",
+    "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+   },
+   {
+    "id": "bot-new",
+    "title": "New from Malcolm's bot (Need Approval): TRY-563 app crashes on every launch for one person on a brand new iPhone (fix drafted), TRY-564 app still freezes checking alarm permission (fix drafted), plus asks TRY-547 (pick the song part from the whole song), TRY-556 (pausing a video should pause its song), TRY-558 (use certain apps without pausing the timer), TRY-570 (focus sounds in the app).",
+    "url": "https://linear.app/trylatent/issue/TRY-563"
+   },
+   {
+    "id": "bot-old",
+    "title": "Still Need Approval from before: TRY-539 (face blur crash), TRY-542 (share screen crash), TRY-540 (week popup), TRY-541, TRY-538, and older TRY-487, TRY-501, TRY-475/480/471, TRY-469/470, TRY-495. Done dig tickets to close: TRY-522 (#601 shipped).",
+    "url": "https://linear.app/trylatent/issue/TRY-539"
+   },
+   {
+    "id": "older-prs",
+    "title": "Open PRs: yesterday's dig #617; new Malcolm #619 (screenshot in Send Feedback) and Jerry #632 (Groups prototype, docs only); still open Malcolm #614 (public groups), #605, #587, #537, #530, #529, #518, #499; Jerry #616 (tag colour picker); yours #500 and #417.",
+    "url": "https://github.com/eddie-the-lou/latent/pulls"
+   },
+   {
+    "id": "fyi",
+    "title": "FYI: Adam Chouiki (UPenn) proposed Mon Nov 16, 7:15 PM for the talk and you replied asking if that's ET. AJ Neuman (psych student) asked what you asked your first users for feedback (no reply needed, not drafted). Malcolm booked a Latent call with Roy for Tue Oct 27, 8:30 PM PT. Hiring-pause replies (Edwin, Nikitta, Hasan, Albert) left for the hiring watch; Shreyas wrote on the old hiring thread. Paid-collab pitches (Strawberry, Wapo, AhaCreator, Runable agency, Ultrahuman) skipped."
+   }
+  ],
+  "note": "1 Cloud Agent launched (Grok 4.6) for the empty video retried on every app open, found in PostHog. Nothing else was a clear bug nobody owns: the new iPhone crash and the alarm freeze already have fixes drafted by Malcolm's bot, Spain is Malcolm's (TRY-550), Joud's camera note is likely a device restriction, and Oto's late videos have no details. 14 PRs merged overnight."
+ },
+ "prStatus": {
+  "waiting": [
+   {
+    "title": "Stop retrying empty-clip uploads on every launch",
+    "whatItFixes": "On 1.0.9, a few phones had a post whose video file was empty or gone, and the app tried to upload it again on nearly every open, forever (48 tries in about 18 hours for one person). These people never tapped Undo. Two causes, found by reading the code: the 'give up after 3 tries' count reset every time the app opened, and an empty file was treated as a real video (so leftover recording pieces that could rebuild it could get cleaned up). Now an empty or missing video waits one launch in case it's still finishing, then tries to rebuild from leftover pieces, and otherwise stops retrying and shows the existing Video missing label. The post is kept, good videos are never deleted, and no duplicate is made. This PR is built on top of #617, so it includes that fix too: merge #617 first or merge both. Tests were added but couldn't run (no Xcode on the agent's machine).",
+    "howToCheck": "Run the new tests in Xcode (EmptyClipRetryTests and #617's FinishUndoTests; the PR lists the command). On a phone with a Debug build: do Finish, Post, then Undo right away, and you should get one post with its video and no Video missing post. Record and save a normal session and make sure friends see the video. After it ships, PostHog should show one clip_upload_abandoned per stuck post instead of an empty-clip failure on every app open.",
+    "reporter": "Found by me in PostHog (7 people on 1.0.9 (47) with an empty video retried on every app open, no Undo involved; nobody has written in about it)",
+    "agent": "https://cursor.com/agents/bc-9e2fdb68-ca7e-50e6-bf4b-5d4f05cb964a",
+    "pr": 633,
+    "url": "https://github.com/eddie-the-lou/latent/pull/633",
+    "status": "Waiting for your review (not merged)"
+   },
+   {
+    "pr": 617,
+    "url": "https://github.com/eddie-the-lou/latent/pull/617",
+    "title": "Record: Undo after Finish no longer uploads an empty clip",
+    "status": "Still waiting for your review (opened Oct 25)",
+    "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session. Still matters: 18 more people hit that Undo case in the last day."
+   }
+  ],
+  "openedToday": [
+   {
+    "title": "Stop retrying empty-clip uploads on every launch",
+    "whatItFixes": "On 1.0.9, a few phones had a post whose video file was empty or gone, and the app tried to upload it again on nearly every open, forever (48 tries in about 18 hours for one person). These people never tapped Undo. Two causes, found by reading the code: the 'give up after 3 tries' count reset every time the app opened, and an empty file was treated as a real video (so leftover recording pieces that could rebuild it could get cleaned up). Now an empty or missing video waits one launch in case it's still finishing, then tries to rebuild from leftover pieces, and otherwise stops retrying and shows the existing Video missing label. The post is kept, good videos are never deleted, and no duplicate is made. This PR is built on top of #617, so it includes that fix too: merge #617 first or merge both. Tests were added but couldn't run (no Xcode on the agent's machine).",
+    "howToCheck": "Run the new tests in Xcode (EmptyClipRetryTests and #617's FinishUndoTests; the PR lists the command). On a phone with a Debug build: do Finish, Post, then Undo right away, and you should get one post with its video and no Video missing post. Record and save a normal session and make sure friends see the video. After it ships, PostHog should show one clip_upload_abandoned per stuck post instead of an empty-clip failure on every app open.",
+    "reporter": "Found by me in PostHog (7 people on 1.0.9 (47) with an empty video retried on every app open, no Undo involved; nobody has written in about it)",
+    "agent": "https://cursor.com/agents/bc-9e2fdb68-ca7e-50e6-bf4b-5d4f05cb964a",
+    "pr": 633,
+    "url": "https://github.com/eddie-the-lou/latent/pull/633",
+    "status": "Waiting for your review (not merged)"
+   }
+  ],
+  "agentsStillWorking": [],
+  "mergedOvernight": [
+   {
+    "pr": 631,
+    "url": "https://github.com/eddie-the-lou/latent/pull/631",
+    "title": "A block hides people in groups too: live screen, board, names, posts (TRY-567)",
+    "by": "Malcolm · merged Oct 25, 10:46 PM PT"
+   },
+   {
+    "pr": 630,
+    "url": "https://github.com/eddie-the-lou/latent/pull/630",
+    "title": "Rename moderation fixes migration (housekeeping)",
+    "by": "Malcolm · merged Oct 25, 10:20 PM PT"
+   },
+   {
+    "pr": 629,
+    "url": "https://github.com/eddie-the-lou/latent/pull/629",
+    "title": "Moderation notices: an age hold is not a ban; worst rules read anywhere (TRY-534)",
+    "by": "Malcolm · merged Oct 25, 10:15 PM PT"
+   },
+   {
+    "pr": 615,
+    "url": "https://github.com/eddie-the-lou/latent/pull/615",
+    "title": "Editor: drawings stay fixed while you move or resize the video",
+    "by": "Jerry Chen · merged Oct 25, 10:16 PM PT"
+   },
+   {
+    "pr": 628,
+    "url": "https://github.com/eddie-the-lou/latent/pull/628",
+    "title": "Database: same answers, about half the database work (server only)",
+    "by": "Malcolm · merged Oct 25, 10:04 PM PT"
+   },
+   {
+    "pr": 627,
+    "url": "https://github.com/eddie-the-lou/latent/pull/627",
+    "title": "Public groups' 5 live database changes recorded on main (housekeeping)",
+    "by": "Malcolm · merged Oct 25, 10:02 PM PT"
+   },
+   {
+    "pr": 626,
+    "url": "https://github.com/eddie-the-lou/latent/pull/626",
+    "title": "Moderation site: only the founders' @trylatent.co accounts moderate",
+    "by": "Malcolm · merged Oct 25, 9:34 PM PT"
+   },
+   {
+    "pr": 625,
+    "url": "https://github.com/eddie-the-lou/latent/pull/625",
+    "title": "Rename the #624 migration (housekeeping)",
+    "by": "Malcolm · merged Oct 25, 9:23 PM PT"
+   },
+   {
+    "pr": 624,
+    "url": "https://github.com/eddie-the-lou/latent/pull/624",
+    "title": "Discord /leaderboard user answers again (was timing out)",
+    "by": "Malcolm · merged Oct 25, 9:22 PM PT"
+   },
+   {
+    "pr": 623,
+    "url": "https://github.com/eddie-the-lou/latent/pull/623",
+    "title": "Moderation site: founders' @trylatent.co accounts can sign in",
+    "by": "Malcolm · merged Oct 25, 9:08 PM PT"
+   },
+   {
+    "pr": 622,
+    "url": "https://github.com/eddie-the-lou/latent/pull/622",
+    "title": "Moderation site: sign-in code box fits 8-digit codes",
+    "by": "Malcolm · merged Oct 25, 9:00 PM PT"
+   },
+   {
+    "pr": 621,
+    "url": "https://github.com/eddie-the-lou/latent/pull/621",
+    "title": "New moderation site for founders at mod.trylatent.co",
+    "by": "Malcolm · merged Oct 25, 8:58 PM PT"
+   },
+   {
+    "pr": 620,
+    "url": "https://github.com/eddie-the-lou/latent/pull/620",
+    "title": "Spain football blocks: re-send the photos the upload queue skipped (TRY-550)",
+    "by": "Malcolm · merged Oct 25, 6:16 PM PT"
+   },
+   {
+    "pr": 618,
+    "url": "https://github.com/eddie-the-lou/latent/pull/618",
+    "title": "Spain football blocks: tell people in Spain why their videos won't upload (TRY-550)",
+    "by": "Malcolm · merged Oct 25, 5:53 PM PT"
+   }
+  ],
+  "closedOvernight": [],
+  "newOpenNotDig": [
+   {
+    "pr": 619,
+    "url": "https://github.com/eddie-the-lou/latent/pull/619",
+    "title": "Send Feedback: attach a screenshot, and the support@ alert carries it",
+    "by": "Malcolm · opened Oct 25, 6:08 PM PT"
+   },
+   {
+    "pr": 632,
+    "url": "https://github.com/eddie-the-lou/latent/pull/632",
+    "title": "Public groups: Groups designs from the work trial as a clickable prototype (docs only)",
+    "by": "Jerry Chen · opened Oct 25, 10:44 PM PT"
+   }
+  ]
+ },
+ "ageHolds": {
+  "open": [
+   {
+    "username": "shaykalk1",
+    "displayName": "Shay",
+    "email": "lisakalk@gmail.com",
+    "heldAtPT": "Oct 25, 9:17 PM PT",
+    "deletesAfterPT": "Nov 24, 8:17 PM PT",
+    "daysLeft": 30,
+    "postsHidden": 2,
+    "noticeEmailedPT": "Oct 25, 9:17 PM PT",
+    "reminderSentPT": null,
+    "newLast24h": true,
+    "note": "From the child safety report TRY-544."
+   }
+  ],
+  "newLast24h": [
+   {
+    "username": "shaykalk1",
+    "displayName": "Shay",
+    "heldAtPT": "Oct 25, 9:17 PM PT",
+    "status": "open"
+   }
+  ],
+  "resolvedLast24h": [],
+  "summary": "1 age hold (new): @shaykalk1 (Shay), deletes Nov 24 unless released.",
+  "detail": "Held Oct 25, 9:17 PM PT (from child safety report TRY-544). Account email lisakalk@gmail.com. Deletes after Nov 24, 8:17 PM PT, 30 days left (rounded up). 2 posts hidden. Notice emailed Oct 25, 9:17 PM PT; no reminder yet. Nothing released or deleted in the last 24 hours. Holds ever: 2. Checked ~9:20 AM PT. The dig changed nothing.",
+  "query": "/workspace/feedback-digests/age-holds.sql"
+ },
+ "actions": [
+  {
+   "id": "pr-633",
+   "title": "Review #633: Stop retrying empty-clip uploads on every launch",
+   "plainSummary": "On 1.0.9, a few phones had a post whose video file was empty or gone, and the app tried to upload it again on nearly every open, forever (48 tries in about 18 hours for one person). These people never tapped Undo. Two causes, found by reading the code: the 'give up after 3 tries' count reset every time the app opened, and an empty file was treated as a real video (so leftover recording pieces that could rebuild it could get cleaned up). Now an empty or missing video waits one launch in case it's still finishing, then tries to rebuild from leftover pieces, and otherwise stops retrying and shows the existing Video missing label. The post is kept, good videos are never deleted, and no duplicate is made. This PR is built on top of #617, so it includes that fix too: merge #617 first or merge both. Tests were added but couldn't run (no Xcode on the agent's machine).",
+   "status": "Waiting for your review",
+   "url": "https://github.com/eddie-the-lou/latent/pull/633"
+  },
+  {
+   "id": "pr-617",
+   "title": "Review #617 (from yesterday): Undo after Finish no longer uploads an empty clip",
+   "plainSummary": "Still open; 18 more people hit it in the last day.",
+   "status": "Waiting for your review",
+   "url": "https://github.com/eddie-the-lou/latent/pull/617"
+  },
+  {
+   "id": "samuel-send",
+   "title": "Send Samuel Downs his deletion confirmation",
+   "plainSummary": "His account is gone as of this morning. Draft below.",
+   "status": "Needs you",
+   "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+  },
+  {
+   "id": "mod-reports",
+   "title": "Look at 4 moderation reports (TRY-545, TRY-555 child safety; TRY-548 spam; TRY-543 bullying) and close TRY-544",
+   "plainSummary": "Malcolm's bot filed them from in-app reports. Age hold only if an account looks under 13. The mod site at mod.trylatent.co is live.",
+   "status": "Needs you",
+   "url": "https://linear.app/trylatent/issue/TRY-555"
+  },
+  {
+   "id": "replies",
+   "title": "3 reply drafts (2 optional)",
+   "plainSummary": "Not sent. Approve each in chat.",
+   "status": "Waiting for your review"
+  },
+  {
+   "id": "bot-new",
+   "title": "Malcolm's bot fixes waiting for approval: TRY-563 (new iPhone launch crash), TRY-564 (alarm permission freeze), and older TRY-539, TRY-542, TRY-540",
+   "plainSummary": "Fixes drafted on branches; PRs open once approved.",
+   "status": "Needs you",
+   "url": "https://linear.app/trylatent/issue/TRY-563"
+  },
+  {
+   "id": "sentry",
+   "title": "Re-connect Sentry",
+   "plainSummary": "Still needs re-auth.",
+   "status": "Needs you"
+  },
+  {
+   "id": "age-holds",
+   "title": "Age holds: 1 new (@shaykalk1)",
+   "plainSummary": "Deletes Nov 24, 8:17 PM PT unless released. Nothing for the dig to do.",
+   "status": "done"
+  },
+  {
+   "id": "email",
+   "title": "Email dig to eddie@weaive.app",
+   "status": "done"
+  },
+  {
+   "id": "archive",
+   "title": "Publish archive",
+   "status": "done",
+   "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-10-26"
+  }
+ ],
+ "bugs": [
+  {
+   "id": "empty-clip-loop",
+   "title": "Some phones retry an empty video on every app open, forever (1.0.9, no Undo)",
+   "severity": "medium",
+   "people": 7,
+   "status": "PR opened: #633",
+   "summary": "7 people: 48, 38, 9, 9, 6 and 5 failed tries each, plus one with 53 that started hours before any Undo.",
+   "detail": "Empty-video upload failures overall: 234 from 25 people (was 127 from 11). About 18 of those people hit it right after Undo, which #617 fixes. I asked a Cloud Agent to fix the rest.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/633",
+   "sources": [
+    "posthog"
+   ]
+  },
+  {
+   "id": "undo-empty",
+   "title": "Undo after Finish uploads an empty video (1.0.9)",
+   "severity": "medium",
+   "people": 18,
+   "status": "PR #617 waiting for your review",
+   "summary": "About 18 people in the last day, each a split second after Undo.",
+   "detail": "",
+   "url": "https://github.com/eddie-the-lou/latent/pull/617",
+   "sources": [
+    "posthog"
+   ]
+  },
+  {
+   "id": "spain",
+   "title": "Videos stuck or late in Spain during football matches",
+   "severity": "medium",
+   "people": null,
+   "status": "Malcolm: TRY-550 (#618, #620 merged, not in the App Store yet)",
+   "summary": "Spanish internet providers block Cloudflare addresses during LaLiga matches, so videos can't upload or load there (27 of 42 Spanish posters had a stuck post on Oct 25).",
+   "detail": "Shows up in PostHog as TLS -1200 upload errors. Oto in Discord (videos seen “a whole day” late) may be this, but he didn't say where he is.",
+   "url": "https://linear.app/trylatent/issue/TRY-550",
+   "sources": [
+    "linear",
+    "posthog",
+    "discord"
+   ]
+  },
+  {
+   "id": "new-iphone-crash",
+   "title": "App crashes on every launch for one person on a brand new iPhone",
+   "severity": "medium",
+   "people": 1,
+   "status": "Malcolm's bot TRY-563 (fix drafted, Need Approval)",
+   "summary": "4 crashes in Sentry from one person on a new iPhone model on iOS 27.1.",
+   "detail": "Not duplicated.",
+   "url": "https://linear.app/trylatent/issue/TRY-563",
+   "sources": [
+    "linear"
+   ]
+  },
+  {
+   "id": "alarm-freeze",
+   "title": "App still freezes checking alarm permission",
+   "severity": "low",
+   "people": 1,
+   "status": "Malcolm's bot TRY-564 (fix drafted, Need Approval)",
+   "summary": "2 freezes for one person.",
+   "detail": "Not duplicated.",
+   "url": "https://linear.app/trylatent/issue/TRY-564",
+   "sources": [
+    "linear"
+   ]
+  },
+  {
+   "id": "camera-settings",
+   "title": "“Turn on the camera in Settings” but there's no switch there (Joud)",
+   "severity": "low",
+   "people": 1,
+   "status": "Watch",
+   "summary": "Joud on 1.0.9 (47). 1.0.9 already only shows this after someone tapped Don't Allow (#536).",
+   "detail": "Likely a Screen Time restriction or she looked in the wrong place. She can record with the camera off.",
+   "sources": [
+    "in-app"
+   ]
+  },
+  {
+   "id": "capture-not-running",
+   "title": "A few recordings failed to start the camera",
+   "severity": "low",
+   "people": 8,
+   "status": "Watch",
+   "summary": "session_capture_failed 14 from 8 people (was 2 from 2), mostly “session not running” on 1.0.9.",
+   "detail": "Small numbers, no one wrote in. Watching.",
+   "sources": [
+    "posthog"
+   ]
+  },
+  {
+   "id": "music-why",
+   "title": "“Why can't I add music” (W, Discord)",
+   "severity": "low",
+   "people": 1,
+   "status": "Probably needs the update",
+   "summary": "Songs on posts are in 1.0.9.",
+   "detail": "Unanswered in Discord.",
+   "sources": [
+    "discord"
+   ]
+  },
+  {
+   "id": "sentry-auth",
+   "title": "Sentry connector needs re-auth",
+   "severity": "low",
+   "people": null,
+   "status": "Needs you",
+   "summary": "Sentry still needs re-auth (recurring). No crash data from me today.",
+   "detail": "Malcolm's bot still files Sentry tickets (TRY-563, TRY-564 last night).",
+   "sources": [
+    "sentry"
+   ]
+  }
+ ],
+ "features": [
+  {
+   "id": "week-monday",
+   "title": "Start the week on Monday",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Need Approval (TRY-439)",
+   "summary": "Luttgens (@loulou) in Belgium wants a setting for which day the week starts.",
+   "detail": "",
+   "url": "https://linear.app/trylatent/issue/TRY-439",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "streak-rules",
+   "title": "Pick your own streak rule (25 min every day)",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Need Approval (TRY-496)",
+   "summary": "Samarth (@samthebam).",
+   "detail": "",
+   "url": "https://linear.app/trylatent/issue/TRY-496",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "focus-sounds",
+   "title": "Lo-fi or focus sounds inside the app",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Need Approval (TRY-570)",
+   "summary": "Samarth (@samthebam).",
+   "detail": "Second ask ever.",
+   "url": "https://linear.app/trylatent/issue/TRY-570",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "apps-no-pause",
+   "title": "Use certain apps without pausing the timer",
+   "count": 3,
+   "peopleCountLabel": "3 in Discord",
+   "status": "Need Approval (TRY-558)",
+   "summary": "RyanGol (Teams, CapCut), Snowsnarl agrees; chloe worries it makes it easy to fake.",
+   "detail": "iOS doesn't tell the app which app someone opened; the bot suggests a short grace period instead.",
+   "url": "https://linear.app/trylatent/issue/TRY-558",
+   "sources": [
+    "discord",
+    "linear"
+   ]
+  },
+  {
+   "id": "song-part",
+   "title": "Pick the song part from anywhere in the song",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Need Approval (TRY-547)",
+   "summary": "Chris (@chrisxao).",
+   "detail": "",
+   "url": "https://linear.app/trylatent/issue/TRY-547",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "pause-song",
+   "title": "Pausing a video should pause its song",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Need Approval (TRY-556)",
+   "summary": "Aryan (@haski).",
+   "detail": "",
+   "url": "https://linear.app/trylatent/issue/TRY-556",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "android",
+   "title": "Android",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "No Android app yet (TRY-395)",
+   "summary": "dimi (@dim).",
+   "detail": "",
+   "url": "https://linear.app/trylatent/issue/TRY-395",
+   "sources": [
+    "in-app"
+   ]
+  },
+  {
+   "id": "mac",
+   "title": "Mac app",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "Backlog (TRY-166); no Mac app",
+   "summary": "chloe in Discord: “mac camera kinda ahh tho”.",
+   "detail": "",
+   "url": "https://linear.app/trylatent/issue/TRY-166",
+   "sources": [
+    "discord"
+   ]
+  },
+  {
+   "id": "trim",
+   "title": "Trim a clip",
+   "count": 1,
+   "peopleCountLabel": "1 new",
+   "status": "FYI",
+   "summary": "PlayguyCartman asked in Discord; KrabbyKai thinks it's already there.",
+   "detail": "",
+   "sources": [
+    "discord"
+   ]
+  },
+  {
+   "id": "timelapse-length",
+   "title": "Pick how long your timelapse is",
+   "count": null,
+   "peopleCountLabel": "7 up / 2 down",
+   "status": "Need Approval (TRY-493)",
+   "summary": "Unchanged.",
+   "detail": "",
+   "url": "https://linear.app/trylatent/issue/TRY-493",
+   "sources": [
+    "discord",
+    "linear"
+   ]
+  },
+  {
+   "id": "beta",
+   "title": "People want to stay testers",
+   "count": 2,
+   "peopleCountLabel": "2 new, 168 total",
+   "status": "Malcolm handles",
+   "summary": "2 new “Stay as a Beta Tester” picks since yesterday's review (latest Oct 25, 6:01 PM PT).",
+   "detail": "Count only (TRY-343).",
+   "sources": [
+    "supabase"
+   ]
+  }
+ ],
+ "bySource": {
+  "inApp": {
+   "new": 7,
+   "note": "7 new public.feedback rows since yesterday's review: 1 real bug report (Joud can't find the camera switch in Settings) and 6 ideas (whole-song picker, pause song with video, 25-min daily streak, focus sounds, Monday week start, Android). Malcolm's bot already filed tickets for most. 6 of 7 are on 1.0.9."
+  },
+  "discord": {
+   "new": 65,
+   "note": "About 100 new messages since Oct 25 ~9:15 AM PT, mostly late-night chatter. Oto (new) says friends sometimes see his videos a whole day late and “The app feels rlly buggy”, asked twice when the next update drops; nobody answered yet. W asked “Why can't I add music” (unanswered). PlayguyCartman asked how to trim a clip. RyanGol started a thread asking to use some apps (Teams, CapCut) without pausing the timer (Malcolm's bot filed TRY-558). 00001111 (@superpager, MIT) said “This app is cool” and loved the intro haptics. Timelapse length vote still 7 up / 2 down. Nothing new in #announcements. Source: discord-2026-10-26.md."
+  },
+  "gmail": {
+   "new": 0,
+   "note": "No new emails from app users since yesterday. Samuel's deletion is now done (account gone), so his draft is ready to send. Hizam and Daniela still optional. Hiring-pause replies (Edwin, Nikitta, Hasan, Albert) skipped (the hiring watch handles those). No bug emails, no video attachments, no PostHog alert emails."
+  },
+  "survey": {
+   "newRows": 0,
+   "seanEllis": "39/25/2 of 66",
+   "note": "Export HTTP 200 (25,292 bytes). Unchanged vs Oct 25 (all 3 tabs row-for-row identical). No new free text."
+  },
+  "sentry": {
+   "new": [],
+   "note": "Unavailable: Sentry still needs re-auth (recurring). No data invented."
+  },
+  "posthog": {
+   "note": "Last 24h vs prior 24h (events/people, to ~9:25 AM PT): installs 1,257 (was 776); onboarding done 862 (was 544); sessions started 9,675/3,933 (was 7,394/3,027); sessions discarded 1,608/1,001 (was 1,307/786); app updates 2,671 (was 1,548). session_save_failed 59/38 (was 32/17; 25 of them are the new “wait until signed in” deferral from the TRY-510 fix, the rest offline or TLS), clip_upload_failed 398/62 (was 335/41: 234 empty clips from 25 on 1.0.9 (47), about 18 of them right after Undo and 7 retrying every app open; 72 missing-post from 11 mostly on 1.0.8; the rest network, incl. 29 TLS errors, which is what the Spain block looks like), media_invoke_retry_exhausted 798/102 (was 1,079/80), session_capture_failed 14/8 (was 2/2; mostly “session not running”), capture_stalled 112/22 (was 145/20), segment_finalize_failed 17/9 (was 12/9), group_action_failed 2,277/485 (was 1,498/354), backend_unreachable_shown 381/277 (was 282/214), invite_check_failed 159/56 (was 178/36), friend_request_failed 57/10 (was 34/6), sign_in_failed 25/15 (was 13/8), sign_up_failed 12/2 (was 7/2), clip_upload_abandoned 54/8 (was 56/9), session_unlocked_elsewhere 47/26 (was 136/54; all on 1.0.8 or older, none on 1.0.9). Rage clicks 9,096/2,691 (was 6,681/2,124). People starting a session in the last day by build: 1.0.9 (47) 3,230, 1.0.8 (43) 712, 1.0.6 (39) 91, 1.0.9 (48) 42, 1.0.7 (41) 24. 1.0.9 (47) in the last day: 1,238 installs, 2,571 updates. App Store: 1.0.9, 4.94 stars (198). Alerts: edge-function retry and clip size both not firing; last notification Oct 23, 6:27 PM PT. No PostHog alert emails."
+  },
+  "github": {
+   "note": "14 PRs merged since yesterday's review, all Malcolm's except Jerry's #615 (drawings stay put): the new moderation site (#621, #622, #623, #626), blocks hide people in groups (#631), age hold notices say it's not a ban (#629), Spain football-block help (#618, #620), half the database work (#628), Discord /leaderboard fix (#624), and housekeeping (#625, #627, #630). New open: Malcolm #619, Jerry #632. #617 still open."
+  },
+  "linear": {
+   "note": "New since yesterday from Malcolm's bot (Need Approval): TRY-547, 548, 555, 556, 558, 563, 564, 570. Done: TRY-549/550 (Spain), 534, 559-562, 565-569. TRY-544 has its age hold placed but still says Need Approval. No open ticket covers the empty video retried on every launch, so I opened a fix."
+  },
+  "betaOptIns": {
+   "new": 2,
+   "total": 168
+  }
+ },
+ "rawQuotes": [
+  {
+   "id": "inapp-aa3b44ba",
+   "source": "in-app",
+   "username": "@chrisxao (Chris)",
+   "whenPT": "Oct 25, 10:32 AM PT",
+   "build": "1.0.9 (47)",
+   "kind": "feature",
+   "quote": "it would be great if music selection includes the whole song instead of just 30 seconds of apple preview (being able to select a snippet from anywhere in the song - I don’t mean using the entire song)",
+   "note": "In-app feature · Malcolm's bot filed TRY-547 (Need Approval); only the 30 sec Apple preview can be played to everyone today"
+  },
+  {
+   "id": "inapp-519da446",
+   "source": "in-app",
+   "username": "@haski (Aryan)",
+   "whenPT": "Oct 25, 5:14 PM PT",
+   "build": "1.0.9 (47)",
+   "kind": "bug",
+   "quote": "Idk if this is a bug or not, but pausing timelapse should pause music too imo",
+   "note": "Filed as a bug, really an idea · Malcolm's bot filed TRY-556 (Need Approval)"
+  },
+  {
+   "id": "inapp-73e83723",
+   "source": "in-app",
+   "username": "@samthebam (Samarth)",
+   "whenPT": "Oct 25, 11:46 PM PT",
+   "build": "1.0.9 (47)",
+   "kind": "feature",
+   "quote": "I want it so that I can make my streak require 25 mins every day rather than 3 a week",
+   "note": "In-app feature · close to TRY-496 (let people pick their own streak rules, Need Approval)"
+  },
+  {
+   "id": "inapp-5a6eea10",
+   "source": "in-app",
+   "username": "@samthebam (Samarth)",
+   "whenPT": "Oct 26, 1:16 AM PT",
+   "build": "1.0.9 (47)",
+   "kind": "feature",
+   "quote": "in-app lo-fi beats, access to music apps without having to leave the app if possible, and those background sounds that iphones have in app would be pretty cool",
+   "note": "In-app feature · Malcolm's bot filed TRY-570 (Need Approval)"
+  },
+  {
+   "id": "inapp-fd6bdd5f",
+   "source": "in-app",
+   "username": "@loulou (Luttgens)",
+   "whenPT": "Oct 26, 4:27 AM PT",
+   "build": "1.0.8 (43)",
+   "kind": "feature",
+   "quote": "Could it be possible to change the format of the weeks. Maybe it’s different in America but here in Belgium we prefer to start the week on Monday and end it on Sunday.\nSo I thought you could put something in the settings so we could choose when the week start.",
+   "note": "In-app feature · TRY-439 (let the week start on Monday, Need Approval)"
+  },
+  {
+   "id": "inapp-5a6f08d1",
+   "source": "in-app",
+   "username": "@dim (dimi)",
+   "whenPT": "Oct 26, 5:54 AM PT",
+   "build": "1.0.9 (47)",
+   "kind": "feature",
+   "quote": "i really need an android feature with this app",
+   "note": "In-app feature · Android (TRY-395); no Android app yet"
+  },
+  {
+   "id": "inapp-91c7705e",
+   "source": "in-app",
+   "username": "@joud (Joud)",
+   "whenPT": "Oct 26, 7:11 AM PT",
+   "build": "1.0.9 (47)",
+   "kind": "bug",
+   "quote": "hey, it’s telling me that i need to turn on the camera from settings, but theres not even an option for that in the settings app",
+   "note": "In-app bug · 1.0.9 already has #536 (only sends people to Settings after they tapped Don't Allow). Likely Screen Time or a restriction is hiding the switch, or she looked under Privacy instead of Settings › Latent. Not clear enough for a fix; she can still record with the camera off"
+  },
+  {
+   "id": "discord-1026-0",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Oto [new member]",
+   "author": "Oto [new member]",
+   "whenPT": "10/25 11:57 AM PT",
+   "kind": "discord",
+   "quote": "\"why does it take like a whole day for my video to actually be seen by my friends after uploading\" / (11:58 AM) \"And sometimes it takes a few minutes\" / (11:58 AM) \"The app feels rlly buggy\" / (11:58 AM) \"Whens the next update dropping\" — BUG/question (upload delay), unanswered",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-1",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Oreo [new member]",
+   "author": "Oreo [new member]",
+   "whenPT": "10/25 12:48 PM PT",
+   "kind": "discord",
+   "quote": "\"ban this guy\" (reply context: potato's message)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-2",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki (is tired) [ᑐᑌᑎᕮ]",
+   "author": "ki (is tired) [ᑐᑌᑎᕮ]",
+   "whenPT": "10/25 12:48 PM PT",
+   "kind": "discord",
+   "quote": "\"i will dox ur ass\" (reply to Oreo's \"ban this guy\"?) — chatter (joke/hostile banter)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-3",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Oto",
+   "author": "Oto",
+   "whenPT": "10/25 1:41 PM PT",
+   "kind": "discord",
+   "quote": "\"He got hacked, not him\" (reply to ki)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-4",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki (is tired)",
+   "author": "ki (is tired)",
+   "whenPT": "10/25 1:47 PM PT",
+   "kind": "discord",
+   "quote": "\"yea ik i was refering to the hacker\" (reply to Oto)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-5",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "PlayguyCartman [new member]",
+   "author": "PlayguyCartman [new member]",
+   "whenPT": "10/25 2:05 PM PT",
+   "kind": "discord",
+   "quote": "\"Can I trim a clip somehow?\" — question",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-6",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai [FPV]",
+   "author": "KrabbyKai [FPV]",
+   "whenPT": "10/25 2:47 PM PT",
+   "kind": "discord",
+   "quote": "\"yeah i thik its a feature already\" (reply to PlayguyCartman)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-7",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Oto",
+   "author": "Oto",
+   "whenPT": "10/25 7:23 PM PT",
+   "kind": "discord",
+   "quote": "\"Can someone answer this\" / \"Are uploading servers online only during a specific time of the day\" (reply quoting the 11:57 AM upload question) — question, unanswered",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-8",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "W",
+   "author": "W",
+   "whenPT": "10/25 8:14 PM PT",
+   "kind": "discord",
+   "quote": "\"Why can't I add music\" / (8:17 PM) \"Smb help me\" — question (music), unanswered",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-9",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "luke [FOMO] [new member]",
+   "author": "luke [FOMO] [new member]",
+   "whenPT": "10/25 8:42 PM PT",
+   "kind": "discord",
+   "quote": "\"yoo anyone wanna be friends on latent\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-10",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "˚₊‧ ℤ𝕪𝕩𝕤𝕣𝕒 ໒꒱ ‧₊˚ [yaоi]",
+   "author": "˚₊‧ ℤ𝕪𝕩𝕤𝕣𝕒 ໒꒱ ‧₊˚ [yaоi]",
+   "whenPT": "10/25 10:14 PM PT",
+   "kind": "discord",
+   "quote": "\"NOT THE MR BEAST SCAM BRO\" — chatter",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-11",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai [FPV]",
+   "author": "KrabbyKai [FPV]",
+   "whenPT": "10/25 10:42 PM PT",
+   "kind": "discord",
+   "quote": "\"malcolm gonna slime me for talking in the wrong channel gng\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-12",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra [yaоi]",
+   "author": "Zyxsra [yaоi]",
+   "whenPT": "10/25 10:42 PM PT",
+   "kind": "discord",
+   "quote": "\"Oh shittings\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-13",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki",
+   "author": "ki",
+   "whenPT": "10/25 10:42 PM PT",
+   "kind": "discord",
+   "quote": "\"yea malcolm forgive us\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-14",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:43 PM PT",
+   "kind": "discord",
+   "quote": "\"malcolm eddie ive been a good tester please lmao\" (1 reaction)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-15",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki",
+   "author": "ki",
+   "whenPT": "10/25 10:43 PM PT",
+   "kind": "discord",
+   "quote": "\"erase all evidence\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-16",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:43 PM PT",
+   "kind": "discord",
+   "quote": "\"Og tester privileges\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-17",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki",
+   "author": "ki",
+   "whenPT": "10/25 10:43 PM PT",
+   "kind": "discord",
+   "quote": "\"nuke the server\" (1 reaction) / \"kidding btw\" / \"dont ban me\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-18",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:43 PM PT",
+   "kind": "discord",
+   "quote": "\"malcolm send this kid straight to jail\" / \"no trial no jury\" (1) / \"execution for ki\" (1)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-19",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:43 PM PT",
+   "kind": "discord",
+   "quote": "\"Modssss get this guy\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-20",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki",
+   "author": "ki",
+   "whenPT": "10/25 10:43 PM PT",
+   "kind": "discord",
+   "quote": "\"i plead the fifth\" / \"i think\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-21",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:44 PM PT",
+   "kind": "discord",
+   "quote": "\"Who wanna do my psyc assignment for me pls\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-22",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki",
+   "author": "ki",
+   "whenPT": "10/25 10:44 PM PT",
+   "kind": "discord",
+   "quote": "\"freak i forgot the bill o rights\" / \"wait i have a test on that tmrw im so done\" / (reply to Zyxsra) \"yo me\" / \"im so bored\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-23",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:44 PM PT",
+   "kind": "discord",
+   "quote": "\"yo u can write my umich supps \" / \"oh shit wait gng\" / \"hop on vc i forgot i had calc notes i need to take\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-24",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki",
+   "author": "ki",
+   "whenPT": "10/25 10:44 PM PT",
+   "kind": "discord",
+   "quote": "\"whats it ab\" / \"psychosis\" / \"igu\" / \"i got experience\" (1)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-25",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:45 PM PT",
+   "kind": "discord",
+   "quote": "\"SPEAKING OF UMICH LIKE THE FRIEND WHO GOT INTO GTECH GOT REJECTED FROM UMICH…..\" (1) / \"Its just vocab tbh\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-26",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki",
+   "author": "ki",
+   "whenPT": "10/25 10:45–10:46 PM PT",
+   "kind": "discord",
+   "quote": "\"ok but dont scare me with that insane whitney houston shi again\" / \"HOW DO YOU MEMORIZE EVERY WORD OF A SONG\" / \"FROM BLUE LOCK EDITS\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-27",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:45–10:46 PM PT",
+   "kind": "discord",
+   "quote": "\"fuk\" / \"wtf \" / \"i have no idea wht ur talking abt\" / \"oh shi i remember that\" / \"that was chloe\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-28",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:46 PM PT",
+   "kind": "discord",
+   "quote": "\"Its 11 over here my parents are sleeping maybe some other time lmao\" / \"Genuinely wtf are you talking about\" / \"Bro go sleep\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-29",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:46–10:47 PM PT",
+   "kind": "discord",
+   "quote": "\"lmao same but ight its chill\" (1) / \"oh my god im the goat\" / \"i just remembered i did the hw early\" (1)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-30",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki",
+   "author": "ki",
+   "whenPT": "10/25 10:46 PM PT",
+   "kind": "discord",
+   "quote": "\"its 1 rn i might be fahed\" / \"oh well\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-31",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:47 PM PT",
+   "kind": "discord",
+   "quote": "\"Wait do my hw then its easy stuff anyway\" / \"Give me uhh an example of priming\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-32",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:47 PM PT",
+   "kind": "discord",
+   "quote": "\"ight bet share that\" / \"so u sand the surface\" / \"then u prime it\" / \"with belzona 5050\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-33",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:48 PM PT",
+   "kind": "discord",
+   "quote": "\"BROTHA THIS ISNT ENGINEERING\" / \"Yeah\" / \"Wow look st yiu\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-34",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:48 PM PT",
+   "kind": "discord",
+   "quote": "(attachment/embed) \"uh like\" / \"well its implicit memory right\" / \"like how in that one experiment\" / (10:49) \"people recognized bananas better when introduced to the color yellow instead of the color red\" / \"because they associate yellow with yellow fruit such as the banana while associating the red fruit to something else like apples\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-35",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:49 PM PT",
+   "kind": "discord",
+   "quote": "\"U still remember\" / \"I got a 5 on apush but i still dont remember shit\" / \"Wait are we sure thats not smth else\" / \"Thats the only exam i got a 5 on and thats cus our teacher was highkey goated af\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-36",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:49 PM PT",
+   "kind": "discord",
+   "quote": "\"i got a 4 \" / \"george washington rode a charger into the british\" / (10:50, 1 reaction, attachment) / \"we love our teachers\" / (10:51) \"hell yeah\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-37",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki",
+   "author": "ki",
+   "whenPT": "10/25 10:50 PM PT",
+   "kind": "discord",
+   "quote": "\"wth are you talkin ab\" / \"no no no dont do that\" / \"im sliming myself out\" / \"hs cant be real\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-38",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:51–10:52 PM PT",
+   "kind": "discord",
+   "quote": "\"Gotta use this for ur leq evidence\" / \"For that complexity point\" / \"Are we sure thats primeing and not smth else cus idk myself twin\" / \"Perceptual set, schema and priming all lowke similar so idk\" (edited)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-39",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:54 PM PT",
+   "kind": "discord",
+   "quote": "\"i lowk dunno\" / \"perceptual set is super different\" / \"cuz its an expectation\" / \"js cuz you were exposed to the color yellow doesn't mean you expect to see a banana next\" / \"perceptual set is like when your shown a variety of different sodas, so naturally you expect the next thing you see to be a soda\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-40",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:54 PM PT",
+   "kind": "discord",
+   "quote": "\"Its okay\" / \"Ill half ass it\" / \"Alr imma lowk lock in i have another hour before this is due. Im 1/5 page dine\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-41",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KaLee 🍀 [PIИK]",
+   "author": "KaLee 🍀 [PIИK]",
+   "whenPT": "10/25 10:54 PM PT",
+   "kind": "discord",
+   "quote": "\"Wat is that \" / (10:55) \"Ohhh\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-42",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:55–10:56 PM PT",
+   "kind": "discord",
+   "quote": "\"schema is a mental block\" / \"schema is like mental organization\" / \"so you categorize yellow things as having the trait yellow\" / \"hi kalee\" / \"join up on the vc lmao\" / \"ye it is L\" (1)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-43",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:55–10:56 PM PT",
+   "kind": "discord",
+   "quote": "\"OH RIGHT RIGHT OKOK\" / \"Confusing but alright\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-44",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KaLee 🍀",
+   "author": "KaLee 🍀",
+   "whenPT": "10/25 10:56–10:57 PM PT",
+   "kind": "discord",
+   "quote": "\"Long time no see\" / \"Hallo\" / \"Nahhhhh\" / \"Yeahhhhh\" / \"I dont like vc not my thing\" / \"Like 5 pm\" / \"Yuh\" / \"How r uuu?\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-45",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:56–10:57 PM PT",
+   "kind": "discord",
+   "quote": "\"sup sup\" / \"changed pfp\" / \"ahh cmon\" / \"whats the time there\" / \"smh\" (1) / \"sweet\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-46",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 10:57–10:59 PM PT",
+   "kind": "discord",
+   "quote": "\"WAIT Anyone here like formula one?\" / \"Aww nws\" (1) / \"BRO I WAS SO SCARED HE WAS GONNA GET THAT CHAMPIONSHIP THIS RACE\" / \"I WAS LIKE THERES NO WAY\" / \"Night RUINED at this\" / \"RIGHT LIKE\" / \"BRO\" / \"THIS CANNOT BE FR\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-47",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KaLee 🍀",
+   "author": "KaLee 🍀",
+   "whenPT": "10/25 10:58–10:59 PM PT",
+   "kind": "discord",
+   "quote": "\"Idk much abt f1\" / \"Like ik some stuff cuz of my brother\" / (10:59 attachment/embed only)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-48",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 10:58–10:59 PM PT",
+   "kind": "discord",
+   "quote": "\"HELL YEAH\" / \"kimi is gonna win it in mexico \" / \"GENUINLEY\" / \"I SAW THIS\" / \"AND\" / \"FUCK\" / \"FUCKKKKKK\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-49",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 11:00–11:03 PM PT",
+   "kind": "discord",
+   "quote": "\"I rlly dont want kimi to win. Its gonna be so boring. I mean im happy for him and all but like\" / \"Cmon\" / \"Lewis hamilton clutch mid season pls?\" / \"EXACTLY\" / \"THIS IS SO IMPORTANT\" / \"kimi ily but just win in later season or smth\" / \"RN YOU GOTTA GOO\" / \"genuinely waiting for 8th champion. Then lewis can peacefully retire\" / \"Can we talk abiut how we BARLEY avoided kimi being a wdc\" / \"P4 lewis and p8 george\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-50",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 11:00–11:04 PM PT",
+   "kind": "discord",
+   "quote": "\"yes bro pleaasseeeee\" / \"i cant have vettel lose his record for youngest wdc ever\" / \"I KNOW RIGHTTT\" / \"GENIULNEPOIUAYHSPDFOIASDF\" / \"WSER4THP9ERDFIRHU8WERDFSIP8HRWSERDFH;ESRDFTP8H9\" / \"cota was bad bro\" / \"ik\" / \"9 fingers on the trophy\" (1) / \"genuinely barely missed it\" (1)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-51",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 11:12 PM PT",
+   "kind": "discord",
+   "quote": "\"Yeah\" / \"Wanted max vs lewis for wdc this year\" (1) / \"Got lewis (hopefully) vs replacement instead\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-52",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "10/25 11:12–11:15 PM PT",
+   "kind": "discord",
+   "quote": "\"fr\" / \"AND DID YOU SEE\" / \"ALONSO\" / \"LOSES\" / \"2 SECONDS\" / \"ON THE STRAIGHT\" / \"OH MY HONDA\" / \"BRO ALONSOAPOIFHAPSOIDHAPSOIDHASDF\" / \"I NEED ALONSO WDC\" / \"real real real\" (1)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-53",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "ki",
+   "author": "ki",
+   "whenPT": "10/25 11:13–11:14 PM PT",
+   "kind": "discord",
+   "quote": "\"I WANTED KIMI TO WIN SINCE YHE START\" / \"I KID U NOT\" / \"THE FIRST YR I STARTED WATCHING WAS THIS YR\" / \"N I SAY I LIKE KIMI N HE IMMEDIATELY WINS\"",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-54",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "Zyxsra",
+   "author": "Zyxsra",
+   "whenPT": "10/25 11:13 & 11:15 PM PT",
+   "kind": "discord",
+   "quote": "\"OKAY KIMI IS GOOD HE RLLY IS BUT GUYS. THERES JUST TOO MUCH ON STAKE\" / \"Rookie of the year\" (edited)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-55",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "00001111 [new member]",
+   "author": "00001111 [new member]",
+   "whenPT": "10/26 1:32 AM PT",
+   "kind": "discord",
+   "quote": "\"This app is cool\" / (1:33) \"The haptic feedback in the app intro was lit too\" / (1:34) \"I'm @superpager on Latent, I'll be working though my class (MIT's xv6 operating systems course) feel free to add me anyone\" — chatter / positive feedback",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-56",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "charan",
+   "author": "charan",
+   "whenPT": "10/26 5:18 AM PT",
+   "kind": "discord",
+   "quote": "\"thank god I didn't watch the race\" / (5:19) \"I still dk why Russell got a pen\" (reply to KrabbyKai's \"cota was bad bro\")",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-57",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "KrabbyKai [FPV]",
+   "author": "KrabbyKai [FPV]",
+   "whenPT": "10/26 7:02 AM PT",
+   "kind": "discord",
+   "quote": "\"whoah your MIT?\" / \"teach me your ways \" / \"i just sent a friend request\" (1) / \"im krabbykai\" (reply to 00001111)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-58",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "fusion [4562]",
+   "author": "fusion [4562]",
+   "whenPT": "10/26 7:04 AM PT",
+   "kind": "discord",
+   "quote": "\"lemme send one toooo\" (1) (reply to 00001111)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-59",
+   "source": "discord",
+   "channel": "#general-chat",
+   "username": "luke [FOMO]",
+   "author": "luke [FOMO]",
+   "whenPT": "10/26 7:10 AM PT",
+   "kind": "discord",
+   "quote": "\"just sent a friend req, that sounds sick\" (1) (reply to 00001111)",
+   "note": "Discord · #general-chat · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-60",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "RyanGol",
+   "author": "RyanGol",
+   "whenPT": "10/25 6:38 PM PT",
+   "kind": "discord",
+   "quote": "\"Sometimes, when studying, I have to go into certain apps, such as Teams, and CapCut if I'm editing a video project. It kinda annoys me that this pauses the timer, because I could spend an hour editing a video on capcut for school, and it wouldn't be tracked.\" — feature request",
+   "note": "Discord · #feature-requests · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-61",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "chloe",
+   "author": "chloe",
+   "whenPT": "10/25 6:43 PM PT",
+   "kind": "discord",
+   "quote": "\"but then it'd be way easy to larp\"",
+   "note": "Discord · #feature-requests · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-62",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "RyanGol",
+   "author": "RyanGol",
+   "whenPT": "10/25 9:44 PM PT",
+   "kind": "discord",
+   "quote": "\"yea true but like just dont select social media as the apps you can go into\" (edited)",
+   "note": "Discord · #feature-requests · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-63",
+   "source": "discord",
+   "channel": "#feature-requests",
+   "username": "Snowsnarl [VEX]",
+   "author": "Snowsnarl [VEX]",
+   "whenPT": "10/26 3:52 AM PT",
+   "kind": "discord",
+   "quote": "\"this is so real\" / \"cuz sometimes i get hw on whatsapp\" / \"but if it was an option id just talk to my friends and larp studying\"",
+   "note": "Discord · #feature-requests · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "discord-1026-64",
+   "source": "discord",
+   "channel": "#questions",
+   "username": "katie's thread \"when will it be available on mac?\" (now 6 messages)",
+   "author": "katie's thread \"when will it be available on mac?\" (now 6 messages)",
+   "whenPT": "new: chloe",
+   "kind": "discord",
+   "quote": "10/25 6:04 PM PT — \"mac camera kinda ahh tho\" — chatter / Mac app feedback",
+   "note": "Discord · #questions · as written down by the Discord check (text in quotes is verbatim)"
+  },
+  {
+   "id": "gmail-samuel",
+   "source": "gmail",
+   "username": "Samuel Downs",
+   "email": "srdowns2010@gmail.com",
+   "whenPT": "Oct 16, 4:13 PM PT",
+   "kind": "email",
+   "quote": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+   "note": "Email · Re: Delete account · carried from earlier · reply drafted below"
+  },
+  {
+   "id": "gmail-hizam-thanks",
+   "source": "gmail",
+   "username": "Hizam (Mohammad Tuan)",
+   "email": "mohammadtuan4@gmail.com",
+   "whenPT": "Oct 24, 11:22 PM PT",
+   "kind": "email",
+   "quote": "Awesome, thank you so much!\n\nWill get back to you soon.\n\nHizam",
+   "note": "Email · Re: Would Love to Try Latent · carried from earlier · reply drafted below (optional)"
+  },
+  {
+   "id": "gmail-daniela",
+   "source": "gmail",
+   "username": "Daniela Boehm",
+   "email": "daniboehm0305@gmail.com",
+   "whenPT": "Oct 25, 4:51 AM PT",
+   "kind": "email",
+   "quote": "Thank you, looking forward to it!",
+   "note": "Email · Re: lock in twin · carried from earlier · reply drafted below (optional)"
+  }
+ ],
+ "replyDrafts": [
+  {
+   "id": "samuel",
+   "name": "Samuel Downs",
+   "to": "srdowns2010@gmail.com",
+   "subject": "Re: Delete account",
+   "threadId": "1a146fe4c9172b23",
+   "replyToMessageId": "1a146fe4c9172b23",
+   "theirMessage": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+   "theirWhenPT": "Oct 16, 4:13 PM PT",
+   "body": "Hey Samuel,\n\n[CHECK: as of ~9:20 AM PT Oct 26 there's no Latent account for srdowns2010@gmail.com or @captsam any more; confirm you or Malcolm deleted everything] Your Latent account and all the data tied to srdowns2010@gmail.com have been permanently deleted. Sorry to see you go, and thanks for giving Latent a try.\n\nEddie",
+   "optional": false,
+   "isNew": false,
+   "note": "Carried over (unanswered since Oct 16). His account no longer exists as of ~9:20 AM PT Oct 26 (it was still there yesterday morning), so this can go out now. He asked support@, so send from support@ if that's how you answer support mail.",
+   "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+  },
+  {
+   "id": "hizam-thanks",
+   "name": "Hizam (Mohammad Tuan)",
+   "to": "mohammadtuan4@gmail.com",
+   "subject": "Re: Would Love to Try Latent",
+   "threadId": "1a16cb53a23facd5",
+   "replyToMessageId": "1a171baadca18846",
+   "theirMessage": "Awesome, thank you so much!\n\nWill get back to you soon.\n\nHizam",
+   "theirWhenPT": "Oct 24, 11:22 PM PT",
+   "body": "Hey Hizam, of course! Enjoy your first few sessions and let me know what you think.\n\nEddie",
+   "optional": true,
+   "isNew": false,
+   "note": "Carried over. Optional, no reply needed. He's thanking you for the invite you sent Oct 24, 12:48 PM PT.",
+   "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879913454538566869"
+  },
+  {
+   "id": "daniela",
+   "name": "Daniela Boehm",
+   "to": "daniboehm0305@gmail.com",
+   "subject": "Re: lock in twin",
+   "threadId": "1a106d45edc4d8d7",
+   "replyToMessageId": "1a172e68ae9ce001",
+   "theirMessage": "Thank you, looking forward to it!",
+   "theirWhenPT": "Oct 25, 4:51 AM PT",
+   "body": "Hey Dani, of course! Android is coming, I'll email you when it's out.\n\nEddie",
+   "optional": true,
+   "isNew": false,
+   "note": "Carried over. Optional, no reply needed. Answering your Oct 7 note that Android is on the way (she's on Android, waitlist invite from your reel).",
+   "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878121191722768599"
+  }
+ ],
+ "linearIssue": {
+  "id": "TRY-571",
+  "url": "https://linear.app/trylatent/issue/TRY-571/daily-dig-2026-10-26-2-fixes-waiting-for-review-617-633"
+ },
+ "linearNote": "Linear dig issue: TRY-571 https://linear.app/trylatent/issue/TRY-571/daily-dig-2026-10-26-2-fixes-waiting-for-review-617-633",
+ "emailMessageId": "1a1791900cda71d4",
+ "release": {
+  "appStoreVersion": "1.0.9",
+  "build": "47",
+  "releasedPT": "Oct 24, 12:15 AM PT",
+  "rating": "4.94 (198)"
+ }
+}
