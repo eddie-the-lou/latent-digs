@@ -1,5 +1,10 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-27",
+    "title": "Latent daily review \u00b7 Oct 27",
+    "tldr": "No new fixes (all owned); #617/#633 still waiting. 9 merged. 1 age hold, nothing new. 4 reply drafts."
+  },
+  {
     "date": "2026-10-26",
     "title": "Latent daily review \u00b7 Oct 26",
     "tldr": "1 new fix (#633): empty video retried on every app open. 14 merged. 1 new age hold (@shaykalk1). 3 reply drafts."
@@ -752,6 +757,11 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-27",
+      "title": "Latent daily review \u00b7 Oct 27",
+      "tldr": "No new fixes (all owned); #617/#633 still waiting. 9 merged. 1 age hold, nothing new. 4 reply drafts."
+    },
     {
       "date": "2026-10-26",
       "title": "Latent daily review \u00b7 Oct 26",
@@ -75523,12 +75533,12 @@ window.DIGESTS = {
       {
         "id": "email",
         "title": "Email dig to eddie@weaive.app",
-        "status": "done"
+        "status": "pending"
       },
       {
         "id": "archive",
         "title": "Publish archive to latent-digs GitHub Pages",
-        "status": "done"
+        "status": "pending"
       },
       {
         "id": "linear",
@@ -96296,6 +96306,1740 @@ window.DIGESTS = {
     },
     "linearNote": "Linear dig issue: TRY-571 https://linear.app/trylatent/issue/TRY-571/daily-dig-2026-10-26-2-fixes-waiting-for-review-617-633",
     "emailMessageId": "1a1791900cda71d4",
+    "release": {
+      "appStoreVersion": "1.0.9",
+      "build": "47",
+      "releasedPT": "Oct 24, 12:15 AM PT",
+      "rating": "4.94 (198)"
+    }
+  },
+  "2026-10-27": {
+    "date": "2026-10-27",
+    "title": "Latent daily review \u00b7 Oct 27",
+    "generatedAt": "2026-10-27T16:30:22.749136+00:00",
+    "tldr": [
+      "No new fixes today: every clear bug is already owned (Malcolm's bot has fixes drafted for the iOS 17 comments freeze and the stale song). #617 and #633 (empty videos) are still waiting for you, and the problem grew to 50 people a day. 9 PRs merged overnight, including Malcolm's school-wifi fix (#643).",
+      "Busy day: 4,576 people started a session (was 3,935), 1,220 installs. Sign-in failures from school wifi jumped (34 people); #643 fixes it once a new build ships. App Store 4.94 stars (198).",
+      "Age holds: just @shaykalk1 (deletes Nov 24). Nothing new. Moderation tickets TRY-543/544/545/555 are now Done.",
+      "13 in-app notes: comments freeze (Achille), song swap stuck on the old song (Shlok), lag (aimee), plus ideas (start a session with friends, tagged-session repost, two tags at once, about page, weekly report, Polar heart rate). Discord: a title-only Instagram share bug and a 1.6 GB storage question, both unanswered.",
+      "4 reply drafts: new one for Meghana (comments freeze), Samuel's deletion confirmation still ready to send, Hizam and Daniela optional. 2 new beta opt-ins / 170. Survey unchanged. Sentry still needs re-auth."
+    ],
+    "plainTldr": [
+      "No new fixes today: every clear bug is already owned (Malcolm's bot has fixes drafted for the iOS 17 comments freeze and the stale song). #617 and #633 (empty videos) are still waiting for you, and the problem grew to 50 people a day. 9 PRs merged overnight, including Malcolm's school-wifi fix (#643).",
+      "Busy day: 4,576 people started a session (was 3,935), 1,220 installs. Sign-in failures from school wifi jumped (34 people); #643 fixes it once a new build ships. App Store 4.94 stars (198).",
+      "Age holds: just @shaykalk1 (deletes Nov 24). Nothing new. Moderation tickets TRY-543/544/545/555 are now Done.",
+      "13 in-app notes: comments freeze (Achille), song swap stuck on the old song (Shlok), lag (aimee), plus ideas (start a session with friends, tagged-session repost, two tags at once, about page, weekly report, Polar heart rate). Discord: a title-only Instagram share bug and a 1.6 GB storage question, both unanswered.",
+      "4 reply drafts: new one for Meghana (comments freeze), Samuel's deletion confirmation still ready to send, Hizam and Daniela optional. 2 new beta opt-ins / 170. Survey unchanged. Sentry still needs re-auth."
+    ],
+    "urgent": [],
+    "stats": {
+      "newInApp": 13,
+      "newDiscord": 70,
+      "newGmail": 1,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 39,
+        "somewhat": 25,
+        "not": 2,
+        "n": 66
+      },
+      "sentryNew": [],
+      "sentryUnavailable": true,
+      "rawQuotes": 89,
+      "betaOptInsNew": 2,
+      "betaOptInsTotal": 170,
+      "installs24h": 1220,
+      "installsPrev24h": 1263
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "carriedFromEarlier": [
+        {
+          "pr": 617,
+          "url": "https://github.com/eddie-the-lou/latent/pull/617",
+          "title": "Record: Undo after Finish no longer uploads an empty clip",
+          "status": "Still waiting for your review (opened Oct 25)",
+          "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session."
+        },
+        {
+          "pr": 633,
+          "url": "https://github.com/eddie-the-lou/latent/pull/633",
+          "title": "Stop retrying empty-clip uploads on every launch",
+          "status": "Still waiting for your review (opened Oct 26, built on #617)",
+          "whatItFixes": "A post whose video is empty or gone stops retrying on every app open: it tries to rebuild from leftover pieces once, otherwise shows Video missing. Includes #617, so merge #617 first or both."
+        }
+      ],
+      "agentsLaunched": [],
+      "agentsStillWorking": [],
+      "mergedOvernight": [
+        {
+          "pr": 643,
+          "url": "https://github.com/eddie-the-lou/latent/pull/643",
+          "title": "App talks to our own address api.trylatent.co instead of supabase.co, so school wifi stops blocking sign in (TRY-584)",
+          "by": "Malcolm \u00b7 merged Oct 26, 10:57 PM PT"
+        },
+        {
+          "pr": 641,
+          "url": "https://github.com/eddie-the-lou/latent/pull/641",
+          "title": "Video missing label only shows on the phone that saved the post, and goes away once the video lands (TRY-579)",
+          "by": "Malcolm \u00b7 merged Oct 26, 7:50 PM PT"
+        },
+        {
+          "pr": 642,
+          "url": "https://github.com/eddie-the-lou/latent/pull/642",
+          "title": "Friend request answers work offline; failed comment deletes say so (TRY-581)",
+          "by": "Malcolm \u00b7 merged Oct 26, 7:48 PM PT"
+        },
+        {
+          "pr": 640,
+          "url": "https://github.com/eddie-the-lou/latent/pull/640",
+          "title": "Unit tests stop flaking (test setup only, TRY-578)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        },
+        {
+          "pr": 639,
+          "url": "https://github.com/eddie-the-lou/latent/pull/639",
+          "title": "Messages: search opens where you are, not at the top of the list (TRY-577)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        },
+        {
+          "pr": 638,
+          "url": "https://github.com/eddie-the-lou/latent/pull/638",
+          "title": "Test that a tag split can go past 50/50 (TRY-552)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        },
+        {
+          "pr": 637,
+          "url": "https://github.com/eddie-the-lou/latent/pull/637",
+          "title": "Feed holds still while you scroll on first open (TRY-535)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        },
+        {
+          "pr": 636,
+          "url": "https://github.com/eddie-the-lou/latent/pull/636",
+          "title": "Inbox: a scroll or swipe that starts on a chat no longer opens it (TRY-536)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        },
+        {
+          "pr": 635,
+          "url": "https://github.com/eddie-the-lou/latent/pull/635",
+          "title": "Save Session: the default Stamp lands in the right spot after a quick Next (TRY-551)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        }
+      ],
+      "closedOvernight": [],
+      "stillOnYou": [
+        {
+          "id": "pr-617-633",
+          "title": "#617 and #633 (the dig's empty-video fixes from Oct 25 and Oct 26) are both still open. The problem keeps growing: 371 empty-video upload failures from 50 people on 1.0.9 in the last day (was 234 from 25). Merge #617 first, then #633 (or both).",
+          "url": "https://github.com/eddie-the-lou/latent/pull/633"
+        },
+        {
+          "id": "bot-new",
+          "title": "New from Malcolm's bot since yesterday (Need Approval), each matching today's feedback: TRY-588 comments freeze the app on iOS 17 (Achille in-app and Meghana by email; fix drafted), TRY-587 changing a post's song keeps playing the old one (Shlok; fix drafted), TRY-582 full-screen timelapses lag, maybe more with a song (aimee), plus asks TRY-576 (Polar heart rate), TRY-585 (about page), TRY-586 (start a session with friends).",
+          "url": "https://linear.app/trylatent/issue/TRY-588"
+        },
+        {
+          "id": "malcolm-prs",
+          "title": "Malcolm's open fixes for the offline and school-wifi problems: #634 (say offline, not down for maintenance, TRY-580) and #644 (stuck on the L splash, TRY-583). #643 (our own api.trylatent.co address) is merged but needs a new build to reach people.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/644"
+        },
+        {
+          "id": "samuel",
+          "title": "Samuel Downs (srdowns2010@gmail.com) still hasn't gotten his deletion confirmation (asked Oct 16). His account is gone, so the draft below is ready to send.",
+          "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+        },
+        {
+          "id": "mod",
+          "title": "Moderation: TRY-543, 544, 545 and 555 are now Done. TRY-548 (spam report on @harshamatta) and TRY-484 (explicit comment report) still say Need Approval.",
+          "url": "https://linear.app/trylatent/issue/TRY-548"
+        },
+        {
+          "id": "bot-old",
+          "title": "Still Need Approval from before: TRY-563 (new iPhone launch crash), TRY-564 (alarm permission freeze), TRY-539 (face blur crash), TRY-542 (share screen crash), TRY-540, TRY-541, TRY-538, and older TRY-487, TRY-501, TRY-475/480/471, TRY-469/470, TRY-495. Old dig tickets you can close: TRY-522 (#601 shipped), TRY-546 and TRY-571 (replaced by today's).",
+          "url": "https://linear.app/trylatent/issue/TRY-563"
+        },
+        {
+          "id": "older-prs",
+          "title": "Other open PRs: Malcolm #646 (even timelapse pace), #619, #614, #605, #587, #537, #530, #529, #518, #499; Jerry #647 (clock face when screen dims), #645 (feed memory), #632, #616; yours #500 and #417.",
+          "url": "https://github.com/eddie-the-lou/latent/pulls"
+        },
+        {
+          "id": "fyi",
+          "title": "FYI (no draft): Adam Chouiki confirmed the UPenn talk time is ET and sent the invite (Mon Nov 16, 4:15 PM PT). Rushton Hurley (Rotary eClub) says they're flexible on time. Juan (athletevia.com, founder of an old accountability app) asked how Latent verifies the work. Stepan Shilnikov offered to collaborate for free on a similar project. Edmund Yau (Brickwise) filled out the form. Hiring-pause replies (Ron Aaron, Ruishi Li) left for the hiring watch. Malcolm has calls today with Aarav Agrawal and Greta Zambrano, and booked the Feed.fm music call for Wed. Paid-collab pitches (Scaler AI, InVideo, Yesoul, Xteink, Business Anywhere, Sideshift script) skipped."
+        }
+      ],
+      "note": "No Cloud Agent launched today. Every clear bug is already owned: comments freezing on iOS 17 (TRY-588) and the stale song (TRY-587) have fixes drafted by Malcolm's bot, lag is TRY-582, school-wifi sign in is Malcolm's (#643 merged, #634/#644 open), and empty videos are #617/#633. The Instagram share report and the storage question have no details yet. 9 PRs merged overnight."
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 617,
+          "url": "https://github.com/eddie-the-lou/latent/pull/617",
+          "title": "Record: Undo after Finish no longer uploads an empty clip",
+          "status": "Still waiting for your review (opened Oct 25)",
+          "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session."
+        },
+        {
+          "pr": 633,
+          "url": "https://github.com/eddie-the-lou/latent/pull/633",
+          "title": "Stop retrying empty-clip uploads on every launch",
+          "status": "Still waiting for your review (opened Oct 26, built on #617)",
+          "whatItFixes": "A post whose video is empty or gone stops retrying on every app open: it tries to rebuild from leftover pieces once, otherwise shows Video missing. Includes #617, so merge #617 first or both."
+        }
+      ],
+      "openedToday": [],
+      "agentsStillWorking": [],
+      "mergedOvernight": [
+        {
+          "pr": 643,
+          "url": "https://github.com/eddie-the-lou/latent/pull/643",
+          "title": "App talks to our own address api.trylatent.co instead of supabase.co, so school wifi stops blocking sign in (TRY-584)",
+          "by": "Malcolm \u00b7 merged Oct 26, 10:57 PM PT"
+        },
+        {
+          "pr": 641,
+          "url": "https://github.com/eddie-the-lou/latent/pull/641",
+          "title": "Video missing label only shows on the phone that saved the post, and goes away once the video lands (TRY-579)",
+          "by": "Malcolm \u00b7 merged Oct 26, 7:50 PM PT"
+        },
+        {
+          "pr": 642,
+          "url": "https://github.com/eddie-the-lou/latent/pull/642",
+          "title": "Friend request answers work offline; failed comment deletes say so (TRY-581)",
+          "by": "Malcolm \u00b7 merged Oct 26, 7:48 PM PT"
+        },
+        {
+          "pr": 640,
+          "url": "https://github.com/eddie-the-lou/latent/pull/640",
+          "title": "Unit tests stop flaking (test setup only, TRY-578)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        },
+        {
+          "pr": 639,
+          "url": "https://github.com/eddie-the-lou/latent/pull/639",
+          "title": "Messages: search opens where you are, not at the top of the list (TRY-577)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        },
+        {
+          "pr": 638,
+          "url": "https://github.com/eddie-the-lou/latent/pull/638",
+          "title": "Test that a tag split can go past 50/50 (TRY-552)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        },
+        {
+          "pr": 637,
+          "url": "https://github.com/eddie-the-lou/latent/pull/637",
+          "title": "Feed holds still while you scroll on first open (TRY-535)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        },
+        {
+          "pr": 636,
+          "url": "https://github.com/eddie-the-lou/latent/pull/636",
+          "title": "Inbox: a scroll or swipe that starts on a chat no longer opens it (TRY-536)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        },
+        {
+          "pr": 635,
+          "url": "https://github.com/eddie-the-lou/latent/pull/635",
+          "title": "Save Session: the default Stamp lands in the right spot after a quick Next (TRY-551)",
+          "by": "you \u00b7 merged Oct 26, 3:26 PM PT"
+        }
+      ],
+      "closedOvernight": [],
+      "newOpenNotDig": [
+        {
+          "pr": 634,
+          "url": "https://github.com/eddie-the-lou/latent/pull/634",
+          "title": "Say \"You're offline\" when it's the phone's network, not \"Down for maintenance\" (TRY-580)",
+          "by": "Malcolm \u00b7 opened Oct 26, 12:20 PM PT"
+        },
+        {
+          "pr": 644,
+          "url": "https://github.com/eddie-the-lou/latent/pull/644",
+          "title": "Signed-in people no longer stuck on the L splash when our server can't be reached (TRY-583)",
+          "by": "Malcolm \u00b7 opened Oct 26, 8:25 PM PT"
+        },
+        {
+          "pr": 645,
+          "url": "https://github.com/eddie-the-lou/latent/pull/645",
+          "title": "Feed warm-up checks memory first and avoids duplicate disk reads",
+          "by": "Jerry Chen \u00b7 opened Oct 26, 8:45 PM PT"
+        },
+        {
+          "pr": 646,
+          "url": "https://github.com/eddie-the-lou/latent/pull/646",
+          "title": "Timelapse clips play at one even pace start to finish (TRY-537)",
+          "by": "Malcolm \u00b7 opened Oct 26, 10:41 PM PT"
+        },
+        {
+          "pr": 647,
+          "url": "https://github.com/eddie-the-lou/latent/pull/647",
+          "title": "Record: camera-on sessions show the clock face when the screen dims",
+          "by": "Jerry Chen \u00b7 opened Oct 27, 4:52 AM PT"
+        }
+      ]
+    },
+    "ageHolds": {
+      "open": [
+        {
+          "username": "shaykalk1",
+          "displayName": "Shay",
+          "email": "lisakalk@gmail.com",
+          "heldAtPT": "Oct 25, 9:17 PM PT",
+          "deletesAfterPT": "Nov 24, 8:17 PM PT",
+          "daysLeft": 29,
+          "postsHidden": 2,
+          "noticeEmailedPT": "Oct 25, 9:17 PM PT",
+          "reminderSentPT": null,
+          "newLast24h": false,
+          "note": "From the child safety report TRY-544 (now Done)."
+        }
+      ],
+      "newLast24h": [],
+      "resolvedLast24h": [],
+      "summary": "1 age hold: @shaykalk1 (Shay), deletes Nov 24 unless released. Nothing new.",
+      "detail": "Held Oct 25, 9:17 PM PT (from child safety report TRY-544, now Done). Account email lisakalk@gmail.com. Deletes after Nov 24, 8:17 PM PT, 29 days left (rounded up). 2 posts hidden. Notice emailed Oct 25, 9:17 PM PT; no reminder yet. No new holds, nothing released or deleted in the last 24 hours. None within 7 days. Holds ever: 2. Checked ~9:20 AM PT. The dig changed nothing.",
+      "query": "/workspace/feedback-digests/age-holds.sql"
+    },
+    "actions": [
+      {
+        "id": "pr-617-633",
+        "title": "Review #617 then #633 (empty-video fixes, from Oct 25 and 26)",
+        "plainSummary": "Still open; 50 people hit empty-video upload failures in the last day.",
+        "status": "Waiting for your review",
+        "url": "https://github.com/eddie-the-lou/latent/pull/617"
+      },
+      {
+        "id": "samuel-send",
+        "title": "Send Samuel Downs his deletion confirmation",
+        "plainSummary": "His account is gone. Draft below.",
+        "status": "Needs you",
+        "url": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+      },
+      {
+        "id": "replies",
+        "title": "4 reply drafts (2 optional)",
+        "plainSummary": "Not sent. Approve each in chat.",
+        "status": "Waiting for your review"
+      },
+      {
+        "id": "bot-new",
+        "title": "Malcolm's bot fixes waiting for approval: TRY-588 (iOS 17 comments freeze), TRY-587 (stale song), plus TRY-563, TRY-564, TRY-539, TRY-542, TRY-540",
+        "plainSummary": "Fixes drafted on branches; PRs open once approved.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-588"
+      },
+      {
+        "id": "mod",
+        "title": "TRY-548 (spam report) and TRY-484 still say Need Approval",
+        "plainSummary": "The child safety and bullying reports are Done.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-548"
+      },
+      {
+        "id": "sentry",
+        "title": "Re-connect Sentry",
+        "plainSummary": "Still needs re-auth.",
+        "status": "Needs you"
+      },
+      {
+        "id": "age-holds",
+        "title": "Age holds: 1 (@shaykalk1), nothing new",
+        "plainSummary": "Deletes Nov 24, 8:17 PM PT unless released. Nothing for the dig to do.",
+        "status": "done"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done",
+        "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-10-27"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "empty-clip",
+        "title": "Empty videos keep failing to upload (1.0.9), and it's growing",
+        "severity": "medium",
+        "people": 50,
+        "status": "PRs #617 and #633 waiting for your review",
+        "summary": "371 failures from 50 people in the last day (was 234 from 25). 110 posts given up on for 5 people.",
+        "detail": "Both dig fixes are open. Nothing new to launch.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/633",
+        "sources": [
+          "posthog",
+          "github"
+        ]
+      },
+      {
+        "id": "comments-ios17",
+        "title": "Opening comments freezes the app on iOS 17",
+        "severity": "medium",
+        "people": 12,
+        "status": "Malcolm's bot TRY-588 (fix drafted, Need Approval)",
+        "summary": "Achille (@ach) in-app and Meghana by email today. The bot found 39 of 68 comment or kudos opens on iOS 17 ended in a restart (12 people).",
+        "detail": "Not duplicated. Meghana's reply draft is below.",
+        "url": "https://linear.app/trylatent/issue/TRY-588",
+        "sources": [
+          "in-app",
+          "gmail",
+          "linear"
+        ]
+      },
+      {
+        "id": "song-stale",
+        "title": "Changing a post's song keeps playing the old song until you scroll away",
+        "severity": "low",
+        "people": 1,
+        "status": "Malcolm's bot TRY-587 (fix drafted, Need Approval)",
+        "summary": "Shlok (@shlokp) on 1.0.10 (48).",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-587",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "lag-song",
+        "title": "Full-screen timelapses lag, maybe more with a song",
+        "severity": "low",
+        "people": 1,
+        "status": "Malcolm's bot TRY-582 (Need Approval)",
+        "summary": "aimee (@aimee_) on an iPhone 13. This morning she said it's a lot less laggy now but she can't hear the music on her own post.",
+        "detail": "PostHog: the 4 song autoplays she got right before writing were all muted, so the in-app mute was probably on. Watch, no fix.",
+        "url": "https://linear.app/trylatent/issue/TRY-582",
+        "sources": [
+          "in-app",
+          "posthog",
+          "linear"
+        ]
+      },
+      {
+        "id": "school-wifi",
+        "title": "Sign in blocked on some school wifi (TLS error)",
+        "severity": "medium",
+        "people": 15,
+        "status": "Malcolm: #643 merged (TRY-584), needs a new build; #634 and #644 open",
+        "summary": "sign_in_failed with the TLS error: 53 from 15 people on 1.0.9 in the last day. Overall sign-in failures 82 from 34 (was 25 from 15). \u201cCan't reach server\u201d screens 715 from 405 (was 409 from 295).",
+        "detail": "Malcolm moved the app to api.trylatent.co so school firewalls stop blocking supabase.co.",
+        "url": "https://linear.app/trylatent/issue/TRY-584",
+        "sources": [
+          "posthog",
+          "linear",
+          "github"
+        ]
+      },
+      {
+        "id": "share-ig",
+        "title": "\u201cShare to instagram button causes error\u201d (Discord, title only)",
+        "severity": "low",
+        "people": 1,
+        "status": "Watch",
+        "summary": "00001111 opened the thread with no details and nobody answered.",
+        "detail": "PostHog: 150+ successful Instagram shares in the last 2 days and 13 unfinished ones from 7 people, so it's not broken for everyone. Not clear enough for a fix; asking for a screenshot would help.",
+        "sources": [
+          "discord",
+          "posthog"
+        ]
+      },
+      {
+        "id": "storage",
+        "title": "App takes 1.6 GB of storage (Chimm, Discord)",
+        "severity": "low",
+        "people": 1,
+        "status": "Watch",
+        "summary": "Unanswered question in #questions.",
+        "detail": "Could be saved footage and the video cache. No fix launched.",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "oto",
+        "title": "Oto's videos reach friends up to a day late (Discord, Oct 25)",
+        "severity": "low",
+        "people": 1,
+        "status": "Still unanswered",
+        "summary": "No follow-up from him and no reply from you or Malcolm.",
+        "detail": "Could be the Spain block (TRY-550) or a school wifi block (TRY-584); location unknown.",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "sentry-auth",
+        "title": "Sentry connector needs re-auth",
+        "severity": "low",
+        "people": null,
+        "status": "Needs you",
+        "summary": "Sentry still needs re-auth (recurring). No crash data from me today.",
+        "detail": "Malcolm's bot still files Sentry tickets.",
+        "sources": [
+          "sentry"
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "together",
+        "title": "Start a session together with friends",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Need Approval (TRY-586)",
+        "summary": "Fares (@fares): \u201cBeautiful App, would be amazing if you could start a session with friends\u201d.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-586",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "tagged-repost",
+        "title": "Add a friend's session you were tagged in to your own profile",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Need Approval (TRY-442)",
+        "summary": "Finlay (@poo), like Strava.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-442",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "two-tags",
+        "title": "Count one session fully under two tags (Studying and Math)",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "New ask (close to tag folders, TRY-318)",
+        "summary": "layan (@layanu), who says she loves the app.",
+        "detail": "Different from splitting time (TRY-552).",
+        "url": "https://linear.app/trylatent/issue/TRY-318",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "reply-chats",
+        "title": "Reply to a message in group chats",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Todo (TRY-572, Malcolm)",
+        "summary": "Arina (@arina).",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-572",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "about",
+        "title": "About page with the founders' story",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Need Approval (TRY-585)",
+        "summary": "Chad (@metalfaceplates), a parent whose daughter Zoe uses Latent.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-585",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "weekly",
+        "title": "Weekly report",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Backlog (TRY-62)",
+        "summary": "Sam Zhang (@samzhang).",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-62",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "polar",
+        "title": "Pull heart rate from Polar Beat",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Need Approval (TRY-576)",
+        "summary": "Matteo (@matteodilembo), a rower who can't film his sessions.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-576",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "edit-length",
+        "title": "Edit a session's length, or add a session by hand",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Need Approval (TRY-411, TRY-538)",
+        "summary": "jose (@s4yy) left camera-off running by mistake and had to delete it.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-411",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "screentime",
+        "title": "Latent counts toward Screen Time",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Known answer",
+        "summary": "Samarth (@samthebam).",
+        "detail": "Camera-Off mode and lock the phone; no timelapse then.",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "apps-no-pause",
+        "title": "Use certain apps without pausing the timer",
+        "count": 3,
+        "peopleCountLabel": "Discord thread now 9 messages",
+        "status": "Need Approval (TRY-558)",
+        "summary": "RyanGol: educational apps only (PowerPoint, Word, Teams, CapCut). chloe: \u201ci feel like this would defeat the purpose of the app\u201d.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-558",
+        "sources": [
+          "discord",
+          "linear"
+        ]
+      },
+      {
+        "id": "music-ig",
+        "title": "Music button that works like Instagram's",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "New ask",
+        "summary": "alejo in Discord (title only). fusion also couldn't find the music button.",
+        "detail": "",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "timelapse-length",
+        "title": "Pick how long your timelapse is",
+        "count": null,
+        "peopleCountLabel": "9 up / 2 down (was 7/2)",
+        "status": "Need Approval (TRY-493)",
+        "summary": "Vote went up.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-493",
+        "sources": [
+          "discord",
+          "linear"
+        ]
+      },
+      {
+        "id": "android",
+        "title": "Android",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "No Android app yet (TRY-395)",
+        "summary": "ANGELO in Discord.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-395",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 2,
+        "peopleCountLabel": "2 new, 170 total",
+        "status": "Malcolm handles",
+        "summary": "2 new \u201cStay as a Beta Tester\u201d picks since yesterday's review (latest Oct 27, 7:13 AM PT).",
+        "detail": "Count only (TRY-343).",
+        "sources": [
+          "supabase"
+        ]
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 13,
+        "note": "13 new public.feedback rows since yesterday's review: 4 bug reports (comments freeze on iOS 17, song swap keeps the old song, full-screen lag, and aimee's follow-up about not hearing her song) and 9 ideas or questions. Malcolm's bot already filed tickets for most. 11 of 13 are on 1.0.9 (47)."
+      },
+      "discord": {
+        "new": 70,
+        "note": "New since Oct 26 ~9:15 AM PT, mostly a long late-night chat (12:21 to 2:41 AM) about exams and college apps. Bugs: 00001111 opened a thread titled \u201cBug: Share to instagram button causes error\u201d (title only, no details, unanswered). Chimm asked \u201chow much storage does the app take ? Mines like 1.6gb\u201d (unanswered). Oto's late-videos complaint from Oct 25 still has no reply. Music: fusion asked where the music button is and 00001111 answered (add it when you post); alejo asked to make the music button work like Instagram's. RyanGol's use-apps-without-pausing thread grew (chloe against it; RyanGol says educational apps only, TRY-558). Timelapse length vote now 9 up / 2 down (TRY-493). ANGELO: \u201cif only this app was on andriod id be so locked\u201d. Leaderboard chatter: chloe has 18 hours of chem logged, KrabbyKai has about 120 friends. Nothing new in #announcements; no #tester-chat. Neither of you posted. Source: discord-2026-10-27.md."
+      },
+      "gmail": {
+        "new": 1,
+        "note": "1 new email from an app user: Meghana says opening comments freezes the app (draft below). Samuel, Hizam and Daniela still unanswered. FYI: Juan (founder) asked how Latent verifies work; Stepan offered to collaborate; Adam (UPenn) confirmed ET. Hiring-pause replies (Ron Aaron, Ruishi Li) left for the hiring watch. Paid-collab pitches skipped. No bug videos, no PostHog alert emails."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "39/25/2 of 66",
+        "note": "Export HTTP 200 (25,303 bytes). Unchanged vs Oct 26 (all 3 tabs row-for-row identical). No new free text."
+      },
+      "sentry": {
+        "new": [],
+        "note": "Unavailable: Sentry still needs re-auth (recurring). No data invented."
+      },
+      "posthog": {
+        "note": "Last 24h vs prior 24h (events/people, to ~9:20 AM PT): installs 1,220 (was 1,263); onboarding done 908 (was 864); sessions started 11,223/4,576 (was 9,689/3,935); sessions discarded 1,899/1,195 (was 1,614/1,006); app updates 1,276 (was 2,680). clip_upload_failed 425/72 (was 401/64: 371 empty clips from 50 on 1.0.9 (47), #617/#633; 21 TLS from 1 person; the rest network), clip_upload_abandoned 138/8 (was 54/8; all \u201cno filename\u201d), session_save_failed 128/54 (was 63/41; 78 of them are the \u201cwait until signed in\u201d deferral, the rest offline, TLS or timeouts), sign_in_failed 82/34 (was 25/15; 53 from 15 are the school-wifi TLS error, TRY-584), backend_unreachable_shown 715/405 (was 409/295; TRY-580/583), media_invoke_retry_exhausted 1,398/165 (was 848/104; all video playback calls, none from Spain), group_action_failed 2,708/621 (was 2,324/498), invite_check_failed 325/71 (was 159/56), capture_stalled 151/23 (was 112/22), segment_finalize_failed 17/10 (was 17/9), session_capture_failed 9/6 (was 14/8), friend_request_failed 40/6 (was 58/10), sign_up_failed 10/7 (was 12/2), session_unlocked_elsewhere 22/11 (was 47/26). Rage clicks 11,078/3,159 (was 9,200/2,700). People starting a session in the last day by build: 1.0.9 (47) 4,188, 1.0.8 (43) 246, 1.0.6 (39) 92, 1.0.9 (48) 48, 1.0.7 (41) 20, 1.0.10 (48) 2. App Store: 1.0.9, 4.94 stars (198). Alerts: edge-function retry and clip size both not firing; last notification Oct 23, 6:27 PM PT. No PostHog alert emails."
+      },
+      "github": {
+        "note": "9 PRs merged since yesterday's review: Malcolm's #643 (own api.trylatent.co address for school wifi), #641 (Video missing only on the saving phone), #642 (offline friend requests), and your 6 Linear fixes #635 to #640. New open: Malcolm #634, #644, #646; Jerry #645, #647. #617 and #633 still open."
+      },
+      "linear": {
+        "note": "New from Malcolm's bot since yesterday: TRY-576, 582, 585, 586, 587, 588 (Need Approval), TRY-572 (Todo), TRY-579/581/584 (Done), TRY-580/583 (In Progress). You filed TRY-573 (Live Activity stuck), TRY-574 (Pomodoro ends after a break), TRY-575 (slow nudge thumbnails). Moderation TRY-543/544/545/555 now Done. Every clear bug today is already owned, so no new fix was launched."
+      },
+      "betaOptIns": {
+        "new": 2,
+        "total": 170
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "inapp-0ce9eb94",
+        "source": "in-app",
+        "username": "@matteodilembo (Matteo)",
+        "whenPT": "Oct 26, 12:11 PM PT",
+        "build": "1.0.9 (47)",
+        "kind": "feature",
+        "quote": "Can you connect the polar beat app to the training section. I am a rower and cannot record/video my sessions so it\u2019s easier to log my heart rate with the training.",
+        "note": "In-app feature \u00b7 Malcolm's bot filed TRY-576 (Need Approval)"
+      },
+      {
+        "id": "inapp-fbf0262f",
+        "source": "in-app",
+        "username": "@layanu (layan)",
+        "whenPT": "Oct 26, 3:30 PM PT",
+        "build": "1.0.9 (47)",
+        "kind": "feature",
+        "quote": "Hey guys! First of all, I just want to say that I love this app sooo much!! It keeps me motivated without being distracting, which I really appreciate! \n\nOne feature I think would be super nice to add is the option to assign two categories to the same study session at once!\n\nFor example, let\u2019s say I study math for 30 minutes. I\u2019d love to be able to track those 30 minutes under both \u201cStudying\u201d and \u201cMath\u201d at the same time. Right now I can only split the time between categories, so e.g. I\u2019d have to track 20 minutes as \u201cStudying\u201d and the remaining 10 minutes as \u201cMath\u201d\n\nBut what I\u2019d actually want is for both categories to count the full 30 minutes, since I was studying and in specific I was studying math, if that makes sense.\n\nSo when I look back at my statistics, I can see how much time I\u2019ve spent studying overall, but also how much time I\u2019ve dedicated to each specific subject, without having to split up my sessions.\n\nI absolutely love this app already I know it\u2019s going to go huge.",
+        "note": "In-app feature \u00b7 count one session fully under two tags (Studying and Math). Not the same as TRY-552 (splitting time); close to tag folders/organization (TRY-318, planned). Happy user: rating ask candidate"
+      },
+      {
+        "id": "inapp-d9007171",
+        "source": "in-app",
+        "username": "@poo (Finlay)",
+        "whenPT": "Oct 26, 4:49 PM PT",
+        "build": "1.0.9 (47)",
+        "kind": "feature",
+        "quote": "Friend tagging.\n\nI just did a study session with my boy who filmed it on latent but I didn\u2019t have my phone. \nHe tagged me but I can\u2019t add it to my profile as a study session.\n\nWould be great if we could repost friends sessions that we are tagged in (like you can on Strava).\n\nApp otherwise great thanks",
+        "note": "In-app feature \u00b7 TRY-442 (send a tagged session so it counts for friends too, Need Approval)"
+      },
+      {
+        "id": "inapp-bb06cbda",
+        "source": "in-app",
+        "username": "@aimee_ (aimee)",
+        "whenPT": "Oct 26, 5:20 PM PT",
+        "build": "1.0.9 (47)",
+        "kind": "bug",
+        "quote": "sometimes when i\u2019m watching other people\u2019s timelapses, it tends to be laggy when they use special features such as adding a song or drawing on the video",
+        "note": "In-app bug \u00b7 Malcolm's bot filed TRY-582 (Need Approval)"
+      },
+      {
+        "id": "inapp-630bde1b",
+        "source": "in-app",
+        "username": "@samthebam (Samarth)",
+        "whenPT": "Oct 27, 12:15 AM PT",
+        "build": "1.0.9 (47)",
+        "kind": "feature",
+        "quote": "my screentime still counts time spent on latent so it looks like a ton when its not fix please\ud83d\ude00",
+        "note": "Filed as a feature, really a question \u00b7 your standard answer: Camera-Off mode and lock the phone so it doesn't add Screen Time (no timelapse then)"
+      },
+      {
+        "id": "inapp-41f87cd4",
+        "source": "in-app",
+        "username": "@metalfaceplates (Chad)",
+        "whenPT": "Oct 27, 12:51 AM PT",
+        "build": "1.0.9 (47)",
+        "kind": "feature",
+        "quote": "I'm pretty sure I already requested an about page, so I just want to reiterate I would like to see an about page with the story of how this app came about and was created. I want to know the founders stories and how it's going so far. If I remember correctly, I believe my daughter Zoe told me that you guys went to Harvard and dropped out to create this app?",
+        "note": "In-app feature \u00b7 Malcolm's bot filed TRY-585 (Need Approval). [Don't confirm the Harvard detail unless you want to]"
+      },
+      {
+        "id": "inapp-85b67728",
+        "source": "in-app",
+        "username": "@samzhang (Sam Zhang)",
+        "whenPT": "Oct 27, 2:50 AM PT",
+        "build": "1.0.9 (47)",
+        "kind": "feature",
+        "quote": "Can do a weekly report? :))",
+        "note": "In-app feature \u00b7 TRY-62 (Weekly + Monthly wrapped, Backlog)"
+      },
+      {
+        "id": "inapp-f1705b3d",
+        "source": "in-app",
+        "username": "@fares (Fares)",
+        "whenPT": "Oct 27, 3:56 AM PT",
+        "build": "1.0.9 (47)",
+        "kind": "feature",
+        "quote": "Beautiful App, would be amazing if you could start a session with friends",
+        "note": "In-app feature \u00b7 Malcolm's bot filed TRY-586 (Need Approval)"
+      },
+      {
+        "id": "inapp-dd343db6",
+        "source": "in-app",
+        "username": "@shlokp (Shlok Pandya)",
+        "whenPT": "Oct 27, 4:32 AM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "When you update the song on a recording that\u2019s already in your feed. It stays on the old song before changing after you scroll away and come back",
+        "note": "In-app bug \u00b7 Malcolm's bot filed TRY-587 (fix drafted, Need Approval). Shlok is on 1.0.10 (48), a test build"
+      },
+      {
+        "id": "inapp-dafd62de",
+        "source": "in-app",
+        "username": "@arina (Arina)",
+        "whenPT": "Oct 27, 7:12 AM PT",
+        "build": "1.0.5 (36)",
+        "kind": "feature",
+        "quote": "it\u2019s a pity that you can\u2019t reply to others messages in group chats",
+        "note": "In-app feature \u00b7 TRY-572 (reply to messages in chats, Todo, Malcolm). Arina is on 1.0.5 (36)"
+      },
+      {
+        "id": "inapp-e44311a8",
+        "source": "in-app",
+        "username": "@aimee_ (aimee)",
+        "whenPT": "Oct 27, 7:12 AM PT",
+        "build": "1.0.9 (47)",
+        "kind": "bug",
+        "quote": "hey i saw ur email and appreciate you responding! i\u2019m not sure if u changed anything, but i found the videos are a lot less laggy now with the sound and drawing effects. however, i\u2019m not sure if this is an issue with my phone but i can\u2019t hear the music anymore sadly.\n\nfor context my phone is a bit old (iphone 13) and has been experiencing some bugs. however when i was chooosing a song for my own video, i could hear the music, but after uploading and rewatching the video, i can\u2019t hear anything",
+        "note": "In-app bug \u00b7 follow-up to her 5:20 PM note; she says lag is better. PostHog: the 4 song autoplays she got right before writing were all muted, so the app's mute was probably on rather than the song missing. Watch, no fix"
+      },
+      {
+        "id": "inapp-6e3992a8",
+        "source": "in-app",
+        "username": "@ach (Achille)",
+        "whenPT": "Oct 27, 7:37 AM PT",
+        "build": "1.0.9 (47)",
+        "kind": "bug",
+        "quote": "I can\u2019t write comments\u2026 whenever I press on the button to write a comment, the screen freezes..",
+        "note": "In-app bug \u00b7 Malcolm's bot filed TRY-588 (comments freeze on iOS 17, fix drafted, Need Approval)"
+      },
+      {
+        "id": "inapp-2415ee19",
+        "source": "in-app",
+        "username": "@s4yy (jose)",
+        "whenPT": "Oct 27, 7:45 AM PT",
+        "build": "1.0.9 (47)",
+        "kind": "feature",
+        "quote": "When I leave the app with the session still on (no canera) and forget to turn it back off, the session continues to run in the background\nWith no function to edit length of sesh manually I'm forced to delete my clip to avoid adding extra hours\n\nAlso would be great if could manually add sessions to it instead of only having to turn on the app everytime",
+        "note": "In-app feature \u00b7 camera-off keeps running when you leave the app on purpose (so you can lock the phone). Close to TRY-538 (camera-off counts locked hours) and TRY-411 (add a session you didn't record), both Need Approval"
+      },
+      {
+        "id": "discord-1027-0",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "00001111 [new member]",
+        "author": "00001111 [new member]",
+        "whenPT": "10/26 10:19 AM PT",
+        "kind": "discord",
+        "quote": "(system/new-member welcome post, edited 10:26 AM) \"Bug: Share to instagram button causes error, opened thread: Bug: Share to instagram button\u2026\" \u2014 BUG (see #feature-requests thread), unanswered",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-1",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "00001111",
+        "author": "00001111",
+        "whenPT": "10/26 10:29 AM PT",
+        "kind": "discord",
+        "quote": "\"https://ai.hubermanlab.com/s/FgTRBMfB\" / \"TL:DR; Set yo pomodoro timers to 60-90min with 15-25min breaks\" (1 reaction) \u2014 chatter",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-2",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Chef Mana",
+        "author": "Chef Mana",
+        "whenPT": "10/26 11:22 AM PT",
+        "kind": "discord",
+        "quote": "\"does someone have an invite code\" \u2014 question, answered by charan",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-3",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "charan",
+        "author": "charan",
+        "whenPT": "10/26 1:32 PM PT",
+        "kind": "discord",
+        "quote": "\"https://trylatent.co/i/TFYC33\" (invite link embed: \"Join me on Latent / Put your phone down. Do the work. Stay accountable with your friends.\") (reply to Chef Mana) \u2014 answer",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-4",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:21 AM PT",
+        "kind": "discord",
+        "quote": "\"COOKED FRIED\" \u2014 chatter",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-5",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai [FPV]",
+        "author": "KrabbyKai [FPV]",
+        "whenPT": "10/27 12:23 AM PT",
+        "kind": "discord",
+        "quote": "\"aint it like 3am wya\" (reply to chloe)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-6",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:25 AM PT",
+        "kind": "discord",
+        "quote": "\"ya...\" / \"im cooked for my chem test\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-7",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:25 AM PT",
+        "kind": "discord",
+        "quote": "\"H20 bro\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-8",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:25 AM PT",
+        "kind": "discord",
+        "quote": "(empty/attachment) / \"stop it\" / \"IDJFIADJDSFISDFOAD\" / \"IM STRESSED\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-9",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:25 AM PT",
+        "kind": "discord",
+        "quote": "\"Ch3COOH bro\" / \"js OH- and H+ it bro\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-10",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:25 AM PT",
+        "kind": "discord",
+        "quote": "\"SHHHHHH\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-11",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:26 AM PT",
+        "kind": "discord",
+        "quote": "\"strong acid HCl and weak acid Sulfuric gng\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-12",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:26 AM PT",
+        "kind": "discord",
+        "quote": "\"whys bro awake\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-13",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:26 AM PT",
+        "kind": "discord",
+        "quote": "\"mitochondria is the powerhouse of the cell \" (2 reactions, reply to chloe) / \"monster\" / \"and apps are due in 3 days\" / \"4*\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-14",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:26 AM PT",
+        "kind": "discord",
+        "quote": "\"im frying everything\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-15",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:27 AM PT",
+        "kind": "discord",
+        "quote": "\"who the hell is Harvard bro \" (1) / \"what up big harv\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-16",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:27 AM PT",
+        "kind": "discord",
+        "quote": "\"holy sheet'\" / \"do u have a 1600000 sat\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-17",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:27 AM PT",
+        "kind": "discord",
+        "quote": "\"u funny\" / \"hey zy \" (reply to chloe)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-18",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Zyxsra [ya\u043ei]",
+        "author": "Zyxsra [ya\u043ei]",
+        "whenPT": "10/27 12:27 AM PT",
+        "kind": "discord",
+        "quote": "\"This is so random but your face card could solve americas debt\" (reply to chloe)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-19",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:27 AM PT",
+        "kind": "discord",
+        "quote": "\"1500 rn even split\" (reply to chloe)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-20",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:27 AM PT",
+        "kind": "discord",
+        "quote": "\"LOL\" / \"FIDFJDAOIADFAOSDF\" / \"UHFUDSFHIDHIDS\" / \"UHHFUDSAHF\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-21",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Zyxsra",
+        "author": "Zyxsra",
+        "whenPT": "10/27 12:27 AM PT",
+        "kind": "discord",
+        "quote": "\"Hi kaii\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-22",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:27 AM PT",
+        "kind": "discord",
+        "quote": "\"TY\" / \"ily\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-23",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:28 AM PT",
+        "kind": "discord",
+        "quote": "\"harvard is NOT claling\" / \"im kidding\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-24",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Zyxsra",
+        "author": "Zyxsra",
+        "whenPT": "10/27 12:28 AM PT",
+        "kind": "discord",
+        "quote": "\"ILYT OMFG\" (1) / \"Bro bro trust the big leagues rejected u due to yeild protection\" (1) / \"Yes chloe join us \"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-25",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:28 AM PT",
+        "kind": "discord",
+        "quote": "\"yo chloe join our furry frat at ASU \" / \"what up big harv \" / \"ayye mah boi MIT\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-26",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:28 AM PT",
+        "kind": "discord",
+        "quote": "\"oh my gosh\" / \"i frekaing hate asu\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-27",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:29 AM PT",
+        "kind": "discord",
+        "quote": "\"god damn chill\" / \"zy is gonna go to asu\" / \"fuh ts fr\" / \"im writing UMICH app rn\" / \"yes gng\" / \"im on my 4th draft \"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-28",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:29 AM PT",
+        "kind": "discord",
+        "quote": "\"i just wanna go to umich man\" / \"WHAT\" / \"NO NO\" / \"I LOVEEE ASU\" / \"LMFAO ARE YOU\" / \"are you like eding it\" / \"god damn\" / \"oos good luck\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-29",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Zyxsra",
+        "author": "Zyxsra",
+        "whenPT": "10/27 12:29 AM PT",
+        "kind": "discord",
+        "quote": "\"I freaking hate asu too\" (reply to chloe)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-30",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Zyxsra",
+        "author": "Zyxsra",
+        "whenPT": "10/27 12:30 AM PT",
+        "kind": "discord",
+        "quote": "\"THE FUCKING SWITCH AHAHA\" / \"thankgod i dont have to do allat\" (1)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-31",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:30 AM PT",
+        "kind": "discord",
+        "quote": "\"LMFAOOOOOOOOOOO\" / \"anyways good talk\" (1) / \"nice fresh brain for chem now\" (1)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-32",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:31\u201312:33 AM PT",
+        "kind": "discord",
+        "quote": "\"pH bro pH\" / \"SO4- gng \" / \"600nm bro \" / \"microwave --> vibration gng \" / \"sigmund freud \" / \"oedipus \" / \"who gon explain oedipus complex to me \"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-33",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:32\u201312:34 AM PT",
+        "kind": "discord",
+        "quote": "\"what about wavelength\" / \"I LOVE PSYCH\" / \"lol thats funny\" / \"tuesday btw and i have 18 hours chem logged on latent\" / \"BECAUSE I CANNOT AFFORD TO FAIL THIS\" / \"AT ALL\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-34",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Zyxsra",
+        "author": "Zyxsra",
+        "whenPT": "10/27 12:32\u201312:35 AM PT",
+        "kind": "discord",
+        "quote": "\"U gotta get nuked /silly\" / \"Bro this reminded me of my psyc exam\" / \"If i fail that\" / \"Im genuinely coming after everyone (edited)\" / \"Imma sleep its like 12:30\" / \"I LOVE PSYCH TOO ITS SM FUN\" / \"DUDE IM TRYING MY HARDEST TO FIX MY SLEEP SCHEDULE bcs like yesterday iw as up till almost 4 and then i was falling asleep every toher second\" / \"What.\" / \"Tf.\" / \"Are we sure shes human you guys.\" / \"???? HOLYYYY\" / \"BRO\" / \"HOW DO WE BE AS LOCKED IN AS YOU PLS\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-35",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:34\u201312:36 AM PT",
+        "kind": "discord",
+        "quote": "\"ur a monster\" / \"genuinely\" / \"bro i wish i was as locked in as you\" / \"zy for context chloe is like what\" / \"4th on the overall leaderboard\" / \"wth how r u lower then me\" / \"when did that happen\" / \"dude im on my third monster today and my hands r shaking bad\" / \"yo bio people cure me\" / \"the heart is a muscle train it to failure \"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-36",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:35\u201312:37 AM PT",
+        "kind": "discord",
+        "quote": "\"UHUHFUDHFA IDK LMAO\" / \"no im not\" / \"im 11th\" / \"ugh\" / \"FREAK OUT\" / \"ABOUT BEING HOMELESS\" / \"i just didnt lock in ont he early days of latent \" / \"BRO SAME had 6 shots of espresso and just cracked open a cold energy drink\" / \"LOL\" / \"THATS SO REAL\" / \"my video must look aesthetic or else\" / \"ill just private it\" / \"NOOO POST MORE\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-37",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Zyxsra",
+        "author": "Zyxsra",
+        "whenPT": "10/27 12:36\u201312:37 AM PT",
+        "kind": "discord",
+        "quote": "\"I lowkey only log myself on latent when im actually taking notes cus it looks aesthetically pleasing (edited)\" / \"Everythings priv for me ifk im too embarrassed\" / \"This is what ppl drinking like 70 energy drinks a week say\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-38",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:37 AM PT",
+        "kind": "discord",
+        "quote": "\"the best defense is a good offense - sun tzu\" (1) / \"attack the heart before it can attack you\" (1) / \"i think like all but 3 of my posts are public\" (1) / \"lowk chudding in all of them\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-39",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Zyxsra",
+        "author": "Zyxsra",
+        "whenPT": "10/27 12:38 AM PT",
+        "kind": "discord",
+        "quote": "\"Truth\" / \"BOY\" / \"we arent\" / \"I didnt add anyone lowk\" / \"I was too lazy\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-40",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:38 AM PT",
+        "kind": "discord",
+        "quote": "\"WAIT whats ur username zy\" / \"are we friends\" / \"on latent\" / \"same i just accepted everyone\" (1) / \"idk how these people even find me\" / \"yes i got like 20 today\" / \"IKR\" / \"LIKE FROM WHERE\" / \"HOW\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-41",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:38\u201312:40 AM PT",
+        "kind": "discord",
+        "quote": "\"heh hi nice to meet you\" / \"yo chloe r u still getting requests\" / \"im getting like 3 a day idk how thats possible\" / \"jesus\" / \"i have like 110 friends idk where theyre finding me\" / \"IDK\" / \"ive invited like 3 people to the app and i have like 120 friends now\" (1) / \"like huh \" / \"wait zy ill add u later lowk im tryna lock in rn and im getting distracted lmfao\" / \"chloe get to work gng\" / \"ight bet\" / \"ill add u later\" (1) / \"im js krabbykai\" (1) / \"crazy work\" / \"crazy crazy\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-42",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 12:39\u201312:41 AM PT",
+        "kind": "discord",
+        "quote": "\"WHERE IS THIS COMING FROM\" / \"whats ur username\" / \"ill add u after my session\" / \"yes what iwas just gonna say\" / \"WITH THOSE FONTS??\" / \"is it just zyxsra\" / \"OK GOTTIE\" / \"i think when i finish this session ill be above rj\" / \"HAHAHHAHAHAHHAAHAHHAAH\" / \"i might be delusional tho\" / \"cuz he prob logged more.\" / \"ANYWAYS\" / \"EVEYRONE SHUT UP\" (1) / \"BYE\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-43",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Zyxsra",
+        "author": "Zyxsra",
+        "whenPT": "10/27 12:39\u201312:42 AM PT",
+        "kind": "discord",
+        "quote": "\"Woah\" / \"Mines uh\" / \"Join me on Latent. Copy this link into the app to get in:\" + link https://trylatent.co/i/SH4A8H (\"Join me on Latent / Put your phone down. Do the work. Stay accountable with your friends.\") / \"This\" / \"This might not be the right link to add friends wait\" / \"I'm not too sure\" / \"@\u02da\u208a\u2027 \u2124\ud835\udd6a\ud835\udd69\ud835\udd64\ud835\udd63\ud835\udd52 \u0ed2\ua4b1 \u2027\u208a\u02daa\" / \"Why did it tag myself\" / \"NO BRO\" / \"ITS JS ZYXSRAA\" / \"yeah w 2 as\" / \"BYEE\" / \"imma sleep yall gn\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-44",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 12:41\u201312:42 AM PT",
+        "kind": "discord",
+        "quote": "\"BYE\" / \"night\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-45",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "00001111 [new member]",
+        "author": "00001111 [new member]",
+        "whenPT": "10/27 12:53 AM",
+        "kind": "discord",
+        "quote": "\"forget status labels/locations, seek applied knowledge, only know e/acc and e/mog\" / (12:54 AM, blank/attachment)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-46",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 1:40 AM PT",
+        "kind": "discord",
+        "quote": "(blank/attachment) / \"@KrabbyKai\" / \"HOOOOOOO LKELEKELEEEE ESHIIIIITT\" / \"IM SO HAPPY\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-47",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 1:42 AM PT",
+        "kind": "discord",
+        "quote": "\"holy shit\" / \"good stuff\" / \"ur locked\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-48",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 1:44 AM PT",
+        "kind": "discord",
+        "quote": "\"the main part is\" / \"i'm only 8minufes ahead now\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-49",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 1:44 AM PT",
+        "kind": "discord",
+        "quote": "\"lmao\" / \"aye u still got that tho\" (1)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-50",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 2:32 AM PT",
+        "kind": "discord",
+        "quote": "\"playing a game of chicken with my bloodstream\" / \"winner takes all\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-51",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "ANGELO [new/unlabelled]",
+        "author": "ANGELO [new/unlabelled]",
+        "whenPT": "10/27 2:33 AM PT",
+        "kind": "discord",
+        "quote": "\"very funny\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-52",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 2:33 AM PT",
+        "kind": "discord",
+        "quote": "\"@d\" / \"my heart thinks so\" (1) / \"keeps skipping a beat\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-53",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "d [VBL]",
+        "author": "d [VBL]",
+        "whenPT": "10/27 2:33 AM PT",
+        "kind": "discord",
+        "quote": "\"Yo\" / \"Oo monster\" (reply to ANGELO \"very funny\")",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-54",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "ANGELO",
+        "author": "ANGELO",
+        "whenPT": "10/27 2:34 AM PT",
+        "kind": "discord",
+        "quote": "\"i wasnt trying to be satirical\" (3) / \"can i try again\" / \"ok here goes\" (reply to KrabbyKai \"winner takes all\") / \"aha! \" (2) / \"if discord had voice messages id defo send a 14 minute voice note of me cackling\" / \"14 second*\" (1) / \"thank you krabby kai\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-55",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 2:34\u20132:36 AM PT",
+        "kind": "discord",
+        "quote": "\"lmao go for it\" / \"that was good \" (1) / \"my pleasure lmao\" / \"riveting\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-56",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/27 2:35 AM PT",
+        "kind": "discord",
+        "quote": "voice message (0:03) / \"crickets\" / \"https://klipy.com/gifs/ishowspeed-tweaking\" / \"uhhhhh\" / \"watching peak\" / \"NOT EVEN SUBSEIBED\" / \"I TAKE IT BACK\" / \"I WILL SUBSEIB THIS INSTANT I SWEAR!!\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-57",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "ANGELO",
+        "author": "ANGELO",
+        "whenPT": "10/27 2:36\u20132:41 AM PT",
+        "kind": "discord",
+        "quote": "\"chloe how\" / \"if i could find hte voice button i'd do a crazy cackle\" / \"like a wicth\" / \"spoopy \" / \"where\" / \"i cant find it\" / \"D, I'll send a screenshot and you find it for me pls\" / (attachment) / \"first flamingo video since 2021\" / \"i feel like im 12 again\" / \"NO CHLOE GIVE IT BACK WTH\" / \"Now if i had that button i'd probably use it to make an exagerated plea to choloe\" / \"chloe*\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-58",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "d [VBL]",
+        "author": "d [VBL]",
+        "whenPT": "10/27 2:36\u20132:39 AM PT",
+        "kind": "discord",
+        "quote": "\"Crickets\" / \"It's right there lad\" / voice message (0:04) / \"Take a long gander to the mid bottom right of ur screen\" / \"Divert ur eyes to the microphone icon situated in the corner of the texting bubble\" / \"Oh it's pc\" / \"Nah u ain't got that on pc\" / \"Flim flam\"",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-59",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "KrabbyKai",
+        "author": "KrabbyKai",
+        "whenPT": "10/27 2:41 AM PT",
+        "kind": "discord",
+        "quote": "\"playing a game of chicken with my bloodstream\" (reply context shown to chloe's last message; same text as 2:32 AM post)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-60",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "00001111",
+        "author": "00001111",
+        "whenPT": "10/27 3:18 AM PT",
+        "kind": "discord",
+        "quote": "\"try ghost root beer\" (reply context)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-61",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "fusion [4562]",
+        "author": "fusion [4562]",
+        "whenPT": "10/27 3:43 AM PT",
+        "kind": "discord",
+        "quote": "\"guys where is the music button\" \u2014 question (music), answered by 00001111 (not Eddie/Malcolm)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-62",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "ANGELO",
+        "author": "ANGELO",
+        "whenPT": "10/27 3:44 AM PT",
+        "kind": "discord",
+        "quote": "\"idk\" (reply to fusion)",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-63",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "00001111",
+        "author": "00001111",
+        "whenPT": "10/27 4:08 AM PT",
+        "kind": "discord",
+        "quote": "\"when you're about to post there's an option to add music\" \u2014 answer",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-64",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "ANGELO",
+        "author": "ANGELO",
+        "whenPT": "10/27 9:12 AM PT",
+        "kind": "discord",
+        "quote": "\"if only this app was on andriod id be so locked\" \u2014 feature (Android)/chatter",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-65",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "00001111",
+        "author": "00001111",
+        "whenPT": "10/26 10:24 AM PT",
+        "kind": "discord",
+        "quote": "[new thread, title only] \"Bug: Share to instagram button causes error\"",
+        "note": "Discord \u00b7 #feature-requests \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-66",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "alejo",
+        "author": "alejo",
+        "whenPT": "10/26 1:36 PM PT",
+        "kind": "discord",
+        "quote": "[new thread, title only] \"Make the music button the same functionality and position as instagram.\"",
+        "note": "Discord \u00b7 #feature-requests \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-67",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "chloe",
+        "author": "chloe",
+        "whenPT": "10/26 4:19 PM PT",
+        "kind": "discord",
+        "quote": "\"i feel like this would defeat the purpose of the app\" / \"i'd rather not have this feature\" \u2014 feature feedback (against)",
+        "note": "Discord \u00b7 #feature-requests \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-68",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "RyanGol",
+        "author": "RyanGol",
+        "whenPT": "10/26 9:53 PM PT",
+        "kind": "discord",
+        "quote": "\"i just feel like there's like so many ways to larp already, but like w the feature, at least you would be able to better track the hours that you actually end up studying, and like the way they could do it is by letting you access educational apps without it pausing your time... like nothing with social media where you can contact your friends. apps such as: powerpoint, word, teams, onedrive, capcut, google drive, etc...\" (edited) \u2014 feature, unanswered by Eddie/Malcolm",
+        "note": "Discord \u00b7 #feature-requests \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "discord-1027-69",
+        "source": "discord",
+        "channel": "#questions",
+        "username": "Chimm",
+        "author": "Chimm",
+        "whenPT": "10/26 9:52 PM PT",
+        "kind": "discord",
+        "quote": "[new thread, title only] \"Guys how much storage does the app take ? Mines like 1.6gb\"",
+        "note": "Discord \u00b7 #questions \u00b7 as written down by the Discord check (text in quotes is verbatim)"
+      },
+      {
+        "id": "gmail-samuel",
+        "source": "gmail",
+        "username": "Samuel Downs",
+        "email": "srdowns2010@gmail.com",
+        "whenPT": "Oct 16, 4:13 PM PT",
+        "kind": "email",
+        "quote": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+        "note": "Email \u00b7 Re: Delete account \u00b7 carried from earlier \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-hizam-thanks",
+        "source": "gmail",
+        "username": "Hizam (Mohammad Tuan)",
+        "email": "mohammadtuan4@gmail.com",
+        "whenPT": "Oct 24, 11:22 PM PT",
+        "kind": "email",
+        "quote": "Awesome, thank you so much!\n\nWill get back to you soon.\n\nHizam",
+        "note": "Email \u00b7 Re: Would Love to Try Latent \u00b7 carried from earlier \u00b7 reply drafted below (optional)"
+      },
+      {
+        "id": "gmail-daniela",
+        "source": "gmail",
+        "username": "Daniela Boehm",
+        "email": "daniboehm0305@gmail.com",
+        "whenPT": "Oct 25, 4:51 AM PT",
+        "kind": "email",
+        "quote": "Thank you, looking forward to it!",
+        "note": "Email \u00b7 Re: lock in twin \u00b7 carried from earlier \u00b7 reply drafted below (optional)"
+      },
+      {
+        "id": "gmail-krishna-comments",
+        "source": "gmail",
+        "username": "Krishna Meghana Ravulapati",
+        "email": "ravulapatikrishnameghana@gmail.com",
+        "whenPT": "Oct 27, 4:21 AM PT",
+        "kind": "email",
+        "quote": "Hey Eddie,\n\nI just came across another similar situation:  The screen gets stuck when I\nopen comments someone\u2019s Timelapse(in the home page). I need to close the\napp and open it to use it again.\n\nSince Latent is still making fixes and developing more features, product\ntesting and evaluation is essential.\n\nI have applied for a job through the hiring form that has been put up.\nI used my professional email: krishnameghanar@gmail.com\nBeen told that Latent has put a pause to the hiring process. But if you are\nlooking to expand the team, I can be of great assistance in terms of\nproduct review, testing or evaluation.\n\nLooking forward to hearing from you\n\nThank you,\nKrishna Meghana. R",
+        "note": "Email \u00b7 Re: How to get into Latent (the focus screen bug) \u00b7 new \u00b7 reply drafted below"
+      },
+      {
+        "id": "gmail-juan",
+        "source": "gmail",
+        "username": "Juan (juan@athletevia.com)",
+        "email": "juan@athletevia.com",
+        "whenPT": "Oct 26, 10:32 AM PT",
+        "kind": "email",
+        "quote": "Hi Eddie,\n\nJuan here. I found Latent on Instagram and I have been digging into it\nas a founder, not a user.\n\nI built something a while back called equity. Same idea as yours at\nthe core, an accountability app where you bet money on yourself. $20\nsays you hit the gym at 6am every day. It died on one problem:\nverification. A workout is easy to certify. Reading a book or doing\ndeep work on a computer is not. How do you prove you did the thing?\n\nYour timelapse approach is clever. Presence on camera, clock stops\nwhen you switch apps. But I keep coming back to the same wall. What\nstops someone from sitting at a desk for two hours doing nothing? And\nhow do you handle work that does not happen on the phone at all?\n\nGenuinely curious how far you have taken the verification layer, and\nwhere you think it breaks.\n\nJuan",
+        "note": "Email \u00b7 How do you actually verify the work? \u00b7 founder, not a user \u00b7 FYI, no draft"
+      },
+      {
+        "id": "gmail-stepan",
+        "source": "gmail",
+        "username": "Stepan Shilnikov",
+        "email": "stepan.shilnikov@icloud.com",
+        "whenPT": "Oct 27, 7:53 AM PT",
+        "kind": "email",
+        "quote": "Hi Eddie,\n\nCongratulations on the release of your app!\n\nI was actually working on a similar project and would love to offer my help and collaborate with you for free. I have some solid groundwork that might be useful.\n\nLet me know if you're interested!\n\nSent from my iPhone",
+        "note": "Email \u00b7 Collaboration / App Release \u00b7 FYI, no draft"
+      }
+    ],
+    "replyDrafts": [
+      {
+        "id": "samuel",
+        "name": "Samuel Downs",
+        "to": "srdowns2010@gmail.com",
+        "subject": "Re: Delete account",
+        "threadId": "1a146fe4c9172b23",
+        "replyToMessageId": "1a146fe4c9172b23",
+        "theirMessage": "Dear Latent Support Team,\n\nI am writing to formally request the permanent deletion of my account and\nall associated personal data stored with Latent.\n\nPlease delete my account linked to this email address (srdowns2010@gmail.com)\nand remove all of my stored information, history, and personal details from\nyour systems and databases.\n\nOnce the account and data have been fully deleted, please send a\nconfirmation email to confirm that this process is complete.\n\nThank you,\n\nSamuel Downs",
+        "theirWhenPT": "Oct 16, 4:13 PM PT",
+        "body": "Hey Samuel,\n\n[CHECK: as of ~9:20 AM PT Oct 27 there's still no Latent account for srdowns2010@gmail.com or @captsam; confirm you or Malcolm deleted everything] Your Latent account and all the data tied to srdowns2010@gmail.com have been permanently deleted. Sorry to see you go, and thanks for giving Latent a try.\n\nEddie",
+        "optional": false,
+        "isNew": false,
+        "note": "Carried over (unanswered since Oct 16, still unread). His account is still gone as of ~9:20 AM PT Oct 27, so this can go out now. He wrote to support@, so send from support@ if that's how you answer support mail.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879249972937304867"
+      },
+      {
+        "id": "hizam-thanks",
+        "name": "Hizam (Mohammad Tuan)",
+        "to": "mohammadtuan4@gmail.com",
+        "subject": "Re: Would Love to Try Latent",
+        "threadId": "1a16cb53a23facd5",
+        "replyToMessageId": "1a171baadca18846",
+        "theirMessage": "Awesome, thank you so much!\n\nWill get back to you soon.\n\nHizam",
+        "theirWhenPT": "Oct 24, 11:22 PM PT",
+        "body": "Hey Hizam, of course! Enjoy your first few sessions and let me know what you think.\n\nEddie",
+        "optional": true,
+        "isNew": false,
+        "note": "Carried over (3rd day). Optional, no reply needed. He's thanking you for the invite you sent Oct 24, 12:48 PM PT.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879913454538566869"
+      },
+      {
+        "id": "daniela",
+        "name": "Daniela Boehm",
+        "to": "daniboehm0305@gmail.com",
+        "subject": "Re: lock in twin",
+        "threadId": "1a106d45edc4d8d7",
+        "replyToMessageId": "1a172e68ae9ce001",
+        "theirMessage": "Thank you, looking forward to it!",
+        "theirWhenPT": "Oct 25, 4:51 AM PT",
+        "body": "Hey Dani, of course! Android is coming, I'll email you when it's out.\n\nEddie",
+        "optional": true,
+        "isNew": false,
+        "note": "Carried over (3rd day). Optional, no reply needed. Her email was marked read and moved out of the inbox since yesterday (not by the dig) with no reply sent, so if you meant to skip it, just say so and I'll drop it.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1878121191722768599"
+      },
+      {
+        "id": "krishna-comments",
+        "name": "Krishna Meghana Ravulapati",
+        "to": "ravulapatikrishnameghana@gmail.com",
+        "subject": "Re: How to get into Latent (the focus screen bug)",
+        "threadId": "1a145f6309db12bf",
+        "replyToMessageId": "1a17d17e3f3fcd81",
+        "theirMessage": "Hey Eddie,\n\nI just came across another similar situation:  The screen gets stuck when I\nopen comments someone\u2019s Timelapse(in the home page). I need to close the\napp and open it to use it again.\n\nSince Latent is still making fixes and developing more features, product\ntesting and evaluation is essential.\n\nI have applied for a job through the hiring form that has been put up.\nI used my professional email: krishnameghanar@gmail.com\nBeen told that Latent has put a pause to the hiring process. But if you are\nlooking to expand the team, I can be of great assistance in terms of\nproduct review, testing or evaluation.\n\nLooking forward to hearing from you\n\nThank you,\nKrishna Meghana. R",
+        "theirWhenPT": "Oct 27, 4:21 AM PT",
+        "body": "Hey Meghana,\n\nThanks for flagging this! Comments freezing the app is a bug on our side that hits iPhones on iOS 17, and we have a fix in the works [CHECK: TRY-588's fix is drafted but not approved or shipped yet]. Until then, closing and reopening the app gets you unstuck, sorry about that.\n\nI really appreciate the offer to help with testing. Hiring is paused for now, but please keep sending anything you find like this, it genuinely helps.\n\nEddie",
+        "optional": false,
+        "isNew": true,
+        "note": "NEW. Reply to your Oct 16 focus-screen email (she got the rating ask Oct 22). Her comments freeze is TRY-588 (Malcolm's bot, iOS 17, fix drafted, Need Approval); Achille wrote in-app about the same thing. She also mentions her hiring application (krishnameghanar@gmail.com) and the pause; the draft doesn't pitch hiring.",
+        "viewUrl": "https://mail.google.com/mail/?authuser=eddie@trylatent.co#all/thread-f:1879231823492092607"
+      }
+    ],
+    "linearIssue": {
+      "id": "TRY-590",
+      "url": "https://linear.app/trylatent/issue/TRY-590/daily-dig-2026-10-27-2-fixes-waiting-for-review-617-633"
+    },
+    "linearNote": "Linear dig issue: TRY-590 https://linear.app/trylatent/issue/TRY-590/daily-dig-2026-10-27-2-fixes-waiting-for-review-617-633",
+    "emailMessageId": "1a17e32be57323dd",
     "release": {
       "appStoreVersion": "1.0.9",
       "build": "47",
