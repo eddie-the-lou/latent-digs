@@ -6,6 +6,11 @@
 The report itself is computed by scripts/activation-report in the app repo (it reads PostHog
 with a key that never leaves the Mac). This only turns its Markdown into activation/index.html,
 keeping the <head> and styles of the page that is already here.
+
+Since 2026-10-28 scripts/activation-report writes activation/index.html WHOLE, with charts, and
+pushes it here itself; the README on the `activation-report` branch is only a summary table. A
+page carrying <meta name="activation-layout" content="charts"> is therefore left exactly as it
+is: rendering the summary over it would throw the charts away. Nothing needs to be done then.
 """
 import html
 import re
@@ -78,6 +83,10 @@ def main():
     commit = sys.argv[2] if len(sys.argv) > 2 else "unknown"
     page = HERE / "index.html"
     old = page.read_text()
+    if '<meta name="activation-layout" content="charts">' in old:
+        print(f"{page} is the chart page, written whole by scripts/activation-report; left as it is. "
+              "Nothing to render or commit.")
+        return
     head = old[: old.index('<h1 id=')]
     head = re.sub(r'<meta name="source-commit" content="[^"]*">',
                   f'<meta name="source-commit" content="{commit}">', head)
