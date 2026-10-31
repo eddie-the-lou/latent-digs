@@ -1,5 +1,10 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-10-31",
+    "title": "Latent daily review \u00b7 Oct 31",
+    "tldr": "No new fixes; #617/#633/#653 still waiting, empty videos still on 1.0.10 (42 people/day). 2 merged. No age holds. 7 in-app notes, Monday week start asked 3x, no reply drafts."
+  },
+  {
     "date": "2026-10-30",
     "title": "Latent daily review \u00b7 Oct 30",
     "tldr": "No new fixes; #617/#633/#653 still waiting, empty videos still rising on 1.0.10. 12 merged (incl. #668 profile photo). No age holds. 6 in-app notes, no reply drafts."
@@ -772,6 +777,11 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-10-31",
+      "title": "Latent daily review \u00b7 Oct 31",
+      "tldr": "No new fixes; #617/#633/#653 still waiting, empty videos still on 1.0.10 (42 people/day). 2 merged. No age holds. 7 in-app notes, Monday week start asked 3x, no reply drafts."
+    },
     {
       "date": "2026-10-30",
       "title": "Latent daily review \u00b7 Oct 30",
@@ -75563,12 +75573,12 @@ window.DIGESTS = {
       {
         "id": "email",
         "title": "Email dig to eddie@weaive.app",
-        "status": "done"
+        "status": "pending"
       },
       {
         "id": "archive",
         "title": "Publish archive to latent-digs GitHub Pages",
-        "status": "done"
+        "status": "pending"
       },
       {
         "id": "linear",
@@ -100935,6 +100945,628 @@ window.DIGESTS = {
       "build": "48",
       "releasedPT": "Oct 27, 11:55 AM PT",
       "rating": "4.91 (207)"
+    }
+  },
+  "2026-10-31": {
+    "date": "2026-10-31",
+    "title": "Latent daily review \u00b7 Oct 31",
+    "generatedAt": "2026-10-31T16:20:34.911861+00:00",
+    "tldr": [
+      "No new fixes today: everything people reported already has a ticket or isn't clear enough yet. Your 3 dig PRs are still waiting: #617 and #633 (empty videos) and #653 (Spotify keeps playing). Only 2 PRs merged overnight, both Malcolm's (live status on friends' profiles, a crash fix).",
+      "Empty-video upload failures are still happening on the App Store build: 675 in a day from about 42 people, 635 of them on 1.0.10. Merging #617 and #633 gets them into the next build.",
+      "Age holds: none. Nothing new, released or deleted.",
+      "7 in-app notes: Tejveer from New Zealand loves the app but swiping back in settings jumps to his profile (TRY-637) and the timer on his Mac stopped today (new, watching); Snowy couldn't find how to copy an invite link. Asks: start the week on Monday (also on Discord, TRY-439), close-friends notifications (TRY-639), recover a deleted session (TRY-603), Android.",
+      "Discord: quiet. Two new requests: start the week on Monday (dali, plus a \"PLEASE\"; same as Alex's in-app ask, TRY-439) and show your rank and groups on your profile (katie, TRY-638). Still no reply from you or Malcolm on the Instagram share bug, LinkedIn, Chimm's storage thread or the group sessions idea. No reply drafts: no new app-user emails. 1 new survey answer (Jody, very disappointed, wants light mode). 2 new beta opt-ins (176). 4.91 stars (208). Installs 593 (was 932), a quiet day across the board. Sentry still needs re-auth."
+    ],
+    "plainTldr": [
+      "No new fixes today: everything people reported already has a ticket or isn't clear enough yet. Your 3 dig PRs are still waiting: #617 and #633 (empty videos) and #653 (Spotify keeps playing). Only 2 PRs merged overnight, both Malcolm's (live status on friends' profiles, a crash fix).",
+      "Empty-video upload failures are still happening on the App Store build: 675 in a day from about 42 people, 635 of them on 1.0.10. Merging #617 and #633 gets them into the next build.",
+      "Age holds: none. Nothing new, released or deleted.",
+      "7 in-app notes: Tejveer from New Zealand loves the app but swiping back in settings jumps to his profile (TRY-637) and the timer on his Mac stopped today (new, watching); Snowy couldn't find how to copy an invite link. Asks: start the week on Monday (also on Discord, TRY-439), close-friends notifications (TRY-639), recover a deleted session (TRY-603), Android.",
+      "Discord: quiet. Two new requests: start the week on Monday (dali, plus a \"PLEASE\"; same as Alex's in-app ask, TRY-439) and show your rank and groups on your profile (katie, TRY-638). Still no reply from you or Malcolm on the Instagram share bug, LinkedIn, Chimm's storage thread or the group sessions idea. No reply drafts: no new app-user emails. 1 new survey answer (Jody, very disappointed, wants light mode). 2 new beta opt-ins (176). 4.91 stars (208). Installs 593 (was 932), a quiet day across the board. Sentry still needs re-auth."
+    ],
+    "urgent": [],
+    "stats": {
+      "newInApp": 7,
+      "newDiscord": 4,
+      "newGmail": 0,
+      "newSurveyRows": 1,
+      "seanEllis": {
+        "very": 40,
+        "somewhat": 25,
+        "not": 2,
+        "n": 67
+      },
+      "sentryNew": [],
+      "sentryUnavailable": true,
+      "rawQuotes": 12,
+      "betaOptInsNew": 2,
+      "betaOptInsTotal": 176,
+      "installs24h": 593,
+      "installsPrev24h": 932
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "carriedFromEarlier": [
+        {
+          "pr": 617,
+          "url": "https://github.com/eddie-the-lou/latent/pull/617",
+          "title": "Record: Undo after Finish no longer uploads an empty clip",
+          "status": "Still waiting for your review (opened Oct 25)",
+          "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session."
+        },
+        {
+          "pr": 633,
+          "url": "https://github.com/eddie-the-lou/latent/pull/633",
+          "title": "Stop retrying empty-clip uploads on every launch",
+          "status": "Still waiting for your review (opened Oct 26, built on #617)",
+          "whatItFixes": "A post whose video is empty or gone stops retrying on every app open: it tries to rebuild from leftover pieces once, otherwise shows Video missing. Includes #617, so merge #617 first or both."
+        },
+        {
+          "pr": 653,
+          "url": "https://github.com/eddie-the-lou/latent/pull/653",
+          "title": "Keep Spotify playing when you start a session",
+          "status": "Still waiting for your review (opened Oct 28)",
+          "whatItFixes": "Starting a camera-on session no longer stops Spotify or Apple Music (the camera was grabbing the phone's sound). Check on a real phone. App blocking may also stop Spotify, which #653 doesn't touch."
+        }
+      ],
+      "agentsLaunched": [],
+      "agentsStillWorking": [],
+      "mergedOvernight": [
+        {
+          "pr": 679,
+          "url": "https://github.com/eddie-the-lou/latent/pull/679",
+          "title": "Friends and Messages: closing a screen while holding a row no longer crashes (TRY-470)",
+          "by": "Malcolm \u00b7 merged Oct 30, 1:20 PM PT"
+        },
+        {
+          "pr": 680,
+          "url": "https://github.com/eddie-the-lou/latent/pull/680",
+          "title": "A friend's profile shows when they are live (TRY-529)",
+          "by": "Malcolm \u00b7 merged Oct 30, 11:32 AM PT"
+        }
+      ],
+      "closedOvernight": [],
+      "stillOnYou": [
+        {
+          "id": "pr-617-633",
+          "title": "#617 and #633 (empty-video fixes from Oct 25 and Oct 26) are still open. Empty-video failures on 1.0.10: 635 in the last day from 40 people. Merge #617 first, then #633 (or both), so they make the next build.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/617"
+        },
+        {
+          "id": "pr-653",
+          "title": "#653 (Spotify keeps playing during a session, Oct 28) is waiting for your review. Needs a real-phone check.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/653"
+        },
+        {
+          "id": "pr-662",
+          "title": "#662 (Malcolm's bot profile photo fix) is still open even though Jerry's #668 merged Oct 29. Close it as replaced; TRY-598 can move to Done.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/662"
+        },
+        {
+          "id": "pr-678",
+          "title": "Jerry's #678 (turning App blocking off in Settings after a session really unblocks apps, TRY-602) is still waiting for review (opened yesterday, 7:32 AM PT).",
+          "url": "https://github.com/eddie-the-lou/latent/pull/678"
+        },
+        {
+          "id": "bot-new",
+          "title": "New from Malcolm's bot since yesterday (Need Approval): TRY-637 swiping back in settings skips the settings list (Tejveer, in-app), TRY-638 show your groups and rank on your profile (katie, Discord), TRY-639 only get studying pings from close friends (Luis, in-app). Still waiting from before: TRY-626, TRY-629, TRY-632 (edit tags), TRY-633 (hold last frame), TRY-635, TRY-636.",
+          "url": "https://linear.app/trylatent/issue/TRY-637"
+        },
+        {
+          "id": "bot-older",
+          "title": "Still Need Approval from before: TRY-439 (week starts Monday, asked again today in-app and on Discord), TRY-463 (light mode, asked again in the survey), TRY-603 (recover a deleted session, asked again today by Zaneta), TRY-608, TRY-614, TRY-615, TRY-617, TRY-618 to TRY-624, TRY-602 (has #678), TRY-604, TRY-605, TRY-606, TRY-592, TRY-588 (fixed by merged #671, can close), TRY-587, TRY-582, TRY-563, TRY-564, TRY-542, TRY-538, TRY-496, TRY-442, and moderation TRY-548 and TRY-484.",
+          "url": "https://linear.app/trylatent/issue/TRY-439"
+        },
+        {
+          "id": "older-prs",
+          "title": "Other open PRs: Jerry #678, #632; Malcolm #672, #619, #605, #587, #537, #530, #529, #518, #499; Malcolm's bot #662; yours #659, #651, #500 and #417.",
+          "url": "https://github.com/eddie-the-lou/latent/pulls"
+        },
+        {
+          "id": "fyi",
+          "title": "FYI (no draft): no new emails from app users since yesterday. Only paid-collab pitches (ahacreator, Jobright, Dreamina/GMV, Notta, Scaler AI, Helthfit, Robot24, Predis), EF calendar invites, Jerry's work-trial reimbursement invoice (to you and Malcolm, not app feedback), receipts and newsletters. Skipped."
+        }
+      ],
+      "note": "No Cloud Agents launched today. Swiping back in settings is TRY-637 (Malcolm's bot); the Mac timer is one report with no steps, close to TRY-573 (In Progress); the invite link is a question. 2 PRs merged overnight."
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 617,
+          "url": "https://github.com/eddie-the-lou/latent/pull/617",
+          "title": "Record: Undo after Finish no longer uploads an empty clip",
+          "status": "Still waiting for your review (opened Oct 25)",
+          "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session."
+        },
+        {
+          "pr": 633,
+          "url": "https://github.com/eddie-the-lou/latent/pull/633",
+          "title": "Stop retrying empty-clip uploads on every launch",
+          "status": "Still waiting for your review (opened Oct 26, built on #617)",
+          "whatItFixes": "A post whose video is empty or gone stops retrying on every app open: it tries to rebuild from leftover pieces once, otherwise shows Video missing. Includes #617, so merge #617 first or both."
+        },
+        {
+          "pr": 653,
+          "url": "https://github.com/eddie-the-lou/latent/pull/653",
+          "title": "Keep Spotify playing when you start a session",
+          "status": "Still waiting for your review (opened Oct 28)",
+          "whatItFixes": "Starting a camera-on session no longer stops Spotify or Apple Music (the camera was grabbing the phone's sound). Check on a real phone. App blocking may also stop Spotify, which #653 doesn't touch."
+        }
+      ],
+      "openedToday": [],
+      "agentsStillWorking": [],
+      "mergedOvernight": [
+        {
+          "pr": 679,
+          "url": "https://github.com/eddie-the-lou/latent/pull/679",
+          "title": "Friends and Messages: closing a screen while holding a row no longer crashes (TRY-470)",
+          "by": "Malcolm \u00b7 merged Oct 30, 1:20 PM PT"
+        },
+        {
+          "pr": 680,
+          "url": "https://github.com/eddie-the-lou/latent/pull/680",
+          "title": "A friend's profile shows when they are live (TRY-529)",
+          "by": "Malcolm \u00b7 merged Oct 30, 11:32 AM PT"
+        }
+      ],
+      "closedOvernight": [],
+      "newOpenNotDig": []
+    },
+    "ageHolds": {
+      "open": [],
+      "newLast24h": [],
+      "resolvedLast24h": [],
+      "summary": "No age holds.",
+      "detail": "No open holds, none started and none released or deleted in the last 24 hours. Holds ever: 2. Checked ~9:13 AM PT. The dig changed nothing.",
+      "query": "/workspace/feedback-digests/age-holds.sql"
+    },
+    "actions": [
+      {
+        "id": "pr-617-633",
+        "title": "Review #617 then #633 (empty-video fixes)",
+        "plainSummary": "About 42 people a day still hit it on the App Store build.",
+        "status": "Waiting for your review",
+        "url": "https://github.com/eddie-the-lou/latent/pull/617"
+      },
+      {
+        "id": "pr-653",
+        "title": "Review #653 (Spotify keeps playing during a session)",
+        "plainSummary": "Needs a real-phone check.",
+        "status": "Waiting for your review",
+        "url": "https://github.com/eddie-the-lou/latent/pull/653"
+      },
+      {
+        "id": "pr-678",
+        "title": "Review Jerry's #678 (apps stay blocked after a session, TRY-602)",
+        "plainSummary": "Opened yesterday morning, still waiting.",
+        "status": "Needs you",
+        "url": "https://github.com/eddie-the-lou/latent/pull/678"
+      },
+      {
+        "id": "pr-662",
+        "title": "Close #662 (replaced by Jerry's merged #668)",
+        "plainSummary": "TRY-598 can move to Done.",
+        "status": "Needs you",
+        "url": "https://github.com/eddie-the-lou/latent/pull/662"
+      },
+      {
+        "id": "bot-new",
+        "title": "Malcolm's bot tickets waiting for approval: TRY-637, TRY-638, TRY-639 (new), plus TRY-626, TRY-629, TRY-632, TRY-633, TRY-635, TRY-636",
+        "plainSummary": "TRY-637 and TRY-639 match today's in-app notes; TRY-439 (Monday week start) was asked 3 times today.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-637"
+      },
+      {
+        "id": "try625",
+        "title": "TRY-625 (this dig issue) is still assigned to Jerry",
+        "plainSummary": "You moved it to Jerry on Oct 29; I left it. Say if you want it back on you.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-625"
+      },
+      {
+        "id": "sentry",
+        "title": "Re-connect Sentry",
+        "plainSummary": "Still needs re-auth.",
+        "status": "Needs you"
+      },
+      {
+        "id": "age-holds",
+        "title": "Age holds: none",
+        "plainSummary": "Nothing for the dig to do.",
+        "status": "done"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done",
+        "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-10-31"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "empty-clip",
+        "title": "Empty videos failing to upload on the App Store build",
+        "severity": "medium",
+        "people": 42,
+        "status": "PRs #617 and #633 waiting for your review",
+        "summary": "675 failures from about 42 people in the last day (was 660 from about 57). 635 from 40 people on 1.0.10 (48).",
+        "detail": "Neither fix is in the App Store build.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/617",
+        "sources": [
+          "posthog",
+          "github"
+        ]
+      },
+      {
+        "id": "spotify",
+        "title": "Starting a session stops Spotify / Apple Music",
+        "severity": "medium",
+        "people": 2,
+        "status": "PR #653 waiting for your review",
+        "summary": "From the Oct 28 Discord report.",
+        "detail": "",
+        "url": "https://github.com/eddie-the-lou/latent/pull/653",
+        "sources": [
+          "discord",
+          "github"
+        ]
+      },
+      {
+        "id": "swipe-settings",
+        "title": "Swiping back from a settings page jumps to your profile instead of the settings list",
+        "severity": "low",
+        "people": 1,
+        "status": "Malcolm's bot TRY-637 (Need Approval)",
+        "summary": "Tejveer (@tejveer) on 1.0.10. The back arrow works, but it's at the top of the screen.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-637",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "mac-timer",
+        "title": "Session timer showing on the Mac stopped working",
+        "severity": "low",
+        "people": 1,
+        "status": "New, no ticket (watching)",
+        "summary": "Tejveer (@tejveer) on 1.0.10: the timer he sees on his Mac \u201cstopped working tdy\u201d, and nothing in settings fixed it.",
+        "detail": "Most likely the iPhone Live Activity mirrored on the Mac. Close to TRY-573 (Live Activity timer stuck after resuming, In Progress). One report with no steps, so not clear enough for a fix.",
+        "url": "https://linear.app/trylatent/issue/TRY-573",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "invite-link",
+        "title": "Can't find how to copy an invite link",
+        "severity": "low",
+        "people": 1,
+        "status": "Confusing (no ticket)",
+        "summary": "Snowy (@sinothandolushaba) on 1.0.10: \u201chow do you copy a link here to invite a friend\u201d.",
+        "detail": "A question, not a broken feature. If more people ask, the invite link may need to be easier to find.",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "edit-tags",
+        "title": "Can't edit tags (from yesterday)",
+        "severity": "medium",
+        "people": 1,
+        "status": "Malcolm's bot TRY-632 (Need Approval)",
+        "summary": "No new reports today.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-632",
+        "sources": [
+          "linear"
+        ]
+      },
+      {
+        "id": "apps-blocked",
+        "title": "Apps stay blocked after a session ends",
+        "severity": "medium",
+        "people": null,
+        "status": "Jerry's PR #678 (TRY-602), waiting for review",
+        "summary": "Turning App blocking off in Settings right after a session did nothing until a restart.",
+        "detail": "",
+        "url": "https://github.com/eddie-the-lou/latent/pull/678",
+        "sources": [
+          "github",
+          "linear"
+        ]
+      },
+      {
+        "id": "sentry-auth",
+        "title": "Sentry connector needs re-auth",
+        "severity": "low",
+        "people": null,
+        "status": "Needs you",
+        "summary": "Still needs re-auth (recurring). No crash data from me today.",
+        "detail": "",
+        "sources": [
+          "sentry"
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "monday",
+        "title": "Start the week on Monday instead of Sunday",
+        "count": 3,
+        "peopleCountLabel": "3 new",
+        "status": "Need Approval (TRY-439)",
+        "summary": "Alex (@xandi) in-app, dali on Discord (for groups and your own account), plus Snowsnarl's \u201cPLEASE\u201d.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-439",
+        "sources": [
+          "in-app",
+          "discord",
+          "linear"
+        ]
+      },
+      {
+        "id": "notif-friends",
+        "title": "Mute group chat notifications, and only get pings from close friends",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Need Approval (TRY-639); group muting TRY-589 (Backlog)",
+        "summary": "Luis (@luis).",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-639",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "recover",
+        "title": "Recover an accidentally deleted session",
+        "count": 1,
+        "peopleCountLabel": "1 new (2 in two days)",
+        "status": "Need Approval (TRY-603)",
+        "summary": "Zaneta (@zaneta). Dontae asked the day before.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-603",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "android",
+        "title": "Android app",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Known ask",
+        "summary": "Wilson (@wilsonjong): can't invite his Android friends.",
+        "detail": "",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "rank-profile",
+        "title": "Show your rank and groups on your profile",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Need Approval (TRY-638)",
+        "summary": "katie on Discord.",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-638",
+        "sources": [
+          "discord",
+          "linear"
+        ]
+      },
+      {
+        "id": "light-mode",
+        "title": "Light (white) mode or other colors",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Need Approval (TRY-463)",
+        "summary": "Jody in the survey (would be very disappointed without Latent).",
+        "detail": "",
+        "url": "https://linear.app/trylatent/issue/TRY-463",
+        "sources": [
+          "survey",
+          "linear"
+        ]
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 2,
+        "peopleCountLabel": "2 new, 176 total",
+        "status": "Malcolm handles",
+        "summary": "2 new \u201cStay as a Beta Tester\u201d picks since yesterday's review (latest at 2:23 PM PT yesterday).",
+        "detail": "Count only (TRY-343).",
+        "sources": [
+          "supabase"
+        ]
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 7,
+        "note": "7 new public.feedback rows since yesterday's review: 3 bug reports (swiping back in settings, the Mac timer stopped, how to copy an invite link) and 4 asks (week starts Monday, close-friends and group chat notifications, recover a deleted session, Android). Two are from Tejveer, a happy user in New Zealand."
+      },
+      "discord": {
+        "new": 4,
+        "note": "New since Oct 30 ~9:20 AM PT, quiet. #feature-requests: dali \u201cMake it possible to change week's first day from sunday to monday in groups and in own accounts.\u201d (Snowsnarl replied \u201cPLEASE\u201d; TRY-439), katie \u201cshow your rank and the groups you're in on your profile\u201d (TRY-638). SIMON Mathilde's custom timelapse length vote unchanged at 9 / 3. No new #questions, nothing in #announcements, #general-chat chatter only, no #tester-chat. Still unanswered by you or Malcolm: 00001111's Instagram share bug (Oct 26), Share to LinkedIn (Oct 28, TRY-606), Chimm's storage question (Oct 26), halalchad's group sessions (Oct 29), alejo's music button (Oct 26), 00001111's data access (Oct 29), katie's rank/groups (Oct 30). No posts from you or Malcolm. Source: discord-2026-10-31.md (no JSON file; quotes copied from the notes)."
+      },
+      "gmail": {
+        "new": 0,
+        "note": "No new emails from app users since yesterday. Only paid-collab pitches, EF calendar invites, Jerry's reimbursement invoice, receipts and newsletters. No bug videos, no PostHog alert emails."
+      },
+      "survey": {
+        "newRows": 1,
+        "seanEllis": "40/25/2 of 67",
+        "note": "Export HTTP 200 (25,436 bytes). 1 new row on Active Users (Jody, Oct 31 6:23 AM PT, very disappointed, wants light mode). Other tabs unchanged (7 / 9 rows)."
+      },
+      "sentry": {
+        "new": [],
+        "note": "Unavailable: Sentry still needs re-auth (recurring auth failure). No data invented."
+      },
+      "posthog": {
+        "note": "Last 24h vs prior 24h (events/people, to ~9:16 AM PT): installs 593 (was 932); onboarding done 441 (was 722); sessions started 8,470/3,637 (was 11,180/4,644); sessions discarded 1,512/918 (was 1,868/1,178); app updates 772 (was 1,930). clip_upload_failed 734/66 (was 759/87: 675 empty clips from about 42, 635 of them from 40 people on 1.0.10 (48), #617/#633; 9 TLS errors from 3; the rest network or a few database errors), clip_upload_abandoned 5/1 (was 15/3), session_save_failed 60/31 (was 75/35), sign_in_failed 11/8 (was 22/18), backend_unreachable_shown 614/438 (was 997/668), media_invoke_retry_exhausted 473/109 (was 755/195), group_action_failed 2,409/521 (was 4,341/697), invite_check_failed 25/14 (was 108/32), capture_stalled 119/17 (was 130/16), segment_finalize_failed 14/12 (was 24/19), session_capture_failed 16/6 (was 18/10), friend_request_failed 69/9 (was 161/12; 34 network, 29 rate-limited from 2 people, 6 blocked), attachment_upload_failed 23/7 (was 2/2), sign_up_failed 1/1 (was 14/6), session_unlocked_elsewhere 12/6 (was 8/5), app_blocking_authorization_failed 44/39 (was 49/34). Rage clicks 9,023/2,649 (was 11,255/3,394). People starting a session in the last day by build: 1.0.10 (48) 3,385, 1.0.9 (47) 139, 1.0.8 (43) 53, 1.0.6 (39) 34, 1.0.9 (48) 26, 1.0.7 (41) 7. App Store: 1.1.0 (app reports 1.0.10 (48)), released Oct 27; 4.91 stars (208, was 207). Alerts: edge-function loop and clip size both not firing; last notification Oct 23, 6:27 PM PT. No PostHog alert emails. Nearly everything is lower than the day before, which looks like a quieter day (Friday into Halloween) rather than something breaking."
+      },
+      "github": {
+        "note": "2 PRs merged since yesterday's review, both Malcolm's: #680 (a friend's profile shows when they're live) and #679 (closing Friends or Messages while holding a row no longer crashes). No new PRs opened. #617, #633, #653 still open; #662 still open though #668 replaced it; Jerry's #678 still waiting."
+      },
+      "linear": {
+        "note": "Malcolm's bot filed TRY-637 (swipe back in settings), TRY-638 (rank and groups on profile) and TRY-639 (close-friends pings) since yesterday. Everything new today already has a ticket except the Mac timer (close to TRY-573) and the invite-link question. Nothing unowned and clear enough for a new fix."
+      },
+      "betaOptIns": {
+        "new": 2,
+        "total": 176
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "inapp-aa5bab82",
+        "source": "in-app",
+        "username": "@sinothandolushaba (Snowy Lushaba)",
+        "whenPT": "Oct 30, 12:13 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "how do you copy a link here to invite a friend",
+        "note": "In-app question (filed as a bug) \u00b7 How to copy an invite link. No ticket; likely just finding the invite/share button. Worth a look at whether the invite link is easy to find"
+      },
+      {
+        "id": "inapp-3da51239",
+        "source": "in-app",
+        "username": "@xandi (Alex)",
+        "whenPT": "Oct 30, 12:14 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "Option to change first day of the Week to Monday instead of Sunday",
+        "note": "In-app feature \u00b7 TRY-439 (let the week start on Monday, Need Approval). Also asked on Discord today"
+      },
+      {
+        "id": "inapp-4e0ce093",
+        "source": "in-app",
+        "username": "@tejveer (Tejveer)",
+        "whenPT": "Oct 30, 2:11 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "Ceebs writing a hello, so when you go into a section of the settings, (e.g notifications) and swipe back, i.e left of screen to the right, it goes to my profile instead of the settings page, i.e it skips the settings page. Idk if it\u2019s meant to do this, but it feels kinda off bc then I have to go back into the settings to adjust smth. Using the back arrow does fix this but it\u2019s at the top of the screen and yk ceebs reaching that far\ud83d\ude43. On a side note, you guys have built quite a premium app, especially the inital setup (especially the vibrations \ud83d\udc4f) and the font choices and logo. Holy moly I wrote so much \ud83d\ude05",
+        "note": "In-app bug \u00b7 Malcolm's bot filed TRY-637 (swiping back in settings skips the settings list, Need Approval). Happy user"
+      },
+      {
+        "id": "inapp-96667eb3",
+        "source": "in-app",
+        "username": "@zaneta (Zaneta)",
+        "whenPT": "Oct 30, 2:18 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "I accidentally deleted a session, is there a way to get it back",
+        "note": "In-app \u00b7 TRY-603 (deleted a post by accident and can't get it back, Need Approval)"
+      },
+      {
+        "id": "inapp-9b6f19ef",
+        "source": "in-app",
+        "username": "@luis (Luis)",
+        "whenPT": "Oct 30, 4:12 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "Is there any way to mute notifications for gcs specifically? And also maybe customisable notifications for individuals (eg. So I only get notified if some of my friends are studying, etc. not everyone I have added) maybe this could be done by having a \u2018close friends\u2019 options where you can set to only get notifs from them",
+        "note": "In-app feature \u00b7 Malcolm's bot filed TRY-639 (only get studying pings from close friends, Need Approval). Muting group chats specifically: TRY-589 (Backlog)"
+      },
+      {
+        "id": "inapp-0227e384",
+        "source": "in-app",
+        "username": "@wilsonjong (Wilson)",
+        "whenPT": "Oct 31, 12:54 AM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "please make it available for Android, cant invite my android friends",
+        "note": "In-app feature \u00b7 Android (known ask; no Android app yet)"
+      },
+      {
+        "id": "inapp-71733844",
+        "source": "in-app",
+        "username": "@tejveer (Tejveer)",
+        "whenPT": "Oct 31, 3:15 AM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "Kia ora bro, just wanted to let you guys know that the timer visible on Mac is fire and actually helps but it stopped working tdy. I looked thru the settings etc. Couldn\u2019t find anything to fix it. Thx \n\nBtw I\u2019m from New Zealand so just wanted you to know how far ur reach has been. I got all my mates onto Latent and we loving it bro\ud83e\udd19",
+        "note": "In-app bug \u00b7 new, no ticket. The session timer he sees on his Mac (most likely the iPhone Live Activity showing on the Mac) stopped working today. Close to TRY-573 (Live Activity timer stuck after resuming, In Progress). Not clear enough for a fix yet (no steps, one report). Happy user"
+      },
+      {
+        "id": "survey-1031-jody",
+        "source": "survey",
+        "username": "Jody (jodypark2038@gmail.com), Active Users tab",
+        "whenPT": "Oct 31, 6:23 AM PT",
+        "build": null,
+        "kind": "survey",
+        "quote": "How would you feel if you could no longer use Latent? Very disappointed\nWhat type of person do you think would benefit most from Latent? University students with heavy study loads\nWhat is the main benefit you get from Latent? To restrict myself from having access to my phone and tracking my study hours\nHow can we improve Latent for you? By adding light(white) mode or other colors",
+        "note": "Survey \u00b7 new row. Light mode is TRY-463 (Need Approval). The same email booked a 30-min call with Malcolm for tonight, 7 PM PT (as Sooyeon Park)"
+      },
+      {
+        "id": "discord-1031-0",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "dali",
+        "author": "dali",
+        "whenPT": "10/30 12:40 PM PT",
+        "kind": "discord",
+        "quote": "[new thread; the title is the full text] Make it possible to change week's first day from sunday to monday in groups and in own accounts.",
+        "note": "Discord \u00b7 #feature-requests \u00b7 as written down by the Discord check (text in quotes is verbatim; bracketed lines are condensed)"
+      },
+      {
+        "id": "discord-1031-1",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "Snowsnarl [VEX]",
+        "author": "Snowsnarl [VEX]",
+        "whenPT": "10/31 3:11 AM PT",
+        "kind": "discord",
+        "quote": "[reply in dali's Monday thread] \"PLEASE\"",
+        "note": "Discord \u00b7 #feature-requests \u00b7 as written down by the Discord check (text in quotes is verbatim; bracketed lines are condensed)"
+      },
+      {
+        "id": "discord-1031-2",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "katie",
+        "author": "katie",
+        "whenPT": "10/30 5:18 PM PT",
+        "kind": "discord",
+        "quote": "[new thread title, no messages] show your rank and the groups you're in on your profile",
+        "note": "Discord \u00b7 #feature-requests \u00b7 as written down by the Discord check (text in quotes is verbatim; bracketed lines are condensed)"
+      },
+      {
+        "id": "discord-1031-3",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "various",
+        "author": "various",
+        "whenPT": "10/30 to 10/31",
+        "kind": "discord",
+        "quote": "[chatter, condensed by the Discord check: goated role, tests, Valorant timelapse jokes; zen asked what the server is and was told \"discord for app that lets u timelapse study sessions and record them\"]",
+        "note": "Discord \u00b7 #general-chat \u00b7 as written down by the Discord check (text in quotes is verbatim; bracketed lines are condensed)"
+      }
+    ],
+    "replyDrafts": [],
+    "linearIssue": {
+      "id": "TRY-625",
+      "url": "https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-10-31-3-fixes-waiting-for-review-617-653"
+    },
+    "linearNote": "Linear dig issue: TRY-625 https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-10-31-3-fixes-waiting-for-review-617-653",
+    "emailMessageId": "1a192c333a641222",
+    "release": {
+      "appStoreVersion": "1.1.0 (app reports 1.0.10)",
+      "build": "48",
+      "releasedPT": "Oct 27, 11:55 AM PT",
+      "rating": "4.91 (208)"
     }
   }
 };
