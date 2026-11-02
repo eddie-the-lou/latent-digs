@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-11-02",
+    "title": "Latent daily review · Nov 2",
+    "tldr": "No new fixes; #617/#633/#653 still waiting, empty videos up to 78 people/day as installs jump to 1,007. 1 merged (#685). No age holds, new under-13 report (TRY-648). 5 in-app notes, all owned, no reply drafts."
+  },
+  {
     "date": "2026-11-01",
     "title": "Latent daily review · Nov 1",
     "tldr": "No new fixes; #617/#633/#653 still waiting, empty videos up to 55 people/day on 1.0.10. 1 merged (#682). No age holds, first under-13 report (TRY-642). 2 in-app notes, Jerry's #684 covers iPad, no reply drafts."
