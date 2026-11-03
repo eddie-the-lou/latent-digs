@@ -1,5 +1,10 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-11-03",
+    "title": "Latent daily review \u00b7 Nov 3",
+    "tldr": "1 fix opened (#687 videos won't play on 17 Pro); #617/#633/#653 still waiting; empty videos ~74 people/day; 1 merged (#686). No age holds. 8 in-app notes, 1 reply draft (Tadeas)."
+  },
+  {
     "date": "2026-11-02",
     "title": "Latent daily review \u00b7 Nov 2",
     "tldr": "No new fixes; #617/#633/#653 still waiting, empty videos up to 78 people/day as installs jump to 1,007. 1 merged (#685). No age holds, new under-13 report (TRY-648). 5 in-app notes, all owned, no reply drafts."
@@ -787,6 +792,11 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-11-03",
+      "title": "Latent daily review \u00b7 Nov 3",
+      "tldr": "1 fix opened (#687 videos won't play on 17 Pro); #617/#633/#653 still waiting; empty videos ~74 people/day; 1 merged (#686). No age holds. 8 in-app notes, 1 reply draft (Tadeas)."
+    },
     {
       "date": "2026-11-02",
       "title": "Latent daily review \u00b7 Nov 2",
@@ -75593,12 +75603,12 @@ window.DIGESTS = {
       {
         "id": "email",
         "title": "Email dig to eddie@weaive.app",
-        "status": "pending"
+        "status": "done"
       },
       {
         "id": "archive",
         "title": "Publish archive to latent-digs GitHub Pages",
-        "status": "pending"
+        "status": "done"
       },
       {
         "id": "linear",
@@ -102290,7 +102300,7 @@ window.DIGESTS = {
   "2026-11-02": {
     "date": "2026-11-02",
     "title": "Latent daily review \u00b7 Nov 2",
-    "generatedAt": "2026-11-02T17:24:49.317112+00:00",
+    "generatedAt": "2026-11-03T17:35:36.552790+00:00",
     "tldr": [
       "No new fixes from me today. All 5 new in-app notes already have tickets or are a policy call: Jack's camera going blurry is TRY-647 (Malcolm's bot has a fix branch waiting for approval), and the asks (any part of a song, timelapse length, groups for one activity) are known tickets. Your 3 dig PRs are still waiting: #617 and #633 (empty videos) and #653 (Spotify keeps playing). One PR merged overnight: Malcolm's #685 (close friends first in the Home feed, behind an on/off switch).",
       "Big day for new people: 1,007 installs (was 625) and 773 finished onboarding (was 475). Empty-video upload failures rose with it: 1,140 from about 78 people (was 904 from about 55), 1,079 of them on the App Store build 1.0.10. Merging #617 and #633 gets the fix into the next build.",
@@ -102907,6 +102917,752 @@ window.DIGESTS = {
       "build": "48",
       "releasedPT": "Oct 27, 11:55 AM PT",
       "rating": "4.91 (209)"
+    }
+  },
+  "2026-11-03": {
+    "date": "2026-11-03",
+    "title": "Latent daily review \u00b7 Nov 3",
+    "generatedAt": "2026-11-03T17:37:11.443009+00:00",
+    "tldr": [
+      "I opened 1 fix today: #687 for Kalos (@kalos) \u2014 on an iPhone 17 Pro, friends' timelapse videos sat still and never played. The player now waits for a real size and shows Try again if it still fails. Your older dig PRs are still waiting: #617 and #633 (empty videos) and #653 (Spotify). One PR merged overnight: Malcolm's #686 (keep the camera live when paused, and open sideways clips upright).",
+      "Empty-video upload failures are still high: 1,369 from about 74 people in the last day (was 1,144 from about 78), 1,341 of them from 72 people on App Store build 1.0.10 (48). Installs stayed hot: 1,058 (was 1,010). Merging #617 and #633 still gets that fix into the next build.",
+      "Age holds: none. Under-13 reports TRY-648 (@ank) and TRY-642 (@jesser0ff) are still open with no hold placed. Aiden (@aidenmil) hit the known Edit tags bug twice (TRY-632, Jerry In Progress, bot branch ready). Sohini asked how to make a private session (how-to).",
+      "New wants: close friends list and collaborator posts so group sessions count for everyone (Chris), mutuals when adding friends (Ishan; TRY-612/TRY-597), overall leaderboard and stitch drafts (Discord). Lebo said sound sometimes does not play. fusion on Discord cannot use music on beta (Malcolm pinged).",
+      "Discord: Discord: Versatile asked for an overall leaderboard; cuurry asked about stitching drafts; fusion can't use music on beta (Malcolm pinged, no reply). Older threads still unanswered. 1 reply draft (Tadeas Horak's product idea email). 4 new beta opt-ins (180). 4.91 stars (211). Sentry still needs re-auth."
+    ],
+    "plainTldr": [
+      "I opened 1 fix today: #687 for Kalos (@kalos) \u2014 on an iPhone 17 Pro, friends' timelapse videos sat still and never played. The player now waits for a real size and shows Try again if it still fails. Your older dig PRs are still waiting: #617 and #633 (empty videos) and #653 (Spotify). One PR merged overnight: Malcolm's #686 (keep the camera live when paused, and open sideways clips upright).",
+      "Empty-video upload failures are still high: 1,369 from about 74 people in the last day (was 1,144 from about 78), 1,341 of them from 72 people on App Store build 1.0.10 (48). Installs stayed hot: 1,058 (was 1,010). Merging #617 and #633 still gets that fix into the next build.",
+      "Age holds: none. Under-13 reports TRY-648 (@ank) and TRY-642 (@jesser0ff) are still open with no hold placed. Aiden (@aidenmil) hit the known Edit tags bug twice (TRY-632, Jerry In Progress, bot branch ready). Sohini asked how to make a private session (how-to).",
+      "New wants: close friends list and collaborator posts so group sessions count for everyone (Chris), mutuals when adding friends (Ishan; TRY-612/TRY-597), overall leaderboard and stitch drafts (Discord). Lebo said sound sometimes does not play. fusion on Discord cannot use music on beta (Malcolm pinged).",
+      "Discord: Discord: Versatile asked for an overall leaderboard; cuurry asked about stitching drafts; fusion can't use music on beta (Malcolm pinged, no reply). Older threads still unanswered. 1 reply draft (Tadeas Horak's product idea email). 4 new beta opt-ins (180). 4.91 stars (211). Sentry still needs re-auth."
+    ],
+    "urgent": [],
+    "stats": {
+      "newInApp": 8,
+      "newDiscord": 6,
+      "newGmail": 1,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 40,
+        "somewhat": 25,
+        "not": 2,
+        "n": 67
+      },
+      "sentryNew": [],
+      "sentryUnavailable": true,
+      "rawQuotes": 15,
+      "betaOptInsNew": 4,
+      "betaOptInsTotal": 180,
+      "installs24h": 1058,
+      "installsPrev24h": 1010
+    },
+    "whatIDidToday": {
+      "fixesOpened": [
+        {
+          "pr": 687,
+          "url": "https://github.com/eddie-the-lou/latent/pull/687",
+          "title": "Videos that sit still on iPhone 17 Pro now play, with Try again if they still will not",
+          "reporter": "@kalos (Kalos), in-app",
+          "whatWasWrong": "On an iPhone 17 Pro, friends' timelapse videos sat on the cover and never started.",
+          "whatChanged": "The player now waits until the video layer has a real size before attaching, and if a clip still will not start it shows Couldn't play this video with Try again.",
+          "howToCheck": "On an iPhone 17 Pro (or latest iOS Simulator), open a friend's timelapse on Home and full screen. It should play. Optional: airplane mode then Try again should show a clear error, not a spinner.",
+          "agentUrl": "https://cursor.com/agents/bc-848a0809-5456-54e5-9267-9888fbfa45b4",
+          "agentId": "bc-848a0809-5456-54e5-9267-9888fbfa45b4"
+        }
+      ],
+      "carriedFromEarlier": [
+        {
+          "pr": 617,
+          "url": "https://github.com/eddie-the-lou/latent/pull/617",
+          "title": "Record: Undo after Finish no longer uploads an empty clip",
+          "status": "Still waiting for your review (opened Oct 25)",
+          "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session."
+        },
+        {
+          "pr": 633,
+          "url": "https://github.com/eddie-the-lou/latent/pull/633",
+          "title": "Stop retrying empty-clip uploads on every launch",
+          "status": "Still waiting for your review (opened Oct 26, built on #617)",
+          "whatItFixes": "A post whose video is empty or gone stops retrying on every app open: it tries to rebuild from leftover pieces once, otherwise shows Video missing. Includes #617, so merge #617 first or both."
+        },
+        {
+          "pr": 653,
+          "url": "https://github.com/eddie-the-lou/latent/pull/653",
+          "title": "Keep Spotify playing when you start a session",
+          "status": "Still waiting for your review (opened Oct 28)",
+          "whatItFixes": "Starting a camera-on session no longer stops Spotify or Apple Music (the camera was grabbing the phone's sound). Check on a real phone. App blocking may also stop Spotify, which #653 doesn't touch."
+        }
+      ],
+      "agentsLaunched": [
+        {
+          "id": "bc-848a0809-5456-54e5-9267-9888fbfa45b4",
+          "url": "https://cursor.com/agents/bc-848a0809-5456-54e5-9267-9888fbfa45b4",
+          "model": "Grok 4.6",
+          "launchedPT": "Nov 3, ~9:17 AM PT",
+          "status": "finished, PR #687"
+        }
+      ],
+      "agentsStillWorking": [],
+      "mergedOvernight": [
+        {
+          "pr": 686,
+          "url": "https://github.com/eddie-the-lou/latent/pull/686",
+          "title": "Keep the camera live when paused, and open sideways clips upright",
+          "by": "Malcolm \u00b7 merged Nov 2, 9:57 PM PT"
+        }
+      ],
+      "closedOvernight": [],
+      "stillOnYou": [
+        {
+          "id": "pr-617-633",
+          "title": "#617 and #633 (empty-video fixes from Oct 25 and Oct 26) are still open. Empty-video failures on 1.0.10: 1,341 in the last day from 72 people (was 1,079 from 75). Merge #617 first, then #633 (or both), so they make the next build.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/617"
+        },
+        {
+          "id": "pr-653",
+          "title": "#653 (Spotify keeps playing during a session, Oct 28) is waiting for your review. Needs a real-phone check. Related Discord: fusion cannot use music on beta.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/653"
+        },
+        {
+          "id": "pr-687",
+          "title": "NEW #687 (videos that sit still on iPhone 17 Pro now play). Check on a 17 Pro or latest Simulator, then merge for the next TestFlight.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/687"
+        },
+        {
+          "id": "try648",
+          "title": "Under-13 reports still open with no hold: TRY-648 (@ank, reported by @jaydenpashut) and TRY-642 (@jesser0ff). Check both on the mod site; hold only if something shows they're under 13.",
+          "url": "https://linear.app/trylatent/issue/TRY-648"
+        },
+        {
+          "id": "try632",
+          "title": "Aiden (@aidenmil) hit Edit tags / add tags again twice on 1.0.10. Already TRY-632 (Jerry, In Progress; bot branch ready). Approving/shipping that covers him.",
+          "url": "https://linear.app/trylatent/issue/TRY-632"
+        },
+        {
+          "id": "jerry-prs",
+          "title": "Jerry's 4 draft PRs are still waiting: #684 (iPad on iPadOS 27, TRY-527), #683 (choose how alarms sound, TRY-591), #681 (cancel prompt miscounts the clock, TRY-643) and #678 (apps stay blocked after a session, TRY-602).",
+          "url": "https://github.com/eddie-the-lou/latent/pull/684"
+        },
+        {
+          "id": "pr-662",
+          "title": "#662 (Malcolm's bot profile photo fix) is still open, but Jerry's #668 merged Oct 29 and TRY-598 is Done. Close #662 as replaced. TRY-617 (new tag freezes on iOS 17) is still In Progress though #682 merged Oct 31; move it to Done.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/662"
+        },
+        {
+          "id": "bot-new",
+          "title": "Still Need Approval from Malcolm's bot (recent): TRY-647 (camera goes blurry, branch ready), TRY-650 (5 second freeze on the example week chart for new accounts), TRY-649 (spam report), TRY-648, TRY-640, TRY-641, TRY-645, TRY-642.",
+          "url": "https://linear.app/trylatent/issue/TRY-647"
+        },
+        {
+          "id": "bot-older",
+          "title": "Still Need Approval from before: TRY-637, TRY-638, TRY-639, TRY-626, TRY-629, TRY-633, TRY-635, TRY-636, TRY-439 (week starts Monday), TRY-463 (light mode), TRY-603 (recover a deleted session), TRY-501 (iPad split screen camera), TRY-547 (song part), TRY-493 (timelapse length), TRY-608, TRY-614, TRY-615, TRY-618 to TRY-624, TRY-602 (has #678), TRY-604, TRY-605, TRY-606, TRY-592, TRY-587, TRY-582, TRY-563, TRY-564, TRY-542, TRY-538, TRY-496, TRY-442, and moderation TRY-548 and TRY-484.",
+          "url": "https://linear.app/trylatent/issue/TRY-439"
+        },
+        {
+          "id": "older-prs",
+          "title": "Other open PRs: Jerry #684, #683, #681, #678, #632; Malcolm #672, #619, #605, #587, #537, #530, #529, #518, #499; Malcolm's bot #662; yours #659, #651, #500 and #417.",
+          "url": "https://github.com/eddie-the-lou/latent/pulls"
+        },
+        {
+          "id": "fyi",
+          "title": "FYI (no draft except Tadeas below): pitches and admin mail only besides Tadeas's product note. Hiring thank-you watch still has 9 unreported thank-yous from earlier; dig does not redraft those."
+        }
+      ],
+      "note": "1 Cloud Agent launched and finished: #687 for Kalos's videos-won't-play report (iPhone 17 Pro). Aiden's tag edit notes are already TRY-632 (Jerry, In Progress, bot branch). Private-session how-to is not a code fix. Sound sometimes doesn't play is too thin. Discord beta music bug is with Malcolm. Features already have tickets or are new asks."
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 617,
+          "url": "https://github.com/eddie-the-lou/latent/pull/617",
+          "title": "Record: Undo after Finish no longer uploads an empty clip",
+          "status": "Still waiting for your review (opened Oct 25)",
+          "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session."
+        },
+        {
+          "pr": 633,
+          "url": "https://github.com/eddie-the-lou/latent/pull/633",
+          "title": "Stop retrying empty-clip uploads on every launch",
+          "status": "Still waiting for your review (opened Oct 26, built on #617)",
+          "whatItFixes": "A post whose video is empty or gone stops retrying on every app open: it tries to rebuild from leftover pieces once, otherwise shows Video missing. Includes #617, so merge #617 first or both."
+        },
+        {
+          "pr": 653,
+          "url": "https://github.com/eddie-the-lou/latent/pull/653",
+          "title": "Keep Spotify playing when you start a session",
+          "status": "Still waiting for your review (opened Oct 28)",
+          "whatItFixes": "Starting a camera-on session no longer stops Spotify or Apple Music (the camera was grabbing the phone's sound). Check on a real phone. App blocking may also stop Spotify, which #653 doesn't touch."
+        },
+        {
+          "pr": 687,
+          "url": "https://github.com/eddie-the-lou/latent/pull/687",
+          "title": "Videos that sit still on iPhone 17 Pro now play, with Try again if they still will not",
+          "status": "Opened today, waiting for your review",
+          "whatItFixes": "On an iPhone 17 Pro, friends' timelapse videos sat on the cover and never started. The player now waits until the video layer has a real size before attaching, and if a clip still will not start it shows Couldn't play this video with Try again."
+        }
+      ],
+      "openedToday": [
+        {
+          "pr": 687,
+          "url": "https://github.com/eddie-the-lou/latent/pull/687",
+          "title": "Videos that sit still on iPhone 17 Pro now play, with Try again if they still will not",
+          "reporter": "@kalos (Kalos), in-app",
+          "whatWasWrong": "On an iPhone 17 Pro, friends' timelapse videos sat on the cover and never started.",
+          "whatChanged": "The player now waits until the video layer has a real size before attaching, and if a clip still will not start it shows Couldn't play this video with Try again.",
+          "howToCheck": "On an iPhone 17 Pro (or latest iOS Simulator), open a friend's timelapse on Home and full screen. It should play. Optional: airplane mode then Try again should show a clear error, not a spinner.",
+          "agentUrl": "https://cursor.com/agents/bc-848a0809-5456-54e5-9267-9888fbfa45b4",
+          "agentId": "bc-848a0809-5456-54e5-9267-9888fbfa45b4"
+        }
+      ],
+      "agentsStillWorking": [],
+      "mergedOvernight": [
+        {
+          "pr": 686,
+          "url": "https://github.com/eddie-the-lou/latent/pull/686",
+          "title": "Keep the camera live when paused, and open sideways clips upright",
+          "by": "Malcolm \u00b7 merged Nov 2, 9:57 PM PT"
+        }
+      ],
+      "closedOvernight": [],
+      "newOpenNotDig": []
+    },
+    "ageHolds": {
+      "open": [],
+      "newLast24h": [],
+      "resolvedLast24h": [],
+      "summary": "No age holds.",
+      "detail": "No open holds, none started and none released or deleted in the last 24 hours. Holds ever: 2. Checked ~9:20 AM PT. The dig changed nothing. Under-13 reports with no hold placed: TRY-648 (@ank) and TRY-642 (@jesser0ff).",
+      "underThirteenReports": [
+        {
+          "id": "TRY-648",
+          "account": "@ank",
+          "reportedBy": "@jaydenpashut",
+          "new": false,
+          "url": "https://linear.app/trylatent/issue/TRY-648"
+        },
+        {
+          "id": "TRY-642",
+          "account": "@jesser0ff",
+          "reportedBy": "@adamberger",
+          "new": false,
+          "url": "https://linear.app/trylatent/issue/TRY-642"
+        }
+      ],
+      "query": "/workspace/feedback-digests/age-holds.sql"
+    },
+    "actions": [
+      {
+        "id": "pr-687",
+        "title": "Review #687 (videos that sit still on iPhone 17 Pro)",
+        "plainSummary": "Kalos reported it. Needs a 17 Pro or latest Simulator check, then merge for TestFlight.",
+        "status": "Waiting for your review",
+        "url": "https://github.com/eddie-the-lou/latent/pull/687"
+      },
+      {
+        "id": "pr-617-633",
+        "title": "Review #617 then #633 (empty-video fixes)",
+        "plainSummary": "About 74 people a day still hit it on the App Store build.",
+        "status": "Waiting for your review",
+        "url": "https://github.com/eddie-the-lou/latent/pull/617"
+      },
+      {
+        "id": "pr-653",
+        "title": "Review #653 (Spotify keeps playing during a session)",
+        "plainSummary": "Needs a real-phone check. Also look at fusion's beta music Discord report.",
+        "status": "Waiting for your review",
+        "url": "https://github.com/eddie-the-lou/latent/pull/653"
+      },
+      {
+        "id": "try648",
+        "title": "Look at TRY-648 (@ank) and TRY-642 (@jesser0ff) under-13 reports",
+        "plainSummary": "No holds placed. Check both on the mod site.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-648"
+      },
+      {
+        "id": "try632",
+        "title": "Ship or approve TRY-632 (Edit tags does nothing)",
+        "plainSummary": "Aiden hit it again twice today. Jerry In Progress; bot branch ready.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-632"
+      },
+      {
+        "id": "try647",
+        "title": "Approve TRY-647 (camera goes blurry after the phone moves)",
+        "plainSummary": "Malcolm's bot already has a fix branch.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-647"
+      },
+      {
+        "id": "reply-tadeas",
+        "title": "Send the Tadeas Horak reply (product idea + hiring paused)",
+        "plainSummary": "Draft is in the dig; do not create a Gmail draft from here.",
+        "status": "Needs you"
+      },
+      {
+        "id": "jerry-prs",
+        "title": "Jerry's drafts #684, #683, #681, #678",
+        "plainSummary": "All still waiting.",
+        "status": "Needs you",
+        "url": "https://github.com/eddie-the-lou/latent/pull/684"
+      },
+      {
+        "id": "pr-662",
+        "title": "Close #662 (replaced by #668) and move TRY-617 to Done",
+        "plainSummary": "Housekeeping.",
+        "status": "Needs you",
+        "url": "https://github.com/eddie-the-lou/latent/pull/662"
+      },
+      {
+        "id": "try625",
+        "title": "TRY-625 (this dig issue) is still assigned to Jerry",
+        "plainSummary": "You moved it to Jerry on Oct 29; I left it.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-625"
+      },
+      {
+        "id": "sentry",
+        "title": "Re-connect Sentry",
+        "plainSummary": "Still needs re-auth.",
+        "status": "Needs you"
+      },
+      {
+        "id": "age-holds",
+        "title": "Age holds: none",
+        "plainSummary": "Nothing for the dig to do.",
+        "status": "done"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "pending"
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done",
+        "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-11-03"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "empty-clip",
+        "title": "Empty videos failing to upload on the App Store build",
+        "severity": "medium",
+        "people": 74,
+        "status": "PRs #617 and #633 waiting for your review",
+        "summary": "1,369 failures from about 74 people in the last day (was 1,144 from about 78). 1,341 from 72 people on 1.0.10 (48).",
+        "detail": "Neither fix is in the App Store build.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/617",
+        "sources": [
+          "posthog",
+          "github"
+        ]
+      },
+      {
+        "id": "video-play",
+        "title": "Videos sit still and won't play on iPhone 17 Pro",
+        "severity": "high",
+        "people": 1,
+        "status": "PR #687 waiting for your review",
+        "summary": "Kalos (@kalos) on 1.0.10: videos won't play.",
+        "detail": "Player was attaching before the video layer had a size; on iOS 26 that often never recovers. Fix waits for size and adds Try again.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/687",
+        "sources": [
+          "in-app",
+          "github"
+        ]
+      },
+      {
+        "id": "edit-tags",
+        "title": "Can't edit or add tags on profile",
+        "severity": "medium",
+        "people": 1,
+        "status": "TRY-632 (Jerry, In Progress, bot branch ready)",
+        "summary": "Aiden (@aidenmil) wrote twice on 1.0.10.",
+        "detail": "Known bug; bot branch ready.",
+        "url": "https://linear.app/trylatent/issue/TRY-632",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "beta-music",
+        "title": "Can't use music on the beta build",
+        "severity": "medium",
+        "people": 1,
+        "status": "Needs Malcolm (Discord, @Malcolm pinged)",
+        "summary": "fusion in #general-chat: on beta and can't use music.",
+        "detail": "Related: alejo music button (Oct 26).",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "Sometimes sound doesn't play",
+        "severity": "low",
+        "people": 1,
+        "status": "Needs more detail",
+        "summary": "Lebo (@lebo): sometimes sound doesn't play.",
+        "detail": "Too thin for a fix.",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "private-howto",
+        "title": "How do you make a private session?",
+        "severity": "low",
+        "people": 1,
+        "status": "How-to (not a code bug)",
+        "summary": "Sohini (@sohinit1029) asked how.",
+        "detail": "When you finish and go to post, pick Private / Only me [CHECK exact label].",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "signup-failed",
+        "title": "Some sign-ups failing",
+        "severity": "low",
+        "people": 2,
+        "status": "Watching (cooling off)",
+        "summary": "7 failed sign-ups from 2 people (was 15 from 6).",
+        "detail": "No reason recorded.",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "invite-invalid",
+        "title": "People typing an invite code that doesn't work",
+        "severity": "low",
+        "people": 53,
+        "status": "Watching",
+        "summary": "155 invalid invite code tries from 53 people (was 203 from 57).",
+        "detail": "All invalid.",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "apps-blocked",
+        "title": "Apps stay blocked after a session ends",
+        "severity": "medium",
+        "people": null,
+        "status": "Jerry's PR #678 (TRY-602)",
+        "summary": "Turning App blocking off in Settings did nothing until a restart.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/678",
+        "sources": [
+          "github",
+          "linear"
+        ]
+      },
+      {
+        "id": "sentry-auth",
+        "title": "Sentry connector needs re-auth",
+        "severity": "low",
+        "people": null,
+        "status": "Needs you",
+        "summary": "Still needs re-auth. No crash data from me today.",
+        "sources": [
+          "sentry"
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "close-friends-list",
+        "title": "Close friends list",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Related: #685 merged",
+        "summary": "Chris (@chrisxao): close friends list.",
+        "detail": "May mean a dedicated list UI beyond the feed switch.",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "collaborators",
+        "title": "Collaborators on posts so group sessions count for everyone",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "No ticket yet",
+        "summary": "Chris (@chrisxao) in-app.",
+        "detail": "Near Mia Discord ask and group sessions.",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "mutuals",
+        "title": "See mutuals when adding friends",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Backlog (TRY-612 / TRY-597)",
+        "summary": "Ishan (@ishanv_fs) in-app.",
+        "url": "https://linear.app/trylatent/issue/TRY-612",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "leaders",
+        "title": "Overall weekly/monthly study hours leaderboard",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "No ticket yet (groups already have weekly boards)",
+        "summary": "Versatile on Discord wants a site-wide board.",
+        "detail": "Drew said groups already have weekly boards.",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "stitch-drafts",
+        "title": "Stitch drafts into one video",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "Question, unanswered",
+        "summary": "cuurry on Discord.",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 4,
+        "peopleCountLabel": "4 new, 180 total",
+        "status": "Malcolm handles",
+        "summary": "4 new since Oct 30: @deltodos (Joshua), @manu (Manuela), @zerabrukmikre5, @blake (Blake).",
+        "detail": "Count only (TRY-343).",
+        "sources": [
+          "supabase"
+        ]
+      }
+    ],
+    "bySource": {
+      "inApp": {
+        "new": 8,
+        "note": "8 new rows: videos won't play (Kalos -> #687), can't edit/add tags x2 (Aiden -> TRY-632), sound sometimes (Lebo), private session how-to (Sohini), close friends list + collaborators (Chris), mutuals (Ishan)."
+      },
+      "discord": {
+        "new": 6,
+        "note": "New since Nov 2 ~9:20 AM PT. Moderately busy. #feature-requests: Versatile opened \"Leaders\" (overall weekly/monthly study hours leaderboard; Drew said groups already have weekly boards; Versatile wants an overall one). #questions: cuurry asked if you can stitch drafts into one video (unanswered, message just \"?\"). #general-chat: fusion reported a beta bug \u2014 can't use music \u2014 and Notorious R.I.B pinged @Malcolm McDonald (no reply yet). Custom timelapse length vote was NOT re-checked (last known 10 / 3). Still unanswered older threads: Instagram share, LinkedIn, AI data access, alejo music button, Chimm storage, group sessions, rank/groups, Monday week start, flip timelapse, sub-categories, live status note, Luzimi Android, snoozzntmy growth question. No Eddie/Malcolm replies in the window. Source: discord-2026-11-03.md."
+      },
+      "gmail": {
+        "new": 1,
+        "note": "1 product email from Tadeas Horak (drafted). Other mail was pitches/admin."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "40/25/2 of 67",
+        "note": "Export HTTP 200. No new rows (Active 67, Churned 6, Did not record 8)."
+      },
+      "sentry": {
+        "new": [],
+        "note": "Unavailable: Sentry still needs re-auth."
+      },
+      "posthog": {
+        "note": "Last 24h vs prior 24h (to ~9:30 AM PT): installs 1,058 (was 1,010); onboarding done 825 (was 773); sessions started 14,734/6,051 (was 12,865/5,227); sessions discarded 2,359/1,519 (was 2,128/1,282); app updates 442. clip_upload_failed 1,448/106 (1,369 empty from ~74, 1,341 from 72 on 1.0.10, #617/#633; 56 network/27; 21 TLS/8); clip_upload_abandoned 5/2; session_save_failed 101/42 (54 waiting for sign-in from 15); sign_in_failed 22/13; sign_up_failed 7/2; backend_unreachable_shown 1,092/704; media_invoke_retry_exhausted 609/179; group_action_failed 5,010/850; invite_check_failed 155/53 (all invalid); capture_stalled 214/25; segment_finalize_failed 21/16; session_capture_failed 6/4; friend_request_failed 22/5; attachment_upload_failed 24/10; session_unlocked_elsewhere 12/5; app_blocking_authorization_failed 64/49. Rage clicks 15,080/4,096. App Store 1.1.0 / app 1.0.10 (48); 4.91 stars (211, was 209). Alerts: edge loop last value 20/h (limit 200) and clip size 1.56 MB/s (limit 4) both not firing."
+      },
+      "github": {
+        "note": "Opened #687. Merged overnight #686. Still open #617/#633/#653 and Jerry drafts."
+      },
+      "linear": {
+        "note": "No new bot tickets since yesterday. Aiden maps to TRY-632. TRY-648/642 still open. TRY-625 updated; assignee left Jerry."
+      },
+      "betaOptIns": {
+        "new": 4,
+        "total": 180
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "inapp-c1aa7045",
+        "source": "in-app",
+        "username": "@kalos (Kalos)",
+        "whenPT": "Nov 2, 4:14 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "Bro, im on a 17 pro and the videos wont play.. help me out",
+        "note": "In-app bug \u00b7 I opened #687 (videos that sit still on iPhone 17 Pro now play)."
+      },
+      {
+        "id": "inapp-8db997e5",
+        "source": "in-app",
+        "username": "@chrisxao (Chris)",
+        "whenPT": "Nov 2, 6:40 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "close friends list",
+        "note": "In-app feature \u00b7 Close friends list. Related: #685 (close friends first in Home feed) already merged."
+      },
+      {
+        "id": "inapp-2501d319",
+        "source": "in-app",
+        "username": "@chrisxao (Chris)",
+        "whenPT": "Nov 2, 6:41 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "collaborator feature for posts so that group sessions can count towards everyone\u2019s hours",
+        "note": "In-app feature \u00b7 Collaborators on posts so group sessions count for everyone's hours."
+      },
+      {
+        "id": "inapp-be221f87",
+        "source": "in-app",
+        "username": "@sohinit1029 (Sohini)",
+        "whenPT": "Nov 2, 7:50 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "How do you make a private session on the app??",
+        "note": "In-app (filed as bug) \u00b7 How-to: how to make a private session. Not a code bug. When you finish and go to post, pick Private / Only me on who can see it [CHECK exact label]."
+      },
+      {
+        "id": "inapp-c12ccf9f",
+        "source": "in-app",
+        "username": "@ishanv_fs (Ishan)",
+        "whenPT": "Nov 2, 8:11 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "you should make it so when adding friends you can see mutuals",
+        "note": "In-app feature \u00b7 Mutuals when adding friends. Closest: TRY-612 and TRY-597 (Backlog)."
+      },
+      {
+        "id": "inapp-3a4cdb8b",
+        "source": "in-app",
+        "username": "@aidenmil (Aiden)",
+        "whenPT": "Nov 2, 9:06 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "I can\u2019t edit or add new tags to my profile.",
+        "note": "In-app bug \u00b7 Already TRY-632 (edit tags does nothing, Jerry In Progress, bot branch ready)."
+      },
+      {
+        "id": "inapp-1906e77d",
+        "source": "in-app",
+        "username": "@aidenmil (Aiden)",
+        "whenPT": "Nov 2, 9:07 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "I\u2019m on latent 1.0.10(48) and I can\u2019t change or add new tags",
+        "note": "In-app bug \u00b7 Same as above, second note a minute later. TRY-632."
+      },
+      {
+        "id": "inapp-aaf7ee28",
+        "source": "in-app",
+        "username": "@lebo (Lebo)",
+        "whenPT": "Nov 3, 1:53 AM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "sometimes sound doesn\u2019t play",
+        "note": "In-app bug \u00b7 Sound sometimes doesn't play. Too thin without more detail."
+      },
+      {
+        "id": "discord-1103-0",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "Versatile",
+        "author": "Versatile",
+        "whenPT": "Nov 2, 2:22 PM PT",
+        "kind": "discord",
+        "quote": "i mean like a leaderboard for\nlike how many hours a person has studied for the whole week/month",
+        "note": "Discord \u00b7 #feature-requests"
+      },
+      {
+        "id": "discord-1103-1",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "Drew",
+        "author": "Drew",
+        "whenPT": "Nov 2, 7:32 PM PT",
+        "kind": "discord",
+        "quote": "groups have this\nso like if you want to access leaderboards u can join one of the top groups and the groups have weekly leaderboards",
+        "note": "Discord \u00b7 #feature-requests"
+      },
+      {
+        "id": "discord-1103-2",
+        "source": "discord",
+        "channel": "#feature-requests",
+        "username": "Versatile",
+        "author": "Versatile",
+        "whenPT": "Nov 2, 11:18 PM PT",
+        "kind": "discord",
+        "quote": "for a overall thing \nwould motivate people who aren\u2019t In the group to study more",
+        "note": "Discord \u00b7 #feature-requests"
+      },
+      {
+        "id": "discord-1103-3",
+        "source": "discord",
+        "channel": "#questions",
+        "username": "cuurry",
+        "author": "cuurry",
+        "whenPT": "Nov 2, 11:59 AM PT",
+        "kind": "discord",
+        "quote": "is there a way to stitch together drafts to make one video?\n?",
+        "note": "Discord \u00b7 #questions"
+      },
+      {
+        "id": "discord-1103-4",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "fusion",
+        "author": "fusion",
+        "whenPT": "Nov 3, 5:57 AM PT",
+        "kind": "discord",
+        "quote": "heyy gang\nim having a bit of an issue with my latent\nim on beta and i cant use music for some reason:(",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1103-5",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Notorious R.I.B",
+        "author": "Notorious R.I.B",
+        "whenPT": "Nov 3, 5:59 AM PT",
+        "kind": "discord",
+        "quote": "@Malcolm McDonald",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "gmail-tadeas",
+        "source": "gmail",
+        "username": "Tadeas Horak <horak.tadeas@email.cz>",
+        "whenPT": "Nov 3, 8:52 AM PT",
+        "kind": "email",
+        "quote": "Hi Eddie,\n\nYou describe Latent as a Strava for work, and I think that's the right comparison. But Strava has GPS, so a 10K really is a 10K. Latent knows I was recording, but not what I did on my computer, and that's where the work happens.\n\nI'd track the computer too. It could read which apps and sites you use, and AI could check snapshots of the session against what you said you'd work on. After five hours, you'd see that only two were real work.\n\nThe best part would be seeing why. Say a Discord message at 17:20 turned into an hour on YouTube. You'd see exactly that, and next time you'd know what to fix. I think people would open the app just for that.\n\nIt would also make groups stronger, because streaks and nudges would be based on real hours.\n\nI've attached a wireframe and five things I'd try first. I'm 21, from Czechia, and I build my own products, most recently elasty.uk and AI modeling software for formula student.\n\nI really like where Latent is going and I'd love to help with the product and the decisions around it. I could do that remotely, and if it turned out to be a great fit, I'd be open to moving. No pressure at all.\n\nIf you're curious, I'm happy to build a small version first and show you how it works on real sessions.\n\nTadeas Horak",
+        "note": "Email to support@ and eddie@trylatent.co \u00b7 product idea + interest in helping \u00b7 PDF attached \u00b7 draft below"
+      }
+    ],
+    "replyDrafts": [
+      {
+        "to": "horak.tadeas@email.cz",
+        "toName": "Tadeas Horak",
+        "subject": "Re: Strava has GPS. Latent doesn't.",
+        "threadId": "1a1a2539b80dfbdd",
+        "messageId": "1a1a2539b80dfbdd",
+        "theirMessage": "Hi Eddie,\n\nYou describe Latent as a Strava for work, and I think that's the right comparison. But Strava has GPS, so a 10K really is a 10K. Latent knows I was recording, but not what I did on my computer, and that's where the work happens.\n\nI'd track the computer too. It could read which apps and sites you use, and AI could check snapshots of the session against what you said you'd work on. After five hours, you'd see that only two were real work.\n\nThe best part would be seeing why. Say a Discord message at 17:20 turned into an hour on YouTube. You'd see exactly that, and next time you'd know what to fix. I think people would open the app just for that.\n\nIt would also make groups stronger, because streaks and nudges would be based on real hours.\n\nI've attached a wireframe and five things I'd try first. I'm 21, from Czechia, and I build my own products, most recently elasty.uk and AI modeling software for formula student.\n\nI really like where Latent is going and I'd love to help with the product and the decisions around it. I could do that remotely, and if it turned out to be a great fit, I'd be open to moving. No pressure at all.\n\nIf you're curious, I'm happy to build a small version first and show you how it works on real sessions.\n\nTadeas Horak",
+        "body": "Hey Tadeas,\n\nThanks for writing this up, and for the wireframe. The Strava comparison is how I think about Latent too, and the idea of verifying what actually happened on the computer is really interesting.\n\nWe're pausing hiring for now while we focus on the product, so I can't open a role right now. I'll keep your note and the PDF.\n\nEddie",
+        "why": "Product idea email with wireframe PDF plus interest in helping; hiring is paused so thank and hold, do not pitch a role."
+      }
+    ],
+    "linearIssue": {
+      "id": "TRY-625",
+      "url": "https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-11-03-4-fixes-waiting-for-review-617-687"
+    },
+    "linearNote": "Linear dig issue: TRY-625 https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-11-03-4-fixes-waiting-for-review-617-687",
+    "emailMessageId": null,
+    "release": {
+      "appStoreVersion": "1.1.0 (app reports 1.0.10)",
+      "build": "48",
+      "releasedPT": "Oct 27, 11:55 AM PT",
+      "rating": "4.91 (211)"
     }
   }
 };

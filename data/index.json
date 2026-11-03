@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-11-03",
+    "title": "Latent daily review · Nov 3",
+    "tldr": "1 fix opened (#687 videos won't play on 17 Pro); #617/#633/#653 still waiting; empty videos ~74 people/day; 1 merged (#686). No age holds. 8 in-app notes, 1 reply draft (Tadeas)."
+  },
+  {
     "date": "2026-11-02",
     "title": "Latent daily review · Nov 2",
     "tldr": "No new fixes; #617/#633/#653 still waiting, empty videos up to 78 people/day as installs jump to 1,007. 1 merged (#685). No age holds, new under-13 report (TRY-648). 5 in-app notes, all owned, no reply drafts."
