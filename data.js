@@ -103236,7 +103236,7 @@ window.DIGESTS = {
       {
         "id": "email",
         "title": "Email dig to eddie@weaive.app",
-        "status": "pending"
+        "status": "done"
       },
       {
         "id": "archive",
@@ -103657,7 +103657,7 @@ window.DIGESTS = {
       "url": "https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-11-03-4-fixes-waiting-for-review-617-687"
     },
     "linearNote": "Linear dig issue: TRY-625 https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-11-03-4-fixes-waiting-for-review-617-687",
-    "emailMessageId": null,
+    "emailMessageId": "1a1a27e2fc3337c4",
     "release": {
       "appStoreVersion": "1.1.0 (app reports 1.0.10)",
       "build": "48",
