@@ -1,5 +1,10 @@
 window.DIGEST_INDEX = [
   {
+    "date": "2026-11-05",
+    "title": "Latent daily review \u00b7 Nov 5",
+    "tldr": "No new dig fixes; #617/#633/#653/#687 still waiting; 21 merged overnight incl. Jerry's alarm setting (#683). Empty videos ~88 people/day. No age holds. 9 in-app notes, 1 reply draft."
+  },
+  {
     "date": "2026-11-04",
     "title": "Latent daily review \u00b7 Nov 4",
     "tldr": "No new dig fixes; #617/#633/#653/#687 still waiting; empty videos ~87 people/day; 5 merged overnight. No age holds. 7 in-app notes, 3 reply drafts."
@@ -797,6 +802,11 @@ window.DIGEST_INDEX = [
 ];
 window.DIGESTS = {
   "index": [
+    {
+      "date": "2026-11-05",
+      "title": "Latent daily review \u00b7 Nov 5",
+      "tldr": "No new dig fixes; #617/#633/#653/#687 still waiting; 21 merged overnight incl. Jerry's alarm setting (#683). Empty videos ~88 people/day. No age holds. 9 in-app notes, 1 reply draft."
+    },
     {
       "date": "2026-11-04",
       "title": "Latent daily review \u00b7 Nov 4",
@@ -75613,12 +75623,12 @@ window.DIGESTS = {
       {
         "id": "email",
         "title": "Email dig to eddie@weaive.app",
-        "status": "done"
+        "status": "pending"
       },
       {
         "id": "archive",
         "title": "Publish archive to latent-digs GitHub Pages",
-        "status": "done"
+        "status": "pending"
       },
       {
         "id": "linear",
@@ -102310,7 +102320,7 @@ window.DIGESTS = {
   "2026-11-02": {
     "date": "2026-11-02",
     "title": "Latent daily review \u00b7 Nov 2",
-    "generatedAt": "2026-11-03T17:35:36.552790+00:00",
+    "generatedAt": "2026-11-02T17:24:49.317112+00:00",
     "tldr": [
       "No new fixes from me today. All 5 new in-app notes already have tickets or are a policy call: Jack's camera going blurry is TRY-647 (Malcolm's bot has a fix branch waiting for approval), and the asks (any part of a song, timelapse length, groups for one activity) are known tickets. Your 3 dig PRs are still waiting: #617 and #633 (empty videos) and #653 (Spotify keeps playing). One PR merged overnight: Malcolm's #685 (close friends first in the Home feed, behind an on/off switch).",
       "Big day for new people: 1,007 installs (was 625) and 773 finished onboarding (was 475). Empty-video upload failures rose with it: 1,140 from about 78 people (was 904 from about 55), 1,079 of them on the App Store build 1.0.10. Merging #617 and #633 gets the fix into the next build.",
@@ -102932,7 +102942,7 @@ window.DIGESTS = {
   "2026-11-03": {
     "date": "2026-11-03",
     "title": "Latent daily review \u00b7 Nov 3",
-    "generatedAt": "2026-11-04T17:20:05.347005+00:00",
+    "generatedAt": "2026-11-03T17:37:11.443009+00:00",
     "tldr": [
       "I opened 1 fix today: #687 for Kalos (@kalos) \u2014 on an iPhone 17 Pro, friends' timelapse videos sat still and never played. The player now waits for a real size and shows Try again if it still fails. Your older dig PRs are still waiting: #617 and #633 (empty videos) and #653 (Spotify). One PR merged overnight: Malcolm's #686 (keep the camera live when paused, and open sideways clips upright).",
       "Empty-video upload failures are still high: 1,369 from about 74 people in the last day (was 1,144 from about 78), 1,341 of them from 72 people on App Store build 1.0.10 (48). Installs stayed hot: 1,058 (was 1,010). Merging #617 and #633 still gets that fix into the next build.",
@@ -103246,7 +103256,7 @@ window.DIGESTS = {
       {
         "id": "email",
         "title": "Email dig to eddie@weaive.app",
-        "status": "pending"
+        "status": "done"
       },
       {
         "id": "archive",
@@ -104712,6 +104722,1091 @@ window.DIGESTS = {
       "build": "48",
       "releasedPT": "Oct 27, 11:55 AM PT",
       "rating": "4.91 (213)"
+    }
+  },
+  "2026-11-05": {
+    "date": "2026-11-05",
+    "title": "Latent daily review \u00b7 Nov 5",
+    "generatedAt": "2026-11-05T17:26:58.858796+00:00",
+    "tldr": [
+      "No new dig fixes from me today. Your 4 dig PRs are still waiting: #617 and #633 (empty videos), #653 (Spotify), and #687 (iPhone 17 Pro videos). A big night: 21 PRs merged overnight, including the Groups redesign, server-ordered Home, and all four of Jerry's (alarm sound setting #683, apps staying blocked #678, cancel prompt clock #681, iPad #684).",
+      "Empty-video upload failures: 1,237 from about 88 people in the last day (was 1,469 from about 87), 1,211 from 85 people on App Store build 1.0.10 (48). Installs 1,310 (was 1,268). Merging #617 and #633 still gets that fix into the next build.",
+      "Age holds: none. Under-13 reports TRY-648 (@ank) and TRY-642 (@jesser0ff) still open with no hold placed. Long recordings posting as a few minutes now has 2 reports (TRY-664, Jinxed on Discord: 1 hour to 4 min). Quintin's loud Pomodoro break alarm is fixed on main by Jerry's #683.",
+      "New wants: daily/weekly hour goals (Pranav, Eric), hours per day/week (luli, TRY-608), longer timelapses for longer sessions (Mia, TRY-493), a rate button (Illakiyan, TRY-690), sessions together (Maryam, TRY-586), screen recording (Evan), Twitch streaming (TRY-676), chat upgrades (tbz).",
+      "Discord: Jinxed's 1 hour session recorded only 4 min (same as TRY-664); Twitch/RTMP streaming ask (TRY-676); chat feature asks from tbz; leaderboard pushback; Android and timelapse fps questions unanswered. 1 reply draft (Tadeas, carried; you answered Ichiro and Genia). 2 new beta opt-ins (182). 4.91 stars (214). No new survey rows. Sentry still needs re-auth."
+    ],
+    "plainTldr": [
+      "No new dig fixes from me today. Your 4 dig PRs are still waiting: #617 and #633 (empty videos), #653 (Spotify), and #687 (iPhone 17 Pro videos). A big night: 21 PRs merged overnight, including the Groups redesign, server-ordered Home, and all four of Jerry's (alarm sound setting #683, apps staying blocked #678, cancel prompt clock #681, iPad #684).",
+      "Empty-video upload failures: 1,237 from about 88 people in the last day (was 1,469 from about 87), 1,211 from 85 people on App Store build 1.0.10 (48). Installs 1,310 (was 1,268). Merging #617 and #633 still gets that fix into the next build.",
+      "Age holds: none. Under-13 reports TRY-648 (@ank) and TRY-642 (@jesser0ff) still open with no hold placed. Long recordings posting as a few minutes now has 2 reports (TRY-664, Jinxed on Discord: 1 hour to 4 min). Quintin's loud Pomodoro break alarm is fixed on main by Jerry's #683.",
+      "New wants: daily/weekly hour goals (Pranav, Eric), hours per day/week (luli, TRY-608), longer timelapses for longer sessions (Mia, TRY-493), a rate button (Illakiyan, TRY-690), sessions together (Maryam, TRY-586), screen recording (Evan), Twitch streaming (TRY-676), chat upgrades (tbz).",
+      "Discord: Jinxed's 1 hour session recorded only 4 min (same as TRY-664); Twitch/RTMP streaming ask (TRY-676); chat feature asks from tbz; leaderboard pushback; Android and timelapse fps questions unanswered. 1 reply draft (Tadeas, carried; you answered Ichiro and Genia). 2 new beta opt-ins (182). 4.91 stars (214). No new survey rows. Sentry still needs re-auth."
+    ],
+    "urgent": [],
+    "stats": {
+      "newInApp": 9,
+      "newDiscord": 9,
+      "newGmail": 0,
+      "newSurveyRows": 0,
+      "seanEllis": {
+        "very": 40,
+        "somewhat": 25,
+        "not": 2,
+        "n": 67
+      },
+      "sentryNew": [],
+      "sentryUnavailable": true,
+      "rawQuotes": 18,
+      "betaOptInsNew": 2,
+      "betaOptInsTotal": 182,
+      "installs24h": 1310,
+      "installsPrev24h": 1268,
+      "emptyVideoFailures24h": 1237,
+      "emptyVideoPeople24h": 88
+    },
+    "whatIDidToday": {
+      "fixesOpened": [],
+      "carriedFromEarlier": [
+        {
+          "pr": 617,
+          "url": "https://github.com/eddie-the-lou/latent/pull/617",
+          "title": "Record: Undo after Finish no longer uploads an empty clip",
+          "status": "Still waiting for your review (opened Oct 25)",
+          "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session."
+        },
+        {
+          "pr": 633,
+          "url": "https://github.com/eddie-the-lou/latent/pull/633",
+          "title": "Stop retrying empty-clip uploads on every launch",
+          "status": "Still waiting for your review (opened Oct 26, built on #617)",
+          "whatItFixes": "A post whose video is empty or gone stops retrying on every app open: it tries to rebuild from leftover pieces once, otherwise shows Video missing. Includes #617, so merge #617 first or both."
+        },
+        {
+          "pr": 653,
+          "url": "https://github.com/eddie-the-lou/latent/pull/653",
+          "title": "Keep Spotify playing when you start a session",
+          "status": "Still waiting for your review (opened Oct 28)",
+          "whatItFixes": "Starting a camera-on session no longer stops Spotify or Apple Music (the camera was grabbing the phone's sound). Check on a real phone."
+        },
+        {
+          "pr": 687,
+          "url": "https://github.com/eddie-the-lou/latent/pull/687",
+          "title": "Videos that sit still on iPhone 17 Pro now play, with Try again if they still will not",
+          "status": "Still waiting for your review (opened Nov 3)",
+          "whatItFixes": "On an iPhone 17 Pro, friends' timelapse videos sat on the cover and never started. Player waits for a real size and shows Try again."
+        }
+      ],
+      "agentsLaunched": [],
+      "agentsStillWorking": [],
+      "mergedOvernight": [
+        {
+          "pr": 712,
+          "url": "https://github.com/eddie-the-lou/latent/pull/712",
+          "title": "Log feed events only when something goes wrong",
+          "by": "Malcolm \u00b7 merged Nov 4, 10:36 PM PT"
+        },
+        {
+          "pr": 710,
+          "url": "https://github.com/eddie-the-lou/latent/pull/710",
+          "title": "Groups: one chat screen for every group, with live public chat and moderation",
+          "by": "Eddie \u00b7 merged Nov 4, 10:25 PM PT"
+        },
+        {
+          "pr": 711,
+          "url": "https://github.com/eddie-the-lou/latent/pull/711",
+          "title": "Home feed ordered by the server (behind a switch)",
+          "by": "Malcolm \u00b7 merged Nov 4, 10:16 PM PT"
+        },
+        {
+          "pr": 708,
+          "url": "https://github.com/eddie-the-lou/latent/pull/708",
+          "title": "Post: song speaker in the video corner, tagged people in the like/comment bar",
+          "by": "Eddie \u00b7 merged Nov 4, 9:45 PM PT"
+        },
+        {
+          "pr": 707,
+          "url": "https://github.com/eddie-the-lou/latent/pull/707",
+          "title": "Groups: setup for the six public groups (switch still off)",
+          "by": "Eddie \u00b7 merged Nov 4, 9:36 PM PT"
+        },
+        {
+          "pr": 706,
+          "url": "https://github.com/eddie-the-lou/latent/pull/706",
+          "title": "Profile: All time hours now match the server (TRY-654)",
+          "by": "Eddie \u00b7 merged Nov 4, 8:41 PM PT"
+        },
+        {
+          "pr": 683,
+          "url": "https://github.com/eddie-the-lou/latent/pull/683",
+          "title": "Choose how session alarms sound: Always, Not in Silent, or Off (TRY-591)",
+          "by": "Jerry \u00b7 merged Nov 4, 8:29 PM PT"
+        },
+        {
+          "pr": 705,
+          "url": "https://github.com/eddie-the-lou/latent/pull/705",
+          "title": "Home feeds load in smaller pages from the server (backend)",
+          "by": "Malcolm \u00b7 merged Nov 4, 8:19 PM PT"
+        },
+        {
+          "pr": 704,
+          "url": "https://github.com/eddie-the-lou/latent/pull/704",
+          "title": "Contacts suggestions give up after 30 seconds instead of hanging",
+          "by": "Malcolm \u00b7 merged Nov 4, 8:04 PM PT"
+        },
+        {
+          "pr": 703,
+          "url": "https://github.com/eddie-the-lou/latent/pull/703",
+          "title": "Groups: tags on private boards, no teen rules in groups",
+          "by": "Eddie \u00b7 merged Nov 4, 7:55 PM PT"
+        },
+        {
+          "pr": 702,
+          "url": "https://github.com/eddie-the-lou/latent/pull/702",
+          "title": "Week-one reminder waits until the day after the onboarding plan (TRY-600)",
+          "by": "Malcolm \u00b7 merged Nov 4, 7:35 PM PT"
+        },
+        {
+          "pr": 684,
+          "url": "https://github.com/eddie-the-lou/latent/pull/684",
+          "title": "iPad: Latent stays upright and usable in an iPadOS 27 window (TRY-527)",
+          "by": "Jerry \u00b7 merged Nov 4, 7:34 PM PT"
+        },
+        {
+          "pr": 701,
+          "url": "https://github.com/eddie-the-lou/latent/pull/701",
+          "title": "Contacts discovery turned on through the Privacy control",
+          "by": "Malcolm \u00b7 merged Nov 4, 7:10 PM PT"
+        },
+        {
+          "pr": 700,
+          "url": "https://github.com/eddie-the-lou/latent/pull/700",
+          "title": "Groups redesign, private and public, on real data",
+          "by": "Eddie \u00b7 merged Nov 4, 7:06 PM PT"
+        },
+        {
+          "pr": 678,
+          "url": "https://github.com/eddie-the-lou/latent/pull/678",
+          "title": "Apps no longer stay blocked after you turn blocking off in Settings (TRY-602)",
+          "by": "Jerry \u00b7 merged Nov 4, 5:22 PM PT"
+        },
+        {
+          "pr": 698,
+          "url": "https://github.com/eddie-the-lou/latent/pull/698",
+          "title": "Two flaky tests made reliable (TRY-678)",
+          "by": "Eddie \u00b7 merged Nov 4, 5:04 PM PT"
+        },
+        {
+          "pr": 699,
+          "url": "https://github.com/eddie-the-lou/latent/pull/699",
+          "title": "Chat reactions: any emoji behind a +",
+          "by": "Malcolm \u00b7 merged Nov 4, 4:54 PM PT"
+        },
+        {
+          "pr": 697,
+          "url": "https://github.com/eddie-the-lou/latent/pull/697",
+          "title": "International phone numbers in Edit profile",
+          "by": "Malcolm \u00b7 merged Nov 4, 3:51 PM PT"
+        },
+        {
+          "pr": 681,
+          "url": "https://github.com/eddie-the-lou/latent/pull/681",
+          "title": "Leaving the app with the cancel prompt open no longer miscounts the recording clock (TRY-643)",
+          "by": "Jerry \u00b7 merged Nov 4, 2:59 PM PT"
+        },
+        {
+          "pr": 696,
+          "url": "https://github.com/eddie-the-lou/latent/pull/696",
+          "title": "Groups: backend safety core for public group discovery",
+          "by": "Eddie \u00b7 merged Nov 4, 12:59 PM PT"
+        },
+        {
+          "pr": 694,
+          "url": "https://github.com/eddie-the-lou/latent/pull/694",
+          "title": "Empty direct chats stay out of Messages until a message is sent",
+          "by": "Malcolm \u00b7 merged Nov 4, 11:30 AM PT"
+        }
+      ],
+      "closedOvernight": [],
+      "stillOnYou": [
+        {
+          "id": "pr-617-633",
+          "title": "#617 and #633 (empty-video fixes from Oct 25 and Oct 26) are still open. Empty-video failures on 1.0.10: 1,211 in the last day from 85 people (was 1,436 from 84). Merge #617 first, then #633 (or both), so they make the next build.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/617"
+        },
+        {
+          "id": "pr-653",
+          "title": "#653 (Spotify keeps playing during a session, Oct 28) is waiting for your review. Needs a real-phone check.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/653"
+        },
+        {
+          "id": "pr-687",
+          "title": "#687 (videos that sit still on iPhone 17 Pro now play) is waiting. Check on a 17 Pro or latest Simulator, then merge for the next TestFlight.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/687"
+        },
+        {
+          "id": "try664",
+          "title": "Long recordings posting as a few minutes: now 2 people. nadhanya (39 min to 5, in-app Nov 3) and Jinxed on Discord (1 hour to 4 min, iPhone 16, plugged in). Already TRY-664 (Need Approval). Approve it so the bot can open a fix.",
+          "url": "https://linear.app/trylatent/issue/TRY-664"
+        },
+        {
+          "id": "try648",
+          "title": "Under-13 reports still open with no hold: TRY-648 (@ank, reported by @jaydenpashut) and TRY-642 (@jesser0ff). Check both on the mod site; hold only if something shows they're under 13.",
+          "url": "https://linear.app/trylatent/issue/TRY-648"
+        },
+        {
+          "id": "try690",
+          "title": "Illakiyan (@illakiyan) wants to rate Latent and can't find where. Already TRY-690 (Rate Latent row in settings, Need Approval). Cheap win for ratings.",
+          "url": "https://linear.app/trylatent/issue/TRY-690"
+        },
+        {
+          "id": "try675",
+          "title": "New crash from Sentry via the bot: TRY-675 (crash in swipe back when the window closes, 2 people). Need Approval.",
+          "url": "https://linear.app/trylatent/issue/TRY-675"
+        },
+        {
+          "id": "try655",
+          "title": "TRY-655 (second Home tap / default feed vs groups) and TRY-603 (recover a deleted session) still Need Approval.",
+          "url": "https://linear.app/trylatent/issue/TRY-655"
+        },
+        {
+          "id": "try602",
+          "title": "TRY-602 (apps stay blocked after a session) still says Need Approval, but Jerry's #678 for it merged last night. Close it or move it to Done.",
+          "url": "https://linear.app/trylatent/issue/TRY-602"
+        },
+        {
+          "id": "pr-662",
+          "title": "#662 (Malcolm's bot profile photo fix) is still open, but Jerry's #668 merged Oct 29 and TRY-598 is Done. Close #662 as replaced.",
+          "url": "https://github.com/eddie-the-lou/latent/pull/662"
+        },
+        {
+          "id": "bot-new",
+          "title": "New Need Approval from Malcolm's bot since yesterday: TRY-690 (rate button), TRY-676 (stream sessions to Twitch/YouTube), TRY-675 (swipe-back crash). Still from before: TRY-664, TRY-655, TRY-665, TRY-666, TRY-647, TRY-650, TRY-649, TRY-648, TRY-642.",
+          "url": "https://linear.app/trylatent/issue/TRY-690"
+        },
+        {
+          "id": "bot-older",
+          "title": "Still Need Approval from before: TRY-637, TRY-638, TRY-639, TRY-626, TRY-629, TRY-633, TRY-635, TRY-636, TRY-439 (week starts Monday), TRY-463 (light mode), TRY-603 (recover a deleted session), TRY-501 (iPad split screen camera), TRY-547 (song part), TRY-493 (timelapse length), TRY-586 (sessions together), TRY-608 (today's hours), TRY-458 (goals per tag), TRY-614, TRY-615, TRY-618 to TRY-624, TRY-604, TRY-605, TRY-606, TRY-592, TRY-587, TRY-582, TRY-563, TRY-564, TRY-542, TRY-538, TRY-496, TRY-442, and moderation TRY-548 and TRY-484.",
+          "url": "https://linear.app/trylatent/issue/TRY-439"
+        },
+        {
+          "id": "older-prs",
+          "title": "Other open PRs: yours #713 and #709 (streak, drafts), #659, #651, #500, #417; Malcolm #695, #689, #672, #619, #605, #587, #537, #530, #529, #518, #499; Malcolm's bot #662; Jerry #632 (draft).",
+          "url": "https://github.com/eddie-the-lou/latent/pulls"
+        },
+        {
+          "id": "fyi",
+          "title": "FYI: 1 reply draft below (Tadeas, carried). You answered Ichiro and Genia yesterday. Pitches/admin mail skipped. Hiring thank-you watch still has 9 unreported thank-yous; dig does not redraft those. Stay-as-Beta: 2 new / 182 total."
+        }
+      ],
+      "note": "No Cloud Agents launched. Every clear bug already has an owner: the 1 hour to 4 min recording cut is TRY-664 (now 2 reports), the loud Pomodoro break alarm is TRY-591 and Jerry's #683 merged last night, the swipe-back crash is TRY-675. Mbali's black screen is one line with no detail. The rest are feature asks, most already tickets."
+    },
+    "prStatus": {
+      "waiting": [
+        {
+          "pr": 617,
+          "url": "https://github.com/eddie-the-lou/latent/pull/617",
+          "title": "Record: Undo after Finish no longer uploads an empty clip",
+          "status": "Still waiting for your review (opened Oct 25)",
+          "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session."
+        },
+        {
+          "pr": 633,
+          "url": "https://github.com/eddie-the-lou/latent/pull/633",
+          "title": "Stop retrying empty-clip uploads on every launch",
+          "status": "Still waiting for your review (opened Oct 26, built on #617)",
+          "whatItFixes": "A post whose video is empty or gone stops retrying on every app open: it tries to rebuild from leftover pieces once, otherwise shows Video missing. Includes #617, so merge #617 first or both."
+        },
+        {
+          "pr": 653,
+          "url": "https://github.com/eddie-the-lou/latent/pull/653",
+          "title": "Keep Spotify playing when you start a session",
+          "status": "Still waiting for your review (opened Oct 28)",
+          "whatItFixes": "Starting a camera-on session no longer stops Spotify or Apple Music (the camera was grabbing the phone's sound). Check on a real phone."
+        },
+        {
+          "pr": 687,
+          "url": "https://github.com/eddie-the-lou/latent/pull/687",
+          "title": "Videos that sit still on iPhone 17 Pro now play, with Try again if they still will not",
+          "status": "Still waiting for your review (opened Nov 3)",
+          "whatItFixes": "On an iPhone 17 Pro, friends' timelapse videos sat on the cover and never started. Player waits for a real size and shows Try again."
+        }
+      ],
+      "openedToday": [],
+      "agentsStillWorking": [],
+      "mergedOvernight": [
+        {
+          "pr": 712,
+          "url": "https://github.com/eddie-the-lou/latent/pull/712",
+          "title": "Log feed events only when something goes wrong",
+          "by": "Malcolm \u00b7 merged Nov 4, 10:36 PM PT"
+        },
+        {
+          "pr": 710,
+          "url": "https://github.com/eddie-the-lou/latent/pull/710",
+          "title": "Groups: one chat screen for every group, with live public chat and moderation",
+          "by": "Eddie \u00b7 merged Nov 4, 10:25 PM PT"
+        },
+        {
+          "pr": 711,
+          "url": "https://github.com/eddie-the-lou/latent/pull/711",
+          "title": "Home feed ordered by the server (behind a switch)",
+          "by": "Malcolm \u00b7 merged Nov 4, 10:16 PM PT"
+        },
+        {
+          "pr": 708,
+          "url": "https://github.com/eddie-the-lou/latent/pull/708",
+          "title": "Post: song speaker in the video corner, tagged people in the like/comment bar",
+          "by": "Eddie \u00b7 merged Nov 4, 9:45 PM PT"
+        },
+        {
+          "pr": 707,
+          "url": "https://github.com/eddie-the-lou/latent/pull/707",
+          "title": "Groups: setup for the six public groups (switch still off)",
+          "by": "Eddie \u00b7 merged Nov 4, 9:36 PM PT"
+        },
+        {
+          "pr": 706,
+          "url": "https://github.com/eddie-the-lou/latent/pull/706",
+          "title": "Profile: All time hours now match the server (TRY-654)",
+          "by": "Eddie \u00b7 merged Nov 4, 8:41 PM PT"
+        },
+        {
+          "pr": 683,
+          "url": "https://github.com/eddie-the-lou/latent/pull/683",
+          "title": "Choose how session alarms sound: Always, Not in Silent, or Off (TRY-591)",
+          "by": "Jerry \u00b7 merged Nov 4, 8:29 PM PT"
+        },
+        {
+          "pr": 705,
+          "url": "https://github.com/eddie-the-lou/latent/pull/705",
+          "title": "Home feeds load in smaller pages from the server (backend)",
+          "by": "Malcolm \u00b7 merged Nov 4, 8:19 PM PT"
+        },
+        {
+          "pr": 704,
+          "url": "https://github.com/eddie-the-lou/latent/pull/704",
+          "title": "Contacts suggestions give up after 30 seconds instead of hanging",
+          "by": "Malcolm \u00b7 merged Nov 4, 8:04 PM PT"
+        },
+        {
+          "pr": 703,
+          "url": "https://github.com/eddie-the-lou/latent/pull/703",
+          "title": "Groups: tags on private boards, no teen rules in groups",
+          "by": "Eddie \u00b7 merged Nov 4, 7:55 PM PT"
+        },
+        {
+          "pr": 702,
+          "url": "https://github.com/eddie-the-lou/latent/pull/702",
+          "title": "Week-one reminder waits until the day after the onboarding plan (TRY-600)",
+          "by": "Malcolm \u00b7 merged Nov 4, 7:35 PM PT"
+        },
+        {
+          "pr": 684,
+          "url": "https://github.com/eddie-the-lou/latent/pull/684",
+          "title": "iPad: Latent stays upright and usable in an iPadOS 27 window (TRY-527)",
+          "by": "Jerry \u00b7 merged Nov 4, 7:34 PM PT"
+        },
+        {
+          "pr": 701,
+          "url": "https://github.com/eddie-the-lou/latent/pull/701",
+          "title": "Contacts discovery turned on through the Privacy control",
+          "by": "Malcolm \u00b7 merged Nov 4, 7:10 PM PT"
+        },
+        {
+          "pr": 700,
+          "url": "https://github.com/eddie-the-lou/latent/pull/700",
+          "title": "Groups redesign, private and public, on real data",
+          "by": "Eddie \u00b7 merged Nov 4, 7:06 PM PT"
+        },
+        {
+          "pr": 678,
+          "url": "https://github.com/eddie-the-lou/latent/pull/678",
+          "title": "Apps no longer stay blocked after you turn blocking off in Settings (TRY-602)",
+          "by": "Jerry \u00b7 merged Nov 4, 5:22 PM PT"
+        },
+        {
+          "pr": 698,
+          "url": "https://github.com/eddie-the-lou/latent/pull/698",
+          "title": "Two flaky tests made reliable (TRY-678)",
+          "by": "Eddie \u00b7 merged Nov 4, 5:04 PM PT"
+        },
+        {
+          "pr": 699,
+          "url": "https://github.com/eddie-the-lou/latent/pull/699",
+          "title": "Chat reactions: any emoji behind a +",
+          "by": "Malcolm \u00b7 merged Nov 4, 4:54 PM PT"
+        },
+        {
+          "pr": 697,
+          "url": "https://github.com/eddie-the-lou/latent/pull/697",
+          "title": "International phone numbers in Edit profile",
+          "by": "Malcolm \u00b7 merged Nov 4, 3:51 PM PT"
+        },
+        {
+          "pr": 681,
+          "url": "https://github.com/eddie-the-lou/latent/pull/681",
+          "title": "Leaving the app with the cancel prompt open no longer miscounts the recording clock (TRY-643)",
+          "by": "Jerry \u00b7 merged Nov 4, 2:59 PM PT"
+        },
+        {
+          "pr": 696,
+          "url": "https://github.com/eddie-the-lou/latent/pull/696",
+          "title": "Groups: backend safety core for public group discovery",
+          "by": "Eddie \u00b7 merged Nov 4, 12:59 PM PT"
+        },
+        {
+          "pr": 694,
+          "url": "https://github.com/eddie-the-lou/latent/pull/694",
+          "title": "Empty direct chats stay out of Messages until a message is sent",
+          "by": "Malcolm \u00b7 merged Nov 4, 11:30 AM PT"
+        }
+      ],
+      "closedOvernight": [],
+      "newOpenNotDig": [
+        {
+          "pr": 713,
+          "url": "https://github.com/eddie-the-lou/latent/pull/713",
+          "title": "Choose your streak week's start day (draft, shipped dark)",
+          "by": "Eddie"
+        },
+        {
+          "pr": 709,
+          "url": "https://github.com/eddie-the-lou/latent/pull/709",
+          "title": "Show the streak week and make the profile flame a button (TRY-669, draft)",
+          "by": "Eddie"
+        },
+        {
+          "pr": 695,
+          "url": "https://github.com/eddie-the-lou/latent/pull/695",
+          "title": "Reminder pushes: emoji at the end of the title (TRY-600)",
+          "by": "Malcolm"
+        }
+      ]
+    },
+    "ageHolds": {
+      "open": [],
+      "newLast24h": [],
+      "resolvedLast24h": [],
+      "summary": "No age holds.",
+      "detail": "No open holds, none started and none released or deleted in the last 24 hours. Holds ever: 2. Checked ~9:30 AM PT. The dig changed nothing. Under-13 reports with no hold placed: TRY-648 (@ank) and TRY-642 (@jesser0ff).",
+      "underThirteenReports": [
+        {
+          "id": "TRY-648",
+          "account": "@ank",
+          "reportedBy": "@jaydenpashut",
+          "new": false,
+          "url": "https://linear.app/trylatent/issue/TRY-648"
+        },
+        {
+          "id": "TRY-642",
+          "account": "@jesser0ff",
+          "reportedBy": "@adamberger",
+          "new": false,
+          "url": "https://linear.app/trylatent/issue/TRY-642"
+        }
+      ],
+      "query": "/workspace/feedback-digests/age-holds.sql"
+    },
+    "actions": [
+      {
+        "id": "pr-617-633",
+        "title": "Review #617 then #633 (empty-video fixes)",
+        "plainSummary": "About 88 people a day still hit it on the App Store build.",
+        "status": "Waiting for your review",
+        "url": "https://github.com/eddie-the-lou/latent/pull/617"
+      },
+      {
+        "id": "pr-653",
+        "title": "Review #653 (Spotify keeps playing during a session)",
+        "plainSummary": "Needs a real-phone check.",
+        "status": "Waiting for your review",
+        "url": "https://github.com/eddie-the-lou/latent/pull/653"
+      },
+      {
+        "id": "pr-687",
+        "title": "Review #687 (videos that sit still on iPhone 17 Pro)",
+        "plainSummary": "Needs a 17 Pro or latest Simulator check, then merge for TestFlight.",
+        "status": "Waiting for your review",
+        "url": "https://github.com/eddie-the-lou/latent/pull/687"
+      },
+      {
+        "id": "try664",
+        "title": "Approve TRY-664 (long recording posted as a few minutes)",
+        "plainSummary": "Second report today (Jinxed on Discord, 1 hour to 4 min).",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-664"
+      },
+      {
+        "id": "try690",
+        "title": "Approve TRY-690 (Rate Latent row in settings)",
+        "plainSummary": "Illakiyan wanted to rate us and couldn't find where.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-690"
+      },
+      {
+        "id": "try675",
+        "title": "Approve TRY-675 (swipe-back crash, 2 people)",
+        "plainSummary": "New crash the bot filed from Sentry.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-675"
+      },
+      {
+        "id": "try648",
+        "title": "Look at TRY-648 (@ank) and TRY-642 (@jesser0ff) under-13 reports",
+        "plainSummary": "No holds placed. Check both on the mod site.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-648"
+      },
+      {
+        "id": "reply-tadeas",
+        "title": "Send the Tadeas Horak reply (product idea + hiring paused)",
+        "plainSummary": "Draft is in the dig; do not create a Gmail draft from here.",
+        "status": "Needs you"
+      },
+      {
+        "id": "try602",
+        "title": "Close TRY-602 (apps stay blocked)",
+        "plainSummary": "Jerry's #678 merged last night.",
+        "status": "Needs you",
+        "url": "https://linear.app/trylatent/issue/TRY-602"
+      },
+      {
+        "id": "pr-662",
+        "title": "Close #662 (replaced by #668)",
+        "plainSummary": "Housekeeping.",
+        "status": "Needs you",
+        "url": "https://github.com/eddie-the-lou/latent/pull/662"
+      },
+      {
+        "id": "sentry",
+        "title": "Re-connect Sentry",
+        "plainSummary": "Still needs re-auth.",
+        "status": "Needs you"
+      },
+      {
+        "id": "age-holds",
+        "title": "Age holds: none",
+        "plainSummary": "Nothing for the dig to do.",
+        "status": "done"
+      },
+      {
+        "id": "email",
+        "title": "Email dig to eddie@weaive.app",
+        "status": "done",
+        "plainSummary": "Sent ~9:26 AM PT (Gmail 1a1acbfacaaf0c51)."
+      },
+      {
+        "id": "archive",
+        "title": "Publish archive",
+        "status": "done",
+        "url": "https://eddie-the-lou.github.io/latent-digs/#/2026-11-05"
+      }
+    ],
+    "bugs": [
+      {
+        "id": "empty-clip",
+        "title": "Empty videos failing to upload on the App Store build",
+        "severity": "medium",
+        "people": 88,
+        "status": "PRs #617 and #633 waiting for your review",
+        "summary": "1,237 failures from about 88 people in the last day (was 1,469 from about 87). 1,211 from 85 people on 1.0.10 (48).",
+        "detail": "Neither fix is in the App Store build.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/617",
+        "sources": [
+          "posthog",
+          "github"
+        ]
+      },
+      {
+        "id": "duration-cut",
+        "title": "Long recording posts as a much shorter session",
+        "severity": "high",
+        "people": 2,
+        "status": "TRY-664 (Need Approval)",
+        "summary": "Now 2 reports: nadhanya (39 min to 5, Nov 3) and Jinxed on Discord (studied 1 hour, it recorded 4 minutes, iPhone 16, charging the whole time).",
+        "detail": "Bot's guess on TRY-664: another device starting a recording can cut the first session short. Approve it so the bot opens a fix.",
+        "url": "https://linear.app/trylatent/issue/TRY-664",
+        "sources": [
+          "discord",
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "break-alarm",
+        "title": "Pomodoro break alarm rings out loud in quiet places",
+        "severity": "medium",
+        "people": 1,
+        "status": "Fixed on main (#683, TRY-591), next build",
+        "summary": "Quintin (@qolivito): the end-of-break alarm always rings through the speaker, which is awkward in libraries.",
+        "detail": "Jerry's #683 merged last night adds an Alarm setting in the record drawer: Always, Not in Silent, or Off. It covers Pomodoro phase ends.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/683",
+        "sources": [
+          "in-app",
+          "github",
+          "linear"
+        ]
+      },
+      {
+        "id": "black-screen",
+        "title": "Black screen when trying to record",
+        "severity": "medium",
+        "people": 1,
+        "status": "Needs more detail",
+        "summary": "Mbali (@donut_lover3l) on 1.0.10: \"Unable to record myself. The screen is black\".",
+        "detail": "One line, no more detail. Could be camera permission off. Not enough for a code fix.",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "video-play",
+        "title": "Videos sit still and won't play on iPhone 17 Pro",
+        "severity": "high",
+        "people": 1,
+        "status": "PR #687 waiting for your review",
+        "summary": "Kalos report from Nov 3; fix still open.",
+        "detail": "Check on a 17 Pro / Simulator then merge.",
+        "url": "https://github.com/eddie-the-lou/latent/pull/687",
+        "sources": [
+          "github"
+        ]
+      },
+      {
+        "id": "swipe-crash",
+        "title": "Crash in swipe back when the window closes",
+        "severity": "medium",
+        "people": 2,
+        "status": "TRY-675 (Need Approval)",
+        "summary": "New Sentry crash the bot filed (2 people, fatal).",
+        "detail": "Bot has a fix idea on the ticket.",
+        "url": "https://linear.app/trylatent/issue/TRY-675",
+        "sources": [
+          "linear"
+        ]
+      },
+      {
+        "id": "signup-failed",
+        "title": "Some sign-ups failing",
+        "severity": "low",
+        "people": 4,
+        "status": "Watching",
+        "summary": "9 failed sign-ups from 4 people (was 13 from 6).",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "invite-invalid",
+        "title": "People typing an invite code that doesn't work",
+        "severity": "low",
+        "people": 76,
+        "status": "Watching",
+        "summary": "235 invalid invite code tries from 76 people (was 196 from 77).",
+        "sources": [
+          "posthog"
+        ]
+      },
+      {
+        "id": "sentry-auth",
+        "title": "Sentry connector needs re-auth",
+        "severity": "low",
+        "people": null,
+        "status": "Needs you",
+        "summary": "Still needs re-auth. No crash data from me today (the bot still sees Sentry, see TRY-675).",
+        "sources": [
+          "sentry"
+        ]
+      }
+    ],
+    "features": [
+      {
+        "id": "goals",
+        "title": "Set a daily or weekly hours goal",
+        "count": 2,
+        "peopleCountLabel": "2 new",
+        "status": "Near TRY-458 (goals per tag)",
+        "summary": "Pranav (@xd_yeetr) wants a daily/weekly target. Eric (@t4nz4ni4) wants a daily goal, and sessions past it go to drafts so they can't be deleted.",
+        "url": "https://linear.app/trylatent/issue/TRY-458",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "hours-day-week",
+        "title": "See study hours per day and per week",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "TRY-608 (Need Approval)",
+        "summary": "luli (@lululemon).",
+        "url": "https://linear.app/trylatent/issue/TRY-608",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "timelapse-length",
+        "title": "Longer timelapse for longer sessions",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "TRY-493 (Need Approval)",
+        "summary": "Mia Son (@mia_): a 3 hour session makes the same length video as 30 min. 201k on Discord also asked what fps timelapses are.",
+        "url": "https://linear.app/trylatent/issue/TRY-493",
+        "sources": [
+          "in-app",
+          "discord",
+          "linear"
+        ]
+      },
+      {
+        "id": "rate-button",
+        "title": "A button to rate Latent on the App Store",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "TRY-690 (Need Approval)",
+        "summary": "Illakiyan (@illakiyan) loves the app and couldn't find where to review it.",
+        "url": "https://linear.app/trylatent/issue/TRY-690",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "together",
+        "title": "Live sessions together with friends",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "TRY-586 (Need Approval)",
+        "summary": "Maryam (@maryamk123), like the Flora app.",
+        "url": "https://linear.app/trylatent/issue/TRY-586",
+        "sources": [
+          "in-app",
+          "linear"
+        ]
+      },
+      {
+        "id": "screen-rec",
+        "title": "Screen recording timelapses instead of the camera",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "No ticket yet",
+        "summary": "Evan (@evanb): choose which apps/tabs are shared for privacy.",
+        "detail": "Same direction as Tadeas's computer-tracking email.",
+        "sources": [
+          "in-app"
+        ]
+      },
+      {
+        "id": "twitch",
+        "title": "Stream sessions from Twitch / RTMP into Latent",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "TRY-676 (Need Approval)",
+        "summary": "Jinxed on Discord uses the phone as a Twitch webcam and can only use it for one or the other.",
+        "url": "https://linear.app/trylatent/issue/TRY-676",
+        "sources": [
+          "discord",
+          "linear"
+        ]
+      },
+      {
+        "id": "chat",
+        "title": "Chat upgrades: GIFs, replies, see reactions, tap profiles, tag people",
+        "count": 1,
+        "peopleCountLabel": "1 new",
+        "status": "No ticket yet (any-emoji reactions #699 merged last night)",
+        "summary": "tbz on Discord.",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "leaders",
+        "title": "Worldwide leaderboard",
+        "count": 1,
+        "peopleCountLabel": "1 new reply",
+        "status": "No ticket yet",
+        "summary": "shritan on Discord pushes back: a global board would be won by people leaving idle timelapses running.",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "android",
+        "title": "Android app",
+        "count": 1,
+        "peopleCountLabel": "Discord",
+        "status": "Coming (no date)",
+        "summary": "Karthikeyann asked on Discord. FlopperITA's Nov 4 thread still has no reply.",
+        "sources": [
+          "discord"
+        ]
+      },
+      {
+        "id": "beta",
+        "title": "People want to stay testers",
+        "count": 2,
+        "peopleCountLabel": "2 new, 182 total",
+        "status": "Malcolm handles",
+        "summary": "2 new Stay as a Beta Tester picks since yesterday's review (latest Nov 4, 9:15 PM PT).",
+        "detail": "Count only (TRY-343).",
+        "sources": [
+          "supabase"
+        ]
+      }
+    ],
+    "bySource": {
+      "gmail": {
+        "new": 0,
+        "note": "No new app-user emails since yesterday. You answered Ichiro and Genia (Nov 4, 9:57 AM PT). Tadeas still unanswered (draft carried). Other mail was pitches, travel, payroll and EF admin. No PostHog alert emails."
+      },
+      "survey": {
+        "newRows": 0,
+        "seanEllis": "40/25/2 of 67",
+        "note": "Export HTTP 200. No new rows (sheet rows: Active 68, Churned 7, Did not record 9, unchanged)."
+      },
+      "sentry": {
+        "new": [],
+        "note": "Unavailable: Sentry still needs re-auth."
+      },
+      "posthog": {
+        "note": "Last 24h vs prior 24h (to ~9:30 AM PT): installs 1,310 (was 1,268); onboarding done 1,068 (was 1,030); sessions started 16,965/6,805 people (was 17,454/6,648); sessions discarded 2,868/1,736; app updates 248. clip_upload_failed 1,429/136 (1,237 empty from ~88, 1,211 from 85 on 1.0.10, #617/#633; TLS/network and other ~190); session_save_failed 81/51; sign_in_failed 28/20; sign_up_failed 9/4; backend_unreachable_shown 1,508/972; invite_check_failed 235/76. Rage clicks 18,276/5,042. Alerts: edge-function loop and clip bloat both not firing. App Store 1.1.0 / app 1.0.10 (48); 4.91 stars (214, was 213)."
+      },
+      "github": {
+        "note": "No dig PRs opened today. 21 merged overnight: #694, #696-#708, #710-#712 (Eddie and Malcolm) and Jerry's #678, #681, #683, #684. Still open #617/#633/#653/#687. New open #713, #709 (yours, drafts), #695 (Malcolm)."
+      },
+      "linear": {
+        "note": "Bot filed TRY-690 (rate button), TRY-676 (Twitch streaming), TRY-675 (swipe-back crash). TRY-664 got a second report (Discord). TRY-648/642 still open. TRY-625 updated."
+      },
+      "betaOptIns": {
+        "new": 2,
+        "total": 182
+      },
+      "inApp": {
+        "new": 9,
+        "note": "9 new rows: loud Pomodoro break alarm (Quintin -> TRY-591, fixed on main by #683), black screen (Mbali, thin), daily/weekly goals (Pranav, Eric -> near TRY-458), timelapse length (Mia -> TRY-493), hours per day/week (luli -> TRY-608), rate button (Illakiyan -> TRY-690), sessions together (Maryam -> TRY-586), screen recording (Evan)."
+      },
+      "discord": {
+        "new": 9,
+        "note": "New since Nov 4 ~9:15 AM PT (checked ~9:20 AM PT Nov 5). #general-chat: Jinxed says a 1 hour session recorded only 4 minutes (iPhone 16, charging; same as TRY-664), Karthikeyann asks about Android, 201k asks timelapse fps. #feature-requests: Jinxed wants Twitch/RTMP streaming into Latent (TRY-676), tbz wants chat GIFs/replies/see reactions/tap profiles/tag people, shritan says a global leaderboard would be gamed by idle timelapses. #questions: FlopperITA Android and cuurry stitch drafts still unanswered. No Eddie/Malcolm replies since the last dig."
+      }
+    },
+    "rawQuotes": [
+      {
+        "id": "inapp-7ff51514",
+        "source": "in-app",
+        "username": "@qolivito (Quintin)",
+        "whenPT": "Nov 4, 9:30 AM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "Sup guys. Love the app you\u2019ve built. I noticed that when you are in pomodoro mode, the end of break timer automatically rings through the iPhone speakers out loud every time. This doesn\u2019t happen with the end of session timer though. I often study in public quiet spaces and having it ring through is really annoying for everyone else, but I really love the pomodoro timer for studying. Any way you can add a feature to silence the break alarm and just use the in app notifications? Would be so awesome. Thanks!",
+        "note": "In-app (filed as bug) \u00b7 Break alarm rings out loud in Pomodoro. Already TRY-591; Jerry's #683 (Alarm setting: Always / Not in Silent / Off, covers Pomodoro phase ends) merged last night, so it lands in the next build."
+      },
+      {
+        "id": "inapp-8a08effc",
+        "source": "in-app",
+        "username": "@xd_yeetr (Pranav)",
+        "whenPT": "Nov 4, 10:32 AM PT",
+        "build": "1.0.6 (39)",
+        "kind": "feature",
+        "quote": "Heyy, i wanna start of by saying that this is an amazing app, just absolutely beautiful, i just have a couple of ideas, i wish there was a way to set how many hours i wanna reach in a day or even a week, i feel like working towards that specific goal would feel extra rewarding, but thats just an idea, other than that this app is so helpful",
+        "note": "In-app feature \u00b7 Daily or weekly hour goal. Near TRY-458 (goals per tag). Old build 1.0.6 (39)."
+      },
+      {
+        "id": "inapp-e2225747",
+        "source": "in-app",
+        "username": "@mia_ (Mia Son)",
+        "whenPT": "Nov 4, 12:28 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "Can u possibly make an adjustment for like the time lapse speed sometimes it feel too fast and I don\u2019t really like that my 3hours study sesh has the same time of video as my 30min study sesh",
+        "note": "In-app feature \u00b7 Longer timelapse for longer sessions. Already TRY-493 (timelapse length, Need Approval)."
+      },
+      {
+        "id": "inapp-fd98c4c2",
+        "source": "in-app",
+        "username": "@lululemon (luli)",
+        "whenPT": "Nov 4, 2:35 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "You should be able to see your studying hours per week or even per day!!! Cos when the hours build up u can feel as though you have done a lot of studying when you haven\u2019t done any recently.",
+        "note": "In-app feature \u00b7 Hours per day / per week. Near TRY-608 (show today's hours, Need Approval)."
+      },
+      {
+        "id": "inapp-eda9b87d",
+        "source": "in-app",
+        "username": "@donut_lover3l (Mbali)",
+        "whenPT": "Nov 4, 10:39 PM PT",
+        "build": "1.0.10 (48)",
+        "kind": "bug",
+        "quote": "Unable to record myself. The screen is black",
+        "note": "In-app bug \u00b7 Black screen when recording. One line, no build detail beyond 1.0.10 (48); could be camera permission. Too thin for a code fix; no ticket yet."
+      },
+      {
+        "id": "inapp-c4feb2a9",
+        "source": "in-app",
+        "username": "@illakiyan (Illakiyan)",
+        "whenPT": "Nov 5, 12:44 AM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "Really loved this app. I was looking for share review button, But I don\u2019t find one. It would be very helpful for you guys if you add a appstore review button.",
+        "note": "In-app feature \u00b7 Wants to leave an App Store review. Already TRY-690 (Rate Latent row in settings, Need Approval)."
+      },
+      {
+        "id": "inapp-8ca9f547",
+        "source": "in-app",
+        "username": "@maryamk123 (Maryam)",
+        "whenPT": "Nov 5, 6:13 AM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "I really think this app is absolutely amazing and it\u2019s a very good idea well thought and executed perfectly I would just like to say tho it would just take it to the next level if you could have joined sessions at the same time with friends like the app flora does for maybe inspiration if you don\u2019t understand what I\u2019m saying but thank you",
+        "note": "In-app feature \u00b7 Live joined sessions with friends (like Flora). Already TRY-586 (start a session together, Need Approval)."
+      },
+      {
+        "id": "inapp-f296bc67",
+        "source": "in-app",
+        "username": "@t4nz4ni4 (Eric)",
+        "whenPT": "Nov 5, 8:08 AM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "give the option to have something like setting the goals for amount of study everyday. And when your recording reaches over that goal. It can\u2019t be deleted because it goes straight to draft, so it prevents people from deleting their 4 hour study session",
+        "note": "In-app feature \u00b7 Daily goal, and sessions past the goal go to drafts so they can't be deleted. Near TRY-458 and TRY-603 (recover deleted)."
+      },
+      {
+        "id": "inapp-3602ef14",
+        "source": "in-app",
+        "username": "@evanb (Evan)",
+        "whenPT": "Nov 5, 8:35 AM PT",
+        "build": "1.0.10 (48)",
+        "kind": "feature",
+        "quote": "SCREEN RECORDING\nadd screen recordings instead of video cameras, to show timelapses of your work.\nUsers can choose which apps/tabs/screens are shared, so privacy concerns can be avoided",
+        "note": "In-app feature \u00b7 Screen recording timelapses with app/tab choice. No ticket yet (same direction as Tadeas's computer-tracking email)."
+      },
+      {
+        "id": "discord-1105-0",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "\ud835\udc71\ud835\udc8a\ud835\udc8f\ud835\udc99\ud835\udc86\ud835\udc85\ud835\udc70\ud835\udc79\ud835\udc73\ud835\udc99\ud835\udc6b",
+        "author": "\ud835\udc71\ud835\udc8a\ud835\udc8f\ud835\udc99\ud835\udc86\ud835\udc85\ud835\udc70\ud835\udc79\ud835\udc73\ud835\udc99\ud835\udc6b",
+        "whenPT": "Nov 4 11:28-11:32 AM PT",
+        "kind": "discord",
+        "quote": "so i tried this app / i studied 1 hr / it recorded 4 m / why / nope / i was plugged into charging the whole time too / well / it recorded 4 minutes / so yes / iphone 16 / yeah / idk why / or what setting causes this",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1105-1",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Drew",
+        "author": "Drew",
+        "whenPT": "Nov 4 11:29-11:33 AM PT",
+        "kind": "discord",
+        "quote": "did your phone pull up a low battery warning? / you sure you pressed the record button? (ive done this before ) / idk maybe if u got a call or something im not sure / im guessing it recorded the first 4 mins then stopped / some things disrupt it like low battery etc but idk",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1105-2",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "Karthikeyann\ud83e\udebd",
+        "author": "Karthikeyann\ud83e\udebd",
+        "whenPT": "Nov 4 11:31-11:32 AM PT",
+        "kind": "discord",
+        "quote": "The app is released? / For Android? / Ahh",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1105-3",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "tbz \ud83e\ude84",
+        "author": "tbz \ud83e\ude84",
+        "whenPT": "Nov 4 11:40-11:41 AM PT",
+        "kind": "discord",
+        "quote": "how tf do u guys be logging 6 hrs of study / i could never / too long / also @Eddie slide me OG role cus im goated lowkey / madness / shoutout rj whereever he is",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1105-4",
+        "source": "discord",
+        "channel": "#general-chat",
+        "username": "\u2764\ufe0f 201k",
+        "author": "\u2764\ufe0f 201k",
+        "whenPT": "Nov 5 1:15 AM PT",
+        "kind": "discord",
+        "quote": "Does anyone know how much fps the timelapses are?",
+        "note": "Discord \u00b7 #general-chat"
+      },
+      {
+        "id": "discord-1105-5",
+        "source": "discord",
+        "channel": "#feature-requests (thread: RMTP streaming compatibility)",
+        "username": "\ud835\udc71\ud835\udc8a\ud835\udc8f\ud835\udc99\ud835\udc86\ud835\udc85\ud835\udc70\ud835\udc79\ud835\udc73\ud835\udc99\ud835\udc6b",
+        "author": "\ud835\udc71\ud835\udc8a\ud835\udc8f\ud835\udc99\ud835\udc86\ud835\udc85\ud835\udc70\ud835\udc79\ud835\udc73\ud835\udc99\ud835\udc6b",
+        "whenPT": "Nov 4 11:35-11:41 AM PT",
+        "kind": "discord",
+        "quote": "I study stream on twitch. Basically allow a way for me to send that streaming data to your app. U would need a server i think for this to grab the data i send. I would happily give yall free server usage on my server for this till yall find a solution. Offering since i imagine i am a very niche usecase for this / reason why i ask this is cuz i use my phone as a webcam for twitch so / it would be easier for me to relay the same data i send to twitch over to ur app and then timelapse that way / long term adding RMTP compatibility would do WONDERS for your growth / RMTP streaming means eventually u can probably use almost ANY coworking and studying twitch streamer as an affiliate to your app. U could even set it up such that all twitch streams that do this would get water marked but this is predatory a little. / Point is that the feature reaps you alot of value later on but right now I imagine I am the only one who would use this feature so I am happy to let you use my personal server or part of it to host this feature / Currently I can either use my iphone as a webcam for my stream. or use it for latent",
+        "note": "Discord \u00b7 #feature-requests (thread: RMTP streaming compatibility)"
+      },
+      {
+        "id": "discord-1105-6",
+        "source": "discord",
+        "channel": "#feature-requests (thread: messaging feature requests)",
+        "username": "tbz \ud83e\ude84",
+        "author": "tbz \ud83e\ude84",
+        "whenPT": "Nov 4 5:41 PM PT",
+        "kind": "discord",
+        "quote": "dear wonderful and handsome eddie may u please add gif compatibility, be able to reply to messages, see who reacted and what they reacted with, be able to click profiles in the chat to go to their profile and also to tag ppl in chat which pings them thank u eddie sincerely ur day 1 -thibaut",
+        "note": "Discord \u00b7 #feature-requests (thread: messaging feature requests)"
+      },
+      {
+        "id": "discord-1105-7",
+        "source": "discord",
+        "channel": "#feature-requests (thread: Leaders)",
+        "username": "shritan",
+        "author": "shritan",
+        "whenPT": "Nov 5 8:05 AM PT",
+        "kind": "discord",
+        "quote": "feel like a global leaderboard would just be dominated by people leaving their timelapse going but not actually doing anything",
+        "note": "Discord \u00b7 #feature-requests (thread: Leaders)"
+      },
+      {
+        "id": "discord-1105-8",
+        "source": "discord",
+        "channel": "#questions (thread: Guys should I use latent while making clay keychains?)",
+        "username": "Briana",
+        "author": "Briana",
+        "whenPT": "Nov 5 8:10 AM PT",
+        "kind": "discord",
+        "quote": "Yey! Okay I'll check when I'm free to do it and I might send the time lapse",
+        "note": "Discord \u00b7 #questions (thread: Guys should I use latent while making clay keychains?)"
+      }
+    ],
+    "replyDrafts": [
+      {
+        "to": "horak.tadeas@email.cz",
+        "toName": "Tadeas Horak",
+        "subject": "Re: Strava has GPS. Latent doesn't.",
+        "threadId": "1a1a2539b80dfbdd",
+        "messageId": "1a1a2539b80dfbdd",
+        "theirMessage": "Hi Eddie,\n\nYou describe Latent as a Strava for work, and I think that's the right comparison. But Strava has GPS, so a 10K really is a 10K. Latent knows I was recording, but not what I did on my computer, and that's where the work happens.\n\nI'd track the computer too. It could read which apps and sites you use, and AI could check snapshots of the session against what you said you'd work on. After five hours, you'd see that only two were real work.\n\nThe best part would be seeing why. Say a Discord message at 17:20 turned into an hour on YouTube. You'd see exactly that, and next time you'd know what to fix. I think people would open the app just for that.\n\nIt would also make groups stronger, because streaks and nudges would be based on real hours.\n\nI've attached a wireframe and five things I'd try first. I'm 21, from Czechia, and I build my own products, most recently elasty.uk and AI modeling software for formula student.\n\nI really like where Latent is going and I'd love to help with the product and the decisions around it. I could do that remotely, and if it turned out to be a great fit, I'd be open to moving. No pressure at all.\n\nIf you're curious, I'm happy to build a small version first and show you how it works on real sessions.\n\nTadeas Horak",
+        "body": "Hey Tadeas,\n\nThanks for writing this up, and for the wireframe. The Strava comparison is how I think about Latent too, and the idea of verifying what actually happened on the computer is really interesting.\n\nWe're pausing hiring for now while we focus on the product, so I can't open a role right now. I'll keep your note and the PDF.\n\nEddie",
+        "why": "Carried from Nov 3; still no reply from you. Product idea + interest in helping; hiring is paused so no role pitch. PDF wireframe attached to his email."
+      }
+    ],
+    "linearIssue": {
+      "id": "TRY-625",
+      "url": "https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-11-05-4-fixes-waiting-for-review-617-687"
+    },
+    "linearNote": "Linear dig issue: TRY-625 https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-11-05-4-fixes-waiting-for-review-617-687",
+    "emailMessageId": "1a1acbfacaaf0c51",
+    "release": {
+      "appStoreVersion": "1.1.0 (app reports 1.0.10)",
+      "build": "48",
+      "releasedPT": "Oct 27, 11:55 AM PT",
+      "rating": "4.91 (214)"
     }
   }
 };
