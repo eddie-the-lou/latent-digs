@@ -1437,7 +1437,7 @@
   "url": "https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-11-07-5-fixes-waiting-for-review-617-737"
  },
  "linearNote": "Linear dig issue: TRY-625 https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-11-07-5-fixes-waiting-for-review-617-737",
- "emailMessageId": null,
+ "emailMessageId": "1a1b716bc46bfd01",
  "release": {
   "appStoreVersion": "1.1.0 (app reports 1.0.10)",
   "build": "48",
