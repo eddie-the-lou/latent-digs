@@ -1,0 +1,1448 @@
+{
+ "date": "2026-11-07",
+ "title": "Latent daily review · Nov 7",
+ "generatedAt": "2026-11-07T17:37:44.663279+00:00",
+ "tldr": [
+  "1 new dig fix from me today: #737 for Anthony (@anthonymang) — friends locking-in red live clock was clipped on Home. Your older dig PRs still waiting: #617/#633 (empty videos), #653 (Spotify), #687 (iPhone 17 Pro). 9 PRs merged overnight (#728–#736), including public groups Home card (#733), groups page polish (#730–#732), dimming notice (#734), App Store bump to 1.2.0/49 (#735), and verification text cap (#736).",
+  "Empty-video upload failures: 1,399 from about 84 people (was 1,279 from about 88), 1,355 from 82 people on 1.0.10. Installs 1,121 (was 1,361). Merging #617 and #633 still gets that fix into the next build.",
+  "Age holds: none. Under-13 TRY-701 (@maddycurrie08), TRY-648 (@ank), and TRY-642 (@jesser0ff) still open with no hold. NEW Need Approval: TRY-717 (201k recording cuts at ~2 min), TRY-721 (drafts hard to find), TRY-722 (song preview restarts), TRY-709 (share without invite), TRY-712 (show pause time), TRY-710/#711 (pickup counter / Discord link).",
+  "New wants: share without invite (Gergő), find drafts (Millie), song scrub (Moya), study-together call (Moya), Monday week start (Wilson — already in #713/#714, not on App Store yet), phone pickup counter and Discord link (Discord). Darren wants pause padding visible.",
+  "48 new Discord messages after the cutoff: phone pickup counter and Discord-link threads, 201k on recordings stopping after ~2 min on a full phone (TRY-717) and timelapse cutting off after pause, Wakanda Panda and 201k asking for Android/web, and a burst of CAD banter. 1 reply draft (Tadeas, carried). 1 new beta opt-in (184). 4.89 stars (217). No new survey rows. Sentry still needs re-auth."
+ ],
+ "plainTldr": [
+  "1 new dig fix from me today: #737 for Anthony (@anthonymang) — friends locking-in red live clock was clipped on Home. Your older dig PRs still waiting: #617/#633 (empty videos), #653 (Spotify), #687 (iPhone 17 Pro). 9 PRs merged overnight (#728–#736), including public groups Home card (#733), groups page polish (#730–#732), dimming notice (#734), App Store bump to 1.2.0/49 (#735), and verification text cap (#736).",
+  "Empty-video upload failures: 1,399 from about 84 people (was 1,279 from about 88), 1,355 from 82 people on 1.0.10. Installs 1,121 (was 1,361). Merging #617 and #633 still gets that fix into the next build.",
+  "Age holds: none. Under-13 TRY-701 (@maddycurrie08), TRY-648 (@ank), and TRY-642 (@jesser0ff) still open with no hold. NEW Need Approval: TRY-717 (201k recording cuts at ~2 min), TRY-721 (drafts hard to find), TRY-722 (song preview restarts), TRY-709 (share without invite), TRY-712 (show pause time), TRY-710/#711 (pickup counter / Discord link).",
+  "New wants: share without invite (Gergő), find drafts (Millie), song scrub (Moya), study-together call (Moya), Monday week start (Wilson — already in #713/#714, not on App Store yet), phone pickup counter and Discord link (Discord). Darren wants pause padding visible.",
+  "48 new Discord messages after the cutoff: phone pickup counter and Discord-link threads, 201k on recordings stopping after ~2 min on a full phone (TRY-717) and timelapse cutting off after pause, Wakanda Panda and 201k asking for Android/web, and a burst of CAD banter. 1 reply draft (Tadeas, carried). 1 new beta opt-in (184). 4.89 stars (217). No new survey rows. Sentry still needs re-auth."
+ ],
+ "urgent": [],
+ "stats": {
+  "newInApp": 9,
+  "newDiscord": 48,
+  "newGmail": 0,
+  "newSurveyRows": 0,
+  "seanEllis": {
+   "very": 40,
+   "somewhat": 25,
+   "not": 2,
+   "n": 67
+  },
+  "sentryNew": [],
+  "sentryUnavailable": true,
+  "rawQuotes": 57,
+  "betaOptInsNew": 1,
+  "betaOptInsTotal": 184,
+  "installs24h": 1121,
+  "installsPrev24h": 1361,
+  "emptyVideoFailures24h": 1399,
+  "emptyVideoPeople24h": 84
+ },
+ "whatIDidToday": {
+  "fixesOpened": [
+   {
+    "pr": 737,
+    "url": "https://github.com/eddie-the-lou/latent/pull/737",
+    "title": "Show the red live clock when a friend is locking in",
+    "status": "Opened today — waiting for your review",
+    "whatItFixes": "On Home, friends locking-in no longer lose the red running clock under their face (LazyHStack was clipping it). Small friend lists use a regular row again."
+   }
+  ],
+  "carriedFromEarlier": [
+   {
+    "pr": 617,
+    "url": "https://github.com/eddie-the-lou/latent/pull/617",
+    "title": "Record: Undo after Finish no longer uploads an empty clip",
+    "status": "Still waiting for your review (opened Oct 25)",
+    "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session."
+   },
+   {
+    "pr": 633,
+    "url": "https://github.com/eddie-the-lou/latent/pull/633",
+    "title": "Stop retrying empty-clip uploads on every launch",
+    "status": "Still waiting for your review (opened Oct 26, built on #617)",
+    "whatItFixes": "A post whose video is empty or gone stops retrying on every app open: it tries to rebuild from leftover pieces once, otherwise shows Video missing. Includes #617, so merge #617 first or both."
+   },
+   {
+    "pr": 653,
+    "url": "https://github.com/eddie-the-lou/latent/pull/653",
+    "title": "Keep Spotify playing when you start a session",
+    "status": "Still waiting for your review (opened Oct 28)",
+    "whatItFixes": "Starting a camera-on session no longer stops Spotify or Apple Music (the camera was grabbing the phone's sound). Check on a real phone."
+   },
+   {
+    "pr": 687,
+    "url": "https://github.com/eddie-the-lou/latent/pull/687",
+    "title": "Videos that sit still on iPhone 17 Pro now play, with Try again if they still will not",
+    "status": "Still waiting for your review (opened Nov 3)",
+    "whatItFixes": "On an iPhone 17 Pro, friends' timelapse videos sat on the cover and never started. Player waits for a real size and shows Try again."
+   }
+  ],
+  "agentsLaunched": [
+   {
+    "id": "bc-23b8e080-65cd-5a11-b30f-04600c37c9c8",
+    "url": "https://cursor.com/agents/bc-23b8e080-65cd-5a11-b30f-04600c37c9c8",
+    "pr": 737
+   }
+  ],
+  "agentsStillWorking": [],
+  "mergedOvernight": [
+   {
+    "pr": 736,
+    "url": "https://github.com/eddie-the-lou/latent/pull/736",
+    "title": "Cap verification texts at 1,000 a day across the app",
+    "by": "Eddie · merged Nov 6, 11:28 PM PT"
+   },
+   {
+    "pr": 735,
+    "url": "https://github.com/eddie-the-lou/latent/pull/735",
+    "title": "Bump to 1.2.0 (49) for the App Store update",
+    "by": "Eddie · merged Nov 6, 11:12 PM PT"
+   },
+   {
+    "pr": 734,
+    "url": "https://github.com/eddie-the-lou/latent/pull/734",
+    "title": "Dimming notice sits right above the zoom pill from the start",
+    "by": "Eddie · merged Nov 6, 11:10 PM PT"
+   },
+   {
+    "pr": 733,
+    "url": "https://github.com/eddie-the-lou/latent/pull/733",
+    "title": "Public groups card over Home for existing accounts",
+    "by": "Eddie · merged Nov 6, 9:36 PM PT"
+   },
+   {
+    "pr": 732,
+    "url": "https://github.com/eddie-the-lou/latent/pull/732",
+    "title": "Full-screen group page, Today grid, chat header, and two ways in",
+    "by": "Eddie · merged Nov 6, 7:57 PM PT"
+   },
+   {
+    "pr": 731,
+    "url": "https://github.com/eddie-the-lou/latent/pull/731",
+    "title": "Group stat pages and tag styles stop naming non-friends' tags",
+    "by": "Eddie · merged Nov 6, 7:56 PM PT"
+   },
+   {
+    "pr": 730,
+    "url": "https://github.com/eddie-the-lou/latent/pull/730",
+    "title": "Groups: stats tags for friends only, and delete the unpicked groups",
+    "by": "Eddie · merged Nov 6, 7:55 PM PT"
+   },
+   {
+    "pr": 729,
+    "url": "https://github.com/eddie-the-lou/latent/pull/729",
+    "title": "Ask for the next friend on Home, and make Add friends one section",
+    "by": "Eddie · merged Nov 6, 7:17 PM PT"
+   },
+   {
+    "pr": 728,
+    "url": "https://github.com/eddie-the-lou/latent/pull/728",
+    "title": "Pause screen 50/50 test, steady Finish/Back, landscape clock card",
+    "by": "Malcolm · merged Nov 6, 6:19 PM PT"
+   }
+  ],
+  "closedOvernight": [],
+  "stillOnYou": [
+   {
+    "id": "pr-617-633",
+    "title": "#617 and #633 (empty-video fixes from Oct 25 and Oct 26) are still open. Empty-video failures on 1.0.10: 1,355 in the last day from 82 people (was 1,195 from 87). Merge #617 first, then #633 (or both), so they make the next build.",
+    "url": "https://github.com/eddie-the-lou/latent/pull/617"
+   },
+   {
+    "id": "pr-653",
+    "title": "#653 (Spotify keeps playing during a session, Oct 28) is waiting for your review. Needs a real-phone check.",
+    "url": "https://github.com/eddie-the-lou/latent/pull/653"
+   },
+   {
+    "id": "pr-687",
+    "title": "#687 (videos that sit still on iPhone 17 Pro now play) is waiting. Check on a 17 Pro or latest Simulator, then merge for the next TestFlight.",
+    "url": "https://github.com/eddie-the-lou/latent/pull/687"
+   },
+   {
+    "id": "friend-locking",
+    "title": "#737 (friends locking-in red clock) is waiting for your review. Phone check with two accounts, then merge for the next TestFlight.",
+    "url": "https://github.com/eddie-the-lou/latent/pull/737"
+   },
+   {
+    "id": "try717",
+    "title": "NEW: 201k recording cuts at ~2 min on a full phone (timer keeps going). TRY-717 Need Approval.",
+    "url": "https://linear.app/trylatent/issue/TRY-717"
+   },
+   {
+    "id": "try721",
+    "title": "NEW: Millie can't find drafts. TRY-721 Need Approval.",
+    "url": "https://linear.app/trylatent/issue/TRY-721"
+   },
+   {
+    "id": "try722",
+    "title": "NEW: Moya song preview restarts when changing length. TRY-722 Need Approval.",
+    "url": "https://linear.app/trylatent/issue/TRY-722"
+   },
+   {
+    "id": "try709",
+    "title": "NEW: Gergő wants share without invite link. TRY-709 Need Approval.",
+    "url": "https://linear.app/trylatent/issue/TRY-709"
+   },
+   {
+    "id": "try701",
+    "title": "Under-13 report TRY-701 (@maddycurrie08, reported by @louiechennny). Age check said adult; still no hold. Check on the mod site.",
+    "url": "https://linear.app/trylatent/issue/TRY-701"
+   },
+   {
+    "id": "try699",
+    "title": "Meera (@meeraa): locking the phone on a camera-off timer still pauses it. Already TRY-699 (Need Approval).",
+    "url": "https://linear.app/trylatent/issue/TRY-699"
+   },
+   {
+    "id": "try664",
+    "title": "Long recordings posting as a few minutes: still 2 people (TRY-664). Approve so the bot can open a fix.",
+    "url": "https://linear.app/trylatent/issue/TRY-664"
+   },
+   {
+    "id": "try603",
+    "title": "Brenna deleted a video and asked to get it back. TRY-603 still Need Approval.",
+    "url": "https://linear.app/trylatent/issue/TRY-603"
+   },
+   {
+    "id": "try694",
+    "title": "Liam: saved videos don't keep the song. TRY-694 Need Approval.",
+    "url": "https://linear.app/trylatent/issue/TRY-694"
+   },
+   {
+    "id": "try648",
+    "title": "Under-13 reports still open with no hold: TRY-648 (@ank) and TRY-642 (@jesser0ff).",
+    "url": "https://linear.app/trylatent/issue/TRY-648"
+   },
+   {
+    "id": "try690",
+    "title": "TRY-690 (Rate Latent row) still Need Approval.",
+    "url": "https://linear.app/trylatent/issue/TRY-690"
+   },
+   {
+    "id": "try675",
+    "title": "TRY-675 (swipe-back crash) still Need Approval.",
+    "url": "https://linear.app/trylatent/issue/TRY-675"
+   },
+   {
+    "id": "pr-662",
+    "title": "Close #662 (replaced by #668). Still open.",
+    "url": "https://github.com/eddie-the-lou/latent/pull/662"
+   },
+   {
+    "id": "sentry",
+    "title": "Re-connect Sentry (still needsAuth)."
+   },
+   {
+    "id": "reply-tadeas",
+    "title": "Send the Tadeas Horak reply (draft in dig)."
+   }
+  ],
+  "note": "Opened #737 for Anthony's missing friends locking-in clock (bc-23b8e080-65cd-5a11-b30f-04600c37c9c8). Did not merge. Empty videos still on #617/#633; Spotify #653; 17 Pro #687."
+ },
+ "prStatus": {
+  "waiting": [
+   {
+    "pr": 617,
+    "url": "https://github.com/eddie-the-lou/latent/pull/617",
+    "title": "Record: Undo after Finish no longer uploads an empty clip",
+    "status": "Still waiting for your review (opened Oct 25)",
+    "whatItFixes": "Undo right after Finish no longer leaves an empty video upload, a Video missing post, or a duplicate session."
+   },
+   {
+    "pr": 633,
+    "url": "https://github.com/eddie-the-lou/latent/pull/633",
+    "title": "Stop retrying empty-clip uploads on every launch",
+    "status": "Still waiting for your review (opened Oct 26, built on #617)",
+    "whatItFixes": "A post whose video is empty or gone stops retrying on every app open: it tries to rebuild from leftover pieces once, otherwise shows Video missing. Includes #617, so merge #617 first or both."
+   },
+   {
+    "pr": 653,
+    "url": "https://github.com/eddie-the-lou/latent/pull/653",
+    "title": "Keep Spotify playing when you start a session",
+    "status": "Still waiting for your review (opened Oct 28)",
+    "whatItFixes": "Starting a camera-on session no longer stops Spotify or Apple Music (the camera was grabbing the phone's sound). Check on a real phone."
+   },
+   {
+    "pr": 687,
+    "url": "https://github.com/eddie-the-lou/latent/pull/687",
+    "title": "Videos that sit still on iPhone 17 Pro now play, with Try again if they still will not",
+    "status": "Still waiting for your review (opened Nov 3)",
+    "whatItFixes": "On an iPhone 17 Pro, friends' timelapse videos sat on the cover and never started. Player waits for a real size and shows Try again."
+   },
+   {
+    "pr": 737,
+    "url": "https://github.com/eddie-the-lou/latent/pull/737",
+    "title": "Show the red live clock when a friend is locking in",
+    "status": "Opened today — waiting for your review",
+    "whatItFixes": "On Home, friends locking-in no longer lose the red running clock under their face (LazyHStack was clipping it). Small friend lists use a regular row again."
+   }
+  ],
+  "openedToday": [
+   {
+    "pr": 737,
+    "url": "https://github.com/eddie-the-lou/latent/pull/737",
+    "title": "Show the red live clock when a friend is locking in",
+    "status": "Opened today — waiting for your review",
+    "whatItFixes": "On Home, friends locking-in no longer lose the red running clock under their face (LazyHStack was clipping it). Small friend lists use a regular row again."
+   }
+  ],
+  "agentsStillWorking": [],
+  "mergedOvernight": [
+   {
+    "pr": 736,
+    "url": "https://github.com/eddie-the-lou/latent/pull/736",
+    "title": "Cap verification texts at 1,000 a day across the app",
+    "by": "Eddie · merged Nov 6, 11:28 PM PT"
+   },
+   {
+    "pr": 735,
+    "url": "https://github.com/eddie-the-lou/latent/pull/735",
+    "title": "Bump to 1.2.0 (49) for the App Store update",
+    "by": "Eddie · merged Nov 6, 11:12 PM PT"
+   },
+   {
+    "pr": 734,
+    "url": "https://github.com/eddie-the-lou/latent/pull/734",
+    "title": "Dimming notice sits right above the zoom pill from the start",
+    "by": "Eddie · merged Nov 6, 11:10 PM PT"
+   },
+   {
+    "pr": 733,
+    "url": "https://github.com/eddie-the-lou/latent/pull/733",
+    "title": "Public groups card over Home for existing accounts",
+    "by": "Eddie · merged Nov 6, 9:36 PM PT"
+   },
+   {
+    "pr": 732,
+    "url": "https://github.com/eddie-the-lou/latent/pull/732",
+    "title": "Full-screen group page, Today grid, chat header, and two ways in",
+    "by": "Eddie · merged Nov 6, 7:57 PM PT"
+   },
+   {
+    "pr": 731,
+    "url": "https://github.com/eddie-the-lou/latent/pull/731",
+    "title": "Group stat pages and tag styles stop naming non-friends' tags",
+    "by": "Eddie · merged Nov 6, 7:56 PM PT"
+   },
+   {
+    "pr": 730,
+    "url": "https://github.com/eddie-the-lou/latent/pull/730",
+    "title": "Groups: stats tags for friends only, and delete the unpicked groups",
+    "by": "Eddie · merged Nov 6, 7:55 PM PT"
+   },
+   {
+    "pr": 729,
+    "url": "https://github.com/eddie-the-lou/latent/pull/729",
+    "title": "Ask for the next friend on Home, and make Add friends one section",
+    "by": "Eddie · merged Nov 6, 7:17 PM PT"
+   },
+   {
+    "pr": 728,
+    "url": "https://github.com/eddie-the-lou/latent/pull/728",
+    "title": "Pause screen 50/50 test, steady Finish/Back, landscape clock card",
+    "by": "Malcolm · merged Nov 6, 6:19 PM PT"
+   }
+  ],
+  "closedOvernight": [],
+  "newOpenNotDig": [
+   {
+    "pr": 723,
+    "url": "https://github.com/eddie-the-lou/latent/pull/723",
+    "title": "a whole hour of timelapse lost when the video stops saving (TRY-640)",
+    "by": "Malcolm"
+   },
+   {
+    "pr": 727,
+    "url": "https://github.com/eddie-the-lou/latent/pull/727",
+    "title": "feat(growth): show which friends bring people in, and when (draft)",
+    "by": "Eddie"
+   }
+  ]
+ },
+ "ageHolds": {
+  "open": [],
+  "started24h": [],
+  "resolved24h": [],
+  "holdsEver": 2,
+  "checkedPT": "~9:20 AM PT",
+  "summary": "No age holds. None started, released or deleted in the last 24 hours. Holds ever: 2. Checked ~9:20 AM PT. The dig changed nothing.",
+  "under13NoHold": [
+   {
+    "id": "TRY-701",
+    "username": "@maddycurrie08",
+    "note": "reported by @louiechennny"
+   },
+   {
+    "id": "TRY-648",
+    "username": "@ank",
+    "note": "reported by @jaydenpashut"
+   },
+   {
+    "id": "TRY-642",
+    "username": "@jesser0ff",
+    "note": "reported by @adamberger"
+   }
+  ]
+ },
+ "actions": [
+  {
+   "id": "pr-737",
+   "title": "Review #737 (friends locking-in red clock)",
+   "status": "waiting",
+   "plainSummary": "Phone check with two accounts, then merge for the next TestFlight.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/737"
+  },
+  {
+   "id": "pr-617",
+   "title": "Merge #617 then #633 (empty videos)",
+   "status": "waiting",
+   "plainSummary": "Empty-video failures still high: 1,399 from ~84 people (1,355 on 1.0.10). Merge so they make the next App Store build.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/617"
+  },
+  {
+   "id": "pr-653",
+   "title": "Review #653 (Spotify keeps playing)",
+   "status": "waiting",
+   "plainSummary": "Needs a real-phone check.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/653"
+  },
+  {
+   "id": "pr-687",
+   "title": "Review #687 (iPhone 17 Pro videos)",
+   "status": "waiting",
+   "plainSummary": "Check on a 17 Pro or latest Simulator, then merge.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/687"
+  },
+  {
+   "id": "try701",
+   "title": "Under-13 TRY-701 (@maddycurrie08)",
+   "status": "waiting",
+   "plainSummary": "Still open with no hold. Check on the mod site.",
+   "url": "https://linear.app/trylatent/issue/TRY-701"
+  },
+  {
+   "id": "try717",
+   "title": "Approve TRY-717 (recording cuts at ~2 min on full phone)",
+   "status": "waiting",
+   "plainSummary": "201k Discord report.",
+   "url": "https://linear.app/trylatent/issue/TRY-717"
+  },
+  {
+   "id": "try721",
+   "title": "Approve TRY-721 (drafts hard to find)",
+   "status": "waiting",
+   "plainSummary": "Millie couldn't find her draft after a long session.",
+   "url": "https://linear.app/trylatent/issue/TRY-721"
+  },
+  {
+   "id": "try722",
+   "title": "Approve TRY-722 (song preview restarts)",
+   "status": "waiting",
+   "plainSummary": "Moya's song-length scrub issue.",
+   "url": "https://linear.app/trylatent/issue/TRY-722"
+  },
+  {
+   "id": "email",
+   "title": "Email dig",
+   "status": "done"
+  },
+  {
+   "id": "archive",
+   "title": "Archive",
+   "status": "done"
+  }
+ ],
+ "bugs": [
+  {
+   "id": "empty-clip",
+   "title": "Empty videos failing to upload on the App Store build",
+   "severity": "medium",
+   "people": 84,
+   "peopleCountLabel": "84 people",
+   "status": "PRs #617 and #633 waiting for your review",
+   "summary": "1,399 failures from about 84 people in the last day (was 1,279 from about 88). 1,355 from 82 people on 1.0.10; 44 from 2 people on 1.0.9.",
+   "detail": "Neither fix is in the App Store build (still 1.1.0 / app reports 1.0.10). #735 bumped the project to 1.2.0 (49) for the next App Store update.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/617",
+   "sources": [
+    "posthog",
+    "github"
+   ]
+  },
+  {
+   "id": "friend-locking",
+   "title": "Can't see when a friend is locking in (red timestamp missing)",
+   "severity": "high",
+   "people": 1,
+   "status": "PR #737 waiting for your review",
+   "summary": "Anthony (@anthonymang) on 1.0.10: friends' live red locking-in timestamp is missing.",
+   "detail": "LazyHStack clipped the red clock under friends faces. Small friend lists use HStack again. Phone check then merge.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/737",
+   "sources": [
+    "in-app"
+   ]
+  },
+  {
+   "id": "low-storage-cut",
+   "title": "Recording stops after ~2 min on a full phone; timer keeps going",
+   "severity": "high",
+   "people": 1,
+   "status": "TRY-717 (Need Approval)",
+   "summary": "201k on Discord: second time a recording only kept the first ~2 minutes of video while the timer showed the real length. Also said apps stayed blocked after stopping until a delete/reinstall.",
+   "detail": "Already TRY-717. Approve so a fix can open. Related to low storage.",
+   "url": "https://linear.app/trylatent/issue/TRY-717",
+   "sources": [
+    "discord",
+    "linear"
+   ]
+  },
+  {
+   "id": "pause-timelapse",
+   "title": "After a pause, the timelapse only shows footage from before the pause",
+   "severity": "high",
+   "people": 2,
+   "status": "Near TRY-640 / #723 still open",
+   "summary": "201k (and Drew said someone else too): timer keeps the full time, but the saved timelapse cuts off at the pause.",
+   "detail": "Malcolm's #722 (keep timelapse when encoder fails) merged last night; #723 (whole hour of timelapse lost, TRY-640) is still open.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/723",
+   "sources": [
+    "discord",
+    "github"
+   ]
+  },
+  {
+   "id": "music-keeps-playing",
+   "title": "Song keeps playing when a video is paused or when you open the app",
+   "severity": "medium",
+   "people": 1,
+   "status": "TRY-556 (Need Approval)",
+   "summary": "Darren (@dleo): pausing a video leaves the music on; opening the app also starts the song right away.",
+   "detail": "Matches TRY-556 (pausing a timelapse should pause the song).",
+   "url": "https://linear.app/trylatent/issue/TRY-556",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "lock-pause",
+   "title": "Locking the phone on a camera-off timer still pauses it",
+   "severity": "high",
+   "people": 1,
+   "status": "TRY-699 (Need Approval)",
+   "summary": "Meera (@meeraa) from Nov 5; still waiting.",
+   "detail": "Approve so a fix can open.",
+   "url": "https://linear.app/trylatent/issue/TRY-699",
+   "sources": [
+    "linear"
+   ]
+  },
+  {
+   "id": "duration-cut",
+   "title": "Long recording posts as a much shorter session",
+   "severity": "high",
+   "people": 2,
+   "status": "TRY-664 (Need Approval)",
+   "summary": "Still 2 reports. No new report today.",
+   "detail": "Approve TRY-664 so the bot can open a fix.",
+   "url": "https://linear.app/trylatent/issue/TRY-664",
+   "sources": [
+    "linear"
+   ]
+  },
+  {
+   "id": "video-play",
+   "title": "Videos sit still and won't play on iPhone 17 Pro",
+   "severity": "high",
+   "people": 1,
+   "status": "PR #687 waiting for your review",
+   "summary": "Kalos report from Nov 3; fix still open.",
+   "detail": "Check on a 17 Pro / Simulator then merge.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/687",
+   "sources": [
+    "github"
+   ]
+  },
+  {
+   "id": "deleted-video",
+   "title": "Accidentally deleted a video and can't get it back",
+   "severity": "medium",
+   "people": 1,
+   "status": "TRY-603 (Need Approval)",
+   "summary": "Brenna (@brenna); still waiting.",
+   "url": "https://linear.app/trylatent/issue/TRY-603",
+   "sources": [
+    "linear"
+   ]
+  },
+  {
+   "id": "swipe-crash",
+   "title": "Crash in swipe back when the window closes",
+   "severity": "medium",
+   "people": 2,
+   "status": "TRY-675 (Need Approval)",
+   "summary": "Sentry crash the bot filed (2 people).",
+   "url": "https://linear.app/trylatent/issue/TRY-675",
+   "sources": [
+    "linear"
+   ]
+  },
+  {
+   "id": "spotify",
+   "title": "Starting a session stops Spotify / Apple Music",
+   "severity": "medium",
+   "people": null,
+   "status": "PR #653 waiting for your review",
+   "summary": "Still open; needs a real-phone check.",
+   "url": "https://github.com/eddie-the-lou/latent/pull/653",
+   "sources": [
+    "github"
+   ]
+  },
+  {
+   "id": "black-screen",
+   "title": "Black screen when trying to record",
+   "severity": "medium",
+   "people": 1,
+   "status": "Needs more detail",
+   "summary": "Mbali (@donut_lover3l) from Nov 4; still thin.",
+   "detail": "Not enough for a code fix.",
+   "sources": [
+    "in-app"
+   ]
+  }
+ ],
+ "features": [
+  {
+   "id": "share-no-invite",
+   "title": "Share a session without the invite link",
+   "severity": "medium",
+   "people": 1,
+   "status": "TRY-709 (Need Approval)",
+   "summary": "Gergő (@georgekry): remove the default invite link when sharing a session.",
+   "url": "https://linear.app/trylatent/issue/TRY-709",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "drafts-find",
+   "title": "New people can't find their drafts",
+   "severity": "high",
+   "people": 1,
+   "status": "TRY-721 (Need Approval)",
+   "summary": "Millie (@milliemuss): \"How do I access my drafts?\" Kept a long session as a draft and couldn't find it.",
+   "url": "https://linear.app/trylatent/issue/TRY-721",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "song-preview-restart",
+   "title": "Song preview restarts every time you change the length",
+   "severity": "medium",
+   "people": 1,
+   "status": "TRY-722 (Need Approval)",
+   "summary": "Moya (@grapjuice): changing the song length for the video restarts the 30-second Apple Music preview from the start. Wants scrub without losing the selection.",
+   "detail": "Also near TRY-547 (pick the song part from anywhere).",
+   "url": "https://linear.app/trylatent/issue/TRY-722",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "pause-visible",
+   "title": "Show how long a session was paused (anti-cheat)",
+   "severity": "medium",
+   "people": 1,
+   "status": "TRY-712 (Need Approval)",
+   "summary": "Darren (@dleo): friend pads sessions by start/pause. Wants accountability so pause padding doesn't count as a full lock-in.",
+   "url": "https://linear.app/trylatent/issue/TRY-712",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "phone-pickup",
+   "title": "Phone break / pickup counter on posts",
+   "severity": "medium",
+   "people": 4,
+   "status": "TRY-710 (Need Approval)",
+   "summary": "cooldeath49 on Discord; chloe, picklemytickl, and 201k liked a non-clowning version (max focus stretch, like Strava moving vs elapsed).",
+   "url": "https://linear.app/trylatent/issue/TRY-710",
+   "sources": [
+    "discord",
+    "linear"
+   ]
+  },
+  {
+   "id": "discord-link",
+   "title": "Link Discord to a Latent account",
+   "severity": "low",
+   "people": 1,
+   "status": "TRY-711 (Need Approval)",
+   "summary": "201k: roles for total locked-in time, and a path for more later.",
+   "url": "https://linear.app/trylatent/issue/TRY-711",
+   "sources": [
+    "discord",
+    "linear"
+   ]
+  },
+  {
+   "id": "week-start",
+   "title": "Set streak week to start on Monday",
+   "severity": "medium",
+   "people": 1,
+   "status": "Shipped in #713/#714; not on App Store yet",
+   "summary": "Wilson (@wilsonjong): how to set week start to Monday not Saturday. Streak week picker merged Nov 5 (#709/#713/#714). App Store is still 1.1.0 / 1.0.10.",
+   "detail": "TRY-439 still open; #735 bumps next build to 1.2.0 (49).",
+   "url": "https://linear.app/trylatent/issue/TRY-439",
+   "sources": [
+    "in-app",
+    "github"
+   ]
+  },
+  {
+   "id": "study-together",
+   "title": "Study together with friends (voice/FaceTime + record)",
+   "severity": "medium",
+   "people": 1,
+   "status": "Want; near TRY-457",
+   "summary": "Moya (@grapjuice): online study session with friends like a voice/FaceTime call while Latent still tracks and records.",
+   "url": "https://linear.app/trylatent/issue/TRY-457",
+   "sources": [
+    "in-app",
+    "linear"
+   ]
+  },
+  {
+   "id": "android-notes",
+   "title": "Android / use Latent without an iPhone",
+   "severity": "medium",
+   "people": 3,
+   "status": "Known; Android planned",
+   "summary": "tarptoad (@pigduck): notes-app / non-iPhone ask. Wakanda Panda and 201k on Discord asked for Android/web again.",
+   "detail": "No new promise. Android is coming.",
+   "sources": [
+    "in-app",
+    "discord"
+   ]
+  },
+  {
+   "id": "song-on-save",
+   "title": "Keep the song when saving a video",
+   "severity": "medium",
+   "people": 1,
+   "status": "TRY-694 (Need Approval)",
+   "summary": "Liam (@murriv) from Nov 5; still waiting.",
+   "url": "https://linear.app/trylatent/issue/TRY-694",
+   "sources": [
+    "linear"
+   ]
+  },
+  {
+   "id": "add-hours",
+   "title": "Add a session you didn't record",
+   "severity": "medium",
+   "people": 1,
+   "status": "TRY-411 (Need Approval)",
+   "summary": "D (@dandan) from Nov 6; still waiting.",
+   "url": "https://linear.app/trylatent/issue/TRY-411",
+   "sources": [
+    "linear"
+   ]
+  },
+  {
+   "id": "timelapse-length",
+   "title": "Choose how long the exported timelapse is (10–30s)",
+   "severity": "low",
+   "people": 1,
+   "status": "Discord thread only",
+   "summary": "sebthepleb started a thread; found the control after Ace pointed them at the app.",
+   "sources": [
+    "discord"
+   ]
+  }
+ ],
+ "bySource": {
+  "inApp": {
+   "new": 9,
+   "note": "9 new in-app rows after the Nov 6 ~9:20 AM PT cutoff."
+  },
+  "discord": {
+   "new": 48,
+   "note": "48 new Discord messages after the Nov 6 ~9:19 AM PT cutoff: phone pickup counter thread (TRY-710), Discord-link thread (TRY-711), timelapse length thread, 201k low-storage/recording bugs (TRY-717), Android/web asks from Wakanda Panda and 201k, and CAD banter in #general-chat. No new announcements. #tester-chat not visible."
+  },
+  "gmail": {
+   "new": 0,
+   "note": "No new unanswered app-user feedback emails. Genia thanked you (already answered). Arian already got your form link. Collab/payroll/NCMEC/travel mail skipped. Tadeas still carried."
+  },
+  "survey": {
+   "new": 0,
+   "note": "No new survey rows (still 67)."
+  },
+  "github": {
+   "new": 0,
+   "note": "9 PRs merged overnight (#728–#736). Dig opened #737 (Anthony locking-in clock). Carried #617/#633/#653/#687 still open. #723 (Malcolm, TRY-640) still open."
+  },
+  "linear": {
+   "new": 0,
+   "note": "TRY-625 rolling dig issue updated in place. New Need Approval from overnight: TRY-709, TRY-710, TRY-711, TRY-712, TRY-717, TRY-721, TRY-722. Under-13 TRY-701/648/642 still open with no hold."
+  },
+  "posthog": {
+   "note": "placeholder"
+  },
+  "sentry": {
+   "note": "Sentry still needsAuth; no crash data from the dig today."
+  }
+ },
+ "rawQuotes": [
+  {
+   "id": "inapp-f3441c96",
+   "source": "in-app",
+   "username": "@georgekry (Gergő)",
+   "whenPT": "2026-11-06 14:03 PT",
+   "build": "1.0.10 (48)",
+   "kind": "feature",
+   "quote": "Hey! Great app, pls remove the default invite link when I share a session. Thanks!",
+   "note": "In-app feature · Share without invite link. Already TRY-709."
+  },
+  {
+   "id": "inapp-9f05f910",
+   "source": "in-app",
+   "username": "@pigduck (tarptoad)",
+   "whenPT": "2026-11-06 15:52 PT",
+   "build": "1.0.10 (48)",
+   "kind": "feature",
+   "quote": "I want to use latent on my notes app like Latent allows my notes app to work as i do not have a pn iphone",
+   "note": "In-app feature · Android / notes without iPhone. Known; Android planned."
+  },
+  {
+   "id": "inapp-a7402aea",
+   "source": "in-app",
+   "username": "@dleo (Darren)",
+   "whenPT": "2026-11-06 17:14 PT",
+   "build": "1.0.10 (48)",
+   "kind": "feature",
+   "quote": "Hello, when I pause a video the music is playing also when I log into the app, the music instantly plays. Thanks for the app!",
+   "note": "In-app feature · Song keeps playing on pause / app open. Already TRY-556."
+  },
+  {
+   "id": "inapp-beedd2f4",
+   "source": "in-app",
+   "username": "@dleo (Darren)",
+   "whenPT": "2026-11-06 17:15 PT",
+   "build": "1.0.10 (48)",
+   "kind": "feature",
+   "quote": "My friend is fraudulently logging large sessions by starting and pausing his sessions to extend a latent “session”. I think we need to hold my friend accountable and not have gym just start and pause to extend a full lock in session.",
+   "note": "In-app feature · Pause padding / show pause time. Already TRY-712."
+  },
+  {
+   "id": "inapp-b313f887",
+   "source": "in-app",
+   "username": "@milliemuss (Millie)",
+   "whenPT": "2026-11-07 00:32 PT",
+   "build": "1.0.10 (48)",
+   "kind": "feature",
+   "quote": "How do I access my drafts?",
+   "note": "In-app feature · How do I access drafts? Already TRY-721."
+  },
+  {
+   "id": "inapp-8bcd915c",
+   "source": "in-app",
+   "username": "@anthonymang (Anthony)",
+   "whenPT": "2026-11-07 02:02 PT",
+   "build": "1.0.10 (48)",
+   "kind": "bug",
+   "quote": "i can’t see when my friend is locking in or during a session like i can’t see the red timestamp when someone’s locking in",
+   "note": "In-app bug · Friends locking-in red clock missing. Fix opened as #737."
+  },
+  {
+   "id": "inapp-6ca01a70",
+   "source": "in-app",
+   "username": "@wilsonjong (Wilson)",
+   "whenPT": "2026-11-07 05:03 PT",
+   "build": "1.0.10 (48)",
+   "kind": "feature",
+   "quote": "so simple, how to set week start to Monday not Saturday? if not available please add",
+   "note": "In-app feature · Week start Monday. Streak picker shipped in #713/#714; not on App Store yet (TRY-439)."
+  },
+  {
+   "id": "inapp-3198c26d",
+   "source": "in-app",
+   "username": "@grapjuice (Moya)",
+   "whenPT": "2026-11-07 06:44 PT",
+   "build": "1.0.10 (48)",
+   "kind": "feature",
+   "quote": "When choosing a song, the app currently gives a 30-second Apple Music preview. However, whenever I change the length of the song for my video, the preview restarts from the beginning.\nI’d like to be able to either keep the song playing while I edit, or freely scrub/slide to different parts of the song without changing the portion or duration I’ve selected for the video. This would make it much easier to find the exact part of a song I want to use.",
+   "note": "In-app feature · Song preview restarts when changing length. Already TRY-722."
+  },
+  {
+   "id": "inapp-cbdbd33e",
+   "source": "in-app",
+   "username": "@grapjuice (Moya)",
+   "whenPT": "2026-11-07 06:46 PT",
+   "build": "1.0.10 (48)",
+   "kind": "feature",
+   "quote": "Is it possible to be able to do some sort of online study session with multiple people that you’re friends with? Basically like a voice call or FaceTime call but the app also still tracks and records you studying.",
+   "note": "In-app feature · Study together with friends (call + record). Near TRY-457."
+  },
+  {
+   "id": "discord-1107-0",
+   "source": "discord",
+   "channel": "feature-requests > thread: phone break/pickup counter",
+   "username": "cooldeath49",
+   "author": "cooldeath49",
+   "whenPT": "Nov 6 ~12:59 PM PT",
+   "kind": "discord",
+   "quote": "count number of times you took a break/picked up your phone, can be included in your post so ur friends clown on u",
+   "note": "Discord · feature-requests > thread: phone break/pickup counter"
+  },
+  {
+   "id": "discord-1107-1",
+   "source": "discord",
+   "channel": "feature-requests > thread: phone break/pickup counter",
+   "username": "201k",
+   "author": "201k",
+   "whenPT": "Nov 6 ~1:21 PM PT",
+   "kind": "discord",
+   "quote": "Why would that be clownable, breaks are needed for long study sessions\nThe quality of the study lowers without any breaks\nAlso bathroom???",
+   "note": "Discord · feature-requests > thread: phone break/pickup counter"
+  },
+  {
+   "id": "discord-1107-2",
+   "source": "discord",
+   "channel": "feature-requests > thread: phone break/pickup counter",
+   "username": "picklemytickl",
+   "author": "picklemytickl",
+   "whenPT": "Nov 6 ~2:08 PM PT",
+   "kind": "discord",
+   "quote": "I think its a good idea, like how strava has running time and time elapsed",
+   "note": "Discord · feature-requests > thread: phone break/pickup counter"
+  },
+  {
+   "id": "discord-1107-3",
+   "source": "discord",
+   "channel": "feature-requests > thread: phone break/pickup counter",
+   "username": "chloe",
+   "author": "chloe",
+   "whenPT": "Nov 6 ~3:34 PM PT",
+   "kind": "discord",
+   "quote": "its not for clowning purposes\nin my opinion\ni think this would be good\nalso to track yourself\nit could be like max time focused (how long you went without checking your phone) etc\nwait i like this a lot",
+   "note": "Discord · feature-requests > thread: phone break/pickup counter"
+  },
+  {
+   "id": "discord-1107-4",
+   "source": "discord",
+   "channel": "feature-requests > thread: phone break/pickup counter",
+   "username": "201k",
+   "author": "201k",
+   "whenPT": "Nov 6 ~3:37 PM PT",
+   "kind": "discord",
+   "quote": "Yeah I also think it would be good too\nI was just pushing back on his comment that it's something to clown people for",
+   "note": "Discord · feature-requests > thread: phone break/pickup counter"
+  },
+  {
+   "id": "discord-1107-5",
+   "source": "discord",
+   "channel": "feature-requests > thread: phone break/pickup counter",
+   "username": "chloe",
+   "author": "chloe",
+   "whenPT": "Nov 6 ~3:38 PM PT",
+   "kind": "discord",
+   "quote": "ohhh i see mb\nhonestly that could be a motivating factor too\nit would motivate you to see how long oyu can go iwthout checking ur phone",
+   "note": "Discord · feature-requests > thread: phone break/pickup counter"
+  },
+  {
+   "id": "discord-1107-6",
+   "source": "discord",
+   "channel": "feature-requests > thread: phone break/pickup counter",
+   "username": "201k",
+   "author": "201k",
+   "whenPT": "Nov 6 ~3:39 PM PT",
+   "kind": "discord",
+   "quote": "True, but personally I pause it just when I am forced to do something outside of what I use latent for\nWell I used to before I got that bug that stopped the timelapse after the pause, now I'm too scared to pause lmao",
+   "note": "Discord · feature-requests > thread: phone break/pickup counter"
+  },
+  {
+   "id": "discord-1107-7",
+   "source": "discord",
+   "channel": "feature-requests > thread: phone break/pickup counter",
+   "username": "chloe",
+   "author": "chloe",
+   "whenPT": "Nov 6 ~3:52 PM PT",
+   "kind": "discord",
+   "quote": "bug that stops timelapse after pause? theres a bug like that? i've never had it happen to me",
+   "note": "Discord · feature-requests > thread: phone break/pickup counter"
+  },
+  {
+   "id": "discord-1107-8",
+   "source": "discord",
+   "channel": "feature-requests > thread: phone break/pickup counter",
+   "username": "201k",
+   "author": "201k",
+   "whenPT": "Nov 6 ~3:53 PM PT",
+   "kind": "discord",
+   "quote": "Yeah, it keeps recording so it does say the full time but the timelapse only actually showed from before the pause, it's strange\nDrew told me apparently it's happened to someone else here too",
+   "note": "Discord · feature-requests > thread: phone break/pickup counter"
+  },
+  {
+   "id": "discord-1107-9",
+   "source": "discord",
+   "channel": "feature-requests > thread: Linking discord to your latent account",
+   "username": "201k",
+   "author": "201k",
+   "whenPT": "Nov 6 ~3:41 PM PT",
+   "kind": "discord",
+   "quote": "For now I can only think of this being useful for having roles in Discord for total time spent locked in, but it could also pave the path for other things",
+   "note": "Discord · feature-requests > thread: Linking discord to your latent account"
+  },
+  {
+   "id": "discord-1107-10",
+   "source": "discord",
+   "channel": "feature-requests > thread: How long you can make the Timelapse (thinking between 10-30 seconds)",
+   "username": "sebthepleb",
+   "author": "sebthepleb",
+   "whenPT": "Nov 7 ~7:56 AM PT",
+   "kind": "discord",
+   "quote": "(thread started with title only: \"How long you can make the Timelapse (thinking between 10-30 seconds)\")",
+   "note": "Discord · feature-requests > thread: How long you can make the Timelapse (thinking between 10-30 seconds)"
+  },
+  {
+   "id": "discord-1107-11",
+   "source": "discord",
+   "channel": "feature-requests > thread: How long you can make the Timelapse (thinking between 10-30 seconds)",
+   "username": "Ace",
+   "author": "Ace",
+   "whenPT": "Nov 7 ~8:48 AM PT",
+   "kind": "discord",
+   "quote": "lowk experiment urself\nplay with the app",
+   "note": "Discord · feature-requests > thread: How long you can make the Timelapse (thinking between 10-30 seconds)"
+  },
+  {
+   "id": "discord-1107-12",
+   "source": "discord",
+   "channel": "feature-requests > thread: How long you can make the Timelapse (thinking between 10-30 seconds)",
+   "username": "sebthepleb",
+   "author": "sebthepleb",
+   "whenPT": "Nov 7 ~9:10 AM PT",
+   "kind": "discord",
+   "quote": "My fault I saw it now",
+   "note": "Discord · feature-requests > thread: How long you can make the Timelapse (thinking between 10-30 seconds)"
+  },
+  {
+   "id": "discord-1107-13",
+   "source": "discord",
+   "channel": "questions > thread: Any hopes for the Android app?",
+   "username": "Wakanda Panda",
+   "author": "Wakanda Panda",
+   "whenPT": "Nov 7 ~12:01 AM PT",
+   "kind": "discord",
+   "quote": "Nopee",
+   "note": "Discord · questions > thread: Any hopes for the Android app?"
+  },
+  {
+   "id": "discord-1107-14",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "201k",
+   "author": "201k",
+   "whenPT": "Nov 6 ~11:08 AM PT",
+   "kind": "discord",
+   "quote": "@Ace I'm curious what timezone you're in?",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-15",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "Drew",
+   "author": "Drew",
+   "whenPT": "Nov 6 ~11:08 AM PT",
+   "kind": "discord",
+   "quote": "Me too acc",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-16",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "chloe",
+   "author": "chloe",
+   "whenPT": "Nov 6 ~12:58 PM PT",
+   "kind": "discord",
+   "quote": "LMAOO",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-17",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "ki (is tired)",
+   "author": "ki (is tired)",
+   "whenPT": "Nov 6 ~2:42 PM PT",
+   "kind": "discord",
+   "quote": "@KrabbyKai dyk how to pocket a plate in onshape cad",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-18",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 6 ~2:43 PM PT",
+   "kind": "discord",
+   "quote": "like simulation pocketing or js lightening",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-19",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "ki (is tired)",
+   "author": "ki (is tired)",
+   "whenPT": "Nov 6 ~2:44 PM PT",
+   "kind": "discord",
+   "quote": "uhh\nthe one w the triangles\n😭",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-20",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "ki (is tired)",
+   "author": "ki (is tired)",
+   "whenPT": "Nov 6 ~3:52 PM PT",
+   "kind": "discord",
+   "quote": "nvm kai i went to meeting after finishing pocketing and my captain decided we're not pocketing",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-21",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "parnik",
+   "author": "parnik",
+   "whenPT": "Nov 6 ~4:16 PM PT",
+   "kind": "discord",
+   "quote": "Ewww onshape\nEww\nEww\nEwww\nDisgusting\nGross",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-22",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 6 ~4:49 PM PT",
+   "kind": "discord",
+   "quote": "thats not voronoi lmao",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-23",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 6 ~4:49 PM PT",
+   "kind": "discord",
+   "quote": "fairs",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-24",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 6 ~4:50 PM PT",
+   "kind": "discord",
+   "quote": "let me guess\nfilthy fusion user\nor stinky solidworks stan",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-25",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "Ace",
+   "author": "Ace",
+   "whenPT": "Nov 6 ~5:29 PM PT",
+   "kind": "discord",
+   "quote": "ist",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-26",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "201k",
+   "author": "201k",
+   "whenPT": "Nov 6 ~6:58 PM PT",
+   "kind": "discord",
+   "quote": "Latent has been having lots of issues on low storage, apparently it stopping recordings not a pause issue, it just randomly happens\n\nSecond time I've had a recording only do like the first 2 minutes or so of it so and not record the rest at all (on video, it still gives the real time)\n\nIt also kept blocking apps after I had stopped and changing stuff in settings didn't help so I had to delete and redownload it",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-27",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "ki (is tired)",
+   "author": "ki (is tired)",
+   "whenPT": "Nov 6 ~8:44 PM PT",
+   "kind": "discord",
+   "quote": "i hate onshpe too they forced me to do this",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-28",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 6 ~8:53 PM PT",
+   "kind": "discord",
+   "quote": "onshape hate will not be tolerated\nnot the best sure\nbut its up there fs\ntop 3 imo",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-29",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "ki (is tired)",
+   "author": "ki (is tired)",
+   "whenPT": "Nov 6 ~9:52 PM PT",
+   "kind": "discord",
+   "quote": "i miss fusion 💔",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-30",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 6 ~9:55 PM PT",
+   "kind": "discord",
+   "quote": "nah no way your saying fusion is better than onshape\nthere are good candidates fusion is not one of them",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-31",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "Drew",
+   "author": "Drew",
+   "whenPT": "Nov 6 ~9:56 PM PT",
+   "kind": "discord",
+   "quote": "I rep fusion ❤️",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-32",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 6 ~9:57 PM PT",
+   "kind": "discord",
+   "quote": "nah fusion is like 6th on my list\nonshape, solidworks, inventor, siemens nx, blender, fusion",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-33",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "parnik",
+   "author": "parnik",
+   "whenPT": "Nov 6 ~10:13 PM PT",
+   "kind": "discord",
+   "quote": "Fusion is better\nOr wait\nPlot twist\nI don't cad",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-34",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 6 ~10:16 PM PT",
+   "kind": "discord",
+   "quote": "💀\nnobody who has had to work with assemblies has ever said that fusion is better\nyou guys are lowk inexperienced 😭",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-35",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "Drew",
+   "author": "Drew",
+   "whenPT": "Nov 6 ~11:13 PM PT",
+   "kind": "discord",
+   "quote": "even better\nI print everything in 1 piece\nor\nprint everything seperately\nno assemblies",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-36",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 6 ~11:14 PM PT",
+   "kind": "discord",
+   "quote": "yeah but that doesn't work for real mechanisms",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-37",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "Drew",
+   "author": "Drew",
+   "whenPT": "Nov 6 ~11:15 PM PT",
+   "kind": "discord",
+   "quote": "good thing I dont do real mechanisms 🔥",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-38",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 6 ~11:24 PM PT",
+   "kind": "discord",
+   "quote": "lol",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-39",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "Wakanda Panda",
+   "author": "Wakanda Panda",
+   "whenPT": "Nov 7 ~12:00 AM PT",
+   "kind": "discord",
+   "quote": "Y'all android when 😭😭😭\nMy dad took away my ipad cuz it's his and he said that latent is \"bad for me\"",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-40",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 7 ~12:02 AM PT",
+   "kind": "discord",
+   "quote": "yo eddie malcolm ygs gotta quit wakandas dad said latent is bad for you",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-41",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "Wakanda Panda",
+   "author": "Wakanda Panda",
+   "whenPT": "Nov 7 ~12:02 AM PT",
+   "kind": "discord",
+   "quote": "Yo srsly my dad is nuts\nThe thing is he neverrrr checks my phone. So if only latent came out on android 😭😭😭",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-42",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "Ace",
+   "author": "Ace",
+   "whenPT": "Nov 7 ~12:03 AM PT",
+   "kind": "discord",
+   "quote": "latent over dad 😭",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-43",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "Wakanda Panda",
+   "author": "Wakanda Panda",
+   "whenPT": "Nov 7 ~12:04 AM PT",
+   "kind": "discord",
+   "quote": "Nooo that's not what I mean lol",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-44",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "Ace",
+   "author": "Ace",
+   "whenPT": "Nov 7 ~12:04 AM PT",
+   "kind": "discord",
+   "quote": "ye ik lmao",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-45",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "201k",
+   "author": "201k",
+   "whenPT": "Nov 7 ~12:52 AM PT",
+   "kind": "discord",
+   "quote": "Web when 😭\nHad to delete latent cause of a bug and now I can't reinstall it cause of a billing problem completely unrelated to Latent",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-46",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "fusion",
+   "author": "fusion",
+   "whenPT": "Nov 7 ~5:33 AM PT",
+   "kind": "discord",
+   "quote": "solidworks lowkey the best\nbut i love how u can make assemblies on onshape from the part itself tbh, really niftyy (edited)",
+   "note": "Discord · general-chat"
+  },
+  {
+   "id": "discord-1107-47",
+   "source": "discord",
+   "channel": "general-chat",
+   "username": "KrabbyKai",
+   "author": "KrabbyKai",
+   "whenPT": "Nov 7 ~7:34 AM PT",
+   "kind": "discord",
+   "quote": "id out solidworks at one but it handles import meshes so badly\nlike on open edge and its over",
+   "note": "Discord · general-chat"
+  }
+ ],
+ "replyDrafts": [
+  {
+   "to": "horak.tadeas@email.cz",
+   "toName": "Tadeas Horak",
+   "subject": "Re: Strava has GPS. Latent doesn't.",
+   "threadId": "1a1a2539b80dfbdd",
+   "messageId": "1a1a2539b80dfbdd",
+   "theirMessage": "Hi Eddie,\n\nYou describe Latent as a Strava for work, and I think that's the right comparison. But Strava has GPS, so a 10K really is a 10K. Latent knows I was recording, but not what I did on my computer, and that's where the work happens.\n\nI'd track the computer too. It could read which apps and sites you use, and AI could check snapshots of the session against what you said you'd work on. After five hours, you'd see that only two were real work.\n\nThe best part would be seeing why. Say a Discord message at 17:20 turned into an hour on YouTube. You'd see exactly that, and next time you'd know what to fix. I think people would open the app just for that.\n\nIt would also make groups stronger, because streaks and nudges would be based on real hours.\n\nI've attached a wireframe and five things I'd try first. I'm 21, from Czechia, and I build my own products, most recently elasty.uk and AI modeling software for formula student.\n\nI really like where Latent is going and I'd love to help with the product and the decisions around it. I could do that remotely, and if it turned out to be a great fit, I'd be open to moving. No pressure at all.\n\nIf you're curious, I'm happy to build a small version first and show you how it works on real sessions.\n\nTadeas Horak",
+   "body": "Hey Tadeas,\n\nThanks for writing this up, and for the wireframe. The Strava comparison is how I think about Latent too, and the idea of verifying what actually happened on the computer is really interesting.\n\nWe're pausing hiring for now while we focus on the product, so I can't open a role right now. I'll keep your note and the PDF.\n\nEddie",
+   "why": "Carried from Nov 3; still no reply from you. Product idea + interest in helping; hiring is paused so no role pitch. PDF wireframe attached to his email."
+  }
+ ],
+ "linearIssue": {
+  "id": "TRY-625",
+  "url": "https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-11-07-5-fixes-waiting-for-review-617-737"
+ },
+ "linearNote": "Linear dig issue: TRY-625 https://linear.app/trylatent/issue/TRY-625/daily-dig-2026-11-07-5-fixes-waiting-for-review-617-737",
+ "emailMessageId": null,
+ "release": {
+  "appStoreVersion": "1.1.0 (app reports 1.0.10)",
+  "build": "48",
+  "releasedPT": "Oct 27, 11:55 AM PT",
+  "rating": "4.89 (217)",
+  "nextBump": "1.2.0 (49) via #735"
+ }
+}
